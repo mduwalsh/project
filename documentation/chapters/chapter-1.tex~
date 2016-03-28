@@ -58,7 +58,7 @@ Vose \cite{Vose1999} calculated variance of next generation population with resp
 \[
 E(\| \tau (p) - G(p) \|^2) = (1 - \|G(p)\|^2) / r)
 \]
-and mentioned $\tau (p)$ converges in probability to $G(p)$ as the population size increases. Therefore, corresponds to $G$ in the infinite
+and mentioned $\tau (p)$ converges in probability to $G(p)$ as the population size increases. Therefore, corresponds to G in the infinite
 population case.
 
 

@@ -1,5 +1,6 @@
 \chapter{Extending A Genetic Algorithm Model To The Diploid Case} \label{ch:GA model Diploid}
 
+\section{Introduction}
 This chapter describes a simple Markov model for evolution under the
 influence of crossing over and mutation; it is a non-overlapping,
 generational, infinite population model which assumes panmixia and no

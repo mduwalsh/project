@@ -68,7 +68,7 @@ and it has entries satisfying
 W_{n, t \oplus k} = N^{1/2} W_{n, t} W_{n, k}
 \]
 
-The practical importance of this symmetry is that the transform and inverse represent same mathematical operation, hence simplifying the derivation and application of the transform. With the normalized form, \textit{Walsh matrix} is its own inverse, i.e.,
+The practical importance of this symmetry is that the transform and inverse represent same mathematical operation, hence simplifying the derivation and application of the transform. With the normalized form, \textit{Walsh matrix} is it is its own inverse, i.e.,
 \[
 W = W^{-1}
 \]

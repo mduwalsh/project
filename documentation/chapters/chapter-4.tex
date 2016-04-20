@@ -141,4 +141,20 @@ not an obstacle to computing evolutionary trajectories;
 (\ref{mixing_transformation}) can be computed in Walsh coordinates
 relatively efficiently via (\ref{Mhat}) and (\ref{model5}).
 
+\section{Simplification}
+The haploid case simplified by equations (\ref{Mhat}) and (\ref{model5})
+are the consequence of specializing to Vose's infinite population model and computing in the Walsh basis. Time switching between the standard basis and the Walsh basis is negligible; the fast Walsh transform (in dimension $n$) has complexity $n \nudge \log n$ \cite{Shanks1969}.
+
+Only one mixing matrix as opposed to $2^\ell$ matrices is needed to compute the next generation; evolution equation (\ref{model5}) references the same matrix for every $g$, whereas evolution equation (\ref{model3}) depends upon a different matrix $M_g$ for each choice of $g$. The matrix is computed by a single sum as opposed to a triple sum; compare equation (\ref{Mhat}) with equation (\ref{transmission}).  Also, the relevant quadratic form is computed with a single sum as opposed to a double sum; computing via (\ref{model5}) is linear time in the size of $g \mathcal{R}$ (for each $g$) as opposed to the quadratic time computation (for each $g$) represented by equation (\ref{model3}).
+
+From a computational standpoint, the best-case scenario is where
+recomputation of the matrices mentioned in the previous paragraph is
+obviated by sufficient memory.  The reduction from $2^\ell$ matrices
+to one matrix helps significantly in that regard. To demonstrate these advantages in concrete terms, consider computing
+with genomes of length $\ell \in \{4,6,8,10,12,14\}$.  The fact that
+only the mixing matrix need be involved is significant; using $2^{14}$
+matrices each of which contains $2^{14} \times 2^{14}$ entries of type
+\verb@double@ requires $32$ terabytes, whereas the mixing matrix at
+$2$ gigabytes fits easily within the memory of a laptop.
+
 

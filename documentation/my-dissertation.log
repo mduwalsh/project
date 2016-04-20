@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.9.2)  24 MAR 2016 10:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.9.2)  1 APR 2016 10:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -644,9 +644,6 @@ Chapter 1.
 Package natbib Warning: Citation `Vose1999' on page 1 undefined on input line 6
 .
 
-
-LaTeX Warning: Command \b invalid in math mode on input line 11.
-
 [1
 
 
@@ -705,43 +702,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--81
 Package natbib Warning: Citation `Hardy1908' on page 6 undefined on input line 
 97.
 
-[6] [7]
-
-Package natbib Warning: Citation `Vose1999' on page 8 undefined on input line 1
-70.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 194--203
-
- []
-
-[8]
-
-Package natbib Warning: Citation `Geiringer1944' on page 9 undefined on input l
-ine 208.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 212--215
-
- []
-
-
-Package natbib Warning: Citation `Vose1999' on page 9 undefined on input line 2
-25.
-
-[9]) [10]
+[6] [7]) [8]
 :<-
 :<+ chapters/chapter-3.tex
 \openout2 = `chapters/chapter-3.aux'.
 
 (./chapters/chapter-3.tex
 Chapter 3.
-) [11
+
+Package natbib Warning: Citation `Vose1999' on page 9 undefined on input line 3
+.
+
+[9
 
 
 
 
 ]
+
+Package natbib Warning: Citation `Vose1999' on page 10 undefined on input line 
+28.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--34
+
+ []
+
+
+Package natbib Warning: Citation `Vose1999' on page 10 undefined on input line 
+40.
+
+
+Package natbib Warning: Citation `Geiringer1944' on page 10 undefined on input 
+line 46.
+
+
+Package natbib Warning: Citation `Geiringer1944' on page 10 undefined on input 
+line 47.
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 50--53
+
+ []
+
+
+Package natbib Warning: Citation `Vose1999' on page 11 undefined on input line 
+60.
+
+
+Package natbib Warning: Citation `Vose1999' on page 11 undefined on input line 
+77.
+
+[11]) [12]
 :<-
 :<+ chapters/chapter-4.tex
 \openout2 = `chapters/chapter-4.aux'.
@@ -749,36 +761,41 @@ Chapter 3.
 (./chapters/chapter-4.tex
 Chapter 4.
 
-Package natbib Warning: Citation `Beauchamp1975' on page 12 undefined on input 
+Package natbib Warning: Citation `Beauchamp1975' on page 13 undefined on input 
 line 10.
 
-[12
+[13
 
 
 
 
 ]
 
-Package natbib Warning: Citation `Beauchamp1975' on page 13 undefined on input 
+Package natbib Warning: Citation `Beauchamp1975' on page 14 undefined on input 
 line 22.
 
-[13] [14]
+[14] [15]
 
-Package natbib Warning: Citation `Vose1999' on page 15 undefined on input line 
+Package natbib Warning: Citation `Vose1999' on page 16 undefined on input line 
 81.
 
 
-Package natbib Warning: Citation `Vose1999' on page 15 undefined on input line 
+Package natbib Warning: Citation `Vose1999' on page 16 undefined on input line 
 104.
 
-[15]) [16]
+[16]
+
+Package natbib Warning: Citation `Shanks1969' on page 17 undefined on input lin
+e 146.
+
+[17]) [18]
 :<-
 :<+ chapters/chapter-5.tex
 \openout2 = `chapters/chapter-5.aux'.
 
 (./chapters/chapter-5.tex
 Chapter 5.
-) [17
+) [19
 
 
 
@@ -795,7 +812,7 @@ Overfull \hbox (18.60965pt too wide) in paragraph at lines 5--5
 []\OT1/cmr/bx/n/17.28 Convergence Of Fi-nite Diploid Pop-u-la-tion Short-
  []
 
-) [18
+) [20
 
 
 
@@ -805,17 +822,17 @@ Overfull \hbox (18.60965pt too wide) in paragraph at lines 5--5
 :<+ my-dissertation.bbl
 No file my-dissertation.bbl.
 :<-
-[19
+[21
 
 
 
-] [20]
+] [22]
 :<+ back-matter/appendix-1.tex
 \openout2 = `back-matter/appendix-1.aux'.
 
 (./back-matter/appendix-1.tex
 Appendix A.
-) [21
+) [23
 
 
 
@@ -824,7 +841,7 @@ Appendix A.
 :<+ back-matter/vita.tex
 \openout2 = `back-matter/vita.aux'.
 
-(./back-matter/vita.tex) [22
+(./back-matter/vita.tex) [24
 
 
 
@@ -848,16 +865,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 130.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 130.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: 69F493B7F7A822999BC8CEBFFAE84A57;1939.
+(rerunfilecheck)             Checksum: CE140AD9A636551038243FB229A99959;2127.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 130.
  ) 
 Here is how much of TeX's memory you used:
- 8597 strings out of 495029
- 127394 string characters out of 6181524
- 230092 words of memory out of 5000000
- 11583 multiletter control sequences out of 15000+600000
- 14733 words of font info for 58 fonts, out of 8000000 for 9000
+ 8603 strings out of 495029
+ 127464 string characters out of 6181524
+ 230370 words of memory out of 5000000
+ 11588 multiletter control sequences out of 15000+600000
+ 14902 words of font info for 59 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 39i,10n,43p,606b,358s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,12n,43p,768b,358s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (34 pages, 84288 bytes).
+Output written on my-dissertation.dvi (36 pages, 94424 bytes).

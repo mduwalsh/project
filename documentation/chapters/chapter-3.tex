@@ -1,1 +1,104 @@
-\chapter{Selection}\label{ch:selection}
+\chapter{Specialization}\label{ch:specialize}
+This chapter summarizes from the development in Vose \cite{Vose1999}.
+It specializes the haploid evolution equations in the previous section 
+to a context where mask-based crossing over and mutation operators are used, 
+leading to Vose's infinite population model for Genetic Algorithms.  Whereas 
+in previous sections {\em component} referred to a component
+of a distribution vector $q^n$ or $p^n$, in this section a component
+is either a probability (when when speaking of a component of a
+distribution vector), or a bit (when speaking of a component of a
+haploid).
+
+The set of haploids (i.e., length $\ell$ binary strings) is a
+commutative ring $\mathcal{R}$ under component-wise addition and
+multiplication modulo $2$.  This algebraic structure is crucial to
+Vose's specialization and subsequent analysis of
+(\ref{model3}). Denote the additive identity by ${\bf 0}$ and the
+multiplicative identity by ${\bf 1}$, and let $\overline{g}$
+abbreviate ${\bf 1} + g$.  Except when explicitly indicated otherwise,
+operations acting on elements of $\mathcal{R}$ are as defined in this
+paragraph.\footnote{In particular, $g \overline{g} = {\bf 0} = g+g$,
+  $g^2 = g$, $g + \overline{g} = {\bf 1}$ for all $g \in
+  \mathcal{R}$.}
+
+\section{Mutation}
+Mutation simulates effects of error that happen with low probability during duplication of chromosome. Mutation provides mechanism to inject new strings into the next generation population which gives {\em RHS} ability to search beyond the confines of initial population.
+
+Symbol $\mu$ is used to represent mutation distribution describing the probability $\mu_i$ with which $i \in \Omega$ is selected to be a mutation mask. $\mu : \Omega \rightarrow \Omega$ is nondeterministic mutation function where the result $\mu(x)$ of applying mutation function on $x$ is $x \oplus i$ with probability $\mu_i$ of distribution $\mu$ where $i$ is {\em mutation mask}. Mutating $x$ using mutation mask $i$ alters the bits of $x$ in those positions the mutation mask $i$ is 1.
+$\mu \in [0, 0.5)$ is regarded as a {\em mutation rate} which implicitly specifies distribution $\mu$ according to rule \cite{Vose1999}
+\[
+\mu_i = (\mu)^{{\bf 1}^Ti} (1-\mu)^{\ell- {\bf 1}^Ti}
+\]
+If $g$ should mutate to $g^\prime$ with probability $\rho$,
+let\\[-0.2in]
+\[
+\mu_{g + g^\prime} \; = \; \rho\\[0.05in]
+\]
+Given distribution $\mu$, mutation is the stochastic operator sending
+$g$ to $g^\prime$ with probability $\mu_{g + g^\prime}$.
+
+Mutation considered is {\em independent} for all $j$ and $k$ which means \cite{Vose1999}
+\[
+\mu_j = \sum\limits_{k\otimes i=0} \mu_{i\oplus j} \sum\limits_{k\overline \otimes i=0} \mu_{i\otimes j}
+\]
+
+\section{Crossover}
+Crossover refers to crossing over (also termed recombination) between two chromosomes (strings in our case). Crossover like mutation also provides mechanism for injection of new strings into new generation population. Masked based crossover is used in this document. Geiringer \cite{Geiringer1944} used crossover mask with probability (distribution) associated with the mask to generate offsprings from parent chromosomes in absence of mutation and selection. Let $\chi_m$ be probability distribution with which $m$ is selected to be a crossover mask.
+Following Geiringer \cite{Geiringer1944}, if crossing over $u$ and $v$ should produce $u^\prime$ and $v^\prime$ with probability $\rho$, let
+\[
+\chi_m \; = \; \rho
+\]
+where $m$ is $1$ at components which $u^\prime$ inherits from $u$, and
+$0$ at components inherited from $v$.  It follows that\\[-0.3in]
+\begin{eqnarray*}
+u^\prime & = & m \nudge u + \overline{m} \nudge\nudge v \\
+v^\prime & = & m \nudge v + \overline{m} \nudge\nudge u
+\end{eqnarray*}
+Given distribution $\chi$, crossover is the stochastic operator which
+sends $u$ and $v$ to $u^\prime$ and $v^\prime$ with probability $\chi_m/2$ for each $u^\prime$ and $v^\prime$.
+
+$\chi$ can be considered as a {\em crossover rate} that specifies the distribution $\chi$ given by rule \cite{Vose1999}
+\[
+  \chi_i =\begin{cases}
+    \chi  c_i & \text{if $i>0$}.\\
+    1 - \chi + \chi  c_0 & \text{if $i = 0$}.
+  \end{cases}
+\]
+where $c \in \Lambda$ is referred to as {\em crossover type}. Classical crossover types include {\em 1-point crossover} and {\em uniform crossover}. For {\em 1-point crossover},
+\[
+  c_i =\begin{cases}
+    1/(\ell - 1) & \text{if $\exists k \in (0, \ell).i = 2^k - 1$}.\\
+    0 & \text{otherwise}.
+  \end{cases}
+\]
+and for uniform crossover, $c_i = 2^{-\ell}$.
+
+\section{Mixing Matrix}
+The combined action of mutation and crossover is referred to as {\em mixing}.
+The {\em mixing matrix\/} $M$ is the transmission matrix corresponding to the 
+additive identity of $\mathcal{R}$ is
+\[
+M \; = \; M_{\bf 0}\\[-0.01in]
+\]
+Crossover and mutation are defined in a manner respecting arbitrary partioning and arbitrary linkage to preserve the ability to endow abstract syntax with specialized semantics. Groups of loci can mutate and crossover with arbitrarily specified probabilities as disscussed in above sections. For mutation distribution $\mu$ and crossover distribution $\chi$, whether or not $\mu$ is independent if mutation is performed before crossover, then transmission function can be expressed as \cite{Vose1999}
+\begin{equation}
+\label{transmission}
+t_{\langle u,v \rangle}(g) \; = \;\,
+\sum_{i \nudge \in \nudge \mathcal{R}} \, \sum_{j \nudge \in \nudge \mathcal{R}} \,
+\sum_{k \nudge \in \nudge \mathcal{R}}
+\mu_i \nudge \mu_j \, \frac{\chi_k + \chi_{\overline{k}}}{2} \,
+[\nudge k (u + i) + \overline{k}(v + j) \, = \, g\nudge]
+\end{equation}
+Here a child gamete $g$ is produced via mutation and then crossover (which are operators that
+commute). 
+
+The mixing matrix $M$ is a fundamental object, because (\ref{transmission}) implies that evolution equation (\ref{model3}) can be expressed in the form
+\begin{equation}
+\label{model4}
+p_g^\prime \; = \; (\sigma_g \nudge p)^T M \, (\sigma_g \nudge p)
+\end{equation}
+where the permutation matrix $\sigma_g$ is defined by component equations
+\[
+(\sigma_g)_{u,v} \; = \; [\nudge u+v = g\nudge ]
+\]
+

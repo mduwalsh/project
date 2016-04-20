@@ -1,25 +1,20 @@
 \chapter{Extending A Genetic Algorithm Model To The Diploid Case} \label{ch:GA model Diploid}
 
-\section{Introduction}
 This chapter describes a simple Markov model for evolution under the
 influence of crossing over and mutation; it is a non-overlapping,
-generational, infinite population model which assumes panmixia and no
+generational, infinite population model under the assumption of {\em complete panmixia} (random mating) and no
 selective pressure. This chapter contributes to the elegance and
-simplicity of the abstract development and the demonstration that Vose's
-infinite population model for Genetic Algorithms --- which is a
-haploid model --- extends to the diploid case.
+simplicity of the abstract development and manifests diploid evolution equations can be represented by haploid equations.
 
-A basic syntactic model for haploid and diploid genomes is considered in the beginning and commented on its expressive power. Then the mechanics of how the next generation is obtained from the current generation are
+A basic syntactic model for haploid and diploid genomes is considered in the beginning and commented on its expressive power. Then the mechanics of how the $(n+1)$th generation is obtained from the $n$th generation are
 defined abstractly in procedural terms, which serves to motivate the equations governing evolution.
 
-Next evolution equations are developed --- corresponding to the
-procedural description defining evolution --- for a population of
+Next evolution equations are developed corresponding to the
+procedural description defining evolution for a population of
 diploid genomes. Observations concerning the form and symmetry of
 those equations directly lead to decoupling from the diploid case a
 haploid model sufficient to determine evolutionary trajectories for
-the diploid case.  The model is specialized to a context where
-mask-based crossing over and mutation operators are used, leading to
-Vose's infinite population model for Genetic Algorithms.  
+the diploid case.    
 
 \section{Model}
 A haploid genome $g$ is defined syntactically as a length $\ell$
@@ -37,8 +32,9 @@ strings.  Although simple, that syntax is flexible and possesses
 significant modeling power by means of tailoring partitioning to
 application.  We focus on the abstract level, considering the
 evolution of a non-overlapping, generational, infinite population
-model assuming panmixia and no selective pressure. Whether and how
-partitioning is defined is orthogonal to the development.
+model assuming panmixia and no selective pressure. We are not concerned with 
+whether and how partitioning is defined as it is irrelevant 
+to the development.
 
 Following Hardy \cite{Hardy1908}, the model $q^{n}$ at generation $n$
 is a vector having for component $q_\alpha^n$ the prevalence of
@@ -166,91 +162,6 @@ matrix is
 (vectors and matrices are indexed by haploids --- length $\ell$ binary
 strings).
 
-\section{Specialization}
-
-This section summarizes from the development in Vose \cite{Vose1999}.
-It specializes the haploid evolution equations in the previous section
-to Vose's infinite population model for Genetic Algorithms.  Whereas
-in previous sections {\em component} referred to a component
-of a distribution vector $q^n$ or $p^n$, in this section a component
-is either a probability (when when speaking of a component of a
-distribution vector), or a bit (when speaking of a component of a
-haploid).
-
-The set of haploids (i.e., length $\ell$ binary strings) is a
-commutative ring $\mathcal{R}$ under component-wise addition and
-multiplication modulo $2$.  This algebraic structure is crucial to
-Vose's specialization and subsequent analysis of
-(\ref{model3}). Denote the additive identity by ${\bf 0}$ and the
-multiplicative identity by ${\bf 1}$, and let $\overline{g}$
-abbreviate ${\bf 1} + g$.  Except when explicitly indicated otherwise,
-operations acting on elements of $\mathcal{R}$ are as defined in this
-paragraph.\footnote{In particular, $g \overline{g} = {\bf 0} = g+g$,
-  $g^2 = g$, $g + \overline{g} = {\bf 1}$ for all $g \in
-  \mathcal{R}$.}
-
-The {\em mixing matrix\/} $M$ is
-\[
-M \; = \; M_{\bf 0}\\[-0.01in]
-\]
-So as to preserve the ability to endow abstract syntax with
-specialized semantics, crossover\footnote{Crossover refers to crossing
-  over.} and mutation are defined in a manner respecting arbitrary
-partitioning (see section 2) and arbitrary linkage.  Groups of loci
-can mutate and crossover with arbitrarily specified probabilities;
-both mutation and crossover are defined in terms of distributions.  If
-$g$ should mutate to $g^\prime$ with probability $\rho$,
-let\\[-0.2in]
-\[
-\mu_{g + g^\prime} \; = \; \rho\\[0.05in]
-\]
-Given distribution $\mu$, mutation is the stochastic operator sending
-$g$ to $g^\prime$ with probability $\mu_{g + g^\prime}$.  Following
-Gieringer \cite{Geiringer1944}, if crossing over $u$ and $v$ should
-produce $u^\prime$ and $v^\prime$ with probability $\rho$, let
-\[
-\chi_m \; = \; \rho
-\]
-where $m$ is $1$ at components which $u^\prime$ inherits from $u$, and
-$0$ at components inherited from $v$.  It follows that\\[-0.3in]
-\begin{eqnarray*}
-u^\prime & = & m \nudge u + \overline{m} \nudge\nudge v \\
-v^\prime & = & m \nudge v + \overline{m} \nudge\nudge u
-\end{eqnarray*}
-Given distribution $\chi$, crossover is the stochastic operator which
-sends $u$ and $v$ to $u^\prime$ and $v^\prime$ with probability
-$\chi_m$.
-
-The probabilities comprising the components of the distributions $\mu$
-and $\chi$ may be chosen however desired. It follows (see
-\cite{Vose1999}) that the transmission function can be expressed in
-the form
-\begin{equation}
-\label{transmission}
-t_{\langle u,v \rangle}(g) \; = \;\,
-\sum_{i \nudge \in \nudge \mathcal{R}} \, \sum_{j \nudge \in \nudge \mathcal{R}} \,
-\sum_{k \nudge \in \nudge \mathcal{R}}
-\mu_i \nudge \mu_j \, \frac{\chi_k + \chi_{\overline{k}}}{2} \,
-[\nudge k (u + i) + \overline{k}(v + j) \, = \, g\nudge]
-\end{equation}
-\iffalse Here gamete $g$ is produced via mutation and then crossover
-(which are operators that commute) and is as likely to be $u^\prime$
-as it is to be $v^\prime$. The combined action of mutation and
-crossover is referred to as {\em mixing}.  \fi Here gamete $g$ is
-produced via mutation and then crossover (which are operators that
-commute). The combined action of mutation and crossover is referred to
-as {\em mixing}.  The mixing matrix $M$ is a fundamental object,
-because (\ref{transmission}) implies that evolution equation
-(\ref{model3}) can be expressed in the form
-\begin{equation}
-\label{model4}
-p_g^\prime \; = \; (\sigma_g \nudge p)^T M \, (\sigma_g \nudge p)
-\end{equation}
-where the permutation matrix $\sigma_g$ is defined by component
-equations
-\[
-(\sigma_g)_{u,v} \; = \; [\nudge u+v = g\nudge ]
-\]
 
 
 

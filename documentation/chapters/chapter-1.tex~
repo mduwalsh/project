@@ -5,10 +5,10 @@
 \section{Random Heuristic Search}
 Vose \cite{Vose1999} introduced abstract model, a generalized heuristic search method referred to as {\em Random Heuristic Search (RHS)} which is defined upon the central concept of state and transition between states. An instance of {\em RHS} can be thought of as an initial collection of elements $P_0$ chosen from some search space $\Omega$ , together with a stochastic transition rule $\tau$ , which from $P_i$ will produce another collection $P_{i+1}$. In other words, $\tau$ will be iterated to produce a sequence of generations.
 
-The beginning collection $P_0$ is referred to as the {\em initial population}. Let $n$ be the cardinality of $\Omega$. The {\em simplex} is defined to be the set of population descriptors:
+The beginning collection $P_0$ is referred to as the {\em initial population}. Let $n$ be the cardinality of $\Omega$ and ${\bf1}$ denotes column vector of all 1s. The {\em simplex} is defined to be the set of population descriptors:
 
 \[
-\Lambda = {\langle x_0,...,x_{n-1} \rangle : \b{1}^T x=1, x+j \geq 0 }
+\Lambda = {\langle x_0,...,x_{n-1} \rangle : {\bf1}^T x=1, x_j \geq 0 }
 \]
 
 An element $p$ of $\Lambda$ corresponds to a population according to the rule:
@@ -18,28 +18,28 @@ $p_j$ = the proportion in the population of the $j$th element of $\Omega$
 The cardinality of each population is a constant $r$, called the population size. Given $r$, a population descriptor $p$ unambiguously determines a population.
 
 Given the current population vector $p$, the next population vector $\tau(p)$ cannot be predicted with certainty because $\tau$ is stochastic 
-and results from $r$ independent, identically distributed random choices. Let $G:\Lambda \rightarrow \Lambda$ be a function that given the current population vector $p$ produces a new vector whose $i$th component is the probability that $i$th element of $\Omega$ is chosen. Thus, $G(p)$ is the probability vector that specifies the distribution from which the aggregate of $r$ choices forms the subsequent generation.
-Vose \cite{Vose1999} computes probability that population $q \in \frac{1}{r} X_n^r$ given current population vector $p$ as 
+and results from $r$ independent, identically distributed random choices. Let $\mathcal{G}:\Lambda \rightarrow \Lambda$ be a function that given the current population vector $p$ produces a new vector whose $i$th component is the probability that $i$th element of $\Omega$ is chosen. Thus, $\mathcal{G}(p)$ is the probability vector that specifies the distribution from which the aggregate of $r$ choices forms the subsequent generation.
+Probability that population $q given current population vector $p$ can be computed as \cite{Vose1999} 
 \[
-r! \prod \frac{(G(p)_j)^{rq_j}}{(rq_j)!}
+r! \prod \frac{(\mathcal{G}(p)_j)^{rq_j}}{(rq_j)!}
 \]
 \[
- = exp{-r \sum q_j \ln \frac{q_j}{G(p)!} - \sum (\ln \sqrt{2 \pi rq_j} + \frac{1}{12rq_j + \theta (rq_j)}) + O(\ln r)}
+ = exp\{-r \sum q_j \ln \frac{q_j}{\mathcal{G}(p)!} - \sum (\ln \sqrt{2 \pi rq_j} + \frac{1}{12rq_j + \theta (rq_j)}) + O(\ln r)\}
 \]
-where summation is restricted to indices for which $q_j > 0$ and $\frac{1}{r} X_n^r$ is set of possible populations.
+where summation is restricted to indices for which $q_j > 0$.
 
-Each random vector in the sequence $p, \tau(p), \tau^2(p),...$ depends only on the value of the preceding one, which is a special situation, and such a sequence form a Markov chain with
+Each random vector in the sequence $p, \tau(p), \tau^2(p),...$ depends only on the value of the preceding one, which is a special situation, and such a sequence forms a Markov chain with
 transition matrix
 \[
-Q_{p,q} = r! \prod \frac{(G(p)_j)^{rq_j}}{(rq_j)!}
+Q_{p,q} = r! \prod \frac{(\mathcal{G}(p)_j)^{rq_j}}{(rq_j)!}
 \]
-So the conceptualization of RHS can be replaced by Markov chain model abstraction which makes no reference to sampling $\Omega$. That is from current population $p$, produce $q = \tau (p)$ with probability $Q_{p,q}$. With transition matrix defined for Markov chain model, Vose \cite{Vose1999} says the expected next generation $E(\tau (p))$ is $G(p)$ and the expression in transition matrix
+So the conceptualization of RHS can be replaced by Markov chain model abstraction which makes no reference to sampling $\Omega$. That is from current population $p$, produce $q = \tau (p)$ with probability $Q_{p,q}$. With transition matrix defined for Markov chain model, Vose \cite{Vose1999} says the expected next generation $E(\tau (p))$ is $\mathcal{G}(p)$ and the expression in transition matrix
 \[
-\sum q_j \ln \frac{q_j}{G(p)!}
+\sum q_j \ln \frac{q_j}{\mathcal{G}(p)!}
 \]
-gives the qualitative information regarding probable next generation which is the {\em discrepancy} of $q$ with respect to $G(p)$. It is a measure of how far $q$ is from the expected next population $G(p)$. Discrepancy is nonnegative and is zero only when $q$ is the expected next population. Hence the factor 
+gives the qualitative information regarding probable next generation which is the {\em discrepancy} of $q$ with respect to $\mathcal{G}(p)$. It is a measure of how far $q$ is from the expected next population $\mathcal{G}(p)$. Discrepancy is nonnegative and is zero only when $q$ is the expected next population. Hence the factor 
 \[
-exp{-r \sum q_j \ln \frac{q_j}{G(p)!}}
+exp\{-r \sum q_j \ln \frac{q_j}{\mathcal{G}(p)!}\}
 \]
 in the expression of transition matrix indicates the probability that $q$ is the next generation
 decays exponentially, with constant $r$ , as the discrepancy between $q$ and the
@@ -50,15 +50,15 @@ The expression
 \]
 measures the {\em dispersion} of the population vector $q$ and the factor
 \[
-exp{- \sum (\ln \sqrt{2 \pi rq_j} + \frac{1}{12rq_j + \theta (rq_j)})}
+exp\{- \sum (\ln \sqrt{2 \pi rq_j} + \frac{1}{12rq_j + \theta (rq_j)})\}
 \]
 indicates the probability that $q$ is the next generation decays exponentially with increasing dispersion.
 
 Vose \cite{Vose1999} calculated variance of next generation population with respect to expected population as 
 \[
-E(\| \tau (p) - G(p) \|^2) = (1 - \|G(p)\|^2) / r)
+E(\| \tau (p) - \mathcal{G}(p) \|^2) = (1 - \|\mathcal{G}(p)\|^2) / r
 \]
-and mentioned $\tau (p)$ converges in probability to $G(p)$ as the population size increases. Therefore, corresponds to G in the infinite
+and mentioned $\tau (p)$ converges in probability to $\mathcal{G}(p)$ as the population size increases. Therefore, $\tau$ corresponds to $\mathcal{G}$ in the infinite
 population case.
 
 

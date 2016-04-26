@@ -30,7 +30,7 @@ A diploid genome $\alpha = \langle \alpha_0, \alpha_1 \rangle$ is
 likewise defined syntactically as a pair of length $\ell$ binary
 strings.  Although simple, that syntax is flexible and possesses
 significant modeling power by means of tailoring partitioning to
-application.  We focus on the abstract level, considering the
+application.  We concentrate on the abstract level, considering the
 evolution of a non-overlapping, generational, infinite population
 model assuming panmixia and no selective pressure. We are not concerned with 
 whether and how partitioning is defined as it is irrelevant 
@@ -137,16 +137,23 @@ Let $[\mbox{\em expression\/} ]$ denote $1$ if {\em expression\/} is
 true, and $0$ otherwise.\footnote{$[ \cdots ]$ is sometimes referred to
   as an {\em Iverson bracket}.}  The weighted count of haploid
 $g$ in generation $n$ is
-\begin{eqnarray*}
+\begin{eqnarray}
+\label{project}
   & &
   \sum_{\alpha_0, \, \alpha_1} \, q_{\langle \alpha_0, \alpha_1 \rangle}^n
 ([g = \alpha_0] + [g = \alpha_1]) \\ & = &
 \sum_{\alpha_0, \, \alpha_1} \, p_{\alpha_0}^n \, p_{\alpha_1}^n [g = \alpha_0] + 
 \sum_{\alpha_0, \, \alpha_1} \, p_{\alpha_0}^n \, p_{\alpha_1}^n [g = \alpha_1] \\[0.05in]
 & = & 2 \nudge p_g^n
-\end{eqnarray*}
+\end{eqnarray}
+
 Hence the (normalized) prevalence of haploid $g$ in generation $n$ is
-the $g\,$th component of the distribution $p^n$.
+the $g\,$th component of the distribution $p^n$. \linebreak
+Moreover, (\ref{project}) and (\ref{model1}) show (for $n >
+0$) invertibility of the map
+%\[
+ % \pi \nudge : \nudge {\bm q}^{n} \; \longmapsto \; {\bm p}^{n}
+%\]
 
 Evolution equation (\ref{model2}) in matrix form is
 \begin{equation}

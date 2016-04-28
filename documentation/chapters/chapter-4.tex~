@@ -207,7 +207,51 @@ Using these indices, (\ref{FWT3} becomes
 W(j_2,j_1,j_0;k_2,k_1,k_0) = W(0,j_2,j_1;k_1,k_0,0) \cdot W(0,0,j_0;k_2,k_1,k_0).
 \end{equation}
 
-$j_0$ can only be 0 or 1, so $W(0,0,j_0; k_2, k_1, k_0)$ represents either $W_{0,n} or W_{1,n}$. The function $W_{0,n}$ is 1 for all $n$. And function $W_{1,n}$ is 1 if $0<n<4$ and $W_{1, n}$ is -1.0 if $4<n<7$. 
+$j_0$ can only be 0 or 1, so $W(0,0,j_0; k_2, k_1, k_0)$ represents either $W_{0,n} or W_{1,n}$. The function $W_{0,n}$ is 1 for all $n$. And function $W_{1,n}$ is 1 if $0<n<4$ and $W_{1,n}$ is -1.0 if $4<n<7$. Thus, from (\ref{FWT7}), $W_{1,n}$ is +1.0 if $k_2=0$ and $W_{1,n}$ is -1.0 if $k_2 = 1$. Therefore, 
+\begin{equation}
+\label{FWT10}
+W(0,0,j_0;k_2,k_1,k_0) = (-1)^{j_0k_2}.
+\end{equation}
+
+(\ref{FWT9}) can be used to factor $W(0,j_2,j_1;k_1,k_0,0)$ to get
+\begin{equation}
+\label{FWT11}
+W(0,j_2,j_1;k_1,k_0,0) = W(0,0,j_2;k_0,0,0) \cdot W(0,0,j_1;k_1,k_0,0).
+\end{equation}
+
+Using (\ref{FWT10}) and (\ref{FWT11}) in (\ref{FWT9}), we get completely factored expression for the 8-length Walsh function
+\begin{equation}
+\label{FWT12}
+W(j_2,j_1,j_0;k_2,k_1,k_0) = (-1)^{j_2k_0}(-1)_{j_1k_1}(-1)^{j_0k_2}.
+\end{equation}
+
+Using (\ref{FWT12}), (\ref{FWT8}) becomes 
+\begin{equation}
+\label{FWT13}
+F(j_2,j_1,j_0;k_2,k_1,k_0) = \sum\limits_{k_0=0}^1 (-1)^{j_2k_0} \sum\limits_{k_1=0}^1 (-1)^{j_1k_1}  \cdot  \sum\limits_{k_2=0}^1 (-1)^{j_0k_2} f(k_2,k_1,k_0).
+\end{equation}
+
+We can define
+\begin{equation}
+\label{FWT14}
+A_1(j_0,k_1,k_0) = \sum\limits_{k_2=0}^1 (-1)^{j_0k_2} f(k_2,k_1,k_0)
+\end{equation}
+
+Array $A_1$ is first set of intermediate calculations to compute $F(m)$. $A_2(j_0,j_1,k_0)$ can be computed from $A_1$ and final result $A_3(j_0,j_1,j_2)$ from $A_2$ for 8-length Walsh transform. However, the order of the values will be in the bit reversed form. It can be generalized for the case $N = 2^p$ by defining intermediate Walsh transform arrays as
+\begin{equation}
+\label{FWT15}
+A_l(j_O,j_1,...,j_{l-1},k_{p-l-1},...,k_0) = \sum\limits_{k_{p-l}=0}^1 A_{l-1}(j_0,j_1,...,j_{l-2},k_{p-l},k_{p-l-1},...,k_0) \cdot (-1)^{j_{l-1}k_{p-l}}
+\end{equation}
+where $l = 1,2,...,p$ and 
+\begin{equation}
+\label{FWT16}
+A_0(k_{p-1},k_{p-2},...,k_0) = f(k_{p-1},k_{p-2},...,k_0).
+\end{equation}
+
+The general equation for the $M= 2^P$-length discrete Walsh function is 
+\[
+W(j_{p-1},j_{p-2},...,j_0;k_{p-1},k_{p-2},...,k_0) = \prod_{i=0}^{p-1} (-1)^{j_{p-1-i}k_i}.
+\]
 
 
 \section{Simplification} 

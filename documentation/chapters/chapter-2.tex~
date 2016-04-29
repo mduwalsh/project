@@ -151,9 +151,9 @@ Hence the (normalized) prevalence of haploid $g$ in generation $n$ is
 the $g\,$th component of the distribution $p^n$. \linebreak
 Moreover, (\ref{project}) and (\ref{model1}) show (for $n >
 0$) invertibility of the map
-%\[
- % \pi \nudge : \nudge {\bm q}^{n} \; \longmapsto \; {\bm p}^{n}
-%\]
+\[
+  \pi \nudge : \nudge {\bm q}^{n} \; \longmapsto \; {\bm p}^{n}
+\]
 
 Evolution equation (\ref{model2}) in matrix form is
 \begin{equation}

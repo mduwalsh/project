@@ -19,18 +19,15 @@
 \BOOKMARK [1][-]{section.3.1}{3.1 Mutation}{chapter.3}% 19
 \BOOKMARK [1][-]{section.3.2}{3.2 Crossover}{chapter.3}% 20
 \BOOKMARK [1][-]{section.3.3}{3.3 Mixing Matrix}{chapter.3}% 21
-\BOOKMARK [0][-]{chapter.4}{4 Adaptation of Walsh Transformation}{}% 22
-\BOOKMARK [1][-]{section.4.1}{4.1 Walsh Transorm}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.2}{4.2 Walsh Transform Adaptation}{chapter.4}% 24
-\BOOKMARK [1][-]{section.4.3}{4.3 Fast Walsh Transform}{chapter.4}% 25
-\BOOKMARK [1][-]{section.4.4}{4.4 Simplification}{chapter.4}% 26
-\BOOKMARK [0][-]{chapter.5}{5 Evolutionary Limits}{}% 27
-\BOOKMARK [0][-]{chapter.6}{6 Experimental Simulations and Measurements}{}% 28
-\BOOKMARK [1][-]{section.6.1}{6.1 Distance Computation}{chapter.6}% 29
-\BOOKMARK [1][-]{section.6.2}{6.2 Simplification}{chapter.6}% 30
-\BOOKMARK [1][-]{section.6.3}{6.3 Convergence Of Finite Diploid Population Short-Term Behavior}{chapter.6}% 31
-\BOOKMARK [0][-]{section*.18}{Bibliography}{}% 32
-\BOOKMARK [0][-]{appendix.A}{A Summary of Equations}{}% 33
-\BOOKMARK [1][-]{section.A.1}{A.1 Cartesian}{appendix.A}% 34
-\BOOKMARK [1][-]{section.A.2}{A.2 Cylindrical}{appendix.A}% 35
-\BOOKMARK [0][-]{section*.19}{Vita}{}% 36
+\BOOKMARK [1][-]{section.3.4}{3.4 Walsh Transorm}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.5}{3.5 Walsh Transform Adaptation}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.6}{3.6 Fast Walsh Transform}{chapter.3}% 24
+\BOOKMARK [0][-]{chapter.4}{4 Experimental Simulations and Measurements}{}% 25
+\BOOKMARK [1][-]{section.4.1}{4.1 Distance}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.2}{4.2 Simplification}{chapter.4}% 27
+\BOOKMARK [0][-]{chapter.5}{5 Evolutionary Limits}{}% 28
+\BOOKMARK [0][-]{section*.18}{Bibliography}{}% 29
+\BOOKMARK [0][-]{appendix.A}{A Summary of Equations}{}% 30
+\BOOKMARK [1][-]{section.A.1}{A.1 Cartesian}{appendix.A}% 31
+\BOOKMARK [1][-]{section.A.2}{A.2 Cylindrical}{appendix.A}% 32
+\BOOKMARK [0][-]{section*.19}{Vita}{}% 33

@@ -1,5 +1,5 @@
-\contentsline {chapter}{List of Tables}{viii}{section*.13}
-\contentsline {chapter}{List of Figures}{ix}{section*.15}
+\contentsline {chapter}{List of Tables}{ix}{section*.13}
+\contentsline {chapter}{List of Figures}{x}{section*.15}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Literature}{1}{section.1.2}
@@ -11,18 +11,15 @@
 \contentsline {section}{\numberline {3.1}Mutation}{9}{section.3.1}
 \contentsline {section}{\numberline {3.2}Crossover}{10}{section.3.2}
 \contentsline {section}{\numberline {3.3}Mixing Matrix}{12}{section.3.3}
-\contentsline {chapter}{\numberline {4}Adaptation of Walsh Transformation}{13}{chapter.4}
-\contentsline {section}{\numberline {4.1}Walsh Transorm}{13}{section.4.1}
-\contentsline {section}{\numberline {4.2}Walsh Transform Adaptation}{15}{section.4.2}
-\contentsline {section}{\numberline {4.3}Fast Walsh Transform}{16}{section.4.3}
-\contentsline {section}{\numberline {4.4}Simplification}{17}{section.4.4}
-\contentsline {chapter}{\numberline {5}Evolutionary Limits}{19}{chapter.5}
-\contentsline {chapter}{\numberline {6}Experimental Simulations and Measurements}{20}{chapter.6}
-\contentsline {section}{\numberline {6.1}Distance Computation}{20}{section.6.1}
-\contentsline {section}{\numberline {6.2}Simplification}{20}{section.6.2}
-\contentsline {section}{\numberline {6.3}Convergence Of Finite Diploid Population Short-Term Behavior}{20}{section.6.3}
-\contentsline {chapter}{Bibliography}{21}{section*.18}
-\contentsline {chapter}{\numberline {A}Summary of Equations}{23}{appendix.A}
-\contentsline {section}{\numberline {A.1}Cartesian}{23}{section.A.1}
-\contentsline {section}{\numberline {A.2}Cylindrical}{23}{section.A.2}
-\contentsline {chapter}{Vita}{24}{section*.19}
+\contentsline {section}{\numberline {3.4}Walsh Transorm}{13}{section.3.4}
+\contentsline {section}{\numberline {3.5}Walsh Transform Adaptation}{14}{section.3.5}
+\contentsline {section}{\numberline {3.6}Fast Walsh Transform}{16}{section.3.6}
+\contentsline {chapter}{\numberline {4}Experimental Simulations and Measurements}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Distance}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}Simplification}{23}{section.4.2}
+\contentsline {chapter}{\numberline {5}Evolutionary Limits}{24}{chapter.5}
+\contentsline {chapter}{Bibliography}{25}{section*.18}
+\contentsline {chapter}{\numberline {A}Summary of Equations}{27}{appendix.A}
+\contentsline {section}{\numberline {A.1}Cartesian}{27}{section.A.1}
+\contentsline {section}{\numberline {A.2}Cylindrical}{27}{section.A.2}
+\contentsline {chapter}{Vita}{28}{section*.19}

@@ -266,7 +266,7 @@ f(n) = \frac{1}{N}\sum\limits_{m=0}^{N-1} F(m) W_{m,n}, \text{where $n = 0, 1, 2
 Since walsh functions $W_{m,n}$ have values either $1$ or $-1$, computation of (\ref{FWT4}) and (\ref{FWT5}) does not require multiplication.
 Shanks \cite{Shanks1969} derived using (\ref{FWT3}) an algorithm analogous to Cooley-Tukey algorithm that will require $N \log_2 N$ summations to compute complete Walsh transform. \linebreak
 For $N = 8$ (which can be extended to general case),\linebreak
-indices in (\FWT4) can be replaced with a set which can only have values 0 and 1. That is, 
+indices in (\ref{FWT4}) can be replaced with a set which can only have values 0 and 1. That is, 
 \begin{equation}
 \label{FWT6}
 m = 4j_2 + 2j_1 + j_0, \text{$j_2, j_1, j_0 = 0$ or $1$}

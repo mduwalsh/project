@@ -1,6 +1,8 @@
-\chapter{Distance Computation And Simplification} \label{ch:distance}
+\chapter{Experimental Simulations and Measurements} \label{ch:distance}
 This chapter describes how distance between finite diploid population and infinite population is calculated.
-Then it discusses simplifications in computations made by our evolutionary equations and in distance computation.
+Then it discusses simplifications in computations made by our evolutionary equations and in distance computation. 
+And it goes on to discuss results from simulations and convergence of finite diploid population short-term behavior 
+to evolutionary behavior predicted by infinite population model.
 
 \section{Distance}
 Let vector ${\bm f}$ represent a finite diploid population; component
@@ -69,11 +71,14 @@ Only one mixing matrix as opposed to $2^\ell$ matrices is needed to compute the 
 From a computational standpoint, the best-case scenario is where
 recomputation of the matrices mentioned in the previous paragraph is
 obviated by sufficient memory.  The reduction from $2^\ell$ matrices
-to one matrix helps significantly in that regard. To demonstrate these advantages in concrete terms, consider computing
-with genomes of length $\ell \in \{4,6,8,10,12,14\}$.  The fact that
-only the mixing matrix need be involved is significant; using $2^{14}$
-matrices each of which contains $2^{14} \times 2^{14}$ entries of type
-\verb@double@ requires $32$ terabytes, whereas the mixing matrix at
-$2$ gigabytes fits easily within the memory of a laptop.
+to one matrix helps significantly in that regard. To demonstrate this
+advantage in concrete terms, consider genomes of length $\ell = 14$.
+Using $2^{14}$ matrices each of which contains $2^{14} \times \nudge
+2^{14}$ entries of type \verb@double@ requires $32$ terabytes, whereas
+the mixing matrix at $2$ gigabytes fits easily within the memory of a
+laptop.  Moreover, for a population size of $N \le 2^{20}$, the
+distance computation described in the previous section reduces the
+number of terms involved by a factor of
+$2^{28}/(2^{14} + 2^{N}) \; > \; 252$.
 
 

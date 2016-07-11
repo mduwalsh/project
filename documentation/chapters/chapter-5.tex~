@@ -1,0 +1,88 @@
+\chapter{Evolutionary Limits} \label{ch:evolutionary limits}
+This chapter inspects evolutionary limits predicted by Vose using infinite population model under no selective pressure. It states predicted orbits of infinite population and also discusses necessary and sufficient conditions are discussed. This section also explains implementation of simulation of evolutionary limits.
+
+\section{Limits}
+Vose states under mild assumptions on mutations (considered later), populations converge under repeated application of $\mathcal{M}$. Vose mentions that in general case, periodic orbits are possible but populations converge under repeated application of $\mathcal{M}^2$ and limits $p\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n}(p)$ and $q\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n+1}(q)$ exist.
+
+Following Vose's theorem, let $S_g = g \mathcal{R} \ {\textbf{0}, g}$, and let |g| be the number of non zero bits in g.
+\[
+\widehat{p}^{\prime}_g  = \begin{cases}
+    2^{\ell /2}  & \text{if $g = 0$}\\
+    x_g \widehat{p}_g + y_g(\widehat{p}_g) & \text{otherwise}
+  \end{cases}
+\]
+where,
+\[
+x_g = 2\widehat{M}_{g,0},  y_g(z) = 2^{\ell /2} \sum_{i \in S_g} z_i z_{i+g} \widehat{M}_{i,i+g}.
+\]
+
+Moreover, 
+\begin{eqnarray*}
+|g| & = & 1 \nudge \Rightarrow y_g = 0 \\
+|g| & > & 0 \nudge \Rightarrow |x_g| \leq 1 \\
+|x_g| & = & 1 \nudge \Rightarrow y_g = 0
+\end{eqnarray*}
+
+With above notations, limits can be expressed in Walsh basis by recursive equations 
+\begin{equation}
+\label{lt1}
+\widehat{p}^{\ast}_g  = \begin{cases}
+    (x_g y_g(\widehat{p}^{\ast}) + y_g(\widehat{q}^{\ast}))/(1-x_g^2)  & \text{if $|x_g| < 0$}\\
+    \widehat{p}_g  & \text{otherwise}
+  \end{cases}
+\end{equation}
+\begin{equation}
+\label{lt2}
+\widehat{q}^{\ast}_g  = \begin{cases}
+    (x_g y_g(\widehat{q}^{\ast}) + y_g(\widehat{p}^{\ast}))/(1-x_g^2)  & \text{if $|x_g| < 0$}\\
+    \widehat{\mathcal{M}(p)_g}  & \text{otherwise}
+  \end{cases}
+\end{equation}
+
+If $xg \neq −1$ for all g, then $p\ast = q\ast = lim_{n\rightarrow\infty} \mathcal{M}(p)$ is the limit of mixing. In other cases, mixing converges to a periodic orbit oscillating between $p\ast$ and $q\ast = \mathcal{M}(p\ast)$.
+
+\section{Computation of Mutation and Crossover Distribution}
+This section describes easy way to install values of mutation and crossover distributions that satisfies condition described by equation above for evolutionary sequence to converge in periodic orbits.
+Let $\Mu_j$ and $\Chi_k$ represent mutation and crossover distributions respectively where $j,k \in \mathcal{R}$ and $U01()$ be random number between $0$ and $1$. For any $g$ where $g \in \mathcal{R}$ and $g \neq -1$.
+For all $j \in \mathcal{R}$,
+\[
+\Mu_j = \begin{cases}
+    U01() & \text{if $g^T \cdot j$ is odd}.\\
+    0 & \text{otherwise}.
+  \end{cases}
+\]
+
+This installs some random values in some specific positions in $\Mu$ distribution array according to value of g and others set to $0$. Normalization of $\Mu_j$ distribution produces values satisfying equation above.
+\[
+\Mu_j = \Mu_j/\sum\limits_{j \in \mathcal{R}} \Mu_j.
+\]
+Condition $k \in \conj{g} \mathcal{R}$ can be simplified for computation as
+\[
+k = \conj{g} i & \text{where $i \in \mathcal{R}$}
+\]
+Anding both sides by $\conj{g}$,
+\begin{eqnarray*}
+\conj{g} k & = & \conj{g} \conj{g] i \\
+\conj{g} k & = & \conj{g} i \\
+\conj{g} k & = & \conj{g} i \\
+\end{eqnarray*}
+
+For all $k \in \mathcal{R}$,
+\begin{eqnarray*}
+\Chi_k & = & U01() \\
+\Chi_{k+g} & = & U01() 
+\end{eqnarray*}
+where $k \in \conj{g} \mathcal{R}$, and
+\[
+\Chi_k = 0
+\]
+for other values of $k$.
+\newline 
+This installs some random values in some specific positions in array of $\Chi$ according to value of $g$ and others set to $0$. Normalization of $\Chi_k$ distribution gives values satisfying equation above for $\Chi$ distribution.
+\[
+\Chi_k = \Chi_k/\sum\limits_{k \in \mathcal{R}} \Chi_k.
+\]
+
+
+
+

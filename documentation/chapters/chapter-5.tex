@@ -4,7 +4,7 @@ This chapter inspects evolutionary limits predicted by Vose using infinite popul
 \section{Limits}
 Vose states under mild assumptions on mutations (considered later), populations converge under repeated application of $\mathcal{M}$. Vose mentions that in general case, periodic orbits are possible but populations converge under repeated application of $\mathcal{M}^2$ and limits $p^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n}(p)$ and $q^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n+1}(q)$ exist.
 
-Following Vose's theorem, let $S_g = g \mathcal{R} / \{\textbf{0}, g\}$, and let $|g|$ be the number of non zero bits in g.
+Following Vose's theorem, let $S_g = g \mathcal{R} / \{\textbf{0}, g\}$, and let $|g|$ be the number of non zero bits in $g$.
 \[
 {{\widehat{p}}_g}^{\prime}  = \begin{cases}
     2^{\ell /2}  & \text{if $g = 0$}\\
@@ -41,7 +41,7 @@ With above notations, limits can be expressed in Walsh basis by recursive equati
 
 If $xg \neq −1$ for all g, then $p^\ast = q^\ast = lim_{n \rightarrow \infty} \mathcal{M}(p)$ is the limit of mixing. In other cases, mixing converges to a periodic orbit oscillating between $p^\ast$ and $q^\ast = \mathcal{M}(p^\ast)$.
 
-Limits $\widehat{p^{\ast}}_g$ and $\widehat{q^{\ast}_g}$ can be computed considering $g$th components in order of increasing $|g|$ and performing complete indcution on $|g|$. If $|g| = 0$ then $g = 0$. Since $\widehat{p^\ast}_0 = 2^{-\ell/2}$ for all distributions $p$, the $\textbf{0}$the components of the sequence $\mathcal{M}^n(p)$ are identical in the Walsh basis. Since $|x_0| = 2$ ($x_g = 2\widehat{M}_{g,0}$ and $\widehat{M}_{0,0} = 1$), $\widehat{p^{\ast}}_g = \widehat{q^{\ast}}_g = 2^{-\ell/2}$. Next, consider $|g| = 1$. $y_g = 0$ for $|g| = 0$ (noted from above). These two cases $|g| < 2|$ are base cases for complete induction on $|g|$. The inductive hypothesis given by Vose is that for $|k| < |g|$, the $k$the component of $\mathcal{M}^n(p)$ in the Walsh basis converges to $\widehat{p^{\ast}}_k$ or $\widehat{q^{\ast}}_k$ as $n \rightarrow \infty$ through even or odd values respectively, and if $x_k \neq -1$ for all such $k$, then $\widehat{p^{\ast}}_k$ = $\widehat{q^{\ast}}_k$. And computation of $y_g(z)$ involves only the $k$th components of $z$ where $|k| < |g|$. 
+Limits $\widehat{p^{\ast}}_g$ and $\widehat{q^{\ast}_g}$ can be computed considering $g$th components in order of increasing $|g|$ and performing complete indcution on $|g|$. If $|g| = 0$ then $g = 0$. Since $\widehat{p^\ast}_0 = 2^{-\ell/2}$ for all distributions $p$, the $\textbf{0}$the components of the sequence $\mathcal{M}^n(p)$ are identical in the Walsh basis. Since $|x_0| = 2$ ($x_g = 2\widehat{M}_{g,0}$ and $\widehat{M}_{0,0} = 1$), $\widehat{p^{\ast}}_g = \widehat{q^{\ast}}_g = 2^{-\ell/2}$. Next, consider $|g| = 1$. $y_g = 0$ for $|g| = 0$ (noted from above). These two cases $|g| < 2|$ are base cases for complete induction on $|g|$. The inductive hypothesis given by Vose is that for $|k| < |g|$, the $k$th component of $\mathcal{M}^n(p)$ in the Walsh basis converges to $\widehat{p^{\ast}}_k$ or $\widehat{q^{\ast}}_k$ as $n \rightarrow \infty$ through even or odd values respectively, and if $x_k \neq -1$ for all such $k$, then $\widehat{p^{\ast}}_k$ = $\widehat{q^{\ast}}_k$. And computation of $y_g(z)$ involves only the $k$th components of $z$ where $|k| < |g|$. 
 \newline 
 Vose gives a necessary and sufficient condition for the sequence
 \[
@@ -64,9 +64,14 @@ For all $j \in \mathcal{R}$,
   \end{cases}
 \]
 
-This installs some random values in some specific positions in $\mu$ distribution array according to value of g and others set to $0$. 
+This installs some random values in some specific positions in $\mu$ distribution array according to value of $g$ and others set to $0$. 
+Normalization of mutation distribution $\mu_j$ gives values satisfying equation (\ref{OscCond}) for $\mu$ distribution.
+\[
+\mu_j = \mu_j / \sum \limits_{j \in \mathcal{R} } \mu_j
+\]
+
 \newline
-Condition $k \in \bar{g} \mathcal{R}$ can be simplified for computation as
+Condition $k \in \bar{g} \mathcal{R}$ in equation (\ref{OscCond}) can be simplified for computation as
 \[
 k = \bar{g} i  \text{ where $i \in \mathcal{R}$}
 \]
@@ -93,5 +98,34 @@ This installs some random values in some specific positions in array of $\chi$ a
 \chi_k = \chi_k/\sum\limits_{k \in \mathcal{R}} \chi_k.
 \]
 
+\section{Oscillation}
+\label{Oscillation}
+
+Equations (\ref{lt1}) and (\ref{lt2}) were implemented with crossover distribution $\chi$ and mutation distribution $\mu$ satisfying condition (\ref{OscCond}) to inspect oscillating behavior of predicted infinite population evolutionary limits $p^{\ast} and q^{\ast}$ and finite population under no selective pressure.
+
+Infinite haploid population evolutionary limits $p_h^{\ast}$ and $q_h^{\ast}$ were computed using equations (\ref{lt1}) and (\ref{lt2}). Infinite diploid population evolutionary limits $p_d^{\ast}$ and $q_d^{\ast}$ as
+\[
+{p_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} = {p_h^{\ast}}_{\gamma_0} p_h^{\ast}}_{\gamma_1}
+\]
+\[
+{q_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} = {q_h^{\ast}}_{\gamma_0} q_h^{\ast}}_{\gamma_1}
+\]
+where $\gamma = \langle \gamma_0, \gamma_1 \rangle$ is diploid genome.
 
 
+Finite haploid population $s^n$, diploid population $f^n$, infinite haploid population $p^n$ and infinite haploid population $q^n$ with random intial population ($p^0 = q^0 = s^0 = f^0 $) were considered. $p^0$ population distribution was randomly generated at first. Using distribution $p^0$, finite haploid strings were generated where probability of presence of each string $\beta \propto p^0_\beta$. Then from finite haploid strings, $p^0$ was recalculated such that $p^0 = s^0$. Infinite diploid population $q^0$ was calculated as
+\[
+q^0_{\langle \alpha_0, \alpha_1 \rangle} = p^0_{\alpha_0} * p^1_{\alpha_1}
+\]
+For finite diploid $f^n$ population, diploid strings were generated where presence of each diploid string $\alpha \langle \alpha_0, \alpha_1 \rangle \propto p^0_{\alpha_0} p^0_{\alpha_1}$.
+Genome lengths $l \in {2, 4, 6, 8, 10, 12, 14}$ and population sizes $N = 2^i$ for integer $0 \leq i \leq 14$ were considered. The distances of $p^n$ and $s^n$ to haploid evolutionary limits $p_h^{\ast}$ and $q_h^{\ast}$ were plotted and the distance of $q^n$ and $f^n$ to diploid evolutionary limits $p_d^{\ast}$ and $q_d^{\ast}$ were plotted.
+
+
+\section{Violation}
+The results showed when $\chi$ and $\mu$ distributions satisfies (\ref{OscCond}), oscillation occurs in finite population. Error $\epsilon$ was introduced to $\mu$ distribution and simulations were run like in section \ref{Oscillation}.
+
+
+
+
+
+ 

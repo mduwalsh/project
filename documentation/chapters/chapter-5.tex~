@@ -2,18 +2,18 @@
 This chapter inspects evolutionary limits predicted by Vose using infinite population model under no selective pressure. It states predicted orbits of infinite population and also discusses necessary and sufficient conditions are discussed. This section also explains implementation of simulation of evolutionary limits.
 
 \section{Limits}
-Vose states under mild assumptions on mutations (considered later), populations converge under repeated application of $\mathcal{M}$. Vose mentions that in general case, periodic orbits are possible but populations converge under repeated application of $\mathcal{M}^2$ and limits $p\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n}(p)$ and $q\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n+1}(q)$ exist.
+Vose states under mild assumptions on mutations (considered later), populations converge under repeated application of $\mathcal{M}$. Vose mentions that in general case, periodic orbits are possible but populations converge under repeated application of $\mathcal{M}^2$ and limits $p^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n}(p)$ and $q^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n+1}(q)$ exist.
 
-Following Vose's theorem, let $S_g = g \mathcal{R} \ {\textbf{0}, g}$, and let |g| be the number of non zero bits in g.
+Following Vose's theorem, let $S_g = g \mathcal{R} / \{\textbf{0}, g\}$, and let $|g|$ be the number of non zero bits in $g$.
 \[
-\widehat{p}^{\prime}_g  = \begin{cases}
+{{\widehat{p}}_g}^{\prime}  = \begin{cases}
     2^{\ell /2}  & \text{if $g = 0$}\\
     x_g \widehat{p}_g + y_g(\widehat{p}_g) & \text{otherwise}
   \end{cases}
 \]
 where,
 \[
-x_g = 2\widehat{M}_{g,0},  y_g(z) = 2^{\ell /2} \sum_{i \in S_g} z_i z_{i+g} \widehat{M}_{i,i+g}.
+x_g = 2\widehat{M}_{g,0},  \hspace*{1cm} y_g(z) = 2^{\ell /2} \sum_{i \in S_g} z_i z_{i+g} \widehat{M}_{i,i+g}.
 \]
 
 Moreover, 
@@ -26,63 +26,105 @@ Moreover,
 With above notations, limits can be expressed in Walsh basis by recursive equations 
 \begin{equation}
 \label{lt1}
-\widehat{p}^{\ast}_g  = \begin{cases}
-    (x_g y_g(\widehat{p}^{\ast}) + y_g(\widehat{q}^{\ast}))/(1-x_g^2)  & \text{if $|x_g| < 0$}\\
+\widehat{p^{\ast}}_g  = \begin{cases}
+    (x_g y_g(\widehat{p^{\ast}}) + y_g(\widehat{q^{\ast}}))/(1-x_g^2)  & \text{if $|x_g| < 0$}\\
     \widehat{p}_g  & \text{otherwise}
   \end{cases}
 \end{equation}
 \begin{equation}
 \label{lt2}
-\widehat{q}^{\ast}_g  = \begin{cases}
-    (x_g y_g(\widehat{q}^{\ast}) + y_g(\widehat{p}^{\ast}))/(1-x_g^2)  & \text{if $|x_g| < 0$}\\
+\widehat{q^{\ast}}_g  = \begin{cases}
+    (x_g y_g(\widehat{q^{\ast}}) + y_g(\widehat{p^{\ast}}))/(1-x_g^2)  & \text{if $|x_g| < 0$}\\
     \widehat{\mathcal{M}(p)_g}  & \text{otherwise}
   \end{cases}
 \end{equation}
 
-If $xg \neq −1$ for all g, then $p\ast = q\ast = lim_{n\rightarrow\infty} \mathcal{M}(p)$ is the limit of mixing. In other cases, mixing converges to a periodic orbit oscillating between $p\ast$ and $q\ast = \mathcal{M}(p\ast)$.
+If $xg \neq −1$ for all g, then $p^\ast = q^\ast = lim_{n \rightarrow \infty} \mathcal{M}(p)$ is the limit of mixing. In other cases, mixing converges to a periodic orbit oscillating between $p^\ast$ and $q^\ast = \mathcal{M}(p^\ast)$.
 
+Limits $\widehat{p^{\ast}}_g$ and $\widehat{q^{\ast}_g}$ can be computed considering $g$th components in order of increasing $|g|$ and performing complete indcution on $|g|$. If $|g| = 0$ then $g = 0$. Since $\widehat{p^\ast}_0 = 2^{-\ell/2}$ for all distributions $p$, the $\textbf{0}$the components of the sequence $\mathcal{M}^n(p)$ are identical in the Walsh basis. Since $|x_0| = 2$ ($x_g = 2\widehat{M}_{g,0}$ and $\widehat{M}_{0,0} = 1$), $\widehat{p^{\ast}}_g = \widehat{q^{\ast}}_g = 2^{-\ell/2}$. Next, consider $|g| = 1$. $y_g = 0$ for $|g| = 0$ (noted from above). These two cases $|g| < 2|$ are base cases for complete induction on $|g|$. The inductive hypothesis given by Vose is that for $|k| < |g|$, the $k$th component of $\mathcal{M}^n(p)$ in the Walsh basis converges to $\widehat{p^{\ast}}_k$ or $\widehat{q^{\ast}}_k$ as $n \rightarrow \infty$ through even or odd values respectively, and if $x_k \neq -1$ for all such $k$, then $\widehat{p^{\ast}}_k$ = $\widehat{q^{\ast}}_k$. And computation of $y_g(z)$ involves only the $k$th components of $z$ where $|k| < |g|$. 
+\newline 
+Vose gives a necessary and sufficient condition for the sequence
+\[
+p, \mathcal{M}(p), \mathcal{M}^2(p),...
+\]
+to converge to a periodic orbit as that for some g
+\begin{equation}
+\label{OscCond}
+-1 = \sum \limits_{j} (-1)^{g^T j} \mu_j = - \sum \limits_{k \in \bar{g}\mathcal{R}} \chi_{k+g} + \chi_k
+\end{equation}
+ 
 \section{Computation of Mutation and Crossover Distribution}
-This section describes easy way to install values of mutation and crossover distributions that satisfies condition described by equation above for evolutionary sequence to converge in periodic orbits.
-Let $\Mu_j$ and $\Chi_k$ represent mutation and crossover distributions respectively where $j,k \in \mathcal{R}$ and $U01()$ be random number between $0$ and $1$. For any $g$ where $g \in \mathcal{R}$ and $g \neq -1$.
+Following algorithm installs values of mutation and crossover distributions that satisfies condition described by equation (\ref{OscCond}) for evolutionary sequence to converge in periodic orbits.
+Let $\mu_j$ and $\chi_k$ represent mutation and crossover distributions respectively where $j,k \in \mathcal{R}$ and $U01()$ be random number between $0$ and $1$. For any $g$ where $g \in \mathcal{R}$ and $g \neq 0$.
 For all $j \in \mathcal{R}$,
 \[
-\Mu_j = \begin{cases}
-    U01() & \text{if $g^T \cdot j$ is odd}.\\
+\mu_j = \begin{cases}
+    U01() & \text{if $(g^T\cdot j)$ is odd}.\\
     0 & \text{otherwise}.
   \end{cases}
 \]
 
-This installs some random values in some specific positions in $\Mu$ distribution array according to value of g and others set to $0$. Normalization of $\Mu_j$ distribution produces values satisfying equation above.
+This installs some random values in some specific positions in $\mu$ distribution array according to value of $g$ and others set to $0$. 
+Normalization of mutation distribution $\mu_j$ gives values satisfying equation (\ref{OscCond}) for $\mu$ distribution.
 \[
-\Mu_j = \Mu_j/\sum\limits_{j \in \mathcal{R}} \Mu_j.
+\mu_j = \mu_j / \sum \limits_{j \in \mathcal{R} } \mu_j
 \]
-Condition $k \in \conj{g} \mathcal{R}$ can be simplified for computation as
+
+\newline
+Condition $k \in \bar{g} \mathcal{R}$ in equation (\ref{OscCond}) can be simplified for computation as
 \[
-k = \conj{g} i & \text{where $i \in \mathcal{R}$}
+k = \bar{g} i  \text{ where $i \in \mathcal{R}$}
 \]
-Anding both sides by $\conj{g}$,
+Anding both sides by $\bar{g}$,
 \begin{eqnarray*}
-\conj{g} k & = & \conj{g} \conj{g] i \\
-\conj{g} k & = & \conj{g} i \\
-\conj{g} k & = & \conj{g} i \\
+\bar{g} k & = & \bar{g} \bar{g} i \\
+\bar{g} k & = & \bar{g} i \\
+\bar{g} k & = & k 
 \end{eqnarray*}
 
 For all $k \in \mathcal{R}$,
 \begin{eqnarray*}
-\Chi_k & = & U01() \\
-\Chi_{k+g} & = & U01() 
+\chi_k & = & U01() \\
+\chi_{k+g} & = & U01() 
 \end{eqnarray*}
-where $k \in \conj{g} \mathcal{R}$, and
+where $k \in \bar{g} \mathcal{R}$, and
 \[
-\Chi_k = 0
+\chi_k = 0
 \]
 for other values of $k$.
 \newline 
-This installs some random values in some specific positions in array of $\Chi$ according to value of $g$ and others set to $0$. Normalization of $\Chi_k$ distribution gives values satisfying equation above for $\Chi$ distribution.
+This installs some random values in some specific positions in array of $\chi$ according to value of $g$ and others set to $0$. Normalization of $\chi_k$ distribution gives values satisfying equation (\ref{OscCond}) for $\chi$ distribution.
 \[
-\Chi_k = \Chi_k/\sum\limits_{k \in \mathcal{R}} \Chi_k.
+\chi_k = \chi_k/\sum\limits_{k \in \mathcal{R}} \chi_k.
 \]
 
+\section{Oscillation}
+
+Equations (\ref{lt1}) and (\ref{lt2}) were implemented with crossover distribution $\chi$ and mutation distribution $\mu$ satisfying condition (\ref{OscCond}) to inspect oscillating behavior of predicted infinite population evolutionary limits $p^{\ast} and q^{\ast}$ and finite population under no selective pressure.
+
+Infinite haploid population evolutionary limits $p_h^{\ast}$ and $q_h^{\ast}$ were computed using equations (\ref{lt1}) and (\ref{lt2}). Infinite diploid population evolutionary limits $p_d^{\ast}$ and $q_d^{\ast}$ as
+\[
+{p_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} = {p_h^{\ast}}_{\gamma_0} p_h^{\ast}}_{\gamma_1}
+\]
+\[
+{q_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} = {q_h^{\ast}}_{\gamma_0} q_h^{\ast}}_{\gamma_1}
+\]
+where $\gamma = \langle \gamma_0, \gamma_1 \rangle$ is diploid genome.
+
+
+Finite haploid population $s^n$, diploid population $f^n$, infinite haploid population $p^n$ and infinite haploid population $q^n$ with random intial population ($p^0 = q^0 = s^0 = f^0 $) were considered. $p^0$ population distribution was randomly generated at first. Using distribution $p^0$, finite haploid strings were generated where probability of presence of each string $\beta \propto p^0_\beta$. Then from finite haploid strings, $p^0$ was recalculated such that $p^0 = s^0$. Infinite diploid population $q^0$ was calculated as
+\[
+q^0_{\langle \alpha_0, \alpha_1 \rangle} = p^0_{\alpha_0} * p^1_{\alpha_1}
+\]
+For finite diploid $f^n$ population, diploid strings were generated where presence of each diploid string $\alpha \langle \alpha_0, \alpha_1 \rangle \propto p^0_{\alpha_0} p^0_{\alpha_1}$.
+Genome lengths $l \in {2, 4, 6, 8, 10, 12, 14}$ and population sizes $N = 2^i$ for integer $0 \leq i \leq 14$ were considered. The distances of $p^n$ and $s^n$ to haploid evolutionary limits $p_h^{\ast}$ and $q_h^{\ast}$ were plotted and the distance of $q^n$ and $f^n$ to diploid evolutionary limits $p_d^{\ast}$ and $q_d^{\ast}$ were plotted.
+
+
+\section{Violation}
+The results showed when $\chi$ and $\mu$ distributions satisfies (\ref{OscCond}), oscillation occurs in finite population.  
 
 
 
+
+
+ 

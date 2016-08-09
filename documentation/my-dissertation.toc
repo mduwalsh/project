@@ -18,8 +18,10 @@
 \contentsline {section}{\numberline {4.1}Distance}{21}{section.4.1}
 \contentsline {section}{\numberline {4.2}Simplification}{23}{section.4.2}
 \contentsline {chapter}{\numberline {5}Evolutionary Limits}{24}{chapter.5}
-\contentsline {chapter}{Bibliography}{25}{section*.18}
-\contentsline {chapter}{\numberline {A}Summary of Equations}{27}{appendix.A}
-\contentsline {section}{\numberline {A.1}Cartesian}{27}{section.A.1}
-\contentsline {section}{\numberline {A.2}Cylindrical}{27}{section.A.2}
-\contentsline {chapter}{Vita}{28}{section*.19}
+\contentsline {section}{\numberline {5.1}Limits}{24}{section.5.1}
+\contentsline {section}{\numberline {5.2}Computation of Mutation and Crossover Distribution}{26}{section.5.2}
+\contentsline {chapter}{Bibliography}{28}{section*.18}
+\contentsline {chapter}{\numberline {A}Summary of Equations}{30}{appendix.A}
+\contentsline {section}{\numberline {A.1}Cartesian}{30}{section.A.1}
+\contentsline {section}{\numberline {A.2}Cylindrical}{30}{section.A.2}
+\contentsline {chapter}{Vita}{31}{section*.19}

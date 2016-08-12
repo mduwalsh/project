@@ -25,7 +25,7 @@ paragraph.\footnote{In particular, $g \overline{g} = {\bf 0} = g+g$,
 Mutation simulates effects of error that happen with low probability during duplication of chromosome. Mutation provides mechanism to inject new strings into the next generation population which gives {\em RHS} ability to search beyond the confines of initial population.
 
 Symbol $\mu$ is used to represent mutation distribution describing the probability $\mu_i$ with which $i \in \Omega$ is selected to be a mutation mask. $\mu : \Omega \rightarrow \Omega$ is nondeterministic mutation function where the result $\mu(x)$ of applying mutation function on $x$ is $x \oplus i$ with probability $\mu_i$ of distribution $\mu$ where $i$ is {\em mutation mask}. Mutating $x$ using mutation mask $i$ alters the bits of $x$ in those positions the mutation mask $i$ is 1.
-$\mu \in [0, 0.5)$ is regarded as a {\em mutation rate} which implicitly specifies distribution $\mu$ according to rule \VoseWright1998{Vose1999}
+$\mu \in [0, 0.5)$ is regarded as a {\em mutation rate} which implicitly specifies distribution $\mu$ according to rule \ref{VoseWright1998}
 \[
 \mu_i = (\mu)^{{\bf 1}^Ti} (1-\mu)^{\ell- {\bf 1}^Ti}
 \]
@@ -182,7 +182,7 @@ $\sigma_g$.
 
 A change of basis which simultaneously diagonalizes the $\sigma_g$
 unravels the evolution equation (\ref{model4}).  
-Expressed in the Walsh basis (see \cite{Vose1999}), the mixing matrix
+Expressed in the Walsh basis (see \cite{VoseWright1998}), the mixing matrix
 takes the form
 \begin{equation}
 \label{Mhat}

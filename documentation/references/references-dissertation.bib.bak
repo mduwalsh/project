@@ -50,3 +50,18 @@
   Timestamp                = {2016.08.10}
 }
 
+@Article{VoseWright1998,
+  Title                    = {The Simple Genetic Algorithm and the Walsh Transform: Part I, Theory},
+  Author                   = {Michael D. Vose and Alden H. Wright},
+  Journal                  = {Evol. Comput.},
+  Year                     = {1998},
+
+  Month                    = {sep},
+  Number                   = {3},
+  Pages                    = {253--273},
+  Volume                   = {6},
+
+  Owner                    = {mahendra},
+  Timestamp                = {2016.08.11}
+}
+

@@ -1,0 +1,63 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: my-dissertation.aux
+A level-1 auxiliary file: front-matter/dedication.aux
+A level-1 auxiliary file: front-matter/acknowledgements.aux
+A level-1 auxiliary file: front-matter/quote.aux
+A level-1 auxiliary file: front-matter/abstract.aux
+A level-1 auxiliary file: front-matter/nomenclature.aux
+A level-1 auxiliary file: chapters/chapter-1.aux
+A level-1 auxiliary file: chapters/chapter-2.aux
+A level-1 auxiliary file: chapters/chapter-3.aux
+A level-1 auxiliary file: chapters/chapter-4.aux
+A level-1 auxiliary file: chapters/chapter-5.aux
+A level-1 auxiliary file: chapters/chapter-6.aux
+The style file: apalike.bst
+A level-1 auxiliary file: back-matter/appendix-1.aux
+A level-1 auxiliary file: back-matter/vita.aux
+Database file #1: references/references-dissertation.bib
+Warning--I didn't find a database entry for "Beauchamp1975"
+Warning--I didn't find a database entry for "Shanks1969"
+Warning--I didn't find a database entry for "CooleyTukey1965"
+You've used 4 entries,
+            1935 wiz_defined-function locations,
+            520 strings with 4510 characters,
+and the built_in function-call counts, 1288 in all, are:
+= -- 127
+> -- 28
+< -- 4
++ -- 8
+- -- 8
+* -- 98
+:= -- 236
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 24
+chr.to.int$ -- 4
+cite$ -- 4
+duplicate$ -- 55
+empty$ -- 103
+format.name$ -- 12
+if$ -- 250
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 4
+newline$ -- 23
+num.names$ -- 12
+pop$ -- 14
+preamble$ -- 1
+purify$ -- 24
+quote$ -- 0
+skip$ -- 45
+stack$ -- 0
+substring$ -- 94
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 24
+warning$ -- 0
+while$ -- 12
+width$ -- 0
+write$ -- 53
+(There were 3 warnings)

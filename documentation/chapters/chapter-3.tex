@@ -25,7 +25,7 @@ paragraph.\footnote{In particular, $g \overline{g} = {\bf 0} = g+g$,
 Mutation simulates effects of error that happen with low probability during duplication of chromosome. Mutation provides mechanism to inject new strings into the next generation population which gives {\em RHS} ability to search beyond the confines of initial population.
 
 Symbol $\mu$ is used to represent mutation distribution describing the probability $\mu_i$ with which $i \in \Omega$ is selected to be a mutation mask. $\mu : \Omega \rightarrow \Omega$ is nondeterministic mutation function where the result $\mu(x)$ of applying mutation function on $x$ is $x \oplus i$ with probability $\mu_i$ of distribution $\mu$ where $i$ is {\em mutation mask}. Mutating $x$ using mutation mask $i$ alters the bits of $x$ in those positions the mutation mask $i$ is 1.
-$\mu \in [0, 0.5)$ is regarded as a {\em mutation rate} which implicitly specifies distribution $\mu$ according to rule \cite{Vose1999}
+$\mu \in [0, 0.5)$ is regarded as a {\em mutation rate} which implicitly specifies distribution $\mu$ according to rule \VoseWright1998{Vose1999}
 \[
 \mu_i = (\mu)^{{\bf 1}^Ti} (1-\mu)^{\ell- {\bf 1}^Ti}
 \]
@@ -37,7 +37,7 @@ let\\[-0.2in]
 Given distribution $\mu$, mutation is the stochastic operator sending
 $g$ to $g^\prime$ with probability $\mu_{g + g^\prime}$.
 
-Mutation considered is {\em independent} for all $j$ and $k$ which means \cite{Vose1999}
+Mutation considered is {\em independent} for all $j$ and $k$ which means \cite{VoseWright1998}
 \[
 \mu_j = \sum\limits_{k\otimes i=0} \mu_{i\oplus j} \sum\limits_{k\overline \otimes i=0} \mu_{i\otimes j}
 \]
@@ -57,7 +57,7 @@ v^\prime & = & m \nudge v + \overline{m} \nudge\nudge u
 Given distribution $\chi$, crossover is the stochastic operator which
 sends $u$ and $v$ to $u^\prime$ and $v^\prime$ with probability $\chi_m/2$ for each $u^\prime$ and $v^\prime$.
 
-$\chi$ can be considered as a {\em crossover rate} that specifies the distribution $\chi$ given by rule \cite{Vose1999}
+$\chi$ can be considered as a {\em crossover rate} that specifies the distribution $\chi$ given by rule \cite{VoseWright1998}
 \[
   \chi_i =\begin{cases}
     \chi  c_i & \text{if $i>0$}.\\
@@ -80,7 +80,7 @@ additive identity of $\mathcal{R}$ is
 \[
 M \; = \; M_{\bf 0}\\[-0.01in]
 \]
-Crossover and mutation are defined in a manner respecting arbitrary partioning and arbitrary linkage to preserve the ability to endow abstract syntax with specialized semantics. Groups of loci can mutate and crossover with arbitrarily specified probabilities as disscussed in above sections. For mutation distribution $\mu$ and crossover distribution $\chi$, whether or not $\mu$ is independent if mutation is performed before crossover, then transmission function can be expressed as \cite{Vose1999}
+Crossover and mutation are defined in a manner respecting arbitrary partioning and arbitrary linkage to preserve the ability to endow abstract syntax with specialized semantics. Groups of loci can mutate and crossover with arbitrarily specified probabilities as disscussed in above sections. For mutation distribution $\mu$ and crossover distribution $\chi$, whether or not $\mu$ is independent if mutation is performed before crossover, then transmission function can be expressed as \cite{VoseWright1998}
 \begin{equation}
 \label{transmission}
 t_{\langle u,v \rangle}(g) \; = \;\,
@@ -159,7 +159,7 @@ $\widehat{A}$ denote the Walsh transform of $w$ and $A$ respectively. Then $\wid
 $\widehat{A} = WAW$. If $w$ is a row vector, then $w$ in its Walsh basis $\widehat{w}$ represents $wW$.
 
 \section{Walsh Transform Adaptation}
-The Walsh transform has spectacular ability to unravel the intricacies of mixing. And that is why we adapt Walsh transform methods for computing evolutionary trajectories, which have already been established for Vose's haploid model \cite{Vose1999}. Adaptation of Walsh transformation efficiently models infinite diploid population evolution. This adaptation of Walsh transormation helps in making feasible comparisons between finite and infinte diploid population short-term evolutionary behavior.
+The Walsh transform has spectacular ability to unravel the intricacies of mixing. And that is why we adapt Walsh transform methods for computing evolutionary trajectories, which have already been established for Vose's haploid model \cite{VoseWright1998}. Adaptation of Walsh transformation efficiently models infinite diploid population evolution. This adaptation of Walsh transormation helps in making feasible comparisons between finite and infinte diploid population short-term evolutionary behavior.
 Recalling evolution equation (\ref{model4}), without selection, specialized to Vose's infinite population model expressed in mixing matrix's term,
 \[
 p_g^\prime \; = \; (\sigma_g \nudge p)^T M \, (\sigma_g \nudge p)

@@ -1,0 +1,24 @@
+\begin{thebibliography}{}
+
+\bibitem[Geiringer, 1944]{Geiringer1944}
+Geiringer, H. (1944).
+\newblock On the probability theory of linkage in mendelian heredity.
+\newblock {\em Ann. Math. Stat.}, 15(1):25--27.
+
+\bibitem[Hardy, 1908]{Hardy1908}
+Hardy, G.~H. (1908).
+\newblock Mendelian proportions in a mixed population.
+\newblock {\em Science}, 28(706):49--50.
+
+\bibitem[Mendel, 1865]{Mendel1866}
+Mendel, G. (1865).
+\newblock Versuche {"u}ber plflanzenhybriden.
+\newblock {\em Verhandlungen des naturforschenden Vereines in Br{\"u}nn},
+  IV:3--47.
+
+\bibitem[Vose, 1999]{Vose1999}
+Vose, M.~D. (1999).
+\newblock Random heuristic search.
+\newblock {\em Theoretical Computer Science}.
+
+\end{thebibliography}

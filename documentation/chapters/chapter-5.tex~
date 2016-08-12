@@ -70,7 +70,7 @@ Normalization of mutation distribution $\mu_j$ gives values satisfying equation 
 \mu_j = \mu_j / \sum \limits_{j \in \mathcal{R} } \mu_j
 \]
 
-\newline
+
 Condition $k \in \bar{g} \mathcal{R}$ in equation (\ref{OscCond}) can be simplified for computation as
 \[
 k = \bar{g} i  \text{ where $i \in \mathcal{R}$}
@@ -91,23 +91,24 @@ where $k \in \bar{g} \mathcal{R}$, and
 \[
 \chi_k = 0
 \]
-for other values of $k$.
-\newline 
+for other values of $k$. \newline
+
 This installs some random values in some specific positions in array of $\chi$ according to value of $g$ and others set to $0$. Normalization of $\chi_k$ distribution gives values satisfying equation (\ref{OscCond}) for $\chi$ distribution.
 \[
 \chi_k = \chi_k/\sum\limits_{k \in \mathcal{R}} \chi_k.
 \]
 
 \section{Oscillation}
+\label{Oscillation}
 
 Equations (\ref{lt1}) and (\ref{lt2}) were implemented with crossover distribution $\chi$ and mutation distribution $\mu$ satisfying condition (\ref{OscCond}) to inspect oscillating behavior of predicted infinite population evolutionary limits $p^{\ast} and q^{\ast}$ and finite population under no selective pressure.
 
 Infinite haploid population evolutionary limits $p_h^{\ast}$ and $q_h^{\ast}$ were computed using equations (\ref{lt1}) and (\ref{lt2}). Infinite diploid population evolutionary limits $p_d^{\ast}$ and $q_d^{\ast}$ as
 \[
-{p_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} = {p_h^{\ast}}_{\gamma_0} p_h^{\ast}}_{\gamma_1}
+{p_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} = {p_h^{\ast}}_{\gamma_0} p_h^{\ast}_{\gamma_1}
 \]
 \[
-{q_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} = {q_h^{\ast}}_{\gamma_0} q_h^{\ast}}_{\gamma_1}
+{q_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} = {q_h^{\ast}}_{\gamma_0} q_h^{\ast}_{\gamma_1}
 \]
 where $\gamma = \langle \gamma_0, \gamma_1 \rangle$ is diploid genome.
 
@@ -121,7 +122,7 @@ Genome lengths $l \in {2, 4, 6, 8, 10, 12, 14}$ and population sizes $N = 2^i$ f
 
 
 \section{Violation}
-The results showed when $\chi$ and $\mu$ distributions satisfies (\ref{OscCond}), oscillation occurs in finite population.  
+The results showed when $\chi$ and $\mu$ distributions satisfies (\ref{OscCond}), oscillation occurs in finite population. Error $\epsilon$ was introduced to $\mu$ distribution and simulations were run like in section \ref{Oscillation}.
 
 
 

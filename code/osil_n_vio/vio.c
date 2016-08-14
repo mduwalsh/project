@@ -17,7 +17,9 @@
 
 unsigned long L;  // no. of bits to represent chromosome
 int Runs;         // no. of runs of simulation
-unsigned long N;  // no. of population in finite population
+unsigned long N0 = 8;
+unsigned long Ni[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 40, 100};// no. of population in finite population as Ni*N0
+unsigned long N;   // size of finite population; N = Ni*N0 
 unsigned long G;  // no. of generations to simulate
 unsigned long *Pop[2]; // population generation 0 & 1
 unsigned long *Hpop[2];     // finite haploid generation 0 and 1
@@ -178,7 +180,7 @@ void install_pop_distribution(double *p)
 }
 
 // generates finite haploid initial population from given distribution p
-void generate_fin_hap_init_pop_from_px(double *p, unsigned long *pop)
+void generate_fin_hap_init_pop_from_random_px(double *p, unsigned long *pop)
 {
   unsigned long i;
   double s;
@@ -209,28 +211,38 @@ pop: haploid population
   }    
 }
 
+// generate finite haploid population corresponding to population vector p
+void generate_fin_hap_pop_from_pvector(double *p, unsigned long *pop)
+{
+  unsigned long i, j, k;
+  for(k = 0, i = 0; i < (1ul<<L); i++){
+    for(j = 0; j < p[i]*N; j++){
+      pop[k++] = i;
+    }
+  }
+}
 
-// install/ generate finite diploid population from distribution for haploids
+// install/ generate finite diploid population (size N^2 ) from distribution for haploids (size N)
 void generate_fin_dipop_from_px(double *p, unsigned long *pop)
 {
   unsigned long i, j, k, l;
-  double sp;
-  dist *pd;
-  pd = allocdist(1ul<<(2*L));    
-  for(sp = 0, l = 0, i = 0; i < 1ul<<L; i++){
+  //double sp;
+  //dist *pd;
+  //pd = allocdist(1ul<<(2*L));    
+  //sp = 0;
+  for( l = 0, i = 0; i < 1ul<<L; i++){
     for(j = 0; j < 1ul<<L; j++){
-      pd->p[(i<<L)+j] = (p[i]*p[j]*N) - (int)(p[i]*p[j]*N);    // difference in exact expected population to real population
-      for(k = 0; k < ( (int)(p[i]*p[j]*N) ); k++){
+      //pd->p[(i<<L)+j] = (p[i]*p[j]*N) - (int)(p[i]*p[j]*N);    // difference in exact expected population to real population
+      for(k = 0; k < ( (int)(p[i]*p[j]*N*N) ); k++){
         pop[l++] = (i<<L) + j;                          // diploid filling population	
       }
-      sp += pd->p[(i<<L)+j];
+      //sp += pd->p[(i<<L)+j];
     }
   }
-  initdist(pd, sp);
-  while (l < N) pop[l++] = (unsigned long)(drand(pd));  // fill up missing number of population with population supposed to be present in populaiton according to weight 
-  freedist(pd);
+  //initdist(pd, sp);
+  //while (l < N) pop[l++] = (unsigned long)(drand(pd));  // fill up missing number of population with population supposed to be present in populaiton according to weight 
+  //freedist(pd);
 }
-
 // reproduces an offspring diploid from two parent diploids
 void reproduce_diploid(int a, int b, int j, unsigned long *p0, unsigned long *p1)   
 /*
@@ -554,16 +566,16 @@ void violate_chi()
 {
   double s;
   unsigned long k, j;
-  if( VIO_MU_CHI == 2){                             // violation in Mu distribution such that oscillation condition does not hold true
+  if( VIO_MU_CHI == 2){                             // violation in Chi distribution such that oscillation condition does not hold true
     s =0;
     j = 0;
-    for(k = 0; k < (1ul<<L); k++){                  // remove Epsilon proportion from other elements
+    for(k = 0; k < (1ul<<L); k++){                  
       if(!j){
-	if(Chi[k] == 0.0) Chi[k] = Epsilon;
+	if(Chi[k] == 0.0) Chi[k] = Epsilon;         // install value epsilon to first element in Chi distribution with zero value.
 	j = 1;
       }
       else{
-	Chi[k] *= (1.0 - Epsilon); 	
+	Chi[k] *= (1.0 - Epsilon); 	            // remove Epsilon proportion from other elements
       }
       s += Chi[k];
     }
@@ -729,19 +741,19 @@ void inf_osc(double *p, double *p_str, double *q_str)      //p: initial populati
   }
 
   // write haploid distances to file
-  prep_filename(fname, "osc_inf_haploid.dat");  // haploid distance data file 
+  sprintf(fname, "b%lug%lu_osc_inf_haploid.dat", L, G);  // haploid distance data file 
   if(!(fp = fopen(fname, "w"))){
     printf("%s could not be opened!! Error!!\n", fname);
     exit(2);
   }
   for(i = 0; i < G; i++){
     fprintf(fp, "%lu  ", i);
-    fprintf(fp, "%" PREC "lf  %" PREC "lf \n", d1[i], d2[i]);
+    fprintf(fp, "%e  %e \n", d1[i], d2[i]);
   }
   fclose(fp); 
   // plot 
   if(!CLUSTER){
-    sprintf(title, "b%lu g%lu n%lu gg%lu s%lu infinite haploid", L, G, N, Gg, Seed);    
+    sprintf(title, "b%lu g%lu gg%lu s%lu infinite haploid", L, G, Gg, Seed);    
     gp = popen ("gnuplot -persistent", "w"); // open gnuplot in persistent mode
     plot(gp, 0, fname, 3, title, "G", "d", 0, "" );
     fflush(gp);
@@ -749,20 +761,20 @@ void inf_osc(double *p, double *p_str, double *q_str)      //p: initial populati
   }
 
   // write diploid distances to file
-  prep_filename(fname, "osc_inf_diploid.dat");  // diploid distance data file 
+  sprintf(fname, "b%lug%lu_osc_inf_diploid.dat", L, G);  // diploid distance data file 
   if(!(fp = fopen(fname, "w"))){
     printf("%s could not be opened!! Error!!\n", fname);
     exit(2);
   }
   for(i = 0; i < G; i++){
     fprintf(fp, "%lu  ", i);
-    fprintf(fp, "%" PREC "lf  %" PREC "lf \n", d3[i], d4[i]);
+    fprintf(fp, "%e  %e \n", d3[i], d4[i]);
   }
   fclose(fp);
   free(d1); free(d2); free(d3); free(d4); free(p1); free(p2);
   // plot
   if(!CLUSTER){
-    sprintf(title, "b%lu g%lu n%lu gg%lu s%lu infinite diploid", L, G, N, Gg, Seed);
+    sprintf(title, "b%lu g%lu gg%lu s%lu infinite diploid", L, G, Gg, Seed);
     gp = popen ("gnuplot -persistent", "w"); // open gnuplot in persistent mode
     plot(gp, 0, fname, 3, title, "G", "d", 0, "" );
     fflush(gp);
@@ -803,7 +815,7 @@ void fin_osc_diploid(double *p_str, double *q_str) // p_str & q_str oscillating 
   // write distances to file
   for(i = 0; i < G; i++){
     fprintf(fp, "%lu  ", i);
-    fprintf(fp, "%" PREC "lf  %" PREC "lf\n", d1[i], d2[i]);
+    fprintf(fp, "%e  %e\n", d1[i], d2[i]);
   }
   fclose(fp);
   free(d1); free(d2);
@@ -850,7 +862,7 @@ void fin_osc_haploid(double *p_str, double *q_str) // p_str & q_str oscillating 
    // write distances to file
    for(i = 0; i < G; i++){
     fprintf(fp, "%lu  ", i);
-    fprintf(fp, "%" PREC "lf  %" PREC "lf\n", d1[i], d2[i]);
+    fprintf(fp, "%elf  %elf\n", d1[i], d2[i]);
    }
   fclose(fp);
   free(d1); free(d2);
@@ -904,11 +916,12 @@ void setup()
    
 }
 
+// initializes memory for finite population string array
 void init()
 {  
   // allocate memory and initialize population 
-  Pop[0] = malloc(N*sizeof(unsigned long));
-  Pop[1] = malloc(N*sizeof(unsigned long));
+  Pop[0] = malloc(N*N*sizeof(unsigned long));
+  Pop[1] = malloc(N*N*sizeof(unsigned long));
   Hpop[0] = malloc(N*sizeof(unsigned long));
   Hpop[1] = malloc(N*sizeof(unsigned long));
   //initpop(Pop[0]);     
@@ -933,8 +946,8 @@ void cleanup()
 
 int main(int argc, char** argv)
 {  
-  if(argc^6){
-    printf("Usage: ./vio bits seed G N epsilon\n bits: haploid bit length \n seed: seed for initialization of random number generator \n G: number of generations to simulate for \n N: finite population size \n epsilon: error introduced in Mu or Chi distribution \n");
+  if(argc^5){
+    printf("Usage: ./vio bits seed G epsilon\n bits: haploid bit length \n seed: seed for initialization of random number generator \n G: number of generations to simulate for \n epsilon: error introduced in Mu or Chi distribution \n");
     exit(1);
   }
   if ((sizeof(int) < 4)|| (sizeof(long int) < 8)){
@@ -949,29 +962,21 @@ int main(int argc, char** argv)
   }
   int seed = atoi(argv[2]);
   G = (unsigned long)atoi(argv[3]);      // no. of generations
-  N = (unsigned long)atol(argv[4]);      // no. of individuals in finite population
-  Epsilon = (double)atof(argv[5]);
+  Epsilon = (double)atof(argv[4]);
   
   double *p_str = calloc((1ul<<L),sizeof(double));  // oscillating point 1
   double *q_str = calloc((1ul<<L),sizeof(double));  // oscillating point 2
   
   time_t now; 
+  unsigned long i;
   if(seed == 0){
     now = time(0);
     seed = ((unsigned long)now);     
   }
   Seed = seed;
   initrand(seed);
-  setup();         
-  init();                                // initializes memory for pop, M and Cr and also installs values for these  
-  // infinite population proportion from finite   
-  install_pop_distribution(P0);             // install haploids proportion
-  generate_fin_hap_init_pop_from_px(P0, Hpop[0]);  // generate finite haploid initial population from P0
-  merge_sort(Hpop[0], N);
-  calc_px_from_finite_hap_pop(P0, Hpop[0]);
-  generate_fin_dipop_from_px(P0, Pop[0]);   // finite diploid population generation from P0
-  comp_periodic_orbits(p_str, q_str, P0);// computes p_str and q_str oscillating points 
-  inf_osc(P0, p_str, q_str);                   // infinite population oscillating behavior check
+  
+  setup();    
   if(VIO_MU_CHI == 1){
     violate_mu();                              // violates oscillating condition in Mu
     //display_p(Mu);
@@ -980,12 +985,30 @@ int main(int argc, char** argv)
     violate_chi();                             // violates oscillating condition in Chi
     // display_p(Chi);  
   }
-  fin_osc_diploid(p_str, q_str);               // finite population oscillating behavior check
-  fin_osc_haploid(p_str, q_str);               // finite population oscillating behavior check
-  //display_qix(P2); display_qix(P3);
+  N = N0;
+  init();
+  // generate random distribution in P0
+  install_pop_distribution(P0);                           // install haploids proportion
+  generate_fin_hap_init_pop_from_random_px(P0, Hpop[0]);  // generate finite haploid initial population from P0
+  merge_sort(Hpop[0], N);  
+  calc_px_from_finite_hap_pop(P0, Hpop[0]);               // initial population vector constant for all finite size population in simulation
+  comp_periodic_orbits(p_str, q_str, P0);                 // computes p_str and q_str oscillating points 
+  deinit();  
+  inf_osc(P0, p_str, q_str);                              // infinite population oscillating behavior check  
+  
+  for(i = 0; i < sizeof(Ni)/sizeof(unsigned long); i++){                        // through all sizes of finite population
+    N = N0*Ni[i];
+    init();                                               // initializes memory for pop, M and Cr and also installs values for these  
+    generate_fin_hap_pop_from_pvector(P0, Hpop[0]);       // finite haploid population from P0
+    generate_fin_dipop_from_px(P0, Pop[0]);               // finite diploid population generation from P0      
+    
+    fin_osc_diploid(p_str, q_str);                        // finite population oscillating behavior check
+    fin_osc_haploid(p_str, q_str);                        // finite population oscillating behavior check
+    
+    deinit();        
+  }
   free(p_str); free(q_str);
-  deinit();        
-  walsh(Mh, -1); // free static z memory alloc
+  walsh(Mh, -1);  
   cleanup();
   return 0;
 }

@@ -43,7 +43,7 @@ int main()
                  
       create_script(i, L[li], G[gi], (unsigned long) pow(2, N[ni]));	   
       sprintf(scall, "qsub script.%lu.sh", i);
-      system(scall);   
+      if(system(scall) == -1) printf("\nError executing!!\n");   
             
       }
   printf("\n%lu\n", i);

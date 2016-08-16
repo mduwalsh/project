@@ -45,13 +45,13 @@ void plot_data_all_infinite(unsigned long b, unsigned long g, unsigned long run)
   sprintf(str, "b%02lu_g%04lu", b, g);
   // haploid infinite
   sprintf(ifn, "%s_osc_inf_haploid_%02lu.dat", str, run);
-  sprintf(ofn, "b%02lu_g%04lu_osc_inf_hap_%02lu.eps", g, GS, run);
+  sprintf(ofn, "b%02lu_g%04lu_osc_inf_hap_%02lu.eps", b, GS, run);
   sprintf(title, "infinite haploid l:%lu, g:%lu", b, GS);
   plot(ifn, 3, title, "g", "d", 0, ofn);
   // diploid infinite
   sprintf(ifn, "%s_osc_inf_diploid_%02lu.dat", str, run);
   sprintf(ofn, "b%02lu_g%04lu_osc_inf_dip_%02lu.eps", b, GS, run);
-  sprintf(title, "infinite diploid l:%lu, g:%lu", b, g);
+  sprintf(title, "infinite diploid l:%lu, g:%lu", b, GS);
   plot(ifn, 3, title, "g", "d", 0, ofn);  
 }
 
@@ -68,7 +68,7 @@ void plot_data_all_finite(unsigned long b, unsigned long g, unsigned long n, uns
   plot(ifn, 3, title, "g", "d", 0, ofn);
   // diploid finite
   sprintf(ifn, "%s_osc_diploid_%02lu.dat", str, run);
-  sprintf(ofn, "b%02lu_g%04lu_osc_fin_dip_02%lu.eps", b, GS, run);
+  sprintf(ofn, "b%02lu_g%04lu_osc_fin_dip_%02lu.eps", b, GS, run);
   sprintf(title, "finite diploid l:%lu, g:%lu, n:%lu", b, GS, n);
   plot(ifn, 3, title, "g", "d", 0, ofn);
 }

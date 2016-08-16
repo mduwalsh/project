@@ -9,7 +9,6 @@ unsigned long G[] = {50};
 unsigned long N0 = 8;
 unsigned long N;
 unsigned long Ni[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 40, 100};  // 2^n
-unsigned long Runs = 16;
 
 #define EPS 1
 
@@ -37,37 +36,37 @@ void plot(char *datafile, int columns, char *title, char *xlabel, char *ylabel, 
   pclose(p);
 }
 
-void plot_data_all_infinite(unsigned long b, unsigned long g, unsigned long run)
+void plot_data_all_infinite(unsigned long b, unsigned long g)
 {
   char str[200], ifn[300], ofn[300], title[200];
   //create file name string
-  sprintf(str, "b%02lu_g%04lu", b, g);
+  sprintf(str, "b%lug%lu", b, g);
   // haploid infinite
-  sprintf(ifn, "%s_osc_inf_haploid_%02lu.dat", str, run);
-  sprintf(ofn, "%s_osc_inf_hap_%02lu.eps", str, run);
+  sprintf(ifn, "%s_osc_inf_haploid.dat", str);
+  sprintf(ofn, "%s_osc_inf_hap.eps", str);
   sprintf(title, "infinite haploid l:%lu, g:%lu", b, g);
   plot(ifn, 3, title, "g", "d", 0, ofn);
   // diploid infinite
-  sprintf(ifn, "%s_osc_inf_diploid_%02lu.dat", str, run);
-  sprintf(ofn, "%s_osc_inf_dip_%02lu.eps", str, run);
+  sprintf(ifn, "%s_osc_inf_diploid.dat", str);
+  sprintf(ofn, "%s_osc_inf_dip.eps", str);
   sprintf(title, "infinite diploid l:%lu, g:%lu", b, g);
   plot(ifn, 3, title, "g", "d", 0, ofn);  
 }
 
-void plot_data_all_finite(unsigned long b, unsigned long g, unsigned long n, unsigned long run)
+void plot_data_all_finite(unsigned long b, unsigned long g, unsigned long n)
 {
   char str[200], ifn[300], ofn[300], title[200];
   //create file name string
-  sprintf(str, "b%02lu_g%04lu_n%06lu", b, g, n);
+  sprintf(str, "b%lug%lun%lu", b, g, n);
   
   // haploid finite
-  sprintf(ifn, "%s_osc_haploid_%02lu.dat", str, run);
-  sprintf(ofn, "%s_osc_fin_hap_%02lu.eps", str, run);
+  sprintf(ifn, "%s_osc_haploid.dat", str);
+  sprintf(ofn, "%s_osc_fin_hap.eps", str);
   sprintf(title, "finite haploid l:%lu, g:%lu, n:%lu", b, g, n);
   plot(ifn, 3, title, "g", "d", 0, ofn);
   // diploid finite
-  sprintf(ifn, "%s_osc_diploid_%02lu.dat", str, run);
-  sprintf(ofn, "%s_osc_fin_dip_02%lu.eps", str, run);
+  sprintf(ifn, "%s_osc_diploid.dat", str);
+  sprintf(ofn, "%s_osc_fin_dip.eps", str);
   sprintf(title, "finite diploid l:%lu, g:%lu, n:%lu", b, g, n);
   plot(ifn, 3, title, "g", "d", 0, ofn);
 }
@@ -75,7 +74,7 @@ void plot_data_all_finite(unsigned long b, unsigned long g, unsigned long n, uns
 
 int main()
 {
-  unsigned long li, ni, gi, j;
+  unsigned long li, ni, gi;
   unsigned long ls, gs;
   ls  = sizeof(L)/sizeof(unsigned long);  
   gs  = sizeof(G)/sizeof(unsigned long);
@@ -83,13 +82,11 @@ int main()
   unsigned long i = 1;
   for(li = 0; li < ls; li++)    
       for(gi = 0; gi < gs; gi++, i++){  
-        for(j = 0; j < Runs; j++){
-	plot_data_all_infinite(L[li], G[gi], j);
+	plot_data_all_infinite(L[li], G[gi]);
 	for(ni = 0; ni < sizeof(Ni)/sizeof(unsigned long); ni++){                        // through all sizes of finite population
 	  N = N0*Ni[ni];
-	  plot_data_all_finite(L[li], G[gi], N, j);            
+	  plot_data_all_finite(L[li], G[gi], N );            
 	}
-        }
       }
   printf("\n%lu\n", i);
   return 0;

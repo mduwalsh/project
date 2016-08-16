@@ -5,9 +5,10 @@
 
 /* sets of parameters to be simulated on */
 unsigned long L[] = {2, 4, 6, 8, 10, 12, 14}; // bits
-unsigned long G[] = {50, 100, 200, 500};
+unsigned long G[] = {1000};
 double  Epsilon[] = {0.01, 0.05, 0.1, 0.2, 0.5};
 unsigned long Seed = 0;
+unsigned long Runs = 16;
 
 /* end of sets of parameters to be simulated on */
 
@@ -23,7 +24,7 @@ void create_script(int i, unsigned long b, unsigned long g, double epsilon)
   fprintf(fp, "#PBS -l walltime=24:00:00\n" );
   fprintf(fp, "cd $PBS_O_WORKDIR\n");
   //getcwd(path, 256);
-  fprintf(fp, "./vio %lu %lu %lu %lf\n", b, Seed, g, epsilon);
+  fprintf(fp, "./vio %lu %lu %lu %lf %lu\n", b, Seed, g, epsilon, Runs);
   fclose(fp);  
 }
 

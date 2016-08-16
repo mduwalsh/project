@@ -5,8 +5,9 @@
 
 /* sets of parameters to be simulated on */
 unsigned long L[] = {2, 4, 6, 8, 10, 12, 14}; // bits
-unsigned long G[] = {50, 100, 200, 500};
+unsigned long G[] = {1000};
 unsigned long Seed = 0;
+unsigned long Runs = 16;
 
 /* end of sets of parameters to be simulated on */
 
@@ -22,7 +23,7 @@ void create_script(int i, unsigned long b, unsigned long g)
   fprintf(fp, "#PBS -l walltime=24:00:00\n" );
   fprintf(fp, "cd $PBS_O_WORKDIR\n");
   //getcwd(path, 256);
-  fprintf(fp, "./osil %lu %lu %lu\n", b, Seed, g);
+  fprintf(fp, "./osil %lu %lu %lu %lu\n", b, Seed, g, Runs);
   fclose(fp);  
 }
 

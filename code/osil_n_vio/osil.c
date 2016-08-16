@@ -4,7 +4,7 @@
 #include <strings.h>
 #include <time.h>
 #include <unistd.h>
-#include<stdbool.h>
+#include <stdbool.h>
 #include "rand.c"
 #include "sort.c"
 
@@ -16,8 +16,8 @@
 
 unsigned long L;  // no. of bits to represent chromosome
 int Runs;         // no. of runs of simulation
-unsigned long N0 = 8;
-unsigned long Ni[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 40, 100};// no. of population in finite population as Ni*N0
+unsigned long N0 = 64;
+unsigned long Ni[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 40, 100, 200};// no. of population in finite population as Ni*N0
 unsigned long N;   // size of finite population; N = Ni*N0 
 unsigned long G;  // no. of generations to simulate
 unsigned long *Pop[2]; // population generation 0 & 1
@@ -667,10 +667,10 @@ void comp_periodic_orbits(double *p_str, double *q_str, double *p)
 
 void prep_filename(char *fname, char *apndstr)
 {
-  sprintf(fname, "b%lug%lun%lu_%s", L, G, N, apndstr);
+  sprintf(fname, "b%02lu_g%04lu_n%06lu_%s", L, G, N, apndstr);
 }
 
-void inf_osc(double *p, double *p_str, double *q_str)      //p: initial population haploids; p_str & q_str: oscillating points
+void inf_osc(double *p, double *p_str, double *q_str, unsigned long run)      //p: initial population haploids; p_str & q_str: oscillating points
 {
   FILE *fp, *gp;
   char fname[200], title[200];
@@ -698,7 +698,9 @@ void inf_osc(double *p, double *p_str, double *q_str)      //p: initial populati
   }
 
   // write haploid distances to file
-  sprintf(fname, "b%lug%lu_osc_inf_haploid.dat", L, G);  // haploid distance data file 
+  char str[100];
+  sprintf(str,  "b%02lu_g%04lu_osc_inf_haploid_%02lu.dat", L, G, run);             // add run to filename
+  sprintf(fname, "%s", str);  // haploid distance data file 
   if(!(fp = fopen(fname, "w"))){
     printf("%s could not be opened!! Error!!\n", fname);
     exit(2);
@@ -718,7 +720,8 @@ void inf_osc(double *p, double *p_str, double *q_str)      //p: initial populati
   }
 
   // write diploid distances to file
-  sprintf(fname, "b%lug%lu_osc_inf_diploid.dat", L, G);  // diploid distance data file 
+  sprintf(str,  "b%02lu_g%04lu_osc_inf_diploid_%02lu.dat", L, G, run);             // add run to filename
+  sprintf(fname, "%s", str);  // diploid distance data file 
   if(!(fp = fopen(fname, "w"))){
     printf("%s could not be opened!! Error!!\n", fname);
     exit(2);
@@ -739,7 +742,7 @@ void inf_osc(double *p, double *p_str, double *q_str)      //p: initial populati
   }
 }
 
-void fin_osc_diploid(double *p_str, double *q_str) // p_str & q_str oscillating points
+void fin_osc_diploid(double *p_str, double *q_str, unsigned long run) // p_str & q_str oscillating points
 {
   int a, b;  
   FILE *fp, *gp;
@@ -764,7 +767,9 @@ void fin_osc_diploid(double *p_str, double *q_str) // p_str & q_str oscillating 
   }
 
   // write distances
-  prep_filename(fname, "osc_diploid.dat");
+  char str[100];
+  sprintf(str, "osc_diploid_%02lu.dat", run);             // add run to filename
+  prep_filename(fname, str);
   if(!(fp = fopen(fname, "w"))){
     printf("%s could not be opened!! Error!!\n", fname);
     exit(2);
@@ -786,7 +791,7 @@ void fin_osc_diploid(double *p_str, double *q_str) // p_str & q_str oscillating 
   }
 }
 
-void fin_osc_haploid(double *p_str, double *q_str) // p_str & q_str oscillating points
+void fin_osc_haploid(double *p_str, double *q_str, unsigned long run) // p_str & q_str oscillating points
 {
   int a, b;  
   FILE *fp, *gp;
@@ -811,7 +816,9 @@ void fin_osc_haploid(double *p_str, double *q_str) // p_str & q_str oscillating 
   }
 
   // write distances
-  prep_filename(fname, "osc_haploid.dat");
+  char str[100];
+  sprintf(str, "osc_haploid_%02lu.dat", run);             // add run to filename
+  prep_filename(fname, str);
   if(!(fp = fopen(fname, "w"))){
     printf("%s could not be opened!! Error!!\n", fname);
     exit(2);
@@ -903,8 +910,8 @@ void cleanup()
 
 int main(int argc, char** argv)
 {  
-  if(argc^4){
-    printf("Usage: ./osil bits seed G\n bits: haploid bit length \n seed: seed for initialization of random number generator \n G: number of generations to simulate for \n");
+  if(argc^5){
+    printf("\n Usage: ./osil bits seed G runs\n bits: haploid bit length \n seed: seed for initialization of random number generator \n G: number of generations to simulate for \n runs: number of runs \n");
     exit(1);
   }
   if ((sizeof(int) < 4)|| (sizeof(long int) < 8)){
@@ -918,46 +925,52 @@ int main(int argc, char** argv)
     return 1;
   }
   int seed = atoi(argv[2]);
-  G = (unsigned long)atoi(argv[3]);      // no. of generations
-  //N = (unsigned long)atol(argv[4]);      // no. of individuals in finite population
+  G = (unsigned long)atol(argv[3]);      // no. of generations
+  Runs = (unsigned long)atol(argv[4]);      // no. of individuals in finite population 
   
-  double *p_str = calloc((1ul<<L),sizeof(double));  // oscillating point 1
-  double *q_str = calloc((1ul<<L),sizeof(double));  // oscillating point 2
-  
+  double *p_str, *q_str;                 // oscillating points
   time_t now; 
-  unsigned long i;
-  if(seed == 0){
-    now = time(0);
-    seed = ((unsigned long)now);     
-  }
-  Seed = seed;
-  initrand(seed);
-  setup();     
-  N = N0;
-  init();
-  // generate random distribution in P0
-  install_pop_distribution(P0);                           // install haploids proportion
-  generate_fin_hap_init_pop_from_random_px(P0, Hpop[0]);  // generate finite haploid initial population from P0
-  merge_sort(Hpop[0], N);  
-  calc_px_from_finite_hap_pop(P0, Hpop[0]);               // initial population vector constant for all finite size population in simulation
-  comp_periodic_orbits(p_str, q_str, P0);                 // computes p_str and q_str oscillating points 
-  deinit();  
-  inf_osc(P0, p_str, q_str);                              // infinite population oscillating behavior check
- 
-  for(i = 0; i < sizeof(Ni)/sizeof(unsigned long); i++){                        // through all sizes of finite population
-    N = N0*Ni[i];
-    init();                                               // initializes memory for pop, M and Cr and also installs values for these  
-    generate_fin_hap_pop_from_pvector(P0, Hpop[0]);       // finite haploid population from P0
-    generate_fin_dipop_from_px(P0, Pop[0]);               // finite diploid population generation from P0      
+  unsigned long i, j;
+  for(j = 0; j < Runs; j++){
+    if(seed == 0){
+      now = time(0);
+      Seed = ((unsigned long)now);     
+    }
+    else{
+      Seed = seed;
+    }
+    initrand(Seed);
+    setup();     
     
-    fin_osc_diploid(p_str, q_str);                        // finite population oscillating behavior check
-    fin_osc_haploid(p_str, q_str);                        // finite population oscillating behavior check
+    p_str = calloc((1ul<<L),sizeof(double));  // oscillating point 1
+    q_str = calloc((1ul<<L),sizeof(double));  // oscillating point 2
+    N = N0;
+    init();
+    // generate random distribution in P0
+    install_pop_distribution(P0);                           // install haploids proportion
+    generate_fin_hap_init_pop_from_random_px(P0, Hpop[0]);  // generate finite haploid initial population from P0
+    merge_sort(Hpop[0], N);  
+    calc_px_from_finite_hap_pop(P0, Hpop[0]);               // initial population vector constant for all finite size population in simulation
+    comp_periodic_orbits(p_str, q_str, P0);                 // computes p_str and q_str oscillating points 
+    deinit();  
+    inf_osc(P0, p_str, q_str, j);                              // infinite population oscillating behavior check
     
-    deinit();        
+    for(i = 0; i < sizeof(Ni)/sizeof(unsigned long); i++){                        // through all sizes of finite population
+      N = N0*Ni[i];
+      init();                                               // initializes memory for pop, M and Cr and also installs values for these  
+      generate_fin_hap_pop_from_pvector(P0, Hpop[0]);       // finite haploid population from P0
+      generate_fin_dipop_from_px(P0, Pop[0]);               // finite diploid population generation from P0      
+      
+      fin_osc_diploid(p_str, q_str, j);                        // finite population oscillating behavior check
+      fin_osc_haploid(p_str, q_str, j);                        // finite population oscillating behavior check
+      
+      deinit();        
+    }
+    free(p_str); free(q_str);
+    cleanup();
   }
-  free(p_str); free(q_str);
   walsh(Mh, -1);                                          // clears memory allocated for static variable in walsh method
-  cleanup();
+    
   return 0;
 }
 
@@ -967,8 +980,8 @@ sort.c
 */
 
 /* Compile and Run:
-gcc -O2 -march=native -o dist dist.c -lm
-./dist bits seed generations finite_populaiton_size 
+gcc -O2 -march=native -o osil osil.c -lm
+./osil bits seed generations runs
 */
 
 

@@ -742,7 +742,7 @@ void inf_osc(double *p, double *p_str, double *q_str, unsigned long run)      //
 
   // write haploid distances to file
   char str[100];
-  sprintf(str,  "b%02lu_g%04lu_osc_inf_haploid_%02lu.dat", L, G, run);             // add run to filename
+  sprintf(str,  "b%02lu_g%04lu_eps%0.6lf_osc_inf_haploid_%02lu.dat", L, G, Epsilon, run);             // add run to filename
   sprintf(fname, "%s", str);  // haploid distance data file 
   if(!(fp = fopen(fname, "w"))){
     printf("%s could not be opened!! Error!!\n", fname);
@@ -763,7 +763,7 @@ void inf_osc(double *p, double *p_str, double *q_str, unsigned long run)      //
   }
 
   // write diploid distances to file
-  sprintf(str,  "b%02lu_g%04lu_osc_inf_diploid_%02lu.dat", L, G, run);             // add run to filename
+  sprintf(str,  "b%02lu_g%04lu_eps%.6lf_osc_inf_diploid_%02lu.dat", L, G, Epsilon, run);             // add run to filename
   sprintf(fname, "%s", str);  // diploid distance data file 
   if(!(fp = fopen(fname, "w"))){
     printf("%s could not be opened!! Error!!\n", fname);

@@ -65,17 +65,22 @@ For all $j \in \mathcal{R}$,
 \]
 
 This installs some random values in some specific positions in $\mu$ distribution array according to value of $g$ and others set to $0$. 
-Normalization of mutation distribution $\mu_j$ gives values satisfying equation (\ref{OscCond}) for $\mu$ distribution.
+Normalization of $\mu_j$ gives values for $\mu$ distribution
 \[
 \mu_j = \mu_j / \sum \limits_{j \in \mathcal{R} } \mu_j
 \]
+such that 
+\[
+\sum \limits_{j \in \mathcal{R} } \mu_j = 1.
+\]
+The values $\mu_j$ satisfy condition (\ref{OscCond}) for $\mu$ distribution.
 
 
 Condition $k \in \bar{g} \mathcal{R}$ in equation (\ref{OscCond}) can be simplified for computation as
 \[
 k = \bar{g} i  \text{ where $i \in \mathcal{R}$}
 \]
-Anding both sides by $\bar{g}$,
+Logical ANDing both sides by $\bar{g}$,
 \begin{eqnarray*}
 \bar{g} k & = & \bar{g} \bar{g} i \\
 \bar{g} k & = & \bar{g} i \\
@@ -93,10 +98,15 @@ where $k \in \bar{g} \mathcal{R}$, and
 \]
 for other values of $k$. \newline
 
-This installs some random values in some specific positions in array of $\chi$ according to value of $g$ and others set to $0$. Normalization of $\chi_k$ distribution gives values satisfying equation (\ref{OscCond}) for $\chi$ distribution.
+This installs some random values in some specific positions in array of $\chi$ according to value of $g$ and others set to $0$. Normalization of $\chi_k$ gives values for $chi$ distribution 
 \[
-\chi_k = \chi_k/\sum\limits_{k \in \mathcal{R}} \chi_k.
+\chi_k = \chi_k/\sum\limits_{k \in \mathcal{R}} \chi_k
 \]
+such that 
+\[
+\sum\limits_{k \in \mathcal{R}} \chi_k = 1.
+\]
+The values $\chi_k$ satisfy condition (\ref{OscCond}) for $\chi$ distribution.
 
 \section{Oscillation}
 \label{Oscillation}

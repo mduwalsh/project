@@ -840,6 +840,84 @@ void fin_osc_haploid(double *p_str, double *q_str, unsigned long run) // p_str &
   }
 }
 
+void osc_all_n_dist(double *p, double *p_str, double *q_str, unsigned long run)
+/*
+ * p: initial population haploids;
+ * p_str: oscillation point 1
+ * q_str: oscillation point 2
+ */
+{
+  FILE *fp, *gp;
+  char fname[200], title[200];
+  unsigned long i;
+  double *p1, *p2, *tptr;
+  double *d1 = calloc(G, sizeof(double));
+  double *d2 = calloc(G, sizeof(double));
+  double *d3 = calloc(G, sizeof(double));
+  double *d4 = calloc(G, sizeof(double));
+  p1 = malloc((1ul<<L)*sizeof(double));
+  p2 = malloc((1ul<<L)*sizeof(double));
+  for(i = 0; i < 1ul<<L; i++){                // clone initial population
+    p1[i] = p[i];
+  }
+  for(i = 0; i < G; i++){                     // move through G generations
+    g_w(1, p1, p2);                           // evolution of population 1 generation at a time
+    d1[i] = dist_p1p2_haploid(p2, p_str);     // distance between p2 and p_str haploid
+    d2[i] = dist_p1p2_haploid(p2, q_str);     // distance between p2 and q_str haploid
+    d3[i] = dist_p1p2_diploid(p2, p_str);     // distance between p2 and p_str diploid
+    d4[i] = dist_p1p2_diploid(p2, q_str);     // distance between p2 and q_str diploid  
+    // swap pointers to p1 and p2
+    tptr = p1;
+    p1 = p2;
+    p2 = tptr;
+  }
+
+  // write haploid distances to file
+  char str[100];
+  sprintf(str,  "b%02lu_g%04lu_osc_inf_haploid_%02lu.dat", L, G, run);             // add run to filename
+  sprintf(fname, "%s", str);  // haploid distance data file 
+  if(!(fp = fopen(fname, "w"))){
+    printf("%s could not be opened!! Error!!\n", fname);
+    exit(2);
+  }
+  for(i = 0; i < G; i++){
+    fprintf(fp, "%lu  ", i);
+    fprintf(fp, "%e  %e \n", d1[i], d2[i]);
+  }
+  fclose(fp); 
+  // plot 
+  if(!CLUSTER){
+    sprintf(title, "b%lu g%lu gg%lu s%lu infinite haploid", L, G, Gg, Seed);    
+    gp = popen ("gnuplot -persistent", "w"); // open gnuplot in persistent mode
+    plot(gp, 0, fname, 3, title, "G", "d", 0, "" );
+    fflush(gp);
+    pclose(gp);
+  }
+
+  // write diploid distances to file
+  sprintf(str,  "b%02lu_g%04lu_osc_inf_diploid_%02lu.dat", L, G, run);             // add run to filename
+  sprintf(fname, "%s", str);  // diploid distance data file 
+  if(!(fp = fopen(fname, "w"))){
+    printf("%s could not be opened!! Error!!\n", fname);
+    exit(2);
+  }
+  for(i = 0; i < G; i++){
+    fprintf(fp, "%lu  ", i);
+    fprintf(fp, "%e  %e \n", d3[i], d4[i]);
+  }
+  fclose(fp);
+  free(d1); free(d2); free(d3); free(d4); free(p1); free(p2);
+  // plot
+  if(!CLUSTER){
+    sprintf(title, "b%lu g%lu gg%lu s%lu infinite diploid", L, G, Gg, Seed);
+    gp = popen ("gnuplot -persistent", "w"); // open gnuplot in persistent mode
+    plot(gp, 0, fname, 3, title, "G", "d", 0, "" );
+    fflush(gp);
+    pclose(gp);
+  }
+  
+}
+
 // allocates memory
 void setup()
 {

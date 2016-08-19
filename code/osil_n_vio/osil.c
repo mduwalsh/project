@@ -752,8 +752,8 @@ void fin_osc_diploid(double *p_str, double *q_str, unsigned long run) // p_str &
   double *d2 = calloc(G, sizeof(double));
   //finite population simulation
   for(i = 0; i < G; i++){           // evolve through G generations
-    for(j = 0; j < N; j++){         // reproduce N offsprings      
-      a = rnd(N); b = rnd(N);
+    for(j = 0; j < N*N; j++){         // reproduce N offsprings      
+      a = rnd(N*N); b = rnd(N*N);
       reproduce_diploid(a, b, j, Pop[0], Pop[1]);           // randomly two parents chosen; will be proportional to proportion
     }
     // set new generation as parent generation for next generation
@@ -849,12 +849,16 @@ void osc_all_n_dist(double *p, double *p_str, double *q_str, unsigned long run)
 {
   FILE *fp, *gp;
   char fname[200], title[200];
-  unsigned long i;
+  unsigned long i, j, a, b;
   double *p1, *p2, *tptr;
   double *d1 = calloc(G, sizeof(double));
   double *d2 = calloc(G, sizeof(double));
   double *d3 = calloc(G, sizeof(double));
   double *d4 = calloc(G, sizeof(double));
+  double *d5 = calloc(G, sizeof(double));
+  double *d6 = calloc(G, sizeof(double));
+  double *d7 = calloc(G, sizeof(double));
+  double *d8 = calloc(G, sizeof(double));
   p1 = malloc((1ul<<L)*sizeof(double));
   p2 = malloc((1ul<<L)*sizeof(double));
   for(i = 0; i < 1ul<<L; i++){                // clone initial population
@@ -870,6 +874,34 @@ void osc_all_n_dist(double *p, double *p_str, double *q_str, unsigned long run)
     tptr = p1;
     p1 = p2;
     p2 = tptr;
+    
+    // finite haploid
+    for(j = 0; j < N; j++){         // reproduce N offsprings      
+      a = rnd(N); b = rnd(N);
+      reproduce_haploid(a, b, j, Hpop[0], Hpop[1]);           // randomly two parents chosen; will be proportional to proportion
+    }
+    // set new generation as parent generation for next generation
+    tmp_ptr = Hpop[0];
+    Hpop[0] = Hpop[1];
+    Hpop[1] = tmp_ptr;		
+    merge_sort(Hpop[0], N); 
+    // calculate distance to oscillating points and write to file
+    d5[i] = dist_haploid(p_str, Hpop[0]);               // distance to 1st oscillating point
+    d6[i] = dist_haploid(q_str, Hpop[0]);               // distance to 2nd oscillating point	 
+    
+    // finite diploid
+    for(j = 0; j < N*N; j++){         // reproduce N offsprings      
+      a = rnd(N*N); b = rnd(N*N);
+      reproduce_diploid(a, b, j, Pop[0], Pop[1]);           // randomly two parents chosen; will be proportional to proportion
+    }
+    // set new generation as parent generation for next generation
+    tmp_ptr = Pop[0];
+    Pop[0] = Pop[1];
+    Pop[1] = tmp_ptr;		
+    merge_sort(Pop[0], N); 
+    // calculate distance to oscillating points and write to file
+    d7[i] = dist_n(p_str, Pop[0]);               // distance to 1st oscillating point
+    d8[i] = dist_n(q_str, Pop[0]);               // distance to 2nd oscillating point	    
   }
 
   // write haploid distances to file

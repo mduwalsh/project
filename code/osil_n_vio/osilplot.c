@@ -5,11 +5,11 @@
 
 /* sets of parameters to be simulated on */
 unsigned long L[] = {2, 4, 6, 8, 10, 12, 14}; // bits
-unsigned long G[] = {1000};
+unsigned long G[] = {200};
 unsigned long GS = 50;                        // number of generations to show in graphs
 unsigned long N0 = 64;
 unsigned long N;
-unsigned long Ni[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 40, 100, 200};  // 2^n
+unsigned long Ni[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 40};  // 2^n
 unsigned long Runs = 16;
 
 #define EPS 1
@@ -68,11 +68,28 @@ void plot_data_all_finite(unsigned long b, unsigned long g, unsigned long n, uns
   plot(ifn, 3, title, "g", "d", 0, ofn);
   // diploid finite
   sprintf(ifn, "%s_osc_diploid_%02lu.dat", str, run);
-  sprintf(ofn, "%s_osc_fin_dip_%02lu.eps", str run);
+  sprintf(ofn, "%s_osc_fin_dip_%02lu.eps", str, run);
   sprintf(title, "finite diploid l:%lu, g:%lu, n:%lu, r:%lu", b, GS, n, run);
   plot(ifn, 3, title, "g", "d", 0, ofn);
 }
 
+void plot_data_all_dist_fin_inf(unsigned long b, unsigned long g, unsigned long n, unsigned long run)
+{
+  char str[200], ifn[300], ofn[300], title[200];
+  //create file name string
+  sprintf(str, "b%02lu_g%04lu_n%06lu", b, g, n);
+  
+  // haploid finite
+  sprintf(ifn, "%s_osc_haploid_dist_%02lu.dat", str, run);
+  sprintf(ofn, "%s_osc_fin_hap_dist_%02lu.eps", str, run);
+  sprintf(title, "distance haploid l:%lu, g:%lu, n:%lu, r:%lu", b, GS, n, run);
+  plot(ifn, 2, title, "g", "d", 0, ofn);
+  // diploid finite
+  sprintf(ifn, "%s_osc_diploid_dist_%02lu.dat", str, run);
+  sprintf(ofn, "%s_osc_fin_dip_dist_%02lu.eps", str, run);
+  sprintf(title, "distance diploid l:%lu, g:%lu, n:%lu, r:%lu", b, GS, n, run);
+  plot(ifn, 2, title, "g", "d", 0, ofn);
+}
 
 int main()
 {
@@ -88,7 +105,8 @@ int main()
 	plot_data_all_infinite(L[li], G[gi], j);
 	for(ni = 0; ni < sizeof(Ni)/sizeof(unsigned long); ni++){                        // through all sizes of finite population
 	  N = N0*Ni[ni];
-	  plot_data_all_finite(L[li], G[gi], N, j);            
+	  plot_data_all_finite(L[li], G[gi], N, j);       
+	  plot_data_all_dist_fin_inf(L[li], G[gi], N, j);
 	}
         }
       }

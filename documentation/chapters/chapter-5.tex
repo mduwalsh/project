@@ -108,6 +108,61 @@ such that
 \]
 The values $\chi_k$ satisfy condition (\ref{OscCond}) for $\chi$ distribution.
 
+\section{Initial Population}
+Let finite haploid population $s^n$, finite diploid population $f^n$, infinite haploid population $p^n$ and infinite haploid population $q^n$ be considered with initial population $s^0$, $f^0$,
+$p^0$, $q^0$ respectively. To investigate oscillating behavior of infinite population evolutionary limits and finite population, same initial population is desired. 
+
+For a genome length $\ell$, let $x = 2^\ell$ be number of possible strings in finite haploid population array $t$ of population size $N$. Possible strings $t_i$ are ${0, 1,.., x-1}$ where $i = 0, 1,.., N-1$. An arbitrary vector $r$ of size $x$ was considered where
+\[
+r_i = U01(); {i = 0, 1,.., x-1}
+\]
+and U01() is random number between 0 and 1.
+Let $t$ represent finite haploid population strings array.
+\[
+t_j = randp(r) ; {j = 0,.., N-1}
+\]
+where $t_j$ is $j^th$ population member and $randp(r)$ returns random index $i$ in array $r$ with probability $r_i$.
+
+Let $c_i$ represent count of haploid member $i$ in population $t$ given by
+\[
+c_i = \sum \limits_{j=0}^{N-1} [t_j = i] ; {i = 0,.., x-1} & [..] is Iverson bracket
+\]
+
+Then infinite population vector $p$ is calculated as
+\[
+p_i = \frac{c_i}{ \sum \limits_{k=0}^{x-1} c_k }
+\]
+where $i = 0,.., x-1$ and $\sum \limits_{k=0}^{x-1} c_k = N$.
+
+This $p$ is randomly generated initial infinite haploid population vector ($p^0$) which corresponds to diploid infinite population vector $q$ 
+and finite population vectors $s$ and $f$.
+
+Finite haploid population members $t_j$s are generated again to match finite haploid population $s^0$ with infinite haploid population $p^0$.
+\[
+c_i = N \cdot p_i \\
+\sum \limits_{j=0}^{N-1} [t_j = i] = c_i ; {i = 0,.., x-1} 
+\]
+
+Initial infinite diploid population $q_0$ is calculated corresponding to initial haploid population $p^0$ as
+\[
+q_{i,j} = p_i \cdot p_j ; {i = 0,..,x-1; j = 0,..,x-1}.
+\]
+
+Let $v$ represent finite diploid population member array of size $N^2$ and $d_{i,j}$ represent count of diploid member $\langle i,j \rangle$ in $v$. Then $v$ can be filled with population member to match initial population vector $p$ generating diploid members such that
+\[
+d_{i,j} = N \cdot p_i \cdot N \cdot p_j \\
+\sum \limits_{k=0}^{N^2-1} [ v_k = \langle i,j \rangle ] = d_{i,j}
+\]
+
+Finite diploid population vector $f$ can be obtained from finite diploid population member array $v$  using
+\[
+f_{i,j} = \frac{d_{i,j}}{\sum \limits_{k=0}^{x-1} \sum \limits_{h=0}^{x-1} d_{k,h}}
+\]
+where $i = 0,.., x-1$, $h = 0,.., x-1$ and $\sum \limits_{k=0}^{x-1} \sum \limits_{h=0}^{x-1} d_{k,h} = N^2$.
+
+This initial infinite haploid population vector $p^0$ corresponds to initial infinite diploid population vector $q^0$, initial finite haploid population vector with population size $N$ and 
+initial finite diploid population vector $N^2$ with population size $N^2$.
+
 \section{Oscillation}
 \label{Oscillation}
 
@@ -122,32 +177,7 @@ Infinite haploid population evolutionary limits $p_h^{\ast}$ and $q_h^{\ast}$ we
 \]
 where $\gamma = \langle \gamma_0, \gamma_1 \rangle$ is diploid genome.
 
-
-Finite haploid population $s^n$, diploid population $f^n$, infinite haploid population $p^n$ and infinite haploid population $q^n$ with same initial population ($p^0 = q^0 = s^0 = f^0 $) were considered. For a genome length $\ell$, same initial population was used for all sizes of finite population conisdered. Let $x = 2^\ell$ be number of possible strings in finite haploid population array $t$ of population size $N$. Possible strings $t_i$ are ${0, 1,.., x-1}$ where $i = 0, 1,.., N-1$. An arbitrary vector $r$ of size $x$ was considered where
-\[
-r_i = U01(); {i = 0, 1,.., x-1}
-\]
-and U01() is random number between 0 and 1.
-Let $t$ represent finite haploid population strings array.
-\[
-t_j = randp(r) ; {j = 0,.., N-1}
-\]
-where $t_j$ is $j^th$ population member and $randp(r)$ returns random index $i$ in array $r$ with probability $r_i$.
-
-Let $c_i$ represent count of haploid member $i$ in population $t$ given by
-\[
-c_i = \sum \limits_{k=0}^{N-1} [t_k = i] ; {i = 0,.., x-1} & [..] is Iverson bracket
-\]
-
-Then infinite population vector $p$ is calculated as
-\[
-p_i = \frac{c_i}{ \sum \limits_{i=0}^{x-1} c_i }
-\]
-where $i = 0,.., x-1$ and $\sum \limits_{i=0}^{x-1} c_i = N$.
-
-This $p$ is randomly generated initial infinite haploid population vector which corresponds to diploid infinite population vector $q$ 
-and finite population vectors $s$ and $f$.
-
+For a genome length $\ell$, same initial population was used for all sizes of finite population conisdered.
  $p^0$ population distribution was randomly generated at first. Using distribution $p^0$, finite haploid strings were generated where probability of presence of each string $\beta \propto p^0_\beta$. Then from finite haploid strings, $p^0$ was recalculated such that $p^0 = s^0$. Infinite diploid population $q^0$ was calculated as
 \[
 q^0_{\langle \alpha_0, \alpha_1 \rangle} = p^0_{\alpha_0} * p^0_{\alpha_1}

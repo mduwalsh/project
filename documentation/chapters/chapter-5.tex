@@ -80,7 +80,7 @@ Condition $k \in \bar{g} \mathcal{R}$ in equation (\ref{OscCond}) can be simplif
 \[
 k = \bar{g} i  \text{ where $i \in \mathcal{R}$}
 \]
-Logical ANDing both sides by $\bar{g}$,
+Logical bitwise ANDing both sides by $\bar{g}$,
 \begin{eqnarray*}
 \bar{g} k & = & \bar{g} \bar{g} i \\
 \bar{g} k & = & \bar{g} i \\
@@ -111,7 +111,7 @@ The values $\chi_k$ satisfy condition (\ref{OscCond}) for $\chi$ distribution.
 \section{Oscillation}
 \label{Oscillation}
 
-Equations (\ref{lt1}) and (\ref{lt2}) were implemented with crossover distribution $\chi$ and mutation distribution $\mu$ satisfying condition (\ref{OscCond}) to inspect oscillating behavior of predicted infinite population evolutionary limits $p^{\ast} and q^{\ast}$ and finite population under no selective pressure.
+Equations (\ref{lt1}) and (\ref{lt2}) were implemented with crossover distribution $\chi$ and mutation distribution $\mu$ satisfying condition (\ref{OscCond}) to investigate oscillating behavior of predicted infinite population evolutionary limits $p^{\ast} and q^{\ast}$ and finite population under no selective pressure.
 
 Infinite haploid population evolutionary limits $p_h^{\ast}$ and $q_h^{\ast}$ were computed using equations (\ref{lt1}) and (\ref{lt2}). Infinite diploid population evolutionary limits $p_d^{\ast}$ and $q_d^{\ast}$ as
 \[
@@ -123,9 +123,34 @@ Infinite haploid population evolutionary limits $p_h^{\ast}$ and $q_h^{\ast}$ we
 where $\gamma = \langle \gamma_0, \gamma_1 \rangle$ is diploid genome.
 
 
-Finite haploid population $s^n$, diploid population $f^n$, infinite haploid population $p^n$ and infinite haploid population $q^n$ with random intial population ($p^0 = q^0 = s^0 = f^0 $) were considered. $p^0$ population distribution was randomly generated at first. Using distribution $p^0$, finite haploid strings were generated where probability of presence of each string $\beta \propto p^0_\beta$. Then from finite haploid strings, $p^0$ was recalculated such that $p^0 = s^0$. Infinite diploid population $q^0$ was calculated as
+Finite haploid population $s^n$, diploid population $f^n$, infinite haploid population $p^n$ and infinite haploid population $q^n$ with same initial population ($p^0 = q^0 = s^0 = f^0 $) were considered. For a genome length $\ell$, same initial population was used for all sizes of finite population conisdered. Let $x = 2^\ell$ be number of possible strings in finite haploid population array $t$ of population size $N$. Possible strings $t_i$ are ${0, 1,.., x-1}$ where $i = 0, 1,.., N-1$. An arbitrary vector $r$ of size $x$ was considered where
 \[
-q^0_{\langle \alpha_0, \alpha_1 \rangle} = p^0_{\alpha_0} * p^1_{\alpha_1}
+r_i = U01(); {i = 0, 1,.., x-1}
+\]
+and U01() is random number between 0 and 1.
+Let $t$ represent finite haploid population strings array.
+\[
+t_j = randp(r) ; {j = 0,.., N-1}
+\]
+where $t_j$ is $j^th$ population member and $randp(r)$ returns random index $i$ in array $r$ with probability $r_i$.
+
+Let $c_i$ represent count of haploid member $i$ in population $t$ given by
+\[
+c_i = \sum \limits_{k=0}^{N-1} [t_k = i] ; {i = 0,.., x-1} & [..] is Iverson bracket
+\]
+
+Then infinite population vector $p$ is calculated as
+\[
+p_i = \frac{c_i}{ \sum \limits_{i=0}^{x-1} c_i }
+\]
+where $i = 0,.., x-1$ and $\sum \limits_{i=0}^{x-1} c_i = N$.
+
+This $p$ is randomly generated initial infinite haploid population vector which corresponds to diploid infinite population vector $q$ 
+and finite population vectors $s$ and $f$.
+
+ $p^0$ population distribution was randomly generated at first. Using distribution $p^0$, finite haploid strings were generated where probability of presence of each string $\beta \propto p^0_\beta$. Then from finite haploid strings, $p^0$ was recalculated such that $p^0 = s^0$. Infinite diploid population $q^0$ was calculated as
+\[
+q^0_{\langle \alpha_0, \alpha_1 \rangle} = p^0_{\alpha_0} * p^0_{\alpha_1}
 \]
 For finite diploid $f^n$ population, diploid strings were generated where presence of each diploid string $\alpha \langle \alpha_0, \alpha_1 \rangle \propto p^0_{\alpha_0} p^0_{\alpha_1}$.
 Genome lengths $l \in {2, 4, 6, 8, 10, 12, 14}$ and population sizes $N = 2^i$ for integer $0 \leq i \leq 14$ were considered. The distances of $p^n$ and $s^n$ to haploid evolutionary limits $p_h^{\ast}$ and $q_h^{\ast}$ were plotted and the distance of $q^n$ and $f^n$ to diploid evolutionary limits $p_d^{\ast}$ and $q_d^{\ast}$ were plotted.

@@ -360,13 +360,17 @@ double *g_w(int n, double *x, double *y) // y = x^n; evolve n generations from x
   return y;                               // y = final (standard basis)
 }
 
-void display_p(double *p)                 // displays haploids' proportion p
+void display_p(double *p, char* str)                 // displays haploids' proportion p
 {
   unsigned long i;
+  double s = 0;
+  printf("%s\n", str);
   for(i = 0; i < 1ul<<L; i++){
-    printf("%.6lf ", p[i]);
+    printf("%e ", p[i]);
+    s += p[i];
   }
   printf("\n");
+  printf("sum: %lf\n", s);
 }
 
 void display_qf()                          // displays diploids' proportion q for finite population
@@ -389,6 +393,19 @@ void display_qix(double *p)
   for(i = 0; i < 1ul<<(2*L); i++){       // through all diploids from 0 to 2^(2L)-1 (all possibilities)
     get_x0x1(i, &x0, &x1);                      // get haploids x0 and x1
     printf("%.6lf ", qi_x(x0, x1, p));
+  }
+  printf("\n");
+}
+
+void display_Mhat()
+{
+  unsigned long i, j;
+  printf("Mh:\n");
+  for(i = 0; i < (1ul<<L); i++){
+    for(j = 0; j < (1ul<<L); j++){
+      printf("%.10lf ", Mh[i][j]);
+    }
+    printf("\n");
   }
   printf("\n");
 }
@@ -689,9 +706,12 @@ void comp_periodic_orbits(double *p_str, double *q_str, double *p)
   }
   // compute gth components of p_str and q_str in increasing value of |g|
   unsigned long g; double x;
+  //display_Mhat();
+  //printf("x_g, y_g: ");
   for(i = 1; i < (1ul<<L); i++){
     g = si[i];
     x = x_g(g);
+    //printf("%.6lf, %.6lf ", x, y_g(qh, g));
     if( fabs(x) < 1.0){
       ph[g] = ( x*y_g(ph,g) + y_g(qh,g) )/( 1.0 -x*x );
       qh[g] = ( x*y_g(qh,g) + y_g(ph,g) )/( 1.0 -x*x );
@@ -702,6 +722,7 @@ void comp_periodic_orbits(double *p_str, double *q_str, double *p)
     }
       
   }
+  //printf("\n");
   walsh_v(ph, p_str); walsh_v(qh, q_str);  // periodic orbits in standard basis
   
   free(pw); free(mpw); free(ph); free(qh); free(si); free(sv);
@@ -1118,6 +1139,17 @@ void setup()
   }
   Gg = g;
   chiDist(g); muDist(g);                         // initialize distributions for Mu and Chi with g = 12
+  
+  if(VIO_MU_CHI == 1){
+    violate_mu();                              // violates oscillating condition in Mu
+    //display_p(Mu, "Mu:");
+    //display_p(Chi, "Chi:");
+  }
+  else if(VIO_MU_CHI == 2){
+    violate_chi();                             // violates oscillating condition in Chi
+    //display_p(Chi, "Chi:");  
+  }
+  
   for(i = 0; i < 1ul<<L; i++){                     // copy mutation and crossover distributions to Cr and M distributions
     Cr->p[i] = Chi[i]; sc += Chi[i];
     M->p[i] = Mu[i]; sm += Mu[i];
@@ -1198,15 +1230,7 @@ int main(int argc, char** argv)
     initrand(seed);
     p_str = calloc((1ul<<L),sizeof(double));  // oscillating point 1
     q_str = calloc((1ul<<L),sizeof(double));  // oscillating point 2
-    setup();    
-    if(VIO_MU_CHI == 1){
-      violate_mu();                              // violates oscillating condition in Mu
-      //display_p(Mu);
-    }
-    else if(VIO_MU_CHI == 2){
-      violate_chi();                             // violates oscillating condition in Chi
-      // display_p(Chi);  
-    }
+    setup();        
     N = N0;
     init();
     // generate random distribution in P0
@@ -1215,6 +1239,7 @@ int main(int argc, char** argv)
     merge_sort(Hpop[0], N);  
     calc_px_from_finite_hap_pop(P0, Hpop[0]);               // initial population vector constant for all finite size population in simulation
     comp_periodic_orbits(p_str, q_str, P0);                 // computes p_str and q_str oscillating points 
+    //display_p(p_str, "p_str:"); display_p(q_str, "q_str:"); 
     deinit();  
     //inf_osc(P0, p_str, q_str, j);                              // infinite population oscillating behavior check  
     

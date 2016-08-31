@@ -1227,7 +1227,7 @@ int main(int argc, char** argv)
     else{
       Seed = seed;
     }
-    initrand(seed);
+    initrand(Seed);
     p_str = calloc((1ul<<L),sizeof(double));  // oscillating point 1
     q_str = calloc((1ul<<L),sizeof(double));  // oscillating point 2
     setup();        

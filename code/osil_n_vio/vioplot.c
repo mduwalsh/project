@@ -75,7 +75,7 @@ void plot_data_all_finite(unsigned long b, unsigned long g, unsigned long n, dou
   // diploid finite
   sprintf(ifn, "%s_osc_diploid_%02lu.dat", str, run);
   sprintf(ofn, "b%02lu_g%04lu_n%06lu_eps%.6lf_osc_fin_dip_%02lu.eps", b, GS, n, epsilon, run);
-  sprintf(title, "finite diploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu, eps:%.2f", b, GS, n, epsilon);
+  sprintf(title, "finite diploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu, eps:%.2f", b, GS, n*n, epsilon);
   plot(ifn, 3, title, "g", "d", 0, ofn);
 }
 

@@ -904,7 +904,7 @@ void fin_osc_haploid(double *p_str, double *q_str, unsigned long run) // p_str &
   }
 }
 
-void osc_all_n_dist(double *p, double *p_str, double *q_str, unsigned long run)
+void osc_all_n_dist(double *p, double *p_str, double *q_str, double *p1_str, double *q1_str, unsigned long run)
 /*
  * p: initial population haploids;
  * p_str: oscillation point 1
@@ -925,6 +925,14 @@ void osc_all_n_dist(double *p, double *p_str, double *q_str, unsigned long run)
   double *d8 = calloc(G, sizeof(double));
   double *d9 = calloc(G+1, sizeof(double));
   double *d10 = calloc(G+1, sizeof(double));
+  double *d11 = calloc(G, sizeof(double));
+  double *d12 = calloc(G, sizeof(double));
+  double *d13 = calloc(G, sizeof(double));
+  double *d14 = calloc(G, sizeof(double));
+  double *d15 = calloc(G, sizeof(double));
+  double *d16 = calloc(G, sizeof(double));
+  double *d17 = calloc(G, sizeof(double));
+  double *d18 = calloc(G, sizeof(double));
   p1 = malloc((1ul<<L)*sizeof(double));
   p2 = malloc((1ul<<L)*sizeof(double));
   d9[0] = dist_haploid(p, Hpop[0]);           // distance between initial population point finite and infinite haploid
@@ -936,8 +944,13 @@ void osc_all_n_dist(double *p, double *p_str, double *q_str, unsigned long run)
     g_w(1, p1, p2);                           // evolution of population 1 generation at a time
     d1[i] = dist_p1p2_haploid(p2, p_str);     // distance between p2 and p_str haploid
     d2[i] = dist_p1p2_haploid(p2, q_str);     // distance between p2 and q_str haploid
+    d11[i] = dist_p1p2_haploid(p2, p1_str);     // distance between p2 and p1_str haploid
+    d12[i] = dist_p1p2_haploid(p2, q1_str);     // distance between p2 and q1_str haploid
+    
     d3[i] = dist_p1p2_diploid(p2, p_str);     // distance between p2 and p_str diploid
     d4[i] = dist_p1p2_diploid(p2, q_str);     // distance between p2 and q_str diploid  
+    d13[i] = dist_p1p2_diploid(p2, p1_str);     // distance between p2 and p1_str diploid
+    d14[i] = dist_p1p2_diploid(p2, q1_str);     // distance between p2 and q1_str diploid  
     // swap pointers to p1 and p2
     tptr = p1;
     p1 = p2;
@@ -957,6 +970,8 @@ void osc_all_n_dist(double *p, double *p_str, double *q_str, unsigned long run)
     // calculate distance to oscillating points and write to file
     d5[i] = dist_haploid(p_str, Hpop[0]);               // distance to 1st oscillating point
     d6[i] = dist_haploid(q_str, Hpop[0]);               // distance to 2nd oscillating point	 
+    d15[i] = dist_haploid(p1_str, Hpop[0]);               // distance to 1st oscillating point without violation
+    d16[i] = dist_haploid(q1_str, Hpop[0]);               // distance to 2nd oscillating point without violation
     
     // finite diploid
     for(j = 0; j < N*N; j++){         // reproduce N offsprings      
@@ -971,6 +986,8 @@ void osc_all_n_dist(double *p, double *p_str, double *q_str, unsigned long run)
     // calculate distance to oscillating points and write to file
     d7[i] = dist_n(p_str, Pop[0]);               // distance to 1st oscillating point
     d8[i] = dist_n(q_str, Pop[0]);               // distance to 2nd oscillating point	  
+    d17[i] = dist_n(p1_str, Pop[0]);               // distance to 1st oscillating point without violation
+    d18[i] = dist_n(q1_str, Pop[0]);               // distance to 2nd oscillating point without violation
     
     // distance between infinte and finite population after each generation
     d9[i+1] = dist_haploid(p1, Hpop[0]);           // distance between population point finite and infinite haploid
@@ -990,7 +1007,18 @@ void osc_all_n_dist(double *p, double *p_str, double *q_str, unsigned long run)
     fprintf(fp, "%e  %e \n", d1[i], d2[i]);
   }
   fclose(fp); 
-  
+  // distance to p1_str and q1_str without violation
+  sprintf(str,  "b%02lu_g%04lu_eps%0.6lf_osc_inf_haploid_wovio_%02lu.dat", L, G, Epsilon, run);             // add run to filename
+  sprintf(fname, "%s", str);  // haploid distance data file 
+  if(!(fp = fopen(fname, "w"))){
+    printf("%s could not be opened!! Error!!\n", fname);
+    exit(2);
+  }
+  for(i = 0; i < G; i++){
+    fprintf(fp, "%lu  ", i);
+    fprintf(fp, "%e  %e \n", d11[i], d12[i]);
+  }
+  fclose(fp); 
   
   // plot 
   if(!CLUSTER){
@@ -1011,6 +1039,18 @@ void osc_all_n_dist(double *p, double *p_str, double *q_str, unsigned long run)
   for(i = 0; i < G; i++){
     fprintf(fp, "%lu  ", i);
     fprintf(fp, "%e  %e \n", d3[i], d4[i]);
+  }
+  fclose(fp);
+  // write inf diploid distances without violation to file
+  sprintf(str,  "b%02lu_g%04lu_eps%0.6lf_osc_inf_diploid_wovio_%02lu.dat", L, G, Epsilon, run);             // add run to filename
+  sprintf(fname, "%s", str);  // diploid distance data file 
+  if(!(fp = fopen(fname, "w"))){
+    printf("%s could not be opened!! Error!!\n", fname);
+    exit(2);
+  }
+  for(i = 0; i < G; i++){
+    fprintf(fp, "%lu  ", i);
+    fprintf(fp, "%e  %e \n", d13[i], d14[i]);
   }
   fclose(fp);
   
@@ -1037,6 +1077,19 @@ void osc_all_n_dist(double *p, double *p_str, double *q_str, unsigned long run)
     fprintf(fp, "%e  %e\n", d5[i], d6[i]);
    }
   fclose(fp);  
+  // write distance for finite haploid to oscillatins points without violation
+  sprintf(str, "osc_haploid_wovio_%02lu.dat", run);             // add run to filename
+  prep_filename(fname, str);
+  if(!(fp = fopen(fname, "w"))){
+    printf("%s could not be opened!! Error!!\n", fname);
+    exit(2);
+  }
+   // write distances to file
+   for(i = 0; i < G; i++){
+    fprintf(fp, "%lu  ", i);
+    fprintf(fp, "%e  %e\n", d15[i], d16[i]);
+   }
+  fclose(fp);  
   
   if(!CLUSTER){
     sprintf(title, "b%lu g%lu n%lu gg%lu s%lu finite haploid", L, G, N, Gg, Seed);
@@ -1057,6 +1110,19 @@ void osc_all_n_dist(double *p, double *p_str, double *q_str, unsigned long run)
    for(i = 0; i < G; i++){
     fprintf(fp, "%lu  ", i);
     fprintf(fp, "%e  %e\n", d7[i], d8[i]);
+   }
+  fclose(fp);  
+  // write distance for finite diploid to oscillatins points without violation
+  sprintf(str, "osc_diploid_wovio_%02lu.dat", run);             // add run to filename
+  prep_filename(fname, str);
+  if(!(fp = fopen(fname, "w"))){
+    printf("%s could not be opened!! Error!!\n", fname);
+    exit(2);
+  }
+   // write distances to file
+   for(i = 0; i < G; i++){
+    fprintf(fp, "%lu  ", i);
+    fprintf(fp, "%e  %e\n", d17[i], d18[i]);
    }
   fclose(fp);  
   
@@ -1112,15 +1178,28 @@ void osc_all_n_dist(double *p, double *p_str, double *q_str, unsigned long run)
     pclose(gp);
   }
   
-  free(d1); free(d2); free(d3); free(d4); free(d5); free(d6); free(d7); free(d8); free(d9); free(d10); free(p1); free(p2);
+  free(d1); free(d2); free(d3); free(d4); free(d5); free(d6); free(d7); free(d8);  free(d9); free(d10); 
+  free(d11); free(d12); free(d13); free(d14); free(d15); free(d16); free(d17); free(d18);
+  free(p1); free(p2);
 }
 
+void copy_mutation_crossover_to_dist()
+{
+  unsigned long i;
+  double sm = 0, sc = 0;
+  for(i = 0; i < 1ul<<L; i++){                     // copy mutation and crossover distributions to Cr and M distributions
+    Cr->p[i] = Chi[i]; sc += Chi[i];
+    M->p[i] = Mu[i]; sm += Mu[i];
+  }
+  
+  initdist(Cr, sc);                                // initialize Cr distribution
+  initdist(M, sm);                                 // initialize M distribution
+}
 
 // allocates memory
 void setup()
 {
   unsigned long i, g;
-  double sc = 0, sm = 0;
   C = pow(2., L/2.);   // constant
   U = (1ul<<L)-1;      // universe mask
   for (i = 256; i--; W[i] = ((ones(i)&1) ? -1. : 1.)/C);
@@ -1140,27 +1219,8 @@ void setup()
   Gg = g;
   chiDist(g); muDist(g);                         // initialize distributions for Mu and Chi with g = 12
   
-  if(VIO_MU_CHI == 1){
-    violate_mu();                              // violates oscillating condition in Mu
-    //display_p(Mu, "Mu:");
-    //display_p(Chi, "Chi:");
-  }
-  else if(VIO_MU_CHI == 2){
-    violate_chi();                             // violates oscillating condition in Chi
-    //display_p(Chi, "Chi:");  
-  }
-  
-  for(i = 0; i < 1ul<<L; i++){                     // copy mutation and crossover distributions to Cr and M distributions
-    Cr->p[i] = Chi[i]; sc += Chi[i];
-    M->p[i] = Mu[i]; sm += Mu[i];
-  }
-  
-  initdist(Cr, sc);                                // initialize Cr distribution
-  initdist(M, sm);                                 // initialize M distribution
-  
   Mh  = malloc((1ul<<L)*sizeof(double *));
-  for (i = 1ul<<L; i--;) Mh[i]  = malloc((1ul<<L)*sizeof(double));
-  walsh(Mh, 0);                                       // calculate and install values in mixing matrix in walsh basis (Mhat)
+  for (i = 1ul<<L; i--;) Mh[i]  = malloc((1ul<<L)*sizeof(double));  
   
   GZ = malloc((1ul<<L)*sizeof(double));
   GW = malloc((1ul<<L)*sizeof(double)); 
@@ -1216,7 +1276,7 @@ int main(int argc, char** argv)
   Epsilon = (double)atof(argv[4]);
   Runs = (unsigned long)atol(argv[5]);
   
-  double *p_str, *q_str;                 // oscillating points  
+  double *p_str, *q_str, *p1_str, *q1_str;                 // oscillating points  
   time_t now; 
   unsigned long i, j;
   for(j = 0; j < Runs; j++){
@@ -1230,18 +1290,36 @@ int main(int argc, char** argv)
     initrand(Seed);
     p_str = calloc((1ul<<L),sizeof(double));  // oscillating point 1
     q_str = calloc((1ul<<L),sizeof(double));  // oscillating point 2
+    p1_str = calloc((1ul<<L),sizeof(double));  // oscillating point 1 without violation
+    q1_str = calloc((1ul<<L),sizeof(double));  // oscillating point 2 without violation
     setup();        
+    // initial population calc begin
+    // generate random distribution in P0
     N = N0;
     init();
-    // generate random distribution in P0
     install_pop_distribution(P0);                           // install haploids proportion
     generate_fin_hap_init_pop_from_random_px(P0, Hpop[0]);  // generate finite haploid initial population from P0
     merge_sort(Hpop[0], N);  
     calc_px_from_finite_hap_pop(P0, Hpop[0]);               // initial population vector constant for all finite size population in simulation
-    comp_periodic_orbits(p_str, q_str, P0);                 // computes p_str and q_str oscillating points 
-    //display_p(p_str, "p_str:"); display_p(q_str, "q_str:"); 
     deinit();  
-    //inf_osc(P0, p_str, q_str, j);                              // infinite population oscillating behavior check  
+    // initial population calc end
+    //mixing matrix before violation
+    walsh(Mh, 0);                                          // calculate and install values in mixing matrix in walsh basis (Mhat)
+    comp_periodic_orbits(p1_str, q1_str, P0);              // computes p_str and q_str oscillating points before violation
+    
+    // introduce violation in Mu or Chi
+    if(VIO_MU_CHI == 1){
+      violate_mu();                              // violates oscillating condition in Mu
+    }
+    else if(VIO_MU_CHI == 2){
+      violate_chi();                             // violates oscillating condition in Chi
+    } 
+    // calculation mixing matrix after violation
+    walsh(Mh, 0);                                          // calculate and install values in mixing matrix in walsh basis (Mhat) after violation
+    copy_mutation_crossover_to_dist();                     // fills up crossover distribution and mutation distribution     
+    
+    comp_periodic_orbits(p_str, q_str, P0);                 // computes p_str and q_str oscillating points after violation
+    //display_p(p_str, "p_str:"); display_p(q_str, "q_str:");     
     
     for(i = 0; i < sizeof(Ni)/sizeof(unsigned long); i++){                        // through all sizes of finite population
       N = N0*Ni[i];
@@ -1249,13 +1327,10 @@ int main(int argc, char** argv)
       generate_fin_hap_pop_from_pvector(P0, Hpop[0]);       // finite haploid population from P0
       generate_fin_dipop_from_px(P0, Pop[0]);               // finite diploid population generation from P0      
       
-      osc_all_n_dist(P0, p_str, q_str, j);
-      //fin_osc_diploid(p_str, q_str, j);                        // finite population oscillating behavior check
-      //fin_osc_haploid(p_str, q_str, j);                        // finite population oscillating behavior check
-      
+      osc_all_n_dist(P0, p_str, q_str, p1_str, q1_str, j);
       deinit();        
     }
-    free(p_str); free(q_str);
+    free(p_str); free(q_str); free(p1_str); free(q1_str);
     cleanup();
   }
   walsh(Mh, -1);  

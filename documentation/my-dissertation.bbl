@@ -1,5 +1,15 @@
 \begin{thebibliography}{}
 
+\bibitem[Beauchamp, 1975]{Beauchamp1975}
+Beauchamp, K. (1975).
+\newblock {\em Walsh functions and their applications}.
+\newblock Academic Press.
+
+\bibitem[Cooley and Tukey, 1965]{CooleyTukey1965}
+Cooley, J.~W. and Tukey, J.~W. (1965).
+\newblock An algorithm for the machine calculation of complex fourier series.
+\newblock {\em Mathematics of Computation}, 19(90):297--301.
+
 \bibitem[Geiringer, 1944]{Geiringer1944}
 Geiringer, H. (1944).
 \newblock On the probability theory of linkage in mendelian heredity.
@@ -12,13 +22,23 @@ Hardy, G.~H. (1908).
 
 \bibitem[Mendel, 1865]{Mendel1866}
 Mendel, G. (1865).
-\newblock Versuche {"u}ber plflanzenhybriden.
+\newblock Versuche {\"u}ber plflanzenhybriden.
 \newblock {\em Verhandlungen des naturforschenden Vereines in Br{\"u}nn},
   IV:3--47.
+
+\bibitem[Shanks, 1969]{Shanks1969}
+Shanks, J.~L. (1969).
+\newblock Computation of the fast walsh-fourier transform.
+\newblock {\em IEEE Trans. Comput.}, 18(5):457--459.
 
 \bibitem[Vose, 1999]{Vose1999}
 Vose, M.~D. (1999).
 \newblock Random heuristic search.
 \newblock {\em Theoretical Computer Science}.
+
+\bibitem[Vose and Wright, 1998]{VoseWright1998}
+Vose, M.~D. and Wright, A.~H. (1998).
+\newblock The simple genetic algorithm and the walsh transform: Part i, theory.
+\newblock {\em Evol. Comput.}, 6(3):253--273.
 
 \end{thebibliography}

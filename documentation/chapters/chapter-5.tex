@@ -119,6 +119,15 @@ The values $\chi_k$ satisfy condition (\ref{OscCond}) for $\chi$ distribution.
 
 \section{Initial Population}
 \label{InitPopOsc}
+
+\begin{figure}[H]
+\begin{center}
+\resizebox*{12cm}{!}{\includegraphics{figures/eps/initialpop.eps}}\hspace{5pt}
+\caption{\textbf{Initial population computation:} }
+\label{initalpop}
+\end{center}
+\end{figure}
+
 Let finite haploid population $s^n$, finite diploid population $f^n$, infinite haploid population $p^n$ and infinite haploid population $q^n$ be considered with initial population $s^0$, $f^0$,
 $p^0$, $q^0$ respectively. To investigate oscillating behavior of infinite population evolutionary limits and finite population, same initial population is desired. 
 
@@ -131,11 +140,11 @@ Let $t$ represent finite haploid population strings array.
 \[
 t_j = randp(r) ; {j = 0,.., N-1}
 \]
-where $t_j$ is $j^th$ population member and $randp(r)$ returns random index $i$ in array $r$ with probability $r_i$.
+where $t_j$ is $j^{th}$ population member and $randp(r)$ returns random index $i$ in array $r$ with probability $r_i$.
 
 Let $c_i$ represent count of haploid member $i$ in population $t$ given by
 \[
-c_i = \sum \limits_{j=0}^{N-1} [t_j = i] ; {i = 0,.., x-1} & [..] is Iverson bracket
+c_i = \sum \limits_{j=0}^{N-1} [t_j = i]  \nudge; \nudge {i = 0,.., x-1}  and  [..]  is  Iverson bracket
 \]
 
 Then infinite population vector $p$ is calculated as
@@ -149,20 +158,22 @@ and finite population vectors $s$ and $f$.
 
 Finite haploid population members $t_j$s are generated again to match finite haploid population $s^0$ with infinite haploid population $p^0$.
 \[
-c_i = N \cdot p_i \\
-\sum \limits_{j=0}^{N-1} [t_j = i] = c_i ; {i = 0,.., x-1} 
+c_i = N \cdot p_i 
+\]
+\[
+\sum \limits_{j=0}^{N-1} [t_j = i] = c_i  \nudge; \nudge {i = 0,.., x-1} 
 \]
 
 Initial infinite diploid population $q_0$ is calculated corresponding to initial haploid population $p^0$ as
 \[
-q_{i,j} = p_i \cdot p_j ; {i = 0,..,x-1; j = 0,..,x-1}.
+q_{i,j} = p_i \cdot p_j  \nudge; \nudge {i = 0,..,x-1; j = 0,..,x-1}.
 \]
 
 Let $v$ represent finite diploid population member array of size $N^2$ and $d_{i,j}$ represent count of diploid member $\langle i,j \rangle$ in $v$. Then $v$ can be filled with population member to match initial population vector $p$ generating diploid members such that
-\[
-d_{i,j} = N \cdot p_i \cdot N \cdot p_j \\
+\begin{eqnarray*}
+d_{i,j} = N \cdot p_i \cdot N \cdot p_j 
 \sum \limits_{k=0}^{N^2-1} [ v_k = \langle i,j \rangle ] = d_{i,j}
-\]
+\end{eqnarray*}
 
 Finite diploid population vector $f$ can be obtained from finite diploid population member array $v$  using
 \[
@@ -182,12 +193,10 @@ and finite population under no selective pressure.
 
 Infinite haploid population evolutionary limits $p_h^{\ast}$ and $q_h^{\ast}$ were computed using equations (\ref{lt1}) and (\ref{lt2}). 
 Infinite diploid population evolutionary limits $p_d^{\ast}$ and $q_d^{\ast}$ as
-\[
-{p_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} = {p_h^{\ast}}_{\gamma_0} {p_h^{\ast}}_{\gamma_1}
-\]
-\[
-{q_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} = {q_h^{\ast}}_{\gamma_0} {q_h^{\ast}}_{\gamma_1}
-\]
+\begin{eqnarray*}
+{p_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} & = & {p_h^{\ast}}_{\gamma_0} {p_h^{\ast}}_{\gamma_1} \\
+{q_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} & = & {q_h^{\ast}}_{\gamma_0} {q_h^{\ast}}_{\gamma_1}
+\end{eqnarray*}
 where $\gamma = \langle \gamma_0, \gamma_1 \rangle$ is diploid genome.
 
 For a genome length $\ell$, same initial population (calculated as described in (\ref{InitPopOsc})) was used for infinite population and all 
@@ -219,7 +228,7 @@ Then set
 
 $\chi$ distribution was treated with $\epsilon$ such that
 \[
-\chi_i = (1-\epsilon) \chi ; i = \{1, 2,.., 2^{\ell}-1\} \\
+\chi_i = (1-\epsilon) \chi ; i = \{1, 2,.., 2^{\ell}-1\} 
 \]
 So that 
 \[
@@ -231,9 +240,9 @@ Then $j$ is chosen where $\chi_j = 0$ and set $chi_j = \epsilon$. \newline
 Simulations were run again with the violations in (\ref{OscCond}) implemented. Genome lengths $\ell = {2, 4, 6, 8, 10, 12, 14}$ were considered. 
 Different finite hapliod population sizes $N = \{1N_0, 2N_0,.., 20N_0\}$ were considered. Finite diploid population was set as 
 squared size of haploid population $N^2$.\newline
-Let ${p1}_h^{\ast}$ and ${q1}_h1^{\ast}$ be haploid evolutionary limits with violation and ${p1}_d^{\ast}$ and ${{q1}_d^{\ast}$ be diploid 
+Let ${p1}_h^{\ast}$ and ${q1}_h1^{\ast}$ be haploid evolutionary limits with violation and ${p1}_d^{\ast}$ and ${q1}_d^{\ast}$ be diploid 
 evolutionary limits with violation. The distances of ${p}^n$ and $s^n$ to ${p1}_h^{\ast}$ and ${q1}_h1^{\ast}$ were plotted and the distances of 
-$q^n$ and $f^n$ to ${p1}_d^{\ast}$ and ${{q1}_d^{\ast}$ were plotted.
+$q^n$ and $f^n$ to ${p1}_d^{\ast}$ and ${q1}_d^{\ast}$ were plotted.
 
 
 

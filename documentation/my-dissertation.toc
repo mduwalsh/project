@@ -20,10 +20,11 @@
 \contentsline {chapter}{\numberline {5}Evolutionary Limits}{24}{chapter.5}
 \contentsline {section}{\numberline {5.1}Limits}{24}{section.5.1}
 \contentsline {section}{\numberline {5.2}Computation of Mutation and Crossover Distribution}{26}{section.5.2}
-\contentsline {section}{\numberline {5.3}Oscillation}{27}{section.5.3}
-\contentsline {section}{\numberline {5.4}Violation}{28}{section.5.4}
-\contentsline {chapter}{Bibliography}{29}{section*.18}
-\contentsline {chapter}{\numberline {A}Summary of Equations}{32}{appendix.A}
-\contentsline {section}{\numberline {A.1}Cartesian}{32}{section.A.1}
-\contentsline {section}{\numberline {A.2}Cylindrical}{32}{section.A.2}
-\contentsline {chapter}{Vita}{33}{section*.20}
+\contentsline {section}{\numberline {5.3}Initial Population}{28}{section.5.3}
+\contentsline {section}{\numberline {5.4}Oscillation}{30}{section.5.4}
+\contentsline {section}{\numberline {5.5}Violation}{31}{section.5.5}
+\contentsline {chapter}{Bibliography}{33}{section*.19}
+\contentsline {chapter}{\numberline {A}Summary of Equations}{36}{appendix.A}
+\contentsline {section}{\numberline {A.1}Cartesian}{36}{section.A.1}
+\contentsline {section}{\numberline {A.2}Cylindrical}{36}{section.A.2}
+\contentsline {chapter}{Vita}{37}{section*.21}

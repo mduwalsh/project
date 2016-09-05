@@ -3,18 +3,18 @@ This chapter inspects evolutionary limits predicted by Vose using infinite popul
 
 \section{Limits}
 \label{Limits}
-Vose states under mild assumptions on mutations (considered later), populations converge under repeated application of $\mathcal{M}$. Vose mentions that in general case, periodic orbits are possible but populations converge under repeated application of $\mathcal{M}^2$ and limits $p^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n}(p)$ and $q^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n+1}(q)$ exist.
+Vose states under mild assumptions on mutations (considered later), populations converge under repeated application of $\mathcal{M}$. Vose mentions that in general case, periodic orbits are possible but populations converge under repeated application of $\mathcal{M}^2$ and limits ${\bm p}^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n}({\bm p})$ and ${\bm q}^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n+1}({\bm q})$ exist.
 
 Following Vose's theorem, let $S_g = g \mathcal{R} / \{\textbf{0}, g\}$, and let $|g|$ be the number of non zero bits in $g$.
 \[
-{{\widehat{p}}_g}^{\prime}  = \begin{cases}
+{{\widehat{{\bm p}}}_g}^{\prime}  = \begin{cases}
     2^{\ell /2}  & \text{if $g = 0$}\\
-    x_g \widehat{p}_g + y_g(\widehat{p}_g) & \text{otherwise}
+    x_g \widehat{{\bm p}}_g + y_g(\widehat{{\bm p}}_g) & \text{otherwise}
   \end{cases}
 \]
 where,
 \[
-x_g = 2\widehat{M}_{g,0},  \hspace*{1cm} y_g(z) = 2^{\ell /2} \sum_{i \in S_g} z_i z_{i+g} \widehat{M}_{i,i+g}.
+x_g = 2\widehat{\mathcal{M}}_{g,0},  \hspace*{1cm} y_g(z) = 2^{\ell /2} \sum_{i \in S_g} z_i z_{i+g} \widehat{\mathcal{M}}_{i,i+g}.
 \]
 
 Moreover, 
@@ -27,62 +27,62 @@ Moreover,
 With above notations, limits can be expressed in Walsh basis by recursive equations 
 \begin{equation}
 \label{lt1}
-\widehat{p^{\ast}}_g  = \begin{cases}
-    (x_g y_g(\widehat{p^{\ast}}) + y_g(\widehat{q^{\ast}}))/(1-x_g^2)  & \text{if $|x_g| < 0$}\\
+\widehat{{\bm p}^{\ast}}_g  = \begin{cases}
+    (x_g y_g(\widehat{{\bm p}^{\ast}}) + y_g(\widehat{{\bm q}^{\ast}}))/(1-x_g^2)  & \text{if $|x_g| < 0$}\\
     \widehat{p}_g  & \text{otherwise}
   \end{cases}
 \end{equation}
 \begin{equation}
 \label{lt2}
-\widehat{q^{\ast}}_g  = \begin{cases}
-    (x_g y_g(\widehat{q^{\ast}}) + y_g(\widehat{p^{\ast}}))/(1-x_g^2)  & \text{if $|x_g| < 0$}\\
-    \widehat{\mathcal{M}(p)_g}  & \text{otherwise}
+\widehat{{\bm q}^{\ast}}_g  = \begin{cases}
+    (x_g y_g(\widehat{{\bm q}^{\ast}}) + y_g(\widehat{{\bm p}^{\ast}}))/(1-x_g^2)  & \text{if $|x_g| < 0$}\\
+    \widehat{\mathcal{M}({\bm p})_g}  & \text{otherwise}
   \end{cases}
 \end{equation}
 
-If $x_g \neq −1$ for all $g$, then $p^\ast = q^\ast = lim_{n \rightarrow \infty} \mathcal{M}(p)$ is the limit of mixing. In other cases, 
-mixing converges to a periodic orbit oscillating between $p^\ast$ and $q^\ast = \mathcal{M}(p^\ast)$.
+If $x_g \neq −1$ for all $g$, then ${\bm p}^\ast = {\bm q}^\ast = lim_{n \rightarrow \infty} \mathcal{M}({\bm p})$ is the limit of mixing. In other cases, 
+mixing converges to a periodic orbit oscillating between ${\bm p}^\ast$ and ${\bm q}^\ast = \mathcal{M}({\bm p}^\ast)$.
 
-Limits $\widehat{p^{\ast}}_g$ and $\widehat{q^{\ast}_g}$ can be computed considering $g$th components in order of increasing $|g|$ and 
-performing complete indcution on $|g|$. If $|g| = 0$ then $g = 0$. Since $\widehat{p^\ast}_0 = 2^{-\ell/2}$ for all distributions $p$, 
-the $\textbf{0}$the components of the sequence $\mathcal{M}^n(p)$ are identical in the Walsh basis. Since $|x_0| = 2$ ($x_g = 2\widehat{M}_{g,0}$ 
-and $\widehat{M}_{0,0} = 1$), $\widehat{p^{\ast}}_g = \widehat{q^{\ast}}_g = 2^{-\ell/2}$. Next, consider $|g| = 1$. $y_g = 0$ for $|g| = 0$ 
+Limits $\widehat{{\bm p}^{\ast}}_g$ and $\widehat{{\bm q}^{\ast}_g}$ can be computed considering $g$th components in order of increasing $|g|$ and 
+performing complete indcution on $|g|$. If $|g| = 0$ then $g = 0$. Since $\widehat{{\bm p}^\ast}_0 = 2^{-\ell/2}$ for all distributions ${\bm p}$, 
+the $\textbf{0}$the components of the sequence $\mathcal{M}^n({\bm p})$ are identical in the Walsh basis. Since $|x_0| = 2$ ($x_g = 2\widehat{\mathcal{M}}_{g,0}$ 
+and $\widehat{\mathcal{M}}_{0,0} = 1$), $\widehat{{\bm p}^{\ast}}_g = \widehat{{\bm q}^{\ast}}_g = 2^{-\ell/2}$. Next, consider $|g| = 1$. $y_g = 0$ for $|g| = 0$ 
 (noted from above). These two cases $|g| < 2|$ are base cases for complete induction on $|g|$. The inductive hypothesis given by Vose is that 
-for $|k| < |g|$, the $k$th component of $\mathcal{M}^n(p)$ in the Walsh basis converges to $\widehat{p^{\ast}}_k$ or $\widehat{q^{\ast}}_k$ as 
+for $|k| < |g|$, the $k$th component of $\mathcal{M}^n({\bm p})$ in the Walsh basis converges to $\widehat{{\bm p}^{\ast}}_k$ or $\widehat{{\bm q}^{\ast}}_k$ as 
 $n \rightarrow \infty$ through even or odd values respectively, and if $x_k \neq -1$ for all such $k$, then 
-$\widehat{p^{\ast}}_k$ = $\widehat{q^{\ast}}_k$. And computation of $y_g(z)$ involves only the $k$th components of $z$ where $|k| < |g|$. 
+$\widehat{{\bm p}^{\ast}}_k$ = $\widehat{{\bm q}^{\ast}}_k$. And computation of $y_g(z)$ involves only the $k$th components of $z$ where $|k| < |g|$. 
 \newline 
 Vose gives a necessary and sufficient condition for the sequence
 \[
-p, \mathcal{M}(p), \mathcal{M}^2(p),...
+p, \mathcal{M}({\bm p}), \mathcal{M}^2({\bm p}),...
 \]
 to converge to a periodic orbit as that for some g
 \begin{equation}
 \label{OscCond}
--1 = \sum \limits_{j} (-1)^{g^T j} \mu_j = - \sum \limits_{k \in \bar{g}\mathcal{R}} \chi_{k+g} + \chi_k
+-1 = \sum \limits_{j} (-1)^{g^T j} \bm{\mu}_j = - \sum \limits_{k \in \bar{g}\mathcal{R}} \bm{\chi}_{k+g} + \bm{\chi}_k
 \end{equation}
  
 \section{Computation of Mutation and Crossover Distribution}
 Following algorithm installs values of mutation and crossover distributions that satisfies condition described by equation (\ref{OscCond}) for evolutionary sequence to converge in periodic orbits.
-Let $\mu_j$ and $\chi_k$ represent mutation and crossover distributions respectively where $j,k \in \mathcal{R}$ and $U01()$ be random number between $0$ and $1$. For any $g$ where $g \in \mathcal{R}$ and $g \neq 0$.
+Let $\bm{\mu}_j$ and $\bm{\chi}_k$ represent mutation and crossover distributions respectively where $j,k \in \mathcal{R}$ and $U01()$ be random number between $0$ and $1$. For any $g$ where $g \in \mathcal{R}$ and $g \neq 0$.
 For all $j \in \mathcal{R}$,
 \[
-\mu_j = \begin{cases}
+\bm{\mu}_j = \begin{cases}
     U01() & \text{if $(g^T\cdot j)$ is odd}.\\
     0 & \text{otherwise}.
   \end{cases}
 \]
 
-This installs some random values in some specific positions in $\mu$ distribution array according to value of $g$ and others set to $0$. 
-Normalization of $\mu_j$ gives values for $\mu$ distribution
+This installs some random values in some specific positions in $\bm{\mu}$ distribution array according to value of $g$ and others set to $0$. 
+Normalization of $\bm{\mu}_j$ gives values for $\bm{\mu}$ distribution
 \[
-\mu_j = \mu_j / \sum \limits_{j \in \mathcal{R} } \mu_j
+\bm{\mu}_j = \bm{\mu}_j / \sum \limits_{j \in \mathcal{R} } \bm{\mu}_j
 \]
 such that 
 \[
-\sum \limits_{j \in \mathcal{R} } \mu_j = 1.
+\sum \limits_{j \in \mathcal{R} } \bm{\mu}_j = 1.
 \]
-The values $\mu_j$ satisfy condition (\ref{OscCond}) for $\mu$ distribution.
+The values $\bm{\mu}_j$ satisfy condition (\ref{OscCond}) for $\bm{\mu}$ distribution.
 
 
 Condition $k \in \bar{g} \mathcal{R}$ in equation (\ref{OscCond}) can be simplified for computation as
@@ -98,24 +98,24 @@ Logical bitwise ANDing both sides by $\bar{g}$,
 
 For all $k \in \mathcal{R}$,
 \begin{eqnarray*}
-\chi_k & = & U01() \\
-\chi_{k+g} & = & U01() 
+\bm{\chi}_k & = & U01() \\
+\bm{\chi}_{k+g} & = & U01() 
 \end{eqnarray*}
 where $k \in \bar{g} \mathcal{R}$, and
 \[
-\chi_k = 0
+\bm{\chi}_k = 0
 \]
 for other values of $k$. \newline
 
-This installs some random values in some specific positions in array of $\chi$ according to value of $g$ and others set to $0$. Normalization of $\chi_k$ gives values for $chi$ distribution 
+This installs some random values in some specific positions in array of $\bm{\chi}$ according to value of $g$ and others set to $0$. Normalization of $\bm{\chi}_k$ gives values for $chi$ distribution 
 \[
-\chi_k = \chi_k/\sum\limits_{k \in \mathcal{R}} \chi_k
+\bm{\chi}_k = \bm{\chi}_k/\sum\limits_{k \in \mathcal{R}} \bm{\chi}_k
 \]
 such that 
 \[
-\sum\limits_{k \in \mathcal{R}} \chi_k = 1.
+\sum\limits_{k \in \mathcal{R}} \bm{\chi}_k = 1.
 \]
-The values $\chi_k$ satisfy condition (\ref{OscCond}) for $\chi$ distribution.
+The values $\bm{\chi}_k$ satisfy condition (\ref{OscCond}) for $\bm{\chi}$ distribution.
 
 \section{Initial Population}
 \label{InitPopOsc}
@@ -128,74 +128,74 @@ The values $\chi_k$ satisfy condition (\ref{OscCond}) for $\chi$ distribution.
 \end{center}
 \end{figure}
 
-Let finite haploid population $s^n$, finite diploid population $f^n$, infinite haploid population $p^n$ and infinite haploid population $q^n$ be considered with initial population $s^0$, $f^0$,
-$p^0$, $q^0$ respectively. To investigate oscillating behavior of infinite population evolutionary limits and finite population, same initial population is desired. 
+Let finite haploid population $\bm{s}^n$, finite diploid population $\bm{f}^n$, infinite haploid population $\bm{p}^n$ and infinite haploid population $\bm{q}^n$ be considered with initial population $\bm{s}^0$, $\bm{f}^0$,
+$\bm{p}^0$, $\bm{q}^0$ respectively. To investigate oscillating behavior of infinite population evolutionary limits and finite population, same initial population is desired. 
 
-For a genome length $\ell$, let $x = 2^\ell$ be number of possible strings in finite haploid population array $t$ of population size $N$. Possible strings $t_i$ are ${0, 1,.., x-1}$ where $i = 0, 1,.., N-1$. An arbitrary vector $r$ of size $x$ was considered where
+For a genome length $\ell$, let $x = 2^\ell$ be number of possible strings in finite haploid population array $\bm{t}$ of population size $N$. Possible strings $\bm{t}_i$ are ${0, 1,.., x-1}$ where $i = 0, 1,.., N-1$. An arbitrary vector $\bm{f}$ of size $x$ was considered where
 \[
-r_i = U01(); {i = 0, 1,.., x-1}
+\bm{r}_i = U01(); \tabspace {i = 0, 1,.., x-1}
 \]
 and U01() is random number between 0 and 1.
-Let $t$ represent finite haploid population strings array.
+Let $\bm{t}$ represent finite haploid population strings array.
 \[
-t_j = randp(r) ; {j = 0,.., N-1}
+\bm{t}_j = randp(r) ; \tabspace {j = 0,.., N-1}
 \]
-where $t_j$ is $j^{th}$ population member and $randp(r)$ returns random index $i$ in array $r$ with probability $r_i$.
+where $\bm{t}_j$ is $j^{th}$ population member and $randp(\bm{r})$ returns random index $i$ in array $\bm{r}$ with probability $\bm{r}_i$.
 
-Let $c_i$ represent count of haploid member $i$ in population $t$ given by
+Let $\bm{c}_i$ represent count of haploid member $i$ in population $\bm{t}$ given by
 \[
-c_i = \sum \limits_{j=0}^{N-1} [t_j = i]  \nudge; \nudge {i = 0,.., x-1}  and  [..]  is  Iverson bracket
-\]
-
-Then infinite population vector $p$ is calculated as
-\[
-p_i = \frac{c_i}{ \sum \limits_{k=0}^{x-1} c_k }
-\]
-where $i = 0,.., x-1$ and $\sum \limits_{k=0}^{x-1} c_k = N$.
-
-This $p$ is randomly generated initial infinite haploid population vector ($p^0$) which corresponds to diploid infinite population vector $q$ 
-and finite population vectors $s$ and $f$.
-
-Finite haploid population members $t_j$s are generated again to match finite haploid population $s^0$ with infinite haploid population $p^0$.
-\[
-c_i = N \cdot p_i 
-\]
-\[
-\sum \limits_{j=0}^{N-1} [t_j = i] = c_i  \nudge; \nudge {i = 0,.., x-1} 
+\bm{c}_i = \sum \limits_{j=0}^{N-1} [\bm{t}_j = i]  \nudge; \tabspace  {i = 0,.., x-1} \text{ and  [..]  is  Iverson bracket.}
 \]
 
-Initial infinite diploid population $q_0$ is calculated corresponding to initial haploid population $p^0$ as
+Then infinite population vector $\bm{p}$ is calculated as
 \[
-q_{i,j} = p_i \cdot p_j  \nudge; \nudge {i = 0,..,x-1; j = 0,..,x-1}.
+\bm{p}_i = \frac{\bm{c}_i}{ \sum \limits_{k=0}^{x-1} \bm{c}_k }
+\]
+where $i = 0,.., x-1$ and $\sum \limits_{k=0}^{x-1} \bm{c}_k = N$.
+
+This $\bm{p}$ is randomly generated initial infinite haploid population vector ($\bm{p}^0$) which corresponds to diploid infinite population vector $\bm{q}$ 
+and finite population vectors $\bm{s}$ and $\bm{f}$.
+
+Finite haploid population members $\bm{t}_j$s are generated again to match finite haploid population $\bm{s}^0$ with infinite haploid population $\bm{p}^0$.
+\[
+\bm{c}_i = N \cdot \bm{p}_i 
+\]
+\[
+\sum \limits_{j=0}^{N-1} [\bm{t}_j = i] = \bm{c}_i  \nudge; \tabspace  {i = 0,.., x-1} 
 \]
 
-Let $v$ represent finite diploid population member array of size $N^2$ and $d_{i,j}$ represent count of diploid member $\langle i,j \rangle$ in $v$. Then $v$ can be filled with population member to match initial population vector $p$ generating diploid members such that
+Initial infinite diploid population $\bm{q}_0$ is calculated corresponding to initial haploid population $\bm{p}^0$ as
+\[
+\bm{q}_{i,j} = \bm{p}_i \cdot \bm{p}_j  \nudge; \tabspace  {i = 0,..,x-1; \tabspace j = 0,..,x-1}.
+\]
+
+Let $\bm{v}$ represent finite diploid population member array of size $N^2$ and $\bm{d}_{i,j}$ represent count of diploid member $\langle i,j \rangle$ in $\bm{v}$. Then $\bm{v}$ can be filled with population member to match initial population vector $\bm{p}$ generating diploid members such that
 \begin{eqnarray*}
-d_{i,j} = N \cdot p_i \cdot N \cdot p_j 
-\sum \limits_{k=0}^{N^2-1} [ v_k = \langle i,j \rangle ] = d_{i,j}
+\bm{d}_{i,j} & = & N \cdot \bm{p}_i \cdot N \cdot \bm{p}_j  \\
+\sum \limits_{k=0}^{N^2-1} [ \bm{v}_k = \langle i,j \rangle ] & = & \bm{d}_{i,j}
 \end{eqnarray*}
 
-Finite diploid population vector $f$ can be obtained from finite diploid population member array $v$  using
+Finite diploid population vector $\bm{f}$ can be obtained from finite diploid population member array $\bm{v}$  using
 \[
-f_{i,j} = \frac{d_{i,j}}{\sum \limits_{k=0}^{x-1} \sum \limits_{h=0}^{x-1} d_{k,h}}
+f_{i,j} = \frac{\bm{d}_{i,j}}{\sum \limits_{k=0}^{x-1} \sum \limits_{h=0}^{x-1} \bm{d}_{k,h}}
 \]
-where $i = 0,.., x-1$, $h = 0,.., x-1$ and $\sum \limits_{k=0}^{x-1} \sum \limits_{h=0}^{x-1} d_{k,h} = N^2$.
+where $i = 0,.., x-1$, $h = 0,.., x-1$ and $\sum \limits_{k=0}^{x-1} \sum \limits_{h=0}^{x-1} \bm{d}_{k,h} = N^2$.
 
-This initial infinite haploid population vector $p^0$ corresponds to initial infinite diploid population vector $q^0$, initial finite 
+This initial infinite haploid population vector $\bm{p}^0$ corresponds to initial infinite diploid population vector $\bm{q}^0$, initial finite 
 haploid population vector with population size $N$ and initial finite diploid population vector $N^2$ with population size $N^2$.
 
 \section{Oscillation}
 \label{Oscillation}
 
-Equations (\ref{lt1}) and (\ref{lt2}) were implemented with crossover distribution $\chi$ and mutation distribution $\mu$ satisfying 
-condition (\ref{OscCond}) to investigate oscillating behavior of predicted infinite population evolutionary limits $p^{\ast} and q^{\ast}$ 
+Equations (\ref{lt1}) and (\ref{lt2}) were implemented with crossover distribution $\bm{\chi}$ and mutation distribution $\bm{\mu}$ satisfying 
+condition (\ref{OscCond}) to investigate oscillating behavior of predicted infinite population evolutionary limits $\bm{p}^{\ast}$ and $\bm{q}^{\ast}$ 
 and finite population under no selective pressure.
 
-Infinite haploid population evolutionary limits $p_h^{\ast}$ and $q_h^{\ast}$ were computed using equations (\ref{lt1}) and (\ref{lt2}). 
-Infinite diploid population evolutionary limits $p_d^{\ast}$ and $q_d^{\ast}$ as
+Infinite haploid population evolutionary limits $\bm{p}_h^{\ast}$ and $\bm{q}_h^{\ast}$ were computed using equations (\ref{lt1}) and (\ref{lt2}). 
+Infinite diploid population evolutionary limits $\bm{p}_d^{\ast}$ and $\bm{q}_d^{\ast}$ as
 \begin{eqnarray*}
-{p_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} & = & {p_h^{\ast}}_{\gamma_0} {p_h^{\ast}}_{\gamma_1} \\
-{q_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} & = & {q_h^{\ast}}_{\gamma_0} {q_h^{\ast}}_{\gamma_1}
+{\bm{p}_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} & = & {\bm{p}_h^{\ast}}_{\gamma_0} {\bm{p}_h^{\ast}}_{\gamma_1} \\
+{\bm{q}_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} & = & {\bm{q}_h^{\ast}}_{\gamma_0} {\bm{q}_h^{\ast}}_{\gamma_1}
 \end{eqnarray*}
 where $\gamma = \langle \gamma_0, \gamma_1 \rangle$ is diploid genome.
 
@@ -204,45 +204,45 @@ sizes of finite population conisdered.
 Genome lengths $\ell = {2, 4, 6, 8, 10, 12, 14}$ were used. Minimum population size of $N_0 = 64$ was considered for finite haploid case and 
 different population sizes $N = \{1N_0, 2N_0,.., 20N_0\}$ were considered. Finite diploid population was set as squared size of haploid 
 population $N^2$.
-The distances of $p^n$ and $s^n$ to haploid evolutionary limits $p_h^{\ast}$ and $q_h^{\ast}$ were plotted and the distances of $q^n$ and 
-$f^n$ to diploid evolutionary limits $p_d^{\ast}$ and $q_d^{\ast}$ were plotted.
+The distances of $\bm{p}^n$ and $\bm{s}^n$ to haploid evolutionary limits $\bm{p}_h^{\ast}$ and $\bm{q}_h^{\ast}$ were plotted and the distances of $\bm{q}^n$ and 
+$\bm{f}^n$ to diploid evolutionary limits $\bm{p}_d^{\ast}$ and $\bm{q}_d^{\ast}$ were plotted.
 
 
 \section{Violation}
-The results showed when $\chi$ and $\mu$ distributions satisfies (\ref{OscCond}), oscillation occurs in both infinite and finite population. 
-Error $\epsilon$ was introduced to $\mu$ distribution and $\chi$ distribution such that (\ref{OscCond}) did not satisfy anymore and 
-$x_g \neq −1$ for all $g$ ($x_g$ and $g$ defined in \ref{Limits}) so that $p^\ast = q^\ast$.
+The results showed when $\bm{\chi}$ and $\bm{\mu}$ distributions satisfies (\ref{OscCond}), oscillation occurs in both infinite and finite population. 
+Error $\epsilon$ was introduced to $\bm{\mu}$ distribution and $\bm{\chi}$ distribution such that (\ref{OscCond}) did not satisfy anymore and 
+$x_g \neq −1$ for all $g$ ($x_g$ and $g$ defined in \ref{Limits}) so that $\bm{p}^\ast = \bm{q}^\ast$.
 
-$\mu$ distribution was treated with $\epsilon$ such that
+$\bm{\mu}$ distribution was treated with $\epsilon$ such that
 \[
-\mu_i = (1-\epsilon) \mu_i ; i = \{0, 1, 2,.., 2^{\ell}-1\}.
+\bm{\mu}_i = (1-\epsilon) \bm{\mu}_i \nudge; \tabspace i = \{0, 1, 2,.., 2^{\ell}-1\}.
 \]
-So that sum of $\mu$ distribution becomes, 
+So that sum of $\bm{\mu}$ distribution becomes, 
 \[
-1-\epsilon = \sum \limits_{i=0}^{2^{\ell}-1} \mu_i
+1-\epsilon = \sum \limits_{i=0}^{2^{\ell}-1} \bm{\mu}_i
 \]
 Then set
 \[
-\mu_0 = \epsilon
+\bm{\mu}_0 = \epsilon
 \]
 
-$\chi$ distribution was treated with $\epsilon$ such that
+$\bm{\chi}$ distribution was treated with $\epsilon$ such that
 \[
-\chi_i = (1-\epsilon) \chi ; i = \{1, 2,.., 2^{\ell}-1\} 
+\bm{\chi}_i = (1-\epsilon) \bm{\chi} ; \tabspace i = \{1, 2,.., 2^{\ell}-1\} 
 \]
 So that 
 \[
-\chi_k + \chi_{k+ g} = 1-\epsilon ; g is defined in \ref{Limits}
+\bm{\chi}_k + \bm{\chi}_{i+g} = 1-\epsilon ; \tabspace g \text{ is defined in  section } \ref{Limits}
 \]
 
-Then $j$ is chosen where $\chi_j = 0$ and set $chi_j = \epsilon$. \newline
+Then $j$ is chosen where $\bm{\chi}_j = 0$ and set $\bm{\chi}_j = \epsilon$. \newline
 
 Simulations were run again with the violations in (\ref{OscCond}) implemented. Genome lengths $\ell = {2, 4, 6, 8, 10, 12, 14}$ were considered. 
 Different finite hapliod population sizes $N = \{1N_0, 2N_0,.., 20N_0\}$ were considered. Finite diploid population was set as 
 squared size of haploid population $N^2$.\newline
-Let ${p1}_h^{\ast}$ and ${q1}_h1^{\ast}$ be haploid evolutionary limits with violation and ${p1}_d^{\ast}$ and ${q1}_d^{\ast}$ be diploid 
-evolutionary limits with violation. The distances of ${p}^n$ and $s^n$ to ${p1}_h^{\ast}$ and ${q1}_h1^{\ast}$ were plotted and the distances of 
-$q^n$ and $f^n$ to ${p1}_d^{\ast}$ and ${q1}_d^{\ast}$ were plotted.
+Let ${\bm{p}1}_h^{\ast}$ and ${\bm{q}1}_h1^{\ast}$ be haploid evolutionary limits with violation and ${\bm{p}1}_d^{\ast}$ and ${\bm{q}1}_d^{\ast}$ be diploid 
+evolutionary limits with violation. The distances of ${p}^n$ and $\bm{s}^n$ to ${\bm{p}1}_h^{\ast}$ and ${\bm{q}1}_h1^{\ast}$ were plotted and the distances of 
+$\bm{q}^n$ and $\bm{f}^n$ to ${\bm{p}1}_d^{\ast}$ and ${\bm{q}1}_d^{\ast}$ were plotted.
 
 
 

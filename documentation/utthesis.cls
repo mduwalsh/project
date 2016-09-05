@@ -368,6 +368,7 @@
 \newcommand{\proof}{\mbox{ }\\[-.9in] \begin{quote} {\em Proof sketch\/:} }
 \newcommand{\qed}{\hfill $\Box$ \end{quote}}
 \newcommand{\pushright}{\hskip \textwidth minus \textwidth}
+\newcommand{\tabspace}{\hspace{30pt}}
 
 \makeatletter
 \newcommand{\customlabel}[2]{%

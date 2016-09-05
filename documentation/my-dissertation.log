@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  4 SEP 2016 17:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  5 SEP 2016 13:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -768,12 +768,12 @@ File: figures/eps/initialpop.eps Graphic file (type eps)
 Missing character: There is no â in font cmr12!
 Missing character: There is no ˆ in font cmr12!
 Missing character: There is no ’ in font cmr12!
-
+ [31]
 Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
  []
 
-[31]) [32]
+) [32]
 :<-
 :<+ chapters/chapter-6.tex
 \openout2 = `chapters/chapter-6.aux'.
@@ -839,23 +839,17 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 131.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 131.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
 (rerunfilecheck)             Checksum: 651A51A92BDFE7CD501D2A0DB794F593;2267.
-
-
-Package rerunfilecheck Warning: File `my-dissertation.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `my-dissertation.brf':
-(rerunfilecheck)             Before: 73A696A328CF04996E48DF1A1B3FADF9;1059
-(rerunfilecheck)             After:  556DBAE694664BA94B0D15CA2CD96381;1110.
+Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
+(rerunfilecheck)             Checksum: 556DBAE694664BA94B0D15CA2CD96381;1110.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 131.
  ) 
 Here is how much of TeX's memory you used:
- 8779 strings out of 495029
- 129640 string characters out of 6181522
- 233364 words of memory out of 5000000
- 11742 multiletter control sequences out of 15000+600000
+ 8780 strings out of 495029
+ 129648 string characters out of 6181522
+ 233373 words of memory out of 5000000
+ 11743 multiletter control sequences out of 15000+600000
  18573 words of font info for 71 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  39i,13n,43p,768b,365s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (49 pages, 165240 bytes).
+Output written on my-dissertation.dvi (49 pages, 165576 bytes).

@@ -81,4 +81,120 @@ distance computation described in the previous section reduces the
 number of terms involved by a factor of
 $2^{28}/(2^{14} + 2^{N}) \; > \; 252$.
 
+\section{Convergence}
+
+This section presents a cursory numerical investigation of the
+convergence of finite diploid population short-term behaviour to that
+of the infinite diploid population model as described in section 2
+(the underlying haploid model for the infinite population case is
+described in section \ref{Model}).
+
+Equations (\ref{model1}), (\ref{Mhat}),
+(\ref{model5}), (\ref{d3}) were employed to illustrate efficient
+computation of the distance
+\[
+d \; = \; \|{\bm f}^n - {\bm q}^n \nudge \|
+\]
+where ${\bm f}^n$ and ${\bm q}^n$ represent finite and infinite diploid
+populations at generation $n \in \{1,2,4,8,16,32,64,128\}$
+respectively, beginning from a random initial population (${\bm f}^0 =
+{\bm q}^0$). Genome lengths $\ell \in \{4,6,8,10,12,14\}$ and population
+sizes $N = 2^i$ for integer $0 \le i \le 20$ were considered.  The
+crossover distribution ${\bm \chi}$ corresponds to independent assortment of
+bits, and the mutation distribution ${\bm \mu}$ corresponds to independent
+bit mutation probability $0.001$,
+
+\[
+{\bm \chi}_m \; = \; 2^{-\ell}, \;\;\;\;\; {\bm \mu}_g \; = \; (0.001)^{{\bf 1}^{\rm T}
+  g}(0.999)^{\ell - {\bf 1}^{\rm T} g}
+\]
+(subscripts above on the left hand side of an equality are interpreted
+on the right hand side of the equality as column vectors in
+$\mathbb{R}^{\ell}$). The finite population case is computed using the
+itemized procedural definition given in section \ref{Model}; the transmission
+function (\ref{transmission}) corresponds to ${\bm \mu}$ and ${\bm
+  \chi}$ above (bits mutate independently and are freely assorted).
+
+\begin{figure}[H]
+\begin{center}
+\subfloat[$\ell = 4$.]{
+\resizebox*{6.5cm}{!}{\includegraphics{figures/eps/surf/b4.eps}}}\hspace{5pt}
+\subfloat[$\ell = 6$.]{
+\resizebox*{6.5cm}{!}{\includegraphics{figures/eps/surf/b6.eps}}}
+\end{center}
+  
+\begin{center}
+\subfloat[$\ell = 8$.]{
+\resizebox*{6.5cm}{!}{\includegraphics{figures/eps/surf/b8.eps}}}\hspace{5pt}
+\subfloat[$\ell = 10$.]{
+\resizebox*{6.5cm}{!}{\includegraphics{figures/eps/surf/b10.eps}}}
+\end{center}
+
+\begin{center}
+\subfloat[$\ell = 12$.]{
+\resizebox*{6.5cm}{!}{\includegraphics{figures/eps/surf/b12.eps}}}\hspace{5pt}
+\subfloat[$\ell = 14$.]{
+\resizebox*{6.5cm}{!}{\includegraphics{figures/eps/surf/b14.eps}}}
+\caption{\textbf{Convergence of finite population behaviour:} $d$ is
+  distance between finite population ${\bm f}^n$ and infinite
+  population ${\bm q}^n$ at generation $n$, population size $N$, for
+  genome length $\ell$ (bits).}
+\label{convergence}
+\end{center}
+\end{figure}
+
+The data, presented in six surface graphs above and organized by
+genome length, shows a near linear dependence of $\log d$ on $\log N$.
+As expected, the graphs show smoothing with increasing genome length
+(the computation of $d$ involves averaging over $\ell$ components),
+and also with increased population size (as explained in
+\cite{Vose1999}, the initial transient of a finite haploid population
+trajectory converges as $N \rightarrow \infty$ to the corresponding
+infinite population model).
+
+%\newpage
+  Of particular interest is the linear trend exhibited above.  The
+  slope $m$ and intercept $b$ of the regression line
+  \begin{equation} \label{regresion}
+  \log d = m \log N + b
+  \end{equation}
+was computed using the data above; each was plotted against genome
+length $\ell$ and organized by generation $n$. The resulting
+graphs are displayed below.
+
+\begin{figure}[H]
+\begin{center}
+\subfloat[Slope $m$, genome length $\ell$.]{
+\resizebox*{7cm}{!}{\includegraphics{figures/eps/slope/m.eps}}}\hspace{5pt}
+\subfloat[Intercept $b$, genome length $\ell$.]{
+\resizebox*{7cm}{!}{\includegraphics{figures/eps/slope/b.eps}}}
+\caption{{\bf {Regression parameters:}} multi-plot for generation
+    $n \in \{1,2,4,8,16,32,64,128\}$.}
+\label{regression-parameters}
+\end{center}
+\end{figure}
+
+Taking the exponential of the regression line (\ref{regresion}) yields
+the estimate
+$d \approx N^m e^b $.
+
+Slopes of the regression lines shown in {\bf Figure \ref{regression-parameters}} are
+approximately $-0.5$, indicating
+\begin{equation}
+d \; \approx \; k/\sqrt{N}
+\end{equation}
+which agrees with the expected rate of convergence for the single-step
+haploid case \cite{Vose1999b}; the distance is inversely proportional
+to square root of population size.  The consistent convergence rate
+across multiple generations is somewhat surprising, simulation
+results above indicate it may persist to generation $n = 128$.
+
+The intercept graphs above show the constant of proportionality $k =
+e^b$ decreases monotonically with genome length $\ell$, and increases
+monotonically with generation $n$.  The increase in $k$ for larger $n$
+seems to be a manifestation of the growing nonlinearity uniformly
+exhibited by the plots in {\bf Figure \ref{convergence}} as $n$ increases.  It seems
+likely that the nonlinearity results from genetic drift experienced by
+finite populations \cite{CrowKimura}.
+
 

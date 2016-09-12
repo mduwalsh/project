@@ -2,6 +2,85 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \textbf {Convergence of finite population behaviour:} $d$ is distance between finite population ${\bm {f}}^n$ and infinite population ${\bm {q}}^n$ at generation $n$, population size $N$, for genome length $\ell $ (bits).\relax }}{25}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\ell = 4$.}}}{25}{subfigure.1.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\ell = 6$.}}}{25}{subfigure.1.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\ell = 8$.}}}{25}{subfigure.1.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$\ell = 10$.}}}{25}{subfigure.1.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$\ell = 12$.}}}{25}{subfigure.1.5}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {$\ell = 14$.}}}{25}{subfigure.1.6}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces {\bf {Regression parameters:}} multi-plot for generation $n \in \{1,2,4,8,16,32,64,128\}$.\relax }}{26}{figure.caption.19}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Slope $m$, genome length $\ell $.}}}{26}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Intercept $b$, genome length $\ell $.}}}{26}{subfigure.2.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces \textbf {Initial population computation:} \relax }}{28}{figure.caption.18}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \textbf {Initial population computation:} \relax }}{32}{figure.caption.20}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \textbf {Infinite and finite population oscillation behavior for genome length $\ell = 4$ (bits):} $d$ is distance between infinite or finite population ${\bm {q}}^n$ and infinite population limits ${{\bm {p}}^\ast }$ and ${{\bm {q}}^{\ast }}$ for $g$ generations and finite population size $N$.\relax }}{36}{figure.caption.21}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 5pt}}{36}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {\relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {infinite diploid}}}}{36}{subfigure.2.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$N = 64$}}}{36}{subfigure.2.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {distance}}}{36}{subfigure.2.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$N = 4094$}}}{36}{subfigure.2.5}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {distance}}}{36}{subfigure.2.6}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {$N = 320$}}}{36}{subfigure.2.7}
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {distance}}}{36}{subfigure.2.8}
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {$N = 102400$}}}{36}{subfigure.2.9}
+\contentsline {subfigure}{\numberline {(j)}{\ignorespaces {distance}}}{36}{subfigure.2.10}
+\contentsline {subfigure}{\numberline {(k)}{\ignorespaces {$N = 640$}}}{36}{subfigure.2.11}
+\contentsline {subfigure}{\numberline {(l)}{\ignorespaces {distance}}}{36}{subfigure.2.12}
+\contentsline {subfigure}{\numberline {(m)}{\ignorespaces {$N = 409400$}}}{36}{subfigure.2.13}
+\contentsline {subfigure}{\numberline {(n)}{\ignorespaces {distance}}}{36}{subfigure.2.14}
+\contentsline {subfigure}{\numberline {(o)}{\ignorespaces {$N = 1024$}}}{36}{subfigure.2.15}
+\contentsline {subfigure}{\numberline {(p)}{\ignorespaces {distance}}}{36}{subfigure.2.16}
+\contentsline {subfigure}{\numberline {(q)}{\ignorespaces {$N = 1048576$}}}{36}{subfigure.2.17}
+\contentsline {subfigure}{\numberline {(r)}{\ignorespaces {distance}}}{36}{subfigure.2.18}
+\contentsline {subfigure}{\numberline {(s)}{\ignorespaces {$N = 1280$}}}{36}{subfigure.2.19}
+\contentsline {subfigure}{\numberline {(t)}{\ignorespaces {distance}}}{36}{subfigure.2.20}
+\contentsline {subfigure}{\numberline {(u)}{\ignorespaces {$N = 1638400$}}}{36}{subfigure.2.21}
+\contentsline {subfigure}{\numberline {(v)}{\ignorespaces {distance}}}{36}{subfigure.2.22}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \textbf {Infinite and finite population oscillation behavior for genome length $\ell = 8$ (bits):} $d$ is distance between infinite or finite population ${\bm {q}}^n$ and infinite population limits ${{\bm {p}}^\ast }$ and ${{\bm {q}}^{\ast }}$ for $g$ generations and finite population size $N$.\relax }}{37}{figure.caption.22}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 5pt}}{37}{subfigure.3.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {\relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {infinite diploid}}}}{37}{subfigure.3.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$N = 64$}}}{37}{subfigure.3.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {distance}}}{37}{subfigure.3.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$N = 4094$}}}{37}{subfigure.3.5}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {distance}}}{37}{subfigure.3.6}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {$N = 320$}}}{37}{subfigure.3.7}
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {distance}}}{37}{subfigure.3.8}
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {$N = 102400$}}}{37}{subfigure.3.9}
+\contentsline {subfigure}{\numberline {(j)}{\ignorespaces {distance}}}{37}{subfigure.3.10}
+\contentsline {subfigure}{\numberline {(k)}{\ignorespaces {$N = 640$}}}{37}{subfigure.3.11}
+\contentsline {subfigure}{\numberline {(l)}{\ignorespaces {distance}}}{37}{subfigure.3.12}
+\contentsline {subfigure}{\numberline {(m)}{\ignorespaces {$N = 409400$}}}{37}{subfigure.3.13}
+\contentsline {subfigure}{\numberline {(n)}{\ignorespaces {distance}}}{37}{subfigure.3.14}
+\contentsline {subfigure}{\numberline {(o)}{\ignorespaces {$N = 1024$}}}{37}{subfigure.3.15}
+\contentsline {subfigure}{\numberline {(p)}{\ignorespaces {distance}}}{37}{subfigure.3.16}
+\contentsline {subfigure}{\numberline {(q)}{\ignorespaces {$N = 1048576$}}}{37}{subfigure.3.17}
+\contentsline {subfigure}{\numberline {(r)}{\ignorespaces {distance}}}{37}{subfigure.3.18}
+\contentsline {subfigure}{\numberline {(s)}{\ignorespaces {$N = 1280$}}}{37}{subfigure.3.19}
+\contentsline {subfigure}{\numberline {(t)}{\ignorespaces {distance}}}{37}{subfigure.3.20}
+\contentsline {subfigure}{\numberline {(u)}{\ignorespaces {$N = 1638400$}}}{37}{subfigure.3.21}
+\contentsline {subfigure}{\numberline {(v)}{\ignorespaces {distance}}}{37}{subfigure.3.22}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces \textbf {Infinite and finite population oscillation behavior for genome length $\ell = 12$ (bits):} $d$ is distance between infinite or finite population ${\bm {q}}^n$ and infinite population limits ${{\bm {p}}^\ast }$ and ${{\bm {q}}^{\ast }}$ for $g$ generations and finite population size $N$.\relax }}{38}{figure.caption.23}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces 5pt}}{38}{subfigure.4.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {\relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {infinite diploid}}}}{38}{subfigure.4.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$N = 64$}}}{38}{subfigure.4.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {distance}}}{38}{subfigure.4.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$N = 4094$}}}{38}{subfigure.4.5}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {distance}}}{38}{subfigure.4.6}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {$N = 320$}}}{38}{subfigure.4.7}
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {distance}}}{38}{subfigure.4.8}
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {$N = 102400$}}}{38}{subfigure.4.9}
+\contentsline {subfigure}{\numberline {(j)}{\ignorespaces {distance}}}{38}{subfigure.4.10}
+\contentsline {subfigure}{\numberline {(k)}{\ignorespaces {$N = 640$}}}{38}{subfigure.4.11}
+\contentsline {subfigure}{\numberline {(l)}{\ignorespaces {distance}}}{38}{subfigure.4.12}
+\contentsline {subfigure}{\numberline {(m)}{\ignorespaces {$N = 409400$}}}{38}{subfigure.4.13}
+\contentsline {subfigure}{\numberline {(n)}{\ignorespaces {distance}}}{38}{subfigure.4.14}
+\contentsline {subfigure}{\numberline {(o)}{\ignorespaces {$N = 1024$}}}{38}{subfigure.4.15}
+\contentsline {subfigure}{\numberline {(p)}{\ignorespaces {distance}}}{38}{subfigure.4.16}
+\contentsline {subfigure}{\numberline {(q)}{\ignorespaces {$N = 1048576$}}}{38}{subfigure.4.17}
+\contentsline {subfigure}{\numberline {(r)}{\ignorespaces {distance}}}{38}{subfigure.4.18}
+\contentsline {subfigure}{\numberline {(s)}{\ignorespaces {$N = 1280$}}}{38}{subfigure.4.19}
+\contentsline {subfigure}{\numberline {(t)}{\ignorespaces {distance}}}{38}{subfigure.4.20}
+\contentsline {subfigure}{\numberline {(u)}{\ignorespaces {$N = 1638400$}}}{38}{subfigure.4.21}
+\contentsline {subfigure}{\numberline {(v)}{\ignorespaces {distance}}}{38}{subfigure.4.22}
 \addvspace {10\p@ }

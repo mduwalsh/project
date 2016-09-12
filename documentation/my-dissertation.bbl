@@ -10,6 +10,11 @@ Cooley, J.~W. and Tukey, J.~W. (1965).
 \newblock An algorithm for the machine calculation of complex fourier series.
 \newblock {\em Mathematics of Computation}, 19(90):297--301.
 
+\bibitem[Crow and Kimura, 1970]{CrowKimura}
+Crow, J. and Kimura, M. (1970).
+\newblock {\em An introduction to population genetics theory}.
+\newblock New York, Evanston and London: Harper \& Row.
+
 \bibitem[Geiringer, 1944]{Geiringer1944}
 Geiringer, H. (1944).
 \newblock On the probability theory of linkage in mendelian heredity.
@@ -31,10 +36,16 @@ Shanks, J.~L. (1969).
 \newblock Computation of the fast walsh-fourier transform.
 \newblock {\em IEEE Trans. Comput.}, 18(5):457--459.
 
-\bibitem[Vose, 1999]{Vose1999}
-Vose, M.~D. (1999).
+\bibitem[Vose, 1999a]{Vose1999}
+Vose, M.~D. (1999a).
 \newblock Random heuristic search.
 \newblock {\em Theoretical Computer Science}.
+
+\bibitem[Vose, 1999b]{Vose1999b}
+Vose, M.~D. (1999b).
+\newblock {\em The simple genetic algorithm: foundations and theory},
+  volume~12.
+\newblock MIT press.
 
 \bibitem[Vose and Wright, 1998]{VoseWright1998}
 Vose, M.~D. and Wright, A.~H. (1998).

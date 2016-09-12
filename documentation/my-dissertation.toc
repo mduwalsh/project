@@ -17,14 +17,13 @@
 \contentsline {chapter}{\numberline {4}Experimental Simulations and Measurements}{21}{chapter.4}
 \contentsline {section}{\numberline {4.1}Distance}{21}{section.4.1}
 \contentsline {section}{\numberline {4.2}Simplification}{23}{section.4.2}
-\contentsline {chapter}{\numberline {5}Evolutionary Limits}{24}{chapter.5}
-\contentsline {section}{\numberline {5.1}Limits}{24}{section.5.1}
-\contentsline {section}{\numberline {5.2}Computation of Mutation and Crossover Distribution}{26}{section.5.2}
-\contentsline {section}{\numberline {5.3}Initial Population}{28}{section.5.3}
-\contentsline {section}{\numberline {5.4}Oscillation}{30}{section.5.4}
-\contentsline {section}{\numberline {5.5}Violation}{31}{section.5.5}
-\contentsline {chapter}{Bibliography}{33}{section*.19}
-\contentsline {chapter}{\numberline {A}Summary of Equations}{36}{appendix.A}
-\contentsline {section}{\numberline {A.1}Cartesian}{36}{section.A.1}
-\contentsline {section}{\numberline {A.2}Cylindrical}{36}{section.A.2}
-\contentsline {chapter}{Vita}{37}{section*.21}
+\contentsline {section}{\numberline {4.3}Convergence}{23}{section.4.3}
+\contentsline {chapter}{\numberline {5}Evolutionary Limits}{28}{chapter.5}
+\contentsline {section}{\numberline {5.1}Limits}{28}{section.5.1}
+\contentsline {section}{\numberline {5.2}Computation of Mutation and Crossover Distribution}{30}{section.5.2}
+\contentsline {section}{\numberline {5.3}Initial Population}{32}{section.5.3}
+\contentsline {section}{\numberline {5.4}Oscillation}{34}{section.5.4}
+\contentsline {section}{\numberline {5.5}Violation}{39}{section.5.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{41}{chapter.6}
+\contentsline {chapter}{Bibliography}{42}{section*.24}
+\contentsline {chapter}{Vita}{46}{section*.26}

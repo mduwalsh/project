@@ -1,9 +1,13 @@
 \chapter{Evolutionary Limits} \label{ch:evolutionary limits}
-This chapter inspects evolutionary limits predicted by Vose using infinite population model under no selective pressure. It states predicted orbits of infinite population and also discusses necessary and sufficient conditions are discussed. This section also explains implementation of simulation of evolutionary limits.
+This chapter inspects evolutionary limits predicted by Vose using infinite population model under no selective pressure. 
+It states predicted limits of infinite population and also discusses necessary and sufficient conditions for population to converge in to periodic orbits. 
 
 \section{Limits}
 \label{Limits}
-Vose states under mild assumptions on mutations (considered later), populations converge under repeated application of $\mathcal{M}$. Vose mentions that in general case, periodic orbits are possible but populations converge under repeated application of $\mathcal{M}^2$ and limits ${\bm p}^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n}({\bm p})$ and ${\bm q}^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n+1}({\bm q})$ exist.
+Vose states under mild assumptions on mutations (considered later), populations converge under repeated application 
+of $\mathcal{M}$. Vose mentions that in general case, periodic orbits are possible but populations converge under 
+repeated application of $\mathcal{M}^2$ and limits ${\bm p}^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n}({\bm p})$ 
+and ${\bm q}^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n+1}({\bm q})$ exist.
 
 Following Vose's theorem, let $S_g = g \mathcal{R} / \{\textbf{0}, g\}$, and let $|g|$ be the number of non zero bits in $g$.
 \[
@@ -63,8 +67,10 @@ to converge to a periodic orbit as that for some g
 \end{equation}
  
 \section{Computation of Mutation and Crossover Distribution}
-Following algorithm installs values of mutation and crossover distributions that satisfies condition described by equation (\ref{OscCond}) for evolutionary sequence to converge in periodic orbits.
-Let $\bm{\mu}_j$ and $\bm{\chi}_k$ represent mutation and crossover distributions respectively where $j,k \in \mathcal{R}$ and $U01()$ be random number between $0$ and $1$. For any $g$ where $g \in \mathcal{R}$ and $g \neq 0$.
+Following algorithm installs values of mutation and crossover distributions that satisfies condition described 
+by equation (\ref{OscCond}) for evolutionary sequence to converge in periodic orbits.
+Let $\bm{\mu}_j$ and $\bm{\chi}_k$ represent mutation and crossover distributions respectively where $j,k \in \mathcal{R}$ 
+and $U01()$ be random number between $0$ and $1$. For any $g$ where $g \in \mathcal{R}$ and $g \neq 0$.
 For all $j \in \mathcal{R}$,
 \[
 \bm{\mu}_j = \begin{cases}
@@ -107,7 +113,8 @@ where $k \in \bar{g} \mathcal{R}$, and
 \]
 for other values of $k$. \newline
 
-This installs some random values in some specific positions in array of $\bm{\chi}$ according to value of $g$ and others set to $0$. Normalization of $\bm{\chi}_k$ gives values for $chi$ distribution 
+This installs some random values in some specific positions in array of $\bm{\chi}$ according to value of $g$ 
+and others set to $0$. Normalization of $\bm{\chi}_k$ gives values for $chi$ distribution 
 \[
 \bm{\chi}_k = \bm{\chi}_k/\sum\limits_{k \in \mathcal{R}} \bm{\chi}_k
 \]
@@ -128,17 +135,21 @@ The values $\bm{\chi}_k$ satisfy condition (\ref{OscCond}) for $\bm{\chi}$ distr
 \end{center}
 \end{figure}
 
-Let finite haploid population $\bm{s}^n$, finite diploid population $\bm{f}^n$, infinite haploid population $\bm{p}^n$ and infinite haploid population $\bm{q}^n$ be considered with initial population $\bm{s}^0$, $\bm{f}^0$,
-$\bm{p}^0$, $\bm{q}^0$ respectively. To investigate oscillating behavior of infinite population evolutionary limits and finite population, same initial population is desired. 
+Let finite haploid population $\bm{s}^n$, finite diploid population $\bm{f}^n$, infinite haploid population $\bm{p}^n$ 
+and infinite haploid population $\bm{q}^n$ be considered with initial population $\bm{s}^0$, $\bm{f}^0$,
+$\bm{p}^0$, $\bm{q}^0$ respectively. To investigate oscillating behavior of infinite population evolutionary limits 
+and finite population, same initial population is desired. 
 
-For a genome length $\ell$, let $x = 2^\ell$ be number of possible strings in finite haploid population array $\bm{t}$ of population size $N$. Possible strings $\bm{t}_i$ are ${0, 1,.., x-1}$ where $i = 0, 1,.., N-1$. An arbitrary vector $\bm{f}$ of size $x$ was considered where
+For a genome length $\ell$, let $x = 2^\ell$ be number of possible strings in finite haploid population array $\bm{t}$ of 
+population size $N$. Possible strings $\bm{t}_i$ are ${0, 1,.., x-1}$ where $i = 0, 1,.., N-1$. An arbitrary vector $\bm{f}$ of size $x$ 
+was considered where
 \[
 \bm{r}_i = U01(); \tabspace {i = 0, 1,.., x-1}
 \]
 and U01() is random number between 0 and 1.
 Let $\bm{t}$ represent finite haploid population strings array.
 \[
-\bm{t}_j = randp(r) ; \tabspace {j = 0,.., N-1}
+\bm{t}_j = randp(\bm{r}) ; \tabspace {j = 0,.., N-1}
 \]
 where $\bm{t}_j$ is $j^{th}$ population member and $randp(\bm{r})$ returns random index $i$ in array $\bm{r}$ with probability $\bm{r}_i$.
 
@@ -169,7 +180,9 @@ Initial infinite diploid population $\bm{q}_0$ is calculated corresponding to in
 \bm{q}_{i,j} = \bm{p}_i \cdot \bm{p}_j  \nudge; \tabspace  {i = 0,..,x-1; \tabspace j = 0,..,x-1}.
 \]
 
-Let $\bm{v}$ represent finite diploid population member array of size $N^2$ and $\bm{d}_{i,j}$ represent count of diploid member $\langle i,j \rangle$ in $\bm{v}$. Then $\bm{v}$ can be filled with population member to match initial population vector $\bm{p}$ generating diploid members such that
+Let $\bm{v}$ represent finite diploid population member array of size $N^2$ and $\bm{d}_{i,j}$ represent count of 
+diploid member $\langle i,j \rangle$ in $\bm{v}$. Then $\bm{v}$ can be filled with population member to match 
+initial population vector $\bm{p}$ generating diploid members such that
 \begin{eqnarray*}
 \bm{d}_{i,j} & = & N \cdot \bm{p}_i \cdot N \cdot \bm{p}_j  \\
 \sum \limits_{k=0}^{N^2-1} [ \bm{v}_k = \langle i,j \rangle ] & = & \bm{d}_{i,j}
@@ -201,12 +214,216 @@ where $\gamma = \langle \gamma_0, \gamma_1 \rangle$ is diploid genome.
 
 For a genome length $\ell$, same initial population (calculated as described in (\ref{InitPopOsc})) was used for infinite population and all 
 sizes of finite population conisdered.
-Genome lengths $\ell = {2, 4, 6, 8, 10, 12, 14}$ were used. Minimum population size of $N_0 = 64$ was considered for finite haploid case and 
+Genome lengths $\ell = {4, 8, 12}$ were used. Minimum population size of $N_0 = 64$ was considered for finite haploid case and 
 different population sizes $N = \{1N_0, 2N_0,.., 20N_0\}$ were considered. Finite diploid population was set as squared size of haploid 
 population $N^2$.
 The distances of $\bm{p}^n$ and $\bm{s}^n$ to haploid evolutionary limits $\bm{p}_h^{\ast}$ and $\bm{q}_h^{\ast}$ were plotted and the distances of $\bm{q}^n$ and 
 $\bm{f}^n$ to diploid evolutionary limits $\bm{p}_d^{\ast}$ and $\bm{q}_d^{\ast}$ were plotted.
 
+\begin{figure}[H]
+\begin{center}
+\subfloat[5pt][infinite haploid]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/inf_hap.eps}}}\hspace{5pt}
+\subfloat[\small{infinite diploid}]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/inf_dip.eps}}}
+\end{center}
+\begin{center}
+\subfloat[$N = 64$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n000064_osc_fin_hap.eps}}}\hspace{5pt}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n000064_osc_fin_hap_dist.eps}}}\hspace{5pt}
+\subfloat[$N = 4094$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n000064_osc_fin_dip.eps}}}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n000064_osc_fin_dip_dist.eps}}}
+\end{center}
+\begin{center}
+\subfloat[$N = 320$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n000320_osc_fin_hap.eps}}}\hspace{5pt}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n000320_osc_fin_hap_dist.eps}}}\hspace{5pt}
+\subfloat[$N = 102400$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n000320_osc_fin_dip.eps}}}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n000320_osc_fin_dip_dist.eps}}}
+\end{center}
+\begin{center}
+\subfloat[$N = 640$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n000640_osc_fin_hap.eps}}}\hspace{5pt}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n000640_osc_fin_hap_dist.eps}}}\hspace{5pt}
+\subfloat[$N = 409400$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n000640_osc_fin_dip.eps}}}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n000640_osc_fin_dip_dist.eps}}}
+\end{center}
+\begin{center}
+\subfloat[$N = 1024$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n001024_osc_fin_hap.eps}}}\hspace{5pt}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n001024_osc_fin_hap_dist.eps}}}\hspace{5pt}
+\subfloat[$N = 1048576$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n001024_osc_fin_dip.eps}}}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n001024_osc_fin_dip_dist.eps}}}
+\end{center}
+\begin{center}
+\subfloat[$N = 1280$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n001280_osc_fin_hap.eps}}}\hspace{5pt}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n001280_osc_fin_hap_dist.eps}}}\hspace{5pt}
+\subfloat[$N = 1638400$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n001280_osc_fin_dip.eps}}}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b4/n001280_osc_fin_dip_dist.eps}}}
+
+
+\caption{\textbf{Infinite and finite population oscillation behavior for genome length $\ell = 4$ (bits):} $d$ is
+  distance between infinite or finite population ${\bm q}^n$ and infinite
+  population limits ${{\bm p}^\ast}$ and ${{\bm q}^{\ast}}$ for $g$ generations and finite population size $N$.}
+\label{oscillation_4}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\subfloat[5pt][infinite haploid]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/inf_hap.eps}}}\hspace{5pt}
+\subfloat[\small{infinite diploid}]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/inf_dip.eps}}}
+\end{center}
+\begin{center}
+\subfloat[$N = 64$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n000064_osc_fin_hap.eps}}}\hspace{5pt}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n000064_osc_fin_hap_dist.eps}}}\hspace{5pt}
+\subfloat[$N = 4094$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n000064_osc_fin_dip.eps}}}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n000064_osc_fin_dip_dist.eps}}}
+\end{center}
+\begin{center}
+\subfloat[$N = 320$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n000320_osc_fin_hap.eps}}}\hspace{5pt}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n000320_osc_fin_hap_dist.eps}}}\hspace{5pt}
+\subfloat[$N = 102400$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n000320_osc_fin_dip.eps}}}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n000320_osc_fin_dip_dist.eps}}}
+\end{center}
+\begin{center}
+\subfloat[$N = 640$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n000640_osc_fin_hap.eps}}}\hspace{5pt}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n000640_osc_fin_hap_dist.eps}}}\hspace{5pt}
+\subfloat[$N = 409400$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n000640_osc_fin_dip.eps}}}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n000640_osc_fin_dip_dist.eps}}}
+\end{center}
+\begin{center}
+\subfloat[$N = 1024$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n001024_osc_fin_hap.eps}}}\hspace{5pt}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n001024_osc_fin_hap_dist.eps}}}\hspace{5pt}
+\subfloat[$N = 1048576$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n001024_osc_fin_dip.eps}}}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n001024_osc_fin_dip_dist.eps}}}
+\end{center}
+\begin{center}
+\subfloat[$N = 1280$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n001280_osc_fin_hap.eps}}}\hspace{5pt}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n001280_osc_fin_hap_dist.eps}}}\hspace{5pt}
+\subfloat[$N = 1638400$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n001280_osc_fin_dip.eps}}}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b8/n001280_osc_fin_dip_dist.eps}}}
+
+
+\caption{\textbf{Infinite and finite population oscillation behavior for genome length $\ell = 8$ (bits):} $d$ is
+  distance between infinite or finite population ${\bm q}^n$ and infinite
+  population limits ${{\bm p}^\ast}$ and ${{\bm q}^{\ast}}$ for $g$ generations and finite population size $N$.}
+\label{oscillation_8}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\subfloat[5pt][infinite haploid]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/inf_hap.eps}}}\hspace{5pt}
+\subfloat[\small{infinite diploid}]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/inf_dip.eps}}}
+\end{center}
+\begin{center}
+\subfloat[$N = 64$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n000064_osc_fin_hap.eps}}}\hspace{5pt}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n000064_osc_fin_hap_dist.eps}}}\hspace{5pt}
+\subfloat[$N = 4094$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n000064_osc_fin_dip.eps}}}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n000064_osc_fin_dip_dist.eps}}}
+\end{center}
+\begin{center}
+\subfloat[$N = 320$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n000320_osc_fin_hap.eps}}}\hspace{5pt}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n000320_osc_fin_hap_dist.eps}}}\hspace{5pt}
+\subfloat[$N = 102400$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n000320_osc_fin_dip.eps}}}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n000320_osc_fin_dip_dist.eps}}}
+\end{center}
+\begin{center}
+\subfloat[$N = 640$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n000640_osc_fin_hap.eps}}}\hspace{5pt}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n000640_osc_fin_hap_dist.eps}}}\hspace{5pt}
+\subfloat[$N = 409400$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n000640_osc_fin_dip.eps}}}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n000640_osc_fin_dip_dist.eps}}}
+\end{center}
+\begin{center}
+\subfloat[$N = 1024$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n001024_osc_fin_hap.eps}}}\hspace{5pt}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n001024_osc_fin_hap_dist.eps}}}\hspace{5pt}
+\subfloat[$N = 1048576$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n001024_osc_fin_dip.eps}}}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n001024_osc_fin_dip_dist.eps}}}
+\end{center}
+\begin{center}
+\subfloat[$N = 1280$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n001280_osc_fin_hap.eps}}}\hspace{5pt}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n001280_osc_fin_hap_dist.eps}}}\hspace{5pt}
+\subfloat[$N = 1638400$]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n001280_osc_fin_dip.eps}}}
+\subfloat[distance]{
+\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/osc/b12/n001280_osc_fin_dip_dist.eps}}}
+
+
+\caption{\textbf{Infinite and finite population oscillation behavior for genome length $\ell = 12$ (bits):} $d$ is
+  distance between infinite or finite population ${\bm q}^n$ and infinite
+  population limits ${{\bm p}^\ast}$ and ${{\bm q}^{\ast}}$ for $g$ generations and finite population size $N$.}
+\label{oscillation_12}
+\end{center}
+\end{figure}
+
+The figures \ref{oscillation_4}, \ref{oscillation_8} and \ref{oscillation_12} arranged by genome length $\ell$ and 
+sub-figures within each figures arranged by population size ($N$) for finite population for haploid and diploid population 
+depticts oscillating behavior of both infinite and finite population when necessary and sufficient condition \ref{OscCond} is met. 
+Oscillation in finite population in both haploid and diploid case simulation became finer with increased population size as expected. 
+Since diploid population size used is equal to square of haploid population size, oscillation in diploid population are sharper.
+
+Graphs for distance between finite population and infinite population for both haploid and diploid case were also plotted for each generation. 
+The resulting graphs showed distance decreased as population size increased which is in congruence with results from \ref{convergence}.  
 
 \section{Violation}
 The results showed when $\bm{\chi}$ and $\bm{\mu}$ distributions satisfies (\ref{OscCond}), oscillation occurs in both infinite and finite population. 
@@ -237,7 +454,7 @@ So that
 
 Then $j$ is chosen where $\bm{\chi}_j = 0$ and set $\bm{\chi}_j = \epsilon$. \newline
 
-Simulations were run again with the violations in (\ref{OscCond}) implemented. Genome lengths $\ell = {2, 4, 6, 8, 10, 12, 14}$ were considered. 
+Simulations were run again with the violations in (\ref{OscCond}) implemented. Genome lengths $\ell = {4, 6, 8, 10, 12, 14}$ were considered. 
 Different finite hapliod population sizes $N = \{1N_0, 2N_0,.., 20N_0\}$ were considered. Finite diploid population was set as 
 squared size of haploid population $N^2$.\newline
 Let ${\bm{p}1}_h^{\ast}$ and ${\bm{q}1}_h1^{\ast}$ be haploid evolutionary limits with violation and ${\bm{p}1}_d^{\ast}$ and ${\bm{q}1}_d^{\ast}$ be diploid 

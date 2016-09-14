@@ -18,7 +18,7 @@
 unsigned long L;  // no. of bits to represent chromosome
 int Runs;         // no. of runs of simulation
 unsigned long N0 = 64;
-unsigned long Ni[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};// no. of population in finite population as Ni*N0
+unsigned long Ni[] = {1, 5, 10, 16, 20};// no. of population in finite population as Ni*N0
 unsigned long N;   // size of finite population; N = Ni*N0 
 unsigned long G;  // no. of generations to simulate
 unsigned long *Pop[2]; // population generation 0 & 1
@@ -39,6 +39,10 @@ double **Mh;       // Mh = Mhat; mixing matrix in walsh basis
 unsigned long Gg;
 unsigned long Seed;
 double Epsilon;     // error change in Mu or Chi distribution
+unsigned long SkipDiploid = 0;                // skip finite diploid computation
+unsigned long SkipHaploid = 0;                // skip finite haploid computation
+unsigned long SkipInfinite = 0;               // skip infinite computation
+unsigned long ND;
 
 long mem_count = 0;
 
@@ -1279,6 +1283,10 @@ int main(int argc, char** argv)
   double *p_str, *q_str, *p1_str, *q1_str;                 // oscillating points  
   time_t now; 
   unsigned long i, j;
+  char seedfile[100];
+  sprintf(seedfile, "b%ld_g%ld_eps%.6lf_seed.dat", L, G, Epsilon);
+  FILE *fp = fopen(seedfile, "w");
+  fprintf(fp, "Run  Seed\n");
   for(j = 0; j < Runs; j++){
     if(seed == 0){
       now = time(0);
@@ -1287,6 +1295,7 @@ int main(int argc, char** argv)
     else{
       Seed = seed;
     }
+    fprintf(fp, "%ld  %ld\n", j, Seed);
     initrand(Seed);
     p_str = calloc((1ul<<L),sizeof(double));  // oscillating point 1
     q_str = calloc((1ul<<L),sizeof(double));  // oscillating point 2
@@ -1334,7 +1343,7 @@ int main(int argc, char** argv)
     cleanup();
   }
   walsh(Mh, -1);  
-    
+  fclose(fp);  
   return 0;
 }
 

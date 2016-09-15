@@ -4,19 +4,19 @@
 #include<math.h>
 
 #define EPS 1
-#define SPEC_RUN 0                // 1: plot from specific run ; 0: plot for all runs
+#define SPEC_RUN 1                // 1: plot from specific run ; 0: plot for all runs
 
 /* sets of parameters to be simulated on */
-unsigned long L[] = {2, 4, 6, 8, 10, 12, 14}; // bits
-unsigned long G[] = {200};
-unsigned long GS = 50;                        // number of generations to show in graphs
+unsigned long L[] = {4}; // bits
+unsigned long G[] = {100};
+unsigned long GS = 100;                        // number of generations to show in graphs
 unsigned long N0 = 64;
 unsigned long N;
-unsigned long Ni[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20};  // 2^n
-double  Epsilon[] = {0.01, 0.05, 0.1, 0.2, 0.5};
+unsigned long Ni[] = {1, 5, 10, 16, 20};  // 2^n
+double  Epsilon[] = {0.01};
 unsigned long Seed = 0;
-unsigned long Runs = 20;
-unsigned long SpecialRun = 12;           // when SPEC_RUN = 1
+unsigned long Runs = 16;
+unsigned long SpecialRun = 14;           // when SPEC_RUN = 1
 
 /* end of sets of parameters to be simulated on */
 
@@ -51,12 +51,22 @@ void plot_data_all_infinite(unsigned long b, unsigned long g, double epsilon, un
   sprintf(str, "b%02lu_g%04lu_eps%.6lf", b, g, epsilon);
   // haploid infinite
   sprintf(ifn, "%s_osc_inf_haploid_%02lu.dat", str, run);
-  sprintf(ofn, "b%02lu_g%04lu_eps%.6lf_osc_inf_hap_%02lu.eps", b, GS, epsilon, run);
+  sprintf(ofn, "b%02lu_g%04lu_eps%.6lf_osc_inf_hap_%02lu.eps", b, g, epsilon, run);
+  sprintf(title, "infinite haploid {/Helvetica-Oblique l}:%lu, g:%lu, eps:%.2f", b, GS, epsilon);
+  plot(ifn, 3, title, "g", "d", 0, ofn);
+   // haploid infinite
+  sprintf(ifn, "%s_osc_inf_haploid_wovio_%02lu.dat", str, run);
+  sprintf(ofn, "b%02lu_g%04lu_eps%.6lf_osc_inf_hap_wovio_%02lu.eps", b, g, epsilon, run);
   sprintf(title, "infinite haploid {/Helvetica-Oblique l}:%lu, g:%lu, eps:%.2f", b, GS, epsilon);
   plot(ifn, 3, title, "g", "d", 0, ofn);
   // diploid infinite
   sprintf(ifn, "%s_osc_inf_diploid_%02lu.dat", str, run);
-  sprintf(ofn, "b%02lu_g%04lu_eps%.6lf_osc_inf_dip_%02lu.eps", b, GS, epsilon, run);
+  sprintf(ofn, "b%02lu_g%04lu_eps%.6lf_osc_inf_dip_%02lu.eps", b, g, epsilon, run);
+  sprintf(title, "infinite diploid {/Helvetica-Oblique l}:%lu, g:%lu, eps:%.2f", b, GS, epsilon);
+  plot(ifn, 3, title, "g", "d", 0, ofn);  
+  // diploid infinite
+  sprintf(ifn, "%s_osc_inf_diploid_wovio_%02lu.dat", str, run);
+  sprintf(ofn, "b%02lu_g%04lu_eps%.6lf_osc_inf_dip_wovio_%02lu.eps", b, g, epsilon, run);
   sprintf(title, "infinite diploid {/Helvetica-Oblique l}:%lu, g:%lu, eps:%.2f", b, GS, epsilon);
   plot(ifn, 3, title, "g", "d", 0, ofn);  
 }
@@ -72,9 +82,19 @@ void plot_data_all_finite(unsigned long b, unsigned long g, unsigned long n, dou
   sprintf(ofn, "b%02lu_g%04lu_n%06lu_eps%.6lf_osc_fin_hap_%02lu.eps", b, GS, n, epsilon, run);
   sprintf(title, "finite haploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu, eps:%.2f", b, GS, n, epsilon);
   plot(ifn, 3, title, "g", "d", 0, ofn);
+  // haploid finite
+  sprintf(ifn, "%s_osc_haploid_wovio_%02lu.dat", str, run);
+  sprintf(ofn, "b%02lu_g%04lu_n%06lu_eps%.6lf_osc_fin_hap_wovio_%02lu.eps", b, GS, n, epsilon, run);
+  sprintf(title, "finite haploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu, eps:%.2f", b, GS, n, epsilon);
+  plot(ifn, 3, title, "g", "d", 0, ofn);
   // diploid finite
   sprintf(ifn, "%s_osc_diploid_%02lu.dat", str, run);
   sprintf(ofn, "b%02lu_g%04lu_n%06lu_eps%.6lf_osc_fin_dip_%02lu.eps", b, GS, n, epsilon, run);
+  sprintf(title, "finite diploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu, eps:%.2f", b, GS, n*n, epsilon);
+  plot(ifn, 3, title, "g", "d", 0, ofn);
+  // diploid finite
+  sprintf(ifn, "%s_osc_diploid_wovio_%02lu.dat", str, run);
+  sprintf(ofn, "b%02lu_g%04lu_n%06lu_eps%.6lf_osc_fin_dip_wovio_%02lu.eps", b, GS, n, epsilon, run);
   sprintf(title, "finite diploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu, eps:%.2f", b, GS, n*n, epsilon);
   plot(ifn, 3, title, "g", "d", 0, ofn);
 }

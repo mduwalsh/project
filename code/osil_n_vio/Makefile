@@ -2,13 +2,16 @@ CC = gcc
 LIBS = -lm
 CFLAGS = -Wall -O2 -march=native
 
-EXECUTABLES = osil vio vio1 osiljob viojob osilplot vioplot
+EXECUTABLES = osil osil1 vio vio1 osiljob viojob osilplot vioplot
 
 .PHONY: all clean
 
 all: $(EXECUTABLES)
 
 osil: osil.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
+
+osil1: osil1.o
 	$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
 
 vio: vio.o

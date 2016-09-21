@@ -18,11 +18,10 @@
 unsigned long L;  // no. of bits to represent chromosome
 int Runs;         // no. of runs of simulation
 
-unsigned long N0 = 8;
-unsigned long HN[] = {64, 64*4, 64*16, (unsigned long)pow(64,2), (unsigned long)pow(64*2,2), (unsigned long)pow(64*4,2), (unsigned long)pow(64*8,2), (unsigned long)pow(64*12,2), (unsigned long)pow(64*16,2), (unsigned long)pow(64*20,2)};
-unsigned long DN[] = {64, 64*4, 64*16, (unsigned long)pow(64,2), (unsigned long)pow(64*2,2), (unsigned long)pow(64*4,2), (unsigned long)pow(64*8,2), (unsigned long)pow(64*12,2), (unsigned long)pow(64*16,2), (unsigned long)pow(64*20,2)};
+unsigned long N0 = 64;
+unsigned long Ni[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
 
-double Err[] = {0.01, 0.1, 0.2, 0.5};
+double Err[] = {0.01, 0.05, 0.1, 0.2, 0.5};
 
 unsigned long Nh, Nd;   // size of finite population; N = Ni*N0 
 unsigned long G;  // no. of generations to simulate
@@ -244,7 +243,7 @@ void generate_fin_dipop_from_px(double *p, unsigned long *pop)
   for( l = 0, i = 0; i < 1ul<<L; i++){
     for(j = 0; j < 1ul<<L; j++){
       //pd->p[(i<<L)+j] = (p[i]*p[j]*N) - (int)(p[i]*p[j]*N);    // difference in exact expected population to real population
-      printf("p member size: %lf \n ", p[i]*p[j]*Nd);
+      //printf("p member size: %lf \n ", p[i]*p[j]*Nd);
       for(k = 0; k < ( (unsigned long)(p[i]*p[j]*Nd) ); k++){
         pop[l++] = (i<<L) + j;                          // diploid filling population	
       }
@@ -487,7 +486,7 @@ double dist_n(double *p, unsigned long *pop)     // p: haploids array for infini
     c = 0;                              // reset count of occurrence of diploid
     
     get_x0x1(pop[i], &x0, &x1);
-    if(x0 < 0 || x0 > 3|| x1 < 0 || x1 > 3) printf("x0:%lu x1:%lu pop[%lu]: %lu\n", x0, x1, i, pop[i]);
+    //if(x0 < 0 || x0 > 3|| x1 < 0 || x1 > 3) printf("x0:%lu x1:%lu pop[%lu]: %lu\n", x0, x1, i, pop[i]);
     
     // compute square of distance between population in finite diploid population and infinite diploid population 
     // for diploids only in finite population
@@ -1356,7 +1355,7 @@ int main(int argc, char** argv)
   time_t now; 
   unsigned long i, j, k;
   char seedfile[100];
-  sprintf(seedfile, "b%ld_g%ld_eps%.6lf_seed.dat", L, G, Epsilon);
+  sprintf(seedfile, "b%ld_g%ld_vio_seed.dat", L, G);
   FILE *fp = fopen(seedfile, "w");
   fprintf(fp, "Run  Seed\n");
   for(j = 0; j < Runs; j++){
@@ -1407,10 +1406,9 @@ int main(int argc, char** argv)
       comp_periodic_orbits(p_str, q_str, P0);                 // computes p_str and q_str oscillating points after violation
       //display_p(p_str, "p_str:"); display_p(q_str, "q_str:");     
       
-      for(i = 0; i < sizeof(HN)/sizeof(unsigned long); i++){                        // through all sizes of finite population
-	Nh = HN[i];
-	Nd = DN[i];
-	printf("Nd: %lu Nh: %lu\n", Nd, Nh);
+      for(i = 0; i < sizeof(Ni)/sizeof(unsigned long); i++){                        // through all sizes of finite population
+	Nh =  (unsigned long)pow(N0,2)*Ni[i]; 
+	Nd = Nh;
 	init();                                               // initializes memory for pop, M and Cr and also installs values for these  
 	
 	generate_fin_hap_pop_from_pvector(P0, Hpop[0]);       // finite haploid population from P0
@@ -1418,7 +1416,6 @@ int main(int argc, char** argv)
 	if(SkipDiploid == 0){
 	  generate_fin_dipop_from_px(P0, Pop[0]);               // finite diploid population generation from P0      
 	}
-	printf("generate pop end \n");
 	osc_all_n_dist(P0, p_str, q_str, p1_str, q1_str, j);
 	
 	deinit();     
@@ -1440,7 +1437,7 @@ sort.c
 
 /* Compile and Run:
 gcc -O2 -march=native -o vio vio.c -lm
-./vio bits seed generations epsilon runs
+./vio bits seed generations runs
 */
 
 

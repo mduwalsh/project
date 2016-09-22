@@ -4,18 +4,18 @@
 #include<math.h>
 
 #define EPS 1
-#define SPEC_RUN 1                // 1: plot from specific run ; 0: plot for all runs
+#define SPEC_RUN 0                // 1: plot from specific run ; 0: plot for all runs
 
 /* sets of parameters to be simulated on */
-unsigned long L[] = {4}; // bits
+unsigned long L[] = {8, 10, 12, 14}; // bits
 unsigned long G[] = {100};
-unsigned long GS = 100;                        // number of generations to show in graphs
+unsigned long GS = 50;                        // number of generations to show in graphs
 unsigned long N0 = 64;
 unsigned long N;
-unsigned long Ni[] = {1, 5, 10, 16, 20};  // 2^n
-double  Epsilon[] = {0.01};
+unsigned long Ni[] = {1, 5, 10, 15, 20};  // 2^n
+double  Epsilon[] = {0.01, 0.1, 0.5};
 unsigned long Seed = 0;
-unsigned long Runs = 16;
+unsigned long Runs = 1;
 unsigned long SpecialRun = 14;           // when SPEC_RUN = 1
 
 /* end of sets of parameters to be simulated on */
@@ -75,27 +75,27 @@ void plot_data_all_finite(unsigned long b, unsigned long g, unsigned long n, dou
 {
   char str[200], ifn[300], ofn[300], title[200];
   //create file name string
-  sprintf(str, "b%02lu_g%04lu_n%06lu_eps%.6lf", b, g, n, epsilon);
+  sprintf(str, "b%02lu_g%04lu_n%08lu_eps%.6lf", b, g, n, epsilon);
   
   // haploid finite
   sprintf(ifn, "%s_osc_haploid_%02lu.dat", str, run);
-  sprintf(ofn, "b%02lu_g%04lu_n%06lu_eps%.6lf_osc_fin_hap_%02lu.eps", b, GS, n, epsilon, run);
+  sprintf(ofn, "b%02lu_g%04lu_n%08lu_eps%.6lf_osc_fin_hap_%02lu.eps", b, GS, n, epsilon, run);
   sprintf(title, "finite haploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu, eps:%.2f", b, GS, n, epsilon);
   plot(ifn, 3, title, "g", "d", 0, ofn);
   // haploid finite
   sprintf(ifn, "%s_osc_haploid_wovio_%02lu.dat", str, run);
-  sprintf(ofn, "b%02lu_g%04lu_n%06lu_eps%.6lf_osc_fin_hap_wovio_%02lu.eps", b, GS, n, epsilon, run);
+  sprintf(ofn, "b%02lu_g%04lu_n%08lu_eps%.6lf_osc_fin_hap_wovio_%02lu.eps", b, GS, n, epsilon, run);
   sprintf(title, "finite haploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu, eps:%.2f", b, GS, n, epsilon);
   plot(ifn, 3, title, "g", "d", 0, ofn);
   // diploid finite
   sprintf(ifn, "%s_osc_diploid_%02lu.dat", str, run);
-  sprintf(ofn, "b%02lu_g%04lu_n%06lu_eps%.6lf_osc_fin_dip_%02lu.eps", b, GS, n, epsilon, run);
-  sprintf(title, "finite diploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu, eps:%.2f", b, GS, n, epsilon);
+  sprintf(ofn, "b%02lu_g%04lu_n%08lu_eps%.6lf_osc_fin_dip_%02lu.eps", b, GS, n, epsilon, run);
+  sprintf(title, "finite diploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu, eps:%.2f", b, GS, n*n, epsilon);
   plot(ifn, 3, title, "g", "d", 0, ofn);
   // diploid finite
   sprintf(ifn, "%s_osc_diploid_wovio_%02lu.dat", str, run);
-  sprintf(ofn, "b%02lu_g%04lu_n%06lu_eps%.6lf_osc_fin_dip_wovio_%02lu.eps", b, GS, n, epsilon, run);
-  sprintf(title, "finite diploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu, eps:%.2f", b, GS, n, epsilon);
+  sprintf(ofn, "b%02lu_g%04lu_n%08lu_eps%.6lf_osc_fin_dip_wovio_%02lu.eps", b, GS, n, epsilon, run);
+  sprintf(title, "finite diploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu, eps:%.2f", b, GS, n*n, epsilon);
   plot(ifn, 3, title, "g", "d", 0, ofn);
 }
 
@@ -125,9 +125,9 @@ void plot_data_all_dist_fin_inf(unsigned long b, unsigned long g, double epsilon
   fprintf(p, "ymax_h = 0.0\n");
   fprintf(p, "ymax_d = 0.0\n");
   for(c = 0, ni = 0; ni < sizeof(Ni)/sizeof(unsigned long); ni++, c++){                        // through all sizes of finite population
-      n = pow(N0,2)*Ni[ni];
+      n = N0*Ni[ni];
       //create file name string
-      sprintf(str, "b%02lu_g%04lu_n%06lu_eps%.6lf", b, g, n, epsilon);
+      sprintf(str, "b%02lu_g%04lu_n%08lu_eps%.6lf", b, g, n, epsilon);
       // haploid finite
       sprintf(ifn, "%s_osc_haploid_dist_%02lu.dat", str, run);
       fprintf(p, "stats '%s' using 2 prefix 'A%ld' nooutput\n", ifn, c);
@@ -139,21 +139,21 @@ void plot_data_all_dist_fin_inf(unsigned long b, unsigned long g, double epsilon
       fprintf(p, "if(B%ld_max > ymax_d) {ymax_d = B%ld_max}\n", c, c);
   }
   for(ni = 0; ni < sizeof(Ni)/sizeof(unsigned long); ni++){                        // through all sizes of finite population
-    n = pow(N0,2)*Ni[ni];
+    n = N0*Ni[ni];
     //create file name string
     sprintf(str, "b%02lu_g%04lu_n%06lu_eps%.6lf", b, g, n, epsilon);
     
     // haploid finite    
     fprintf(p, "set yrange [0:ymax_h] \n");
     sprintf(ifn, "%s_osc_haploid_dist_%02lu.dat", str, run);
-    sprintf(ofn, "b%02lu_g%04lu_n%06lu_eps%.6lf_osc_fin_hap_dist_%02lu.eps", b, GS, n, epsilon, run);
+    sprintf(ofn, "b%02lu_g%04lu_n%08lu_eps%.6lf_osc_fin_hap_dist_%02lu.eps", b, GS, n, epsilon, run);
     sprintf(title, "distance haploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu", b, GS, n);
     plot_dist(p, ifn, 2, title, "g", "d", 0, ofn);
     // diploid finite
     fprintf(p, "set yrange [0:ymax_d] \n");
     sprintf(ifn, "%s_osc_diploid_dist_%02lu.dat", str, run);
-    sprintf(ofn, "b%02lu_g%04lu_n%06lu_eps%.6lf_osc_fin_dip_dist_%02lu.eps", b, GS, n, epsilon, run);
-    sprintf(title, "distance diploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu", b, GS, n);
+    sprintf(ofn, "b%02lu_g%04lu_n%08lu_eps%.6lf_osc_fin_dip_dist_%02lu.eps", b, GS, n, epsilon, run);
+    sprintf(title, "distance diploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu", b, GS, n*n);
     plot_dist(p, ifn, 2, title, "g", "d", 0, ofn);
   }
   fprintf(p, "set autoscale y \n");
@@ -177,15 +177,15 @@ int main()
           for(j = 0; j < Runs; j++){
 	    plot_data_all_infinite(L[li], G[gi], Epsilon[ei], j);
 	    for(ni = 0; ni < sizeof(Ni)/sizeof(unsigned long); ni++){                        // through all sizes of finite population
-	      N = pow(N0,2)*Ni[ni];
+	      N = (unsigned long)pow(N0,2)*Ni[ni];
 	      plot_data_all_finite(L[li], G[gi], N, Epsilon[ei], j);            
 	    }  
-	   // plot_data_all_dist_fin_inf(L[li], G[gi], Epsilon[ei], j);
+	    //plot_data_all_dist_fin_inf(L[li], G[gi], Epsilon[ei], j);
 	  } 
 #else
 	  plot_data_all_infinite(L[li], G[gi], Epsilon[ei], SpecialRun);
 	  for(ni = 0; ni < sizeof(Ni)/sizeof(unsigned long); ni++){                        // through all sizes of finite population
-	    N = pow(N0,2)*Ni[ni];
+	    N = (unsigned long)pow(N0,2)*Ni[ni];
 	    plot_data_all_finite(L[li], G[gi], N, Epsilon[ei], SpecialRun);            
 	  }  
 	  //plot_data_all_dist_fin_inf(L[li], G[gi], Epsilon[ei], SpecialRun);

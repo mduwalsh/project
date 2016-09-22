@@ -5,16 +5,16 @@
 
 
 #define EPS 1
-#define SPEC_RUN 1                // 1: plot from specific run ; 0: plot for all runs
+#define SPEC_RUN 0                // 1: plot from specific run ; 0: plot for all runs
 
 /* sets of parameters to be simulated on */
-unsigned long L[] = {2, 4, 6, 8, 10, 12, 14}; // bits
+unsigned long L[] = { 8, 10, 12, 14}; // bits
 unsigned long G[] = {100};
 unsigned long GS = 50;                        // number of generations to show in graphs
 unsigned long N0 = 64;
 unsigned long N;
-unsigned long Ni[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20};  // 2^n
-unsigned long Runs = 16;
+unsigned long Ni[] = {30, 40, 50};  // 2^n
+unsigned long Runs = 1;
 unsigned long SpecialRun = 12;           // when SPEC_RUN = 1
 
 
@@ -90,7 +90,8 @@ void plot_dist(FILE *p, char *datafile, int columns, char *title, char *xlabel, 
   fprintf(p, "set output '%s' \n", out);
   if(logscale) fprintf(p, "set logscale xy \n");
   fprintf(p, "set title '%s' \n", title);  
-  //fprintf(p, "set bmargin 5 \n");
+  fprintf(p, "set xtics nomirror \n");
+  fprintf(p, "set ytics nomirror \n");
   fprintf(p, "set xlabel '{/Helvetica-Oblique %s}' \n", xlabel);
   fprintf(p, "set ylabel '{/Helvetica-Oblique %s}' \n", ylabel);
   fprintf(p, "plot for [col=2:%d] '< head -%lu %s' using 1:col with lines title '' \n", columns, GS+1, datafile);    

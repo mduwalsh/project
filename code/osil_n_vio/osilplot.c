@@ -74,12 +74,13 @@ void plot_data_all_finite(unsigned long b, unsigned long g, unsigned long n, uns
   // diploid finite
   sprintf(ifn, "%s_osc_diploid_%02lu.dat", str, run);
   sprintf(ofn, "b%02lu_g%04lu_n%06lu_osc_fin_dip_%02lu.eps", b, GS, n, run);
-  sprintf(title, "finite diploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu", b, GS, n*n);
+  sprintf(title, "finite diploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu", b, GS, n);
   plot(ifn, 3, title, "g", "d", 0, ofn);
 }
 
 void plot_dist(FILE *p, char *datafile, int columns, char *title, char *xlabel, char *ylabel, int logscale, char *out)
 {
+  fprintf(p, "set border 3\n");
   fprintf(p, "set key outside \n");     
 #if EPS
   fprintf(p, "set term postscript eps enhanced color solid font \"Helvetica,25\" \n");
@@ -93,6 +94,8 @@ void plot_dist(FILE *p, char *datafile, int columns, char *title, char *xlabel, 
   fprintf(p, "set xlabel '{/Helvetica-Oblique %s}' \n", xlabel);
   fprintf(p, "set ylabel '{/Helvetica-Oblique %s}' \n", ylabel);
   fprintf(p, "plot for [col=2:%d] '< head -%lu %s' using 1:col with lines title '' \n", columns, GS+1, datafile);    
+  fprintf(p, "unset border\n");
+  fprintf(p, "show border\n");
 }
 
 void plot_data_all_dist_fin_inf(unsigned long b, unsigned long g, unsigned long run)
@@ -104,7 +107,7 @@ void plot_data_all_dist_fin_inf(unsigned long b, unsigned long g, unsigned long 
   fprintf(p, "ymax_h = 0.0\n");
   fprintf(p, "ymax_d = 0.0\n");
   for(c = 0, ni = 0; ni < sizeof(Ni)/sizeof(unsigned long); ni++, c++){                        // through all sizes of finite population
-      n = N0*Ni[ni];
+      n = pow(N0,2)*Ni[ni];
       //create file name string
       sprintf(str, "b%02lu_g%04lu_n%06lu", b, g, n);
       // haploid finite
@@ -118,7 +121,7 @@ void plot_data_all_dist_fin_inf(unsigned long b, unsigned long g, unsigned long 
       fprintf(p, "if(B%ld_max > ymax_d) {ymax_d = B%ld_max}\n", c, c);
   }
   for(ni = 0; ni < sizeof(Ni)/sizeof(unsigned long); ni++){                        // through all sizes of finite population
-    n = N0*Ni[ni];
+    n = pow(N0,2)*Ni[ni];
     //create file name string
     sprintf(str, "b%02lu_g%04lu_n%06lu", b, g, n);
     
@@ -132,7 +135,7 @@ void plot_data_all_dist_fin_inf(unsigned long b, unsigned long g, unsigned long 
     fprintf(p, "set yrange [0:ymax_d] \n");
     sprintf(ifn, "%s_osc_diploid_dist_%02lu.dat", str, run);
     sprintf(ofn, "b%02lu_g%04lu_n%06lu_osc_fin_dip_dist_%02lu.eps", b, GS, n, run);
-    sprintf(title, "distance diploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu", b, GS, n*n);
+    sprintf(title, "distance diploid {/Helvetica-Oblique l}:%lu, g:%lu, n:%lu", b, GS, n);
     plot_dist(p, ifn, 2, title, "g", "d", 0, ofn);
   }
   fprintf(p, "set autoscale y \n");
@@ -154,7 +157,7 @@ int main()
         for(j = 0; j < Runs; j++){
 	  plot_data_all_infinite(L[li], G[gi], j);
 	  for(ni = 0; ni < sizeof(Ni)/sizeof(unsigned long); ni++){                        // through all sizes of finite population
-	    N = N0*Ni[ni];
+	    N = pow(N0,2)*Ni[ni];
 	    plot_data_all_finite(L[li], G[gi], N, j);   	    
 	  }
 	  plot_data_all_dist_fin_inf(L[li], G[gi], j);
@@ -162,7 +165,7 @@ int main()
 #else
 	plot_data_all_infinite(L[li], G[gi], SpecialRun);
 	for(ni = 0; ni < sizeof(Ni)/sizeof(unsigned long); ni++){                        // through all sizes of finite population
-	  N = N0*Ni[ni];
+	  N = pow(N0,2)*Ni[ni];
 	  plot_data_all_finite(L[li], G[gi], N, SpecialRun);    	  
 	}
 	plot_data_all_dist_fin_inf(L[li], G[gi], SpecialRun);

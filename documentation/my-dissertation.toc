@@ -26,4 +26,4 @@
 \contentsline {section}{\numberline {5.5}Violation}{45}{section.5.5}
 \contentsline {chapter}{\numberline {6}Conclusion}{96}{chapter.6}
 \contentsline {chapter}{Bibliography}{97}{section*.77}
-\contentsline {chapter}{Vita}{100}{section*.79}
+\contentsline {chapter}{Vita}{101}{section*.79}

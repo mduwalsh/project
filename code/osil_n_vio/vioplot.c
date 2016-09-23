@@ -21,9 +21,9 @@ unsigned long SpecialRun = 14;           // when SPEC_RUN = 1
 /* end of sets of parameters to be simulated on */
 
 // plot data using lines with gnuplot
-void plot(char *datafile, int columns, char *title, char *xlabel, char *ylabel, int logscale, char *out)
+void plot(FILE *p, char *datafile, int columns, char *title, char *xlabel, char *ylabel, int logscale, char *out)
 {
-  FILE *p = popen("gnuplot -persistent", "w"); // open gnuplot in persistent mode
+  
 
   fprintf(p, "set key outside \n");     
 #if EPS
@@ -40,13 +40,14 @@ void plot(char *datafile, int columns, char *title, char *xlabel, char *ylabel, 
   fprintf(p, "set ylabel '{/Helvetica-Oblique %s}' \n", ylabel);
   fprintf(p, "plot for [col=2:%d] '< head -%lu %s' using 1:col with lines title '' \n", columns, GS, datafile);  
   
-  fflush(p);
-  pclose(p);
+  
 }
 
 void plot_data_all_infinite(unsigned long b, unsigned long g, double epsilon, unsigned long run)
 {
-  char str[200], ifn[300], ofn[300], title[200];
+  FILE *p = popen("gnuplot -persistent", "w"); // open gnuplot in persistent mode
+  
+  char str[200], ifn[300], ofn[300], title[200];  
   //create file name string
   sprintf(str, "b%02lu_g%04lu_eps%.6lf", b, g, epsilon);
   // haploid infinite
@@ -69,6 +70,9 @@ void plot_data_all_infinite(unsigned long b, unsigned long g, double epsilon, un
   sprintf(ofn, "b%02lu_g%04lu_eps%.6lf_osc_inf_dip_wovio_%02lu.eps", b, g, epsilon, run);
   sprintf(title, "infinite diploid {/Helvetica-Oblique l}:%lu, g:%lu, eps:%.2f", b, GS, epsilon);
   plot(ifn, 3, title, "g", "d", 0, ofn);  
+  
+  fflush(p);
+  pclose(p);
 }
 
 void plot_data_all_finite(unsigned long b, unsigned long g, unsigned long n, double epsilon, unsigned long run)

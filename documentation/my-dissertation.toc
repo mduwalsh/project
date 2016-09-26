@@ -25,5 +25,5 @@
 \contentsline {section}{\numberline {5.4}Oscillation}{34}{section.5.4}
 \contentsline {section}{\numberline {5.5}Violation}{45}{section.5.5}
 \contentsline {chapter}{\numberline {6}Conclusion}{96}{chapter.6}
-\contentsline {chapter}{Bibliography}{97}{section*.77}
-\contentsline {chapter}{Vita}{101}{section*.79}
+\contentsline {chapter}{Bibliography}{97}{section*.78}
+\contentsline {chapter}{Vita}{101}{section*.80}

@@ -33,7 +33,7 @@ transition matrix
 \[
 Q_{p,q} = r! \prod \frac{(\mathcal{G}(p)_j)^{rq_j}}{(rq_j)!}
 \]
-So the conceptualization of RHS can be replaced by Markov chain model abstraction which makes no reference to sampling $\Omega$. That is from current population $p$, produce $q = \tau (p)$ with probability $Q_{p,q}$. With transition matrix defined for Markov chain model, Vose \cite{Vose1999} says the expected next generation $E(\tau (p))$ is $\mathcal{G}(p)$ and the expression in transition matrix
+So the conceptualization of RHS can be replaced by Markov chain model abstraction which makes no reference to sampling $\Omega$. That is from current population $p$, produce $q = \tau (p)$ with probability $Q_{p,q}$. With transition matrix defined for Markov chain model, Vose \cite{Vose1999} says the expected next generation $\mathcal{E}(\tau (p))$ is $\mathcal{G}(p)$ and the expression in transition matrix
 \[
 \sum q_j \ln \frac{q_j}{\mathcal{G}(p)!}
 \]
@@ -56,7 +56,7 @@ indicates the probability that $q$ is the next generation decays exponentially w
 
 \cite{Vose1999} calculated variance of next generation population with respect to expected population as 
 \[
-E(\| \tau (p) - \mathcal{G}(p) \|^2) = (1 - \|\mathcal{G}(p)\|^2) / r
+\mathcal{E}(\| \tau (p) - \mathcal{G}(p) \|^2) = (1 - \|\mathcal{G}(p)\|^2) / r
 \]
 and mentioned $\tau (p)$ converges in probability to $\mathcal{G}(p)$ as the population size increases. Therefore, $\tau$ corresponds to $\mathcal{G}$ in the infinite
 population case.

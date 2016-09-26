@@ -182,29 +182,29 @@ Slopes of the regression lines shown in {\bf Figure \ref{regression-parameters}}
 approximately $-0.5$, indicating
 \begin{equation}
 \label{covergenceDistance}
-d \; \approx \; k/\sqrt{N}
+d \; \approx \; k/\sqrt{N}.
 \end{equation}
-which agrees with the expected rate of convergence for the single-step
-haploid case \cite{Vose1999b}; the distance is inversely proportional
-to square root of population size. 
+ 
 \cite{Vose1999b} calculated variance of next generation population with respect to expected population as 
 \[
-E(\| \bm{q} - \mathcal{G}(\bm{p}) \|^2) = (1 - \|\mathcal{G}(\bm{p})\|^2) / \bm{N}
+\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|^2) = (1 - \|\mathcal{G}(\bm{p})\|^2) / \bm{N}
 \] 
 where $\bm{q}$ is actual population and $\mathcal{G}(\bm{p})$ is expected population.
 Let $x$ be the random variable $\| \bm{q} - \mathcal{G}(\bm{p}) \|$. Let $\phi$ be the function $\phi (x) = x^2$ 
-which is convex function. Then $E(\| \bm{q} - \mathcal{G}(\bm{p}) \|^2)$ becomes $E(\phi (x))$. From Jensen's inequality, %\cite{Wiki1},
+which is convex function. Then $\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|^2)$ becomes $\mathcal{E}(\phi (x))$. From Jensen's inequality, %\cite{Wiki1},
 if $\phi$ is a convex function, then
 \begin{eqnarray*}
-\phi(E(x))) & \leq & E(\phi{x}) \\
-E(x) & \leq & \sqrt{E(x^2)}
+\phi(\mathcal{E}(x))) & \leq & \mathcal{E}(\phi{x}) \\
+\mathcal{E}(x) & \leq & \sqrt{\mathcal{E}(x^2)}
 \end{eqnarray*}
 Substituting original variables,
 \begin{equation}
 \label{convergenceRHS}
-E(\| \bm{q} - \mathcal{G}(\bm{p}) \|) \leq \sqrt{(1 - \|\mathcal{G}(\bm{p})\|^2) / \bm{N}}
+\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|) \leq \sqrt{(1 - \|\mathcal{G}(\bm{p})\|^2) / \bm{N}}
 \end{equation}
-Equation \ref{covergenceDistance} is in congruence with equation \ref{covergenceRHS}
+Equation \ref{convergenceRHS} shows the expected rate of convergence for the single-step
+haploid case; the distance is inversely proportional to square root of population size. 
+And equation \ref{covergenceDistance} agrees with  equation \ref{convergenceRHS}.
 
 The consistent convergence rate
 across multiple generations is somewhat surprising, simulation

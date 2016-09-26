@@ -214,9 +214,8 @@ where $\gamma = \langle \gamma_0, \gamma_1 \rangle$ is diploid genome.
 
 For a genome length $\ell$, same initial population (calculated as described in (\ref{InitPopOsc})) was used for infinite population and all 
 sizes of finite population conisdered.
-Genome lengths $\ell = {4, 8, 12}$ were used. Minimum population size of $N_0 = 64$ was considered for finite haploid case and 
-different population sizes $N = \{1N_0, 2N_0,.., 20N_0\}$ were considered. Finite diploid population was set as squared size of haploid 
-population $N^2$.
+Genome lengths $\ell = {8, 10, 12, 14}$ were used. Base population size of $N_0 = 64$ was considered for finite haploid case and 
+different population sizes $N = \{1N_0^2, 10N_0^2, 20N_0^2\}$ were considered for plotting graphs. 
 The distances of $\bm{p}^n$ and $\bm{s}^n$ to haploid evolutionary limits $\bm{p}_h^{\ast}$ and $\bm{q}_h^{\ast}$ were plotted and the distances of $\bm{q}^n$ and 
 $\bm{f}^n$ to diploid evolutionary limits $\bm{p}_d^{\ast}$ and $\bm{q}_d^{\ast}$ were plotted.
 
@@ -232,8 +231,32 @@ depticts oscillating behavior of both infinite and finite population when necess
 Oscillation in finite population in both haploid and diploid case simulation became sharper with increased population size as expected. 
 As size of finite population increased, oscillation behavior depicted by finite population is more similar to oscillation behavior depicted by infinite population. 
 
-Graphs for distance between finite population and infinite population for both haploid and diploid case were also plotted for each generation. 
-The resulting graphs showed distance decreased as population size increased which is in congruence with results from \ref{convergence}. 
+Graphs for distance between finite population and infinite population for both haploid and diploid case were also plotted for 
+each generation on right side of oscillation graphs in above figures. The resulting graphs showed distance decreased as population size increased 
+which is expected and in congruence with results from \ref{convergence}. 
+
+Numerator $\sqrt{(1 - \|\mathcal{G}(\bm{p})\|^2)}$ in equation \ref{convergenceRHS} is calculated using initial population and is $\approx 1$. 
+So from \ref{convergenceRHS}, the expected distance between finite and infinite population, $d$, can be calculated as
+\[
+d \approx 1/\sqrt{N}
+\]
+where $N$ is size of finite population.
+Then mathematical expection of distance for finite population size considered for plotting is shown in following table.
+\begin{table}[ht]
+\caption{Expected distance for population size}
+\centering
+\begin{tabular}{c c c c}
+\hline
+$N$ & 4096 & 40960 & 81920 \\
+$d$ & 0.015625 & 0.004941 & 0.003494 \\
+\hline
+\end{tabular}
+\label{tableExpectedDistance}
+\end{table}
+
+The distance graphs, obtained from simulations, in \textbf{ Figures} \ref{oscillation_8h}, \ref{oscillation_8d}, \ref{oscillation_10h}, 
+\ref{oscillation_10d}, \ref{oscillation_12h}, \ref{oscillation_12d}, \ref{oscillation_14h} and \ref{oscillation_14d}  for 
+finite population sizes $N = {4096, 40960, 81920}$ shows distance similar to expected distance given by table \ref{tableExpectedDistance}.
 
 
 
@@ -271,12 +294,13 @@ So that
 
 Then $j$ is chosen where $\bm{\chi}_j = 0$ and set $\bm{\chi}_j = \epsilon$. \newline
 
-Simulations were run again with the violations in (\ref{OscCond}) implemented. Genome lengths $\ell = {4, 6, 8, 10, 12, 14}$ were considered. 
-Different finite hapliod population sizes $N = \{1N_0, 2N_0,.., 20N_0\}$ were considered. 
+Simulations were run again with the violations in (\ref{OscCond}) implemented. Genome lengths $\ell = {8, 10, 12, 14}$ were considered. 
+Different finite hapliod population sizes $N = \{1N_0^2, 10N_0^2, 20N_0^2\}$ were considered. 
 \newline
-Let ${\bm{p}1}_h^{\ast}$ and ${\bm{q}1}_h1^{\ast}$ be haploid evolutionary limits with violation and ${\bm{p}1}_d^{\ast}$ and ${\bm{q}1}_d^{\ast}$ be diploid 
-evolutionary limits with violation. The distances of ${p}^n$ and $\bm{s}^n$ to ${\bm{p}1}_h^{\ast}$ and ${\bm{q}1}_h1^{\ast}$ were plotted and the distances of 
-$\bm{q}^n$ and $\bm{f}^n$ to ${\bm{p}1}_d^{\ast}$ and ${\bm{q}1}_d^{\ast}$ were plotted. The distances of population to evolutionary limits that would be 
+Let ${\bm{p}1}^{\ast}$ and ${\bm{q}1}^{\ast}$ be evolutionary limits with violation, 
+then ${\bm{p}1}^{\ast} = {\bm{q}1}^{\ast} = {\bm{z}}^\ast$; $\bm{z}^\ast$ is limit when there is violation.
+The distances of ${p}^n$ and $\bm{s}^n$ to $\bm{z}^\ast$ were plotted and the distances of 
+$\bm{q}^n$ and $\bm{f}^n$ to $\bm{z}^\ast$ were plotted. The distances of population to evolutionary limits that would be 
 without violation in $\mu$ and $\chi$ were also plotted.
 
 
@@ -289,23 +313,21 @@ without violation in $\mu$ and $\chi$ were also plotted.
 First columns of graphs above for violation in $\mu$ and in $\chi$ show distance of finite and infinite population to evolutionary limits with violation and 
 second columns show distance of distance of finite and infinite population to evolutionary limits that would be without violation. 
 
-Graphs in first columns (distance of finite and infinite population to evolutionary limits with violation) shows ripples dying out 
-as finite population size increases and converging to infinite population behavior as finite population reach large number. Distance to limits with violation in $\mu$ or $\chi$ 
-decreased as generation proceeds and rate of convergence increased as finite population size increased. It is important to notice here that 
-even though the distance of population to limits with violation ${{\bm p}1}^\ast$ and ${{\bm q}1}^\ast$ were plotted, only one line appears as 
-${{\bm p}1}^\ast = {{\bm q}1}^\ast$ as mentioned in section \ref{Limits} when necessary condition \ref{OscCond} is not met. 
+Graphs in first columns (distance of finite and infinite population to evolutionary limits with violation) shows distance between finite population 
+and limit with violation $\bm{z}^\ast$ decreases as finite population size increases and converging to infinite population behavior as finite population reach large number. 
+The rate of convergence of finite population matches with expected rate of convergence calculated by \cite{Vose1999b} which is shown in table \ref{tableExpectedDistance}.
 
 Second columns of graphs gives clearer picture of oscillating behavior of population with violation in $\mu$ or $\chi$ distribution. 
-Since distance plotted is to evolutionary limits that would be if there were no violation, two lines oscillating are visible. 
-As finite population size increased, rate of dampening of oscillation increased as generation proceeeds forward and 
-finite population behavior converges to that of infinite population. 
+Since distance plotted is to evolutionary limits that would be if there were no violation, two lines oscillating are visible. Infinite population oscillates but ripples die out gradually as generation increases, that infinite population is converging to limit with violation $\bm{z}^\ast$. As finite population size increases, its behavior converges to that of infinite population. 
 
-Change in oscillating behavior of population with change in $\epsilon$ values were also studied. With smaller values of $\epsilon$, 
+Change in oscillating behavior of population with change in $\epsilon$ values $\{0.01, 0.1, 0.5\}$ were also studied. With smaller values of $\epsilon$, 
 oscillation were sharper and as value of $\epsilon$ increased, rate of damping of ripples was quicker. Error $\epsilon$ introduced 
 to $\mu$ or $\chi$ distribution creates new masks (different than in case of without violation) to be used in mutation or crossover during transmission.
 With small $\epsilon$, the probablility of using the new masks available due to violation is very small and 
 those masks might not be used at all during crossover or mutation in finite population and with higher values of $\epsilon$, 
-those new masks have higher chance of usage during mutation or crossover which cause oscillation to die out.
+those new masks have higher chance of usage during mutation or crossover which cause oscillation to die out quickly. In figures for violation in $\mu$ distribution, with $epsilon = 0.01$, oscillation is clearly visible and ripples are sharper; with $\epsilon = 0.1$ oscillation was visible but ripples were damping out quickly;  with $\epsilon = 0.5$,
+oscillation was not visible. Damping out of ripples and converging to infinite population behavior increased as population size increased. 
+
 
 
 

@@ -8,9 +8,9 @@
 #include "rand.c"
 #include "sort.c"
 
-#define CLUSTER 1
+#define CLUSTER 0
 #define EPS 0
-#define VIO_MU_CHI 1       // 0: no violation in Mu nor chi; 1: violate Mu; 2: violate Chi
+#define VIO_MU_CHI 2       // 0: no violation in Mu nor chi; 1: violate Mu; 2: violate Chi
 
 #define ERR 0.00000001 // error for oscillation
 #define PREC "7.16"/* printing precision */
@@ -19,9 +19,9 @@ unsigned long L;  // no. of bits to represent chromosome
 int Runs;         // no. of runs of simulation
 
 unsigned long N0 = 64;
-unsigned long Ni[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+unsigned long Ni[] = {1, 10, 20};
 
-double Err[] = {0.01, 0.05, 0.1, 0.2, 0.5};
+double Err[] = {0.01, 0.1, 0.5};
 
 unsigned long Nh, Nd;   // size of finite population; N = Ni*N0 
 unsigned long G;  // no. of generations to simulate
@@ -570,9 +570,9 @@ void violate_mu()
       Mu[j] *= (1.0 - Epsilon); 
       s += Mu[j];
     }
-    /* for(j = 0; j < (1ul<<L); j++){                  // normalize
+    for(j = 0; j < (1ul<<L); j++){                  // normalize
       Mu[j] /= s;      
-      }*/
+    }
   }
 }
 
@@ -605,8 +605,10 @@ void violate_chi()
     j = 0;
     for(k = 0; k < (1ul<<L); k++){                  
       if(!j){
-	if(Chi[k] == 0.0) Chi[k] = Epsilon;         // install value epsilon to first element in Chi distribution with zero value.
-	j = 1;
+	if(Chi[k] == 0.0){ 
+	  Chi[k] = Epsilon;         // install value epsilon to first element in Chi distribution with zero value.
+	  j = 1;
+	}
       }
       else{
 	Chi[k] *= (1.0 - Epsilon); 	            // remove Epsilon proportion from other elements
@@ -614,9 +616,9 @@ void violate_chi()
       s += Chi[k];
     }
     
-    /* for(k = 0; k < (1ul<<L); k++){                  // normalize
+    for(k = 0; k < (1ul<<L); k++){                  // normalize
       Chi[k] /= s;      
-      }*/
+    }
   }
 }
 
@@ -1387,10 +1389,11 @@ int main(int argc, char** argv)
     //mixing matrix before violation
     walsh(Mh, 0);                                          // calculate and install values in mixing matrix in walsh basis (Mhat)
     comp_periodic_orbits(p1_str, q1_str, P0);              // computes p_str and q_str oscillating points before violation
-    
+    //display_p(Chi, "before violation chi:"); 
     for(k = 0; k < sizeof(Err)/sizeof(double); k++){
       copy_array(Chi_0, Chi, 1ul<<L);
       copy_array(Mu_0, Mu, 1ul<<L);
+      //display_p(Chi, "after copy from Chi_0 chi:"); 
       Epsilon = Err[k];
       // introduce violation in Mu or Chi
       if(VIO_MU_CHI == 1){
@@ -1398,6 +1401,7 @@ int main(int argc, char** argv)
       }
       else if(VIO_MU_CHI == 2){
 	violate_chi();                             // violates oscillating condition in Chi
+	//display_p(Chi, "after violation chi:"); 
       } 
       // calculation mixing matrix after violation
       walsh(Mh, 0);                                          // calculate and install values in mixing matrix in walsh basis (Mhat) after violation

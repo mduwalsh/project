@@ -559,9 +559,9 @@ void violate_mu()
       Mu[j] *= (1.0 - Epsilon); 
       s += Mu[j];
     }
-    /* for(j = 0; j < (1ul<<L); j++){                  // normalize
+    for(j = 0; j < (1ul<<L); j++){                  // normalize
       Mu[j] /= s;      
-      }*/
+    }
   }
 }
 
@@ -592,8 +592,10 @@ void violate_chi()
     j = 0;
     for(k = 0; k < (1ul<<L); k++){                  
       if(!j){
-	if(Chi[k] == 0.0) Chi[k] = Epsilon;         // install value epsilon to first element in Chi distribution with zero value.
-	j = 1;
+	if(Chi[k] == 0.0){
+	  Chi[k] = Epsilon;         // install value epsilon to first element in Chi distribution with zero value.
+	  j = 1;
+	}
       }
       else{
 	Chi[k] *= (1.0 - Epsilon); 	            // remove Epsilon proportion from other elements
@@ -601,9 +603,9 @@ void violate_chi()
       s += Chi[k];
     }
     
-    /* for(k = 0; k < (1ul<<L); k++){                  // normalize
+    for(k = 0; k < (1ul<<L); k++){                  // normalize
       Chi[k] /= s;      
-      }*/
+    }
   }
 }
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  26 SEP 2016 15:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  28 SEP 2016 10:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -897,7 +897,7 @@ File: figures/eps/osc/b10/n081920_osc_fin_dip_dist.eps Graphic file (type eps)
 File: figures/eps/osc/b10/osc_inf_dip.eps Graphic file (type eps)
 
 <figures/eps/osc/b10/osc_inf_dip.eps>
-Overfull \vbox (13.11111pt too high) has occurred while \output is active []
+Overfull \vbox (27.61111pt too high) has occurred while \output is active []
 
 
 [39]
@@ -2659,15 +2659,19 @@ Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
 (rerunfilecheck)             Checksum: 504D706218B998DAF763749C338308EF;2194.
 Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
 (rerunfilecheck)             Checksum: 7716922C7D44ECE4D67FF58ADBC50926;1312.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 134.
  ) 
 Here is how much of TeX's memory you used:
  9382 strings out of 495029
  156749 string characters out of 6181522
- 255709 words of memory out of 5000000
+ 256101 words of memory out of 5000000
  12268 multiletter control sequences out of 15000+600000
  18573 words of font info for 71 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  39i,13n,51p,768b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (126 pages, 547592 bytes).
+Output written on my-dissertation.dvi (126 pages, 548680 bytes).

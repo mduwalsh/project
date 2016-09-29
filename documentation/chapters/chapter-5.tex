@@ -236,14 +236,14 @@ each generation on right side of oscillation graphs in above figures. The result
 which is expected and in congruence with results from \ref{convergence}. 
 
 Numerator $\sqrt{(1 - \|\mathcal{G}(\bm{p})\|^2)}$ in equation \ref{convergenceRHS} is calculated using initial population and is $\approx 1$. 
-So from \ref{convergenceRHS}, the expected distance between finite and infinite population, $d$, can be calculated as
+So from \ref{convergenceRHS}, the expected single step distance between finite and infinite population, $d$, can be approximated as
 \[
 d \approx 1/\sqrt{N}
 \]
 where $N$ is size of finite population.
 Then mathematical expection of distance for finite population size considered for plotting is shown in following table.
 \begin{table}[ht]
-\caption{Expected distance for population size}
+\caption{Expected distance $d$ for population size $N$}
 \centering
 \begin{tabular}{c c c c}
 \hline
@@ -254,9 +254,46 @@ $d$ & 0.015625 & 0.004941 & 0.003494 \\
 \label{tableExpectedDistance}
 \end{table}
 
+Distances of finite population of size $N = \{4096, 40960, 81920\}$ to infinite population obtained from simulation for oscillation 
+without violation for both haploid and dioploid case with genome length $\ell = \{8, 10, 12, 14\}$ are tabulated below.
+
+\begin{table}[ht]
+\caption{Experimental distance $d^\prime$ measured for oscillation}
+\centering
+\begin{tabular}{c c c c}
+\hline
+$N$ & $\ell$ & case & $d^\prime$
+\hline
+\multirow{8}{*}{4096} & \multirow{2}{*}{8} 	& haploid & 0.0159 \\
+		      &   			& diploid & 0.0157 \\
+		      & \multirow{2}{*}{10} 	& haploid & 0.016 \\
+		      &  	 		& diploid & 0.0157 \\
+		      & \multirow{2}{*}{12} 	& haploid & 0.0158 \\
+		      &  	 		& diploid & 0.0157 \\
+		      & \multirow{2}{*}{14} 	& haploid & 0.0158 \\
+		      &  	 		& diploid & 0.0156 \\
+\multirow{8}{*}{40960} & \multirow{2}{*}{8} 	& haploid & 0.0055 \\
+		      &   			& diploid & 0.005 \\
+		      & \multirow{2}{*}{10} 	& haploid & 0.005 \\
+		      &  	 		& diploid & 0.005 \\
+		      & \multirow{2}{*}{12} 	& haploid & 0.005 \\
+		      &  	 		& diploid & 0.005 \\
+		      & \multirow{2}{*}{14} 	& haploid & 0.005 \\
+		      &  	 		& diploid & 0.0049 \\
+\multirow{8}{*}{81920} & \multirow{2}{*}{8} 	& haploid & 0.0038 \\
+		      &   			& diploid & 0.0036 \\
+		      & \multirow{2}{*}{10} 	& haploid & 0.0038 \\
+		      &  	 		& diploid & 0.0035 \\
+		      & \multirow{2}{*}{12} 	& haploid & 0.0035 \\
+		      &  	 		& diploid & 0.0035 \\
+		      & \multirow{2}{*}{14} 	& haploid & 0.0035 \\
+		      &  	 		& diploid & 0.0035 \\
+		      
+		      
+		     
 The distance graphs, obtained from simulations, in \textbf{ Figures} \ref{oscillation_8h}, \ref{oscillation_8d}, \ref{oscillation_10h}, 
 \ref{oscillation_10d}, \ref{oscillation_12h}, \ref{oscillation_12d}, \ref{oscillation_14h} and \ref{oscillation_14d}  for 
-finite population sizes $N = {4096, 40960, 81920}$ shows distance similar to expected distance given by table \ref{tableExpectedDistance}.
+finite population sizes $N = \{4096, 40960, 81920\}$ shows distance similar to expected distance given by table \ref{tableExpectedDistance}.
 
 
 
@@ -314,7 +351,7 @@ First columns of graphs above for violation in $\mu$ and in $\chi$ show distance
 second columns show distance of distance of finite and infinite population to evolutionary limits that would be without violation. 
 
 Graphs in first columns (distance of finite and infinite population to evolutionary limits with violation) shows distance between finite population 
-and limit with violation $\bm{z}^\ast$ decreases as finite population size increases and converging to infinite population behavior as finite population reach large number. 
+and limit $\bm{z}^\ast$ with violation decreases as finite population size increases and converging to infinite population behavior as finite population reach large number. 
 The rate of convergence of finite population matches with expected rate of convergence calculated by \cite{Vose1999b} which is shown in table \ref{tableExpectedDistance}.
 
 Second columns of graphs gives clearer picture of oscillating behavior of population with violation in $\mu$ or $\chi$ distribution. 

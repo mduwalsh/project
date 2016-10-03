@@ -1,125 +1,40 @@
 \begin{table}[ht]
-\caption{Experimental distance $d^\prime$ measured for violation in $\bm{\mu}$ and population size $N = 4096$ }
+\caption{\textbf{Experimental distance measured for violation in $\bm{\mu}$:} $\ell$ is genome length, $\epsilon$ is error introduced to $\bm{\mu}$ for violation, $\{d^\prime, d^{\prime\prime}, d^{\prime\prime\prime}\}$ are distance measured for population size $\{4096, 40960, 81920\}$ respectively}
 \centering
-\begin{tabularx}{0.75\textwidth}{ c *{3}{X}}
+\begin{tabularx}{0.75\textwidth}{ c *{5}{X}}
 \toprule
-$\epsilon$ & case & $\ell$ & $d^\prime$ \\
+$\epsilon$ & case & $\ell$ & $d^\prime$ & $d^{\prime\prime}$ & $d^{\prime\prime\prime}$ \\
 \midrule
-\multirow{8}{*}{0.01} & \multirow{4}{*}{haploid} 	& 8 & 0.0170 \\
-		      &   				& 10 & 0.0165 \\ 
-		      & 			 	& 12 & 0.0160 \\
-		      &  	 			& 14 & 0.0157 \\ 
-		      \cmidrule(l){2-4}
-		      & \multirow{4}{*}{diploid} 	& 8 & 0.0156 \\
-		      &  	 			& 10 & 0.0156 \\
-		      & 			 	& 12 & 0.0156 \\
-		      &  	 			& 14 & 0.0156 \\
+\multirow{8}{*}{0.01} & \multirow{4}{*}{haploid} 	& 8 & 0.017614	& 0.009411	& 0.009261 \\
+		      &   				& 10 & 0.016812	& 0.008761 	& 0.007667 \\ 
+		      & 			 	& 12 & 0.016099	& 0.006417 	& 0.005315 \\
+		      &  	 			& 14 & 0.015690	& 0.005141 	& 0.003821 \\ 
+		      \cmidrule(l){2-6}
+		      & \multirow{4}{*}{diploid} 	& 8 & 0.015635	&  0.004994	& 0.003582 \\
+		      &  	 			& 10 & 0.015631	&  0.004952	& 0.003508 \\
+		      & 			 	& 12 & 0.015625	&  0.004942	& 0.003495 \\
+		      &  	 			& 14 & 0.015625	&  0.004941	& 0.003494 \\
 		      \midrule
-\multirow{8}{*}{0.1} & \multirow{4}{*}{haploid} 	& 8 & 0.0160 \\
-		      &   				& 10 & 0.0160 \\	
-		      & 				& 12 & 0.0157 \\	
-		      &  	 			& 14 & 0.0156 \\
-		      \cmidrule(l){2-4}
-		      & \multirow{4}{*}{diploid} 	& 8 & 0.0156 \\
-		      &  	 			& 10 & 0.0156 \\
-		      & 				& 12 & 0.0156 \\
-		      &  	 			& 14 & 0.0156 \\
+\multirow{8}{*}{0.1} & \multirow{4}{*}{haploid} 	& 8 & 0.015805	& 0.005400 	& 0.004080 \\
+		      &   				& 10 & 0.015825	& 0.005281 	& 0.003938 \\	
+		      & 				& 12 & 0.015672	& 0.005064 	& 0.003649 \\	
+		      &  	 			& 14 & 0.015645	& 0.004969 	& 0.003541 \\
+		      \cmidrule(l){2-6}
+		      & \multirow{4}{*}{diploid} 	& 8 & 0.015631	&  0.004946	& 0.003499 \\
+		      &  	 			& 10 & 0.015623	&  0.004942	& 0.003508 \\
+		      & 				& 12 & 0.015625	&  0.004941	& 0.003495 \\
+		      &  	 			& 14 & 0.015625	&  0.004941	& 0.003494 \\
 		      \midrule
-\multirow{8}{*}{0.5} & \multirow{4}{*}{haploid} 	& 8 & 0.0160 \\
-		      &   				& 10 & 0.0160 \\
-		      & 				& 12 & 0.0157 \\
-		      &  	 			& 14 & 0.0157 \\
-		      \cmidrule(l){2-4}
-		      & \multirow{4}{*}{diploid} 	& 8 & 0.0156 \\	
-		      &  	 			& 10 & 0.0156 \\
-		      &  				& 12 & 0.0156 \\
-		      &  	 			& 14 & 0.0156 \\
+\multirow{8}{*}{0.5} & \multirow{4}{*}{haploid} 	& 8 & 0.016364	&  0.005641	& 0.004239 \\
+		      &   				& 10 & 0.016130	&  0.005491	& 0.004048 \\
+		      & 				& 12 & 0.015743	&  0.005079	& 0.003642 \\
+		      &  	 			& 14 & 0.015736	&  0.005109	& 0.003684 \\
+		      \cmidrule(l){2-6}
+		      & \multirow{4}{*}{diploid} 	& 8 & 0.015630	&  0.004952	& 0.003513 \\	
+		      &  	 			& 10 & 0.015626	&  0.004944 	& 0.003497 \\
+		      &  				& 12 & 0.015626	&  0.004941	& 0.003494 \\
+		      &  	 			& 14 & 0.015625	&  0.004941	& 0.003494 \\
 \bottomrule
 \end{tabularx}
-\label{ditanceMu4096}
-\end{table} 
-
-
-\begin{table}[ht]
-\caption{Experimental distance $d^\prime$ measured for violation in $\bm{\mu}$ and population size $N = 40960$ }
-\centering
-\begin{tabularx}{0.75\textwidth}{ c *{3}{X}}
-\toprule
-$\epsilon$ & case & $\ell$ & $d^\prime$ \\
-\midrule
-\multirow{8}{*}{0.01} & \multirow{4}{*}{haploid} 	& 8 & 0.0100 \\
-		      &   				& 10 & 0.0090 \\ 
-		      & 			 	& 12 & 0.0060 \\
-		      &  	 			& 14 & 0.0052 \\ 
-		      \cmidrule(l){2-4}
-		      & \multirow{4}{*}{diploid} 	& 8 & 0.0049 \\
-		      &  	 			& 10 & 0.0049 \\
-		      & 			 	& 12 & 0.0049 \\
-		      &  	 			& 14 & 0.0049 \\
-		      \midrule
-\multirow{8}{*}{0.1} & \multirow{4}{*}{haploid} 	& 8 & 0.0050 \\
-		      &   				& 10 & 0.0050 \\	
-		      & 				& 12 & 0.0050 \\	
-		      &  	 			& 14 & 0.0050 \\
-		      \cmidrule(l){2-4}
-		      & \multirow{4}{*}{diploid} 	& 8 & 0.0049 \\
-		      &  	 			& 10 & 0.0049 \\
-		      & 				& 12 & 0.0049 \\
-		      &  	 			& 14 & 0.0049 \\
-		      \midrule
-\multirow{8}{*}{0.5} & \multirow{4}{*}{haploid} 	& 8 & 0.0050 \\
-		      &   				& 10 & 0.0050 \\
-		      & 				& 12 & 0.0050 \\
-		      &  	 			& 14 & 0.0050 \\
-		      \cmidrule(l){2-4}
-		      & \multirow{4}{*}{diploid} 	& 8 & 0.0049 \\	
-		      &  	 			& 10 & 0.0049 \\
-		      &  				& 12 & 0.0049 \\
-		      &  	 			& 14 & 0.0049 \\
-\bottomrule
-\end{tabularx}
-\label{ditanceMu40960}
-\end{table} 
-
-
-
-\begin{table}[ht]
-\caption{Experimental distance $d^\prime$ measured for violation in $\bm{\mu}$ and population size $N = 81920$ }
-\centering
-\begin{tabularx}{0.75\textwidth}{ c *{3}{X}}
-\toprule
-$\epsilon$ & case & $\ell$ & $d^\prime$ \\
-\midrule
-\multirow{8}{*}{0.01} & \multirow{4}{*}{haploid} 	& 8 & 0.0090 \\
-		      &   				& 10 & 0.0080 \\ 
-		      & 			 	& 12 & 0.0050 \\
-		      &  	 			& 14 & 0.0039 \\ 
-		      \cmidrule(l){2-4}
-		      & \multirow{4}{*}{diploid} 	& 8 & 0.0036 \\
-		      &  	 			& 10 & 0.0035 \\
-		      & 			 	& 12 & 0.0035 \\
-		      &  	 			& 14 & 0.0035 \\
-		      \midrule
-\multirow{8}{*}{0.1} & \multirow{4}{*}{haploid} 	& 8 & 0.0035 \\
-		      &   				& 10 & 0.0035 \\	
-		      & 				& 12 & 0.0035 \\	
-		      &  	 			& 14 & 0.0035 \\
-		      \cmidrule(l){2-4}
-		      & \multirow{4}{*}{diploid} 	& 8 & 0.0035 \\
-		      &  	 			& 10 & 0.0035 \\
-		      & 				& 12 & 0.0035 \\
-		      &  	 			& 14 & 0.0035 \\
-		      \midrule
-\multirow{8}{*}{0.5} & \multirow{4}{*}{haploid} 	& 8 & 0.0040 \\
-		      &   				& 10 & 0.0038 \\
-		      & 				& 12 & 0.0035 \\
-		      &  	 			& 14 & 0.0035 \\
-		      \cmidrule(l){2-4}
-		      & \multirow{4}{*}{diploid} 	& 8 & 0.0036 \\	
-		      &  	 			& 10 & 0.0035 \\
-		      &  				& 12 & 0.0035 \\
-		      &  	 			& 14 & 0.0035 \\
-\bottomrule
-\end{tabularx}
-\label{ditanceMu81920}
-\end{table}  
+\label{distanceMu}
+\end{table}

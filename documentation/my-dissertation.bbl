@@ -52,4 +52,8 @@ Vose, M.~D. and Wright, A.~H. (1998).
 \newblock The simple genetic algorithm and the walsh transform: Part i, theory.
 \newblock {\em Evol. Comput.}, 6(3):253--273.
 
+\bibitem[Wikipedia, 2016]{JensenInequality}
+Wikipedia, C. (2016).
+\newblock Jensen's inequality.
+
 \end{thebibliography}

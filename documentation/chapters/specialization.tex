@@ -1,0 +1,359 @@
+\section{Specialization}\label{specialize}
+This section summarizes from the development in Vose \cite{Vose1999}.
+It specializes the haploid evolution equations in the previous section 
+to a context where mask-based crossing over and mutation operators are used, 
+leading to Vose's infinite population model for Genetic Algorithms.  Whereas 
+in previous sections {\em component} referred to a component
+of a distribution vector $q^n$ or $p^n$, in this section a component
+is either a probability (when when speaking of a component of a
+distribution vector), or a bit (when speaking of a component of a
+haploid).
+
+The set of haploids (i.e., length $\ell$ binary strings) is a
+commutative ring $\mathcal{R}$ under component-wise addition and
+multiplication modulo $2$.  This algebraic structure is crucial to
+Vose's specialization and subsequent analysis of
+(\ref{model3}). Denote the additive identity by ${\bf 0}$ and the
+multiplicative identity by ${\bf 1}$, and let $\overline{g}$
+abbreviate ${\bf 1} + g$.  Except when explicitly indicated otherwise,
+operations acting on elements of $\mathcal{R}$ are as defined in this
+paragraph.\footnote{In particular, $g \overline{g} = {\bf 0} = g+g$,
+  $g^2 = g$, $g + \overline{g} = {\bf 1}$ for all $g \in
+  \mathcal{R}$.}
+
+\section{Mutation}
+Mutation simulates effects of error that happen with low probability during duplication of chromosome. Mutation provides mechanism to inject new strings into the next generation population which gives {\em RHS} ability to search beyond the confines of initial population.
+
+Symbol $\bm{\mu}$ is used to represent mutation distribution describing the probability $\bm{\mu}_i$ with which $i \in \Omega$ is selected to be a mutation mask. $\bm{\mu} : \Omega \rightarrow \Omega$ is nondeterministic mutation function where the result $\bm{\mu}(x)$ of applying mutation function on $x$ is $x \oplus i$ with probability $\bm{\mu}_i$ of distribution $\bm{\mu}$ where $i$ is {\em mutation mask}. Mutating $x$ using mutation mask $i$ alters the bits of $x$ in those positions the mutation mask $i$ is 1.
+$\bm{\mu} \in [0, 0.5)$ is regarded as a {\em mutation rate} which implicitly specifies distribution $\bm{\mu}$ according to rule \cite{VoseWright1998}
+\[
+\bm{\mu}_i = (\bm{\mu})^{{\bf 1}^Ti} (1-\bm{\mu})^{\ell- {\bf 1}^Ti}
+\]
+If $g$ should mutate to $g^\prime$ with probability $\rho$,
+let\\[-0.2in]
+\[
+\bm{\mu}_{g + g^\prime} \; = \; \rho\\[0.05in]
+\]
+Given distribution $\bm{\mu}$, mutation is the stochastic operator sending
+$g$ to $g^\prime$ with probability $\bm{\mu}_{g + g^\prime}$.
+
+Mutation considered is {\em independent} for all $j$ and $k$ which means \cite{VoseWright1998}
+\[
+\bm{\mu}_j = \sum\limits_{k\otimes i=0} \bm{\mu}_{i\oplus j} \sum\limits_{k\overline \otimes i=0} \bm{\mu}_{i\otimes j}
+\]
+
+\section{Crossover}
+Crossover refers to crossing over (also termed recombination) between two chromosomes (strings in our case). Crossover like mutation also provides mechanism for injection of new strings into new generation population. Masked based crossover is used in this document. \cite{Geiringer1944} used crossover mask with probability (distribution) associated with the mask to generate offsprings from parent chromosomes in absence of mutation and selection. Let $\bm{\chi}_m$ be probability distribution with which $m$ is selected to be a crossover mask.
+Following \cite{Geiringer1944}, if crossing over $u$ and $v$ should produce $u^\prime$ and $v^\prime$ with probability $\rho$, let
+\[
+\bm{\chi}_m \; = \; \rho
+\]
+where $m$ is $1$ at components which $u^\prime$ inherits from $u$, and
+$0$ at components inherited from $v$.  It follows that\\[-0.3in]
+\begin{eqnarray*}
+u^\prime & = & m \nudge u + \overline{m} \nudge\nudge v \\
+v^\prime & = & m \nudge v + \overline{m} \nudge\nudge u
+\end{eqnarray*}
+Given distribution $\bm{\chi}$, crossover is the stochastic operator which
+sends $u$ and $v$ to $u^\prime$ and $v^\prime$ with probability $\bm{\chi}_m/2$ for each $u^\prime$ and $v^\prime$.
+
+$\bm{\chi}$ can be considered as a {\em crossover rate} that specifies the distribution $\bm{\chi}$ given by rule \cite{VoseWright1998}
+\[
+  \bm{\chi}_i =\begin{cases}
+    \bm{\chi}  c_i & \text{if $i>0$}.\\
+    1 - \bm{\chi} + \bm{\chi}  c_0 & \text{if $i = 0$}.
+  \end{cases}
+\]
+where $c \in \Lambda$ is referred to as {\em crossover type}. Classical crossover types include {\em 1-point crossover} and {\em uniform crossover}. For {\em 1-point crossover},
+\[
+  c_i =\begin{cases}
+    1/(\ell - 1) & \text{if $\exists k \in (0, \ell).i = 2^k - 1$}.\\
+    0 & \text{otherwise}.
+  \end{cases}
+\]
+and for uniform crossover, $c_i = 2^{-\ell}$.
+
+\section{Mixing Matrix}
+The combined action of mutation and crossover is referred to as {\em mixing}.
+The {\em mixing matrix\/} $M$ is the transmission matrix corresponding to the 
+additive identity of $\mathcal{R}$ is
+\[
+M \; = \; M_{\bf 0}\\[-0.01in]
+\]
+Crossover and mutation are defined in a manner respecting arbitrary partioning and arbitrary linkage to preserve the ability to endow abstract syntax with specialized semantics. Groups of loci can mutate and crossover with arbitrarily specified probabilities as disscussed in above sections. For mutation distribution $\bm{\mu}$ and crossover distribution $\bm{\chi}$, whether or not $\bm{\mu}$ is independent if mutation is performed before crossover, then transmission function can be expressed as \cite{VoseWright1998}
+\begin{equation}
+\label{transmission}
+t_{\langle u,v \rangle}(g) \; = \;\,
+\sum_{i \nudge \in \nudge \mathcal{R}} \, \sum_{j \nudge \in \nudge \mathcal{R}} \,
+\sum_{k \nudge \in \nudge \mathcal{R}}
+\bm{\mu}_i \nudge \bm{\mu}_j \, \frac{\bm{\chi}_k + \bm{\chi}_{\overline{k}}}{2} \,
+[\nudge k (u + i) + \overline{k}(v + j) \, = \, g\nudge]
+\end{equation}
+Here a child gamete $g$ is produced via mutation and then crossover (which are operators that
+commute). 
+
+The mixing matrix $M$ is a fundamental object, because (\ref{transmission}) implies that evolution equation (\ref{model3}) can be expressed in the form
+\begin{equation}
+\label{model4}
+p_g^\prime \; = \; (\sigma_g \nudge p)^T M \, (\sigma_g \nudge p)
+\end{equation}
+where the permutation matrix $\sigma_g$ is defined by component equations
+\[
+(\sigma_g)_{u,v} \; = \; [\nudge u+v = g\nudge ]
+\]
+
+\section{Walsh Transorm}
+A time series, f(t), in terms of a series of Walsh funcitons W(n,t) \cite{Beauchamp1975}, viz.
+\[
+f(t) = a_{0} W_{0,t} + \sum_{n=1}^{N-1} a_n W_{n,t}
+\]
+where $n$ is an ordering number, $N$ is number of terms used in Walsh series to express time series and
+\[
+\frac{a_0}{2} = \frac{1}{T} \int\limits_0^T f(t) W_{n,t} dt
+\]
+\[
+a_n = \frac{1}{T} \int\limits_0^T f(t) W_{n,t} dt
+\]
+
+Finite discrete Walsh transform pair on N sampling points, $x_t$, can be expressed as \cite{Beauchamp1975} 
+\begin{equation}
+\label{WalshT}
+X_n = \frac{1}{N} \sum_{t=0}^{N-1} x_t W_{n,t}
+\end{equation}
+\[
+n = 0, 1, 2...N-1
+\]
+and
+\[
+x_t = \sum_{n=0}^{N-1} X_n W_{n,t}
+\]
+\[
+t = 0, 1, 2...N-1
+\]
+
+The Walsh function series $W_{n,t}$ can be obtained using Walsh matrix also known as Hadamard matrix of order N. 
+Walsh matrix or Hadamard matrix is a square matrix of order N whose coefficients comprise only +1 and -1 and where its rows 
+(and columns) are orthogonal to one another. 
+The Walsh matrix is defined by
+\[
+W_{n,t} = N^{-1/2} (-1)^{n \cdot t}
+\]
+where $N^{-1/2}$ is normalization factor and $n \cdot t$ is bitwise dot product of binary representation of number n and t.
+
+The matrix is symmetric, i.e.,
+\[
+W_{n,t} = W_{n,t}
+\]
+and it has entries satisfying
+\[
+W_{n, t \oplus k} = N^{1/2} W_{n, t} W_{n, k}
+\]
+
+The practical importance of this symmetry is that the transform and inverse represent same mathematical operation, hence simplifying the derivation and application of the transform. With the normalized form, \textit{Walsh matrix} is its own inverse, i.e.,
+\[
+W = W^{-1}
+\]
+
+In the matrix form, given vector $w$ and matrix $A$, let $\widehat{w}$ and
+$\widehat{A}$ denote the Walsh transform of $w$ and $A$ respectively. Then $\widehat{w} = Ww$ and
+$\widehat{A} = WAW$. If $w$ is a row vector, then $w$ in its Walsh basis $\widehat{w}$ represents $wW$.
+
+\section{Walsh Transform Adaptation}
+The Walsh transform has spectacular ability to unravel the intricacies of mixing. And that is why we adapt Walsh transform methods for computing evolutionary trajectories, which have already been established for Vose's haploid model \cite{VoseWright1998}. Adaptation of Walsh transformation efficiently models infinite diploid population evolution. This adaptation of Walsh transormation helps in making feasible comparisons between finite and infinte diploid population short-term evolutionary behavior.
+Recalling evolution equation (\ref{model4}), without selection, specialized to Vose's infinite population model expressed in mixing matrix's term,
+\[
+p_g^\prime \; = \; (\sigma_g \nudge p)^T M \, (\sigma_g \nudge p)
+\]
+where the permutation matrix $\sigma_g$ is defined by component
+equations
+\[
+(\sigma_g)_{u,v} \; = \; [\nudge u+v = g\nudge ]
+\]
+
+In our model, the Walsh matrix $W$
+is defined by component equations
+\[
+W_{u,v} \; = \; 2^{-\ell/2} (-1)^{u^T v}
+\]
+where the subscripts \nudge u, \nudge v (which belong to $\mathcal{R}$) on the left hand side are interpreted on the right hand side as column vectors in $\mathbb{R}^{\ell}$.
+Columns of $W$ form the orthonormal basis --- the
+{\em Walsh basis\/} --- which simultaneously diagonalizes the
+$\sigma_g$.
+
+A change of basis which simultaneously diagonalizes the $\sigma_g$
+unravels the evolution equation (\ref{model4}).  
+Expressed in the Walsh basis (see \cite{VoseWright1998}), the mixing matrix
+takes the form
+\begin{equation}
+\label{Mhat}
+\widehat{M}_{u,v} \; = \; 2^{\,\ell-1} \,[\nudge u \nudge v = {\bf
+    0}\nudge]\, \widehat{\bm{\mu}}_u \nudge \widehat{\bm{\mu}}_v \!  \sum_{k
+  \nudge \in \nudge \overline{u+v} \nudge \mathcal{R}} \bm{\chi}_{k + u} +
+\bm{\chi}_{k + v}
+\end{equation}
+and equation (\ref{model4}) takes the form
+\begin{equation}
+\label{model5}
+\widehat{p}_g^{\,\,\prime} \; = \; 2^{\,\ell/2} \sum_{i \nudge \in \nudge g \mathcal{R}}
+\widehat{p}_i \, \nudge \widehat{p}_{i+g} \,\widehat{M}_{i,i+g}
+\end{equation}
+where $g \mathcal{R} = \{g \nudge i \, | \, i \in \mathcal{R} \}$ (for
+any $g \in \mathcal{R}$).
+
+The mapping from generation $n$ to generation $n+1$, determined in
+natural coordinates by equation (\ref{model3}) in terms of the
+transmission function (\ref{Mg}), and given in Walsh coordinates by
+equation (\ref{model5}) in terms of the mixing matrix (\ref{Mhat}), is
+Markovian; the next state $p^\prime$ depends only upon the current
+state $p$.  Let $\mathcal{M}$ represent the mixing transformation,
+\begin{equation} \label{mixing_transformation}
+p^\prime \; = \; \mathcal{M}(p)
+\end{equation}
+and let $\mathcal{M}^n(p)$ denote the $n$-fold composition of
+$\mathcal{M}$ with itself; thus generation $n+1$ is described by
+\[
+p^{n+1} \; = \; \mathcal{M}^n(p^1)
+\]
+where $p^1 = \pi (q^1)$.  We have little to say
+about the matrix of the Markov chain corresponding to the mixing
+transformation $\mathcal{M}$, because it is uncountable; each state is
+a distribution vector $p$ describing a population. However, that is
+not an obstacle to computing evolutionary trajectories;
+(\ref{mixing_transformation}) can be computed in Walsh coordinates
+relatively efficiently via (\ref{Mhat}) and (\ref{model5}).
+
+\section{Fast Walsh Transform}
+However, computation of discrete Walsh transform given by equation (\ref{WalshT}) takes $N^2$ operations (addition or subtraction).
+An algorithm using matrix factorization techniques is found to perform transformation in $N \log_2 N$ operations.
+This algorithm in fast Walsh transform (FWT). 
+\cite{Shanks1969} described FWT algorithm which is analogous to \cite{CooleyTukey1965} algorithm for fast Fourier transformation. Shanks assumed walsh function to be periodic with period $N$, where $N$ is an integral power of 2. So a complete orthogonal set will have $N$ function $W_{m,n}$ where $m = 0, 1, 2,.., N-1$ and $n = 0, 1, 2,.., N-1$. The first two discrete walsh functions are defined as 
+\begin{equation}
+\label{FWT1}
+W_{0,n} = 1    \text{ for $n = 0, 1, 2,.., N-1$}
+\end{equation}
+\begin{equation}
+\label{FWT2}
+W_{1,n} = \begin{cases}
+    1 & \text{for $n = 0, 1, 2,.., (N/2)-1$}.\\
+    -1 & \text{for $n = N/2, (N/2)+1,.., N-1$}.
+  \end{cases}
+\end{equation}
+
+Remainder of set can be generated by using multiplicative iterative equation: 
+\begin{equation}
+\label{FWT3}
+W_{m,n} = W_{[m/2],2n}\cdot W_{m-2[m/2], n}
+\end{equation}
+where $[m/2]$ indicates the integer part of $m/2$.
+
+The discrete Walsh functions as defined here are symmetric with respect to the argument (m, n). That is,
+\[
+W_{m, n} = W_{n,m}.
+\]
+
+For real array of length $N$, Walsh transform can be defined as 
+\begin{equation}
+\label{FWT4}
+F(m) = \sum\limits_{n=0}^{N-1} f(n) W_{m,n}, \text{where $m = 0, 1, 2,.., N-1$}
+\end{equation}
+
+Similarly, for inverse transform is
+\begin{equation}
+\label{FWT5}
+f(n) = \frac{1}{N}\sum\limits_{m=0}^{N-1} F(m) W_{m,n}, \text{where $n = 0, 1, 2,.., N-1$}
+\end{equation}
+
+Since walsh functions $W_{m,n}$ have values either $1$ or $-1$, computation of (\ref{FWT4}) and (\ref{FWT5}) does not require multiplication.
+\cite{Shanks1969} derived using (\ref{FWT3}) an algorithm analogous to Cooley-Tukey algorithm that will require $N \log_2 N$ summations to compute complete Walsh transform. \linebreak
+For $N = 8$ (which can be extended to general case),\linebreak
+indices in (\ref{FWT4}) can be replaced with a set which can only have values 0 and 1. That is, 
+\begin{equation}
+\label{FWT6}
+m = 4j_2 + 2j_1 + j_0, \text{$j_2, j_1, j_0 = 0$ or $1$}
+\end{equation}
+\begin{equation}
+\label{FWT7}
+n = 4k_2 + 2k_1 + k_0, \text{$k_2, k_1, k_0 = 0$ or $1$}
+\end{equation}
+Using these new notations, $W_{m,n}$ becomes $W(j_2,j_1,j_0;k_2,k_1,k_0)$. So (\ref{FWT4}) becomes 
+\begin{equation}
+\label{FWT8}
+F(j_2,j_1,j_0) = \sum\limits_{k0 = 0}^1 \sum\limits_{k1 = 0}^1 \sum\limits_{k2 = 0}^1 f(k2,k1,k0) \cdot W(j_2,j_1,j_0;k_2,k_1,k_0)
+\end{equation}
+
+Here, $j_2,j_1,j_0$ is binary representation of $m$. So, dividing $m$ by $2$ equivalents to shifting binary representation of $m$ by $1$ to the right and dropping fractional bit. That is, if 
+\[
+m \leftrightarrow j_2j_1j_0
+\]
+then,
+\[
+[m/2] \leftrightarrow 0j_2j_1.
+\]
+
+Similarly, if
+\[
+n \leftrightarrow k_2k_1k_0
+\]
+then,
+\[
+2n \leftrightarrow k_2k_1k_00.
+\]
+An 8-length Walsh function is periodic with period 8. Thus any index (such as $2n$) can be evaluated modulo 8. This is equivalent to deleting any bits above the third bit and we have 
+\[
+2n(modulo 8) \leftrightarrow k_1K_00
+\]
+
+Using these indices, (\ref{FWT3} becomes
+\begin{equation}
+\label{FWT9}
+W(j_2,j_1,j_0;k_2,k_1,k_0) = W(0,j_2,j_1;k_1,k_0,0) \cdot W(0,0,j_0;k_2,k_1,k_0).
+\end{equation}
+
+$j_0$ can only be 0 or 1, so $W(0,0,j_0; k_2, k_1, k_0)$ represents either $W_{0,n} or W_{1,n}$. The function $W_{0,n}$ is 1 for all $n$. And function $W_{1,n}$ is 1 if $0<n<4$ and $W_{1,n}$ is -1.0 if $4<n<7$. Thus, from (\ref{FWT7}), $W_{1,n}$ is +1.0 if $k_2=0$ and $W_{1,n}$ is -1.0 if $k_2 = 1$. Therefore, 
+\begin{equation}
+\label{FWT10}
+W(0,0,j_0;k_2,k_1,k_0) = (-1)^{j_0k_2}.
+\end{equation}
+
+(\ref{FWT9}) can be used to factor $W(0,j_2,j_1;k_1,k_0,0)$ to get
+\begin{equation}
+\label{FWT11}
+W(0,j_2,j_1;k_1,k_0,0) = W(0,0,j_2;k_0,0,0) \cdot W(0,0,j_1;k_1,k_0,0).
+\end{equation}
+
+Using (\ref{FWT10}) and (\ref{FWT11}) in (\ref{FWT9}), we get completely factored expression for the 8-length Walsh function
+\begin{equation}
+\label{FWT12}
+W(j_2,j_1,j_0;k_2,k_1,k_0) = (-1)^{j_2k_0}(-1)_{j_1k_1}(-1)^{j_0k_2}.
+\end{equation}
+
+Using (\ref{FWT12}), (\ref{FWT8}) becomes 
+\begin{equation}
+\label{FWT13}
+F(j_2,j_1,j_0;k_2,k_1,k_0) = \sum\limits_{k_0=0}^1 (-1)^{j_2k_0} \sum\limits_{k_1=0}^1 (-1)^{j_1k_1}  \cdot  \sum\limits_{k_2=0}^1 (-1)^{j_0k_2} f(k_2,k_1,k_0).
+\end{equation}
+
+We can define
+\begin{equation}
+\label{FWT14}
+A_1(j_0,k_1,k_0) = \sum\limits_{k_2=0}^1 (-1)^{j_0k_2} f(k_2,k_1,k_0)
+\end{equation}
+
+Array $A_1$ is first set of intermediate calculations to compute $F(m)$. $A_2(j_0,j_1,k_0)$ can be computed from $A_1$ and final result $A_3(j_0,j_1,j_2)$ from $A_2$ for 8-length Walsh transform. However, the order of the values will be in the bit reversed form. It can be generalized for the case $N = 2^p$ by defining intermediate Walsh transform arrays as
+\begin{equation}
+\label{FWT15}
+A_l(j_O,j_1,...,j_{l-1},k_{p-l-1},...,k_0) = \sum\limits_{k_{p-l}=0}^1 A_{l-1}(j_0,j_1,...,j_{l-2},k_{p-l},k_{p-l-1},...,k_0) \cdot (-1)^{j_{l-1}k_{p-l}}
+\end{equation}
+where $l = 1,2,...,p$ and 
+\begin{equation}
+\label{FWT16}
+A_0(k_{p-1},k_{p-2},...,k_0) = f(k_{p-1},k_{p-2},...,k_0).
+\end{equation}
+
+The general equation for the $M= 2^P$-length discrete Walsh function is 
+\[
+W(j_{p-1},j_{p-2},...,j_0;k_{p-1},k_{p-2},...,k_0) = \prod_{i=0}^{p-1} (-1)^{j_{p-1-i}k_i}.
+\]
+
+
+

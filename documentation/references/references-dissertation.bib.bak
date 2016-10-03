@@ -12,18 +12,6 @@
   Timestamp                = {2016.08.12}
 }
 
-@Electronic{JensenInequality,
-  Title                    = {Jensen's inequality},
-  Author                   = {Contributors, Wikipedia},
-  Month                    = {10},
-  Organization             = {Wikipedia, The Free Encyclopedia},
-  Url                      = {https://en.wikipedia.org/w/index.php?title=Jensen%27s_inequality&oldid=738863949},
-  Year                     = {2016},
-
-  Owner                    = {mahendra},
-  Timestamp                = {2016.09.26}
-}
-
 @Article{CooleyTukey1965,
   Title                    = {An Algorithm for the Machine Calculation of Complex Fourier Series},
   Author                   = {James W. Cooley and John W. Tukey},
@@ -145,5 +133,17 @@
 
   Owner                    = {mahendra},
   Timestamp                = {2016.08.12}
+}
+
+@Electronic{JensenInequality,
+  Title                    = {Jensen's Inequality},
+  Author                   = {Wikipedia, Contributors},
+  Month                    = {10},
+  Organization             = {Wikipedia, The Free Encyclopedia},
+  Url                      = {https://en.wikipedia.org/w/index.php?title=Jensen%27s_inequality&oldid=738863949},
+  Year                     = {2016},
+
+  Owner                    = {mahendra},
+  Timestamp                = {2016.09.26}
 }
 

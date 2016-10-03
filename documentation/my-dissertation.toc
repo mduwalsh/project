@@ -7,23 +7,22 @@
 \contentsline {chapter}{\numberline {2}Extending A Genetic Algorithm Model To The Diploid Case}{4}{chapter.2}
 \contentsline {section}{\numberline {2.1}Model}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Reduction}{6}{section.2.2}
-\contentsline {chapter}{\numberline {3}Specialization}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Mutation}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}Crossover}{10}{section.3.2}
-\contentsline {section}{\numberline {3.3}Mixing Matrix}{12}{section.3.3}
-\contentsline {section}{\numberline {3.4}Walsh Transorm}{13}{section.3.4}
-\contentsline {section}{\numberline {3.5}Walsh Transform Adaptation}{14}{section.3.5}
-\contentsline {section}{\numberline {3.6}Fast Walsh Transform}{16}{section.3.6}
-\contentsline {chapter}{\numberline {4}Experimental Simulations and Measurements}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}Distance}{21}{section.4.1}
-\contentsline {section}{\numberline {4.2}Simplification}{23}{section.4.2}
-\contentsline {section}{\numberline {4.3}Convergence}{23}{section.4.3}
-\contentsline {chapter}{\numberline {5}Evolutionary Limits}{28}{chapter.5}
-\contentsline {section}{\numberline {5.1}Limits}{28}{section.5.1}
-\contentsline {section}{\numberline {5.2}Computation of Mutation and Crossover Distribution}{30}{section.5.2}
-\contentsline {section}{\numberline {5.3}Initial Population}{32}{section.5.3}
-\contentsline {section}{\numberline {5.4}Oscillation}{34}{section.5.4}
-\contentsline {section}{\numberline {5.5}Violation}{46}{section.5.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{100}{chapter.6}
-\contentsline {chapter}{Bibliography}{101}{section*.82}
-\contentsline {chapter}{Vita}{105}{section*.84}
+\contentsline {section}{\numberline {2.3}Specialization}{8}{section.2.3}
+\contentsline {section}{\numberline {2.4}Mutation}{8}{section.2.4}
+\contentsline {section}{\numberline {2.5}Crossover}{9}{section.2.5}
+\contentsline {section}{\numberline {2.6}Mixing Matrix}{11}{section.2.6}
+\contentsline {section}{\numberline {2.7}Walsh Transorm}{12}{section.2.7}
+\contentsline {section}{\numberline {2.8}Walsh Transform Adaptation}{13}{section.2.8}
+\contentsline {section}{\numberline {2.9}Fast Walsh Transform}{15}{section.2.9}
+\contentsline {section}{\numberline {2.10}Distance}{19}{section.2.10}
+\contentsline {section}{\numberline {2.11}Simplification}{20}{section.2.11}
+\contentsline {section}{\numberline {2.12}Convergence}{21}{section.2.12}
+\contentsline {chapter}{\numberline {3}Evolutionary Limits}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}Limits}{25}{section.3.1}
+\contentsline {section}{\numberline {3.2}Computation of Mutation and Crossover Distribution}{27}{section.3.2}
+\contentsline {section}{\numberline {3.3}Initial Population}{29}{section.3.3}
+\contentsline {section}{\numberline {3.4}Oscillation}{31}{section.3.4}
+\contentsline {section}{\numberline {3.5}Violation}{43}{section.3.5}
+\contentsline {chapter}{\numberline {4}Conclusion}{98}{chapter.4}
+\contentsline {chapter}{Bibliography}{99}{section*.81}
+\contentsline {chapter}{Vita}{103}{section*.83}

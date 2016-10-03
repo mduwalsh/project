@@ -265,11 +265,11 @@ Data obtained from distances of finite population of size $N = \{4096, \nudge 40
 for oscillation for both haploid and dioploid case with genome length $\ell = \{8, \nudge 10, \nudge 12, \nudge 14\}$ are tabulated below.
 %\newpage
 \begin{table}[ht]
-\caption{\textbf{Experimental distance $d^\prime$ measured for oscillation:} $N$ is finite population size, $\ell$ is genome length and $d^\prime$ is distance of finite population to infinite population}
+\caption{\textbf{Experimental distance measured for oscillation:} $N$ is finite population size, $\ell$ is genome length and $\{d^\prime, d^{\prime\prime}, d^{\prime\prime\prime}\}$ are distances to infinite population from finite population of sizes $\{4096, \nudge 40960, \nudge 81920\}$ }
 \centering
 \begin{tabularx}{0.75\textwidth}{ c *{4}{X}}
 \toprule
-$N$ & case & $\ell$ & $d^\prime$ \\
+case & $\ell$ & $d^\prime$ & $d^{\prime\prime}$ & $d^{\prime\prime\prime}$\\
 \midrule
 \multirow{4}{*}{haploid} 	& 8 & 0.015785 & 0.005123 & 0.003559 \\
  				& 10 & 0.015663 & 0.005007 & 0.003511 \\ 
@@ -362,7 +362,7 @@ but ripples were damping out quickly;  with $\bm{\epsilon} = 0.5$, oscillation w
 chance of new masks created due to violation in $\bm{\mu}$ or $\bm{\chi}$ distribution also increases, thus, ripples damp out more quickly.
 
 Graphs in left column show distance between finite population and limit $\bm{z}^\ast$ with violation decreases as finite population size increases 
-and shows behavior similar to infinite population behavior as finite population reach large number. Simulatin results show infinite population converges 
+and shows behavior similar to infinite population behavior as finite population reach large number. Simulation results show infinite population converges 
 to limit $\bm{z^\ast}$ quicker with increase in $\bm{\epsilon}$. The distance data in case of both 
 $\bm{\mu}$ and $\bm{\chi}$ distribution violation with different values of $\bm{\epsilon}$ for different finite population size $N$ are tabulated below.
 \newpage
@@ -376,8 +376,8 @@ $\bm{\mu}$ and $\bm{\chi}$ distribution violation with different values of $\bm{
 
 From table \ref{distanceMu}, average distance calculated for finite population size $4096$ is $0.015861$, 
 for size $40960$ is $0.005464$ and for size $81920$ is $0.004123$. From table \ref{distanceChi}, 
-average distance calculated for finite population size $4096$ is $0.01585$, 
-for size $40960$ is $0.00556$ and for size $81920$ is $0.00400$.
+average distance calculated for finite population size $4096$ is $0.015797$, 
+for size $40960$ is $0.005520$ and for size $81920$ is $0.004040$.
 These results show experimental distance between finite population and the limit with violation closely follows expected single step distance 
 between finite and infinite population given by \ref{tableExpectedDistance} and the distance decreased as $1/\sqrt{N}$.
 

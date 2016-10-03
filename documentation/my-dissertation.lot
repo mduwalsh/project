@@ -2,7 +2,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces \textbf {Expected single step distance $d$ for population size $N$}\relax }}{42}{table.caption.29}
-\contentsline {table}{\numberline {3.2}{\ignorespaces \textbf {Experimental distance $d^\prime $ measured for oscillation:} $N$ is finite population size, $\ell $ is genome length and $d^\prime $ is distance of finite population to infinite population\relax }}{42}{table.caption.30}
+\contentsline {table}{\numberline {3.2}{\ignorespaces \textbf {Experimental distance measured for oscillation:} $N$ is finite population size, $\ell $ is genome length and $\{d^\prime , d^{\prime \prime }, d^{\prime \prime \prime }\}$ are distances to infinite population from finite population of sizes $\{4096, \hspace {0.01in}40960, \hspace {0.01in}81920\}$ \relax }}{42}{table.caption.30}
 \contentsline {table}{\numberline {3.3}{\ignorespaces \textbf {Experimental distance measured for violation in $\bm {\mu }$:} $\ell $ is genome length, $\epsilon $ is error introduced to $\bm {\mu }$ for violation, $\{d^\prime , d^{\prime \prime }, d^{\prime \prime \prime }\}$ are distance measured for population size $\{4096, 40960, 81920\}$ respectively\relax }}{95}{table.caption.79}
-\contentsline {table}{\numberline {3.4}{\ignorespaces Experimental distance $d^\prime $ measured for violation in $\bm {\chi }$ and population size $N = 4096$ \relax }}{96}{table.caption.80}
+\contentsline {table}{\numberline {3.4}{\ignorespaces \textbf {Experimental distance measured for violation in $\bm {\chi }$:} $\ell $ is genome length, $\epsilon $ is error introduced to $\bm {\chi }$ for violation, $\{d^\prime , d^{\prime \prime }, d^{\prime \prime \prime }\}$ are distance measured for population size $\{4096, 40960, 81920\}$ respectively\relax }}{96}{table.caption.80}
 \addvspace {10\p@ }

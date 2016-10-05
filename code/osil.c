@@ -199,6 +199,35 @@ void walsh_v(double *x, double *y) // y = Wx              // walsh transform app
     
 }
 
+void fwt_v(double *x, double *y) // y = Wx
+{
+  unsigned long i,j,k, t1, t2, m, n, z;
+  double a, b;
+  z = 1ul<<L;
+  for(i = 0; i < z; i++){
+      y[i] = x[i];
+  }
+  for (i = 0; i < L; i++){
+    m = z>>i;       // m = pow(2, L-i);
+    n = m>>1;             // n = pow(2, L-i)/2;
+    for(j = 0; j < 1ul<<i; j++){       // j < pow(2,i);
+      for(k = 0; k < n; k++){
+	t1 = m*j+k;
+	t2 = m*j + n + k;
+	a = y[t1];
+	b = y[t2];
+	y[t1] = a + b;
+	y[t2] = a - b;
+      }
+    }
+  }
+  
+  a = 1./C;
+  for(i = 0; i < z; i++){
+      y[i] = a*y[i];
+  }
+}
+
 #define bar(x) (U&~(x)) /* bar x */ 
 
 double *prime_h(double *x, double *y) // y = x' in walsh basis; x is array of proportions in walsh basis; y is next generation of proportions in walsh basis

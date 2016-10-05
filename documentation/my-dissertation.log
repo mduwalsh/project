@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  3 OCT 2016 17:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  4 OCT 2016 15:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -679,6 +679,9 @@ No file my-dissertation.nls.
 
 (./chapters/chapter-1.tex
 Chapter 1.
+
+Package hyperref Warning: Ignoring empty anchor on input line 9.
+
 [1
 
 
@@ -722,30 +725,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--34
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 50--53
+Underfull \hbox (badness 10000) in paragraph at lines 45--48
 
  []
 
 [10] [11] [12] [13] [14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 266--270
-\OT1/cmr/m/n/12 com-pute com-plete Walsh trans-form.
+Underfull \hbox (badness 10000) in paragraph at lines 246--250
+\OT1/cmr/m/n/12 sum-ma-tions to com-pute com-plete Walsh trans-form.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--270
+Underfull \hbox (badness 10000) in paragraph at lines 246--250
 \OT1/cmr/m/n/12 For $\OML/cmm/m/it/12 N \OT1/cmr/m/n/12 = 8$ (which can be ex-t
 ended to gen-eral case),
  []
 
 [16] [17]
-Overfull \hbox (16.00288pt too wide) detected at line 346
+Overfull \hbox (16.00288pt too wide) detected at line 326
 []\OML/cmm/m/it/12 A[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 j[]; j[]; :::; j[]; k[]
 ; :::; k[]\OT1/cmr/m/n/12 ) = [] \OML/cmm/m/it/12 A[]\OT1/cmr/m/n/12 (\OML/cmm/
 m/it/12 j[]; j[]; :::; j[]; k[]; k[]; :::; k[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/1
 2 ^^A \OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 1)[]
  []
 
-[18])
+)
 :<-
 Package srcltx Info: Expanded filename `chapters/convergence.tex' to `chapters/
 convergence.tex' on input line 174.
@@ -760,7 +763,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--19
 
  []
 
-[19] [20]
+[18] [19] [20]
 File: figures/eps/surf/b4.eps Graphic file (type eps)
  <figures/eps/surf/b4.eps>
 File: figures/eps/surf/b6.eps Graphic file (type eps)
@@ -2699,17 +2702,26 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 136.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 136.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
 (rerunfilecheck)             Checksum: 8E480CBB57AC3E684C35B690DFA8CFDD;2134.
-Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
-(rerunfilecheck)             Checksum: DE585DC49C106C4E0F2750F024C66F61;1329.
+
+
+Package rerunfilecheck Warning: File `my-dissertation.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `my-dissertation.brf':
+(rerunfilecheck)             Before: DE585DC49C106C4E0F2750F024C66F61;1329
+(rerunfilecheck)             After:  C888C0FCE6A774133CF0D78C61FB4CA8;1228.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 136.
  ) 
 Here is how much of TeX's memory you used:
  9492 strings out of 495029
  158412 string characters out of 6181522
- 282077 words of memory out of 5000000
+ 281077 words of memory out of 5000000
  12369 multiletter control sequences out of 15000+600000
  18573 words of font info for 71 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  39i,13n,53p,801b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (128 pages, 562444 bytes).
+Output written on my-dissertation.dvi (128 pages, 560480 bytes).

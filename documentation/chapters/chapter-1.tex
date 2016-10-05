@@ -3,28 +3,27 @@
 \section{Introduction}
 \section{Literature}
 \section{Random Heuristic Search}
-Vose \cite{Vose1999} introduced abstract model, a generalized heuristic search method referred to as {\em Random Heuristic Search (RHS)} which is defined upon the central concept of state and transition between states. An instance of {\em RHS} can be thought of as an initial collection of elements $P_0$ chosen from some search space $\Omega$ , together with a stochastic transition rule $\tau$ , which from $P_i$ will produce another collection $P_{i+1}$. In other words, $\tau$ will be iterated to produce a sequence of generations.
+Vose (see \cite{Vose1999}) introduced abstract model, a generalized heuristic search method referred to as {\em Random Heuristic Search (RHS)} which is defined upon the central concept of state and transition between states. An instance of {\em RHS} can be thought of as an initial collection of elements $P_0$ chosen from some search space $\Omega$ , together with a stochastic transition rule $\tau$ , which from $P_i$ will produce another collection $P_{i+1}$. In other words, $\tau$ will be iterated to produce a sequence of generations.
 
 The beginning collection $P_0$ is referred to as the {\em initial population}. Let $n$ be the cardinality of $\Omega$ and ${\bf1}$ denotes column vector of all 1s. The {\em simplex} is defined to be the set of population descriptors:
-
+\footnotetext{$\langle .. \rangle$ represents a column vector.}
 \[
-\Lambda = {\langle x_0,...,x_{n-1} \rangle : {\bf1}^T x=1, x_j \geq 0 }
+\Lambda = \{x = \langle x_0,...,x_{n-1} \rangle: {\bf1}^T x=1, x_j \geq 0 \}
 \]
 
 An element $p$ of $\Lambda$ corresponds to a population according to the rule:
-
 $p_j$ = the proportion in the population of the $j$th element of $\Omega$
 
 The cardinality of each population is a constant $r$, called the population size. Given $r$, a population descriptor $p$ unambiguously determines a population.
 
 Given the current population vector $p$, the next population vector $\tau(p)$ cannot be predicted with certainty because $\tau$ is stochastic 
 and results from $r$ independent, identically distributed random choices. Let $\mathcal{G}:\Lambda \rightarrow \Lambda$ be a function that given the current population vector $p$ produces a new vector whose $i$th component is the probability that $i$th element of $\Omega$ is chosen. Thus, $\mathcal{G}(p)$ is the probability vector that specifies the distribution from which the aggregate of $r$ choices forms the subsequent generation.
-Probability that population $q$ given current population vector $p$ can be computed as \cite{Vose1999} 
+Probability that population $q$ is the next population vector given current population vector $p$ can be computed as (see \cite{Vose1999}) 
 \[
 r! \prod \frac{(\mathcal{G}(p)_j)^{rq_j}}{(rq_j)!}
 \]
 \[
- = exp\{-r \sum q_j \ln \frac{q_j}{\mathcal{G}(p)!} - \sum (\ln \sqrt{2 \pi rq_j} + \frac{1}{12rq_j + \theta (rq_j)}) + O(\ln r)\}
+ = \exp\{-r \sum q_j \log \frac{q_j}{\mathcal{G}(p)_j} - \sum (\log \sqrt{2 \pi rq_j} + \frac{1}{12rq_j + \theta (rq_j)}) + O(\log r)\}
 \]
 where summation is restricted to indices for which $q_j > 0$.
 
@@ -33,28 +32,29 @@ transition matrix
 \[
 Q_{p,q} = r! \prod \frac{(\mathcal{G}(p)_j)^{rq_j}}{(rq_j)!}
 \]
-So the conceptualization of RHS can be replaced by Markov chain model abstraction which makes no reference to sampling $\Omega$. That is from current population $p$, produce $q = \tau (p)$ with probability $Q_{p,q}$. With transition matrix defined for Markov chain model, Vose \cite{Vose1999} says the expected next generation $\mathcal{E}(\tau (p))$ is $\mathcal{G}(p)$ and the expression in transition matrix
+So the conceptualization of RHS can be replaced by Markov chain model abstraction which makes no reference to sampling $\Omega$. That is from current population $p$, produce $q = \tau (p)$ with probability $Q_{p,q}$. With transition matrix defined for Markov chain model, Vose (see \cite{Vose1999}) says the expected next generation $\mathcal{E}(\tau (p))$ is $\mathcal{G}(p)$ and the expression in transition matrix
 \[
-\sum q_j \ln \frac{q_j}{\mathcal{G}(p)!}
+\sum q_j \log \frac{q_j}{\mathcal{G}(p)!}
 \]
 gives the qualitative information regarding probable next generation which is the {\em discrepancy} of $q$ with respect to $\mathcal{G}(p)$. It is a measure of how far $q$ is from the expected next population $\mathcal{G}(p)$. Discrepancy is nonnegative and is zero only when $q$ is the expected next population. Hence the factor 
 \[
-exp\{-r \sum q_j \ln \frac{q_j}{\mathcal{G}(p)!}\}
+\exp\{-r \sum q_j \log \frac{q_j}{\mathcal{G}(p)_j}\}
 \]
 in the expression of transition matrix indicates the probability that $q$ is the next generation
 decays exponentially, with constant $r$ , as the discrepancy between $q$ and the
 expected next population increases.
 The expression 
 \[
-\sum (\ln \sqrt{2 \pi rq_j} + \frac{1}{12rq_j + \theta (rq_j)})
+\sum (\log \sqrt{2 \pi rq_j} + \frac{1}{12rq_j + \theta (rq_j)})
 \]
 measures the {\em dispersion} of the population vector $q$ and the factor
 \[
-exp\{- \sum (\ln \sqrt{2 \pi rq_j} + \frac{1}{12rq_j + \theta (rq_j)})\}
+\exp\{- \sum (\log \sqrt{2 \pi rq_j} + \frac{1}{12rq_j + \theta (rq_j)})\}
 \]
-indicates the probability that $q$ is the next generation decays exponentially with increasing dispersion.
+indicates the probability that $q$ is the next generation decays exponentially with increasing dispersion and 
+$\theta  =  \sum \log(e^{x_j}x_j!/x_j^{x_j})$.
 
-\cite{Vose1999} calculated variance of next generation population with respect to expected population as 
+Vose (see \cite{Vose1999}) calculated variance of next generation population with respect to expected population as 
 \[
 \mathcal{E}(\| \tau (p) - \mathcal{G}(p) \|^2) = (1 - \|\mathcal{G}(p)\|^2) / r
 \]

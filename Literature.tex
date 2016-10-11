@@ -1,0 +1,20 @@
+
+Schema theorem/ Holland
+% genetic algorithm short intro
+GAs are general purpose algorithms designed to search irregular, poorly understood spaces. The algorithm was developed by Holland (1975). Holland hoped to develop powerful, broadly applicable techniques to solve problems unsusceptible to other known methods. Genetic algorithm is inspired by population genetics, and is population based, and proceeds over a number of generations to obtain optimal solution. Basic mechanism of a GA, although there are many variants, consists of:
+1. Evaluation of individual fitness and formation of a gene pool
+2. Recombination and mutation.
+
+The members of next generation population is formed by individuals produced from these operations. Criteria for fitness evaluation exerts evolutionary force for populations to produce more fit individuals. The process is repeated until system stops to improve or threshold is met.
+
+The members of population are typically fixed length binary strings (also called genome length in later chapters). These members contribute to gene pool according to their relative fitness which is calculated using some objective funtion. They are mutated and recombined by crossover. Mutation corresponds to flipping the bits of an individual with small probability, mutation rate. During crossover, two parents are selected from the pool, a random but same position is chosen within each parent string and segments are exchanged. Small probability, crossover rate, is used perform crossover and otherwise parents are cloned. New offsprings produced after mutation and crossover form next generation.
+
+The schema theorem ( see \cite{Holland1975}) suggests prerequisite features which a representation should exhibit in order to utilize a 
+GA processing. There is a high probability that above average, short, low-order schemata combine to form a higher order above average schemata. The schema theorem shows that above average schemata will multiply at a given expected minimum rate but does not specify if this increase will occur at optimal rate.
+
+
+
+
+Vose and infinite population model:
+Vose has proved infinite population models are equally valid in explaining finite population behavior. Given a finite population with proportional representation vector $\bm{p^n}$ at generation $n$ with component $p_i^n$ to describe proportion of string $i$ in finite population, infinite population model can be used to predict proportion $p_i^{n+1}$ of string $i$ as result of \textit{selection} and \textit{mixing} in next generation finite population $p^{n+1}$. As population size increases, the correspondence improves between expected population predicted using infinite population model and the actual population observed in finite population genetic algorithm. Vose calculated variance of expected next generation population and actual next generation population in his book Simple Genetic Algorithm (\cite{Vose1999}) under topic Random Heuristic Search. 
+

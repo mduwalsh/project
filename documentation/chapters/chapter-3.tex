@@ -11,6 +11,8 @@ of $\mathcal{M}$. Vose mentions that in general case, periodic orbits are possib
 repeated application of $\mathcal{M}^2$ and limits ${\bm p}^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n}({\bm p})$ 
 and ${\bm q}^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n+1}({\bm q})$ exist.
 
+In this section, operations ($+$ and $\cdot$) acting on elements of $\mathcal{R}$ are component-wise addition and multiplication modulo 2. 
+
 Following Vose's theorem, let $S_g = g \mathcal{R} / \{\textbf{0}, g\}$, and let $|g|$ be the number of non zero bits in $g$.
 \[
 {{\widehat{{\bm p}}}_g}^{\prime}  = \begin{cases}
@@ -70,7 +72,7 @@ to converge to a periodic orbit as that for some $g$
  
 \section{Computation of Mutation and Crossover Distribution}
 Following algorithm installs values of mutation and crossover distributions that satisfies condition described 
-by equation (\ref{OscCond}) for evolutionary sequence to converge in periodic orbits.
+by equation (\ref{OscCond}) for evolutionary sequence to converge in periodic orbits. Operations ($+$ and $\cdot$) acting on elements of $\mathcal{R}$ in this section below are component-wise addition and multiplication modulo 2. 
 Let $\bm{\mu}_j$ and $\bm{\chi}_k$ represent mutation and crossover distributions respectively where $j,k \in \mathcal{R}$ 
 and $U01()$ be random number between $0$ and $1$. For any $g$ where $g \in \mathcal{R}$ and $g \neq 0$.
 For all $j \in \mathcal{R}$,
@@ -303,6 +305,8 @@ the expected single step distance between finite and infinite population given b
 The results showed when $\bm{\chi}$ and $\bm{\mu}$ distributions satisfies (\ref{OscCond}), oscillation occurs in both infinite and finite population. 
 Error $\bm{\epsilon}$ was introduced to $\bm{\mu}$ distribution and $\bm{\chi}$ distribution such that (\ref{OscCond}) did not satisfy anymore and 
 $x_g \neq −1$ for all $g$ ($x_g$ and $g$ defined in \ref{Limits}) so that $\bm{p}^\ast = \bm{q}^\ast$.
+
+In this section, operations ($+$ and $\cdot$) acting on elements of $\mathcal{R}$ are component-wise addition and multiplication modulo 2. 
 
 $\bm{\mu}$ distribution was treated with $\bm{\epsilon}$ such that
 \[

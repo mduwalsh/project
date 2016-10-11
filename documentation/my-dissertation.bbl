@@ -36,13 +36,8 @@ Shanks, J.~L. (1969).
 \newblock Computation of the fast walsh-fourier transform.
 \newblock {\em IEEE Trans. Comput.}, 18(5):457--459.
 
-\bibitem[Vose, 1999a]{Vose1999}
-Vose, M.~D. (1999a).
-\newblock Random heuristic search.
-\newblock {\em Theoretical Computer Science}.
-
-\bibitem[Vose, 1999b]{Vose1999b}
-Vose, M.~D. (1999b).
+\bibitem[Vose, 1999]{Vose1999}
+Vose, M.~D. (1999).
 \newblock {\em The simple genetic algorithm: foundations and theory},
   volume~12.
 \newblock MIT press.

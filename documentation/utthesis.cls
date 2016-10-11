@@ -97,12 +97,12 @@
 \def\@viceProvost{Dixie L. Thompson}    % vice provost name
 \def\@major{Computer Science}	% major
 \def\@university{The University  of Tennessee, Knoxville}	% school
-\def\@numberOfCommitteeMembers{3}
-\def\@committeeMemberA {Committee member A}	% first committee member
-\def\@committeeMemberB {Committee member B}	% second committee member
-\def\@committeeMemberC {Committee member C}	% ... you get the trend!
-\def\@committeeMemberD {Committee member D}	%
-\def\@committeeMemberE {Committee member E}	%
+\def\@numberOfCommitteeMembers{2}
+\def\@committeeMemberA{Hairong Qi}% first committee member
+\def\@committeeMemberB{Judy Day}% second committee member
+\def\@committeeMemberC {}	% ... you get the trend!
+\def\@committeeMemberD {}	%
+\def\@committeeMemberE {}	%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 	LOAD PACKAGES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

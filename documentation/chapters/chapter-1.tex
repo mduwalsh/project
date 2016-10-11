@@ -3,7 +3,7 @@
 \section{Introduction}
 \section{Literature}
 \section{Random Heuristic Search}
-Vose (see \cite{Vose1999}) introduced abstract model, a generalized heuristic search method referred to as {\em Random Heuristic Search (RHS)} which is defined upon the central concept of state and transition between states. An instance of {\em RHS} can be thought of as an initial collection of elements $P_0$ chosen from some search space $\Omega$ , together with a stochastic transition rule $\tau$ , which from $P_i$ will produce another collection $P_{i+1}$. In other words, $\tau$ will be iterated to produce a sequence of generations.
+Vose (see \cite{Vose1999}) introduced abstract model, a generalized heuristic search method referred to as {\em Random Heuristic Search (RHS)} which is defined upon the central concept of state and transition between states. An instance of {\em RHS} can be thought of as an initial collection of elements $P_0$ chosen from some search space $\Omega$ , together with a stochastic transition rule $\tau$ , which from $P_i$ will produce another collection $P_{i+1}$, that is, $\tau$ will be iterated to produce a sequence of generations.
 
 The beginning collection $P_0$ is referred to as the {\em initial population}. Let $n$ be the cardinality of $\Omega$ and ${\bf1}$ denotes column vector of all 1s. The {\em simplex} is defined to be the set of population descriptors:
 \footnotetext{$\langle .. \rangle$ represents a column vector.}
@@ -38,11 +38,7 @@ So the conceptualization of RHS can be replaced by Markov chain model abstractio
 \]
 gives the qualitative information regarding probable next generation which is the {\em discrepancy} of $q$ with respect to $\mathcal{G}(p)$. It is a measure of how far $q$ is from the expected next population $\mathcal{G}(p)$. Discrepancy is nonnegative and is zero only when $q$ is the expected next population. Hence the factor 
 \[
-<<<<<<< HEAD
-\exp\{-r \sum q_j \ln \frac{q_j}{\mathcal{G}(p)!}\}
-=======
 \exp\{-r \sum q_j \log \frac{q_j}{\mathcal{G}(p)_j}\}
->>>>>>> f3bf8bb1ca6e00c482d1b1f3863823e9ea28d462
 \]
 in the expression of transition matrix indicates the probability that $q$ is the next generation
 decays exponentially, with constant $r$ , as the discrepancy between $q$ and the
@@ -53,11 +49,7 @@ The expression
 \]
 measures the {\em dispersion} of the population vector $q$ and the factor
 \[
-<<<<<<< HEAD
-\exp\{- \sum (\ln \sqrt{2 \pi rq_j} + \frac{1}{12rq_j + \theta (rq_j)})\}
-=======
 \exp\{- \sum (\log \sqrt{2 \pi rq_j} + \frac{1}{12rq_j + \theta (rq_j)})\}
->>>>>>> f3bf8bb1ca6e00c482d1b1f3863823e9ea28d462
 \]
 indicates the probability that $q$ is the next generation decays exponentially with increasing dispersion and 
 $\theta  =  \sum \log(e^{x_j}x_j!/x_j^{x_j})$.

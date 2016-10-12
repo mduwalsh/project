@@ -73,6 +73,19 @@
   Timestamp                = {2016.08.11}
 }
 
+@Article{Nix1992,
+  Title                    = {Modeling genetic algorithms with Markov chains},
+  Author                   = {Nix, A. E. \& Vose, M. D.},
+  Journal                  = {Annals of Mathematics and Artificial Intelligence},
+  Year                     = {1992},
+  Number                   = {1},
+  Pages                    = {79--88},
+  Volume                   = {5},
+
+  Owner                    = {mahendra},
+  Timestamp                = {2016.10.12}
+}
+
 @Article{Shanks1969,
   Title                    = {Computation of the Fast Walsh-Fourier Transform},
   Author                   = {Shanks, J. L.},

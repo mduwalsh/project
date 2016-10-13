@@ -16,6 +16,41 @@ The members of population are typically fixed length binary strings (also called
 
 
 Vose and infinite population model:
-Vose has proved infinite population models are equally valid in explaining finite population behavior. Given a finite population with proportional representation vector $\bm{p^n}$ at generation $n$ with component $p_i^n$ to describe proportion of string $i$ in finite population, infinite population model can be used to predict proportion $p_i^{n+1}$ of string $i$ as result of \textit{selection} and \textit{mixing} in next generation finite population $p^{n+1}$. Vose and Liepins (see \cite{VoseLiepins1991}) modeled simple GA by computing expected population trajectories through time based on infinite population. With Markov chain modeling of simple GA, Nix (see \cite{Nix1992}) investigated asymptotic behavior of steady state distributions as population size increases and showed that if finite population is sufficiently large, convergence behavior of a real GA can be predicted. As population size increases, the correspondence improves between expected population predicted using infinite population model and the actual population observed in finite population genetic algorithm.  Vose calculated variance of expected next generation population and actual next generation population in his book Simple Genetic Algorithm (\cite{Vose1999}) under topic Random Heuristic Search which is discussed later in this chapter. 
+Vose has proved infinite population models are equally valid in explaining finite population behavior. 
+Given a finite population with proportional representation vector $\bm{p^n}$ at generation $n$ with 
+component $p_i^n$ to describe proportion of string $i$ in finite population, infinite population model 
+can be used to predict proportion $p_i^{n+1}$ of string $i$ as result of \textit{selection} and 
+\textit{mixing} in next generation finite population $p^{n+1}$. Vose and Liepins (see \cite{VoseLiepins1991}) 
+modeled simple GA by computing expected population trajectories through time based on infinite population. 
+Vose and Liepins, if $r_{i,j}(k)$ is probability of recombination $i$ and $j$ to produce $k$, and $s_i^t$ and $s_j^t$ 
+are probability of selection of $i$ and $j$ as parents, gives expected proporiton of $k$ in next generation as
+\[
+\mathcal{E}(p_k^{t+1}) = \sum_{i,j} s_i^t s_j^t r_{i,j}(k) ; \hspace{1pt} \mahtcal{E} denotes expectation
+\]
+If $M$ is recombination matrix with elements $m_{i,j} = r_{i,j}(0)$ and permutation $\sigma_j$ defined as 
+\[
+\sigma_j{\langle S_0,..,S_{2^\ell - 1} \rangle}^{T} = {\langle S_{0+j},..,S_{(2^\ell - 1)+j} \rangle}^{T}
+\]
+where $T$ is transpose and $\ell$ is bit length of binary string, Vose and Liepins represented expected proportion 
+of $k$ in next generation in using recombination or mixing matrix $M$ as
+\[
+\mathcal{E}(p_k^{t+1}) = (\sigma_k s)^T M (\sigma_k s)
+\]
+Vose and Liepins apply Walsh transform to mixing to analyse and get results. 
 
-Bethke, in his dissertation "Genetic Algorithms as Function Optimizers" (see \cite{Bethke1981}), first introduced idea of using Walsh transforms to analyse process of GA in case of binary-coded strings. The idea of using Walsh transforms were given greater incitement in papers by Goldberg.
+There had been previous applications of Walsh transform in field of GA. Bethke, in his dissertation 
+"Genetic Algorithms as Function Optimizers" (see \cite{Bethke1981}), first introduced 
+idea of using Walsh transforms to analyse process of GA in case of binary-coded strings. The idea of using Walsh transforms 
+were given greater incitement in papers by Goldberg (see \cite{Goldberg1989a}, \cite{Goldberg1989b}). But usage of 
+Walsh transforms does not involve the direct application of the Walsh transform to crossover and mutation, or to any of their 
+associated mathematical objects. Vose and Liepins use Walsh transform directly to mutation and recombination, and show that the twist of the mixing matrix 
+is triangularized by the Walsh transform. 
+
+With Markov chain modeling of simple GA, Nix and Vose (see \cite{Nix1992}) investigated asymptotic behavior of steady 
+state distributions as population size increases and showed that if finite population is sufficiently large, 
+convergence behavior of a real GA can be predicted. As population size increases, the correspondence improves 
+between expected population predicted using infinite population model and the actual population observed in 
+finite population genetic algorithm.  Vose calculated variance of expected next generation population and 
+actual next generation population in his book Simple Genetic Algorithm (\cite{Vose1999}) under topic 
+Random Heuristic Search which is discussed later in this chapter. 
+

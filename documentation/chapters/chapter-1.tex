@@ -1,7 +1,50 @@
 \chapter{Introduction} \label{ch:introduction}
 
 \section{Introduction}
-\section{Literature}
+Genetic algorithm is inspired by population genetics, and is population based, and proceeds over a number of generations to obtain optimal solution. The algorithm was developed by Holland (see \cite{Holland1975}). Holland hoped to develop powerful, broadly applicable techniques to solve problems unsusceptible to other known methods.Basic mechanism of a GA, although there are many variants, consists of:
+1. Evaluation of individual fitness and formation of a gene pool
+2. Recombination and mutation.
+
+The members of next generation population is formed by individuals produced from these operations. Criteria for fitness evaluation exerts evolutionary force for populations to produce more fit individuals. The process is repeated until system stops to improve or threshold is met.
+
+The members of population are typically fixed length binary strings (also called genome length in later chapters). These members contribute to gene pool according to their relative fitness which is calculated using some objective funtion. They are mutated and recombined by crossover. Mutation corresponds to flipping the bits of an individual with small probability, mutation rate. During crossover, two parents are selected from the pool, a random but same position is chosen within each parent string and segments are exchanged. Small probability, crossover rate, is used perform crossover and otherwise parents are cloned. New offsprings produced after mutation and crossover form next generation.
+
+With schema theorem ( see \cite{Holland1975}), Holland gave some perspective on expected next generation by showing expectation of schema survival in next generation of population. Since assumption of infinitely large population is made, it is argued it may not carry over to finite population sample. Vose has proved infinite population models are equally valid in explaining finite population behavior. 
+Given a finite population with proportional representation vector $\bm{p}^n$ at generation $n$ with 
+component $\bm{p}_i^n$ to describe proportion of string $i$ in finite population, infinite population model 
+can be used to predict proportion $\bm{p}_i^{n+1}$ of string $i$ as result of \textit{selection} and 
+\textit{mixing} in next generation finite population $\bm{p}^{n+1}$. Vose and Liepins (see \cite{VoseLiepins1991}) 
+modeled simple GA by computing expected population trajectories through time based on infinite population. 
+Vose and Liepins, if $\bm{r}_{i,j}(k)$ is probability of recombination $i$ and $j$ to produce $k$, and $\bm{s}_i^t$ and $\bm{s}_j^t$ 
+are probability of selection of $i$ and $j$ as parents, gives expected proporiton of $k$ in next generation as
+\[
+\mathcal{E}(\bm{p}_k^{t+1}) = \sum_{i,j} \bm{s}_i^t \bm{s}_j^t \bm{r}_{i,j}(k) ; \hspace{1pt} \mathcal{E} denotes expectation
+\]
+If $M$ is recombination matrix with elements $\bm{m}_{i,j} = \bm{r}_{i,j}(0)$ and permutation $\sigma_j$ defined as 
+\[
+\sigma_j{\langle S_0,..,S_{2^\ell - 1} \rangle}^{T} = {\langle S_{0+j},..,S_{(2^\ell - 1)+j} \rangle}^{T}
+\]
+where $T$ is transpose and $\ell$ is bit length of binary string, Vose and Liepins represented expected proportion 
+of $k$ in next generation in using recombination or mixing matrix $M$ as
+\[
+\mathcal{E}(\bm{p}_k^{t+1}) = (\sigma_k \bm{s})^T M (\sigma_k \bm{s})
+\]
+Vose and Liepins apply Walsh transform to mixing to analyse and get results. 
+With Markov chain modeling of simple GA, Nix and Vose (see \cite{Nix1992}) investigated asymptotic behavior of steady 
+state distributions as population size increases and showed that if finite population is sufficiently large, 
+convergence behavior of a real GA can be predicted. As population size increases, the correspondence improves 
+between expected population predicted using infinite population model and the actual population observed in 
+finite population genetic algorithm. In his book \textit{Simple Genetic Algorithm: Foundations and Theory} (see \cite{Vose1999}), Vose compiled and extended all of his previous work regarding infinite population model and application of walsh transforms to mixing matrix. Vose provided mathematical implementation of simple GA for binary strings; he provided mathematical implementation of selection, crossover, and mutation. Vose gave formula for calculating mixing matrix under his implementation of crossover and mutation. Vose discussed how application fo Walsh transform to mixing matrix simplified the matrix, giving computational efficiency in calculating matrix.
+
+There had been previous applications of Walsh transform in field of GA. Bethke, in his dissertation 
+"Genetic Algorithms as Function Optimizers" (see \cite{Bethke1981}), first introduced 
+idea of using Walsh transforms to analyse process of GA in case of binary-coded strings. The idea of using Walsh transforms 
+were given greater incitement in papers by Goldberg (see \cite{Goldberg1989a}, \cite{Goldberg1989b}). But these usage of 
+Walsh transforms does not involve the direct application of the Walsh transform to crossover and mutation, or to any of their 
+associated mathematical objects. Vose and Liepins use Walsh transform directly to mutation and recombination, and show that the 
+twist (denoted by $M_*$) of the mixing matrix ($M$) is triangularized by the Walsh transform and used $M_*$ in study of fixed points where $(M_*)_{i,j} = M_{i+j, i}$. In a related paper, Koehler (see \cite{Koehler1994}) gives a congruence 
+transformation defined by lower triangular matrix that diagonalizes the mixing matrix for 1-point crossover and mutation given by a rate and mathecally proved conjecture provided by Vose and Liepins on eigenvalues of matrix $M_*$. Koehler, Bhattacharyya and Vose (see \cite{KoehlerBhatta1997}) applied Fourier transform to mixing in generalizing results concerning simple genetic algorithm which were previously established for binary case (in binary case, Fourier transform is Walsh transform) extending analysis to strings over an alphbet of cardinality $c$. Vose and Wright (see \cite{VoseWright1998}) applied Walsh transform to mixing matrix and simplified the matrix from dense to sparse in Walsh basis giving advantage of computational efficiency from $O(n^3)$ to $O(n^{log_2 3})$. The cost of conversion of standard coordinates to Walsh basis need not be sustained since fast Walsh transform (see \cite{Shanks1969}) can do that in $O(n log_2 n)$ time.
+
 \section{Random Heuristic Search}
 Vose (see \cite{Vose1999}) introduced abstract model, a generalized heuristic search method referred to as {\em Random Heuristic Search (RHS)} which is defined upon the central concept of state and transition between states. An instance of {\em RHS} can be thought of as an initial collection of elements $P_0$ chosen from some search space $\Omega$ , together with a stochastic transition rule $\tau$ , which from $P_i$ will produce another collection $P_{i+1}$, that is, $\tau$ will be iterated to produce a sequence of generations.
 
@@ -55,11 +98,21 @@ indicates the probability that $q$ is the next generation decays exponentially w
 $\theta  =  \sum \log(e^{x_j}x_j!/x_j^{x_j})$.
 
 Vose (see \cite{Vose1999}) calculated variance of next generation population with respect to expected population as 
-\[
+\begin{equation}
+\label{RHSvariance}
 \mathcal{E}(\| \tau (p) - \mathcal{G}(p) \|^2) = (1 - \|\mathcal{G}(p)\|^2) / r
-\]
+\end{equation}
 and mentioned $\tau (p)$ converges in probability to $\mathcal{G}(p)$ as the population size increases. Therefore, $\tau$ corresponds to $\mathcal{G}$ in the infinite
-population case.
+population case and distance between finite and infinite population in next generation decreases as $1/r$.
+
+\section{Overview}
+In chapter two, we describe a simple Markov model for diploid case under influence of mutation and crossover. The model is non-overlapping, generational, infinite population model assuming random mating and no selective pressure. Through abstract development, we show that the diploid model can be specialized by using mask based mutation and crossover operators to Vose's infinite population model which is a haploid model. Computational simplifications due to reduction of diploid model to haploid model and application of Walsh transform are exploited in experimental simulation of model, and through the experiment we demonstrate convergence of finite diploid population to infinite population behavior implied by equation \ref{RHSvariance}.
+
+In chapter three, we study evolutionary limits predicted by Vose using infinite popu-
+lation model under no selective pressure. We use computation of predicted limits
+of infinite population and discuss necessary and sufficient conditions stated by Vose for population
+to converge in to periodic orbits. We investigate predicting the convergence of finite population short-term behavior to infinite population evolutionary limits under no selective pressure. Then it studies case of violation in the necessary and sufficient conditions for population to converge periodic orbits. We then study behavior of finite and infinite population when there is violation in necessary condition mentioned by Vose.
+
 
 
 

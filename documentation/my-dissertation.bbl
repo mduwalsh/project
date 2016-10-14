@@ -5,6 +5,11 @@ Beauchamp, K. (1975).
 \newblock {\em Walsh functions and their applications}.
 \newblock Academic Press.
 
+\bibitem[Bethke, 1980]{Bethke1981}
+Bethke, A.~D. (1980).
+\newblock {\em Genetic Algorithms As Function Optimizers}.
+\newblock PhD thesis, The University of Michigan.
+
 \bibitem[Cooley and Tukey, 1965]{CooleyTukey1965}
 Cooley, J.~W. and Tukey, J.~W. (1965).
 \newblock An algorithm for the machine calculation of complex fourier series.
@@ -20,10 +25,38 @@ Geiringer, H. (1944).
 \newblock On the probability theory of linkage in mendelian heredity.
 \newblock {\em Ann. Math. Stat.}, 15(1):25--27.
 
+\bibitem[Goldberg, 1989a]{Goldberg1989a}
+Goldberg, D.~E. (1989a).
+\newblock Genetic algorithms and walsh functions: Part i, a gentle
+  introduction.
+\newblock {\em Complex systems}, 3(2):129--152.
+
+\bibitem[Goldberg, 1989b]{Goldberg1989b}
+Goldberg, D.~E. (1989b).
+\newblock Genetic algorithms and walsh functions-partii: Deception and its
+  analysis.
+\newblock {\em Complex systems}, 3(153--171).
+
 \bibitem[Hardy, 1908]{Hardy1908}
 Hardy, G.~H. (1908).
 \newblock Mendelian proportions in a mixed population.
 \newblock {\em Science}, 28(706):49--50.
+
+\bibitem[Holland, 1992]{Holland1975}
+Holland, J.~H. (1992).
+\newblock {\em Adaptation in natural and artificial systems}.
+\newblock Cambridge : MIT Press.
+
+\bibitem[Koehler, 1994]{Koehler1994}
+Koehler, G.~J. (1994).
+\newblock A proof of the vose-liepins conjecture.
+\newblock {\em Annals of Mathematics and Artificial Intelligence},
+  10(4):409--422.
+
+\bibitem[Koehler et~al., 1997]{KoehlerBhatta1997}
+Koehler, G.~J., Bhattacharyya, S., and Vose, M.~D. (1997).
+\newblock General cardinality genetic algorithms.
+\newblock {\em Evol. Comput.}, 5(4):439--459.
 
 \bibitem[Mendel, 1865]{Mendel1866}
 Mendel, G. (1865).
@@ -31,10 +64,20 @@ Mendel, G. (1865).
 \newblock {\em Verhandlungen des naturforschenden Vereines in Br{\"u}nn},
   IV:3--47.
 
+\bibitem[Nix and Vose, 1992]{Nix1992}
+Nix, A.~E. and Vose, M.~D. (1992).
+\newblock Modeling genetic algorithms with markov chains.
+\newblock {\em Annals of Mathematics and Artificial Intelligence}, 5(1):79--88.
+
 \bibitem[Shanks, 1969]{Shanks1969}
 Shanks, J.~L. (1969).
 \newblock Computation of the fast walsh-fourier transform.
 \newblock {\em IEEE Trans. Comput.}, 18(5):457--459.
+
+\bibitem[Vose and Liepins, 1991]{VoseLiepins1991}
+Vose, M. and Liepins, G.~E. (1991).
+\newblock Punctuated equilibria in genetic search.
+\newblock {\em Complex systems}, 5(1):31--44.
 
 \bibitem[Vose, 1999]{Vose1999}
 Vose, M.~D. (1999).

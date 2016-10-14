@@ -141,6 +141,38 @@ x_t = \sum_{n=0}^{N-1} X_n W_{n,t}
 t = 0, 1, 2...N-1
 \]
 
+\subsection{Fast Walsh Transform}
+However, computation of discrete Walsh transform given by equation (\ref{WalshT}) takes $n^2$ operations (addition or subtraction).
+An algorithm using matrix factorization techniques is found to perform transformation in $n \log_2 n$ operations.
+This algorithm is Fast Walsh transform (FWT). Shanks (see \cite{Shanks1969}) described FWT algorithm which is analogous to 
+Cooley-Tukey algorithm (see \cite{CooleyTukey1965}) for fast Fourier transformation.
+The algorithm for FWT can be translated into pseudocode as:
+\begin{algorithm}[ht]
+\caption{FWT pseudocode}
+\label{FWTpseudo}
+\begin{algorithmic}[1]
+\Procedure{FWT}{}
+
+\State $n = 2^d   \gets $  size of array $X$ where $d$ is positive integer
+\For{$i = 0$ to $d-1$ }
+\State $m = n/2^i$
+\State $z = m/2$
+\For{$j = 0$ to $2^i-1$}
+\For{$k = 0$ to $z-1$}
+\State $t1 = m \times j + k$
+\State $t2 = m \times j + z +k$
+\State $a = X[t1]$
+\State $b= X[t2]$
+\State $X[t1] = a + b$
+\State $X[t2] = a - b$
+\EndFor
+\EndFor
+\EndFor
+\State \Return $X$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
 \subsection{Walsh Transform Adaptation}
 The Walsh transform has spectacular ability to unravel the intricacies of mixing. And that is why we adapt Walsh transform methods for computing evolutionary trajectories, which have already been established for Vose's haploid model (see \cite{VoseWright1998}). Adaptation of Walsh transformation efficiently models infinite diploid population evolution. This adaptation of Walsh transormation helps in making feasible comparisons between finite and infinte diploid population short-term evolutionary behavior.
 Recalling evolution equation (\ref{model4}), without selection, specialized to Vose's infinite population model expressed in mixing matrix's term,
@@ -204,37 +236,5 @@ a distribution vector $p$ describing a population. However, that is
 not an obstacle to computing evolutionary trajectories;
 (\ref{mixing_transformation}) can be computed in Walsh coordinates
 relatively efficiently via (\ref{Mhat}) and (\ref{model5}).
-
-\subsection{Fast Walsh Transform}
-However, computation of discrete Walsh transform given by equation (\ref{WalshT}) takes $N^2$ operations (addition or subtraction).
-An algorithm using matrix factorization techniques is found to perform transformation in $N \log_2 N$ operations.
-This algorithm is Fast Walsh transform (FWT). Shanks (see \cite{Shanks1969}) described FWT algorithm which is analogous to 
-Cooley-Tukey algorithm (see \cite{CooleyTukey1965}) for fast Fourier transformation.
-The algorithm for FWT can be translated into pseudocode as:
-\begin{algorithm}[ht]
-\caption{FWT pseudocode}
-\label{FWTpseudo}
-\begin{algorithmic}[1]
-\Procedure{FWT}{}
-
-\State $n = 2^d   \gets $  size of array $X$ where $d$ is positive integer
-\For{$i = 0$ to $d-1$ }
-\State $m = n/2^i$
-\State $z = m/2$
-\For{$j = 0$ to $2^i-1$}
-\For{$k = 0$ to $z-1$}
-\State $t1 = m \times j + k$
-\State $t2 = m \times j + z +k$
-\State $a = X[t1]$
-\State $b= X[t2]$
-\State $X[t1] = a + b$
-\State $X[t2] = a - b$
-\EndFor
-\EndFor
-\EndFor
-\State \Return $X$
-\EndProcedure
-\end{algorithmic}
-\end{algorithm}
-  
+ 
 \newpage

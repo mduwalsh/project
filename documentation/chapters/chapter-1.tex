@@ -1,24 +1,29 @@
 \chapter{Introduction} \label{ch:introduction}
 
 \section{Introduction}
-Genetic algorithm is inspired by population genetics, and is population based, and proceeds over a number of generations to obtain optimal solution. The algorithm was developed by Holland (see \cite{Holland1975}). Holland hoped to develop powerful, broadly applicable techniques to solve problems unsusceptible to other known methods.Basic mechanism of a GA, although there are many variants, consists of:
+Genetic algorithm (GA) is inspired by population genetics, and is population based, and proceeds over a number of generations to obtain optimal solution. GA is powerful, broadly applicable techniques to solve problems not yielding to other known methods. The basic mechanism of a GA, although there are many variants, consists of:
+
 1. Evaluation of individual fitness and formation of a gene pool
+
 2. Recombination and mutation.
 
 The members of next generation population is formed by individuals produced from these operations. Criteria for fitness evaluation exerts evolutionary force for populations to produce more fit individuals. The process is repeated until system stops to improve or threshold is met.
 
-The members of population are typically fixed length binary strings (also called genome length in later chapters). These members contribute to gene pool according to their relative fitness which is calculated using some objective funtion. They are mutated and recombined by crossover. Mutation corresponds to flipping the bits of an individual with small probability, mutation rate. During crossover, two parents are selected from the pool, a random but same position is chosen within each parent string and segments are exchanged. Small probability, crossover rate, is used perform crossover and otherwise parents are cloned. New offsprings produced after mutation and crossover form next generation.
+The members of population are typically fixed length binary strings (also called genome length in later chapters). These members contribute to gene pool according to their relative fitness which is calculated using some objective funtion. They are mutated and recombined by crossover. Mutation corresponds to flipping the bits of an individual with some small probability, the mutation rate. During crossover, two parents are selected from the pool, a random but same position is chosen within each parent string and segments are exchanged. Small probability, crossover rate, is used perform crossover and otherwise parents are cloned. New offsprings produced after mutation and crossover form next generation.
 
-With schema theorem ( see \cite{Holland1975}), Holland gave some perspective on expected next generation by showing expectation of schema survival in next generation of population. Since assumption of infinitely large population is made, it is argued it may not carry over to finite population sample. Vose has proved infinite population models are equally valid in explaining finite population behavior. 
+In the book "An Introduction to Genetic Algorithms" by Mitchell (see \cite{Mitchell1999}), she mentioned several people working in the 1950s and the 1960s like Box (1957), Friedman (1959),
+ Bledsoe (1961), Bremermann (1962), and Reed, Toombs and Baricelli (1967) developed evolution-inspired algorithms but little attention were given to them. Mitchell mentioned genetic algorithms were developed by Holland and his colleagues in the 1960s and the 1970s. Mitchell mentioned in her book that Holland introduced a population-based algorithm with crossover and mutation. With schema theorem ( see \cite{Holland1975}), Holland gave some perspective on expected next generation by showing expectation of schema survival in next generation of population. A schema is a template that identifies a subset of strings with similarities at certain string positions, and a template is made up of $1$s, $0$s, and $\ast$s where 
+$\ast$ is the 'don't care' symbol that matches either $0$ or $1$. However, the schema theorem by Holland did not compute expectation of strings in next generation which is considered of higher importance in GA. Bethke (see \cite{Bethke1981}) gave equations for computing expectation of number of a string in next generation. Goldberg (see \cite{Goldberg1987}) used equations 
+for the expected next generation to model the evolutionary trajectory of a two bit GA under crossover and proportional selection. Vose and Liepins (see \cite{VoseLiepins1991}) simplified and extended these equations integrating mutation into the recombination of arbitrarily long binary strings. Vose and Liepins modeled simple GA by computing expected population trajectories through time based on infinite population. Like Goldberg, their equations are deterministic. 
+Vose has proved infinite population models can be used  to explain some aspect of finite population behavior. 
 Given a finite population with proportional representation vector $\bm{p}^n$ at generation $n$ with 
-component $\bm{p}_i^n$ to describe proportion of string $i$ in finite population, infinite population model 
-can be used to predict proportion $\bm{p}_i^{n+1}$ of string $i$ as result of \textit{selection} and 
-\textit{mixing} in next generation finite population $\bm{p}^{n+1}$. Vose and Liepins (see \cite{VoseLiepins1991}) 
-modeled simple GA by computing expected population trajectories through time based on infinite population. 
-Vose and Liepins, if $\bm{r}_{i,j}(k)$ is probability of recombination $i$ and $j$ to produce $k$, and $\bm{s}_i^t$ and $\bm{s}_j^t$ 
-are probability of selection of $i$ and $j$ as parents, gives expected proporiton of $k$ in next generation as
+component $\bm{p}_i^n$ as proportion of string $i$ in finite population, infinite population model 
+can be used to compute the expected proportion $\bm{p}_i^{n+1}$ of string $i$ as result of \textit{selection} and 
+\textit{mixing} in next generation finite population $\bm{p}^{n+1}$.  
+If $\bm{r}_{i,j}(k)$ is probability that parents $i$ and $j$ recombine to produce child $k$, and $\bm{s}_i^t$ and $\bm{s}_j^t$ 
+are probability of selection of $i$ and $j$ as parents, Vose and Liepins computed expected proporiton of $k$ in next generation as
 \[
-\mathcal{E}(\bm{p}_k^{t+1}) = \sum_{i,j} \bm{s}_i^t \bm{s}_j^t \bm{r}_{i,j}(k) ; \hspace{1pt} \mathcal{E} denotes expectation
+\mathcal{E}(\bm{p}_k^{t+1}) = \sum_{i,j} \bm{s}_i^t \bm{s}_j^t \bm{r}_{i,j}(k) ; \text{\hspace{10pt} $\mathcal{E}$ denotes expectation}
 \]
 If $M$ is recombination matrix with elements $\bm{m}_{i,j} = \bm{r}_{i,j}(0)$ and permutation $\sigma_j$ defined as 
 \[
@@ -29,8 +34,20 @@ of $k$ in next generation in using recombination or mixing matrix $M$ as
 \[
 \mathcal{E}(\bm{p}_k^{t+1}) = (\sigma_k \bm{s})^T M (\sigma_k \bm{s})
 \]
+Vose and Nix (see \cite{Nix1992}) further explored issues regarding relationship between real GA and infinite population model. 
+Vose and Nix obtained an exact model for real GAs in the form of a Markov chain. They obtained transition matrix which is probability that current population vector $\bm{p}$, with 
+component $\bm{p}_i^n$ as proportion of string $i$ in finite population, produce $\bm{q}$ as next generation population vector as $Q_{p,q}$ given by
+\[
+Q_{p,q} = r! \prod \frac{(\mathcal{G}(\bm{p})_j)^{rq_j}}{(rq_j)!}
+\]
+where $\mathcal{G}(\bm{p})$ is expected next generation population for current population $\bm{p}$ using infinite population model, $r$ is finite population size 
+and $i$ and $j$ are all possible strings.
+Another result Vose and Nix obtained was that trajectory followed by finite populations was related to the evolutionary path predicted by the infinite population model. 
+Vose and Nix proved that for large populations, the evolutionary path of a real GA follows very closely, with large probability, and for a long period of time that path predicted by 
+the infinite population model. Vose in his paper 'Modelling Simple Genetic Algorithm' (see \cite{Vose1993}) which extended results of Vose and Nix,
+
 Vose and Liepins apply Walsh transform to mixing to analyse and get results. 
-With Markov chain modeling of simple GA, Nix and Vose (see \cite{Nix1992}) investigated asymptotic behavior of steady 
+With Markov chain modeling of simple GA, Vose and Nix (see \cite{Nix1992}) investigated asymptotic behavior of steady 
 state distributions as population size increases and showed that if finite population is sufficiently large, 
 convergence behavior of a real GA can be predicted. As population size increases, the correspondence improves 
 between expected population predicted using infinite population model and the actual population observed in 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  19 OCT 2016 11:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  20 OCT 2016 18:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -703,22 +703,13 @@ Chapter 1.
 ]
 
 Package natbib Warning: Citation `Mitchell1999' on page 2 undefined on input li
-ne 14.
+ne 24.
 
 
 Package natbib Warning: Citation `Goldberg1987' on page 2 undefined on input li
-ne 16.
+ne 36.
 
-[2]
-
-Package natbib Warning: Citation `Vose1993' on page 3 undefined on input line 4
-7.
-
-[3] [4]
-
-Package hyperref Warning: Ignoring empty anchor on input line 76.
-
-[5] [6] [7]) [8]
+[2] [3] [4] [5] [6] [7]) [8]
 :<-
 :<+ chapters/chapter-2.tex
 \openout2 = `chapters/chapter-2.aux'.
@@ -2669,7 +2660,7 @@ Chapter 4.
 ] [104
 
 ]
-Underfull \hbox (badness 1946) in paragraph at lines 66--66
+Underfull \hbox (badness 1946) in paragraph at lines 71--71
 []\OT1/cmr/m/n/12 Mendel, G. (1865).  Ver-suche ^^?uber plflanzen-hy-bri-den.  
 \OT1/cmr/m/it/12 Ver-hand-lun-gen des
  []
@@ -2705,23 +2696,27 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
 (./front-matter/acknowledgements.aux) (./front-matter/quote.aux)
 (./front-matter/abstract.aux) (./front-matter/nomenclature.aux)
 (./chapters/chapter-1.aux) (./chapters/chapter-2.aux) (./chapters/chapter-3.aux
-) (./chapters/chapter-4.aux) (./back-matter/appendix-1.aux)
-(./back-matter/vita.aux))
+) (./chapters/chapter-4.aux)
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+(./back-matter/appendix-1.aux) (./back-matter/vita.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 138.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 138.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
 (rerunfilecheck)             Checksum: A179A04A4DE05537D99952EE5F063F87;2182.
 Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
-(rerunfilecheck)             Checksum: 1D9A258EE0AA82B43F099E13E5F23806;1853.
+(rerunfilecheck)             Checksum: A274C7869D13C0C30A68DDB6C875685C;1815.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 138.
  ) 
 Here is how much of TeX's memory you used:
- 10060 strings out of 495029
- 167095 string characters out of 6181522
- 289943 words of memory out of 5000000
- 12925 multiletter control sequences out of 15000+600000
+ 10071 strings out of 495029
+ 167286 string characters out of 6181522
+ 291046 words of memory out of 5000000
+ 12936 multiletter control sequences out of 15000+600000
  19479 words of font info for 74 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 39i,13n,53p,1036b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,13n,53p,821b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (132 pages, 579752 bytes).
+Output written on my-dissertation.dvi (132 pages, 579472 bytes).

@@ -25,6 +25,11 @@ Geiringer, H. (1944).
 \newblock On the probability theory of linkage in mendelian heredity.
 \newblock {\em Ann. Math. Stat.}, 15(1):25--27.
 
+\bibitem[Goldberg, 1987]{Goldberg1987}
+Goldberg, D.~E. (1987).
+\newblock Simple genetic algorithms and the minimal, deceptive problem.
+\newblock {\em Genetic algorithms and simulated annealing}, 74:74--88.
+
 \bibitem[Goldberg, 1989a]{Goldberg1989a}
 Goldberg, D.~E. (1989a).
 \newblock Genetic algorithms and walsh functions: Part i, a gentle
@@ -63,6 +68,11 @@ Mendel, G. (1865).
 \newblock Versuche {\"u}ber plflanzenhybriden.
 \newblock {\em Verhandlungen des naturforschenden Vereines in Br{\"u}nn},
   IV:3--47.
+
+\bibitem[Mitchell, 1999]{Mitchell1999}
+Mitchell, M. (1999).
+\newblock {\em An Introduction to Genetic Algorithms}.
+\newblock The MIT Press.
 
 \bibitem[Nix and Vose, 1992]{Nix1992}
 Nix, A.~E. and Vose, M.~D. (1992).

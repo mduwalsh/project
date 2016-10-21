@@ -21,12 +21,11 @@ the mutation rate. During crossover, two parents are selected from the pool, a r
 each parent string and segments are exchanged. Small probability, crossover rate, is used perform crossover and otherwise 
 parents are cloned. New offsprings produced after mutation and crossover form next generation.
 
-In the book "An Introduction to Genetic Algorithms" by Mitchell (see \cite{Mitchell1999}), 
-she mentioned several people working in the 1950s and the 1960s like Box (1957), Friedman (1959),
+Several people were working in the 1950s and the 1960s like Box (1957), Friedman (1959),
 Bledsoe (1961), Bremermann (1962), and Reed, Toombs and Baricelli (1967) developed evolution-inspired algorithms 
-but little attention were given to them. Mitchell mentioned genetic algorithms were developed by Holland 
-and his colleagues in the 1960s and the 1970s. Mitchell mentioned in her book that Holland introduced 
-a population-based algorithm with crossover and mutation. With schema theorem ( see \cite{Holland1975}), 
+but little attention were given to them (see \cite{Mitchell1999}). Mitchell quoted genetic algorithms were developed by Holland 
+and his colleagues in the 1960s and the 1970s. Holland introduced a population-based algorithm with crossover and mutation. 
+With schema theorem ( see \cite{Holland1975}), 
 Holland gave some perspective on expected next generation by showing expectation of schema survival in 
 next generation of population. A schema is a template that identifies a subset of strings with similarities 
 at certain string positions, and a template is made up of $1$s, $0$s, and $\ast$s where 
@@ -53,8 +52,8 @@ If $M$ is recombination matrix with elements $\bm{m}_{i,j} = \bm{r}_{i,j}(0)$ an
 \[
 \sigma_j{\langle S_0,..,S_{2^\ell - 1} \rangle}^{T} = {\langle S_{0+j},..,S_{(2^\ell - 1)+j} \rangle}^{T}
 \]
-where $T$ is transpose and $\ell$ is bit length of binary string, Vose and Liepins represented expected proportion 
-of $k$ in next generation in using recombination or mixing matrix $M$ as
+where $T$ is transpose and $\ell$ is bit length of binary string, the expected proportion 
+of $k$ in next generation can be represented using recombination or mixing matrix $M$ (see \cite{VoseLiepins1991}) as
 \[
 \mathcal{E}(\bm{p}_k^{t+1}) = (\sigma_k \bm{s})^T M (\sigma_k \bm{s})
 \]
@@ -86,16 +85,15 @@ selection, crossover, and mutation. Vose gave formula for calculating mixing mat
 and mutation. Vose discussed how application fo Walsh transform to mixing matrix simplified the matrix, giving 
 computational efficiency in calculating matrix.
 
-There had been previous applications of Walsh transform in field of GA. Bethke, in his dissertation 
-"Genetic Algorithms as Function Optimizers" (see \cite{Bethke1981}), first introduced 
-idea of using Walsh transforms to analyse process of GA in case of binary-coded strings. The idea of using Walsh transforms 
+There had been previous applications of Walsh transform in field of GA. Bethke first introduced 
+idea of using Walsh transforms to analyse process of GA in case of binary-coded strings (see \cite{Bethke1981}). The idea of using Walsh transforms 
 were given greater incitement in papers by Goldberg (see \cite{Goldberg1989a}, \cite{Goldberg1989b}). But these usage of 
 Walsh transforms does not involve the direct application of the Walsh transform to crossover and mutation, or to any of their 
 associated mathematical objects. Vose and Liepins use Walsh transform directly to mutation and recombination, and show that the 
 twist (denoted by $M_*$) of the mixing matrix ($M$) is triangularized by the Walsh transform and used $M_*$ in study of 
 fixed points where $(M_*)_{i,j} = M_{i+j, i}$. In a related paper, Koehler (see \cite{Koehler1994}) gives a congruence 
 transformation defined by lower triangular matrix that diagonalizes the mixing matrix for 1-point crossover and mutation 
-given by a rate and mathecally proved conjecture provided by Vose and Liepins on eigenvalues of matrix $M_*$. Koehler, Bhattacharyya 
+given by a rate and mathematically proved conjecture provided by Vose and Liepins on eigenvalues of matrix $M_*$. Koehler, Bhattacharyya 
 and Vose (see \cite{KoehlerBhatta1997}) applied Fourier transform to mixing in generalizing results concerning simple genetic algorithm 
 which were previously established for binary case (in binary case, Fourier transform is Walsh transform) extending analysis to 
 strings over an alphbet of cardinality $c$. Vose and Wright (see \cite{VoseWright1998}) applied Walsh transform to mixing matrix and 
@@ -165,12 +163,31 @@ measures the {\em dispersion} of the population vector $\bm{q}$ and the factor
 indicates the probability that $\bm{q}$ is the next generation decays exponentially with increasing dispersion and 
 $\theta  =  \sum \log(e^{x_j}x_j!/x_j^{x_j})$.
 
-Vose (see \cite{Vose1999}) calculated variance of next generation population with respect to expected population as 
+The variance of next generation population with respect to expected population (see \cite{Vose1999}) is 
 \begin{equation}
 \label{RHSvariance}
 \mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \|^2) = (1 - \|\mathcal{G}(\bm{p})\|^2) / r
 \end{equation}
-and mentioned $\tau (\bm{p})$ converges in probability to $\mathcal{G}(\bm{p})$ as the population size increases. Therefore, $\tau$ corresponds to $\mathcal{G}$ in the infinite
+It follows from Chebyshev's inequality (see \cite{ChebyshevInequality}) that 
+\begin{equation}
+\label{Cheby}
+P(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \geq \epsilon) \leq \frac{(1 - \|\mathcal{G}(\bm{p})\|^2)} {r{\epsilon}^2}
+\end{equation}
+where $P$ denotes probability and $\epsilon}$ is arbitrary value.
+
+Let $f(r)$ be a function which grows arbitrarily slowly, and 
+\[
+\lim_{r \to \infty} f(r)  =  \infty.
+\]
+If $\epsilon  =  f(r)/\sqrt{r}$ then, (\ref{Cheby}) becomes
+\begin{eqnarray*}
+\lim_{r \to \infty} P(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \geq \epsilon) & \leq & \frac{(1 - \|\mathcal{G}(\bm{p})\|^2)} {{f(r)}^2}
+ & \leq & 0
+\end{eqnarray*}
+Therefore, $\tau(\bm{p})$ converges in probability to $\mathcal{G}(\bm{p})$ as the population size increases, and $\tau$ corresponds to $\mathcal{G}$ 
+in the infinite population case.
+and mentioned $\tau (\bm{p})$ converges in probability to $\mathcal{G}(\bm{p})$ as the population size increases. 
+Therefore, $\tau$ corresponds to $\mathcal{G}$ in the infinite
 population case and distance between finite and infinite population in next generation decreases as $1/r$.
 
 \section{Overview}

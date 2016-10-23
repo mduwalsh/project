@@ -163,6 +163,17 @@ measures the {\em dispersion} of the population vector $\bm{q}$ and the factor
 indicates the probability that $\bm{q}$ is the next generation decays exponentially with increasing dispersion and 
 $\theta  =  \sum \log(e^{x_j}x_j!/x_j^{x_j})$.
 
+\begin{figure}[H]
+\begin{center}
+\resizebox*{12cm}{!}{\includegraphics{figures/eps/tetra_popn.eps}}\hspace{4pt}
+\caption{\textbf{Initial population computation} }
+\label{tetra_popn}
+\end{center}
+\end{figure}
+
+The diagram (\ref{tetra_popn}) illustrates population points in tetrahedron for $\ell  =  2,  r  =  4$. Populations are represented by dots, 
+where smaller dots have lower dispersion and larger dots have higher dispersion.
+
 The variance of next generation population with respect to expected population (see \cite{Vose1999}) is 
 \begin{equation}
 \label{RHSvariance}
@@ -173,22 +184,50 @@ It follows from Chebyshev's inequality (see \cite{ChebyshevInequality}) that
 \label{Cheby}
 P(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \geq \epsilon) \leq \frac{(1 - \|\mathcal{G}(\bm{p})\|^2)} {r{\epsilon}^2}
 \end{equation}
-where $P$ denotes probability and $\epsilon}$ is arbitrary value.
+where $P$ denotes probability and $\epsilon$ is arbitrary value.
 
 Let $f(r)$ be a function which grows arbitrarily slowly, and 
 \[
-\lim_{r \to \infty} f(r)  =  \infty.
+\lim_{r \to \infty} f(r)  =  \infty
+\]
+but still
+\[
+\lim_{r \to \infty} f(r)/\sqrt{r}  =  0.
 \]
 If $\epsilon  =  f(r)/\sqrt{r}$ then, (\ref{Cheby}) becomes
 \begin{eqnarray*}
-\lim_{r \to \infty} P(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \geq \epsilon) & \leq & \frac{(1 - \|\mathcal{G}(\bm{p})\|^2)} {{f(r)}^2}
- & \leq & 0
+\lim_{r \to \infty} P(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \geq \epsilon) & \leq & \frac{(1 - \|\mathcal{G}(\bm{p})\|^2)} {{f(r)}^2} \\
+    & \leq & 0
 \end{eqnarray*}
-Therefore, $\tau(\bm{p})$ converges in probability to $\mathcal{G}(\bm{p})$ as the population size increases, and $\tau$ corresponds to $\mathcal{G}$ 
-in the infinite population case.
+
+Therefore, $\tau(\bm{p})$ converges in probability to $\mathcal{G}(\bm{p})$ as the population size increases, 
+and $\tau$ corresponds to $\mathcal{G}$ 
+in the infinite population case. Moreover, (\ref{Cheby}) suggests that the distance between finite and 
+infinite population in the next generation decreases as $1/\sqrt{r}$.
 and mentioned $\tau (\bm{p})$ converges in probability to $\mathcal{G}(\bm{p})$ as the population size increases. 
 Therefore, $\tau$ corresponds to $\mathcal{G}$ in the infinite
-population case and distance between finite and infinite population in next generation decreases as $1/r$.
+population case and distance between finite and infinite population in the next generation decreases as $1/\sqrt{r}$.
+
+In the diagram (\ref{tetra_popn}), finite population points can be only at certain points, but infinite population can be anywhere on the surface. 
+From theorem 3.1 in 'The Simple Genetic Algorithm: Foundations and Theory' (see \cite{Vose1999}), distance between finite population $\bm{p}$ 
+and infinite population $q$ is bounded by $O(1/\sqrt{r})$. 
+
+Let $x$ be the random variable $\| \bm{q} - \mathcal{G}(\bm{p}) \|$. Let $\phi$ be the function $\phi (x) = x^2$ 
+which is convex function. Then $\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|^2)$ becomes $\mathcal{E}(\phi (x))$. 
+From Jensen's Inequality (see \cite{JensenInequality}),
+if $\phi$ is a convex function, then
+\begin{eqnarray*}
+\phi(\mathcal{E}(x))) & \leq & \mathcal{E}(\phi(x)) \\
+\mathcal{E}(x) & \leq & \sqrt{\mathcal{E}(x^2)}
+\end{eqnarray*}
+Substituting original variables,
+\begin{equation}
+\label{convergenceRHS}
+\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|) \leq \sqrt{(1 - \|\mathcal{G}(\bm{p})\|^2) / \bm{N}}
+\end{equation}
+Chebyshev's inequality analysis, theorem 3.1 from 'The Simple Genetic Algorithm: Foundation and Theory', and Jenson's inequality all points distance between finite population and infinite population is bounded by $1\sqrt{r}$. But it is all mathematics; what happens when real GA is run? This research explores that through simulations in chapter one.
+
+
 
 \section{Overview}
 In chapter two, we describe a simple Markov model for diploid case under influence of mutation and crossover. The model is non-overlapping, generational, infinite population model assuming random mating and no selective pressure. Through abstract development, we show that the diploid model can be specialized by using mask based mutation and crossover operators to Vose's infinite population model which is a haploid model. Computational simplifications due to reduction of diploid model to haploid model and application of Walsh transform are exploited in experimental simulation of model, and through the experiment we demonstrate convergence of finite diploid population to infinite population behavior implied by equation \ref{RHSvariance}.

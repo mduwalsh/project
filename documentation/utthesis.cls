@@ -360,6 +360,8 @@
     \end{center}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \newcommand{\BIGOP}[1]{\mathop{\mathchoice%
 {\raise-0.3em\hbox{\Huge $#1$}}%
 {\raise-0.1em\hbox{\Large $#1$}}{\hbox{\Large $#1$}}{#1}}}
@@ -369,6 +371,7 @@
 \newcommand{\qed}{\hfill $\Box$ \end{quote}}
 \newcommand{\pushright}{\hskip \textwidth minus \textwidth}
 \newcommand{\tabspace}{\hspace{30pt}}
+
 
 \makeatletter
 \newcommand{\customlabel}[2]{%

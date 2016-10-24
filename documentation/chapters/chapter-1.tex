@@ -3,23 +3,40 @@
 \section{Introduction}
 Genetic algorithm (GA) is inspired by population genetics, and is population based, and 
 proceeds over a number of generations to obtain optimal solution. GA is powerful, broadly applicable 
-techniques to solve problems not yielding to other known methods. The basic mechanism of a GA, 
-although there are many variants, consists of:
+techniques to solve problems not yielding to other known methods. The basic elements of a GA are
+populations, selection according to fitness, crossover and random mutation (see \cite{Mitchell1999}). 
+The members of population are typically fixed length binary strings (also called genome length in later chapters).  
+GAs often requires fitness function that assigns a score (fitness) to each chromosome 
+in the current population. Operators operating on the simplest form of genetic algorithm involves: selection, crossover and mutation.
 
-1. Evaluation of individual fitness and formation of a gene pool
+\textit{Selection}: It selects population members in current population for reproduction. 
+Member with higher fitness are more likely to be selected to reproduce.
 
-2. Recombination and mutation.
+\textit{Crossover}: This operator, with some probability (crossover rate), chooses a random but same point in two selected members for reproduction 
+and exchanges subsequences before and after that point to create two offsprings.
 
-The members of next generation population is formed by individuals produced from these operations. 
-Criteria for fitness evaluation exerts evolutionary force for populations to produce more fit individuals. 
+\textit{Mutation}: Mutation corresponds to flipping the bits of an individual with some small probability, 
+the mutation rate.
+
+A simple Holland style genetic algorithm (see \cite{Holland1975}) works as:
+\begin{algorithm}
+\label{realGA}
+\caption*{A simple genetic algorithm}
+\begin{algorithmic}[1]
+\Statex 1. Start with some initial population $P$ containing $r$ binary strings of length $\ell$.
+\Statex 2. Choose parents (with replacement) $u$ and $v$ from the current population $P$ (using any selection scheme).
+
+  \Statex \hspace{\algorithmicindent} a. Cross $u$ and $v$ to produce children $u^\prime$ and $v^\prime$.
+  \Statex \hspace{\algorithmicindent} b. Mutate $u^\prime$ and $v^\prime$ with some probability to produce $u^{\prime\prime}$ and $v^{\prime\prime}$.
+  \Statex \hspace{\algorithmicindent} c. Keep, with uniform probability, one of $u^{\prime\prime}$ and $v^{\prime\prime}$ for the next generation
+ 
+\Statex 3. If the next generation contains fewer than $r$ members, repeat step 2.
+\Statex 4. Replace $P$ by the new generation formed and go to step 2.
+\end{algorithmic}
+\end{algorithm}
+
+Each iteration of this process is called a generation. 
 The process is repeated until system stops to improve or threshold is met.
-
-The members of population are typically fixed length binary strings (also called genome length in later chapters). 
-These members contribute to gene pool according to their relative fitness which is calculated using some objective function. 
-They are mutated and recombined by crossover. Mutation corresponds to flipping the bits of an individual with some small probability, 
-the mutation rate. During crossover, two parents are selected from the pool, a random but same position is chosen within 
-each parent string and segments are exchanged. Small probability, crossover rate, is used perform crossover and otherwise 
-parents are cloned. New offsprings produced after mutation and crossover form next generation.
 
 Several people were working in the 1950s and the 1960s like Box (1957), Friedman (1959),
 Bledsoe (1961), Bremermann (1962), and Reed, Toombs and Baricelli (1967) developed evolution-inspired algorithms 
@@ -109,12 +126,12 @@ from some search space $\Omega$ , together with a stochastic transition rule $\t
 produce another collection $P_{i+1}$; iterating $\tau$ produces a sequence of generations.
 
 The beginning collection $P_0$ is referred to as the {\em initial population}. Let $n$ be the cardinality 
-of $\Omega$ and ${\bf1}$ denotes column vector of all 1s. The {\em simplex} is the set of population descriptors:
-
+of $\Omega$, ${\bf1}$ denotes column vector of all 1s, $T$ denotes matrix transposition. 
+The {\em simplex} is the set of population descriptors:
 \[
 \Lambda = \{x = \langle x_0,...,x_{n-1} \rangle: {\bf1}^T x=1, x_j \geq 0 \} \text{\footnotemark\label{fnm:1}}
 \]
-\footnotetext{$\langle .. \rangle$ represents a column vector; ${\bf1}^T$ is $\langle 1,..,1 \rangle^T$}
+\footnotetext{$\langle .. \rangle$ represents a column vector; ${\bf1}$ is $\langle 1,..,1 \rangle$}
 Element $\bm{p}$ $\in$ $\Lambda$ corresponds to a population;
 $p_j$ = the proportion in the population of the $j$th element of $\Omega$.
 
@@ -166,7 +183,7 @@ $\theta  =  \sum \log(e^{x_j}x_j!/x_j^{x_j})$.
 
 \begin{figure}[H]
 \begin{center}
-\resizebox*{6cm}{!}{\includegraphics{figures/eps/tetra_popn.eps}}\hspace{4pt}
+\resizebox*{4.5cm}{!}{\includegraphics{figures/eps/tetra_popn.eps}}\hspace{4pt}
 \caption{\textbf{Population points} }
 \label{tetra_popn}
 \end{center}

@@ -220,6 +220,18 @@
   Timestamp                = {2016.09.12}
 }
 
+@Article{Vose1993,
+  Title                    = {Modeling Simple Genetic Algorithms},
+  Author                   = {Michael D. Vose},
+  Journal                  = {Foundations of genetic algorithms},
+  Year                     = {1993},
+  Pages                    = {63--73},
+  Volume                   = {2},
+
+  Owner                    = {mahendra},
+  Timestamp                = {2016.10.19}
+}
+
 @Article{VoseWright1998,
   Title                    = {The Simple Genetic Algorithm and the Walsh Transform: Part I, Theory},
   Author                   = {Michael D. Vose and Alden H. Wright},
@@ -233,6 +245,18 @@
 
   Owner                    = {mahendra},
   Timestamp                = {2016.08.11}
+}
+
+@Electronic{ChebyshevInequality,
+  Title                    = {Chebyshev's Inequality},
+  Author                   = {Wiki, Contributors},
+  Month                    = {8},
+  Organization             = {Wikipedia, The Free Encyclopedia},
+  Url                      = {https://en.wikipedia.org/wiki/Chebyshev%27s_inequality},
+  Year                     = {2016},
+
+  Owner                    = {mahendra},
+  Timestamp                = {2016.10.24}
 }
 
 @Electronic{JensenInequality,

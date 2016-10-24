@@ -14,47 +14,44 @@ The style file: apalike.bst
 A level-1 auxiliary file: back-matter/appendix-1.aux
 A level-1 auxiliary file: back-matter/vita.aux
 Database file #1: references/references-dissertation.bib
-Warning--entry type for "JensenInequality" isn't style-file defined
---line 250 of file references/references-dissertation.bib
-You've used 20 entries,
+You've used 21 entries,
             1935 wiz_defined-function locations,
-            619 strings with 6390 characters,
-and the built_in function-call counts, 6685 in all, are:
-= -- 666
-> -- 181
-< -- 20
-+ -- 67
-- -- 54
-* -- 533
-:= -- 1187
-add.period$ -- 59
-call.type$ -- 20
-change.case$ -- 121
+            622 strings with 6450 characters,
+and the built_in function-call counts, 6921 in all, are:
+= -- 690
+> -- 188
+< -- 21
++ -- 70
+- -- 56
+* -- 548
+:= -- 1234
+add.period$ -- 61
+call.type$ -- 21
+change.case$ -- 127
 chr.to.int$ -- 19
-cite$ -- 20
-duplicate$ -- 273
-empty$ -- 514
-format.name$ -- 84
-if$ -- 1292
-int.to.chr$ -- 2
+cite$ -- 21
+duplicate$ -- 283
+empty$ -- 529
+format.name$ -- 87
+if$ -- 1335
+int.to.chr$ -- 3
 int.to.str$ -- 0
 missing$ -- 23
-newline$ -- 102
-num.names$ -- 60
-pop$ -- 94
+newline$ -- 106
+num.names$ -- 63
+pop$ -- 98
 preamble$ -- 1
-purify$ -- 127
+purify$ -- 133
 quote$ -- 0
-skip$ -- 213
+skip$ -- 221
 stack$ -- 0
-substring$ -- 505
+substring$ -- 517
 swap$ -- 20
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 110
+type$ -- 116
 warning$ -- 0
-while$ -- 62
+while$ -- 64
 width$ -- 0
-write$ -- 255
-(There was 1 warning)
+write$ -- 265

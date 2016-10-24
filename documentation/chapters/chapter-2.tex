@@ -3,28 +3,29 @@
 This chapter describes a simple Markov model for evolution under the
 influence of crossing over and mutation; it is a non-overlapping,
 generational, infinite population model under the assumption of {\em complete panmixia} (random mating) and no
-selective pressure. This chapter contributes to the elegance and
-simplicity of the abstract development and manifests diploid evolution equations can be represented by haploid equations.
+selective pressure. This chapter shows how diploid evolution equations can be represented by haploid equations 
+and can be specialized to Vose's infinite population model, which is a haploid model.
 
-A basic syntactic model for haploid and diploid genomes is considered in the beginning and commented on its expressive power. Then the mechanics of how the $(n+1)$th generation is obtained from the $n$th generation are
-defined abstractly in procedural terms, which serves to motivate the equations governing evolution.
-
+A basic syntactic model for haploid and diploid genomes is first considered. 
+Then the mechanics of how next generation is obtained from current generation are
+defined abstractly in procedural terms, which serves to motivate the equations governing evolution. 
 Next evolution equations are developed corresponding to the
 procedural description defining evolution for a population of
 diploid genomes. Observations concerning the form and symmetry of
 those equations directly lead to decoupling from the diploid case a
 haploid model sufficient to determine evolutionary trajectories for
-the diploid case.    
+the diploid case. Mask based mutation and crossover operators are used to specialize 
+haploid equations to Vose's infinite haploid population model. 
+Analytical and computational simplification resulting from specialization to 
+Vose's infinite population model are explained and used 
+in experimental simulation and study of convergence of finite population 
+short-term behavior to behavior predicted by infinite population model.    
 
 \section{Model} \label{Model}
 A haploid genome $g$ is defined syntactically as a length $\ell$
 binary string.  A collection of $h$ chromosomes may be modeled by
 partitioning $g$ into $h$ segments (of arbitrary lengths $\ell_1,
 \ldots , \ell_h$; thus $\ell = \ell_1 + \cdots + \ell_h$).
-Partitioning may be extended to chromosomes so as to interpret each as
-a collection of genes.  If continued to the granularity of pairs of
-bits, partitioning allows, for example, representing the four
-possibilities Adenine, Guanine, Cytosine, and Thymine.
 
 A diploid genome $\alpha = \langle \alpha_0, \alpha_1 \rangle$ is
 likewise defined syntactically as a pair of length $\ell$ binary
@@ -91,10 +92,7 @@ q_{\{\gamma_0, \nudge \gamma_1\}} \; = \; \left\{
 \end{array}
 \right.\\[.05in]
 \]
-which is in agreement with Hardy (see \cite{Hardy1908}) (issues he considered
-and results he obtained relating to invariant distributions for a
-particular sort of transmission function are not here mentioned
-because they are irrelevant to the purpose of this section).
+which is in agreement with Hardy (see \cite{Hardy1908}).
 
 \section{Reduction}
 

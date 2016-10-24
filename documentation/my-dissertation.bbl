@@ -100,8 +100,12 @@ Vose, M.~D. and Wright, A.~H. (1998).
 \newblock The simple genetic algorithm and the walsh transform: Part i, theory.
 \newblock {\em Evol. Comput.}, 6(3):253--273.
 
-\bibitem[Wikipedia, 2016]{JensenInequality}
-Wikipedia, C. (2016).
+\bibitem[Wikipedia, 2016a]{ChebyshevInequality}
+Wikipedia, C. (2016a).
+\newblock Chebyshev's inequality.
+
+\bibitem[Wikipedia, 2016b]{JensenInequality}
+Wikipedia, C. (2016b).
 \newblock Jensen's inequality.
 
 \end{thebibliography}

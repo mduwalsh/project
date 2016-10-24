@@ -60,8 +60,11 @@
 \usepackage{amsfonts}
 \usepackage{multirow}
 \usepackage{tabularx, booktabs}
-\usepackage{algorithm}
+\usepackage{caption,algorithm, algcompatible}
 \usepackage{algpseudocode} 
+\algdef{SE}[SUBALG]{Indent}{EndIndent}{}{\algorithmicend\ }%
+\algtext*{Indent}
+\algtext*{EndIndent}
 
 %%% PACKAGES THAT ARE PRELOADED WITH THE CLASS ARE: amsmath,amsthm,amssymb,setspace,geometry,hyperref,and color
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

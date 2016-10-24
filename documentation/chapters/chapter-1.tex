@@ -132,7 +132,8 @@ the next population vector given current population vector $\bm{p}$ is (see \cit
 \begin{eqnarray}
 \label{Qmat}
 Q_{\bm{p},\bm{q}} & = & r! \prod \frac{(\mathcal{G}(\bm{p})_j)^{r\bm{q}_j}}{(r\bm{q}_j)!} \\
- & = & \exp\{-r \sum \bm{q}_j \log \frac{\bm{q}_j}{\mathcal{G}(\bm{p})_j} - \sum (\log \sqrt{2 \pi r\bm{q}_j} + \frac{1}{12r\bm{q}_j + \theta (r\bm{q}_j)}) + O(\log r)\}
+ & = & \exp\{-r \sum \bm{q}_j \log \frac{\bm{q}_j}{\mathcal{G}(\bm{p})_j} - \sum (\log \sqrt{2 \pi r\bm{q}_j} \\
+ + \frac{1}{12r\bm{q}_j + \theta (r\bm{q}_j)}) + O(\log r)\}
 \end{eqnarray}
 where summation is restricted to indices for which $\bm{q}_j > 0$.
 
@@ -165,8 +166,8 @@ $\theta  =  \sum \log(e^{x_j}x_j!/x_j^{x_j})$.
 
 \begin{figure}[H]
 \begin{center}
-\resizebox*{12cm}{!}{\includegraphics{figures/eps/tetra_popn.eps}}\hspace{4pt}
-\caption{\textbf{Initial population computation} }
+\resizebox*{6cm}{!}{\includegraphics{figures/eps/tetra_popn.eps}}\hspace{4pt}
+\caption{\textbf{Population points} }
 \label{tetra_popn}
 \end{center}
 \end{figure}
@@ -210,7 +211,7 @@ population case and distance between finite and infinite population in the next 
 
 In the diagram (\ref{tetra_popn}), finite population points can be only at certain points, but infinite population can be anywhere on the surface. 
 From theorem 3.1 in 'The Simple Genetic Algorithm: Foundations and Theory' (see \cite{Vose1999}), distance between finite population $\bm{p}$ 
-and infinite population $q$ is bounded by $O(1/\sqrt{r})$. 
+and infinite population $q$ is $O(1/\sqrt{r})$. 
 
 Let $x$ be the random variable $\| \bm{q} - \mathcal{G}(\bm{p}) \|$. Let $\phi$ be the function $\phi (x) = x^2$ 
 which is convex function. Then $\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|^2)$ becomes $\mathcal{E}(\phi (x))$. 
@@ -225,17 +226,50 @@ Substituting original variables,
 \label{convergenceRHS}
 \mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|) \leq \sqrt{(1 - \|\mathcal{G}(\bm{p})\|^2) / \bm{N}}
 \end{equation}
-Chebyshev's inequality analysis, theorem 3.1 from 'The Simple Genetic Algorithm: Foundation and Theory', and Jenson's inequality all points distance between finite population and infinite population is bounded by $1\sqrt{r}$. But it is all mathematics; what happens when real GA is run? This research explores that through simulations in chapter one.
+Chebyshev's inequality analysis, theorem 3.1 from 'The Simple Genetic Algorithm: Foundation and Theory', 
+and Jenson's inequality all points distance between finite population and infinite population is bounded 
+by $1\sqrt{r}$. But it is all mathematics; what happens when real GA is run? This research explores that 
+through simulations in chapter two.
+
+An instance of RHS is called focused if $\mathcal{G}$ is continuously differentiable, and for every $\bm{p}  \in  \Lambda$
+the sequence
+\[
+\bm{p},  \mathcal{G}(\bm{p}),  {\mathcal{G}}^2(\bm{p}),...
+\]
+converges. $\mathcal{G}$ is also called focused in this case and the path determined by following at each generation what $\tau$ is expected 
+to produce will lead to some steady state $\omega$ such that
+\[
+\mathcal{G}(\omega) = \lim_n\to\infty \mathcal{G}(\bm{p}) = \omega.
+\]
+Such points $\omega$ are called fixed points (or limits) of $\mathcal{G}$. 
+And the sequence $\bm{p},  \mathcal{G}(\bm{p}),  {\mathcal{G}}^2(\bm{p}),...$ is called orbit of $\bm{p}$ under $\mathcal{G}$. 
+In case of focused $\mathcal{G}$, under some circumstances (conditions explained in chapter three), 
+infinite population oscillates (see \cite{Vose1999}). If finite population converges to infinite population as population size increases, 
+does it mean finite population also oscillates, if infinite population oscillates under same circumstances? 
+We try to find out if finite population also oscillates with our experiment in chapter three. Then we explore 
+what happens to populations if the conditions necessary for population to oscillate are violated in chapter three.
+
+
 
 
 
 \section{Overview}
-In chapter two, we describe a simple Markov model for diploid case under influence of mutation and crossover. The model is non-overlapping, generational, infinite population model assuming random mating and no selective pressure. Through abstract development, we show that the diploid model can be specialized by using mask based mutation and crossover operators to Vose's infinite population model which is a haploid model. Computational simplifications due to reduction of diploid model to haploid model and application of Walsh transform are exploited in experimental simulation of model, and through the experiment we demonstrate convergence of finite diploid population to infinite population behavior implied by equation \ref{RHSvariance}.
+In chapter two, we describe a simple Markov model for diploid case under influence of mutation and crossover. 
+The model is non-overlapping, generational, infinite population model assuming random mating and no selective pressure. 
+Through abstract development, we show that the diploid model can be specialized by using mask based 
+mutation and crossover operators to Vose's infinite population model which is a haploid model. Computational 
+simplifications due to reduction of diploid model to haploid model and application of Walsh transform 
+are exploited in experimental simulation of model, and through the experiment we demonstrate convergence 
+of finite diploid population to infinite population behavior implied by equation \ref{RHSvariance}.
 
-In chapter three, we study evolutionary limits predicted by Vose using infinite popu-
-lation model under no selective pressure. We use computation of predicted limits
+In chapter three, we study evolutionary limits predicted by Vose using infinite population model 
+under no selective pressure. We use computation of predicted limits
 of infinite population and discuss necessary and sufficient conditions stated by Vose for population
-to converge in to periodic orbits. We investigate predicting the convergence of finite population short-term behavior to infinite population evolutionary limits under no selective pressure. Then it studies case of violation in the necessary and sufficient conditions for population to converge periodic orbits. We then study behavior of finite and infinite population when there is violation in necessary condition mentioned by Vose.
+to converge in to periodic orbits. We investigate predicting the convergence of finite population 
+short-term behavior to infinite population evolutionary limits under no selective pressure. 
+Then it studies case of violation in the necessary and sufficient conditions for population 
+to converge periodic orbits. We then study behavior of finite and infinite population when there is 
+violation in necessary condition mentioned by Vose.
 
 
 

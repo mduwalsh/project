@@ -1,5 +1,5 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces \textbf {Initial population computation} \relax }}{7}{figure.caption.16}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces \textbf {Population points} \relax }}{7}{figure.caption.16}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces \textbf {Convergence of finite population behaviour:} $d$ is distance between finite population ${\bm {f}}^n$ and infinite population ${\bm {q}}^n$ at generation $n$, population size $N$, for genome length $\ell $ (bits).\relax }}{26}{figure.caption.17}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\ell = 4$.}}}{26}{subfigure.1.1}

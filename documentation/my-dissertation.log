@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  24 OCT 2016 17:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.9.2)  24 OCT 2016 22:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -708,7 +708,7 @@ Chapter 1.
 ] [2] [3] [4] [5] [6]
 File: figures/eps/tetra_popn.eps Graphic file (type eps)
  <figures/eps/tetra_popn.eps> [7] [8]
-Overfull \hbox (7.51016pt too wide) in paragraph at lines 262--270
+Overfull \hbox (7.51016pt too wide) in paragraph at lines 259--267
 \OT1/cmr/m/n/12 Such points $\OML/cmm/m/it/12 !$ \OT1/cmr/m/n/12 are called fix
 ed points (or lim-its) of $\OMS/cmsy/m/n/12 G$\OT1/cmr/m/n/12 . And the se-quen
 ce $\OML/cmm/b/it/12 p\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 G\OT1/cmr/m/n/12 (\OM
@@ -2703,29 +2703,21 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 141.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
 (rerunfilecheck)             Checksum: 933784730F29F0CD3CCCF8E03AF01B40;2182.
+Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
+(rerunfilecheck)             Checksum: 830C547B80395AF373C839D18B18A8C8;2161.
 
-
-Package rerunfilecheck Warning: File `my-dissertation.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `my-dissertation.brf':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  F00AA6631041E07CCF9211979DF3E8E8;2161.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
  ) 
 Here is how much of TeX's memory you used:
  10244 strings out of 495029
- 170035 string characters out of 6181522
+ 170035 string characters out of 6181524
  292414 words of memory out of 5000000
  13105 multiletter control sequences out of 15000+600000
  19479 words of font info for 74 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  39i,13n,53p,801b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (132 pages, 580428 bytes).
+Output written on my-dissertation.dvi (132 pages, 590172 bytes).

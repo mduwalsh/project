@@ -148,9 +148,8 @@ of $r$ choices forms the subsequent generation. The probability that population 
 the next population vector given current population vector $\bm{p}$ is (see \cite{Vose1999}) 
 \begin{eqnarray}
 \label{Qmat}
-Q_{\bm{p},\bm{q}} & = & r! \prod \frac{(\mathcal{G}(\bm{p})_j)^{r\bm{q}_j}}{(r\bm{q}_j)!} \\
- & = & \exp\{-r \sum \bm{q}_j \log \frac{\bm{q}_j}{\mathcal{G}(\bm{p})_j} - \sum (\log \sqrt{2 \pi r\bm{q}_j} \\
- + \frac{1}{12r\bm{q}_j + \theta (r\bm{q}_j)}) + O(\log r)\}
+& & \mbox{} \hspace{-0.6in} Q_{\bm{p},\bm{q}} =\; r! \prod \frac{(\mathcal{G}(\bm{p})_j)^{r\bm{q}_j}}{(r\bm{q}_j)!} \\
+& & \mbox{} \hspace{-0.3in} = \exp\{-r \sum \bm{q}_j \log \frac{\bm{q}_j}{\mathcal{G}(\bm{p})_j} - \sum (\log \sqrt{2 \pi r\bm{q}_j}  + \frac{1}{12r\bm{q}_j + \theta (r\bm{q}_j)}) + O(\log r)\}
 \end{eqnarray}
 where summation is restricted to indices for which $\bm{q}_j > 0$.
 

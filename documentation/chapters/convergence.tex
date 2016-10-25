@@ -57,16 +57,23 @@ It follows from (\ref{d1}) and (\ref{d2}) that
       \sum_{\alpha \in {S_{\bm f}}} {\bm f}_\alpha ({\bm f}_\alpha- 2 {\bm q}_\alpha) \label{d3}
 \end{eqnarray}
 \mbox{ }\\[-.1in] which involves $2^\ell + |S_{\bm f}|$ terms,
-assuming that  $S_{\bm f}$ is known as a byproduct of computing ${\bm f}$.
-
+assuming that  $S_{\bm f}$ is known as a byproduct of computing ${\bm f}$. Therefore, 
 (\ref{d3}) computes distance between finite and infinite population efficiently.
 
-
 \section{Simplification} 
-The haploid case simplified by equations (\ref{Mhat}) and (\ref{model5})
-are the consequence of specializing to Vose's infinite population model and computing in the Walsh basis. Time switching between the standard basis and the Walsh basis is negligible; the fast Walsh transform (in dimension $n$) has complexity $n \nudge \log n$ \cite{Shanks1969}.
+Computations in the haploid case are simplified by equations (\ref{Mhat}) and (\ref{model5})
+which follow from specializing to Vose's infinite population model and computing in the Walsh basis. 
+Time switching between the standard basis and the Walsh basis is negligible; the fast Walsh transform 
+(in dimension $n$) has complexity $n \nudge \log n$ \cite{Shanks1969}.
 
-Only one mixing matrix as opposed to $2^\ell$ matrices is needed to compute the next generation; evolution equation (\ref{model5}) references the same matrix for every $g$, whereas evolution equation (\ref{model3}) depends upon a different matrix $M_g$ for each choice of $g$. The matrix is computed by a single sum as opposed to a triple sum; compare equation (\ref{Mhat}) with equation (\ref{transmission}).  Also, the relevant quadratic form is computed with a single sum as opposed to a double sum; computing via (\ref{model5}) is linear time in the size of $g \mathcal{R}$ (for each $g$) as opposed to the quadratic time computation (for each $g$) represented by equation (\ref{model3}).
+Only one mixing matrix as opposed to $2^\ell$ matrices is needed to compute the next generation; 
+evolution equation (\ref{model5}) references the same matrix for every $g$, whereas 
+evolution equation (\ref{model3}) depends upon a different matrix $M_g$ for each
+choice of $g$. The matrix is computed by a single sum as opposed to a triple sum; 
+compare equation (\ref{Mhat}) with equation (\ref{transmission}).  Also, the relevant quadratic 
+form is computed with a single sum as opposed to a double sum; computing via (\ref{model5}) is 
+linear time in the size of $g \mathcal{R}$ (for each $g$) as opposed to the quadratic time computation 
+(for each $g$) represented by equation (\ref{model3}).
 
 From a computational standpoint, the best-case scenario is where
 recomputation of the matrices mentioned in the previous paragraph is
@@ -90,14 +97,14 @@ of the infinite diploid population model as described in section 2
 described in section \ref{Model}).
 
 Equations (\ref{model1}), (\ref{Mhat}),
-(\ref{model5}), (\ref{d3}) were employed to illustrate efficient
-computation of the distance
+(\ref{model5}), (\ref{d3}) were employed to efficiently
+compute the distance
 \[
 d \; = \; \|{\bm f}^n - {\bm q}^n \nudge \|
 \]
 where ${\bm f}^n$ and ${\bm q}^n$ represent finite and infinite diploid
-populations at generation $n \in \{1,2,4,8,16,32,64,128\}$
-respectively, beginning from a random initial population (${\bm f}^0 =
+populations (respectively) at generation $n \in \{1,2,4,8,16,32,64,128\}$, 
+beginning from a random initial population (${\bm f}^0 =
 {\bm q}^0$). Genome lengths $\ell \in \{4,6,8,10,12,14\}$ and population
 sizes $N = 2^i$ for integer $0 \le i \le 20$ were considered.  The
 crossover distribution ${\bm \chi}$ corresponds to independent assortment of

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.9.2)  24 OCT 2016 22:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  28 OCT 2016 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -696,7 +696,8 @@ No file my-dissertation.nls.
 
 (./chapters/chapter-1.tex
 Chapter 1.
-[1
+File: figures/eps/GA.eps Graphic file (type eps)
+<figures/eps/GA.eps> [1
 
 
 
@@ -705,10 +706,11 @@ Chapter 1.
 
 
 
-] [2] [3] [4] [5] [6]
+] [2] [3] [4] [5] [6] [7]
 File: figures/eps/tetra_popn.eps Graphic file (type eps)
- <figures/eps/tetra_popn.eps> [7] [8]
-Overfull \hbox (7.51016pt too wide) in paragraph at lines 259--267
+ <figures/eps/tetra_popn.eps>
+[8] [9]
+Overfull \hbox (7.51016pt too wide) in paragraph at lines 283--294
 \OT1/cmr/m/n/12 Such points $\OML/cmm/m/it/12 !$ \OT1/cmr/m/n/12 are called fix
 ed points (or lim-its) of $\OMS/cmsy/m/n/12 G$\OT1/cmr/m/n/12 . And the se-quen
 ce $\OML/cmm/b/it/12 p\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 G\OT1/cmr/m/n/12 (\OM
@@ -716,30 +718,30 @@ L/cmm/b/it/12 p\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 G[]\OT1/cmr
 /m/n/12 (\OML/cmm/b/it/12 p\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; :::$
  []
 
-[9]) [10]
+[10]) [11]
 :<-
 :<+ chapters/chapter-2.tex
 \openout2 = `chapters/chapter-2.aux'.
 
 (./chapters/chapter-2.tex
 Chapter 2.
-[11
+[12
 
 
 
 
-] [12]
+] [13]
 Underfull \hbox (badness 10000) in paragraph at lines 74--79
 
  []
 
-[13]
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 148--152
 \OT1/cmr/m/n/12 nent of the dis-tri-bu-tion $\OML/cmm/m/it/12 p[]$\OT1/cmr/m/n/
 12 .
  []
 
-[14]
+[15]
 Package srcltx Info: Expanded filename `chapters/specialization.tex' to `chapte
 rs/specialization.tex' on input line 170.
 
@@ -749,18 +751,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--34
 
  []
 
-[15]
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 54--57
 
  []
 
-[16] [17] [18]
+[17] [18] [19]
 
-LaTeX Warning: Reference `WalshT' on page 19 undefined on input line 138.
+LaTeX Warning: Reference `WalshT' on page 20 undefined on input line 138.
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 144.
-[19] [20] [21])
+[20] [21])
 :<-
 Package srcltx Info: Expanded filename `chapters/convergence.tex' to `chapters/
 convergence.tex' on input line 172.
@@ -770,12 +772,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--12
 
  []
 
-
+[22]
 Underfull \hbox (badness 10000) in paragraph at lines 14--19
 
  []
 
-[22] [23]
+[23] [24]
 File: figures/eps/surf/b4.eps Graphic file (type eps)
  <figures/eps/surf/b4.eps>
 File: figures/eps/surf/b6.eps Graphic file (type eps)
@@ -789,35 +791,30 @@ File: figures/eps/surf/b12.eps Graphic file (type eps)
 
 <figures/eps/surf/b12.eps>
 File: figures/eps/surf/b14.eps Graphic file (type eps)
- <figures/eps/surf/b14.eps> [24] [25]
+ <figures/eps/surf/b14.eps> [25] [26]
 File: figures/eps/slope/m.eps Graphic file (type eps)
 
 <figures/eps/slope/m.eps>
 File: figures/eps/slope/b.eps Graphic file (type eps)
- <figures/eps/slope/b.eps> [26])
+ <figures/eps/slope/b.eps> [27])
 :<-
-) [27]
+) [28]
 :<-
 :<+ chapters/chapter-3.tex
 \openout2 = `chapters/chapter-3.aux'.
 
 (./chapters/chapter-3.tex
 Chapter 3.
-[28
+[29
 
 
 
 
-] [29] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 117--119
-
- []
-
-[31]
+] [30] [31]
 File: figures/eps/initialpop.eps Graphic file (type eps)
- <figures/eps/initialpop.eps> [32] [33] [34]
+ <figures/eps/initialpop.eps> [32] [33] [34] [35]
 Package srcltx Info: Expanded filename `chapters/oscillation.tex' to `chapters/
-oscillation.tex' on input line 228.
+oscillation.tex' on input line 219.
 
 :<+ chapters/oscillation.tex
 (./chapters/oscillation.tex
@@ -843,11 +840,11 @@ File: figures/eps/osc/b8/osc_inf_hap.eps Graphic file (type eps)
 <figures/eps/osc/b8/osc_inf_hap.eps>
 File: figures/eps/osc/b8/fin_hap_dist.eps Graphic file (type eps)
  <figures/eps/osc/b8/fin_hap_dist.eps>
-[35]
+[36]
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[36]
+[37]
 File: figures/eps/osc/b8/n004096_osc_fin_dip.eps Graphic file (type eps)
  <figures/eps/osc/b8/n004096_osc_fin_dip.eps>
 File: figures/eps/osc/b8/n004096_osc_fin_dip_dist.eps Graphic file (type eps)
@@ -873,7 +870,7 @@ File: figures/eps/osc/b8/fin_dip_dist.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[37]
+[38]
 File: figures/eps/osc/b10/n004096_osc_fin_hap.eps Graphic file (type eps)
  <figures/eps/osc/b10/n004096_osc_fin_hap.eps>
 File: figures/eps/osc/b10/n004096_osc_fin_hap_dist.eps Graphic file (type eps)
@@ -899,7 +896,7 @@ File: figures/eps/osc/b10/fin_hap_dist.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[38]
+[39]
 File: figures/eps/osc/b10/n004096_osc_fin_dip.eps Graphic file (type eps)
  <figures/eps/osc/b10/n004096_osc_fin_dip.eps>
 File: figures/eps/osc/b10/n004096_osc_fin_dip_dist.eps Graphic file (type eps)
@@ -925,7 +922,7 @@ File: figures/eps/osc/b10/fin_dip_dist.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[39]
+[40]
 File: figures/eps/osc/b12/n004096_osc_fin_hap.eps Graphic file (type eps)
  <figures/eps/osc/b12/n004096_osc_fin_hap.eps>
 File: figures/eps/osc/b12/n004096_osc_fin_hap_dist.eps Graphic file (type eps)
@@ -951,7 +948,7 @@ File: figures/eps/osc/b12/fin_hap_dist.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[40]
+[41]
 File: figures/eps/osc/b12/n004096_osc_fin_dip.eps Graphic file (type eps)
  <figures/eps/osc/b12/n004096_osc_fin_dip.eps>
 File: figures/eps/osc/b12/n004096_osc_fin_dip_dist.eps Graphic file (type eps)
@@ -977,7 +974,7 @@ File: figures/eps/osc/b10/fin_hap_dist.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[41]
+[42]
 File: figures/eps/osc/b14/n004096_osc_fin_hap.eps Graphic file (type eps)
  <figures/eps/osc/b14/n004096_osc_fin_hap.eps>
 File: figures/eps/osc/b14/n004096_osc_fin_hap_dist.eps Graphic file (type eps)
@@ -1003,7 +1000,7 @@ File: figures/eps/osc/b14/fin_hap_dist.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[42]
+[43]
 File: figures/eps/osc/b14/n004096_osc_fin_dip.eps Graphic file (type eps)
  <figures/eps/osc/b14/n004096_osc_fin_dip.eps>
 File: figures/eps/osc/b14/n004096_osc_fin_dip_dist.eps Graphic file (type eps)
@@ -1031,17 +1028,36 @@ File: figures/eps/osc/b14/fin_dip_dist.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[43] [44]
+[44]
+
+LaTeX Warning: Reference `convergenceRHS' on page 45 undefined on input line 24
+0.
+
+
+LaTeX Warning: Reference `convergenceRHS' on page 45 undefined on input line 24
+1.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
+[]|$\OML/cmm/m/it/12 N  \OT1/cmr/m/n/12 =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
+[]|$\OML/cmm/m/it/12 N  \OT1/cmr/m/n/12 =
+ []
+
+[45]
 Missing character: There is no â in font cmr12!
 Missing character: There is no ˆ in font cmr12!
 Missing character: There is no ’ in font cmr12!
- [45]
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+ [46]
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
 
 Package srcltx Info: Expanded filename `chapters/violation-mu.tex' to `chapters
-/violation-mu.tex' on input line 339.
+/violation-mu.tex' on input line 329.
 :<+ chapters/violation-mu.tex
 (./chapters/violation-mu.tex
 File: figures/eps/vio/mu/b8/e0.01/n00004096_fin_hap.eps Graphic file (type eps)
@@ -1073,7 +1089,7 @@ File: figures/eps/vio/mu/b8/e0.01/inf_hap.eps Graphic file (type eps)
 <figures/eps/vio/mu/b8/e0.01/inf_hap.eps>
 File: figures/eps/vio/mu/b8/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
-<figures/eps/vio/mu/b8/e0.01/inf_hap_wovio.eps> [46] [47]
+<figures/eps/vio/mu/b8/e0.01/inf_hap_wovio.eps> [47]
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
@@ -1827,7 +1843,7 @@ Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 [71])
 :<-
 Package srcltx Info: Expanded filename `chapters/violation-chi.tex' to `chapter
-s/violation-chi.tex' on input line 342.
+s/violation-chi.tex' on input line 332.
 :<+ chapters/violation-chi.tex
 (./chapters/violation-chi.tex
 File: figures/eps/vio/chi/b8/e0.01/n00004096_fin_hap.eps Graphic file (type eps
@@ -2626,14 +2642,14 @@ Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 :<-
 [96] [97]
 Package srcltx Info: Expanded filename `chapters/vio-mu-table.tex' to `chapters
-/vio-mu-table.tex' on input line 367.
+/vio-mu-table.tex' on input line 357.
 
 :<+ chapters/vio-mu-table.tex
 (./chapters/vio-mu-table.tex)
 :<-
 [98]
 Package srcltx Info: Expanded filename `chapters/vio-chi-table.tex' to `chapter
-s/vio-chi-table.tex' on input line 370.
+s/vio-chi-table.tex' on input line 360.
 
 :<+ chapters/vio-chi-table.tex
 (./chapters/vio-chi-table.tex)
@@ -2702,22 +2718,30 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 141.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: 933784730F29F0CD3CCCF8E03AF01B40;2182.
-Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
-(rerunfilecheck)             Checksum: 830C547B80395AF373C839D18B18A8C8;2161.
+(rerunfilecheck)             Checksum: BEF14FDF5DFC511E49A882B86E89DD7F;2182.
 
+
+Package rerunfilecheck Warning: File `my-dissertation.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `my-dissertation.brf':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  2BBF764B6F3090F855FEB478263533AC;2497.
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
  ) 
 Here is how much of TeX's memory you used:
- 10244 strings out of 495029
- 170035 string characters out of 6181524
- 292414 words of memory out of 5000000
- 13105 multiletter control sequences out of 15000+600000
+ 10248 strings out of 495029
+ 170077 string characters out of 6181522
+ 292462 words of memory out of 5000000
+ 13108 multiletter control sequences out of 15000+600000
  19479 words of font info for 74 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 39i,13n,53p,801b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,13n,53p,616b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (132 pages, 590172 bytes).
+Output written on my-dissertation.dvi (132 pages, 585712 bytes).

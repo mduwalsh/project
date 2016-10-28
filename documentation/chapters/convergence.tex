@@ -190,13 +190,15 @@ approximately $-0.5$, indicating
 \label{covergenceDistance}
 d \; \approx \; k/\sqrt{N}.
 \end{equation} 
-Equation \ref{covergenceDistance} agrees with  equation \ref{convergenceRHS} which shows the expected rate of convergence for the single-step haploid case; the distance is inversely proportional to square root of population size.
-
+Equation \ref{covergenceDistance} agrees with (\ref{Cheby}), (\ref{Jensen}) and 
+theorem 3.1 from 'The Simple Genetic Algorithm: Foundations and Theory' (see \cite{Vose1999}) 
+which gives the bound for the expected rate of convergence for the single-step haploid case; 
+the distance is inversely proportional to square root of population size. 
 The consistent convergence rate
-across multiple generations is somewhat surprising, simulation
+across multiple generations shown in Figure (\ref{convergence}) is somewhat surprising, simulation
 results above indicate it may persist to generation $n = 128$.
 
-The intercept graphs above show the constant of proportionality $k =
+The intercept graphs above (Figure \ref{regression-parameters} b) show the constant of proportionality $k =
 e^b$ decreases monotonically with genome length $\ell$, and increases
 monotonically with generation $n$.  The increase in $k$ for larger $n$
 seems to be a manifestation of the growing nonlinearity uniformly

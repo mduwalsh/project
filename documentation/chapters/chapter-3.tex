@@ -1,19 +1,20 @@
 \chapter{Evolutionary Limits} \label{ch:evolutionary limits}
 This chapter investigates evolutionary limits predicted by Vose using infinite population model under no selective pressure. 
-It uses computation of predicted limits of infinite population and discusse necessary and sufficient conditions stated by Vose for 
-population to converge in to periodic orbits. We investigate predicting the convergence of finite population short-term behavior to infinite population evolutionary limits under no selective pressure. Then it studies behavior of infinite and finite population in case of violation in the necessary and sufficient conditions 
-for population to converge periodic orbits.
+It uses computation to verify predicted infinite population limits and presents necessary and sufficient conditions obtained by Vose for 
+convergence to periodic orbits. We investigate the convergence of finite population short-term behavior 
+to infinite population evolutionary limits under no selective pressure. Infinite and finite population behavior when 
+the necessary and sufficient conditions for convergence to periodic orbits are violated is also examined.
 
 \section{Limits}
 \label{Limits}
 Vose states under mild assumptions on mutations (considered later), populations converge under repeated application 
-of $\mathcal{M}$. Vose mentions that in general case, periodic orbits are possible but populations converge under 
-repeated application of $\mathcal{M}^2$ and limits ${\bm p}^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n}({\bm p})$ 
-and ${\bm q}^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n+1}({\bm q})$ exist.
+of $\mathcal{M}$. Vose mentions that in the general case, periodic orbits are possible, but populations converge under 
+repeated application of $\mathcal{M}^2$ and the limits ${\bm p}^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n}({\bm p})$ 
+and ${\bm q}^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n+1}({\bm q})$ exist (see \cite{Vose1999}).
 
 In this section, operations ($+$ and $\cdot$) acting on elements of $\mathcal{R}$ are component-wise addition and multiplication modulo 2. 
 
-Following Vose's theorem, let $S_g = g \mathcal{R} / \{\textbf{0}, g\}$, and let $|g|$ be the number of non zero bits in $g$.
+Following Vose (see \cite{Vose1999}), let $S_g = g \mathcal{R} / \{\textbf{0}, g\}$, and let $|g|$ be the number of non zero bits in $g$.
 \[
 {{\widehat{{\bm p}}}_g}^{\prime}  = \begin{cases}
     2^{\ell /2}  & \text{if $g = 0$}\\
@@ -32,7 +33,7 @@ Moreover,
 |x_g| & = & 1 \nudge \Rightarrow y_g = 0
 \end{eqnarray*}
 
-With above notations, limits can be expressed in Walsh basis by recursive equations 
+With above notations, limits can be expressed in Walsh basis by recursive equations (see \cite{Vose1999})
 \begin{equation}
 \label{lt1}
 \widehat{{\bm p}^{\ast}}_g  = \begin{cases}
@@ -51,31 +52,23 @@ With above notations, limits can be expressed in Walsh basis by recursive equati
 If $x_g \neq -1$ for all $g$, then ${\bm p}^\ast = {\bm q}^\ast = lim_{n \rightarrow \infty} \mathcal{M}({\bm p})$ is the limit of mixing. In other cases, 
 mixing converges to a periodic orbit oscillating between ${\bm p}^\ast$ and ${\bm q}^\ast = \mathcal{M}({\bm p}^\ast)$.
 
-Limits $\widehat{{\bm p}^{\ast}}_g$ and $\widehat{{\bm q}^{\ast}_g}$ can be computed considering $g$th components in order of increasing $|g|$ and 
-performing complete indcution on $|g|$. If $|g| = 0$ then $g = 0$. Since $\widehat{{\bm p}^\ast}_0 = 2^{-\ell/2}$ for all distributions ${\bm p}$, 
-the $\textbf{0}$the components of the sequence $\mathcal{M}^n({\bm p})$ are identical in the Walsh basis. Since $|x_0| = 2$ ($x_g = 2\widehat{\mathcal{M}}_{g,0}$ 
-and $\widehat{\mathcal{M}}_{0,0} = 1$), $\widehat{{\bm p}^{\ast}}_g = \widehat{{\bm q}^{\ast}}_g = 2^{-\ell/2}$. Next, consider $|g| = 1$. $y_g = 0$ for $|g| = 0$ 
-(noted from above). These two cases $|g| < 2|$ are base cases for complete induction on $|g|$. The inductive hypothesis given by Vose is that 
-for $|k| < |g|$, the $k$th component of $\mathcal{M}^n({\bm p})$ in the Walsh basis converges to $\widehat{{\bm p}^{\ast}}_k$ or $\widehat{{\bm q}^{\ast}}_k$ as 
-$n \rightarrow \infty$ through even or odd values respectively, and if $x_k \neq -1$ for all such $k$, then 
-$\widehat{{\bm p}^{\ast}}_k$ = $\widehat{{\bm q}^{\ast}}_k$. And computation of $y_g(z)$ involves only the $k$th components of $z$ where $|k| < |g|$. 
-\newline 
-Vose gives a necessary and sufficient condition for the sequence
+Limits $\widehat{{\bm p}^{\ast}}_g$ and $\widehat{{\bm q}^{\ast}_g}$ can be computed considering $g$th components in order of increasing $|g|$.
+The necessary and sufficient condition for the sequence
 \[
-p, \mathcal{M}({\bm p}), \mathcal{M}^2({\bm p}),...
+\bm{p}, \mathcal{M}({\bm p}), \mathcal{M}^2({\bm p}),...
 \]
-to converge to a periodic orbit as that for some $g$
+to converge to a periodic orbit given by Vose is that for some $g$
 \begin{equation}
 \label{OscCond}
 -1 = \sum \limits_{j} (-1)^{g^T j} \bm{\mu}_j = - \sum \limits_{k \in \bar{g}\mathcal{R}} \bm{\chi}_{k+g} + \bm{\chi}_k
 \end{equation}
  
 \section{Computation of Mutation and Crossover Distribution}
-Following algorithm installs values of mutation and crossover distributions that satisfies condition described 
-by equation (\ref{OscCond}) for evolutionary sequence to converge in periodic orbits. Operations ($+$ and $\cdot$) acting on elements of $\mathcal{R}$ in this section below are component-wise addition and multiplication modulo 2. 
+The following algorithm generates mutation and crossover distributions that satisfying equation (\ref{OscCond}) 
+for evolution to converge to periodic orbits. Operations ($+$ and $\cdot$) acting on elements of $\mathcal{R}$ 
+in this section below are component-wise addition and multiplication modulo 2. 
 Let $\bm{\mu}_j$ and $\bm{\chi}_k$ represent mutation and crossover distributions respectively where $j,k \in \mathcal{R}$ 
-and $U01()$ be random number between $0$ and $1$. For any $g$ where $g \in \mathcal{R}$ and $g \neq 0$.
-For all $j \in \mathcal{R}$,
+and $U01()$ is a random number between $0$ and $1$. For any $g \in \mathcal{R}$ and $g \neq 0$ and for all $j \in \mathcal{R}$,
 \[
 \bm{\mu}_j = \begin{cases}
     U01() & \text{if $(g^T\cdot j)$ is odd}.\\
@@ -83,29 +76,26 @@ For all $j \in \mathcal{R}$,
   \end{cases}
 \]
 
-This installs some random values in some specific positions in $\bm{\mu}$ distribution array according to value of $g$ and others set to $0$. 
-Normalization of $\bm{\mu}_j$ gives values for $\bm{\mu}$ distribution
+This installs random values in some specific positions in $\bm{\mu}$ according to value of $g$. Other components of $\bm{\mu}$ are set to $0$. 
+Normalization of $\bm{\mu}_j$ yields $\bm{\mu}$ (the mutation distribution),
 \[
-\bm{\mu}_j = \bm{\mu}_j / \sum \limits_{j \in \mathcal{R} } \bm{\mu}_j
+\bm{\mu}_j = \bm{\mu}_j / \sum \limits_{j \in \mathcal{R} } \bm{\mu}_j.
 \]
-such that 
+Hence 
 \[
 \sum \limits_{j \in \mathcal{R} } \bm{\mu}_j = 1.
 \]
-The values $\bm{\mu}_j$ satisfy condition (\ref{OscCond}) for $\bm{\mu}$ distribution.
-
+Moreover, the values $\bm{\mu}_j$ satisfy condition (\ref{OscCond}).
 
 Condition $k \in \bar{g} \mathcal{R}$ in equation (\ref{OscCond}) can be simplified for computation as
 \[
 k = \bar{g} i  \text{ where $i \in \mathcal{R}$}
 \]
 Logical bitwise ANDing both sides by $\bar{g}$,
-\begin{eqnarray*}
-\bar{g} k & = & \bar{g} \bar{g} i \\
-\bar{g} k & = & \bar{g} i \\
-\bar{g} k & = & k 
-\end{eqnarray*}
-
+\begin{equation*}
+\bar{g} k = \bar{g} \bar{g} i \; = \; \bar{g} i \; = \; k 
+\end{equation*}
+The crossover distribution can be generated as follows.
 For all $k \in \mathcal{R}$,
 \begin{eqnarray*}
 \bm{\chi}_k & = & U01() \\
@@ -115,18 +105,18 @@ where $k \in \bar{g} \mathcal{R}$, and
 \[
 \bm{\chi}_k = 0
 \]
-for other values of $k$. \newline
-
-This installs some random values in some specific positions in array of $\bm{\chi}$ according to value of $g$ 
-and others set to $0$. Normalization of $\bm{\chi}_k$ gives values for $\bm{\chi}$ distribution 
+for other values of $k$. 
+This installs random values in some specific positions in $\bm{\chi}$ according to the value of $g$. 
+Other components of $\bm{\chi}$ are set to $0$. Normalization of $\bm{\chi}_k$ yields 
+$\bm{\chi}$ (the crossover distribution),
 \[
-\bm{\chi}_k = \bm{\chi}_k/\sum\limits_{k \in \mathcal{R}} \bm{\chi}_k
+\bm{\chi}_k = \bm{\chi}_k/\sum\limits_{k \in \mathcal{R}} \bm{\chi}_k.
 \]
-such that 
+Hence 
 \[
 \sum\limits_{k \in \mathcal{R}} \bm{\chi}_k = 1.
 \]
-The values $\bm{\chi}_k$ satisfy condition (\ref{OscCond}) for $\bm{\chi}$ distribution.
+Moreover, the values $\bm{\chi}_k$ satisfy condition (\ref{OscCond}).
 
 \section{Initial Population}
 \label{InitPopOsc}
@@ -142,20 +132,20 @@ The values $\bm{\chi}_k$ satisfy condition (\ref{OscCond}) for $\bm{\chi}$ distr
 Let finite haploid population $\bm{s}^n$, finite diploid population $\bm{f}^n$, infinite haploid population $\bm{p}^n$ 
 and infinite haploid population $\bm{q}^n$ be considered with initial population $\bm{s}^0$, $\bm{f}^0$,
 $\bm{p}^0$, $\bm{q}^0$ respectively. To investigate oscillating behavior of infinite population evolutionary limits 
-and finite population, same initial population is desired. 
+and finite population behavior, it is desirable to have the same initial population. 
 
-For a genome length $\ell$, let $x = 2^\ell$ be number of possible strings in finite haploid population array $\bm{t}$ of 
-population size $N$. Possible strings $\bm{t}_i$ are ${0, 1,.., x-1}$ where $i = 0, 1,.., N-1$. An arbitrary vector $\bm{f}$ of size $x$ 
-was considered where
+For a length $\ell$, $x = 2^\ell$ is the number of possible haploids. Let array $\bm{t}$ represent a  
+population size of $N$ as follows: $\bm{t}_j$ is the $j$th population member (some element of $\{0,..,x-1\}$ 
+where elements are base 2 length l binary strings). Array $\bm{t}$ is generated as follows. 
+First an arbitrary vector $\bm{r}$ of size $x$ is considered where
 \[
 \bm{r}_i = U01(); \tabspace {i = 0, 1,.., x-1}
 \]
 and U01() is random number between 0 and 1.
-Let $\bm{t}$ represent finite haploid population strings array.
 \[
 \bm{t}_j = randp(\bm{r}) ; \tabspace {j = 0,.., N-1}
 \]
-where $\bm{t}_j$ is $j^{th}$ population member and $randp(\bm{r})$ returns random index $i$ in array $\bm{r}$ with probability $\bm{r}_i$.
+where $randp(\bm{r})$ returns random index $i$ in array $\bm{r}$ with probability $\bm{r}_i$.
 
 Let $\bm{c}_i$ represent count of haploid member $i$ in population $\bm{t}$ given by
 \[
@@ -181,9 +171,8 @@ Finite haploid population members $\bm{t}_j$s are generated again to match finit
 
 Initial infinite diploid population $\bm{q}_0$ is calculated corresponding to initial haploid population $\bm{p}^0$ as
 \[
-\bm{q}_{i,j} = \bm{p}_i \cdot \bm{p}_j  \nudge; \tabspace  {i = 0,..,x-1; \tabspace j = 0,..,x-1}.
+\bm{q}^0_{i,j} = \bm{p}^0_i \cdot \bm{p}^0_j  \nudge; \tabspace  (0 \leq i,j < x).
 \]
-
 Let $\bm{v}$ represent finite diploid population member array of size $N^2$ and $\bm{d}_{i,j}$ represent count of 
 diploid member $\langle i,j \rangle$ in $\bm{v}$. Then $\bm{v}$ can be filled with population member to match 
 initial population vector $\bm{p}$ generating diploid members such that
@@ -192,14 +181,14 @@ initial population vector $\bm{p}$ generating diploid members such that
 \sum \limits_{k=0}^{N^2-1} [ \bm{v}_k = \langle i,j \rangle ] & = & \bm{d}_{i,j}
 \end{eqnarray*}
 
-Finite diploid population vector $\bm{f}$ can be obtained from finite diploid population member array $\bm{v}$  using
+Finite diploid population (proportion) vector $\bm{f}$ can be obtained from finite diploid population member array $\bm{v}$  using
 \[
 f_{i,j} = \frac{\bm{d}_{i,j}}{\sum \limits_{k=0}^{x-1} \sum \limits_{h=0}^{x-1} \bm{d}_{k,h}}
 \]
 where $i = 0,.., x-1$, $h = 0,.., x-1$ and $\sum \limits_{k=0}^{x-1} \sum \limits_{h=0}^{x-1} \bm{d}_{k,h} = N^2$.
 
-This initial infinite haploid population vector $\bm{p}^0$ corresponds to initial infinite diploid population vector $\bm{q}^0$, initial finite 
-haploid population vector with population size $N$ and initial finite diploid population vector $N^2$ with population size $N^2$.
+Thus, initial infinite haploid population vector $\bm{p}^0$ corresponds to initial infinite diploid population vector $\bm{q}^0$, initial finite 
+haploid population vector with population size $N$ and initial finite diploid population vector with population size $N^2$.
 
 \section{Oscillation}
 \label{Oscillation}
@@ -211,87 +200,88 @@ and finite population under no selective pressure.
 Infinite haploid population evolutionary limits $\bm{p}_h^{\ast}$ and $\bm{q}_h^{\ast}$ were computed using equations (\ref{lt1}) and (\ref{lt2}). 
 Infinite diploid population evolutionary limits $\bm{p}_d^{\ast}$ and $\bm{q}_d^{\ast}$ as
 \begin{eqnarray*}
-{\bm{p}_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} & = & {\bm{p}_h^{\ast}}_{\gamma_0} {\bm{p}_h^{\ast}}_{\gamma_1} \\
-{\bm{q}_d^{\ast}}_{\langle \gamma_0, \gamma_1 \rangle} & = & {\bm{q}_h^{\ast}}_{\gamma_0} {\bm{q}_h^{\ast}}_{\gamma_1}
+({\bm{p}_d^{\ast}})_{\langle \gamma_0, \gamma_1 \rangle} & = & ({\bm{p}_h^{\ast}})_{\gamma_0} ({\bm{p}_h^{\ast}})_{\gamma_1} \\
+({\bm{q}_d^{\ast}})_{\langle \gamma_0, \gamma_1 \rangle} & = & ({\bm{q}_h^{\ast}})_{\gamma_0} ({\bm{q}_h^{\ast}})_{\gamma_1}
 \end{eqnarray*}
 where $\gamma = \langle \gamma_0, \gamma_1 \rangle$ is diploid genome.
 
-For a genome length $\ell$, same initial population (calculated as described in (\ref{InitPopOsc})) was used for infinite population and all 
-sizes of finite population conisdered.
-Genome lengths $\ell = \{8, \nudge10, \nudge12, \nudge14\}$ were used. Base population size of $N_0 = 64$ was considered for finite haploid case and 
-different population sizes $N = \{1N_0^2, \nudge10N_0^2, \nudge20N_0^2\}$ were considered for plotting graphs. 
-The distances of $\bm{p}^n$ and $\bm{s}^n$ to haploid evolutionary limits $\bm{p}_h^{\ast}$ and $\bm{q}_h^{\ast}$ were plotted and the distances of $\bm{q}^n$ and 
-$\bm{f}^n$ to diploid evolutionary limits $\bm{p}_d^{\ast}$ and $\bm{q}_d^{\ast}$ were plotted. Distance data of finite population to infinite population were also plotted.
-
+For every genome length $\ell$, the same initial population (calculated as described in (\ref{InitPopOsc})) was used for the infinite population and all 
+sizes of finite populations conisdered.
+Genome lengths $\ell \in \{8, \nudge10, \nudge12, \nudge14\}$ were used. Base population size of $N_0 = 64$ was used 
+for the finite haploid case to compute initial population vector. The population sizes considered for plotting 
+graphs were $N \in \{1N_0^2, \nudge10N_0^2, \nudge20N_0^2\}$. 
+The distances of $\bm{p}^n$ and $\bm{s}^n$ to haploid evolutionary limits $\bm{p}_h^{\ast}$ and 
+$\bm{q}_h^{\ast}$ were plotted and the distances of $\bm{q}^n$ and 
+$\bm{f}^n$ to diploid evolutionary limits $\bm{p}_d^{\ast}$ and $\bm{q}_d^{\ast}$ were plotted. 
+Distance data of finite population to infinite population were also plotted.
 
 %oscillation
 \input{chapters/oscillation.tex}
 
-
 \textbf{ Figures} \ref{oscillation_8h}, \ref{oscillation_8d}, \ref{oscillation_10h}, \ref{oscillation_10d}, \ref{oscillation_12h}, \ref{oscillation_12d}, 
-\ref{oscillation_14h} and \ref{oscillation_14d} arranged by genome length $\ell$ 
-and sub-figures within each figures arranged by population size ($N$) for finite population for haploid and diploid population 
-depticts oscillating behavior of both infinite and finite population when necessary and sufficient condition \ref{OscCond} is met. 
-Oscillation in finite population in both haploid and diploid case simulation became sharper with increased population size as expected. 
-As size of finite population increased, oscillation behavior depicted by finite population grew analogous to oscillation behavior 
-depicted by infinite population. 
+\ref{oscillation_14h} and \ref{oscillation_14d} arranged by genome length $\ell$ in ascending order. For each genome length, figures are split into two 
+cases, haploid and diploid cases of population. In each figure for unique genome length $\ell$ and population case (either haploid or diploid), sub-figures 
+are arranged by population size ($N$). In each figure, first three rows of sub-figures on left column shows distance of finite population 
+to limits and sub-figure in fourth row on left column shows distance of infinite population to limits. These sub-figures depicts 
+oscillating behavior of both infinite and finite population when necessary and sufficient condition \ref{OscCond} is met. 
+Finite population oscillation in both the haploid and diploid case is sharper with increased population size. 
+As population size increases, oscillation approaches the behavior exhibited by infinite population. 
 
-Graphs of difference in distance ($d$) and  average distance ($d_{avg}$) were plotted for both haploid and diploid cas on right side of
-oscillation graphs in above figures where $d$ is distance of finite population to infinite population and $d_{avg}$ is average of distance 
-from $1^{st}$ to $50^{th}$ generation. For a given genome length $\ell$ and haploid or diploid case, single graph for distances of 
-different finite population sizes ($N = 1N_0^2, \nudge10N_0^2, \nudge20N_0^2$) were plotted. 
-The resulting graphs showed distance decreased as population size increased which is expected and in congruence with results from section \ref{convergence}. 
-Graphs show curve of distance of finite population to infinite population smoothens as population size increased. The graphs of $d-d_{avg}$ 
-shows decrease in amplitude of ripples as population size increases.
+In each figure (\ref{oscillation_8h}, \ref{oscillation_8d}, \ref{oscillation_10h}, \ref{oscillation_10d}, 
+\ref{oscillation_12h}, \ref{oscillation_12d}, 
+\ref{oscillation_14h} and \ref{oscillation_14d}), first three rows of graphs on right side shows 
+distance variation (difference in distance ($d$) and average distance ($d_{avg}$))  
+where $d$ is distance between finite and infinite populations and $d_{avg}$ is average value of $d$. 
+In fourth row on right, a single graph for distances ($d$) of different finite population sizes 
+($N = 1N_0^2, \nudge10N_0^2, \nudge20N_0^2$) to infinite population are plotted. The resulting graphs shows distance decreases 
+as population size increases which is consistent with results from section \ref{convergence}. 
+The distance graphs smooth as population size increases. The graphs of $d-d_{avg}$ decreases in amplitude as population size increases.
 
-Numerator $\sqrt{(1 - \|\mathcal{G}(\bm{p})\|^2)}$ in equation \ref{convergenceRHS} is calculated using initial population and is $\approx 1$. 
-So from \ref{convergenceRHS}, the expected single step distance between finite and infinite population, $d$, can be approximated as
+The numerator in equation \ref{convergenceRHS} is approximately $1$. 
+So from \ref{convergenceRHS}, the expected single step distance between finite and infinite population, $d$, is
 \[
 d \approx 1/\sqrt{N}
 \]
-where $N$ is size of finite population.
-Then mathematical expection of single step distance for finite population size $N = \{4096, \nudge 40960, \nudge 81920\}$ considered for plotting is shown in following table.
+where $N$ is the population size.
+This expected single step distance is shown in table \ref{tableExpectedDistance}.
 \begin{table}[ht]
 \caption{\textbf{Expected single step distance $d$ for population size $N$}}
 \centering
 \begin{tabular}{c c c c}
 \hline
 $N$ & 4096 & 40960 & 81920 \\
-$d$ & 0.015625 & 0.004941 & 0.003494 \\
+$d$ & 0.0156 & 0.0049 & 0.0035 \\
 \hline
 \end{tabular}
 \label{tableExpectedDistance}
 \end{table}
-
-Data obtained from distances of finite population of size $N = \{4096, \nudge 40960, \nudge 81920\}$ to infinite population obtained from simulation 
-for oscillation for both haploid and dioploid case with genome length $\ell = \{8, \nudge 10, \nudge 12, \nudge 14\}$ are tabulated below.
-%\newpage
+Distance data obtained from simulations are summarized in table \ref{tableDistanceOsc}. The 
+last three columns tabulate average distance values between finite and infinite population 
+for population sizes $N \;=\; 4096 $, $N \;=\; 40960 $ and $N \;=\; 81920 $ respectively.
 \begin{table}[ht]
-\caption{\textbf{Experimental distance measured for oscillation:} $N$ is finite population size, $\ell$ is genome length and $\{d^\prime, d^{\prime\prime}, d^{\prime\prime\prime}\}$ are distances to infinite population from finite population of sizes $\{4096, \nudge 40960, \nudge 81920\}$ }
+\caption{\textbf{Experimental distance measured for oscillation:} $N$ is population size, $\ell$ is genome length 
+and average distance between finite and infinite population is tabulated in the last three columns. $\{4096, \nudge 40960, \nudge 81920\}$ }
 \centering
 \begin{tabularx}{0.75\textwidth}{ c *{4}{X}}
 \toprule
-case & $\ell$ & $d^\prime$ & $d^{\prime\prime}$ & $d^{\prime\prime\prime}$\\
+case & $\ell$ & $N \;=\; 4096 $ & $N \;=\; 40960 $ & $N \;=\; 81920 $\\
 \midrule
-\multirow{4}{*}{haploid} 	& 8 & 0.015785 & 0.005123 & 0.003559 \\
- 				& 10 & 0.015663 & 0.005007 & 0.003511 \\ 
- 			 	& 12 & 0.015638 & 0.004933 & 0.003497 \\
- 	 			& 14 & 0.015626 & 0.004948 & 0.003503 \\ 
+\multirow{4}{*}{haploid} 	& 8 & 0.0158 & 0.0051 & 0.0035 \\
+ 				& 10 & 0.0157 & 0.0050 & 0.0035 \\ 
+ 			 	& 12 & 0.0156 & 0.0049 & 0.0035 \\
+ 	 			& 14 & 0.0156 & 0.0049 & 0.0035 \\ 
 \midrule
-\multirow{4}{*}{diploid} 	& 8 & 0.015623 & 0.004942 & 0.003498 \\
-				& 10 & 0.015624 & 0.004941 & 0.003494 \\
-			 	& 12 & 0.015625 & 0.004941 & 0.003494 \\
-	 			& 14 & 0.015625 & 0.004941 & 0.003494 \\
+\multirow{4}{*}{diploid} 	& 8 & 0.0156 & 0.0049 & 0.0035 \\
+				& 10 & 0.0156 & 0.0049 & 0.0035 \\
+			 	& 12 & 0.0156 & 0.0049 & 0.0035 \\
+	 			& 14 & 0.0156 & 0.0049 & 0.0035 \\
 \bottomrule
 
 \end{tabularx}
 \label{tableDistanceOsc}
 \end{table}
-
-
-From table \ref{tableDistanceOsc}, averaged distances obtained for finite population size $N = \{4096,  40960,  81920\}$ are $\{0.015651, 0.004972, 0.003506\} $ respectively.
-The results from table \ref{tableDistanceOsc} shows the distance between finite population and infinite population, although measured over number of generations, follows closely 
-the expected single step distance between finite and infinite population given by  table \ref{tableExpectedDistance} and the distance decreased as $1/\sqrt{N}$.
+Results from table \ref{tableDistanceOsc} show average distance between finite and infinite population follows closely 
+the expected single step distance given in table \ref{tableExpectedDistance}. The distance decreases as $1/\sqrt{N}$.
 
 \section{Violation}
 

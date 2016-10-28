@@ -1,5 +1,4 @@
 \chapter{Introduction} \label{ch:introduction}
-
 \section{Introduction}
 Genetic algorithm (GA) is inspired by population genetics, and is population based, and 
 proceeds over a number of generations to obtain optimal solution. GA is powerful, broadly applicable 
@@ -17,6 +16,15 @@ and exchanges subsequences before and after that point to create two offsprings.
 
 \textit{Mutation}: Mutation corresponds to flipping the bits of an individual with some small probability, 
 the mutation rate.
+
+Figure \ref{FiniteGA} shows procedural flow of finite population genetic algorithm.
+\begin{figure}[H]
+\begin{center}
+\resizebox*{6.5cm}{!}{\includegraphics{figures/eps/GA.eps}}\hspace{4pt}
+\caption{\textbf{Finite GA} }
+\label{FiniteGA}
+\end{center}
+\end{figure}
 
 A simple Holland style genetic algorithm (see \cite{Holland1975}) works as:
 \begin{algorithm}
@@ -37,6 +45,16 @@ A simple Holland style genetic algorithm (see \cite{Holland1975}) works as:
 
 Each iteration of this process is called a generation. 
 The process is repeated until system stops to improve or threshold is met.
+
+Infinite population model of GA models population as proportional vector $\bm{p}$ where component $\bm{p}_j$ 
+is proportion of string $i$ in the population. If $\mathcal{G}$ is a function that maps current infinite population to 
+next generation, then $\mathcal{G}(\bm{p})$ is next generation population. By definition, $\mathcal{G}(\bm{p})$ is a probability 
+vector such that 
+\[
+\mathcal{G}(\bm{p})_j \; = \; \text{the probability that string $j$ is kept for the next generation}.
+\]
+Therefore, the evolution of infinite population from an initial population $\bm{p}$ is the sequence
+\[ \bm{p} \to \mathcal{G}(\bm{p}) \to  {\mathcal{G}}(\mathcal{G}(\bm{p})) \to... \]
 
 Several people were working in the 1950s and the 1960s like Box (1957), Friedman (1959),
 Bledsoe (1961), Bremermann (1962), and Reed, Toombs and Baricelli (1967) developed evolution-inspired algorithms 
@@ -229,19 +247,25 @@ In the diagram (\ref{tetra_popn}), finite population points can be only at certa
 From theorem 3.1 in 'The Simple Genetic Algorithm: Foundations and Theory' (see \cite{Vose1999}), distance between finite population $\bm{p}$ 
 and infinite population $q$ is $O(1/\sqrt{r})$. 
 
-Let $x$ be the random variable $\| \bm{q} - \mathcal{G}(\bm{p}) \|$. Let $\phi$ be the function $\phi (x) = x^2$ 
-which is convex function. Then $\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|^2)$ becomes $\mathcal{E}(\phi (x))$. 
-From Jensen's Inequality (see \cite{JensenInequality}),
+Let $x$ be the random variable $\| \bm{q} - \mathcal{G}(\bm{p}) \|$. Let $\phi$ be the convex function $\phi (x) = x^2$. 
+Then, $\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|^2)$ becomes $\mathcal{E}(\phi (x))$. 
+It follows from Jensen's Inequality (see \cite{JensenInequality}) that 
 if $\phi$ is a convex function, then
-\begin{eqnarray*}
-\phi(\mathcal{E}(x))) & \leq & \mathcal{E}(\phi(x)) \\
-\mathcal{E}(x) & \leq & \sqrt{\mathcal{E}(x^2)}
-\end{eqnarray*}
+\[
+\phi(\mathcal{E}(x))) \leq \mathcal{E}(\phi(x)) 
+\]
+Therefore,
+\[
+\mathcal{E}(x) \leq \sqrt{\mathcal{E}(x^2)}
+\]
 Substituting original variables,
 \begin{equation}
-\label{convergenceRHS}
+\label{Jensen}
 \mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|) \leq \sqrt{(1 - \|\mathcal{G}(\bm{p})\|^2) / \bm{N}}
 \end{equation}
+Equation (\ref{Jensen}) bounds the expected rate of convergence for the single-step haploid case; 
+the distance is inversely proportional to square root of population size.
+
 Chebyshev's inequality analysis, theorem 3.1 from 'The Simple Genetic Algorithm: Foundation and Theory', 
 and Jenson's inequality all points distance between finite population and infinite population is bounded 
 by $1\sqrt{r}$. But it is all mathematics; what happens when real GA is run? This research explores that 
@@ -260,14 +284,13 @@ to produce will lead to some steady state $\omega$ such that
 Such points $\omega$ are called fixed points (or limits) of $\mathcal{G}$. 
 And the sequence $\bm{p},  \mathcal{G}(\bm{p}),  {\mathcal{G}}^2(\bm{p}),...$ is called orbit of $\bm{p}$ under $\mathcal{G}$. 
 In case of focused $\mathcal{G}$, under some circumstances (conditions explained in chapter three), 
-infinite population oscillates (see \cite{Vose1999}). If finite population converges to infinite population as population size increases, 
-does it mean finite population also oscillates, if infinite population oscillates under same circumstances? 
-We try to find out if finite population also oscillates with our experiment in chapter three. Then we explore 
-what happens to populations if the conditions necessary for population to oscillate are violated in chapter three.
-
-
-
-
+infinite population oscillates converging alternatingly to fixed points (see \cite{Vose1999}). 
+For a non-zero positive mutation rate, mutation will produce any possible string in finite population 
+with non-zero probability and therefore, causing finite population forming ergodic Markov chain, visiting every state 
+infinitely often in a long run. For finite population forming such ergodic Markov chain, punctuated equilibria (see \cite{VoseLiepins1991}) 
+suggests populations often move closer to fixed points alternatingly. But can it happen in one generation for finite population 
+like it happens in case of infinite population? We investigate whether finite population also oscillates or not with our experiment 
+in chapter three. Then we explore what happens to populations if the conditions necessary for population to oscillate are violated.
 
 \section{Overview}
 In chapter two, we describe a simple Markov model for diploid case under influence of mutation and crossover. 

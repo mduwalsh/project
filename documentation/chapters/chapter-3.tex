@@ -286,11 +286,13 @@ the expected single step distance given in table \ref{tableExpectedDistance}. Th
 \section{Violation}
 Previous results show that oscillation occurs when the crossover distribution $\bm{\chi}$ ,and the mutation distribution $\bm{\mu}$ 
 satisfy (\ref{OscCond}). Error $\bm{\epsilon}$ was introduced to $\bm{\mu}$ and $\bm{\chi}$ distributions to 
-violate condition (\ref{OscCond}). Consequently, $\bm{p}^\ast \;=\; \bm{q}^\ast \;=\; \bm{z}}^\ast$. 
-Going forward, We use $\bm{z}}^\ast$ to denote limit with violation, and 
-$\bm{p}^\ast$ and $\bm{q}^\ast$ to denote limits without violation.
+violate condition (\ref{OscCond}). Consequently, $\bm{p}^\ast \;=\; \bm{q}^\ast \;=\; \bm{z}^\ast$. 
+Going forward, we use 'limit $\bm{z}^\ast$' to denote evolutionary limit when crossover distribution 
+$\bm{\chi}$ or mutation distribution $\bm{\mu}$ is violated, and 
+'non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$' to denote limits without violation.
 
-$\bm{\mu}$ distribution was treated with $\bm{\epsilon}$ such that
+\subsection{Violation in Mutation Distribution}
+The mutation distribution $\bm{\mu}$ was modified as follows
 \[
 \bm{\mu}_i = (1-\bm{\epsilon}) \bm{\mu}_i \nudge; \tabspace i = \{0, 1, 2,.., 2^{\ell}-1\}.
 \]
@@ -299,11 +301,73 @@ So that sum of $\bm{\mu}$ distribution becomes,
 1-\bm{\epsilon} = \sum \limits_{i=0}^{2^{\ell}-1} \bm{\mu}_i
 \]
 Then set
+% \[
+% \bm{\mu}_0 = \bm{\epsilon}
+% \]
 \[
-\bm{\mu}_0 = \bm{\epsilon}
+\bm{\mu}_0 = (1-\bm{\epsilon})\bm{\epsilon}
 \]
+$c$ is total number components in $\bm{\mu}$ satisfying condition $\bm{\mu}_i = 0$ and set those components value as
+\[
+\bm{\mu}_i = \bm{\epsilon}^2/c \; ; \; where \; \bm{\mu}_i = 0
+\]
+The mutation distribution $\bm{\mu}$ is normalized such that  $\sum\limits_{i=0}^{2^{\ell}-1}\bm{\mu}_i \;=\; 1$.
+This modification guarantees every mutation mask has some non zero positive probability to be used, and any population member can mutate to any other possible population member via mutation, forming an ergodic Markvo chain. Because of ergodic Markov chain, 
+every population state will be visited infinitely often, and steady state distribution exists 
+where is independent of initial population (see \cite{Nix1992}).   
+Let's see an example with $\ell \;=\; 3$. 
+The possible strings as population member are {$000, 001, 010, 011, 100, 101, 110, 111$}. 
+Let $101$ be a population member in current population. Then, $101$ can mutate to any string possible in the population as \newline
+$101 \xrightarrow{000} 101$ \newline
+$101 \xrightarrow{001} 100$ \newline
+$101 \xrightarrow{010} 111$ \newline
+$101 \xrightarrow{011} 110$ \newline
+$101 \xrightarrow{100} 001$ \newline
+$101 \xrightarrow{101} 000$ \newline
+$101 \xrightarrow{110} 011$ \newline
+$101 \xrightarrow{111} 010$. \newline
 
-$\bm{\chi}$ distribution was treated with $\bm{\epsilon}$ such that
+Simulations were repeated with the violations in (\ref{OscCond}) described above for mutation distribution.
+The distances of both infinite and finite populations to limit $\bm{z}^\ast$ were plotted. 
+The distances of both infinite and finite populations to non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$ were also plotted.
+
+% figures for mu violation
+\input{chapters/violation-mu.tex}
+
+The left column of figures \ref{oscillation_8h_vio_mu_0.01} through \ref{oscillation_14d_vio_mu_0.5} 
+shows distance of finite and infinite populations to limit $\bm{z^\ast}$ (limit with violation). The 
+right column shows distance of finite and infinite populations to non-violation limits $\bm{p^\ast}$ and $\bm{q^\ast}$. 
+Graphs in right column give picture of oscillating behavior of population given violation. 
+Both finite and infinite populations oscillate given violation. However, ripples die out quickly, 
+and oscillation ceases for infinite populations.
+In the finite population case, although ripple amplitudes decrease, oscillation didn't die out completely. 
+
+Change in oscillating behavior of population with change in $\bm{\epsilon}$ values $\{0.01, 0.1, 0.5\}$ were also studied. 
+Results show ripples damp out faster with increase $\bm{\epsilon}$.
+With smaller values of $\bm{\epsilon}$, oscillations were sharper and as value of $\bm{\epsilon}$ increased, 
+rate of damping increased. With $\bm{\epsilon} = 0.01$, oscillation is clearly visible and ripples are sharper; with $\bm{\epsilon} = 0.1$ oscillation was visible 
+but ripples were damping out quickly;  with $\bm{\epsilon} = 0.5$, oscillation was very minimal or not visible at all. 
+Violation introducted to the mutation distribution $\bm{\mu}$ creates new masks (different than in case of without violation) to be used in mutation 
+during transmission. With small $\bm{\epsilon}$, the probablility of using the new masks available due to violation is very small and 
+those masks might not be used at all during mutation in finite population, but with higher values of $\bm{\epsilon}$, 
+those new masks have higher chance of usage during mutation which cause oscillation to damp out quickly or cause no oscillation at all.
+
+Graphs in left column in figures \ref{oscillation_8h_vio_mu_0.01} through \ref{oscillation_14d_vio_mu_0.5} show distance 
+between finite population and limit $\bm{z}^\ast$ (limit with violation in $\bm{\mu} distribution$) decreases as finite population size increases 
+and shows behavior similar to infinite population behavior as finite population reach large number. Simulation results show infinite population converges 
+to limit $\bm{z^\ast}$ quicker with increase in $\bm{\epsilon}$. The distance data in case of violation in $\bm{\mu}$ distribution 
+with different values of $\bm{\epsilon}$ for different finite population size $N$ are tabulated in table \ref{distanceMu}.
+
+% figures for mu violation
+\input{chapters/vio-mu-table.tex}
+
+From table \ref{distanceMu}, average distance calculated for finite population size $4096$ is $0.0158$, 
+for size $40960$ is $0.0055$ and for size $81920$ is $0.0041$. These results show average distance 
+between finite population and limit $\bm{z^\ast}$ closely follows expected single step distance 
+between finite and infinite population given in \ref{tableExpectedDistance}. The distance decreased as $1/\sqrt{N}$.
+
+\subsection{Violation in Crossover Distribution}
+The crossover distribution $\bm{\chi}$ was modified as
 \[
 \bm{\chi}_i = (1-\bm{\epsilon}) \bm{\chi} ; \tabspace i = \{1, 2,.., 2^{\ell}-1\} 
 \]
@@ -312,64 +376,55 @@ So that
 \bm{\chi}_i + \bm{\chi}_{i+g} = 1-\bm{\epsilon} ; \tabspace g \text{ is defined in  section } \ref{Limits}
 \]
 
-Then $j$ is chosen where $\bm{\chi}_j = 0$ and set $\bm{\chi}_j = \bm{\epsilon}$. \newline
+Then $j$ is chosen where $\bm{\chi}_j = 0$ and set $\bm{\chi}_j = \bm{\epsilon}$. 
 
-Simulations were run again with violations in (\ref{OscCond}) implemented. Genome lengths  $\ell = \{8, \nudge 10, \nudge 12, \nudge 14\}$ were considered. 
-Different finite hapliod population sizes $N = \{1N_0^2, \nudge 10N_0^2, \nudge 20N_0^2\}$ were considered. 
-\newline
-Let ${\bm{p}1}^{\ast}$ and ${\bm{q}1}^{\ast}$ be evolutionary limits with violation, 
-then ${\bm{p}1}^{\ast} = {\bm{q}1}^{\ast} = {\bm{z}}^\ast$; $\bm{z}^\ast$ is limit when there is violation.
-The distances of ${p}^n$ and $\bm{s}^n$ to $\bm{z}^\ast$ were plotted and the distances of 
-$\bm{q}^n$ and $\bm{f}^n$ to $\bm{z}^\ast$ were plotted from $1^{st}$ to $50^{th}$ generations. The distances of population to evolutionary limits that would be 
-without violation in $\bm{\mu}$ and $\bm{\chi}$ were also plotted from $1^{st}$ to $50^{th}$ generations.
-
-
-% figures for mu violation
-\input{chapters/violation-mu.tex}
+Simulations were repeated with the violations in (\ref{OscCond}) described above for crossover distribution.
+The distances of both infinite and finite populations to limit $\bm{z}^\ast$ were plotted. 
+The distances of both infinite and finite populations to non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$ were also plotted.
 
 % figures for chi violation
 \input{chapters/violation-chi.tex}
 
-Left column of graphs in above figures for violation in $\bm{\mu}$ and in $\bm{\chi}$ shows distance of finite and infinite population to evolutionary limits with violation and 
-right column shows distance finite and infinite population to evolutionary limits without violation. 
-
-Graphs in right column give picture of oscillating behavior of population in presence of violation in $\bm{\mu}$ or $\bm{\chi}$ distribution 
-where distance of population to limits with no violation. Both finite and infinite population oscillate in presence of violation, however, in case of infinite population, ripples die out quickly as generation increases and ceases to oscillate, giving graph a tapering shape and in case of finite population, even though amplitudes of ripples decreased, ripples didn't die out completely. 
+The left column of figures \ref{oscillation_8h_vio_chi_0.01} through \ref{oscillation_14d_vio_chi_0.5} 
+shows distance of finite and infinite populations to limit $\bm{z^\ast}$ (limit with violation). The 
+right column shows distance of finite and infinite populations to non-violation limits $\bm{p^\ast}$ and $\bm{q^\ast}$. 
+Graphs in right column give picture of oscillating behavior of population given violation. 
+Both finite and infinite populations oscillate given violation. However, ripples die out quickly, 
+and oscillation ceases for infinite populations.
+In the finite population case, although ripple amplitudes decrease, oscillation didn't die out completely. 
 
 Change in oscillating behavior of population with change in $\bm{\epsilon}$ values $\{0.01, 0.1, 0.5\}$ were also studied. 
 Results show ripples damp out faster with increase $\bm{\epsilon}$.
-With smaller values of $\bm{\epsilon}$, oscillations were sharper and as value of $\bm{\epsilon}$ increased, rate of damping of ripples was quicker. 
-Error $\bm{\epsilon}$ introduced to $\bm{\mu}$ or $\bm{\chi}$ distribution creates new masks (different than in case of without violation) to be used in mutation 
-or crossover during transmission. With small $\bm{\epsilon}$, the probablility of using the new masks available due to violation is very small and 
-those masks might not be used at all during crossover or mutation in finite population and with higher values of $\bm{\epsilon}$, 
-those new masks have higher chance of usage during mutation or crossover which cause oscillation to damp out quickly or cause no oscillation at all. In figures for violation in 
-$\bm{\mu}$ distribution, with $\bm{\epsilon} = 0.01$, oscillation is clearly visible and ripples are sharper; with $\bm{\epsilon} = 0.1$ oscillation was visible 
-but ripples were damping out quickly;  with $\bm{\epsilon} = 0.5$, oscillation was very minimal or not visible at all. As population size increases, 
-chance of new masks created due to violation in $\bm{\mu}$ or $\bm{\chi}$ distribution also increases, thus, ripples damp out more quickly.
+With smaller values of $\bm{\epsilon}$, oscillations were sharper and as value of $\bm{\epsilon}$ increased, 
+rate of damping increased. With $\bm{\epsilon} = 0.01$, oscillation is clearly visible and ripples are sharper; with $\bm{\epsilon} = 0.1$ oscillation was visible 
+but ripples were damping out quickly;  with $\bm{\epsilon} = 0.5$, oscillation was very minimal or not visible at all. 
+Violation introducted to the crossover distribution $\bm{\chi}$ creates new masks (different than in case of without violation) to be used in crossover 
+during transmission. With small $\bm{\epsilon}$, the probablility of using the new masks available due to violation is very small and 
+those masks might not be used at all during crossover in finite population, but with higher values of $\bm{\epsilon}$, 
+those new masks have higher chance of usage during crossover which cause oscillation to damp out quickly or cause no oscillation at all.
 
-Graphs in left column show distance between finite population and limit $\bm{z}^\ast$ with violation decreases as finite population size increases 
+Graphs in left column in figures \ref{oscillation_8h_vio_chi_0.01} through \ref{oscillation_14d_vio_chi_0.5} show distance 
+between finite population and limit $\bm{z}^\ast$ (limit with violation in $\bm{\chi} distribution$) decreases as finite population size increases 
 and shows behavior similar to infinite population behavior as finite population reach large number. Simulation results show infinite population converges 
-to limit $\bm{z^\ast}$ quicker with increase in $\bm{\epsilon}$. The distance data in case of both 
-$\bm{\mu}$ and $\bm{\chi}$ distribution violation with different values of $\bm{\epsilon}$ for different finite population size $N$ are tabulated below.
-\newpage
-% figures for mu violation
-\input{chapters/vio-mu-table.tex}
-\newpage
+to limit $\bm{z^\ast}$ quicker with increase in $\bm{\epsilon}$. The distance data in case of violation in $\bm{\chi}$ distribution 
+with different values of $\bm{\epsilon}$ for different finite population size $N$ are tabulated in table \ref{distanceChi}.
+
 % figures for chi violation
 \input{chapters/vio-chi-table.tex}
 
-\newpage
-
-From table \ref{distanceMu}, average distance calculated for finite population size $4096$ is $0.015861$, 
-for size $40960$ is $0.005464$ and for size $81920$ is $0.004123$. From table \ref{distanceChi}, 
-average distance calculated for finite population size $4096$ is $0.015797$, 
-for size $40960$ is $0.005520$ and for size $81920$ is $0.004040$.
-These results show experimental distance between finite population and the limit with violation closely follows expected single step distance 
-between finite and infinite population given by \ref{tableExpectedDistance} and the distance decreased as $1/\sqrt{N}$.
-
+From table \ref{distanceChi}, 
+average distance calculated for finite population size $4096$ is $0.0158$, 
+for size $40960$ is $0.0055$ and for size $81920$ is $0.0040$.
+These results show average distance 
+between finite population and limit $\bm{z^\ast}$ closely follows expected single step distance 
+between finite and infinite population given in \ref{tableExpectedDistance}. The distance decreased as $1/\sqrt{N}$.
 
 \section{Summary}
-In this chapter, we described limits predicted by Vose for infinite population, and necessary and sufficient condition for population to converge in to periodic orbits. Through experiment, we showed finite population also oscillate under condition stated for infinite population to converge in to periodic orbits and converge to infinite population evolutionary limits as population size increases. Then we studied effect of violation in condition for population to converge in to periodic orbit on behavior of infinite and finite population through simulation.
+In this chapter, we described limits predicted by Vose for infinite population, and necessary and sufficient condition 
+for convergence to periodic orbits. Through experiment, we showed finite population also oscillate, 
+and converge to infinite population behavior as population size increases. 
+Then we studied through simulations the effect of violating the condition 
+for convergence to periodic orbits on infinite and finite population.
 
 
 

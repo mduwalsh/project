@@ -1,39 +1,41 @@
 \begin{table}[ht]
-\caption{\textbf{Experimental distance measured for violation in $\bm{\mu}$:} $\ell$ is genome length, $\epsilon$ is error introduced to $\bm{\mu}$ for violation, $\{d^\prime, d^{\prime\prime}, d^{\prime\prime\prime}\}$ are distance measured for population size $\{4096, 40960, 81920\}$ respectively}
+\caption{\textbf{Experimental distance measured for violation in $\bm{\mu}$:} $\ell$ is genome length, 
+$\epsilon$ is error introduced to $\bm{\mu}$ for violation, and average distance between finite and 
+infinite populations is tabulated in last three columns.}
 \centering
 \begin{tabularx}{0.75\textwidth}{ c *{5}{X}}
 \toprule
-$\epsilon$ & case & $\ell$ & $d^\prime$ & $d^{\prime\prime}$ & $d^{\prime\prime\prime}$ \\
+$\epsilon$ & case & $\ell$ & $N = 4096$ & $N = 40960$ & $N = 81920$ \\
 \midrule
-\multirow{8}{*}{0.01} & \multirow{4}{*}{haploid} 	& 8 & 0.017614	& 0.009411	& 0.009261 \\
-		      &   				& 10 & 0.016812	& 0.008761 	& 0.007667 \\ 
-		      & 			 	& 12 & 0.016099	& 0.006417 	& 0.005315 \\
-		      &  	 			& 14 & 0.015690	& 0.005141 	& 0.003821 \\ 
+\multirow{8}{*}{0.01} & \multirow{4}{*}{haploid} 	& 8 & 0.0176	& 0.0094	& 0.0093 \\
+		      &   				& 10 & 0.0168	& 0.0088 	& 0.0077 \\ 
+		      & 			 	& 12 & 0.0161	& 0.0064 	& 0.0053 \\
+		      &  	 			& 14 & 0.0157	& 0.0051 	& 0.0038 \\ 
 		      \cmidrule(l){2-6}
-		      & \multirow{4}{*}{diploid} 	& 8 & 0.015635	&  0.004994	& 0.003582 \\
-		      &  	 			& 10 & 0.015631	&  0.004952	& 0.003508 \\
-		      & 			 	& 12 & 0.015625	&  0.004942	& 0.003495 \\
-		      &  	 			& 14 & 0.015625	&  0.004941	& 0.003494 \\
+		      & \multirow{4}{*}{diploid} 	& 8 & 0.0156	&  0.0050	& 0.0035 \\
+		      &  	 			& 10 & 0.0156	&  0.0049	& 0.0035 \\
+		      & 			 	& 12 & 0.0156	&  0.0049	& 0.0035 \\
+		      &  	 			& 14 & 0.0156	&  0.0049	& 0.0035 \\
 		      \midrule
-\multirow{8}{*}{0.1} & \multirow{4}{*}{haploid} 	& 8 & 0.015805	& 0.005400 	& 0.004080 \\
-		      &   				& 10 & 0.015825	& 0.005281 	& 0.003938 \\	
-		      & 				& 12 & 0.015672	& 0.005064 	& 0.003649 \\	
-		      &  	 			& 14 & 0.015645	& 0.004969 	& 0.003541 \\
+\multirow{8}{*}{0.1} & \multirow{4}{*}{haploid} 	& 8 & 0.0158	& 0.0054 	& 0.0041 \\
+		      &   				& 10 & 0.0158	& 0.0053 	& 0.0039 \\	
+		      & 				& 12 & 0.0157	& 0.0051 	& 0.0036 \\	
+		      &  	 			& 14 & 0.0156	& 0.0050 	& 0.0035 \\
 		      \cmidrule(l){2-6}
-		      & \multirow{4}{*}{diploid} 	& 8 & 0.015631	&  0.004946	& 0.003499 \\
-		      &  	 			& 10 & 0.015623	&  0.004942	& 0.003508 \\
-		      & 				& 12 & 0.015625	&  0.004941	& 0.003495 \\
-		      &  	 			& 14 & 0.015625	&  0.004941	& 0.003494 \\
+		      & \multirow{4}{*}{diploid} 	& 8 & 0.0156	&  0.0049	& 0.0035 \\
+		      &  	 			& 10 & 0.0156	&  0.0049	& 0.0035 \\
+		      & 				& 12 & 0.0156	&  0.0049	& 0.0035 \\
+		      &  	 			& 14 & 0.0156	&  0.0049	& 0.0035 \\
 		      \midrule
-\multirow{8}{*}{0.5} & \multirow{4}{*}{haploid} 	& 8 & 0.016364	&  0.005641	& 0.004239 \\
-		      &   				& 10 & 0.016130	&  0.005491	& 0.004048 \\
-		      & 				& 12 & 0.015743	&  0.005079	& 0.003642 \\
-		      &  	 			& 14 & 0.015736	&  0.005109	& 0.003684 \\
+\multirow{8}{*}{0.5} & \multirow{4}{*}{haploid} 	& 8 & 0.0161	&  0.0056	& 0.0042 \\
+		      &   				& 10 & 0.0161	&  0.0055	& 0.0040 \\
+		      & 				& 12 & 0.0157	&  0.0051	& 0.0036 \\
+		      &  	 			& 14 & 0.0157	&  0.0051	& 0.0037 \\
 		      \cmidrule(l){2-6}
-		      & \multirow{4}{*}{diploid} 	& 8 & 0.015630	&  0.004952	& 0.003513 \\	
-		      &  	 			& 10 & 0.015626	&  0.004944 	& 0.003497 \\
-		      &  				& 12 & 0.015626	&  0.004941	& 0.003494 \\
-		      &  	 			& 14 & 0.015625	&  0.004941	& 0.003494 \\
+		      & \multirow{4}{*}{diploid} 	& 8 & 0.0156	&  0.0049	& 0.0035 \\	
+		      &  	 			& 10 & 0.0156	&  0.0049 	& 0.0035 \\
+		      &  				& 12 & 0.0156	&  0.0049	& 0.0035 \\
+		      &  	 			& 14 & 0.0156	&  0.0049	& 0.0035 \\
 \bottomrule
 \end{tabularx}
 \label{distanceMu}

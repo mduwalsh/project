@@ -266,7 +266,7 @@ Substituting original variables,
 Equation (\ref{Jensen}) bounds the expected rate of convergence for the single-step haploid case; 
 the distance is inversely proportional to square root of population size.
 
-Chebyshev's inequality analysis, theorem 3.1 from 'The Simple Genetic Algorithm: Foundation and Theory', 
+Theorem 3.1 from 'The Simple Genetic Algorithm: Foundation and Theory', 
 and Jenson's inequality all points distance between finite population and infinite population is bounded 
 by $1\sqrt{r}$. But it is all mathematics; what happens when real GA is run? This research explores that 
 through simulations in chapter two.
@@ -279,18 +279,34 @@ the sequence
 converges. $\mathcal{G}$ is also called focused in this case and the path determined by following at each generation what $\tau$ is expected 
 to produce will lead to some steady state $\omega$ such that
 \[
-\mathcal{G}(\omega) = \lim_n\to\infty \mathcal{G}(\bm{p}) = \omega.
+\mathcal{G}(\omega) = \lim_{n\to\infty} \mathcal{G}(\bm{p}) = \omega.
 \]
 Such points $\omega$ are called fixed points (or limits) of $\mathcal{G}$. 
 And the sequence $\bm{p},  \mathcal{G}(\bm{p}),  {\mathcal{G}}^2(\bm{p}),...$ is called orbit of $\bm{p}$ under $\mathcal{G}$. 
 In case of focused $\mathcal{G}$, under some circumstances (conditions explained in chapter three), 
 infinite population oscillates converging alternatingly to fixed points (see \cite{Vose1999}). 
-For a non-zero positive mutation rate, mutation will produce any possible string in finite population 
-with non-zero probability and therefore, causing finite population forming ergodic Markov chain, visiting every state 
-infinitely often in a long run. For finite population forming such ergodic Markov chain, punctuated equilibria (see \cite{VoseLiepins1991}) 
-suggests populations often move closer to fixed points alternatingly. But can it happen in one generation for finite population 
-like it happens in case of infinite population? We investigate whether finite population also oscillates or not with our experiment 
-in chapter three. Then we explore what happens to populations if the conditions necessary for population to oscillate are violated.
+If finite population follows infinite population closely, and if infinite population oscillates under certain conditions, then 
+does finite population also show oscillating behavior? We investigate whether finite population also oscillates or not with our experiment 
+in chapter three. 
+
+If GA forms ergodic Markov chain visiting every population state infinitely often, then $\mathcal{G}$ is also called ergodic. 
+Let $\bm{P}_j$ denote $j$th population state in population state vector $P$. Let $\bm{\pi}^k$ be the probability vector having $j$th component 
+equal to the probability that $k$th generation population is $\bm{P}_j$. If $bm{\pi}^0$ is initial distribution and $Q$ is transition matrix, the steady state distribution $\bm{\pi}$ is given by (see \cite{Nix1992})
+\[
+\lim_{k \to \infty} \bm{\pi}^k \;=\; \bm{\pi}^0 Q^k \;=\; \text{solution to the equation } "\bm{\pi} \; = \; \bm{\pi} Q" 
+\]
+where $j$th component can be interpreted as relative proporiton of time that GA has a population corresponding tp $\bm{P}_j$. 
+If the Markov chain is ergodic, then the steady state is independent of initial population. If GA were to converge to some population $\bm{P}_j$, 
+then $\bm{\pi}_j \;=\; 1$ and other components would be $0$. If GA were to oscillate between two populations $\bm{P}_i$ and $\bm{P}_j$, then 
+$\bm{\pi}_i \;=\; 1$ and other components $0$ when $k$ = odd generation, and $\bm{\pi}_j \;=\; 1$ and other components $0$ when $k$ = even generation. 
+But if GA forms ergodic Markov chain, this does not happen, instead finite population visits every population state infinitely often, and steady state 
+distribution $\bm{\pi}$ converges to $\bm{\pi}^\ast$ as population size increases to infinity ( see \cite{Nix1992}) where 
+\[
+\bm{\pi}^ast \;=\; lim_{r \to \infty} \bm{\pi}.
+\]
+So, in chapter three, we further investigate what happens to finite populations 
+if we violate the conditions necessary for population to oscillate, and making GA ergodic.
+
 
 \section{Overview}
 In chapter two, we describe a simple Markov model for diploid case under influence of mutation and crossover. 

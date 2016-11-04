@@ -1,8 +1,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces \textbf {Expected single step distance $d$ for population size $N$}\relax }}{46}{table.caption.29}
-\contentsline {table}{\numberline {3.2}{\ignorespaces \textbf {Experimental distance measured for oscillation:} $N$ is population size, $\ell $ is genome length and average distance between finite and infinite population is tabulated in the last three columns. $\{4096, \hspace {0.01in}40960, \hspace {0.01in}81920\}$ \relax }}{46}{table.caption.30}
-\contentsline {table}{\numberline {3.3}{\ignorespaces \textbf {Experimental distance measured for violation in $\bm {\mu }$:} $\ell $ is genome length, $\epsilon $ is error introduced to $\bm {\mu }$ for violation, and average distance between finite and infinite populations is tabulated in last three columns.\relax }}{101}{table.caption.55}
-\contentsline {table}{\numberline {3.4}{\ignorespaces \textbf {Experimental distance measured for violation in $\bm {\chi }$:} $\ell $ is genome length, $\epsilon $ is error introduced to $\bm {\chi }$ for violation, and average distance between finite and infinite populations is tabulated in last three columns.\relax }}{102}{table.caption.80}
+\contentsline {table}{\numberline {3.1}{\ignorespaces \textbf {Expected single step distance $d$ for population size $N$}\relax }}{47}{table.caption.29}
+\contentsline {table}{\numberline {3.2}{\ignorespaces \textbf {Experimental distance measured for oscillation:} $N$ is population size, $\ell $ is genome length and average distance between finite and infinite population is tabulated in the last three columns. $\{4096, \hspace {0.01in}40960, \hspace {0.01in}81920\}$ \relax }}{47}{table.caption.30}
+\contentsline {table}{\numberline {3.3}{\ignorespaces \textbf {Experimental distance measured for violation in $\bm {\mu }$:} $\ell $ is genome length, $\epsilon $ is error introduced to $\bm {\mu }$ for violation, and average distance between finite and infinite populations is tabulated in last three columns.\relax }}{102}{table.caption.55}
+\contentsline {table}{\numberline {3.4}{\ignorespaces \textbf {Experimental distance measured for violation in $\bm {\chi }$:} $\ell $ is genome length, $\epsilon $ is error introduced to $\bm {\chi }$ for violation, and average distance between finite and infinite populations is tabulated in last three columns.\relax }}{103}{table.caption.80}
 \addvspace {10\p@ }

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  2 NOV 2016 15:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  4 NOV 2016 15:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -706,11 +706,11 @@ File: figures/eps/GA.eps Graphic file (type eps)
 
 
 
-] [2] [3] [4] [5] [6] [7]
+] [2] [3] [4] [5] [6]
 File: figures/eps/tetra_popn.eps Graphic file (type eps)
  <figures/eps/tetra_popn.eps>
-[8] [9]
-Overfull \hbox (7.51016pt too wide) in paragraph at lines 283--294
+[7] [8] [9]
+Overfull \hbox (7.51016pt too wide) in paragraph at lines 277--285
 \OT1/cmr/m/n/12 Such points $\OML/cmm/m/it/12 !$ \OT1/cmr/m/n/12 are called fix
 ed points (or lim-its) of $\OMS/cmsy/m/n/12 G$\OT1/cmr/m/n/12 . And the se-quen
 ce $\OML/cmm/b/it/12 p\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 G\OT1/cmr/m/n/12 (\OM
@@ -718,30 +718,30 @@ L/cmm/b/it/12 p\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 G[]\OT1/cmr
 /m/n/12 (\OML/cmm/b/it/12 p\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; :::$
  []
 
-[10]) [11]
+[10] [11]) [12]
 :<-
 :<+ chapters/chapter-2.tex
 \openout2 = `chapters/chapter-2.aux'.
 
 (./chapters/chapter-2.tex
 Chapter 2.
-[12
+[13
 
 
 
 
-] [13]
+] [14]
 Underfull \hbox (badness 10000) in paragraph at lines 74--79
 
  []
 
-[14]
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 148--152
 \OT1/cmr/m/n/12 nent of the dis-tri-bu-tion $\OML/cmm/m/it/12 p[]$\OT1/cmr/m/n/
 12 .
  []
 
-[15]
+[16]
 Package srcltx Info: Expanded filename `chapters/specialization.tex' to `chapte
 rs/specialization.tex' on input line 170.
 
@@ -751,18 +751,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--34
 
  []
 
-[16]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 54--57
 
  []
 
-[17] [18] [19]
+[18] [19] [20]
 
-LaTeX Warning: Reference `WalshT' on page 20 undefined on input line 138.
+LaTeX Warning: Reference `WalshT' on page 21 undefined on input line 138.
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 144.
-[20] [21])
+[21] [22])
 :<-
 Package srcltx Info: Expanded filename `chapters/convergence.tex' to `chapters/
 convergence.tex' on input line 172.
@@ -772,12 +772,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--12
 
  []
 
-[22]
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 14--19
 
  []
 
-[23] [24]
+[24] [25]
 File: figures/eps/surf/b4.eps Graphic file (type eps)
  <figures/eps/surf/b4.eps>
 File: figures/eps/surf/b6.eps Graphic file (type eps)
@@ -791,28 +791,28 @@ File: figures/eps/surf/b12.eps Graphic file (type eps)
 
 <figures/eps/surf/b12.eps>
 File: figures/eps/surf/b14.eps Graphic file (type eps)
- <figures/eps/surf/b14.eps> [25] [26]
+ <figures/eps/surf/b14.eps> [26] [27]
 File: figures/eps/slope/m.eps Graphic file (type eps)
 
 <figures/eps/slope/m.eps>
 File: figures/eps/slope/b.eps Graphic file (type eps)
- <figures/eps/slope/b.eps> [27])
+ <figures/eps/slope/b.eps> [28])
 :<-
-) [28]
+) [29]
 :<-
 :<+ chapters/chapter-3.tex
 \openout2 = `chapters/chapter-3.aux'.
 
 (./chapters/chapter-3.tex
 Chapter 3.
-[29
+[30
 
 
 
 
-] [30] [31]
+] [31] [32]
 File: figures/eps/initialpop.eps Graphic file (type eps)
- <figures/eps/initialpop.eps> [32] [33] [34] [35]
+ <figures/eps/initialpop.eps> [33] [34] [35] [36]
 Package srcltx Info: Expanded filename `chapters/oscillation.tex' to `chapters/
 oscillation.tex' on input line 219.
 
@@ -840,11 +840,11 @@ File: figures/eps/osc/b8/osc_inf_hap.eps Graphic file (type eps)
 <figures/eps/osc/b8/osc_inf_hap.eps>
 File: figures/eps/osc/b8/fin_hap_dist.eps Graphic file (type eps)
  <figures/eps/osc/b8/fin_hap_dist.eps>
-[36]
+[37]
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[37]
+[38]
 File: figures/eps/osc/b8/n004096_osc_fin_dip.eps Graphic file (type eps)
  <figures/eps/osc/b8/n004096_osc_fin_dip.eps>
 File: figures/eps/osc/b8/n004096_osc_fin_dip_dist.eps Graphic file (type eps)
@@ -870,7 +870,7 @@ File: figures/eps/osc/b8/fin_dip_dist.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[38]
+[39]
 File: figures/eps/osc/b10/n004096_osc_fin_hap.eps Graphic file (type eps)
  <figures/eps/osc/b10/n004096_osc_fin_hap.eps>
 File: figures/eps/osc/b10/n004096_osc_fin_hap_dist.eps Graphic file (type eps)
@@ -896,7 +896,7 @@ File: figures/eps/osc/b10/fin_hap_dist.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[39]
+[40]
 File: figures/eps/osc/b10/n004096_osc_fin_dip.eps Graphic file (type eps)
  <figures/eps/osc/b10/n004096_osc_fin_dip.eps>
 File: figures/eps/osc/b10/n004096_osc_fin_dip_dist.eps Graphic file (type eps)
@@ -922,7 +922,7 @@ File: figures/eps/osc/b10/fin_dip_dist.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[40]
+[41]
 File: figures/eps/osc/b12/n004096_osc_fin_hap.eps Graphic file (type eps)
  <figures/eps/osc/b12/n004096_osc_fin_hap.eps>
 File: figures/eps/osc/b12/n004096_osc_fin_hap_dist.eps Graphic file (type eps)
@@ -948,7 +948,7 @@ File: figures/eps/osc/b12/fin_hap_dist.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[41]
+[42]
 File: figures/eps/osc/b12/n004096_osc_fin_dip.eps Graphic file (type eps)
  <figures/eps/osc/b12/n004096_osc_fin_dip.eps>
 File: figures/eps/osc/b12/n004096_osc_fin_dip_dist.eps Graphic file (type eps)
@@ -974,7 +974,7 @@ File: figures/eps/osc/b10/fin_hap_dist.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[42]
+[43]
 File: figures/eps/osc/b14/n004096_osc_fin_hap.eps Graphic file (type eps)
  <figures/eps/osc/b14/n004096_osc_fin_hap.eps>
 File: figures/eps/osc/b14/n004096_osc_fin_hap_dist.eps Graphic file (type eps)
@@ -1000,7 +1000,7 @@ File: figures/eps/osc/b14/fin_hap_dist.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[43]
+[44]
 File: figures/eps/osc/b14/n004096_osc_fin_dip.eps Graphic file (type eps)
  <figures/eps/osc/b14/n004096_osc_fin_dip.eps>
 File: figures/eps/osc/b14/n004096_osc_fin_dip_dist.eps Graphic file (type eps)
@@ -1028,13 +1028,13 @@ File: figures/eps/osc/b14/fin_dip_dist.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[44]
+[45]
 
-LaTeX Warning: Reference `convergenceRHS' on page 45 undefined on input line 24
+LaTeX Warning: Reference `convergenceRHS' on page 46 undefined on input line 24
 0.
 
 
-LaTeX Warning: Reference `convergenceRHS' on page 45 undefined on input line 24
+LaTeX Warning: Reference `convergenceRHS' on page 46 undefined on input line 24
 1.
 
 
@@ -1047,12 +1047,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 280--280
 []|$\OML/cmm/m/it/12 N  \OT1/cmr/m/n/12 =
  []
 
-[45] [46]
+[46] [47]
 Underfull \hbox (badness 10000) in paragraph at lines 313--329
 
  []
 
-[47]
+[48]
 Package srcltx Info: Expanded filename `chapters/violation-mu.tex' to `chapters
 /violation-mu.tex' on input line 335.
 
@@ -1087,11 +1087,11 @@ File: figures/eps/vio/mu/b8/e0.01/inf_hap.eps Graphic file (type eps)
 <figures/eps/vio/mu/b8/e0.01/inf_hap.eps>
 File: figures/eps/vio/mu/b8/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
-<figures/eps/vio/mu/b8/e0.01/inf_hap_wovio.eps> [48]
+<figures/eps/vio/mu/b8/e0.01/inf_hap_wovio.eps> [49]
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[49]
+[50]
 File: figures/eps/vio/mu/b8/e0.01/n00004096_fin_dip.eps Graphic file (type eps)
 
  <figures/eps/vio/mu/b8/e0.01/n00004096_fin_dip.eps>
@@ -1124,7 +1124,7 @@ File: figures/eps/vio/mu/b8/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[50]
+[51]
 File: figures/eps/vio/mu/b8/e0.1/n00004096_fin_hap.eps Graphic file (type eps)
  <figures/eps/vio/mu/b8/e0.1/n00004096_fin_hap.eps>
 File: figures/eps/vio/mu/b8/e0.1/n00004096_fin_hap_wovio.eps Graphic file (type
@@ -1154,7 +1154,7 @@ File: figures/eps/vio/mu/b8/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[51]
+[52]
 File: figures/eps/vio/mu/b8/e0.1/n00004096_fin_dip.eps Graphic file (type eps)
  <figures/eps/vio/mu/b8/e0.1/n00004096_fin_dip.eps>
 File: figures/eps/vio/mu/b8/e0.1/n00004096_fin_dip_wovio.eps Graphic file (type
@@ -1184,7 +1184,7 @@ File: figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[52]
+[53]
 File: figures/eps/vio/mu/b8/e0.5/n00004096_fin_hap.eps Graphic file (type eps)
  <figures/eps/vio/mu/b8/e0.5/n00004096_fin_hap.eps>
 File: figures/eps/vio/mu/b8/e0.5/n00004096_fin_hap_wovio.eps Graphic file (type
@@ -1214,7 +1214,7 @@ File: figures/eps/vio/mu/b8/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[53]
+[54]
 File: figures/eps/vio/mu/b8/e0.5/n00004096_fin_dip.eps Graphic file (type eps)
  <figures/eps/vio/mu/b8/e0.5/n00004096_fin_dip.eps>
 File: figures/eps/vio/mu/b8/e0.5/n00004096_fin_dip_wovio.eps Graphic file (type
@@ -1244,7 +1244,7 @@ File: figures/eps/vio/mu/b8/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[54]
+[55]
 File: figures/eps/vio/mu/b10/e0.01/n00004096_fin_hap.eps Graphic file (type eps
 )
  <figures/eps/vio/mu/b10/e0.01/n00004096_fin_hap.eps>
@@ -1277,7 +1277,7 @@ File: figures/eps/vio/mu/b10/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[55]
+[56]
 File: figures/eps/vio/mu/b10/e0.01/n00004096_fin_dip.eps Graphic file (type eps
 )
  <figures/eps/vio/mu/b10/e0.01/n00004096_fin_dip.eps>
@@ -1310,7 +1310,7 @@ File: figures/eps/vio/mu/b10/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[56]
+[57]
 File: figures/eps/vio/mu/b10/e0.1/n00004096_fin_hap.eps Graphic file (type eps)
 
  <figures/eps/vio/mu/b10/e0.1/n00004096_fin_hap.eps>
@@ -1343,7 +1343,7 @@ File: figures/eps/vio/mu/b10/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[57]
+[58]
 File: figures/eps/vio/mu/b10/e0.1/n00004096_fin_dip.eps Graphic file (type eps)
 
  <figures/eps/vio/mu/b10/e0.1/n00004096_fin_dip.eps>
@@ -1376,7 +1376,7 @@ File: figures/eps/vio/mu/b10/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[58]
+[59]
 File: figures/eps/vio/mu/b10/e0.5/n00004096_fin_hap.eps Graphic file (type eps)
 
  <figures/eps/vio/mu/b10/e0.5/n00004096_fin_hap.eps>
@@ -1409,7 +1409,7 @@ File: figures/eps/vio/mu/b10/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[59]
+[60]
 File: figures/eps/vio/mu/b10/e0.5/n00004096_fin_dip.eps Graphic file (type eps)
 
  <figures/eps/vio/mu/b10/e0.5/n00004096_fin_dip.eps>
@@ -1442,7 +1442,7 @@ File: figures/eps/vio/mu/b10/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[60]
+[61]
 File: figures/eps/vio/mu/b12/e0.01/n00004096_fin_hap.eps Graphic file (type eps
 )
  <figures/eps/vio/mu/b12/e0.01/n00004096_fin_hap.eps>
@@ -1475,7 +1475,7 @@ File: figures/eps/vio/mu/b12/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[61]
+[62]
 File: figures/eps/vio/mu/b12/e0.01/n00004096_fin_dip.eps Graphic file (type eps
 )
  <figures/eps/vio/mu/b12/e0.01/n00004096_fin_dip.eps>
@@ -1508,7 +1508,7 @@ File: figures/eps/vio/mu/b12/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[62]
+[63]
 File: figures/eps/vio/mu/b12/e0.1/n00004096_fin_hap.eps Graphic file (type eps)
 
  <figures/eps/vio/mu/b12/e0.1/n00004096_fin_hap.eps>
@@ -1541,7 +1541,7 @@ File: figures/eps/vio/mu/b12/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[63]
+[64]
 File: figures/eps/vio/mu/b12/e0.1/n00004096_fin_dip.eps Graphic file (type eps)
 
  <figures/eps/vio/mu/b12/e0.1/n00004096_fin_dip.eps>
@@ -1574,7 +1574,7 @@ File: figures/eps/vio/mu/b12/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[64]
+[65]
 File: figures/eps/vio/mu/b12/e0.5/n00004096_fin_hap.eps Graphic file (type eps)
 
  <figures/eps/vio/mu/b12/e0.5/n00004096_fin_hap.eps>
@@ -1607,7 +1607,7 @@ File: figures/eps/vio/mu/b12/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[65]
+[66]
 File: figures/eps/vio/mu/b12/e0.5/n00004096_fin_dip.eps Graphic file (type eps)
 
  <figures/eps/vio/mu/b12/e0.5/n00004096_fin_dip.eps>
@@ -1640,7 +1640,7 @@ File: figures/eps/vio/mu/b12/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[66]
+[67]
 File: figures/eps/vio/mu/b14/e0.01/n00004096_fin_hap.eps Graphic file (type eps
 )
  <figures/eps/vio/mu/b14/e0.01/n00004096_fin_hap.eps>
@@ -1673,7 +1673,7 @@ File: figures/eps/vio/mu/b14/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[67]
+[68]
 File: figures/eps/vio/mu/b14/e0.01/n00004096_fin_dip.eps Graphic file (type eps
 )
  <figures/eps/vio/mu/b14/e0.01/n00004096_fin_dip.eps>
@@ -1706,7 +1706,7 @@ File: figures/eps/vio/mu/b14/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[68]
+[69]
 File: figures/eps/vio/mu/b14/e0.1/n00004096_fin_hap.eps Graphic file (type eps)
 
  <figures/eps/vio/mu/b14/e0.1/n00004096_fin_hap.eps>
@@ -1739,7 +1739,7 @@ File: figures/eps/vio/mu/b14/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[69]
+[70]
 File: figures/eps/vio/mu/b14/e0.1/n00004096_fin_dip.eps Graphic file (type eps)
 
  <figures/eps/vio/mu/b14/e0.1/n00004096_fin_dip.eps>
@@ -1772,7 +1772,7 @@ File: figures/eps/vio/mu/b14/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[70]
+[71]
 File: figures/eps/vio/mu/b14/e0.5/n00004096_fin_hap.eps Graphic file (type eps)
 
  <figures/eps/vio/mu/b14/e0.5/n00004096_fin_hap.eps>
@@ -1805,7 +1805,7 @@ File: figures/eps/vio/mu/b14/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[71]
+[72]
 File: figures/eps/vio/mu/b14/e0.5/n00004096_fin_dip.eps Graphic file (type eps)
 
  <figures/eps/vio/mu/b14/e0.5/n00004096_fin_dip.eps>
@@ -1838,7 +1838,7 @@ File: figures/eps/vio/mu/b14/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[72])
+[73])
 :<-
 Package srcltx Info: Expanded filename `chapters/vio-mu-table.tex' to `chapters
 /vio-mu-table.tex' on input line 362.
@@ -1860,7 +1860,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--40
 
 )
 :<-
-[73]
+[74]
 Package srcltx Info: Expanded filename `chapters/violation-chi.tex' to `chapter
 s/violation-chi.tex' on input line 386.
 
@@ -1895,11 +1895,11 @@ File: figures/eps/vio/chi/b8/e0.01/inf_hap.eps Graphic file (type eps)
 <figures/eps/vio/chi/b8/e0.01/inf_hap.eps>
 File: figures/eps/vio/chi/b8/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
-<figures/eps/vio/chi/b8/e0.01/inf_hap_wovio.eps> [74]
+<figures/eps/vio/chi/b8/e0.01/inf_hap_wovio.eps> [75]
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[75]
+[76]
 File: figures/eps/vio/chi/b8/e0.01/n00004096_fin_dip.eps Graphic file (type eps
 )
  <figures/eps/vio/chi/b8/e0.01/n00004096_fin_dip.eps>
@@ -1932,7 +1932,7 @@ File: figures/eps/vio/chi/b8/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[76]
+[77]
 File: figures/eps/vio/chi/b8/e0.1/n00004096_fin_hap.eps Graphic file (type eps)
 
  <figures/eps/vio/chi/b8/e0.1/n00004096_fin_hap.eps>
@@ -1965,7 +1965,7 @@ File: figures/eps/vio/chi/b8/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[77]
+[78]
 File: figures/eps/vio/chi/b8/e0.1/n00004096_fin_dip.eps Graphic file (type eps)
 
  <figures/eps/vio/chi/b8/e0.1/n00004096_fin_dip.eps>
@@ -1998,7 +1998,7 @@ File: figures/eps/vio/chi/b8/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[78]
+[79]
 File: figures/eps/vio/chi/b8/e0.5/n00004096_fin_hap.eps Graphic file (type eps)
 
  <figures/eps/vio/chi/b8/e0.5/n00004096_fin_hap.eps>
@@ -2031,7 +2031,7 @@ File: figures/eps/vio/chi/b8/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[79]
+[80]
 File: figures/eps/vio/chi/b8/e0.5/n00004096_fin_dip.eps Graphic file (type eps)
 
  <figures/eps/vio/chi/b8/e0.5/n00004096_fin_dip.eps>
@@ -2064,7 +2064,7 @@ File: figures/eps/vio/chi/b8/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[80]
+[81]
 File: figures/eps/vio/chi/b10/e0.01/n00004096_fin_hap.eps Graphic file (type ep
 s)
  <figures/eps/vio/chi/b10/e0.01/n00004096_fin_hap.eps>
@@ -2097,7 +2097,7 @@ File: figures/eps/vio/chi/b10/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[81]
+[82]
 File: figures/eps/vio/chi/b10/e0.01/n00004096_fin_dip.eps Graphic file (type ep
 s)
  <figures/eps/vio/chi/b10/e0.01/n00004096_fin_dip.eps>
@@ -2130,7 +2130,7 @@ File: figures/eps/vio/chi/b10/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[82]
+[83]
 File: figures/eps/vio/chi/b10/e0.1/n00004096_fin_hap.eps Graphic file (type eps
 )
  <figures/eps/vio/chi/b10/e0.1/n00004096_fin_hap.eps>
@@ -2163,7 +2163,7 @@ File: figures/eps/vio/chi/b10/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[83]
+[84]
 File: figures/eps/vio/chi/b10/e0.1/n00004096_fin_dip.eps Graphic file (type eps
 )
  <figures/eps/vio/chi/b10/e0.1/n00004096_fin_dip.eps>
@@ -2196,7 +2196,7 @@ File: figures/eps/vio/chi/b10/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[84]
+[85]
 File: figures/eps/vio/chi/b10/e0.5/n00004096_fin_hap.eps Graphic file (type eps
 )
  <figures/eps/vio/chi/b10/e0.5/n00004096_fin_hap.eps>
@@ -2229,7 +2229,7 @@ File: figures/eps/vio/chi/b10/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[85]
+[86]
 File: figures/eps/vio/chi/b10/e0.5/n00004096_fin_dip.eps Graphic file (type eps
 )
  <figures/eps/vio/chi/b10/e0.5/n00004096_fin_dip.eps>
@@ -2262,7 +2262,7 @@ File: figures/eps/vio/chi/b10/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[86]
+[87]
 File: figures/eps/vio/chi/b12/e0.01/n00004096_fin_hap.eps Graphic file (type ep
 s)
  <figures/eps/vio/chi/b12/e0.01/n00004096_fin_hap.eps>
@@ -2295,7 +2295,7 @@ File: figures/eps/vio/chi/b12/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[87]
+[88]
 File: figures/eps/vio/chi/b12/e0.01/n00004096_fin_dip.eps Graphic file (type ep
 s)
  <figures/eps/vio/chi/b12/e0.01/n00004096_fin_dip.eps>
@@ -2328,7 +2328,7 @@ File: figures/eps/vio/chi/b12/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[88]
+[89]
 File: figures/eps/vio/chi/b12/e0.1/n00004096_fin_hap.eps Graphic file (type eps
 )
  <figures/eps/vio/chi/b12/e0.1/n00004096_fin_hap.eps>
@@ -2361,7 +2361,7 @@ File: figures/eps/vio/chi/b12/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[89]
+[90]
 File: figures/eps/vio/chi/b12/e0.1/n00004096_fin_dip.eps Graphic file (type eps
 )
  <figures/eps/vio/chi/b12/e0.1/n00004096_fin_dip.eps>
@@ -2394,7 +2394,7 @@ File: figures/eps/vio/chi/b12/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[90]
+[91]
 File: figures/eps/vio/chi/b12/e0.5/n00004096_fin_hap.eps Graphic file (type eps
 )
  <figures/eps/vio/chi/b12/e0.5/n00004096_fin_hap.eps>
@@ -2427,7 +2427,7 @@ File: figures/eps/vio/chi/b12/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[91]
+[92]
 File: figures/eps/vio/chi/b12/e0.5/n00004096_fin_dip.eps Graphic file (type eps
 )
  <figures/eps/vio/chi/b12/e0.5/n00004096_fin_dip.eps>
@@ -2460,7 +2460,7 @@ File: figures/eps/vio/chi/b12/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[92]
+[93]
 File: figures/eps/vio/chi/b14/e0.01/n00004096_fin_hap.eps Graphic file (type ep
 s)
  <figures/eps/vio/chi/b14/e0.01/n00004096_fin_hap.eps>
@@ -2493,7 +2493,7 @@ File: figures/eps/vio/chi/b14/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[93]
+[94]
 File: figures/eps/vio/chi/b14/e0.01/n00004096_fin_dip.eps Graphic file (type ep
 s)
  <figures/eps/vio/chi/b14/e0.01/n00004096_fin_dip.eps>
@@ -2526,7 +2526,7 @@ File: figures/eps/vio/chi/b14/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[94]
+[95]
 File: figures/eps/vio/chi/b14/e0.1/n00004096_fin_hap.eps Graphic file (type eps
 )
  <figures/eps/vio/chi/b14/e0.1/n00004096_fin_hap.eps>
@@ -2559,7 +2559,7 @@ File: figures/eps/vio/chi/b14/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[95]
+[96]
 File: figures/eps/vio/chi/b14/e0.1/n00004096_fin_dip.eps Graphic file (type eps
 )
  <figures/eps/vio/chi/b14/e0.1/n00004096_fin_dip.eps>
@@ -2592,7 +2592,7 @@ File: figures/eps/vio/chi/b14/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[96]
+[97]
 File: figures/eps/vio/chi/b14/e0.5/n00004096_fin_hap.eps Graphic file (type eps
 )
  <figures/eps/vio/chi/b14/e0.5/n00004096_fin_hap.eps>
@@ -2625,7 +2625,7 @@ File: figures/eps/vio/chi/b14/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[97]
+[98]
 File: figures/eps/vio/chi/b14/e0.5/n00004096_fin_dip.eps Graphic file (type eps
 )
  <figures/eps/vio/chi/b14/e0.5/n00004096_fin_dip.eps>
@@ -2658,7 +2658,7 @@ File: figures/eps/vio/chi/b14/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 Overfull \vbox (42.11111pt too high) has occurred while \output is active []
 
 
-[98])
+[99])
 :<-
 Package srcltx Info: Expanded filename `chapters/vio-chi-table.tex' to `chapter
 s/vio-chi-table.tex' on input line 413.
@@ -2680,30 +2680,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--40
 
 )
 :<-
-[99]) [100] [101] [102]
+[100]) [101] [102] [103]
 :<-
 :<+ chapters/chapter-4.tex
 \openout2 = `chapters/chapter-4.aux'.
 
 (./chapters/chapter-4.tex
 Chapter 4.
-[103
+[104
 
 
 
 
-]) [104]
+]) [105]
 :<-
 :<+ my-dissertation.bbl
 (./my-dissertation.bbl (./my-dissertation.brf)
 \tf@brf=\write8
 \openout8 = `my-dissertation.brf'.
 
- [105
+ [106
 
 
 
-] [106
+] [107
 
 ]
 Underfull \hbox (badness 1946) in paragraph at lines 71--71
@@ -2713,7 +2713,7 @@ Underfull \hbox (badness 1946) in paragraph at lines 71--71
 
 )
 :<-
-[107] [108]
+[108] [109]
 :<+ back-matter/appendix-1.tex
 \openout2 = `back-matter/appendix-1.aux'.
 
@@ -2722,7 +2722,7 @@ Underfull \hbox (badness 1946) in paragraph at lines 71--71
 :<+ back-matter/vita.tex
 \openout2 = `back-matter/vita.aux'.
 
-(./back-matter/vita.tex) [109
+(./back-matter/vita.tex) [110
 
 
 
@@ -2746,7 +2746,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
 (rerunfilecheck)             Checksum: A6033B01F177927967F5452454D99A36;2371.
 Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
-(rerunfilecheck)             Checksum: BA41CD60713B35B1DCFE68F0A8226C0F;2548.
+(rerunfilecheck)             Checksum: A0DBE3227994A60E0504B97412F1473B;2644.
 
 
 LaTeX Warning: There were undefined references.
@@ -2756,10 +2756,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
 Here is how much of TeX's memory you used:
  10250 strings out of 495029
  170113 string characters out of 6181522
- 310697 words of memory out of 5000000
+ 310696 words of memory out of 5000000
  13110 multiletter control sequences out of 15000+600000
  19479 words of font info for 74 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 39i,13n,53p,580b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,16n,53p,580b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (134 pages, 606480 bytes).
+Output written on my-dissertation.dvi (135 pages, 609356 bytes).

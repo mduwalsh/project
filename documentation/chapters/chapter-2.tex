@@ -1,5 +1,4 @@
 \chapter{Extending A Genetic Algorithm Model To The Diploid Case} \label{ch:GA model Diploid}
-
 This chapter describes a simple Markov model for evolution under the
 influence of crossing over and mutation; it is a non-overlapping,
 generational, infinite population model under the assumption of {\em complete panmixia} (random mating) and no
@@ -70,7 +69,6 @@ segregation\footnote{Alleles of a given locus segregate into separate
   sort into gametes independently of the alleles of another gene.}
 need not be respected by the transmission function.
 
-
 The right hand side of (\ref{model0}) is invariant under interchange
 of the summation variables $\alpha$ and $\beta$, which is equivalent
 to interchanging $\gamma_0$ and $\gamma_1$.  This symmetry reflects
@@ -95,7 +93,6 @@ q_{\{\gamma_0, \nudge \gamma_1\}} \; = \; \left\{
 which is in agreement with Hardy (see \cite{Hardy1908}).
 
 \section{Reduction}
-
 Evolution equation (\ref{model0}) may be reduced to the haploid case.
 Its right hand side is the product of two summations; denote the first
 by $p_{\gamma_0}^{n+1}$ and the second by $p_{\gamma_1}^{n+1}$ so that
@@ -131,9 +128,7 @@ The $p^n$ are in fact distributions; summing equation
 \sum_{\alpha_0, \, \alpha_1} \, p_{\alpha_0}^n \, p_{\alpha_1}^n \; = \;
 \Big( \sum_{\alpha_0} \, p_{\alpha_0}^n \Big)^2
 \]
-Let $[\mbox{\em expression\/} ]$ denote $1$ if {\em expression\/} is
-true, and $0$ otherwise.\footnote{$[ \cdots ]$ is sometimes referred to
-  as an {\em Iverson bracket}.}  The weighted count of haploid
+The weighted count of haploid
 $g$ in generation $n$ is
 \begin{eqnarray}
 \label{project}
@@ -178,12 +173,7 @@ using masked base recombination operators, we showed Vose's infinite population 
 can be extended to diploid case. Using computational benefits 
 of this reduction (to haploid model and Walsh transform), we showed via experiment and 
 regression of resulting data that distance between finite diploid population and infinite 
-diploid population decreases like $1/\sqrt{N}_{th}$ which is consistent with 
+diploid population decreases like $1/\sqrt{N}$th which is consistent with 
 the single step-step haploid case convergence behavior predicted by 
 Vose's infinite population model.
-
-
-
-
-
 

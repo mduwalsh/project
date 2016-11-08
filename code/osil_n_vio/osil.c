@@ -1074,6 +1074,7 @@ void setup()
   while(!g){
     g = rnd(1ul<<L);
   }
+  g = 15;
   Gg = g;
   chiDist(g); muDist(g);                         // initialize distributions for Mu and Chi with g = 12
   for(i = 0; i < 1ul<<L; i++){                     // copy mutation and crossover distributions to Cr and M distributions
@@ -1160,9 +1161,15 @@ int main(int argc, char** argv)
     fprintf(fp, "%ld  %ld\n", j, Seed);
     initrand(Seed);
     setup();     
-    
+    printf("Chi:\n");
+    display_p(Chi); 
+    printf("\n");
+    printf("Mu:\n");
+    display_p(Mu); 
+    printf("\n");
     p_str = calloc((1ul<<L),sizeof(double));  // oscillating point 1
     q_str = calloc((1ul<<L),sizeof(double));  // oscillating point 2
+    /*
     N = N0;
     init();
     // generate random distribution in P0
@@ -1186,6 +1193,7 @@ int main(int argc, char** argv)
       
       deinit();        
     }
+    */
     free(p_str); free(q_str);
     cleanup();
   }

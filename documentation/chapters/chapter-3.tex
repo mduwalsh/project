@@ -137,21 +137,20 @@ and finite population behavior, it is desirable to have the same initial populat
 For a length $\ell$, $x = 2^\ell$ is the number of possible haploids. Let array $\bm{t}$ represent a  
 population size of $N$ as follows: $\bm{t}_j$ is the $j$th population member (some element of $\{0,..,x-1\}$ 
 where elements are base 2 length l binary strings). Array $\bm{t}$ is generated as follows. 
-First an arbitrary vector $\bm{r}$ of size $x$ is considered where
+First an arbitrary vector $\bm{v}$ of size $x$ is considered where
 \[
-\bm{r}_i = U01(); \tabspace {i = 0, 1,.., x-1}
+\bm{v}_i = U01(); \tabspace {i = 0, 1,.., x-1}
 \]
 and U01() is random number between 0 and 1.
 \[
-\bm{t}_j = randp(\bm{r}) ; \tabspace {j = 0,.., N-1}
+\bm{t}_j = randp(\bm{v}) ; \tabspace {j = 0,.., N-1}
 \]
-where $randp(\bm{r})$ returns random index $i$ in array $\bm{r}$ with probability $\bm{r}_i$.
+where $randp(\bm{v})$ returns random index $i$ in array $\bm{v}$ with probability $\bm{v}_i$.
 
 Let $\bm{c}_i$ represent count of haploid member $i$ in population $\bm{t}$ given by
 \[
-\bm{c}_i = \sum \limits_{j=0}^{N-1} [\bm{t}_j = i]  \nudge; \tabspace  {i = 0,.., x-1} \text{ and  [..]  is  Iverson bracket.}
+\bm{c}_i = \sum \limits_{j=0}^{N-1} [\bm{t}_j = i]  \nudge; \tabspace  {i = 0,.., x-1}
 \]
-
 Then infinite population vector $\bm{p}$ is calculated as
 \[
 \bm{p}_i = \frac{\bm{c}_i}{ \sum \limits_{k=0}^{x-1} \bm{c}_k }
@@ -168,7 +167,6 @@ Finite haploid population members $\bm{t}_j$s are generated again to match finit
 \[
 \sum \limits_{j=0}^{N-1} [\bm{t}_j = i] = \bm{c}_i  \nudge; \tabspace  {i = 0,.., x-1} 
 \]
-
 Initial infinite diploid population $\bm{q}_0$ is calculated corresponding to initial haploid population $\bm{p}^0$ as
 \[
 \bm{q}^0_{i,j} = \bm{p}^0_i \cdot \bm{p}^0_j  \nudge; \tabspace  (0 \leq i,j < x).
@@ -214,7 +212,6 @@ The distances of $\bm{p}^n$ and $\bm{s}^n$ to haploid evolutionary limits $\bm{p
 $\bm{q}_h^{\ast}$ were plotted and the distances of $\bm{q}^n$ and 
 $\bm{f}^n$ to diploid evolutionary limits $\bm{p}_d^{\ast}$ and $\bm{q}_d^{\ast}$ were plotted. 
 Distance data of finite population to infinite population were also plotted.
-
 %oscillation
 \input{chapters/oscillation.tex}
 
@@ -318,21 +315,29 @@ where is independent of initial population (see \cite{Nix1992}).
 Let's see an example with $\ell \;=\; 3$. 
 The possible strings as population member are {$000, 001, 010, 011, 100, 101, 110, 111$}. 
 Let $101$ be a population member in current population. Then, $101$ can mutate to any string possible in the population as \newline
+\noindent
+\begin{minipage}[t]{.5\textwidth}
+\raggedright
 $101 \xrightarrow{000} 101$ \newline
 $101 \xrightarrow{001} 100$ \newline
 $101 \xrightarrow{010} 111$ \newline
 $101 \xrightarrow{011} 110$ \newline
+\end{minipage}% <---------------- Note the use of "%"
+\begin{minipage}[t]{.5\textwidth}
+\raggedright
 $101 \xrightarrow{100} 001$ \newline
 $101 \xrightarrow{101} 000$ \newline
 $101 \xrightarrow{110} 011$ \newline
 $101 \xrightarrow{111} 010$. \newline
+\end{minipage}
 
 Simulations were repeated with the violations in (\ref{OscCond}) described above for mutation distribution.
 The distances of both infinite and finite populations to limit $\bm{z}^\ast$ were plotted. 
 The distances of both infinite and finite populations to non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$ were also plotted.
 
 % figures for mu violation
-\input{chapters/violation-mu.tex}
+\input{chapters/violation-mu-hap.tex}
+\input{chapters/violation-mu-dip.tex}
 
 The left column of figures \ref{oscillation_8h_vio_mu_0.01} through \ref{oscillation_14d_vio_mu_0.5} 
 shows distance of finite and infinite populations to limit $\bm{z^\ast}$ (limit with violation). The 
@@ -383,7 +388,8 @@ The distances of both infinite and finite populations to limit $\bm{z}^\ast$ wer
 The distances of both infinite and finite populations to non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$ were also plotted.
 
 % figures for chi violation
-\input{chapters/violation-chi.tex}
+\input{chapters/violation-chi-hap.tex}
+\input{chapters/violation-chi-dip.tex}
 
 The left column of figures \ref{oscillation_8h_vio_chi_0.01} through \ref{oscillation_14d_vio_chi_0.5} 
 shows distance of finite and infinite populations to limit $\bm{z^\ast}$ (limit with violation). The 

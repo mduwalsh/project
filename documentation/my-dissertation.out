@@ -7,32 +7,33 @@
 \BOOKMARK [0][-]{f.0}{Table of Contents}{}% 7
 \BOOKMARK [0][-]{g.0}{Nomenclature}{}% 8
 \BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 9
-\BOOKMARK [1][-]{section.1.1}{1.1 Introduction}{chapter.1}% 10
-\BOOKMARK [1][-]{section.1.2}{1.2 Random Heuristic Search}{chapter.1}% 11
-\BOOKMARK [1][-]{section.1.3}{1.3 Overview}{chapter.1}% 12
-\BOOKMARK [0][-]{chapter.2}{2 Extending A Genetic Algorithm Model To The Diploid Case}{}% 13
-\BOOKMARK [1][-]{section.2.1}{2.1 Model}{chapter.2}% 14
-\BOOKMARK [1][-]{section.2.2}{2.2 Reduction}{chapter.2}% 15
-\BOOKMARK [1][-]{section.2.3}{2.3 Specialization}{chapter.2}% 16
-\BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Mutation}{section.2.3}% 17
-\BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 Crossover}{section.2.3}% 18
-\BOOKMARK [2][-]{subsection.2.3.3}{2.3.3 Mixing Matrix}{section.2.3}% 19
-\BOOKMARK [1][-]{section.2.4}{2.4 Walsh Transorm}{chapter.2}% 20
-\BOOKMARK [2][-]{subsection.2.4.1}{2.4.1 Fast Walsh Transform}{section.2.4}% 21
-\BOOKMARK [2][-]{subsection.2.4.2}{2.4.2 Walsh Transform Adaptation}{section.2.4}% 22
-\BOOKMARK [1][-]{section.2.5}{2.5 Distance}{chapter.2}% 23
-\BOOKMARK [1][-]{section.2.6}{2.6 Simplification}{chapter.2}% 24
-\BOOKMARK [1][-]{section.2.7}{2.7 Convergence}{chapter.2}% 25
-\BOOKMARK [1][-]{section.2.8}{2.8 Summary}{chapter.2}% 26
-\BOOKMARK [0][-]{chapter.3}{3 Evolutionary Limits}{}% 27
-\BOOKMARK [1][-]{section.3.1}{3.1 Limits}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.2}{3.2 Computation of Mutation and Crossover Distribution}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.3}{3.3 Initial Population}{chapter.3}% 30
-\BOOKMARK [1][-]{section.3.4}{3.4 Oscillation}{chapter.3}% 31
-\BOOKMARK [1][-]{section.3.5}{3.5 Violation}{chapter.3}% 32
-\BOOKMARK [2][-]{subsection.3.5.1}{3.5.1 Violation in Mutation Distribution}{section.3.5}% 33
-\BOOKMARK [2][-]{subsection.3.5.2}{3.5.2 Violation in Crossover Distribution}{section.3.5}% 34
-\BOOKMARK [1][-]{section.3.6}{3.6 Summary}{chapter.3}% 35
-\BOOKMARK [0][-]{chapter.4}{4 Conclusion}{}% 36
-\BOOKMARK [0][-]{section*.81}{Bibliography}{}% 37
-\BOOKMARK [0][-]{section*.83}{Vita}{}% 38
+\BOOKMARK [1][-]{section.1.1}{1.1 Notation}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.2}{1.2 Background}{chapter.1}% 11
+\BOOKMARK [1][-]{section.1.3}{1.3 Random Heuristic Search}{chapter.1}% 12
+\BOOKMARK [1][-]{section.1.4}{1.4 Overview}{chapter.1}% 13
+\BOOKMARK [0][-]{chapter.2}{2 Extending A Genetic Algorithm Model To The Diploid Case}{}% 14
+\BOOKMARK [1][-]{section.2.1}{2.1 Model}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.2}{2.2 Reduction}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.3}{2.3 Specialization}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Mutation}{section.2.3}% 18
+\BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 Crossover}{section.2.3}% 19
+\BOOKMARK [2][-]{subsection.2.3.3}{2.3.3 Mixing Matrix}{section.2.3}% 20
+\BOOKMARK [1][-]{section.2.4}{2.4 Walsh Transorm}{chapter.2}% 21
+\BOOKMARK [2][-]{subsection.2.4.1}{2.4.1 Fast Walsh Transform}{section.2.4}% 22
+\BOOKMARK [2][-]{subsection.2.4.2}{2.4.2 Walsh Transform Adaptation}{section.2.4}% 23
+\BOOKMARK [1][-]{section.2.5}{2.5 Distance}{chapter.2}% 24
+\BOOKMARK [1][-]{section.2.6}{2.6 Simplification}{chapter.2}% 25
+\BOOKMARK [1][-]{section.2.7}{2.7 Convergence}{chapter.2}% 26
+\BOOKMARK [1][-]{section.2.8}{2.8 Summary}{chapter.2}% 27
+\BOOKMARK [0][-]{chapter.3}{3 Evolutionary Limits}{}% 28
+\BOOKMARK [1][-]{section.3.1}{3.1 Limits}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.2}{3.2 Computation of Mutation and Crossover Distribution}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.3}{3.3 Initial Population}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.4}{3.4 Oscillation}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.5}{3.5 Violation}{chapter.3}% 33
+\BOOKMARK [2][-]{subsection.3.5.1}{3.5.1 Violation in Mutation Distribution}{section.3.5}% 34
+\BOOKMARK [2][-]{subsection.3.5.2}{3.5.2 Violation in Crossover Distribution}{section.3.5}% 35
+\BOOKMARK [1][-]{section.3.6}{3.6 Summary}{chapter.3}% 36
+\BOOKMARK [0][-]{chapter.4}{4 Conclusion}{}% 37
+\BOOKMARK [0][-]{section*.81}{Bibliography}{}% 38
+\BOOKMARK [0][-]{section*.83}{Vita}{}% 39

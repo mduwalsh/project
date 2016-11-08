@@ -1,5 +1,39 @@
 \chapter{Introduction} \label{ch:introduction}
-\section{Introduction}
+This thesis begins with notations that would be used through out this document.
+\section{Notation}
+Some standard mathematical notations as well as some non-standard mathematical notations are introduced here.
+
+Angle brackets $\langle \cdots \rangle$ denote a tuple which is to be regarded as a column
+vector. The column vector of all 1s is denoted by $\bm{1}$. Transpose is indicated with superscript $T$. 
+The standard vector norm is $\|x\| \;=\; \sqrt{x^T x}$. Modulus (or absolute value) is denoted by $|\; \cdot \;|$. 
+When $S$ is a set, $|S|$ denotes the cardinality of $S$.
+
+The notation $O(f)$ denotes a function (with similar domain and codomain as
+$f$), let's say $g$, such that pointwise $|g| \;\leq \;c |f|$ for some constant $c$. 
+Curly brackets $\{\cdots\}$ are used as grouping symbols and to specify both sets
+and multisets. Square brackets $[ \cdots ]$ are, besides their standard use as specifying 
+a closed interval of real numbers, used to denote an indicator function:
+if $expr$ is an expression which may be true or false, then
+$[\mbox{\em expr\/} ]$ denote $1$ if {\em expr\/} is
+true, and $0$ otherwise. $[ \cdots ]$ is sometimes referred to as an {\em Iverson bracket}. 
+
+The supremum is the least upper bound, and is denoted by sup. The in mum
+is the greatest lower bound, and is denoted by inf.
+
+$\mathcal{R}$ is the set of haploids (i.e., length $\ell$ binary strings), and is a
+commutative ring $\mathcal{R}$ under component-wise addition and
+multiplication modulo $2$. If $x \in \mathcal{R}$, then $x = \langle x_0, x_1, \cdots, x_{\ell - 1} \rangle$. 
+Denote the additive identity by ${\bf 0}$ and the
+multiplicative identity by ${\bf 1}$, and let $\overline{g}$
+abbreviate ${\bf 1} + g$.  Except when explicitly indicated otherwise,
+operations acting on elements of $\mathcal{R}$ are as defined in this
+paragraph. In particular, $g \overline{g} = {\bf 0} = g+g$,
+  $g^2 = g$, $g + \overline{g} = {\bf 1}$ for all $g \in
+  \mathcal{R}$.
+  
+The notation $\theta(x)$ is a function such that $c_0 x \;\leq\; \theta(x) \;\leq\; c_1 x$. 
+
+\section{Background}
 The genetic algorithm (GA) is inspired by nature, and seeks to evolve useful constructs. It is population based, and 
 proceeds over a number of generations to evolve solutions to problems not yielding to other known methods. 
 Basic elements of a GA are: 
@@ -20,7 +54,7 @@ the mutation rate.
 Figure \ref{FiniteGA} shows procedural flow of a finite population genetic algorithm.
 \begin{figure}[H]
 \begin{center}
-\resizebox*{6.5cm}{!}{\includegraphics{figures/eps/GA.eps}}\hspace{4pt}
+\resizebox*{10cm}{!}{\includegraphics{figures/eps/GA.eps}}\hspace{4pt}
 \caption{\textbf{Finite GA} }
 \label{FiniteGA}
 \end{center}
@@ -139,12 +173,12 @@ from some search space $\Omega$ , together with a stochastic transition rule $\t
 produce another collection $P_{i+1}$; iterating $\tau$ produces a sequence of generations.
 
 The beginning collection $P_0$ is referred to as the {\em initial population}. Let $n$ be the cardinality 
-of $\Omega$, let ${\bf1}$ denote the column vector of all 1s, and let $T$ denote matrix transposition. 
+of $\Omega$, let ${\bf1}$ denote the column vector of all 1s. 
 The {\em simplex} is the set of population descriptors:
 \[
-\Lambda = \{x = \langle x_0,...,x_{n-1} \rangle: {\bf1}^T x=1, x_j \geq 0 \} \text{\footnotemark\label{fnm:1}}
+\Lambda = \{x = \langle x_0,...,x_{n-1} \rangle: {\bf1}^T x=1, x_j \geq 0 \} %\text{\footnotemark\label{fnm:1}}
 \]
-\footnotetext{$\langle .. \rangle$ represents a column vector; ${\bf1}$ is $\langle 1,..,1 \rangle$}
+%\footnotetext{$\langle .. \rangle$ represents a column vector; ${\bf1}$ is $\langle 1,..,1 \rangle$}
 Element $\bm{p}$ $\in$ $\Lambda$ corresponds to a population;
 $p_j$ = the proportion in the population of the $j$th element of $\Omega$. 
 The cardinality of each population is a constant $r$, called the population size. 
@@ -193,8 +227,7 @@ measures the {\em dispersion} of the population vector $\bm{q}$ and the factor
 \[
 \exp\{- \sum (\log \sqrt{2 \pi r\bm{q}_j} + \frac{1}{12r\bm{q}_j + \theta (r\bm{q}_j)})\}
 \]
-indicates the probability that $\bm{q}$ is the next generation decays exponentially with increasing dispersion and 
-$\theta  =  \sum \log(e^{x_j}x_j!/x_j^{x_j})$.
+indicates the probability that $\bm{q}$ is the next generation decays exponentially with increasing dispersion.
 
 \begin{figure}[H]
 \begin{center}
@@ -238,31 +271,38 @@ in the infinite population case. Moreover, (\ref{RHSvariance}) suggests that the
 infinite population in the next generation decreases as $1/\sqrt{r}$.
 
 In Figure (\ref{tetra_popn}), finite population points can be only at certain points, but infinite population can be anywhere on the surface. 
-From theorem 3.1 in 'The Simple Genetic Algorithm: Foundations and Theory' (see \cite{Vose1999}), distance between finite population $\bm{p}$ 
-and infinite population $q$ is $O(1/\sqrt{r})$. 
+Theorem 3.1 in 'The Simple Genetic Algorithm: Foundations and Theory' states that \emph{if $\bm{p},\bm{q} \;\in\; \Lambda$ are 
+arbitrary population vectors for population size $r$, and $\bm{\xi}$ denotes arbitrary element of $\Lambda$, then 
+\begin{eqnarray}
+\underset{\bm{p} \neq \bm{q}}{inf} \|\bm{p} - \bm{q}\| &\;=\;& \sqrt{2}/r    \label{theorem3.1_a} \\
+\underset{\bm{\xi}}{sup} \underset{\bm{p}}{inf} \|\bm{\xi} - \bm{p}\| &\;=\;& O(1/\sqrt{r})     \label{theorem3.1b}
+\end{eqnarray}
+where the constant (in the "big oh") is independent of the dimension $n$ of $\Lambda$} (see \cite{Vose1999}).
+From \ref{theorem3.1_b}, the distance between an infinite population $\bm{\xi}$ and finite population $p$ is at most $O(1/\sqrt{r})$. 
+This suggests that the distance between $\tau (\bm{p})$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$.
 
-Let $x$ be the random variable $\| \bm{q} - \mathcal{G}(\bm{p}) \|$. Let $\phi$ be the convex function $\phi (x) = x^2$. 
-Then, $\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|^2)$ becomes $\mathcal{E}(\phi (x))$. 
+Let $\eta$ be the random variable $\| \bm{q} - \mathcal{G}(\bm{p}) \|$. Let $\phi$ be the convex function $\phi (x) = x^2$. 
+Then, $\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|^2)$ becomes $\mathcal{E}(\phi (\eta))$. 
 It follows from Jensen's Inequality (see \cite{JensenInequality}) that 
 if $\phi$ is a convex function, then
 \[
-\phi(\mathcal{E}(x))) \leq \mathcal{E}(\phi(x)) 
+\phi(\mathcal{E}(\eta))) \leq \mathcal{E}(\phi(\eta)) 
 \]
 Therefore,
 \[
-\mathcal{E}(x) \leq \sqrt{\mathcal{E}(x^2)}
+\mathcal{E}(\eta) \leq \sqrt{\mathcal{E}(\eta^2)}
 \]
 Substituting original variables,
 \begin{equation}
 \label{Jensen}
-\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|) \leq \sqrt{(1 - \|\mathcal{G}(\bm{p})\|^2) / \bm{N}}
+\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|) \leq \frac{\sqrt{(1 - \|\mathcal{G}(\bm{p})\|^2)}}{\sqrt{\bm{r}}}
 \end{equation}
 Equation (\ref{Jensen}) bounds the expected rate of convergence for the single-step haploid case; 
 the distance is inversely proportional to square root of population size.
 
 Theorem 3.1 from 'The Simple Genetic Algorithm: Foundation and Theory', 
-and Jenson's inequality all points distance between finite population and infinite population is bounded 
-by $1\sqrt{r}$. But it is all mathematics; what happens when real GA is run? This research explores that 
+and Jenson's inequality both suggests that the distance between finite population and infinite population decreases like  
+$1\sqrt{r}$. But it is all mathematics; what happens when real GA is run? This research explores that 
 through simulations in chapter two.
 
 An instance of RHS is called focused if $\mathcal{G}$ is continuously differentiable, and for every $\bm{p}  \in  \Lambda$
@@ -285,7 +325,7 @@ in chapter three.
 
 If GA forms ergodic Markov chain visiting every population state infinitely often, then $\mathcal{G}$ is also called ergodic. 
 Let $\bm{P}_j$ denote $j$th population state in population state vector $P$. Let $\bm{\pi}^k$ be the probability vector having $j$th component 
-equal to the probability that $k$th generation population is $\bm{P}_j$. If $bm{\pi}^0$ is initial distribution and $Q$ is transition matrix, the steady state distribution $\bm{\pi}$ is given by (see \cite{Nix1992})
+equal to the probability that $k$th generation population is $\bm{P}_j$. If $\bm{\pi}^0$ is initial distribution and $Q$ is transition matrix, the steady state distribution $\bm{\pi}$ is given by (see \cite{Nix1992})
 \[
 \lim_{k \to \infty} \bm{\pi}^k \;=\; \bm{\pi}^0 Q^k \;=\; \text{solution to the equation } "\bm{\pi} \; = \; \bm{\pi} Q" 
 \]
@@ -296,7 +336,7 @@ $\bm{\pi}_i \;=\; 1$ and other components $0$ when $k$ = odd generation, and $\b
 But if GA forms ergodic Markov chain, this does not happen, instead finite population visits every population state infinitely often, and steady state 
 distribution $\bm{\pi}$ converges to $\bm{\pi}^\ast$ as population size increases to infinity ( see \cite{Nix1992}) where 
 \[
-\bm{\pi}^ast \;=\; lim_{r \to \infty} \bm{\pi}.
+\bm{\pi}^\ast \;=\; \lim_{r \to \infty} \bm{\pi}.
 \]
 So, in chapter three, we further investigate what happens to finite populations 
 if we violate the conditions necessary for population to oscillate, and making GA ergodic.

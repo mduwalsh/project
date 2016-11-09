@@ -7,7 +7,7 @@ the necessary and sufficient conditions for convergence to periodic orbits are v
 
 \section{Limits}
 \label{Limits}
-Vose states under mild assumptions on mutations (considered later), populations converge under repeated application 
+Vose states under mild assumptions on mutations (explained later), populations converge under repeated application 
 of $\mathcal{M}$. Vose mentions that in the general case, periodic orbits are possible, but populations converge under 
 repeated application of $\mathcal{M}^2$ and the limits ${\bm p}^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n}({\bm p})$ 
 and ${\bm q}^\ast = lim_{n \rightarrow \infty} \mathcal{M}^{2n+1}({\bm q})$ exist (see \cite{Vose1999}).
@@ -298,20 +298,28 @@ So that sum of $\bm{\mu}$ distribution becomes,
 1-\bm{\epsilon} = \sum \limits_{i=0}^{2^{\ell}-1} \bm{\mu}_i
 \]
 Then set
+\[
+\bm{\mu}_0 = \bm{\epsilon}
+\]
 % \[
-% \bm{\mu}_0 = \bm{\epsilon}
+% \bm{\mu}_0 = (1-\bm{\epsilon})\bm{\epsilon}
 % \]
-\[
-\bm{\mu}_0 = (1-\bm{\epsilon})\bm{\epsilon}
-\]
-$c$ is total number components in $\bm{\mu}$ satisfying condition $\bm{\mu}_i = 0$ and set those components value as
-\[
-\bm{\mu}_i = \bm{\epsilon}^2/c \; ; \; where \; \bm{\mu}_i = 0
-\]
+% $c$ is total number components in $\bm{\mu}$ satisfying condition $\bm{\mu}_i = 0$ and set those components value as
+% \[
+% \bm{\mu}_i = \bm{\epsilon}^2/c \; ; \; where \; \bm{\mu}_i = 0
+% \]
 The mutation distribution $\bm{\mu}$ is normalized such that  $\sum\limits_{i=0}^{2^{\ell}-1}\bm{\mu}_i \;=\; 1$.
-This modification guarantees every mutation mask has some non zero positive probability to be used, and any population member can mutate to any other possible population member via mutation, forming an ergodic Markvo chain. Because of ergodic Markov chain, 
-every population state will be visited infinitely often, and steady state distribution exists 
-where is independent of initial population (see \cite{Nix1992}).   
+This modification makes possible for any population member to mutate to any other possible population member via mutation, 
+forming an ergodic Markvo chain. 
+Let us exlore for two cases of $g$ in \ref{OscCond}:
+
+1. When $g$ is all $1$s.
+
+2. When $g$ has atleast one $0$
+
+
+Because of ergodic Markov chain, 
+every population state will be visited infinitely often, and steady state distribution exists.   
 Let's see an example with $\ell \;=\; 3$. 
 The possible strings as population member are {$000, 001, 010, 011, 100, 101, 110, 111$}. 
 Let $101$ be a population member in current population. Then, $101$ can mutate to any string possible in the population as \newline

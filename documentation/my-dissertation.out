@@ -10,7 +10,7 @@
 \BOOKMARK [1][-]{section.1.1}{1.1 Notation}{chapter.1}% 10
 \BOOKMARK [1][-]{section.1.2}{1.2 Background}{chapter.1}% 11
 \BOOKMARK [1][-]{section.1.3}{1.3 Random Heuristic Search}{chapter.1}% 12
-\BOOKMARK [1][-]{section.1.4}{1.4 Overview}{chapter.1}% 13
+\BOOKMARK [1][-]{section.1.4}{1.4 Problem Statement}{chapter.1}% 13
 \BOOKMARK [0][-]{chapter.2}{2 Extending A Genetic Algorithm Model To The Diploid Case}{}% 14
 \BOOKMARK [1][-]{section.2.1}{2.1 Model}{chapter.2}% 15
 \BOOKMARK [1][-]{section.2.2}{2.2 Reduction}{chapter.2}% 16
@@ -35,5 +35,5 @@
 \BOOKMARK [2][-]{subsection.3.5.2}{3.5.2 Violation in Crossover Distribution}{section.3.5}% 35
 \BOOKMARK [1][-]{section.3.6}{3.6 Summary}{chapter.3}% 36
 \BOOKMARK [0][-]{chapter.4}{4 Conclusion}{}% 37
-\BOOKMARK [0][-]{section*.81}{Bibliography}{}% 38
-\BOOKMARK [0][-]{section*.83}{Vita}{}% 39
+\BOOKMARK [0][-]{section*.83}{Bibliography}{}% 38
+\BOOKMARK [0][-]{section*.85}{Vita}{}% 39

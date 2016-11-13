@@ -10,6 +10,10 @@ Bethke, A.~D. (1980).
 \newblock {\em Genetic Algorithms As Function Optimizers}.
 \newblock PhD thesis, The University of Michigan.
 
+\bibitem[contributors, 2016]{MarkovChain}
+contributors, W. (2016).
+\newblock Markov chain.
+
 \bibitem[Cooley and Tukey, 1965]{CooleyTukey1965}
 Cooley, J.~W. and Tukey, J.~W. (1965).
 \newblock An algorithm for the machine calculation of complex fourier series.
@@ -68,6 +72,11 @@ Mendel, G. (1865).
 \newblock Versuche {\"u}ber plflanzenhybriden.
 \newblock {\em Verhandlungen des naturforschenden Vereines in Br{\"u}nn},
   IV:3--47.
+
+\bibitem[Minc, 1988]{Minc1988}
+Minc, H. (1988).
+\newblock {\em Nonnegative Matrices}.
+\newblock A Wiley-Interscience Publication.
 
 \bibitem[Mitchell, 1999]{Mitchell1999}
 Mitchell, M. (1999).

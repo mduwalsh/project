@@ -247,9 +247,9 @@
   Timestamp                = {2016.08.11}
 }
 
-@Electronic{ChebyshevInequality,
+@Misc{ChebyshevInequality,
   Title                    = {Chebyshev's Inequality},
-  Author                   = {Wiki, Contributors},
+  Author                   = {Wikipedia, Contributors},
   Month                    = {8},
   Organization             = {Wikipedia, The Free Encyclopedia},
   Url                      = {https://en.wikipedia.org/wiki/Chebyshev%27s_inequality},
@@ -259,7 +259,7 @@
   Timestamp                = {2016.10.24}
 }
 
-@Electronic{JensenInequality,
+@Misc{JensenInequality,
   Title                    = {Jensen's Inequality},
   Author                   = {Wikipedia, Contributors},
   Month                    = {10},

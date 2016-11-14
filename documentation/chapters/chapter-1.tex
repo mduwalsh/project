@@ -1,5 +1,5 @@
 \chapter{Introduction} \label{ch:introduction}
-This thesis begins with notations that would be used through out this document.
+This thesis begins with notation that is used throughout this document.
 \section{Notation}
 Some standard mathematical notations as well as some non-standard mathematical notations are introduced here.
 
@@ -8,39 +8,41 @@ vector. The column vector of all 1s is denoted by $\bm{1}$. Transpose is indicat
 The standard vector norm is $\|x\| \;=\; \sqrt{x^T x}$. Modulus (or absolute value) is denoted by $|\; \cdot \;|$. 
 When $S$ is a set, $|S|$ denotes the cardinality of $S$.
 
-The notation $O(f)$ denotes a function (with similar domain and codomain as
-$f$), let's say $g$, such that pointwise $|g| \;\leq \;c |f|$ for some constant $c$. 
+The notation $O(f)$ denotes a function $g$ (with similar domain and codomain as
+$f$), such that pointwise $g \;\leq \;c f$ for some constant $c$. 
+The notation $\theta(f)$ is a function $g$ such that pointwise 
+$c_0 f \;\leq\; g \;\leq\; c_1 f$ for some constants $c_0 \;,\; c_1$. 
 Curly brackets $\{\cdots\}$ are used as grouping symbols and to specify both sets
 and multisets. Square brackets $[ \cdots ]$ are, besides their standard use as specifying 
 a closed interval of real numbers, used to denote an indicator function:
 if $expr$ is an expression which may be true or false, then
-$[\mbox{\em expr\/} ]$ denote $1$ if {\em expr\/} is
-true, and $0$ otherwise. $[ \cdots ]$ is sometimes referred to as an {\em Iverson bracket}. 
+$[\mbox{\em expr\/} ]$ denotes $1$ if {\em expr\/} is
+true, and $0$ otherwise; $[ \cdots ]$ is sometimes referred to as an {\em Iverson bracket}. 
 
-The supremum is the least upper bound, and is denoted by sup. The in mum
+The supremum is the least upper bound, and is denoted by sup. The infimum
 is the greatest lower bound, and is denoted by inf.
 
-$\mathcal{R}$ is the set of haploids (i.e., length $\ell$ binary strings), and is a
-commutative ring $\mathcal{R}$ under component-wise addition and
-multiplication modulo $2$. If $x \in \mathcal{R}$, then $x = \langle x_0, x_1, \cdots, x_{\ell - 1} \rangle$. 
-Denote the additive identity by ${\bf 0}$ and the
-multiplicative identity by ${\bf 1}$, and let $\overline{g}$
+The set of length $\ell$ binary strings is denoted by $\mathcal{R}$. It is a
+commutative ring under component-wise addition and
+multiplication modulo $2$. If $x \in \mathcal{R}$, then it may 
+be regarded as the vector $x = \langle x_0, x_1, \cdots, x_{\ell - 1} \rangle$. 
+Denote the additive identity of $\mathcal{R}$ by ${\bf 0}$ and the
+multiplicative identity by ${\bf 1}$. Let $\overline{g}$
 abbreviate ${\bf 1} + g$.  Except when explicitly indicated otherwise,
 operations acting on elements of $\mathcal{R}$ are as defined in this
 paragraph. In particular, $g \overline{g} = {\bf 0} = g+g$,
   $g^2 = g$, $g + \overline{g} = {\bf 1}$ for all $g \in
   \mathcal{R}$.
-  
-The notation $\theta(x)$ is a function such that $c_0 x \;\leq\; \theta(x) \;\leq\; c_1 x$. 
+
 
 \section{Background}
-The genetic algorithm (GA) is inspired by nature, and seeks to evolve useful constructs. It is population based, and 
+The genetic algorithm (GA) is inspired by nature, and seeks to evolve useful constructs. It is typically population based, and 
 proceeds over a number of generations to evolve solutions to problems not yielding to other known methods. 
 Basic elements of a GA are: 
 selection according to fitness, crossover, and random mutation (see \cite{Mitchell1999}). 
-Populatoin members are typically fixed-length binary strings.   
+In the simplest case, populatoin members are fixed-length binary strings.   
 The fitness function assigns a score (fitness) to the elements (chromosomes) of 
-the current population. The simplest form of genetic algorithm involves: selection, crossover, and mutation.
+the current population. 
 
 \textit{Selection}: select population members in the current population for reproduction; 
 those with higher fitness are more likely to be selected to reproduce.
@@ -51,7 +53,7 @@ and exchanges subsequences after that point to create two offspring.
 \textit{Mutation}: flip bits of an individual with some small probability, 
 the mutation rate.
 
-Figure \ref{FiniteGA} shows the procedural flow of a finite population genetic algorithm.
+Figure \ref{FiniteGA} shows the procedural flow of a basic finite population genetic algorithm.
 \begin{figure}[H]
 \begin{center}
 \resizebox*{10cm}{!}{\includegraphics{figures/eps/GA.eps}}\hspace{4pt}
@@ -60,7 +62,7 @@ Figure \ref{FiniteGA} shows the procedural flow of a finite population genetic a
 \end{center}
 \end{figure}
 
-A simple Holland style genetic algorithm (see \cite{Holland1975}) works as:
+A simple Holland style genetic algorithm (see \cite{Holland1975}):
 \begin{algorithm}
 \label{realGA}
 \caption*{A simple genetic algorithm}
@@ -77,11 +79,11 @@ A simple Holland style genetic algorithm (see \cite{Holland1975}) works as:
 \end{algorithmic}
 \end{algorithm}
 
-Each iteration of this process is called a generation. 
+Each iteration of this process produces a generation. 
 The process is repeated until the system stops to improve or some threshold is met.
 
 The infinite population GA models a population as a probability vector $\bm{p}$ where component $\bm{p}_j$ 
-is the proportion of string $j$ in the population. If $\mathcal{G}$ is the function mapping infinite population $\bm{p}$ to 
+can be interpreted as the proportion of string $j$ in the population. If $\mathcal{G}$ is the function mapping infinite population $\bm{p}$ to 
 the next generation, $\mathcal{G}(\bm{p})$ is a probability vector such that 
 \[
 \mathcal{G}(\bm{p})_j \; = \; \text{the probability that string $j$ occurs in the next generation}.
@@ -89,36 +91,36 @@ the next generation, $\mathcal{G}(\bm{p})$ is a probability vector such that
 The evolution of infinite population $\bm{p}$ is the sequence
 \[ \bm{p} \to \mathcal{G}(\bm{p}) \to  {\mathcal{G}}(\mathcal{G}(\bm{p})) \to \cdots \]
 
-Several people working in the 1950s and the 1960s - like Box (1957), Friedman (1959),
-Bledsoe (1961), Bremermann (1962), and Reed, Toombs and Baricelli (1967) developed evolution-inspired algorithms, 
-but little attention was given to them (see \cite{Mitchell1999}). Genetic algorithms were popularized by Holland 
+Several people working in the 1950s and the 1960s -- like Box (1957), Friedman (1959),
+Bledsoe (1961), Bremermann (1962), and Reed, Toombs and Baricelli (1967) -- developed evolution-inspired algorithms, 
+but little attention or theoretical analysis was given to them (see \cite{Mitchell1999}). Genetic algorithms were popularized by Holland 
 and his colleagues in the 1960s and the 1970s. Holland introduced a population-based algorithm with crossover and mutation, 
-and promoted his schema theorem ( see \cite{Holland1975}) as providing some perspective on genetic algorithm dynamics. 
+and promoted his schema theorem ( see \cite{Holland1975}) as a theoretical means to analyze on genetic algorithm dynamics. 
 Holland's Schema theorem provides a lower bound for schema survival in 
-next generation. A schema is a template that identifies a set of strings in the population with similarities 
+next generation. \footnote{A schema is a template that identifies a set of strings in the population with similarities 
 at certain string positions; it is made up of $1$s, $0$s, and $\ast$s where 
-$\ast$ is the 'don't care' symbol that matches either $0$ or $1$. The schema theorem of Holland is an inequality, 
-and does not compute which strings are expected in the next generation. 
-Bethke (see \cite{Bethke1981}) gave equations for computing the expected number of any string in the next generation. 
-Goldberg (see \cite{Goldberg1987}) used equations 
-for the expected next generation to model the evolutionary trajectory of a two bit GA under crossover 
+$\ast$ is the 'don't care' symbol that matches either $0$ or $1$.} The schema theorem is an inequality however, 
+and can not predict which strings are expected in the next generation. 
+Bethke (see \cite{Bethke1981}) gave equations computing the expected number of any string in the next generation. 
+Goldberg (see \cite{Goldberg1987}) used such equations 
+to model the evolutionary trajectory of a two bit GA under crossover 
 and proportional selection. Vose and Liepins (see \cite{VoseLiepins1991}) simplified and extended 
 these equations by integrating mutation into the recombination of arbitrarily long binary strings. 
-Although their model computes infinite population trajectories, given a finite population with proportional representation vector $\bm{p}$  
-(component $\bm{p}_i$ is the proportion of string $i$ in finite population), the infinite population model 
+Although their model computes infinite population trajectories, given a {\em finite} population represented by vector $\bm{p}$  
+(component $\bm{p}_i$ is the proportion of string $i$ in the {\em finite population}), the infinite population model 
 computes the expected proportion $\mathcal{G}(\bm{p})_i$ of string $i$ in the next generation.  This is perhaps the most 
 direct connection between the infinite population model and a finite population GA.
 
-Nix and Vose (see \cite{Nix1992}) explored issues regarding relationship between finite population GA and the infinite population model. 
+Nix and Vose (see \cite{Nix1992}) explored issues regarding the relationship between the finite population GA and the infinite population model. 
 For a positive mutation rate, a finite population GA will form an ergodic Markov chain, visiting every state infinitely often in the long run.
 The short term trajectory followed by a finite population is related to 
 the evolutionary path determined by the infinite population model. 
-For large populations, the short term trajectory follows closely, 
+For large populations, the short term trajectory follows closely and 
 with large probability, that path predicted by 
-the infinite population model. So if we form 
-a geometrical cylinder 
-around the path determined by the infinite population model, a finite population GA will stay inside the pipe in the short term, and 
-then escape it after some period of time. 
+the infinite population model. 
+% So if we form a geometrical cylinder 
+% around the path determined by the infinite population model, a finite population GA will stay inside the pipe in the short term, and 
+% then escape it after some period of time. 
 
 % Vose and Liepins apply Walsh transform to mixing to analyse and get results. 
 % With Markov chain modeling of simple GA, Vose and Nix (see \cite{Nix1992}) investigated asymptotic behavior of steady 
@@ -127,11 +129,10 @@ then escape it after some period of time.
 % between expected population predicted using infinite population model and the actual population observed in 
 % finite population genetic algorithm. 
 
-In the book \textit{Simple Genetic Algorithm: Foundations and Theory} (see \cite{Vose1999}), Vose compiled and 
-extended previous work regarding the infinite population model. In particular, he discussed how 
-the Walsh transform can be applied to increase 
-computational efficiency in calculating the infinite population model.
-
+Vose compiled and extended previous work regarding the infinite population model in the book 
+\textit{Simple Genetic Algorithm: Foundations and Theory} (see \cite{Vose1999}). 
+In particular, he discussed how the Walsh transform can be applied to increase 
+computational efficiency in calculating the infinite population model. 
 There have been previous applications of the Walsh transform to GAs. Bethke first introduced the 
 idea of using Walsh transforms to analyse GA fitness funcitons in terms of schemata (see \cite{Bethke1981}). 
 The idea was further developed in papers by Goldberg (see \cite{Goldberg1989a}, \cite{Goldberg1989b}). 
@@ -143,8 +144,8 @@ matrix $M$ has rows and columns indexed by chromosomes; entry $M_{i,j}$ is the p
 that mixing parents $i$ and $j$ (mixing is the combined effect of crossover and mutation) will produce a 
 child having all bits zero. The twist $(M^\ast)$ of the mixing matrix $M$ is defined by $(M^\ast)_{i,j} = M_{i+j, i}$.} 
 In a related paper, Koehler (see \cite{Koehler1994}) gives a congruence 
-transformation defined by lower triangular matrix that diagonalizes the mixing matrix for 1-point crossover and mutation 
-given by a rate and proved a conjecture of Vose and Liepins concerning eigenvalues of $M^\ast$. Koehler, Bhattacharyya 
+transformation defined by a lower triangular matrix that diagonalizes the mixing matrix (for 1-point crossover and mutation 
+given by a rate) and proved a conjecture of Vose and Liepins concerning eigenvalues of $M^\ast$. Koehler, Bhattacharyya 
 and Vose (see \cite{KoehlerBhatta1997}) applied the Fourier transform in generalizing results established 
 for binary GAs to 
 strings over an alphbet of cardinality $c$ (in the binary case, the Fourier transform is the Walsh transform). 
@@ -155,10 +156,12 @@ $O(8^\ell)$ to $O(3^\ell)$ where $\ell$ is the chromosome length. The cost of mo
 the fast Walsh transform (see \cite{Shanks1969}) does that in $O(\ell 2^\ell)$ time.
 
 \section{Random Heuristic Search}
-The work presented in this thesis is based on {\em Random Heuristic Search (RHS)}, a general search method, defined upon the central concept of state and transition 
-between states (see \cite{Vose1999}). An instance of {\em RHS} is an initial collection of elements $P$ (referred to as the initial population) chosen 
+The work presented in this thesis is based on {\em Random Heuristic Search (RHS)}, 
+a general search method, defined upon the central concept of state and transition 
+between states (see \cite{Vose1999}). The simple genetic algorithm is a particular type of RHS. 
+An instance of {\em RHS} is an initial collection of elements $P$ (referred to as the initial population) chosen 
 from some search space $\Omega$, together with a stochastic transition rule $\tau$, which from $P$ will 
-produce another collection $P\prime$; iterating $\tau$ produces a sequence of generations.
+produce another collection $P^\ast$; iterating $\tau$ produces a sequence of generations.
 
 Let $n$ be the cardinality 
 of $\Omega$, let ${\bf1}$ denote the column vector of all 1s. 
@@ -175,11 +178,11 @@ Given $r$, a population descriptor $\bm{p}$ unambiguously determines a populatio
 Given current population vector $\bm{p}$, the next population vector $\tau(\bm{p})$ cannot 
 be predicted with certainty because $\tau$ is stochastic; it results from $r$ independent, identically distributed random choices. 
 Let $\mathcal{G}:\Lambda \rightarrow \Lambda$ be a function that maps 
-current population vector $\bm{p}$ to a new vector whose $i$th component 
+current population vector $\bm{p}$ to a vector whose $i$th component 
 is the probability that the $i$th element of $\Omega$ is chosen. Thus, $\mathcal{G}(\bm{p})$ 
 specifies the distribution from which the aggregate 
 of $r$ choices forms the subsequent generation. The probability that population $\bm{q}$ is 
-the next population vector given current population vector $\bm{p}$ is (see \cite{Vose1999}) 
+the next population vector given current population (vector) $\bm{p}$ is (see \cite{Vose1999}) 
 \begin{equation}
 \label{Qmat}
 \begin{split}
@@ -192,9 +195,9 @@ where summation is restricted to indices for which $\bm{q}_j > 0$ and $\theta$ i
 % & & \mbox{} \hspace{-0.6in} Q_{\bm{p},\bm{q}} =\; r! \prod \frac{(\mathcal{G}(\bm{p})_j)^{r\bm{q}_j}}{(r\bm{q}_j)!} \\
 % & & \mbox{} \hspace{-0.3in} = \exp\{-r \sum \bm{q}_j \log \frac{\bm{q}_j}{\mathcal{G}(\bm{p})_j} - \sum (\log \sqrt{2 \pi r\bm{q}_j}  + \frac{1}{12r\bm{q}_j + \theta (r\bm{q}_j)}) \\       + O(\log r)\}
 Each random vector in the sequence $\bm{p}, \tau(\bm{p}), \tau^2(\bm{p}),...$ depends only on the value of the preceding one, 
-which is a special situation. Such a sequence forms a Markov chain. The transition matrix is $Q_{\bm{p},\bm{q}}$. Therefore, 
-the conceptualization of RHS can be replaced by a Markov chain model which makes no reference to sampling $\Omega$; 
-from current population $\bm{p}$, produce $\bm{q} = \tau (\bm{p})$ with probability $Q_{\bm{p},\bm{q}}$. The expected next generation 
+which is a special situation. The sequence forms a Markov chain with transition matrix $Q$. 
+The conceptualization of RHS can be replaced by a Markov chain model which makes no reference to sampling $\Omega$; 
+from current population $\bm{p}$, produce $\bm{q}$ with probability $Q_{\bm{p},\bm{q}}$. The expected next generation 
 $\mathcal{E}(\tau (\bm{p}))$ is $\mathcal{G}(\bm{p})$ (see \cite{Vose1999}). The expression 
 \[
 \sum \bm{q}_j \log \frac{\bm{q}_j}{\mathcal{G}(\bm{p})!}
@@ -205,8 +208,7 @@ $\mathcal{G}(\bm{p})$. Discrepancy is nonnegative and is zero only when $\bm{q}$
 \exp\{-r \sum \bm{q}_j \log \frac{\bm{q}_j}{\mathcal{G}(\bm{p})_j}\}
 \]
 in (\ref{Qmat}) indicates the probability that $\bm{q}$ is the next generation
-decays exponentially, with constant $r$ , as the discrepancy between $\bm{q}$ and the
-expected next population increases.
+decays exponentially, with constant $r$, as the discrepancy between $\bm{q}$ and $\mathcal{G}(\bm{p})$ increases.
 The expression 
 \[
 \sum (\log \sqrt{2 \pi r\bm{q}_j} + \frac{1}{12r\bm{q}_j + \theta (r\bm{q}_j)})
@@ -225,20 +227,24 @@ indicates the probability that $\bm{q}$ is the next generation decays exponentia
 \end{center}
 \end{figure}
 
-The diagram (\ref{tetra_popn}) illustrates population points in a simplex for $\ell  =  2,  r  =  4$. Populations are represented by dots, 
-where smaller dots have lower dispersion and larger dots have higher dispersion.
+Figure \ref{tetra_popn} illustrates population points in a simplex for $\ell  =  2,  r  =  4$. 
+Finite populations are represented by dots, 
+where smaller dots have lower dispersion and larger dots have higher dispersion. 
+The diagram also illuminates that finite populations are constrained to occupy lattice points 
+within $\Lambda$. As population size $r \;\to\; \infty$, the lattice points become dense in $\Lambda$, 
+which corresponds to the fact that an infinite population can be (represented by) any point of $\Lambda$.  
 
 The variance of the next generation (with respect to the expected population) (see \cite{Vose1999}) is 
 \begin{equation}
 \label{RHSvariance}
-\mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \|^2) = (1 - \|\mathcal{G}(\bm{p})\|^2) / r
+\mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \|^2) = \frac{1 - \|\mathcal{G}(\bm{p})\|^2}{r}
 \end{equation}
 It follows from Chebyshev's inequality (see \cite{ChebyshevInequality}) that 
 \begin{equation}
 \label{Cheby}
-P(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \geq \epsilon) \leq \frac{(1 - \|\mathcal{G}(\bm{p})\|^2)} {r{\epsilon}^2}
+P(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \geq \epsilon) \leq \frac{1 - \|\mathcal{G}(\bm{p})\|^2} {r{\epsilon}^2}
 \end{equation}
-where $P$ denotes probability and $\epsilon$ is arbitrary.
+where $P$ above denotes probability and $\epsilon \;>\; 0$ is arbitrary.
 
 Let $f(r)$ be a function which grows arbitrarily slowly, such that 
 \[
@@ -248,51 +254,55 @@ and
 \[
 \lim_{r \to \infty} f(r)/\sqrt{r}  =  0.
 \]
-If $\epsilon  =  f(r)/\sqrt{r}$, then (\ref{Cheby}) becomes
+If 
+\begin{equation}
+\label{EpsilonCheby}
+\epsilon  =  f(r)/\sqrt{r}
+\end{equation}
+, then (\ref{Cheby}) becomes
 \begin{equation*}
 \lim_{r \to \infty} P(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \geq \epsilon) \; \leq \; \frac{(1 - \|\mathcal{G}(\bm{p})\|^2)} {{f(r)}^2} \; \leq \; 0
 \end{equation*}
 
 Therefore, $\tau(\bm{p})$ converges in probability to $\mathcal{G}(\bm{p})$ as the population size increases, 
 and $\tau$ corresponds to $\mathcal{G}$ 
-in the infinite population case. Moreover, (\ref{RHSvariance}) suggests that the expected distance between finite and 
-infinite population in the next generation decreases as $1/\sqrt{r}$.
+in the infinite population case. Moreover, \ref{EpsilonCheby} suggests that the expected distance between finite and 
+infinite population in the next generation might decrease as $1/\sqrt{r}$.
 
-In Figure (\ref{tetra_popn}), finite population points can be only at certain points, but infinite population can be anywhere on the surface. 
-Theorem 3.1 in 'The Simple Genetic Algorithm: Foundations and Theory' states that \emph{if $\bm{p},\bm{q} \;\in\; \Lambda$ are 
+In figure \ref{tetra_popn}, finite population points can be only at certain points, but infinite population points can be anywhere in the simplex. 
+Theorem 3.1 in 'The Simple Genetic Algorithm: Foundations and Theory' states:  
+\begin{quote}
+\emph{If $\bm{p},\bm{q} \;\in\; \Lambda$ are 
 arbitrary population vectors for population size $r$, and $\bm{\xi}$ denotes arbitrary element of $\Lambda$, then 
 \begin{eqnarray}
-\underset{\bm{p} \neq \bm{q}}{inf} \|\bm{p} - \bm{q}\| &\;=\;& \sqrt{2}/r    \label{theorem3.1_a} \\
-\underset{\bm{\xi}}{sup} \underset{\bm{p}}{inf} \|\bm{\xi} - \bm{p}\| &\;=\;& O(1/\sqrt{r})     \label{theorem3.1b}
+\underset{\bm{p} \neq \bm{q}}{\inf} \|\bm{p} - \bm{q}\| &\;=\;& \sqrt{2}/r    \label{theorem3.1_a} \\
+\underset{\bm{\xi}}{\sup} \; \underset{\bm{p}}{inf} \|\bm{\xi} - \bm{p}\| &\;=\;& O(1/\sqrt{r})     \label{theorem3.1b}
 \end{eqnarray}
 where the constant (in the "big oh") is independent of the dimension $n$ of $\Lambda$} (see \cite{Vose1999}).
-From \ref{theorem3.1_b}, the distance between an infinite population $\bm{\xi}$ and finite population $p$ is at most $O(1/\sqrt{r})$. 
+From \ref{theorem3.1_b}, the distance between an infinite population $\bm{\xi}$ and finite population $p$ is $O(1/\sqrt{r})$. 
 This suggests that the distance between $\tau (\bm{p})$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$.
+\end{quote}
 
-Let $\eta$ be the random variable $\| \bm{q} - \mathcal{G}(\bm{p}) \|$. Let $\phi$ be the convex function $\phi (x) = x^2$. 
-Then, $\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|^2)$ becomes $\mathcal{E}(\phi (\eta))$. 
+Let $\eta$ be the random variable $\| \bm{q} - \mathcal{G}(\bm{p}) \|$, and let $\phi (x) = x^2$. 
+% Then, $\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|^2)$ becomes $\mathcal{E}(\phi (\eta))$. 
 It follows from Jensen's Inequality (see \cite{JensenInequality}) that 
-if $\phi$ is a convex function, then
+since $\phi$ is a convex function, 
 \[
 \phi(\mathcal{E}(\eta))) \leq \mathcal{E}(\phi(\eta)) 
 \]
 Therefore,
-\[
-\mathcal{E}(\eta) \leq \sqrt{\mathcal{E}(\eta^2)}
-\]
-Substituting original variables,
 \begin{equation}
 \label{Jensen}
-\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|) \leq \frac{\sqrt{(1 - \|\mathcal{G}(\bm{p})\|^2)}}{\sqrt{\bm{r}}}
+\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|) \;=\; \mathcal{E}(\eta) \leq \sqrt{\mathcal{E}(\eta^2)} \;=\; \frac{\sqrt{1 - \|\mathcal{G}(\bm{p})\|^2}}{\sqrt{\bm{r}}}
 \end{equation}
-Equation (\ref{Jensen}) bounds the expected rate of convergence for the single-step haploid case; 
-the distance is inversely proportional to square root of population size.
 
 \section{Problem Statement}
+Equation \ref{Jensen} bounds the expected rate of convergence for the single-step haploid case; 
+the distance is inversely proportional to square root of population size. 
 Theorem 3.1 from 'The Simple Genetic Algorithm: Foundation and Theory', 
 and Jenson's inequality analysis of \ref{RHSvariance} both suggests that the distance between finite population and infinite population decreases like  
-$1\sqrt{r}$. But it is all mathematics; what happens when real GA is run? This research explores that 
-through simulations in chapter two. We begin with a simple Markov model for diploid case under influence of mutation and crossover. 
+$1\sqrt{r}$. We investigate the rate of decrease with experiments in Chapter 2. 
+We begin with a simple Markov model for diploid case under influence of mutation and crossover. 
 The model is non-overlapping, generational, infinite population model assuming random mating and no selective pressure. 
 Through abstract development, we show that the diploid model can be specialized by using mask based 
 mutation and crossover operators to Vose's infinite population model which is a haploid model. Computational 
@@ -301,18 +311,28 @@ are exploited in experimental simulation of model. Through the experiment we dem
 of finite diploid population to infinite population behavior, and the distance between finite population 
 and infinite population decreases like $1\sqrt{r}$.
 
-An instance of RHS is called focused if $\mathcal{G}$ is continuously differentiable, and for every $\bm{p}  \in  \Lambda$
+An instance of RHS is  focused if $\mathcal{G}$ is continuously differentiable, and for every $\bm{p}  \in  \Lambda$
 the sequence
 \[
 \bm{p},  \mathcal{G}(\bm{p}),  {\mathcal{G}}^2(\bm{p}),...
 \]
-converges. $\mathcal{G}$ is also called focused in this case and the path determined by following at each generation what $\tau$ is expected 
-to produce will lead to some steady state $\omega$ such that
+converges. In this case, $\mathcal{G}$ is also called focused, and the path determined by following at each generation what $\tau$ is expected 
+to produce will lead to some steady state $\omega$
 \[
 \mathcal{G}(\omega) = \lim_{n\to\infty} \mathcal{G}(\bm{p}) = \omega.
 \]
-Such points $\omega$ are called fixed points (or limits) of $\mathcal{G}$. 
-And the sequence $\bm{p},  \mathcal{G}(\bm{p}),  {\mathcal{G}}^2(\bm{p}),...$ is called orbit of $\bm{p}$ under $\mathcal{G}$. 
+Such points $\omega$ are called fixed points of $\mathcal{G}$. 
+When specialized to a simple GA (that is explained in Chapter 2), it turns out that $ \mathcal{G}$ is focused under certain conditions. 
+However, under other conditions the sequence 
+$\bm{p},  \mathcal{G}(\bm{p}),  {\mathcal{G}}^2(\bm{p}),...$ converges 
+to a periodic orbit which oscillates between fixed points of $\mathcal{G}^2$ (see \cite{Vose1999}). 
+If a finite population GA follows the infinite population GA closely, and if infinite populations oscillate under certain conditions, then 
+the finite population should also show oscillating behavior. We investigate finite population oscillation with experiments 
+in Chapter 3. We use computation of predicted limits
+of infinite population and present necessary and sufficient conditions stated by Vose for population
+to converge in to periodic orbits. We compute mutation distribution $\bm{\mu}$ and crossover distribution $\bm{\chi}$ 
+satisfying those conditions. Then, we study short-term behavior of finite population with respect to the limits to observe if oscillation occurs.
+
 
 Let $\bm{P}_j$ denote $j$th population state in population state vector $P$. Let $\bm{\pi}^k$ be the probability vector having $j$th component 
 equal to the probability that $k$th generation population is $\bm{P}_j$. If $\bm{\pi}^0$ is initial distribution and $Q$ is transition matrix, the steady state distribution $\bm{\pi}$, a row vector, is given by (see \cite{MarkovChain})
@@ -320,7 +340,7 @@ equal to the probability that $k$th generation population is $\bm{P}_j$. If $\bm
 \label{SteadyState}
 \lim_{k \to \infty} \bm{\pi}^k \;=\; \bm{\pi}^0 Q^k 
 \end{equation}
-where $j$th component can be interpreted as relative proporiton of time that GA has a population corresponding tp $\bm{P}_j$.
+where $\bm{pi}_j$ can be interpreted as relative proporiton of time that a GA spends in population $\bm{P}_j$.
 Solution to the equation \ref{SteadyState} is
 \begin{equation}
 \label{SteadyStateSolution}
@@ -330,15 +350,6 @@ where $\bm{pi}$ is the normalized multiple of eigenvector of the transition matr
 If GA were to converge to some population $\bm{P}_j$, 
 then $\bm{\pi}_j \;=\; 1$ and other components would be $0$. If GA were to oscillate between two populations $\bm{P}_i$ and $\bm{P}_j$, then 
 $\bm{\pi}_i \;=\; 1$ and other components $0$ when $k$ = odd generation, and $\bm{\pi}_j \;=\; 1$ and other components $0$ when $k$ = even generation.
-
-In case of focused $\mathcal{G}$, under some circumstances (conditions explained in chapter three), 
-infinite population oscillates converging alternatingly to fixed points (see \cite{Vose1999}). 
-If finite population follows infinite population closely, and if infinite population oscillates under certain conditions, then 
-does finite population also show oscillating behavior? We investigate whether finite population also oscillates or not with our experiment 
-in chapter three. We use computation of predicted limits
-of infinite population and present necessary and sufficient conditions stated by Vose for population
-to converge in to periodic orbits. We compute mutation distribution $\bm{\mu}$ and crossover distribution $\bm{\chi}$ 
-satisfying those conditions. Then, we study short-term behavior of finite population with respect to the limits to observe if oscillation occurs.
 
 % If GA forms ergodic Markov chain visiting every population state infinitely often, then $\mathcal{G}$ is also called ergodic. 
 % Let $\bm{P}_j$ denote $j$th population state in population state vector $P$. Let $\bm{\pi}^k$ be the probability vector having $j$th component 

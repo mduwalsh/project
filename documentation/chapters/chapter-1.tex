@@ -65,20 +65,17 @@ Figure \ref{FiniteGA} shows the procedural flow of a basic finite population gen
 A simple Holland style genetic algorithm (see \cite{Holland1975}):
 \begin{algorithm}
 \label{realGA}
-\caption*{A simple genetic algorithm}
+\caption*{}
 \begin{algorithmic}[1]
 \Statex 1. Start with some initial population $P$ containing $r$ binary strings of length $\ell$.
 \Statex 2. Choose (with replacement) parents $u$ and $v$ from the current population $P$ (using any selection scheme).
-
   \Statex \hspace{\algorithmicindent} a. Cross $u$ and $v$ to produce children $u^\prime$ and $v^\prime$.
   \Statex \hspace{\algorithmicindent} b. Mutate $u^\prime$ and $v^\prime$ with some probability to produce $u^{\prime\prime}$ and $v^{\prime\prime}$.
-  \Statex \hspace{\algorithmicindent} c. Keep, with uniform probability, one of $u^{\prime\prime}$ and $v^{\prime\prime}$ for the next generation
- 
+  \Statex \hspace{\algorithmicindent} c. Keep, with uniform probability, one of $u^{\prime\prime}$ and $v^{\prime\prime}$ for the next generation 
 \Statex 3. If the next generation contains fewer than $r$ members, repeat step 2.
 \Statex 4. Replace $P$ by the new generation formed and go to step 2.
 \end{algorithmic}
 \end{algorithm}
-
 Each iteration of this process produces a generation. 
 The process is repeated until the system stops to improve or some threshold is met.
 
@@ -217,7 +214,16 @@ measures the {\em dispersion} of the population vector $\bm{q}$ and the second f
 \[
 \exp\{- \sum (\log \sqrt{2 \pi r\bm{q}_j} + \frac{1}{12r\bm{q}_j + \theta (r\bm{q}_j)})\}
 \]
-indicates the probability that $\bm{q}$ is the next generation decays exponentially with increasing dispersion.
+indicates the probability that $\bm{q}$ is the next generation decays exponentially with increasing dispersion. 
+As Vose stated in his book (see \cite{Vose1999}):
+\begin{quote}
+"The combined effect of the two influences of discrepancy and dispersion is that random heuristic search favors a less disperse 
+population near the expected next generation. In particular, if the current population is near the expected next generation, 
+then the first factor does not contribute a strong bias for change. When $\mathcal{G}(\bm{p})$ is nearly the initial population 
+$\bm{p}$, the influence of discrepancy favors $\bm{p}$ as the next generation since the alternatives, being lattice points, 
+are constrained to be some distance away from the expected next generation. This phenomenon is expressed quantitivelty by theorem $3.4$.
+Moreover, the second factor may exert a stabilizing effect provided the current population has low dispersion compared to the alternatives."
+\end{quote}
 
 \begin{figure}[H]
 \begin{center}

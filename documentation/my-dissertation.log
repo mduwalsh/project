@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  14 NOV 2016 15:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.9.2)  15 NOV 2016 08:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2748,7 +2748,7 @@ Chapter 4.
 ] [108
 
 ]
-Underfull \hbox (badness 1946) in paragraph at lines 75--75
+Underfull \hbox (badness 1946) in paragraph at lines 71--71
 []\OT1/cmr/m/n/12 Mendel, G. (1865).  Ver-suche ^^?uber plflanzen-hy-bri-den.  
 \OT1/cmr/m/it/12 Ver-hand-lun-gen des
  []
@@ -2787,29 +2787,21 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 141.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
 (rerunfilecheck)             Checksum: 9BFE08D732FA36CE74DA9FA82920E5CD;2437.
+Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
+(rerunfilecheck)             Checksum: 9210CA0B15CCBDC06FDB2C38DDAC830F;2643.
 
-
-Package rerunfilecheck Warning: File `my-dissertation.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `my-dissertation.brf':
-(rerunfilecheck)             Before: E04E645CD3C8BEC1D9474E36EC54796A;2646
-(rerunfilecheck)             After:  9210CA0B15CCBDC06FDB2C38DDAC830F;2643.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
  ) 
 Here is how much of TeX's memory you used:
  10280 strings out of 495029
- 170768 string characters out of 6181522
- 306901 words of memory out of 5000000
+ 170768 string characters out of 6181524
+ 306898 words of memory out of 5000000
  13129 multiletter control sequences out of 15000+600000
  19133 words of font info for 73 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 39i,16n,53p,1078b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,16n,53p,580b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (136 pages, 632764 bytes).
+Output written on my-dissertation.dvi (136 pages, 632484 bytes).

@@ -16,25 +16,25 @@ A level-1 auxiliary file: back-matter/vita.aux
 Database file #1: references/references-dissertation.bib
 You've used 23 entries,
             1935 wiz_defined-function locations,
-            632 strings with 6589 characters,
+            631 strings with 6567 characters,
 and the built_in function-call counts, 7432 in all, are:
 = -- 739
 > -- 202
 < -- 23
-+ -- 74
++ -- 75
 - -- 60
 * -- 580
-:= -- 1332
+:= -- 1331
 add.period$ -- 66
 call.type$ -- 23
 change.case$ -- 138
-chr.to.int$ -- 21
+chr.to.int$ -- 20
 cite$ -- 23
 duplicate$ -- 307
 empty$ -- 567
 format.name$ -- 93
 if$ -- 1432
-int.to.chr$ -- 3
+int.to.chr$ -- 4
 int.to.str$ -- 0
 missing$ -- 25
 newline$ -- 115

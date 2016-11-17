@@ -10,10 +10,6 @@ Bethke, A.~D. (1980).
 \newblock {\em Genetic Algorithms As Function Optimizers}.
 \newblock PhD thesis, The University of Michigan.
 
-\bibitem[contributors, 2016]{MarkovChain}
-contributors, W. (2016).
-\newblock Markov chain.
-
 \bibitem[Cooley and Tukey, 1965]{CooleyTukey1965}
 Cooley, J.~W. and Tukey, J.~W. (1965).
 \newblock An algorithm for the machine calculation of complex fourier series.
@@ -116,5 +112,9 @@ Wikipedia, C. (2016a).
 \bibitem[Wikipedia, 2016b]{JensenInequality}
 Wikipedia, C. (2016b).
 \newblock Jensen's inequality.
+
+\bibitem[Wikipedia, 2016c]{MarkovChain}
+Wikipedia, C. (2016c).
+\newblock Markov chain.
 
 \end{thebibliography}

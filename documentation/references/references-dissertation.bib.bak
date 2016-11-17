@@ -2,6 +2,18 @@
 % Encoding: Cp1252
 
 
+@Misc{MarkovChain,
+  Title                    = {Markov Chain},
+
+  Author                   = {Wikipedia contributors},
+  Month                    = {11},
+  Year                     = {2016},
+
+  Owner                    = {mahendra},
+  Timestamp                = {2016.11.11},
+  Url                      = {https://en.wikipedia.org/wiki/Markov_chain}
+}
+
 @Book{Beauchamp1975,
   Title                    = {Walsh functions and their applications},
   Author                   = {KG Beauchamp},
@@ -160,6 +172,16 @@
   Timestamp                = {2016.08.11}
 }
 
+@Book{Minc1988,
+  Title                    = {Nonnegative Matrices},
+  Author                   = {Henryk Minc},
+  Publisher                = {A Wiley-Interscience Publication},
+  Year                     = {1988},
+
+  Owner                    = {mahendra},
+  Timestamp                = {2016.11.11}
+}
+
 @Book{Mitchell1999,
   Title                    = {An Introduction to Genetic Algorithms},
   Author                   = {Melanie Mitchell},
@@ -249,25 +271,27 @@
 
 @Misc{ChebyshevInequality,
   Title                    = {Chebyshev's Inequality},
+
   Author                   = {Wikipedia, Contributors},
   Month                    = {8},
-  Organization             = {Wikipedia, The Free Encyclopedia},
-  Url                      = {https://en.wikipedia.org/wiki/Chebyshev%27s_inequality},
   Year                     = {2016},
 
+  Organization             = {Wikipedia, The Free Encyclopedia},
   Owner                    = {mahendra},
-  Timestamp                = {2016.10.24}
+  Timestamp                = {2016.10.24},
+  Url                      = {https://en.wikipedia.org/wiki/Chebyshev%27s_inequality}
 }
 
 @Misc{JensenInequality,
   Title                    = {Jensen's Inequality},
+
   Author                   = {Wikipedia, Contributors},
   Month                    = {10},
-  Organization             = {Wikipedia, The Free Encyclopedia},
-  Url                      = {https://en.wikipedia.org/w/index.php?title=Jensen%27s_inequality&oldid=738863949},
   Year                     = {2016},
 
+  Organization             = {Wikipedia, The Free Encyclopedia},
   Owner                    = {mahendra},
-  Timestamp                = {2016.09.26}
+  Timestamp                = {2016.09.26},
+  Url                      = {https://en.wikipedia.org/w/index.php?title=Jensen%27s_inequality&oldid=738863949}
 }
 

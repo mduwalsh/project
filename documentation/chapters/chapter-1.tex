@@ -265,9 +265,9 @@ If
 \label{EpsilonCheby}
 \epsilon  =  f(r)/\sqrt{r}
 \end{equation}
-, then (\ref{Cheby}) becomes
+then (\ref{Cheby}) becomes
 \begin{equation*}
-\lim_{r \to \infty} P(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \geq \epsilon) \; \leq \; \frac{(1 - \|\mathcal{G}(\bm{p})\|^2)} {{f(r)}^2} \; \leq \; 0
+\lim_{r \to \infty} P(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \geq \epsilon) \; \leq \; \lim_{r \to \infty}\frac{1 - \|\mathcal{G}(\bm{p}\|^2)} {{f(r)}^2} \; = \; 0
 \end{equation*}
 
 Therefore, $\tau(\bm{p})$ converges in probability to $\mathcal{G}(\bm{p})$ as the population size increases, 
@@ -276,18 +276,18 @@ in the infinite population case. Moreover, \ref{EpsilonCheby} suggests that the 
 infinite population in the next generation might decrease as $1/\sqrt{r}$.
 
 In figure \ref{tetra_popn}, finite population points can be only at certain points, but infinite population points can be anywhere in the simplex. 
-Theorem 3.1 in 'The Simple Genetic Algorithm: Foundations and Theory' states:  
+Theorem 3.1 in 'The Simple Genetic Algorithm: Foundations and Theory' states (see \cite{Vose1999}):  
 \begin{quote}
 \emph{If $\bm{p},\bm{q} \;\in\; \Lambda$ are 
-arbitrary population vectors for population size $r$, and $\bm{\xi}$ denotes arbitrary element of $\Lambda$, then 
+arbitrary population vectors for population size $r$, and $\bm{\xi}$ denotes an arbitrary element of $\Lambda$, then 
 \begin{eqnarray}
 \underset{\bm{p} \neq \bm{q}}{\inf} \|\bm{p} - \bm{q}\| &\;=\;& \sqrt{2}/r    \label{theorem3.1_a} \\
-\underset{\bm{\xi}}{\sup} \; \underset{\bm{p}}{inf} \|\bm{\xi} - \bm{p}\| &\;=\;& O(1/\sqrt{r})     \label{theorem3.1b}
+\underset{\bm{\xi}}{\sup} \; \underset{\bm{p}}{\inf} \|\bm{\xi} - \bm{p}\| &\;=\;& O(1/\sqrt{r})     \label{theorem3.1_b}
 \end{eqnarray}
-where the constant (in the "big oh") is independent of the dimension $n$ of $\Lambda$} (see \cite{Vose1999}).
+where the constant (in the "big oh") is independent of the dimension $n$ of $\Lambda$}.
+\end{quote}
 From \ref{theorem3.1_b}, the distance between an infinite population $\bm{\xi}$ and finite population $p$ is $O(1/\sqrt{r})$. 
 This suggests that the distance between $\tau (\bm{p})$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$.
-\end{quote}
 
 Let $\eta$ be the random variable $\| \bm{q} - \mathcal{G}(\bm{p}) \|$, and let $\phi (x) = x^2$. 
 % Then, $\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|^2)$ becomes $\mathcal{E}(\phi (\eta))$. 
@@ -301,21 +301,26 @@ Therefore,
 \label{Jensen}
 \mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|) \;=\; \mathcal{E}(\eta) \leq \sqrt{\mathcal{E}(\eta^2)} \;=\; \frac{\sqrt{1 - \|\mathcal{G}(\bm{p})\|^2}}{\sqrt{\bm{r}}}
 \end{equation}
+This suggests that the distance between $\tau (\bm{p})$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$. 
 
-\section{Problem Statement}
-Equation \ref{Jensen} bounds the expected rate of convergence for the single-step haploid case; 
-the distance is inversely proportional to square root of population size. 
-Theorem 3.1 from 'The Simple Genetic Algorithm: Foundation and Theory', 
-and Jenson's inequality analysis of \ref{RHSvariance} both suggests that the distance between finite population and infinite population decreases like  
-$1\sqrt{r}$. We investigate the rate of decrease with experiments in Chapter 2. 
-We begin with a simple Markov model for diploid case under influence of mutation and crossover. 
-The model is non-overlapping, generational, infinite population model assuming random mating and no selective pressure. 
-Through abstract development, we show that the diploid model can be specialized by using mask based 
-mutation and crossover operators to Vose's infinite population model which is a haploid model. Computational 
-simplifications due to reduction of diploid model to haploid model and application of Walsh transform 
-are exploited in experimental simulation of model. Through the experiment we demonstrate convergence 
-of finite diploid population to infinite population behavior, and the distance between finite population 
-and infinite population decreases like $1\sqrt{r}$.
+\section{Research Problems}
+Equations \ref{EpsilonCheby}, \ref{theorem3.1_b}, and \ref{Jensen} all suggest that the 
+distance between $\tau{\bm{p}}$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$. 
+The first research question to be investigate is whether that rate of decrease is exhibited 
+in practice. We investigate the rate of decrease with experiments in Chapter 2.
+% Equation \ref{Jensen} bounds the expected rate of convergence for the single-step haploid case; 
+% the distance is inversely proportional to square root of population size. 
+% Theorem 3.1 from 'The Simple Genetic Algorithm: Foundation and Theory', 
+% and Jenson's inequality analysis of \ref{RHSvariance} both suggests that the distance between finite population and infinite population decreases like  
+% $1\sqrt{r}$. We investigate the rate of decrease with experiments in Chapter 2. 
+% We begin with a simple Markov model for diploid case under influence of mutation and crossover. 
+% The model is non-overlapping, generational, infinite population model assuming random mating and no selective pressure. 
+% Through abstract development, we show that the diploid model can be specialized by using mask based 
+% mutation and crossover operators to Vose's infinite population model which is a haploid model. Computational 
+% simplifications due to reduction of diploid model to haploid model and application of Walsh transform 
+% are exploited in experimental simulation of model. Through the experiment we demonstrate convergence 
+% of finite diploid population to infinite population behavior, and the distance between finite population 
+% and infinite population decreases like $1\sqrt{r}$.
 
 An instance of RHS is  focused if $\mathcal{G}$ is continuously differentiable, and for every $\bm{p}  \in  \Lambda$
 the sequence
@@ -323,39 +328,51 @@ the sequence
 \bm{p},  \mathcal{G}(\bm{p}),  {\mathcal{G}}^2(\bm{p}),...
 \]
 converges. In this case, $\mathcal{G}$ is also called focused, and the path determined by following at each generation what $\tau$ is expected 
-to produce will lead to some steady state $\omega$
+to produce will lead to some fixed point $\omega$
 \[
 \mathcal{G}(\omega) = \lim_{n\to\infty} \mathcal{G}(\bm{p}) = \omega.
 \]
-Such points $\omega$ are called fixed points of $\mathcal{G}$. 
-When specialized to a simple GA (that is explained in Chapter 2), it turns out that $ \mathcal{G}$ is focused under certain conditions. 
-However, under other conditions the sequence 
+When specialized to a simple GA (the details are explained in Chapter 2), it turns out that $ \mathcal{G}$ is focused under certain conditions, 
+but, under other conditions the sequence 
 $\bm{p},  \mathcal{G}(\bm{p}),  {\mathcal{G}}^2(\bm{p}),...$ converges 
 to a periodic orbit which oscillates between fixed points of $\mathcal{G}^2$ (see \cite{Vose1999}). 
 If a finite population GA follows the infinite population GA closely, and if infinite populations oscillate under certain conditions, then 
-the finite population should also show oscillating behavior. We investigate finite population oscillation with experiments 
-in Chapter 3. We use computation of predicted limits
-of infinite population and present necessary and sufficient conditions stated by Vose for population
-to converge in to periodic orbits. We compute mutation distribution $\bm{\mu}$ and crossover distribution $\bm{\chi}$ 
-satisfying those conditions. Then, we study short-term behavior of finite population with respect to the limits to observe if oscillation occurs.
+finite populations might also show oscillating behavior. The second research question to be investigated is whether such finite population 
+oscillation is exhibited in practice. We investigate finite population oscillation with experiments 
+in Chapter 3. 
+% We use computation of predicted limits
+% of infinite population and present necessary and sufficient conditions stated by Vose for population
+% to converge in to periodic orbits. We compute mutation distribution $\bm{\mu}$ and crossover distribution $\bm{\chi}$ 
+% satisfying those conditions. Then, we study short-term behavior of finite population with respect to the limits to observe if oscillation occurs.
 
-
-Let $\bm{P}_j$ denote $j$th population state in population state vector $P$. Let $\bm{\pi}^k$ be the probability vector having $j$th component 
-equal to the probability that $k$th generation population is $\bm{P}_j$. If $\bm{\pi}^0$ is initial distribution and $Q$ is transition matrix, the steady state distribution $\bm{\pi}$, a row vector, is given by (see \cite{MarkovChain})
+The third research question concerns the robustness of finite population oscillation.
+Consider the lattice points in the simple $\Lambda$ which represent finite populations 
+(for some fixed population size $r$) 
+and let $\bm{P}_j$ denote the $j$th population represented by the $j$th lattice point. 
+Let $\bm{\pi}^k$ be the probability vector having as $j$th component 
+the probability that $\bm{P}_j$ is the $k$th generation. 
+If $\bm{\pi}^0$ is the initial population distribution, 
+the steady state distribution $\bm{\pi}$, is given by (see \cite{MarkovChain})
 \begin{equation}
 \label{SteadyState}
-\lim_{k \to \infty} \bm{\pi}^k \;=\; \bm{\pi}^0 Q^k 
+\bm{\pi} \;=\; \lim_{k \to \infty} \bm{\pi}^k \;=\; \lim_{k \to \infty} \bm{\pi}^0 Q^k
 \end{equation}
-where $\bm{pi}_j$ can be interpreted as relative proporiton of time that a GA spends in population $\bm{P}_j$.
-Solution to the equation \ref{SteadyState} is
+assuming the limit exists. The $j$th component $\bm{\pi}_j$ can be interpreted 
+as the proporiton of time that a GA spends in population $\bm{P}_j$.
+If transition matrix $Q$ is irreducible and non-negative, then the Markov chian is 
+ergodic, the steady state distribution $\bm{pi}$ exists, and it has positive components 
+(see \cite{Minc1988}). 
+The solution to equation \ref{SteadyState} satisfies
 \begin{equation}
 \label{SteadyStateSolution}
-\bm{\pi} \; = \; \bm{\pi} Q.
+\bm{\pi} \; = \; \bm{\pi} Q
 \end{equation}
-where $\bm{pi}$ is the normalized multiple of eigenvector of the transition matrix $Q^T$ with eigenvalue $1$.
-If GA were to converge to some population $\bm{P}_j$, 
-then $\bm{\pi}_j \;=\; 1$ and other components would be $0$. If GA were to oscillate between two populations $\bm{P}_i$ and $\bm{P}_j$, then 
-$\bm{\pi}_i \;=\; 1$ and other components $0$ when $k$ = odd generation, and $\bm{\pi}_j \;=\; 1$ and other components $0$ when $k$ = even generation.
+where $\bm{\pi}$ is normalized so that its components sum to one.
+If GA were to oscillate between two populations $\bm{P}_i$ and $\bm{P}_j$, then 
+$\bm{\pi}^k_i \;=\; 1$ (other components are $0$) when $k$ is odd, 
+and $\bm{\pi}^k_j \;=\; 1$ (other components are $0$) when $k$ is even. 
+Therefore, oscillation cannot occur. In Chapter 4, we investigate oscillation behavior of 
+finite populations when the Markov chain is erfogic. That is the third research question.
 
 % If GA forms ergodic Markov chain visiting every population state infinitely often, then $\mathcal{G}$ is also called ergodic. 
 % Let $\bm{P}_j$ denote $j$th population state in population state vector $P$. Let $\bm{\pi}^k$ be the probability vector having $j$th component 
@@ -375,8 +392,15 @@ $\bm{\pi}_i \;=\; 1$ and other components $0$ when $k$ = odd generation, and $\b
 % So, in chapter three, we further investigate what happens to finite populations 
 % if we violate the conditions necessary for population to oscillate, and making GA ergodic.
 
-If GA forms irreducible and aperiodic Markov chain, then the chain is ergodic (see \cite{MarkovChain}). If Markov chain of GA is ergodic, then $\mathcal{G}$ is also called ergodic. For ergodic Markov chain, the steady state is independent of initial population. For irreducible and non-negative transition matrix $Q$, eigenvector associated to the $Q$ is positive (see \cite{Minc1988}). Hence, steady state distribution $\bm{\pi}$ for ergodic Markov chain converges to some vector with positive values in its component, meaning oscillation does not occur in GA if Markov chain is ergodic. In second part of chapter three, we further investigate if finite populations approximately oscillate or not if ergodic Markov chain is formed. To study this, we make some modifications in $\bm{\mu}$ and $\bm{\chi}$ distributions to  violate the conditions necessary for population to oscillate such that GA will form ergodic Markov chain, and we observe finite population short term behavior with this violation.
-
+% If GA forms irreducible and aperiodic Markov chain, then the chain is ergodic (see \cite{MarkovChain}). 
+% For ergodic Markov chain, 
+% the steady state exists (it need not exist in general).  Hence, steady state distribution $\bm{\pi}$ 
+% for ergodic Markov chain converges to some vector with positive values in its component, meaning oscillation 
+% does not occur in GA if Markov chain is ergodic. In second part of Chapter 3, we further investigate 
+% if finite populations approximately oscillate or not if ergodic Markov chain is formed. To study this, 
+% we make some modifications in $\bm{\mu}$ and $\bm{\chi}$ distributions to  violate the conditions 
+% necessary for population to oscillate such that GA will form ergodic Markov chain, and we observe finite 
+% population short term behavior with this violation.
 
 % \section{Overview}
 % In chapter two, we describe a simple Markov model for diploid case under influence of mutation and crossover. 

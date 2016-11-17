@@ -1,39 +1,39 @@
 \chapter{Evolutionary Limits} \label{ch:evolutionary limits}
-This chapter investigates evolutionary limits predicted by Vose using infinite population model under no selective pressure. 
-It uses computation to verify predicted infinite population limits and presents necessary and sufficient conditions obtained by Vose for 
-convergence to periodic orbits. We investigate the convergence of finite population short-term behavior 
-to infinite population evolutionary limits under no selective pressure. Infinite and finite population behavior when 
-the necessary and sufficient conditions for convergence to periodic orbits are violated is also examined.
+This chapter investigates the qualitative similarity between finite population short-term behavior and infinite population evolutionary limits 
+predicted by Vose. 
+It uses computation to verify predicted infinite population limits and presents necessary and sufficient conditions for 
+convergence to periodic orbits. Infinite and finite population behavior when 
+the conditions for convergence to periodic orbits are violated is also examined.
 
 \section{Limits}
 \label{Limits}
-Vose states under mild assumptions on mutations (explained later), populations converge under repeated application 
-of $\mathcal{M}$. Vose mentions that in the general case, periodic orbits are possible, but populations converge under 
-repeated application of $\mathcal{M}^2$ and the limits ${\bm p}^\ast = \lim_{n \rightarrow \infty} \mathcal{M}^{2n}({\bm p})$ 
+Vose states that under mild assumptions on mutations (explained later), infinite populations converge under repeated application 
+of $\mathcal{M}$ in the absense of selective pressure. Vose mentions that periodic orbits are possible, but populations converge under 
+repeated application of $\mathcal{M}^2$ and the limits $\bm{p}^\ast = \lim_{n \rightarrow \infty} \mathcal{M}^{2n}({\bm p})$ 
 and ${\bm q}^\ast = \lim_{n \rightarrow \infty} \mathcal{M}^{2n+1}({\bm q})$ exist (see \cite{Vose1999}).
 
-In this section, operations ($+$ and $\cdot$) acting on elements of $\mathcal{R}$ are component-wise addition and multiplication modulo 2. 
-
-Following Vose (see \cite{Vose1999}), let $S_g = g \mathcal{R} / \{\textbf{0}, g\}$, and let $|g|$ be the number of non zero bits in $g$.
+Following Vose (see \cite{Vose1999}), let $S_g = g \mathcal{R} / \{\textbf{0}, g\}$, and let $|g|$ be the number of non zero bits in $g$. 
+If $\widehat{\bm{p}}$ represents the current population in Walsh coordinates, then the next generation ${\widehat{\bm{p}}_g}^{\prime}$ 
+(expressed in Walsh coordinates) is 
 \[
-{{\widehat{{\bm p}}}_g}^{\prime}  = \begin{cases}
+{{\widehat{\bm{p}}}_g}^{\prime}  = \begin{cases}
     2^{\ell /2}  & \text{if $g = 0$}\\
     x_g \widehat{{\bm p}}_g + y_g(\widehat{{\bm p}}_g) & \text{otherwise}
   \end{cases}
 \]
-where,
+where
 \[
 x_g = 2\widehat{\mathcal{M}}_{g,0},  \hspace*{1cm} y_g(z) = 2^{\ell /2} \sum_{i \in S_g} z_i z_{i+g} \widehat{\mathcal{M}}_{i,i+g}.
 \]
 
 Moreover, 
 \begin{eqnarray*}
-|g| & = & 1 \nudge \Rightarrow y_g = 0 \\
-|g| & > & 0 \nudge \Rightarrow |x_g| \leq 1 \\
-|x_g| & = & 1 \nudge \Rightarrow y_g = 0
+|g| \;=\; 1 \nudge & \Longrightarrow & y_g = 0 \\
+|g| \;>\; 0 \nudge & \Longrightarrow & |x_g| \leq 1 \\
+|x_g| \;=\; 1 \nudge & \Longrightarrow & y_g = 0
 \end{eqnarray*}
 
-With above notations, limits can be expressed in Walsh basis by recursive equations (see \cite{Vose1999})
+With above notations, the limits can be expressed in Walsh basis by recursive equations (see \cite{Vose1999})
 \begin{equation}
 \label{lt1}
 \widehat{{\bm p}^{\ast}}_g  = \begin{cases}
@@ -55,153 +55,126 @@ mixing converges to a periodic orbit oscillating between ${\bm p}^\ast$ and ${\b
 Limits $\widehat{{\bm p}^{\ast}}_g$ and $\widehat{{\bm q}^{\ast}_g}$ can be computed considering $g$th components in order of increasing $|g|$.
 The necessary and sufficient condition for the sequence
 \[
-\bm{p}, \mathcal{M}({\bm p}), \mathcal{M}^2({\bm p}),...
+\bm{p}, \mathcal{M}({\bm p}), \mathcal{M}^2({\bm p}),\cdots
 \]
-to converge to a periodic orbit given by Vose is that for some $g$
+to converge to a periodic orbit is that for some $g$
 \begin{equation}
 \label{OscCond}
 -1 = \sum \limits_{j} (-1)^{g^T j} \bm{\mu}_j = - \sum \limits_{k \in \bar{g}\mathcal{R}} \bm{\chi}_{k+g} + \bm{\chi}_k
 \end{equation}
  
-\section{Computation of Mutation and Crossover Distribution}
+\section{Mutation and Crossover Distributions}
 The following algorithm generates mutation and crossover distributions that satisfying equation (\ref{OscCond}) 
-for evolution to converge to periodic orbits. Operations ($+$ and $\cdot$) acting on elements of $\mathcal{R}$ 
-in this section below are component-wise addition and multiplication modulo 2. 
-Let $\bm{\mu}_j$ and $\bm{\chi}_k$ represent mutation and crossover distributions respectively where $j,k \in \mathcal{R}$ 
-and $U01()$ is a random number between $0$ and $1$. For any $g \in \mathcal{R}$ and $g \neq 0$ and for all $j \in \mathcal{R}$,
+for evolution to converge to periodic orbits. 
+Let $\bm{\mu}_j$ and $\bm{\chi}_k$ represent mutation and crossover distributions respectively where $j,k \in \mathcal{R}$, 
+and let $U01()$ be a random number between $0$ and $1$. For any $g \in \mathcal{R}$, $g \neq 0$, and for all $j \in \mathcal{R}$,
 \[
 \bm{\mu}_j = \begin{cases}
-    U01() & \text{if $(g^T\cdot j)$ is odd}.\\
+    U01() & \text{if $(g^T j)$ is odd}.\\
     0 & \text{otherwise}.
   \end{cases}
 \]
 
-This installs random values in some specific positions in $\bm{\mu}$ according to value of $g$. Other components of $\bm{\mu}$ are set to $0$. 
 Normalization of $\bm{\mu}_j$ yields $\bm{\mu}$ (the mutation distribution),
 \[
 \bm{\mu}_j = \bm{\mu}_j / \sum \limits_{j \in \mathcal{R} } \bm{\mu}_j.
 \]
-Hence 
-\[
-\sum \limits_{j \in \mathcal{R} } \bm{\mu}_j = 1.
-\]
 Moreover, the values $\bm{\mu}_j$ satisfy condition (\ref{OscCond}).
 
-Condition $k \in \bar{g} \mathcal{R}$ in equation (\ref{OscCond}) can be simplified for computation as
+Condition $k \in \bar{g} \mathcal{R}$ in equation (\ref{OscCond}) is
 \[
-k = \bar{g} i  \text{ where $i \in \mathcal{R}$}
+k = \bar{g} i  \text{ for some $i \in \mathcal{R}$}
 \]
-Logical bitwise ANDing both sides by $\bar{g}$,
+Multiplying through by $\bar{g}$ yields
 \begin{equation*}
 \bar{g} k = \bar{g} \bar{g} i \; = \; \bar{g} i \; = \; k 
 \end{equation*}
-The crossover distribution can be generated as follows.
+The crossover distribution can therefore be generated as follows.
 For all $k \in \mathcal{R}$,
 \begin{eqnarray*}
-\bm{\chi}_k & = & U01() \\
-\bm{\chi}_{k+g} & = & U01() 
-\end{eqnarray*}
-where $k \in \bar{g} \mathcal{R}$, and
-\[
-\bm{\chi}_k = 0
-\]
-for other values of $k$. 
-This installs random values in some specific positions in $\bm{\chi}$ according to the value of $g$. 
-Other components of $\bm{\chi}$ are set to $0$. Normalization of $\bm{\chi}_k$ yields 
+\bm{\chi}_k & = & U01() \;\; if\; \bar{g}k \;=\; k \\
+\bm{\chi}_{k+g} & = & U01() \;\; if\; \bar{g}k \;=\; k\\
+bm{\chi}_k & = & 0  \;\; otherwise.
+\end{eqnarray*} 
+Normalization of $\bm{\chi}_k$ yields 
 $\bm{\chi}$ (the crossover distribution),
 \[
 \bm{\chi}_k = \bm{\chi}_k/\sum\limits_{k \in \mathcal{R}} \bm{\chi}_k.
-\]
-Hence 
-\[
-\sum\limits_{k \in \mathcal{R}} \bm{\chi}_k = 1.
 \]
 Moreover, the values $\bm{\chi}_k$ satisfy condition (\ref{OscCond}).
 
 \section{Initial Population}
 \label{InitPopOsc}
 
-\begin{figure}[H]
-\begin{center}
-\resizebox*{12cm}{!}{\includegraphics{figures/eps/initialpop.eps}}\hspace{4pt}
-\caption{\textbf{Initial population computation} }
-\label{initialpop}
-\end{center}
-\end{figure}
+% \begin{figure}[H]
+% \begin{center}
+% \resizebox*{12cm}{!}{\includegraphics{figures/eps/initialpop.eps}}\hspace{4pt}
+% \caption{\textbf{Initial population computation} }
+% \label{initialpop}
+% \end{center}
+% \end{figure}
+% Let finite haploid population $\bm{s}^n$, finite diploid population $\bm{f}^n$, infinite haploid population $\bm{p}^n$ 
+% and infinite haploid population $\bm{q}^n$ be considered with initial population $\bm{s}^0$, $\bm{f}^0$,
+% $\bm{p}^0$, $\bm{q}^0$ respectively. 
+To investigate oscillating behavior of infinite population evolutionary limits 
+and finite population behavior, it is desirable to have the same or corresponding initial population. 
 
-Let finite haploid population $\bm{s}^n$, finite diploid population $\bm{f}^n$, infinite haploid population $\bm{p}^n$ 
-and infinite haploid population $\bm{q}^n$ be considered with initial population $\bm{s}^0$, $\bm{f}^0$,
-$\bm{p}^0$, $\bm{q}^0$ respectively. To investigate oscillating behavior of infinite population evolutionary limits 
-and finite population behavior, it is desirable to have the same initial population. 
-
-For a length $\ell$, $x = 2^\ell$ is the number of possible haploids. Let array $\bm{t}$ represent a  
+For string length $\ell$, the number of possible haploids is $x = 2^\ell$. Let array $\bm{t}$ represent a  
 population size of $N$ as follows: $\bm{t}_j$ is the $j$th population member (some element of $\{0,..,x-1\}$ 
-where elements are base 2 length l binary strings). Array $\bm{t}$ is generated as follows. 
-First an arbitrary vector $\bm{v}$ of size $x$ is considered where
-\[
-\bm{v}_i = U01(); \tabspace {i = 0, 1,.., x-1}
-\]
-and U01() is random number between 0 and 1.
-\[
-\bm{t}_j = randp(\bm{v}) ; \tabspace {j = 0,.., N-1}
-\]
-where $randp(\bm{v})$ returns random index $i$ in array $\bm{v}$ with probability $\bm{v}_i$.
+where elements are base 2 length $\ell$ binary strings). Array $\bm{t}$ is generated from random vector $\bm{u}$ of size $x$ as follows. 
+\begin{eqnarray*}
+\bm{u}_i & = & U01(); \tabspace {i = 0, 1,.., x-1} \\
+\bm{t}_j & = & randp(\bm{u}) ; \tabspace {j = 0,.., N-1}
+\end{eqnarray*}
+where $U01()$ is random number between 0 and 1, and $randp(\bm{u})$ returns random index $i$ in array $\bm{u}$ with probability $\bm{u}_i$.
 
-Let $\bm{c}_i$ represent count of haploid member $i$ in population $\bm{t}$ given by
+Let $\bm{c}_i$ be the count of haploid member $i$ in population $\bm{t}$,
 \[
 \bm{c}_i = \sum \limits_{j=0}^{N-1} [\bm{t}_j = i]  \nudge; \tabspace  {i = 0,.., x-1}
 \]
-Then infinite population vector $\bm{p}$ is calculated as
+The infinite population vector $\bm{p}$ has $i$th component
 \[
-\bm{p}_i = \frac{\bm{c}_i}{ \sum \limits_{k=0}^{x-1} \bm{c}_k }
+\bm{p}_i = \frac{\bm{c}_i}{ N }.
 \]
-where $i = 0,.., x-1$ and $\sum \limits_{k=0}^{x-1} \bm{c}_k = N$.
+This randomly generated infinite haploid population vector $\bm{p}$ is used to obtain a diploid infinite population vector $\bm{q}$,  
+and finite population vectors $\bm{s}$ and $\bm{f}$ as follows.
 
-This $\bm{p}$ is randomly generated initial infinite haploid population vector ($\bm{p}^0$) which corresponds to diploid infinite population vector $\bm{q}$ 
-and finite population vectors $\bm{s}$ and $\bm{f}$.
+Infinite diploid population $\bm{q}$ is calculated corresponding to initial haploid population $\bm{p}$ as
+\[
+\bm{q}_{i,j} = \bm{p}_i \cdot \bm{p}_j  \nudge; \tabspace  (0 \leq i,j < x).
+\]
 
-Finite haploid population members $\bm{t}_j$s are generated again to match finite haploid population $\bm{s}^0$ with infinite haploid population $\bm{p}^0$.
-\[
-\bm{c}_i = N \cdot \bm{p}_i 
-\]
-\[
-\sum \limits_{j=0}^{N-1} [\bm{t}_j = i] = \bm{c}_i  \nudge; \tabspace  {i = 0,.., x-1} 
-\]
-Initial infinite diploid population $\bm{q}_0$ is calculated corresponding to initial haploid population $\bm{p}^0$ as
-\[
-\bm{q}^0_{i,j} = \bm{p}^0_i \cdot \bm{p}^0_j  \nudge; \tabspace  (0 \leq i,j < x).
-\]
-Let $\bm{v}$ represent finite diploid population member array of size $N^2$ and $\bm{d}_{i,j}$ represent count of 
-diploid member $\langle i,j \rangle$ in $\bm{v}$. Then $\bm{v}$ can be filled with population member to match 
-initial population vector $\bm{p}$ generating diploid members such that
-\begin{eqnarray*}
-\bm{d}_{i,j} & = & N \cdot \bm{p}_i \cdot N \cdot \bm{p}_j  \\
-\sum \limits_{k=0}^{N^2-1} [ \bm{v}_k = \langle i,j \rangle ] & = & \bm{d}_{i,j}
-\end{eqnarray*}
+The finite haploid population members are the elements of array $\bm{t}_j$, 
+the corresponding finite haploid population vector $\bm{s}$ is identical to $\bm{p}^0$. 
+The finite diploid population (proportion) vector $\bm{f}$ corresponding to 
+finite diploid population member array $\bm{v}$ is identical to $\bm{q}$.
+% \[
+% \bm{c}_i = N \cdot \bm{p}_i 
+% \]
+% \[
+% \sum \limits_{j=0}^{N-1} [\bm{t}_j = i] = \bm{c}_i  \nudge; \tabspace  {i = 0,.., x-1} 
+% \]
 
-Finite diploid population (proportion) vector $\bm{f}$ can be obtained from finite diploid population member array $\bm{v}$  using
-\[
-f_{i,j} = \frac{\bm{d}_{i,j}}{\sum \limits_{k=0}^{x-1} \sum \limits_{h=0}^{x-1} \bm{d}_{k,h}}
-\]
-where $i = 0,.., x-1$, $h = 0,.., x-1$ and $\sum \limits_{k=0}^{x-1} \sum \limits_{h=0}^{x-1} \bm{d}_{k,h} = N^2$.
-
-Thus, initial infinite haploid population vector $\bm{p}^0$ corresponds to initial infinite diploid population vector $\bm{q}^0$, initial finite 
-haploid population vector with population size $N$ and initial finite diploid population vector with population size $N^2$.
+Thus, initial infinite haploid population vector $\bm{p}$ corresponds to initial infinite diploid 
+population vector $\bm{q}$ and to initial finite 
+haploid population vector $\bm{s}$ with population size $N$ and population member array $\bm{t}$ 
+and to initial finite diploid population vector $\bm{f}$ with population size $N^2$ and population member array $\bm{v}$.
 
 \section{Oscillation}
 \label{Oscillation}
 
-Equations (\ref{lt1}) and (\ref{lt2}) were implemented with crossover distribution $\bm{\chi}$ and mutation distribution $\bm{\mu}$ satisfying 
-condition (\ref{OscCond}) to investigate oscillating behavior of predicted infinite population evolutionary limits $\bm{p}^{\ast}$ and $\bm{q}^{\ast}$ 
-and finite population under no selective pressure.
+Crossover distribution $\bm{\chi}$ and mutation distribution $\bm{\mu}$ satisfying 
+condition (\ref{OscCond}) are considered to investigate oscillating behavior between 
+predicted infinite population evolutionary limits under no selective pressure.
 
-Infinite haploid population evolutionary limits $\bm{p}_h^{\ast}$ and $\bm{q}_h^{\ast}$ were computed using equations (\ref{lt1}) and (\ref{lt2}). 
-Infinite diploid population evolutionary limits $\bm{p}_d^{\ast}$ and $\bm{q}_d^{\ast}$ as
+Infinite haploid population evolutionary limits $\bm{p}_h^{\ast}$ and $\bm{q}_h^{\ast}$ 
+were computed using equations (\ref{lt1}) and (\ref{lt2}). 
+Infinite diploid population evolutionary limits $\bm{p}_d^{\ast}$ and $\bm{q}_d^{\ast}$ are obtained as follows
 \begin{eqnarray*}
 ({\bm{p}_d^{\ast}})_{\langle \gamma_0, \gamma_1 \rangle} & = & ({\bm{p}_h^{\ast}})_{\gamma_0} ({\bm{p}_h^{\ast}})_{\gamma_1} \\
 ({\bm{q}_d^{\ast}})_{\langle \gamma_0, \gamma_1 \rangle} & = & ({\bm{q}_h^{\ast}})_{\gamma_0} ({\bm{q}_h^{\ast}})_{\gamma_1}
 \end{eqnarray*}
-where $\gamma = \langle \gamma_0, \gamma_1 \rangle$ is diploid genome.
+where $\gamma = \langle \gamma_0, \gamma_1 \rangle$ is a diploid genome.
 
 For every genome length $\ell$, the same initial population (calculated as described in (\ref{InitPopOsc})) was used for the infinite population and all 
 sizes of finite populations conisdered.

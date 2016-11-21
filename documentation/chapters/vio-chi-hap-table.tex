@@ -1,73 +1,55 @@
-% \begin{table}[ht]
-% \caption{\textbf{Experimental distance measured for violation in $\bm{\chi}$:} $\ell$ is genome length, 
-% $\epsilon$ is error introduced to $\bm{\chi}$ for violation, and average distance between finite and 
-% infinite populations is tabulated in last three columns.}
-% \centering
-% \begin{tabularx}{0.75\textwidth}{ c *{5}{X}}
-% \toprule
-% $\epsilon$ & case & $\ell$ & $N = 4096$ & $N = 40960$ & $N = 81920$  \\
-% \midrule
-% \multirow{8}{*}{0.01} & \multirow{4}{*}{haploid} 	& 8 & 0.0186	&  0.0150 	& 0.0115 \\
-% 		      &   				& 10 & 0.0158	&  0.0062 	& 0.0051 \\ 
-% 		      & 			 	& 12 & 0.0158	&  0.0056	& 0.0045 \\
-% 		      &  	 			& 14 & 0.0156	&  0.0050	& 0.0036 \\ 
-% 		      \cmidrule(l){2-6}
-% 		      & \multirow{4}{*}{diploid} 	& 8 & 0.0156	&  0.0051	& 0.0036 \\
-% 		      &  	 			& 10 & 0.0156	&  0.0049	& 0.0035 \\
-% 		      & 			 	& 12 & 0.0156	&  0.0049	& 0.0035 \\
-% 		      &  	 			& 14 & 0.0156	&  0.0049	& 0.0035 \\
-% 		      \midrule
-% \multirow{8}{*}{0.1} & \multirow{4}{*}{haploid} 	& 8 & 0.0163	& 0.0061 	& 0.0051 \\
-% 		      &   				& 10 & 0.0157	&  0.0051	& 0.0037 \\	
-% 		      & 				& 12 & 0.0157	&  0.0051	& 0.0037 \\	
-% 		      &  	 			& 14 & 0.0156	&  0.0049	& 0.0035 \\
-% 		      \cmidrule(l){2-6}
-% 		      & \multirow{4}{*}{diploid} 	& 8 & 0.0156	&  0.0050	& 0.0035 \\
-% 		      &  	 			& 10 & 0.0156	&  0.0049	& 0.0035 \\
-% 		      & 				& 12 & 0.0156	&  0.0049	& 0.0035 \\
-% 		      &  	 			& 14 & 0.0156	&  0.0049	& 0.0035 \\
-% 		      \midrule
-% \multirow{8}{*}{0.5} & \multirow{4}{*}{haploid} 	& 8 & 0.0156	&  0.0051	& 0.0036 \\
-% 		      &   				& 10 & 0.0155	&  0.0049	& 0.0035 \\
-% 		      & 				& 12 & 0.0157	&  0.0050	& 0.0035 \\
-% 		      &  	 			& 14 & 0.0156	&  0.0049	& 0.0035 \\
-% 		      \cmidrule(l){2-6}
-% 		      & \multirow{4}{*}{diploid} 	& 8 & 0.0156	&  0.0049	& 0.0035 \\	
-% 		      &  	 			& 10 & 0.0156	&  0.0049	& 0.0035 \\
-% 		      &  				& 12 & 0.0156	&  0.0049	& 0.0035 \\
-% 		      &  	 			& 14 & 0.0156	&  0.0049	& 0.0035 \\
-% \bottomrule
-% \end{tabularx}
-% \label{distanceChi}
-% \end{table} 
-
-
 \begin{table}[ht]
-\caption{\textbf{Experimental distance measured for violation in $\bm{\chi}$ for haploids:} $\ell$ is genome length, 
-$\epsilon$ is error introduced to $\bm{\chi}$ for violation, and average distance between finite and 
+\caption{\textbf{Distance measured for violation in $\bm{\chi}$ with $\epsilon \;=\; 0.01$  for haploids:} $\ell$ is genome length, 
+and average distance between finite and 
 infinite populations is tabulated in last three columns.}
 \centering
-\begin{tabularx}{0.75\textwidth}{ c *{5}{X}}
+\begin{tabularx}{0.75\textwidth}{ c *{3}{X}}
 \toprule
-$\epsilon$ & case & $\ell$ & $N = 4096$ & $N = 40960$ & $N = 81920$  \\
+$\ell$ & $N = 4096$ & $N = 40960$ & $N = 81920$  \\
 \midrule
-\multirow{4}{*}{0.01} & \multirow{4}{*}{haploid} 	& 8 & 0.0186	&  0.0150 	& 0.0115 \\
-		      &   				& 10 & 0.0158	&  0.0062 	& 0.0051 \\ 
-		      & 			 	& 12 & 0.0158	&  0.0056	& 0.0045 \\
-		      &  	 			& 14 & 0.0156	&  0.0050	& 0.0036 \\ 
-		      \midrule
-\multirow{4}{*}{0.1}  & \multirow{4}{*}{haploid} 	& 8 & 0.0163	& 0.0061 	& 0.0051 \\
-		      &   				& 10 & 0.0157	&  0.0051	& 0.0037 \\	
-		      & 				& 12 & 0.0157	&  0.0051	& 0.0037 \\	
-		      &  	 			& 14 & 0.0156	&  0.0049	& 0.0035 \\
-		      \midrule
-\multirow{4}{*}{0.5}  & \multirow{4}{*}{haploid} 	& 8 & 0.0156	&  0.0051	& 0.0036 \\
-		      &   				& 10 & 0.0155	&  0.0049	& 0.0035 \\
-		      & 				& 12 & 0.0157	&  0.0050	& 0.0035 \\
-		      &  	 			& 14 & 0.0156	&  0.0049	& 0.0035 \\      
+8 & 0.0186	&  0.0150 	& 0.0115 \\
+10 & 0.0158	&  0.0062 	& 0.0051 \\ 
+12 & 0.0158	&  0.0056	& 0.0045 \\
+14 & 0.0156	&  0.0050	& 0.0036 \\ 
 \bottomrule
 \end{tabularx}
-\label{distanceChiHap}
+\label{distanceChiHapEps0.01}
+\end{table} 
+
+\begin{table}[ht]
+\caption{\textbf{Distance measured for violation in $\bm{\chi}$ with $\epsilon \;=\; 0.0$  for haploids:} $\ell$ is genome length, 
+and average distance between finite and 
+infinite populations is tabulated in last three columns.}
+\centering
+\begin{tabularx}{0.75\textwidth}{ c *{3}{X}}
+\toprule
+$\ell$ & $N = 4096$ & $N = 40960$ & $N = 81920$  \\
+\midrule
+8 & 0.0163	& 0.0061 	& 0.0051 \\
+10 & 0.0157	&  0.0051	& 0.0037 \\	
+12 & 0.0157	&  0.0051	& 0.0037 \\	
+14 & 0.0156	&  0.0049	& 0.0035 \\
+\bottomrule
+\end{tabularx}
+\label{distanceChiHapEps0.1}
+\end{table} 
+
+\begin{table}[ht]
+\caption{\textbf{Distance measured for violation in $\bm{\chi}$ with $\epsilon \;=\; 0.5$  for haploids:} $\ell$ is genome length, 
+and average distance between finite and 
+infinite populations is tabulated in last three columns.}
+\centering
+\begin{tabularx}{0.75\textwidth}{ c *{3}{X}}
+\toprule
+$\ell$ & $N = 4096$ & $N = 40960$ & $N = 81920$  \\
+\midrule
+8 & 0.0156	&  0.0051	& 0.0036 \\
+10 & 0.0155	&  0.0049	& 0.0035 \\
+12 & 0.0157	&  0.0050	& 0.0035 \\
+14 & 0.0156	&  0.0049	& 0.0035 \\      
+\bottomrule
+\end{tabularx}
+\label{distanceChiHapEps0.5}
 \end{table} 
 
 

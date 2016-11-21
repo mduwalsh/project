@@ -306,8 +306,62 @@ This suggests that the distance between $\tau (\bm{p})$ and $\mathcal{G}(\bm{p})
 \section{Research Problems}
 Equations \ref{EpsilonCheby}, \ref{theorem3.1_b}, and \ref{Jensen} all suggest that the 
 distance between $\tau{\bm{p}}$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$. 
-The first research question to be investigate is whether that rate of decrease is exhibited 
+The first research question to consider is whether that rate of decrease is exhibited 
 in practice. We investigate the rate of decrease with experiments in Chapter 2.
+
+An instance of RHS is  focused if $\mathcal{G}$ is continuously differentiable, and for every $\bm{p}  \in  \Lambda$
+the sequence
+\[
+\bm{p},  \mathcal{G}(\bm{p}),  {\mathcal{G}}^2(\bm{p}),...
+\]
+converges. In this case, $\mathcal{G}$ is also called focused, and the path determined by following at each generation what $\tau$ is expected 
+to produce will lead to some fixed point $\omega$
+\[
+\mathcal{G}(\omega) = \lim_{n\to\infty} \mathcal{G}^n(\bm{p}) = \omega.
+\]
+When specialized to a simple GA (the details are explained in Chapter 2), it turns out that $ \mathcal{G}$ is focused under certain conditions, 
+but under other conditions the sequence 
+$\bm{p},  \mathcal{G}(\bm{p}),  {\mathcal{G}}^2(\bm{p}),...$ converges 
+to a periodic orbit which oscillates between fixed points of $\mathcal{G}^2$ (see \cite{Vose1999}). 
+If a finite population GA follows the infinite population GA closely, and if infinite populations oscillate under certain conditions, then 
+finite populations might also show oscillating behavior. The second research question to consider is whether such finite population 
+oscillation is exhibited in practice. We investigate finite population oscillation with experiments 
+in Chapter 3. 
+
+The third research question concerns the robustness of finite population oscillation.
+Consider the lattice points in the simple $\Lambda$ which represent finite populations 
+(for some fixed population size $r$) 
+and let $\bm{P}_j$ denote the $j$th population represented by the $j$th lattice point. 
+Let $\bm{\pi}^k$ be the probability vector having as $j$th component 
+the probability that $\bm{P}_j$ is the $k$th generation. 
+If $\bm{\pi}^0$ is the initial population distribution, 
+the steady state distribution $\bm{\pi}$ is given by (see \cite{MarkovChain})
+\begin{equation}
+\label{SteadyState}
+\bm{\pi} \;=\; \lim_{k \to \infty} \bm{\pi}^k \;=\; \lim_{k \to \infty} \bm{\pi}^0 Q^k
+\end{equation}
+assuming the limit exists. The $j$th component $\bm{\pi}_j$ can be interpreted 
+as the proporiton of time that a GA spends in population $\bm{P}_j$.
+If transition matrix $Q$ is irreducible\footnote{A Markov chain is said to be 
+{\em irreducible} if it is possible to get to any state from any state.} 
+and aperiodic\footnote{A Markov chain is {\em aperiodic} if it can return to 
+state $i$ at irregular times.}, then the Markov chian is 
+ergodic, the steady state distribution $\bm{\pi}$ exists, and it has positive components 
+(see \cite{Minc1988}). 
+The solution to equation \ref{SteadyState} satisfies
+\begin{equation}
+\label{SteadyStateSolution}
+\bm{\pi} \; = \; \bm{\pi} Q
+\end{equation}
+where $\bm{\pi}$ is normalized so that its components sum to one.
+If GA were to oscillate between two populations $\bm{P}_i$ and $\bm{P}_j$, then 
+$\bm{\pi}^k_i \;=\; 1$ (other components are $0$) when $k$ is odd, 
+and $\bm{\pi}^k_j \;=\; 1$ (other components are $0$) when $k$ is even. 
+Therefore, oscillation should not occur. In Chapter 4, we investigate oscillation behavior of 
+finite populations when the Markov chain is ergodic. The third research question concerns whether 
+finite population oscillation is exhibited in practice when the Markov chain is ergodic.
+
+
 % Equation \ref{Jensen} bounds the expected rate of convergence for the single-step haploid case; 
 % the distance is inversely proportional to square root of population size. 
 % Theorem 3.1 from 'The Simple Genetic Algorithm: Foundation and Theory', 
@@ -322,57 +376,10 @@ in practice. We investigate the rate of decrease with experiments in Chapter 2.
 % of finite diploid population to infinite population behavior, and the distance between finite population 
 % and infinite population decreases like $1\sqrt{r}$.
 
-An instance of RHS is  focused if $\mathcal{G}$ is continuously differentiable, and for every $\bm{p}  \in  \Lambda$
-the sequence
-\[
-\bm{p},  \mathcal{G}(\bm{p}),  {\mathcal{G}}^2(\bm{p}),...
-\]
-converges. In this case, $\mathcal{G}$ is also called focused, and the path determined by following at each generation what $\tau$ is expected 
-to produce will lead to some fixed point $\omega$
-\[
-\mathcal{G}(\omega) = \lim_{n\to\infty} \mathcal{G}(\bm{p}) = \omega.
-\]
-When specialized to a simple GA (the details are explained in Chapter 2), it turns out that $ \mathcal{G}$ is focused under certain conditions, 
-but, under other conditions the sequence 
-$\bm{p},  \mathcal{G}(\bm{p}),  {\mathcal{G}}^2(\bm{p}),...$ converges 
-to a periodic orbit which oscillates between fixed points of $\mathcal{G}^2$ (see \cite{Vose1999}). 
-If a finite population GA follows the infinite population GA closely, and if infinite populations oscillate under certain conditions, then 
-finite populations might also show oscillating behavior. The second research question to be investigated is whether such finite population 
-oscillation is exhibited in practice. We investigate finite population oscillation with experiments 
-in Chapter 3. 
 % We use computation of predicted limits
 % of infinite population and present necessary and sufficient conditions stated by Vose for population
 % to converge in to periodic orbits. We compute mutation distribution $\bm{\mu}$ and crossover distribution $\bm{\chi}$ 
 % satisfying those conditions. Then, we study short-term behavior of finite population with respect to the limits to observe if oscillation occurs.
-
-The third research question concerns the robustness of finite population oscillation.
-Consider the lattice points in the simple $\Lambda$ which represent finite populations 
-(for some fixed population size $r$) 
-and let $\bm{P}_j$ denote the $j$th population represented by the $j$th lattice point. 
-Let $\bm{\pi}^k$ be the probability vector having as $j$th component 
-the probability that $\bm{P}_j$ is the $k$th generation. 
-If $\bm{\pi}^0$ is the initial population distribution, 
-the steady state distribution $\bm{\pi}$, is given by (see \cite{MarkovChain})
-\begin{equation}
-\label{SteadyState}
-\bm{\pi} \;=\; \lim_{k \to \infty} \bm{\pi}^k \;=\; \lim_{k \to \infty} \bm{\pi}^0 Q^k
-\end{equation}
-assuming the limit exists. The $j$th component $\bm{\pi}_j$ can be interpreted 
-as the proporiton of time that a GA spends in population $\bm{P}_j$.
-If transition matrix $Q$ is irreducible and non-negative, then the Markov chian is 
-ergodic, the steady state distribution $\bm{pi}$ exists, and it has positive components 
-(see \cite{Minc1988}). 
-The solution to equation \ref{SteadyState} satisfies
-\begin{equation}
-\label{SteadyStateSolution}
-\bm{\pi} \; = \; \bm{\pi} Q
-\end{equation}
-where $\bm{\pi}$ is normalized so that its components sum to one.
-If GA were to oscillate between two populations $\bm{P}_i$ and $\bm{P}_j$, then 
-$\bm{\pi}^k_i \;=\; 1$ (other components are $0$) when $k$ is odd, 
-and $\bm{\pi}^k_j \;=\; 1$ (other components are $0$) when $k$ is even. 
-Therefore, oscillation cannot occur. In Chapter 4, we investigate oscillation behavior of 
-finite populations when the Markov chain is erfogic. That is the third research question.
 
 % If GA forms ergodic Markov chain visiting every population state infinitely often, then $\mathcal{G}$ is also called ergodic. 
 % Let $\bm{P}_j$ denote $j$th population state in population state vector $P$. Let $\bm{\pi}^k$ be the probability vector having $j$th component 

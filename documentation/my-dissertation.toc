@@ -23,9 +23,12 @@
 \contentsline {section}{\numberline {3.3}Initial Population}{33}{section.3.3}
 \contentsline {section}{\numberline {3.4}Oscillation}{34}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Haploid Population}{36}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Diploid Population}{41}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.2}Diploid Population}{45}{subsection.3.4.2}
 \contentsline {section}{\numberline {3.5}Summary}{46}{section.3.5}
 \contentsline {chapter}{\numberline {4}Violation}{47}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{48}{chapter.5}
-\contentsline {chapter}{Bibliography}{50}{section*.31}
-\contentsline {chapter}{Vita}{54}{section*.33}
+\contentsline {subsection}{\numberline {4.0.1}Violation in Mutation Distribution}{48}{subsection.4.0.1}
+\contentsline {subsection}{\numberline {4.0.2}Violation in Crossover Distribution}{83}{subsection.4.0.2}
+\contentsline {section}{\numberline {4.1}Summary}{115}{section.4.1}
+\contentsline {chapter}{\numberline {5}Conclusion}{116}{chapter.5}
+\contentsline {chapter}{Bibliography}{118}{section*.91}
+\contentsline {chapter}{Vita}{122}{section*.93}

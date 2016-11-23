@@ -4,12 +4,12 @@ short-term behavior and infinite population evolutionary limits predicted by Vos
 It uses computation to verify predicted infinite population limits and presents 
 necessary and sufficient conditions for convergence to periodic orbits. 
 We compute mutation distribution $\bm{\mu}$ and crossover distribution $\bm{\chi}$ 
-to satisfy those conditions. And through experiments, we explore our second research 
-question that whether finite populations oscillate following infinite populations behavior.
+to satisfy those conditions. Through experiments, we explore our second research 
+question: can finite populations oscillate in practice?
 
 \section{Limits}
 \label{Limits}
-Vose states that under mild assumptions on mutations (explained later), infinite populations converge under repeated application 
+Vose states that under mild assumptions on mutation (explained later), infinite populations converge under repeated application 
 of $\mathcal{M}$ in the absense of selective pressure. Vose mentions that periodic orbits are possible, but populations converge under 
 repeated application of $\mathcal{M}^2$ and the limits $\bm{p}^\ast = \lim_{n \rightarrow \infty} \mathcal{M}^{2n}({\bm p})$ 
 and ${\bm q}^\ast = \lim_{n \rightarrow \infty} \mathcal{M}^{2n+1}({\bm q})$ exist (see \cite{Vose1999}).
@@ -35,7 +35,7 @@ Moreover,
 |x_g| \;=\; 1 \nudge & \Longrightarrow & y_g = 0
 \end{eqnarray*}
 
-With above notations, the limits can be expressed in Walsh basis by recursive equations (see \cite{Vose1999})
+With above notations, the limits can be expressed in the Walsh basis by recursive equations (see \cite{Vose1999})
 \begin{equation}
 \label{lt1}
 \widehat{{\bm p}^{\ast}}_g  = \begin{cases}
@@ -72,8 +72,8 @@ Let $\bm{\mu}$ and $\bm{\chi}$ represent mutation and crossover distributions (r
 and let $U01()$ return a random number between $0$ and $1$. For any $g \in \mathcal{R}$, $g \neq 0$, and for all $j \in \mathcal{R}$,
 \[
 \bm{\mu}_j = \begin{cases}
-    U01() & \text{if $(g^T j)$ is odd}.\\
-    0 & \text{otherwise}.
+    U01() & \text{if $g^T j$ is odd}\\
+    0 & \text{otherwise}
   \end{cases}
 \]
 
@@ -94,8 +94,8 @@ Multiplying through by $\bar{g}$ yields
 The crossover distribution can therefore be generated as follows.
 For all $k \in \mathcal{R}$,
 \begin{eqnarray*}
-\bm{\chi}_k & = & U01() \;\; if\; \bar{g}k \;=\; k \\
-\bm{\chi}_{k+g} & = & U01() \;\; if\; \bar{g}k \;=\; k\\
+\bm{\chi}_k & = & U01() \;\; \mbox{if}\; \bar{g}k \;=\; k \\
+\bm{\chi}_{k+g} & = & U01() \;\; \mbox{if}\; \bar{g}k \;=\; k\\
 \bm{\chi}_k & = & 0  \;\; otherwise.
 \end{eqnarray*} 
 Normalization yields 
@@ -122,13 +122,13 @@ To investigate oscillation in infinite population and finite population behavior
 it is desirable to have the same or corresponding initial populations. 
 
 For string length $\ell$, the number of possible haploids is $x = 2^\ell$. Let array $\bm{t}$ represent a  
-population size of $N$ as follows: $\bm{t}_j$ is the $j$th population member (some element of $\{0,..,x-1\}$ 
+population of size $N$ as follows: $\bm{t}_j$ is the $j$th population member (some element of $\{0,..,x-1\}$ 
 where elements are base 2 length $\ell$ binary strings). Array $\bm{t}$ is generated from a random vector $\bm{u}$ of size $x$ as follows. 
 \begin{eqnarray*}
-\bm{u}_i & = & U01(); \tabspace {i = 0, 1,.., x-1} \\
+\bm{u}_i & = & U01(); \tabspace {i = 0,.., x-1} \\
 \bm{t}_j & = & randp(\bm{u}) ; \tabspace {j = 0,.., N-1}
 \end{eqnarray*}
-where $U01()$ returns random number between 0 and 1, and $randp(\bm{u})$ returns random index $i$ in array $\bm{u}$ with probability $\bm{u}_i$.
+where $randp(\bm{u})$ returns random index $i$ in array $\bm{u}$ with probability $\bm{u}_i$.
 
 Let $\bm{c}_i$ be the count of haploid member $i$ in population $\bm{t}$,
 \[
@@ -171,7 +171,7 @@ and to initial finite diploid population vector $\bm{f}$ with population size $N
 \label{Oscillation}
 
 Crossover distribution $\bm{\chi}$ and mutation distribution $\bm{\mu}$ satisfying 
-condition (\ref{OscCond}) are considered to investigate oscillating behavior between 
+condition (\ref{OscCond}) are considered to investigate oscillating behavior near 
 predicted infinite population evolutionary limits.
 
 Infinite haploid population evolutionary limits $\bm{p}_h^{\ast}$ and $\bm{q}_h^{\ast}$ 
@@ -215,28 +215,27 @@ The distance between finite population and infinite population, for both haploid
 \subsection{Haploid Population}
 \input{chapters/oscillation_hap.tex}
 \textbf{ Figures} \ref{oscillation_8h}, \ref{oscillation_10h}, \ref{oscillation_12h} and
-\ref{oscillation_14h} showing oscillations in finite haploid populations, and distances 
+\ref{oscillation_14h} show oscillations in finite haploid populations, and distances 
 between finite haploid populations and infinite populations arranged by genome length $\ell$ in ascending order. 
 In each figure for unique genome length $\ell$, sub-figures 
-are arranged by population size ($N$). In each figure, first three rows of sub-figures on left column shows distance of finite population 
-to limits and sub-figure in fourth row on left column shows distance of infinite population to limits. These sub-figures depicts 
-oscillating behavior of both infinite and finite populations when the condition \ref{OscCond} is met. 
-Finite population oscillation is sharper with increased population size. 
+are arranged by population size ($N$). In each figure, the first three rows of sub-figures in the left column show distance $d'$ of finite population 
+to limits, the sub-figure in fourth row of the left column shows distance $d'$ of infinite population to limits. These sub-figures depict 
+oscillating behavior of both infinite and finite populations when condition \ref{OscCond} is met. 
 As population size increases, oscillation approaches the behavior exhibited by infinite population. 
 
 In each figure (\ref{oscillation_8h}, \ref{oscillation_10h}, \ref{oscillation_12h}, 
-and \ref{oscillation_14h}), first three rows of graphs on right side shows 
+and \ref{oscillation_14h}), the first three graphs in the right column show 
 distance variation (difference in distance ($d$) and average distance ($d_{avg}$))  
 where $d$ is distance between haploid finite and infinite populations and $d_{avg}$ is average value of $d$. 
-In fourth row on right, a single graph for distances ($d$) of different finite population sizes 
-($N = 1N_0^2, \nudge10N_0^2, \nudge20N_0^2$) to infinite population are plotted. The resulting graphs show distance decreases 
-as population size increases, which is consistent with results from section \ref{convergence}. 
-The distance graphs smooth as population size increases. The graphs of $d-d_{avg}$ decreases in amplitude as population size increases. 
-For fixed finite population size, as $\ell$ increases, distance graphs become smoother, and amplitude of oscillations decreases. 
+The graph in the fourth row of the right column combines distance plots between finite and infinite populations for sizes 
+($N = N_0^2, \nudge10N_0^2, \nudge20N_0^2$). The resulting graphs show distance decreases 
+as population size increases, consistent with results from section \ref{convergence}. 
+The graphs of $d-d_{avg}$ decrease in amplitude as population size increases. 
+For fixed finite population size, as $\ell$ increases, the distance graphs become smoother, and amplitude of oscillations decrease. 
 
-Distance data obtained from simulations for haploid populations are summarized in table \ref{tableDistanceOscHap}. The 
-last three columns tabulate average distance values between finite and infinite population 
-for population sizes $N \;=\; 4096 $, $N \;=\; 40960 $ and $N \;=\; 81920 $ respectively.
+Distance data obtained from simulations for haploid populations are summarized in table \ref{tableDistanceOscHap},  
+which tabulates average distance between finite and infinite populations 
+for population sizes $N \;=\; 4096 $, $N \;=\; 40960 $ and $N \;=\; 81920 $.
 \begin{table}[ht]
 \caption{\textbf{Distance measured for haploid population:} $N$ is population size, $\ell$ is genome length 
 and average distance between finite and infinite population is tabulated in the last three columns. $\{4096, \nudge 40960, \nudge 81920\}$ }
@@ -253,39 +252,35 @@ $\ell$ & $N \;=\; 4096 $ & $N \;=\; 40960 $ & $N \;=\; 81920 $\\
 \end{tabularx}
 \label{tableDistanceOscHap}
 \end{table}
-Results from table \ref{tableDistanceOscHap} show average distance between finite and infinite population follows closely 
+
+Results from table \ref{tableDistanceOscHap} show average distance between finite and infinite population closely follows 
 the expected single step distance given in table \ref{tableExpectedDistance}. The distance decreases as $1/\sqrt{N}$.
 
 % diploids
 \subsection{Diploid Population}
 \input{chapters/oscillation_dip.tex}
 \textbf{ Figures} \ref{oscillation_8d}, \ref{oscillation_10d}, \ref{oscillation_12d} 
-and \ref{oscillation_14d} showing oscillations in finite diploid populations, and distances 
+and \ref{oscillation_14d} show oscillations in finite diploid populations, and distances 
 between finite haploid populations and infinite populations arranged by genome length $\ell$ in ascending order. 
 In each figure for unique genome length $\ell$, sub-figures 
-are arranged by population size ($N$). In each figure, first three rows of sub-figures on left column shows distance of finite population 
-to limits and sub-figure in fourth row on left column shows distance of infinite population to limits. These sub-figures depicts 
-oscillating behavior of both infinite and finite populations when the condition \ref{OscCond} is met. 
-Like in haploid population case, diploid finite population oscillation is also sharper with increased population size. 
-As population size increases, oscillation approaches the behavior exhibited by infinite population. 
+are arranged by population size ($N$). In each figure, the first three rows of sub-figures in the left column show distance $d'$ of finite population 
+to limits, the sub-figure in fourth row of the left column shows distance $d'$ of infinite population to limits. These sub-figures depict 
+oscillating behavior of both infinite and finite populations when condition \ref{OscCond} is met. 
+Like in haploid population case, as population size increases, oscillation approaches the behavior exhibited by infinite population. 
 
 In each figure (\ref{oscillation_8d}, \ref{oscillation_10d}, \ref{oscillation_12d}, 
-and \ref{oscillation_14d}), first three rows of graphs on right side shows 
+and \ref{oscillation_14d}), the first three graphs in the right column show 
 distance variation (difference in distance ($d$) and average distance ($d_{avg}$))  
 where $d$ is distance between diploid finite and infinite populations and $d_{avg}$ is average value of $d$. 
-In fourth row on right, a single graph for distances ($d$) of different finite population sizes 
-($N = 1N_0^2, \nudge10N_0^2, \nudge20N_0^2$) to infinite population are plotted. The resulting graphs show distance decreases 
-as population size increases, which is consistent with results from section \ref{convergence}. 
-The distance graphs smooth as population size increases. The graphs of $d-d_{avg}$ decreases in amplitude as population size increases. 
-For fixed finite population size, as $\ell$ increases, distance graphs become smoother, and amplitude of oscillations decreases.
+The graph in the fourth row of the right column combines distance plots between finite and infinite populations for sizes 
+($N = 1N_0^2, \nudge10N_0^2, \nudge20N_0^2$). The graphs show distance decreases 
+as population size increases, consistent with results from section \ref{convergence}. 
+The graphs of $d-d_{avg}$ decrease in amplitude as population size increases. 
+For fixed finite population size, as $\ell$ increases, the distance graphs become smoother, and amplitude of oscillations decrease.
 
-For same genome length $\ell$ and same size finite populations, graph showing distance between finite diploid population and infinite population is 
-smoother than graph showing distance between finite haploid population and infinite population. Also amplitude of oscillations in diploid populations 
-is smaller than in haploid populations.
-
-Distance data obtained from simulations for diploid populations are summarized in table \ref{tableDistanceOscDip}. The 
-last three columns tabulate average distance values between finite and infinite population 
-for population sizes $N \;=\; 4096 $, $N \;=\; 40960 $ and $N \;=\; 81920 $ respectively.
+Distance data obtained from simulations for diploid populations are summarized in table \ref{tableDistanceOscDip}, 
+which tabulates average distance between finite and infinite populations 
+for population sizes $N \;=\; 4096 $, $N \;=\; 40960 $ and $N \;=\; 81920 $.
 \begin{table}[ht]
 \caption{\textbf{Distance measured for diploid population:} $N$ is population size, $\ell$ is genome length 
 and average distance between finite and infinite population is tabulated in the last three columns. $\{4096, \nudge 40960, \nudge 81920\}$ }
@@ -303,15 +298,22 @@ $\ell$ & $N \;=\; 4096 $ & $N \;=\; 40960 $ & $N \;=\; 81920 $\\
 \end{tabularx}
 \label{tableDistanceOscDip}
 \end{table}
-Results from table \ref{tableDistanceOscDip} show average distance between finite and infinite population follows closely 
+
+Results from table \ref{tableDistanceOscDip} show average distance between finite and infinite population closely follows 
 the expected single step distance given in table \ref{tableExpectedDistance}. The distance decreases as $1/\sqrt{N}$.
 
+For same genome length $\ell$ and same size finite populations, graph showing distance between finite diploid population and infinite population is 
+smoother than graph showing distance between finite haploid population and infinite population. Also amplitude of oscillations in diploid populations 
+is smaller than in haploid populations.
+
+
 \section{Summary}
-In this chapter, we described limits predicted by Vose for infinite population, and conditions 
+In this chapter, we described infinite population limits predicted by Vose, and conditions 
 for convergence to periodic orbits. Mutation distributions and crossover distributions were computed 
-to satisfy the conditions for infinite populations to converge to periodic orbits, and through experiment, 
-we showed finite populations also oscillate, and converge to infinite population behavior as population size increases. 
-The distance between finite population and infinite populations decreases as $1/\sqrt{N}$ which agrees with results from 
+to satisfy the conditions for infinite populations to converge to periodic orbits. Through experiment, 
+we showed finite populations can also oscillate. 
+Moreover, the distance between finite populations and infinite populations can in practice decrease 
+as $1/\sqrt{N}$ as the populations size increases which is in agreement with results from 
 chapter 2.
 
 

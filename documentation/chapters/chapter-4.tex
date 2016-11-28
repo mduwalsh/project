@@ -1,6 +1,6 @@
 \chapter{Violation} \label{ch:evolutionary limits}
-The results from chapter \ref{oscillation} show that oscillation occurs
-when the crossover distribution $\bm{\chi}$ ,and the mutation distribution $\bm{\mu}$ 
+The results from chapter \ref{ch:oscillation} show that oscillation occurs
+when the crossover distribution $\bm{\chi}$, and the mutation distribution $\bm{\mu}$ 
 satisfy condition \ref{OscCond}. This chapter explores the robustness of finite population oscillation. 
 If population forms ergodic Markov chain, then oscillation should not occur. Does oscillation 
 in finite populations cease in practice if condition \ref{OscCond} is violated? 
@@ -12,13 +12,13 @@ Error $\bm{\epsilon}$ is introduced to $\bm{\mu}$ and $\bm{\chi}$ distributions 
 violate condition \ref{OscCond}. Consequently, $\bm{p}^\ast \;=\; \bm{q}^\ast \;=\; \bm{z}^\ast$. 
 The violation in the distributions are intended to make Markov chain ergodic. Initial population is 
 computed using same procedure as described in section \ref{InitPopOsc}. To understand effects of weight 
-of violation in $\bm{\mu}$ and $\bm{\chi}$, different values of $\bm{epsilon}$ are used in experiments. 
+of violation in $\bm{\mu}$ and $\bm{\chi}$, different values of $\bm{\epsilon}$ are used in experiments. 
 String length $\ell \;\in\; \{8, 10, 12, 14\}$ are considered for simulation.
-Going forward, we use 'limit $\bm{z}^\ast$' to denote evolutionary limit when crossover distribution 
+Going forward, we use `limit $\bm{z}^\ast$' to denote evolutionary limit when crossover distribution 
 $\bm{\chi}$ or mutation distribution $\bm{\mu}$ is violated, and 
-'non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$' to denote limits without violation.
+`non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$' to denote limits without violation.
 
-\subsection{Violation in Mutation Distribution}
+\section{Violation in Mutation Distribution}
 The mutation distribution $\bm{\mu}$ is modified as follows
 \[
 \bm{\mu}_i = (1-\bm{\epsilon}) \bm{\mu}_i \nudge; \tabspace i = \{0, 1, 2,.., 2^{\ell}-1\}.
@@ -58,8 +58,8 @@ mask $i \;=\; 00000100$ will have positive probability according to condition \r
 $j \;=\; 00010100$ will have positive probability. Mask $i$ can be used to mutate string at position $k \;=\; 5$. 
 To mutate bit of any string at position $k \;=\; 3$, string can be mutated using mask $i$ and mask $j$ in sequence.
 
-Population in state $P$ can mutate to another state $P\prime$ in next generation. Then it can mutate back to original state $P$ or 
-stay in its state $P\prime$ or move to another state $P\prime\prime$ in next generation. Since population state can mutate to 
+Population in state $P$ can mutate to another state $P^\prime$ in next generation. Then it can mutate back to original state $P$ or 
+stay in its state $P^\prime$ or move to another state $P^{\prime\prime}$ in next generation. Since population state can mutate to 
 any state, and any state can be returned to in any period of time, the Markov chain formed by GA is irreducible and aperiodic and hence, 
 ergodic (see \cite{MarkovChain}). Because of ergodic Markov chain, steady state distribution with positive value components exists for the GA.   
 
@@ -68,8 +68,12 @@ The distances of both infinite and finite populations to limit $\bm{z}^\ast$ wer
 The distances of both infinite and finite populations to non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$ were also plotted.
 
 % figures for mu violation
+\subsection{Haploid Population}
+\subsubsection{$\bm{\epsilon: 0.01}$}
 \input{chapters/vio-mu-hap-e0.01.tex}
+\subsubsection{$\bm{\epsilon: 0.1}$}
 \input{chapters/vio-mu-hap-e0.1.tex}
+\subsubsection{$\bm{\epsilon: 0.5}$}
 \input{chapters/vio-mu-hap-e0.5.tex}
 % The left column of figures \ref{oscillation_8h_vio_mu_0.01} through \ref{oscillation_14h_vio_mu_0.5} 
 % shows distance of finite and infinite haploid populations to limit $\bm{z^\ast}$ (limit with violation in mutation distribution $\bm{\mu}$). The 
@@ -103,9 +107,12 @@ The distances of both infinite and finite populations to non-violation limits $\
 % between finite population and limit $\bm{z^\ast}$ closely follows expected single step distance 
 % between finite and infinite population given in \ref{tableExpectedDistance}. The distance decreased as $1/\sqrt{N}$.
 % 
-
+\subsection{Diploid Population}
+\subsubsection{$\bm{\epsilon: 0.01}$}
 \input{chapters/vio-mu-dip-e0.01.tex}
+\subsubsection{$\bm{\epsilon: 0.1}$}
 \input{chapters/vio-mu-dip-e0.1.tex}
+\subsubsection{$\bm{\epsilon: 0.5}$}
 \input{chapters/vio-mu-dip-e0.5.tex}
 
 % The left column of figures \ref{oscillation_8d_vio_mu_0.01} through \ref{oscillation_14d_vio_mu_0.5} 
@@ -154,7 +161,7 @@ The distances of both infinite and finite populations to non-violation limits $\
 % requires larger population size to exhibit sharper oscillations. 
 % And from graphs on the left in figures \ref{oscillation_8h_vio_mu_0.01} through \ref{oscillation_14h_vio_mu_0.5}, and \ref{oscillation_8d_vio_mu_0.01} through \ref{oscillation_14d_vio_mu_0.5}, diploid population converges to limit $\bm{z}^\ast$ more quickly than haploid population. 
 
-\subsection{Violation in Crossover Distribution}
+\section{Violation in Crossover Distribution}
 The crossover distribution $\bm{\chi}$ was modified as
 \[
 \bm{\chi}_i = (1-\bm{\epsilon}) \bm{\chi} ; \tabspace i = \{1, 2,.., 2^{\ell}-1\} 

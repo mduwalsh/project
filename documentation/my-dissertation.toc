@@ -28,15 +28,11 @@
 \contentsline {chapter}{\numberline {4}Violation}{48}{chapter.4}
 \contentsline {section}{\numberline {4.1}Violation in Mutation Distribution}{49}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Haploid Population}{52}{subsection.4.1.1}
-\contentsline {subsubsection}{$\bm {\epsilon : 0.01}$}{52}{section*.31}
-\contentsline {subsubsection}{$\bm {\epsilon : 0.1}$}{58}{section*.37}
-\contentsline {subsubsection}{$\bm {\epsilon : 0.5}$}{64}{section*.43}
 \contentsline {subsection}{\numberline {4.1.2}Diploid Population}{70}{subsection.4.1.2}
-\contentsline {subsubsection}{$\bm {\epsilon : 0.01}$}{70}{section*.49}
-\contentsline {subsubsection}{$\bm {\epsilon : 0.1}$}{75}{section*.55}
-\contentsline {subsubsection}{$\bm {\epsilon : 0.5}$}{81}{section*.61}
-\contentsline {section}{\numberline {4.2}Violation in Crossover Distribution}{86}{section.4.2}
-\contentsline {section}{\numberline {4.3}Summary}{118}{section.4.3}
-\contentsline {chapter}{\numberline {5}Conclusion}{119}{chapter.5}
-\contentsline {chapter}{Bibliography}{121}{section*.97}
-\contentsline {chapter}{Vita}{125}{section*.99}
+\contentsline {section}{\numberline {4.2}Violation in Crossover Distribution}{87}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Haploid Population}{89}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Diploid Population}{107}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Summary}{124}{section.4.3}
+\contentsline {chapter}{\numberline {5}Conclusion}{125}{chapter.5}
+\contentsline {chapter}{Bibliography}{127}{section*.91}
+\contentsline {chapter}{Vita}{131}{section*.93}

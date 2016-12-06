@@ -216,11 +216,11 @@ The distance between finite population and infinite population, for both haploid
 \input{chapters/oscillation_hap.tex}
 \textbf{ Figures} \ref{oscillation_8h}, \ref{oscillation_10h}, \ref{oscillation_12h} and
 \ref{oscillation_14h} show oscillations in finite haploid populations, and distances 
-between finite haploid populations and infinite populations arranged by genome length $\ell$ in ascending order. 
+between finite haploid populations and infinite haploid populations arranged by genome length $\ell$ in ascending order. 
 In each figure for unique genome length $\ell$, sub-figures 
-are arranged by population size ($N$). In each figure, the first three rows of sub-figures in the left column show distance $d'$ of finite population 
+are arranged by population size $N$. In each figure, the first three rows of sub-figures in the left column show distance $d'$ of finite population 
 to limits, the sub-figure in fourth row of the left column shows distance $d'$ of infinite population to limits. These sub-figures depict 
-oscillating behavior of both infinite and finite populations when condition \ref{OscCond} is met. 
+oscillating behavior of both infinite and finite haploid populations when condition \ref{OscCond} is met. 
 As population size increases, oscillation approaches the behavior exhibited by infinite population. 
 
 In each figure (\ref{oscillation_8h}, \ref{oscillation_10h}, \ref{oscillation_12h}, 
@@ -261,11 +261,11 @@ the expected single step distance given in table \ref{tableExpectedDistance}. Th
 \input{chapters/oscillation_dip.tex}
 \textbf{ Figures} \ref{oscillation_8d}, \ref{oscillation_10d}, \ref{oscillation_12d} 
 and \ref{oscillation_14d} show oscillations in finite diploid populations, and distances 
-between finite haploid populations and infinite populations arranged by genome length $\ell$ in ascending order. 
+between finite haploid populations and infinite diploid populations arranged by genome length $\ell$ in ascending order. 
 In each figure for unique genome length $\ell$, sub-figures 
-are arranged by population size ($N$). In each figure, the first three rows of sub-figures in the left column show distance $d'$ of finite population 
+are arranged by population size $N$. In each figure, the first three rows of sub-figures in the left column show distance $d'$ of finite population 
 to limits, the sub-figure in fourth row of the left column shows distance $d'$ of infinite population to limits. These sub-figures depict 
-oscillating behavior of both infinite and finite populations when condition \ref{OscCond} is met. 
+oscillating behavior of both infinite and finite diploid populations when condition \ref{OscCond} is met. 
 Like in haploid population case, as population size increases, oscillation approaches the behavior exhibited by infinite population. 
 
 In each figure (\ref{oscillation_8d}, \ref{oscillation_10d}, \ref{oscillation_12d}, 
@@ -309,6 +309,14 @@ and better oscillations are observed with larger population size for a given $\e
 Also amplitude of oscillation decreases with increase in $\ell$ value for same population size, 
 and thus, amplitude of oscillation of diploid population is larger than haploid population of same population size and same value of $\ell$. 
 So, for longer genome length $\ell$, larger population size is needed to observe clear oscillations.
+
+For the diploid case, when genome length $\ell$ is longer ($\ell$ = 12 and 14 in our simulation), 
+and population size is small (like N = 4096 in our simulation), finite population has tendency to 
+jump to different level and staying there for a while. Figures (a) and (b) show such tendency for 
+$\ell$ = 12 and $\ell$ = 14. It could be because as length of string increases, 
+number of fixed points also increases, and finite populations tend to stay near those fixed points. 
+But when population size is large, they intend to follow infinite population, and infinite population tends to 
+converge to a single fixed point, and thus, larger populations have lower tendency to jump to different level.
 
 \section{Summary}
 In this chapter, we described infinite population limits predicted by Vose, and conditions 

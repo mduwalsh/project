@@ -310,13 +310,36 @@ Also amplitude of oscillation decreases with increase in $\ell$ value for same p
 and thus, amplitude of oscillation of diploid population is larger than haploid population of same population size and same value of $\ell$. 
 So, for longer genome length $\ell$, larger population size is needed to observe clear oscillations.
 
+\begin{figure}[htp]
+\begin{center}
+\subfloat[]{\label{fig:osc_12d_N4096}
+\resizebox{8cm}{5cm}{\includegraphics{figures/eps/osc/b12/b12_n004096_osc_fin_dip_lvl.eps}}} \hspace{-3em}%
+\subfloat[]{\label{fig:osc_14d_N4096}
+\resizebox{8cm}{5cm}{\includegraphics{figures/eps/osc/b14/b14_n004096_osc_fin_dip_lvl.eps}}} \vspace{-0.5em} \hspace{-3em}%
+
+\caption{Finite diploid population oscillation for $\ell = 12 \;\&\; 14$ and $N = 4096$}
+\label{oscillation_12d_14d_N4096}
+\end{center}
+\end{figure}
+
 For the diploid case, when genome length $\ell$ is longer ($\ell$ = 12 and 14 in our simulation), 
 and population size is small (like N = 4096 in our simulation), finite population has tendency to 
-jump to different level and staying there for a while. Figures (a) and (b) show such tendency for 
-$\ell$ = 12 and $\ell$ = 14. It could be because as length of string increases, 
+jump to different level and staying there for a while. Figures \ref{fig:osc_12d_N4096} and \ref{fig:osc_14d_N4096} show such tendency for 
+$\ell$ = 12 and $\ell$ = 14. Very good oscillations with tiny amplitude were observed in temporarily stable states 
+in these cases. Figure \ref{oscillation_14d_N4096} shows magnified scale oscillations for $\ell \;=\; 14$ when high surge is omitted from plot. 
+It could be because as length of string increases, 
 number of fixed points also increases, and finite populations tend to stay near those fixed points. 
-But when population size is large, they intend to follow infinite population, and infinite population tends to 
+But when population size is large, finite populations intend to follow infinite population, and infinite population tends to 
 converge to a single fixed point, and thus, larger populations have lower tendency to jump to different level.
+
+\begin{figure}[htp]
+\begin{center}
+\subfloat{
+\resizebox{8cm}{5cm}{\includegraphics{figures/eps/osc/b14/b14_n004096_osc_fin_dip_10_50.eps}}} \hspace{-3em}%
+\caption{Finite diploid population oscillation for $\ell = 14$ and $N = 4096$ from 10 to 50 generations}
+\label{oscillation_14d_N4096}
+\end{center}
+\end{figure}
 
 \section{Summary}
 In this chapter, we described infinite population limits predicted by Vose, and conditions 

@@ -24,15 +24,15 @@
 \contentsline {section}{\numberline {3.4}Oscillation}{34}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Haploid Population}{36}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Diploid Population}{45}{subsection.3.4.2}
-\contentsline {section}{\numberline {3.5}Summary}{46}{section.3.5}
-\contentsline {chapter}{\numberline {4}Violation}{48}{chapter.4}
-\contentsline {section}{\numberline {4.1}Violation in Mutation Distribution}{49}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Haploid Population}{52}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Diploid Population}{70}{subsection.4.1.2}
+\contentsline {section}{\numberline {3.5}Summary}{48}{section.3.5}
+\contentsline {chapter}{\numberline {4}Violation}{49}{chapter.4}
+\contentsline {section}{\numberline {4.1}Violation in Mutation Distribution}{50}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Haploid Population}{53}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Diploid Population}{71}{subsection.4.1.2}
 \contentsline {section}{\numberline {4.2}Violation in Crossover Distribution}{87}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Haploid Population}{89}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Diploid Population}{107}{subsection.4.2.2}
 \contentsline {section}{\numberline {4.3}Summary}{124}{section.4.3}
 \contentsline {chapter}{\numberline {5}Conclusion}{125}{chapter.5}
-\contentsline {chapter}{Bibliography}{127}{section*.91}
-\contentsline {chapter}{Vita}{131}{section*.93}
+\contentsline {chapter}{Bibliography}{127}{section*.93}
+\contentsline {chapter}{Vita}{131}{section*.95}

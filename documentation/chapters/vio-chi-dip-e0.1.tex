@@ -1,5 +1,5 @@
 % l = 8
-\begin{figure}[H]
+\begin{figure}[h]
 \begin{center}
 \subfloat{
 \resizebox{8cm}{5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.1/n00004096_fin_dip.eps}}}\hspace{-3em}%
@@ -36,7 +36,7 @@
 
 % l = 10
 
-\begin{figure}[H]
+\begin{figure}[h]
 \begin{center}
 \subfloat{
 \resizebox{8cm}{5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.1/n00004096_fin_dip.eps}}}\hspace{-3em}%
@@ -73,7 +73,7 @@
 
 % l = 12
 
-\begin{figure}[H]
+\begin{figure}[h]
 \begin{center}
 \subfloat{
 \resizebox{8cm}{5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.1/n00004096_fin_dip.eps}}}\hspace{-3em}%
@@ -110,7 +110,7 @@
 
 % l = 14
 
-\begin{figure}[H]
+\begin{figure}[h]
 \begin{center}
 \subfloat{
 \resizebox{8cm}{5cm}{\includegraphics{figures/eps/vio/chi/b14/e0.1/n00004096_fin_dip.eps}}}\hspace{-3em}%
@@ -145,6 +145,8 @@
 \end{center}
 \end{figure}
 
+\clearpage
+
 The right column in figures \ref{oscillation_8d_vio_chi_0.1} through \ref{oscillation_14d_vio_chi_0.1} 
 shows distance of finite and infinite diploid populations to non-violation limits $\bm{p^\ast}$ and $\bm{q^\ast}$ with $\bm{\epsilon} \;=\; 0.1$. 
 Graphs in the right column give picture of oscillating behavior of diploid population given violation. 
@@ -167,8 +169,7 @@ with $\bm{\epsilon} \;=\; 0.1$ for different finite population size $N$ are tabu
 
 \begin{table}[ht]
 \caption{\textbf{Distance measured for violation in $\bm{\chi}$ with $\bm{\epsilon} \;=\; 0.1$ for diploids:} $\ell$ is genome length, 
-and average distance between finite and 
-infinite populations is tabulated in last three columns.}
+average distance between finite and infinite population is tabulated in the last three columns, and last row is expected single step distance.}
 \centering
 \begin{tabularx}{0.75\textwidth}{ c *{3}{X}}
 \toprule
@@ -178,6 +179,8 @@ $\ell$ & $N = 4096$ & $N = 40960$ & $N = 81920$  \\
 10 & 0.0156	&  0.0049	& 0.0035 \\
 12 & 0.0156	&  0.0049	& 0.0035 \\
 14 & 0.0156	&  0.0049	& 0.0035 \\
+\midrule
+$1/\sqrt{N}$ & 0.0156 & 0.0049 & 0.0035 \\
 \bottomrule
 \end{tabularx}
 \label{distanceChiDipEps0.1}
@@ -186,7 +189,7 @@ $\ell$ & $N = 4096$ & $N = 40960$ & $N = 81920$  \\
 From table \ref{distanceChiDipEps0.1}, average distance calculated for finite population size $4096$ is $0.0156$, 
 for size $40960$ is $0.0049$ and for size $81920$ is $0.0035$. These results show average distance 
 between finite population and limit $\bm{z^\ast}$ closely follows expected single step distance 
-between finite and infinite population given in \ref{tableExpectedDistance}. The distance decreased as $1/\sqrt{N}$. 
+between finite and infinite population. The distance decreased as $1/\sqrt{N}$. 
 Also, the distance is smaller in diploid populations than in haploid populations with $\bm{\epsilon} \;=\; 0.1$.
 
  

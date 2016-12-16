@@ -2,16 +2,16 @@
 The results from chapter \ref{ch:oscillation} show that oscillation occurs
 when the crossover distribution $\bm{\chi}$, and the mutation distribution $\bm{\mu}$ 
 satisfy condition \ref{OscCond}. This chapter explores the robustness of finite population oscillation. 
-If population forms ergodic Markov chain, then oscillation should not occur. Does oscillation 
-in finite populations cease in practice if condition \ref{OscCond} is violated? 
-This chapter tries to answer this and our  
+If population forms ergodic Markov chain, then perfect oscillation should not occur. Does approximate oscillation 
+in finite populations occur in practice if condition \ref{OscCond} is violated? 
+This chapter tries to answer this  
 third research question, whether finite populations exhibit oscillation when the Markov chain 
 is ergodic.
 
 Error $\bm{\epsilon}$ is introduced to $\bm{\mu}$ and $\bm{\chi}$ distributions to 
 violate condition \ref{OscCond}. Consequently, $\bm{p}^\ast \;=\; \bm{q}^\ast \;=\; \bm{z}^\ast$. 
-The violation in the distributions are intended to make Markov chain ergodic. Initial population is 
-computed using same procedure as described in section \ref{InitPopOsc}. To understand effects of weight 
+The violation in the distributions makes the Markov chain ergodic. Initial population is 
+computed using same procedure as described in section \ref{InitPopOsc}. To explore the effects of the degree  
 of violation in $\bm{\mu}$ and $\bm{\chi}$, different values of $\bm{\epsilon}$ are used in experiments. 
 String length $\ell \;\in\; \{8, 10, 12, 14\}$ are considered for simulation.
 Going forward, we use `limit $\bm{z}^\ast$' to denote evolutionary limit when crossover distribution 
@@ -23,7 +23,7 @@ The mutation distribution $\bm{\mu}$ is modified as follows
 \[
 \bm{\mu}_i = (1-\bm{\epsilon}) \bm{\mu}_i \nudge; \tabspace i = \{0, 1, 2,.., 2^{\ell}-1\}.
 \]
-So that sum of $\bm{\mu}$ distribution becomes, 
+Thus the sum of $\bm{\mu}$ distribution becomes, 
 \[
 1-\bm{\epsilon} = \sum \limits_{i=0}^{2^{\ell}-1} \bm{\mu}_i
 \]
@@ -38,50 +38,66 @@ Then set
 % \[
 % \bm{\mu}_i = \bm{\epsilon}^2/c \; ; \; where \; \bm{\mu}_i = 0
 % \]
-The mutation distribution $\bm{\mu}$ is normalized such that  $\sum\limits_{i=0}^{2^{\ell}-1}\bm{\mu}_i \;=\; 1$.
-This modification makes possible for any population member to mutate to any other possible population member via mutation. 
+The mutation distribution $\bm{\mu}$ is normalized such that  $\sum \bm{\mu}_i \;=\; 1$.
+This modification makes it possible for any population member to mutate to any other population member via mutation 
+provided there is non crossover. From equation \ref{ChiDist}, $k \bar{g} \;=\; k$ is true for any $g$ when $k$ is all $0$s, 
+and so we have positive non crossover probability present in all conditions. 
+
 Let us exlore for two cases of $g$ in \ref{OscCond}:
 
 1. When $g$ is all $1$s:\newline
-Any mask $j$ with only one $1$ at any position $k$ ($0 \leq k < \ell$) can mutate $k$th bit in string, and since mask 
-all $0$s in has positive probability, strings have option to not mutate. This gives possibility for any string to mutate to 
-any possible string in population. Let us take an example with $\ell \;=\; 8$. Let $g \;=\; 11111111$. Then, mask 
-$i \;=\; 00000100$ will have positive probability according to condition \ref{OscCond} implementation. 
-Mask $i$ can be used to mutate bit of a population string at position $k \;=\; 5$ from left.
+Any mask $j$ with a $1$ at position $k$ ($0 \leq k < \ell$) and $0$ at all other positions can mutate the $k$th bit, and since the 
+all $0$s mask has positive probability, strings have an option to not mutate. This makes possibile for any string to mutate to 
+any possible string. Let us take an example with $\ell \;=\; 8$. Let $g \;=\; 11111111$. Then, mask 
+$i \;=\; 00000100$ will have positive probability according to condition \ref{OscCond}. 
+Mask $i$ can be used to mutate the sixthbit of a population member. More generally, 
+any bit has the option of mutating or not, so any string can mutate to any other.
 
 2. When $g$ has atleast one $0$:\newline
-Any mask $j$ with only one $1$ at any position $k$ ($0 \leq k < \ell$) where $k$th position in $g$ also has $1$ in it 
-will have positive probability. So any string can mutate that particular $k$th bit using those masks. And any mask 
-with $1$ in any one of the position where $g$ has one in it and $1$ in any position where $g$ has $0$s in it can be used to 
-mutate bits in string where $g$ has $0$s in it. Let us take an example with $\ell \;=\; 8$. Let $g \;=\; 11001111$. Then, 
-mask $i \;=\; 00000100$ will have positive probability according to condition \ref{OscCond} implementation. Then, also mask 
-$j \;=\; 00010100$ will have positive probability. Mask $i$ can be used to mutate string at position $k \;=\; 5$. 
-To mutate bit of any string at position $k \;=\; 3$, string can be mutated using mask $i$ and mask $j$ in sequence.
+Any mask with a $1$ at position $k$ and $0$ at all other positions  
+will have positive probability if $g$ also is $1$ at position $k$. Thus any bit where $g$ is $1$ has the option of mutating or not.  
+Any mask with $1$ in just one of the positions where $g$ has $1$s and also $1$ in just one of the positions where $g$ has $0$s can be used to 
+mutate a bit where $g$ is $0$. Let us take an example with $\ell \;=\; 8$. Let $g \;=\; 11001111$. Then, 
+mask $i \;=\; 00000100$ will have positive probability according to condition \ref{OscCond}. Also mask 
+$j \;=\; 00010100$ will have positive probability. Mask $i$ can be used to mutate the sixth bit, and masks $i$ and $j$ will result in mutating
+the fourth bit. More generally, any bit has the option of mutating or not, so any string can mutate to any other. Since any population can therefore 
+mutate to any other population (this may involve many generations because there are many population members which may need to be mutated), the Markov 
+chain is irreducible.
 
-Population in state $P$ can mutate to another state $P^\prime$ in next generation. Then it can mutate back to original state $P$ or 
-stay in its state $P^\prime$ or move to another state $P^{\prime\prime}$ in next generation. Since population state can mutate to 
-any state, and any state can be returned to in any period of time, the Markov chain formed by GA is irreducible and aperiodic and hence, 
-ergodic (see \cite{MarkovChain}). Because of ergodic Markov chain, steady state distribution with positive value components exists for the GA.   
+The Markov chain is also aperiodic. We prove this by simple induction on population $P$. 
+Let $S(n)$ be function that $P$ has probability to come back to $P$ in $n$ generation, 
+and $S(n) \;=\; 1$ if the probability is positive. 
+Our base case is that population $P$ can come back to its state $P$ in one generation. 
+Population $P$ can stay in its original state $P$ if no mutation events occur. 
+Population $P$ has option not to mutate any other population, since all $0$s mutation mask 
+has positive probability. So $S(n) \;=\; 1$ is true when $n \;=\; 1$. Now, let us assume it is true for any $k$ so that $S(k) \;=\; 1$, 
+and prove that it is true also for $S(k+1)$. Since $S(k) \;=\; 1$, population $P$ can come back to population $P$ in $n \;= \;k$ generations. 
+In $k+1$th generation, population $P$ has option to not to mutate to any other population, and stay in state $P$. So, if $S(n) \;=\; 1$ for 
+$n \;=\; k$, then it is also true for $n \;=\; k+1$. And since our base case for $n \;=\; 1$, $S(n) \;=\; 1$ is true, 
+$S(n) \;=\; 1$ is true for $n \;=\; 2, 3, $ and so on. 
+Since any population state can be returned to in any period of time, the Markov chain is aperiodic. 
+
+Since the Markov chain formed by GA is irreducible and aperiodic, 
+the Markov chain is ergodic (see \cite{MarkovChain}). Because of ergodic Markov chain, 
+steady state distribution with positive value components exists for the GA.   
 
 Simulations were repeated with the violations in (\ref{OscCond}) described above for mutation distribution.
 The distances of both infinite and finite populations to limit $\bm{z}^\ast$ were plotted. 
 The distances of both infinite and finite populations to non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$ were also plotted.
 
 % figures for mu violation
-\subsection{Haploid Population}
-% \subsubsection{$\bm{\epsilon: 0.01}$}
+\subsection{Haploid Population \textasciitilde $\epsilon: 0.01$}
 \input{chapters/vio-mu-hap-e0.01.tex}
-% \subsubsection{$\bm{\epsilon: 0.1}$}
+\subsection{Haploid Population \textasciitilde $\epsilon: 0.1$}
 \input{chapters/vio-mu-hap-e0.1.tex}
-% \subsubsection{$\bm{\epsilon: 0.5}$}
+\subsection{Haploid Population \textasciitilde $\epsilon: 0.5$}
 \input{chapters/vio-mu-hap-e0.5.tex}
 
-\subsection{Diploid Population}
-% \subsubsection{$\bm{\epsilon: 0.01}$}
+\subsection{Diploid Population \textasciitilde $\epsilon: 0.01$}
 \input{chapters/vio-mu-dip-e0.01.tex}
-% \subsubsection{$\bm{\epsilon: 0.1}$}
+\subsection{Diploid Population \textasciitilde $\epsilon: 0.1$}
 \input{chapters/vio-mu-dip-e0.1.tex}
-% \subsubsection{$\bm{\epsilon: 0.5}$}
+\subsection{Diploid Population \textasciitilde $\epsilon: 0.5$}
 \input{chapters/vio-mu-dip-e0.5.tex}
 
 As value of $\ell$ increases, amplitude of oscillation decreases. 
@@ -113,20 +129,18 @@ The distances of both infinite and finite populations to limit $\bm{z}^\ast$ wer
 The distances of both infinite and finite populations to non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$ were also plotted.
 
 % figures for chi violation
-\subsection{Haploid Population}
-% \subsubsection{$\bm{\epsilon}: 0.01$}
+\subsection{Haploid Population \textasciitilde $\epsilon: 0.01$}
 \input{chapters/vio-chi-hap-e0.01.tex}
-% \subsubsection{$\bm{\epsilon}: 0.1$}
+\subsection{Haploid Population \textasciitilde $\epsilon: 0.1$}
 \input{chapters/vio-chi-hap-e0.1.tex}
-% \subsubsection{$\bm{\epsilon}: 0.5$}
+\subsection{Haploid Population \textasciitilde $\epsilon: 0.5$}
 \input{chapters/vio-chi-hap-e0.5.tex}
- 
-\subsection{Diploid Population}
-% \subsubsection{$\bm{\epsilon}: 0.01$}
+
+\subsection{Diploid Population \textasciitilde $\epsilon: 0.01$}
 \input{chapters/vio-chi-dip-e0.01.tex}
-% \subsubsection{$\bm{\epsilon}: 0.1$}
+\subsection{Diploid Population \textasciitilde $\epsilon: 0.1$}
 \input{chapters/vio-chi-dip-e0.1.tex}
-% \subsubsection{$\bm{\epsilon}: 0.5$}
+\subsection{Diploid Population \textasciitilde $\epsilon: 0.5$}
 \input{chapters/vio-chi-dip-e0.5.tex}
 
 As value of $\ell$ increases, amplitude of oscillation decreases. 

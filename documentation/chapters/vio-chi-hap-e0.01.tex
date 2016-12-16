@@ -1,7 +1,7 @@
 
 % l = 8
 
-\begin{figure}[H]
+\begin{figure}[h]
 \begin{center}
 \subfloat{
 \resizebox{8cm}{5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.01/n00004096_fin_hap.eps}}} \hspace{-3em}%
@@ -38,7 +38,7 @@
 
 % l = 10
 
-\begin{figure}[H]
+\begin{figure}[h]
 \begin{center}
 \subfloat{
 \resizebox{8cm}{5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.01/n00004096_fin_hap.eps}}} \hspace{-3em}%
@@ -73,7 +73,7 @@
 
 
 % l = 12
-\begin{figure}[H]
+\begin{figure}[h]
 \begin{center}
 \subfloat{
 \resizebox{8cm}{5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.01/n00004096_fin_hap.eps}}} \hspace{-3em}%
@@ -109,7 +109,7 @@
 
 % l = 14
 
-\begin{figure}[H]
+\begin{figure}[h]
 \begin{center}
 \subfloat{
 \resizebox{8cm}{5cm}{\includegraphics{figures/eps/vio/chi/b14/e0.01/n00004096_fin_hap.eps}}} \hspace{-3em}%
@@ -142,6 +142,8 @@
 \end{center}
 \end{figure}
 
+\clearpage
+
 The right column in figures \ref{oscillation_8h_vio_chi_0.01} through \ref{oscillation_14h_vio_chi_0.01} 
 shows distance of finite and infinite haploid populations to non-violation limits $\bm{p^\ast}$ and $\bm{q^\ast}$ with $\bm{\epsilon} \;=\; 0.01$. 
 Graphs in the right column give picture of oscillating behavior of haploid population given violation. 
@@ -161,8 +163,7 @@ with $\bm{\epsilon} \;=\; 0.01$ for different finite population size $N$ are tab
 
 \begin{table}[ht]
 \caption{\textbf{Distance measured for violation in $\bm{\chi}$ with $\bm{\epsilon} \;=\; 0.01$  for haploids:} $\ell$ is genome length, 
-and average distance between finite and 
-infinite populations is tabulated in last three columns.}
+average distance between finite and infinite population is tabulated in the last three columns, and last row is expected single step distance.}
 \centering
 \begin{tabularx}{0.75\textwidth}{ c *{3}{X}}
 \toprule
@@ -172,6 +173,8 @@ $\ell$ & $N = 4096$ & $N = 40960$ & $N = 81920$  \\
 10 & 0.0158	&  0.0062 	& 0.0051 \\ 
 12 & 0.0158	&  0.0056	& 0.0045 \\
 14 & 0.0156	&  0.0050	& 0.0036 \\ 
+\midrule
+$1/\sqrt{N}$ & 0.0156 & 0.0049 & 0.0035 \\
 \bottomrule
 \end{tabularx}
 \label{distanceChiHapEps0.01}
@@ -180,6 +183,6 @@ $\ell$ & $N = 4096$ & $N = 40960$ & $N = 81920$  \\
 From table \ref{distanceChiHapEps0.01}, average distance calculated for finite population size $4096$ is $0.0164$, 
 for size $40960$ is $0.0079$ and for size $81920$ is $0.0062$. These results show average distance 
 between finite population and limit $\bm{z^\ast}$ closely follows expected single step distance 
-between finite and infinite population given in \ref{tableExpectedDistance}. The distance decreased as $1/\sqrt{N}$. 
+between finite and infinite population. The distance decreased as $1/\sqrt{N}$. 
 Also, the distance decreased as genome length $\ell$ increased for all sizes of finite haploid populations 
 with $\bm{\epsilon} \;=\; 0.01$.

@@ -2,20 +2,20 @@
 The results from chapter \ref{ch:oscillation} show that oscillation occurs
 when the crossover distribution $\bm{\chi}$, and the mutation distribution $\bm{\mu}$ 
 satisfy condition \ref{OscCond}. This chapter explores the robustness of finite population oscillation. 
-If population forms ergodic Markov chain, then perfect oscillation should not occur. Does approximate oscillation 
+If the finite population GA is an ergodic Markov chain, then perfect oscillation should not occur. Does approximate oscillation 
 in finite populations occur in practice if condition \ref{OscCond} is violated? 
-This chapter tries to answer this  
-third research question, whether finite populations exhibit oscillation when the Markov chain 
+This chapter explores the  
+third research question, whether finite populations exhibit approximate oscillation when the Markov chain 
 is ergodic.
 
-Error $\bm{\epsilon}$ is introduced to $\bm{\mu}$ and $\bm{\chi}$ distributions to 
+Error $\bm{\epsilon}$ is introduced to $\bm{\mu}$ and $\bm{\chi}$ distributions so as to 
 violate condition \ref{OscCond}. Consequently, $\bm{p}^\ast \;=\; \bm{q}^\ast \;=\; \bm{z}^\ast$. 
-The violation in the distributions makes the Markov chain ergodic. Initial population is 
+Violation of condition \ref{OscCond} in the distributions makes the Markov chain ergodic. The initial population is 
 computed using same procedure as described in section \ref{InitPopOsc}. To explore the effects of the degree  
-of violation in $\bm{\mu}$ and $\bm{\chi}$, different values of $\bm{\epsilon}$ are used in experiments. 
+of violation of condition \ref{OscCond} in $\bm{\mu}$ and $\bm{\chi}$, different values of $\bm{\epsilon}$ are used in experiments. 
 String length $\ell \;\in\; \{8, 10, 12, 14\}$ are considered for simulation.
-Going forward, we use `limit $\bm{z}^\ast$' to denote evolutionary limit when crossover distribution 
-$\bm{\chi}$ or mutation distribution $\bm{\mu}$ is violated, and 
+Going forward, we use `limit $\bm{z}^\ast$' to denote evolutionary limit when mutation distribution $\bm{\mu}$ or crossover distribution 
+$\bm{\chi}$ violates condition \ref{OscCond} violated, and 
 `non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$' to denote limits without violation.
 
 \section{Violation in Mutation Distribution}

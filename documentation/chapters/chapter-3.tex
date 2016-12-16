@@ -231,7 +231,7 @@ As population size increases, oscillation approaches the behavior exhibited by i
 
 In each figure (\ref{oscillation_8h}, \ref{oscillation_10h}, \ref{oscillation_12h}, 
 and \ref{oscillation_14h}), the first three graphs in the right column show 
-distance variation (difference in distance $d$ and average distance $d_{avg}$)  
+distance variation (difference of distance $d$ and average distance $d_{avg}$)  
 where $d$ is distance between haploid finite and infinite populations and $d_{avg}$ is average value of $d$. 
 The graph in the fourth row of the right column combines distance plots between finite and infinite populations for sizes 
 ($N = N_0^2, \nudge10N_0^2, \nudge20N_0^2$). The resulting graphs show distance decreases 
@@ -282,7 +282,7 @@ Like in haploid population case, as population size increases, oscillation appro
 
 In each figure (\ref{oscillation_8d}, \ref{oscillation_10d}, \ref{oscillation_12d}, 
 and \ref{oscillation_14d}), the first three graphs in the right column show 
-distance variation (difference in distance $d$ and average distance $d_{avg}$)  
+distance variation (difference of distance $d$ and average distance $d_{avg}$)  
 where $d$ is distance between diploid finite and infinite populations and $d_{avg}$ is average value of $d$. 
 The graph in the fourth row of the right column combines distance plots between finite and infinite populations for sizes 
 ($N = N_0^2, \nudge10N_0^2, \nudge20N_0^2$). The graphs show distance decreases 
@@ -318,7 +318,7 @@ Results from table \ref{tableDistanceOscDip} show average distance between finit
 the expected single step distance. The distance decreases as $1/\sqrt{N}$.
 
 For same genome length $\ell$ and same size finite populations, graph showing distance between finite diploid population and infinite population is 
-smoother than graph showing distance between finite haploid population and infinite population. The average amplitude of oscillations data are 
+smoother than graph showing distance between finite haploid population and infinite population. Average oscillation amplitude is 
 plotted for both haploid and diploid populations as surface graphs in figures \ref{fig:osc_amp_hap} and \ref{fig:osc_amp_dip}.
 
 \begin{figure}[h]
@@ -328,15 +328,15 @@ plotted for both haploid and diploid populations as surface graphs in figures \r
 \subfloat[]{\label{fig:osc_amp_dip}
 \resizebox{7.5cm}{5cm}{\includegraphics{figures/eps/osc/osc_amp_dip.eps}}} \vspace{-0.5em} %
 
-\caption{\textbf{Average amplitude of oscillation:} $A$ is average amplitude of oscillation, $L$ is genome length $\ell$, and $N$ is population size}
+\caption{\textbf{Average oscillation amplitude:} $A$ is average amplitude of oscillation, $L$ is genome length $\ell$, and $N$ is population size}
 \label{osc_amp}
 \end{center}
 \end{figure}
 
-Amplitude of oscillations increases with increase in population size for both haploid and diploid populations, 
+Oscillation amplitude increases with increase in population size for both haploid and diploid populations, 
 and better oscillations are observed with larger population size for a given $\ell$. 
 Also amplitude of oscillation decreases with increase in $\ell$ value for same population size, 
-and since genome length of diploid population is twice in length as of haploid population, 
+and since total genome length of diploid population is twice that of haploid population, 
 amplitude of oscillation of diploid population is smaller than haploid population of same population size and same value of $\ell$. 
 So, for longer genome length $\ell$, larger population size is needed to observe clear oscillations.
 
@@ -354,13 +354,15 @@ So, for longer genome length $\ell$, larger population size is needed to observe
 
 For the diploid case, when genome length $\ell$ is longer ($\ell$ = 12 and 14 in our simulation), 
 and population size is small (like N = 4096 in our simulation), finite population has tendency to 
-jump to different level and staying there for a while. Figures \ref{fig:osc_12d_N4096} and \ref{fig:osc_14d_N4096} show such tendency for 
+jump between different levels. Figures \ref{fig:osc_12d_N4096} and \ref{fig:osc_14d_N4096} show such tendency for 
 $\ell$ = 12 and $\ell$ = 14. Very good oscillations with tiny amplitude were observed in temporarily stable states 
 in these cases. Figure \ref{oscillation_14d_N4096} shows magnified scale oscillations for $\ell \;=\; 14$ 
-when high surge is omitted from plot of \ref{fig:osc_14d_N4096}. 
-It could be because as length of string increases, 
-number of fixed points also increases, and finite populations tend to stay near those fixed points. 
-But when population size is large, finite populations intend to follow infinite population, and infinite population tends to 
+when high peak is omitted from the plot of \ref{fig:osc_14d_N4096}. 
+As string length increases, the number of fixed points also increases, 
+and finite populations tend to stay near fixed points. With many fixed points available, 
+there are several regions for finite populations to prefer. 
+But when population size is large, finite populations intend to follow the infinite population, 
+and infinite population tends to 
 converge to a single fixed point or oscillate between two fixed points, and thus, 
 larger populations have lower tendency to jump between different levels.
 

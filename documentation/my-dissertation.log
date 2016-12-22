@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  15 DEC 2016 11:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  21 DEC 2016 12:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1074,21 +1074,21 @@ Chapter 4.
 
 
 
-] [53] [54]
+] [53]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 89.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\epsilon' on input line 89.
+(hyperref)                removing `math shift' on input line 86.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 89.
+(hyperref)                removing `\epsilon' on input line 86.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 86.
 
 Package srcltx Info: Expanded filename `chapters/vio-mu-hap-e0.01.tex' to `chap
-ters/vio-mu-hap-e0.01.tex' on input line 90.
+ters/vio-mu-hap-e0.01.tex' on input line 87.
 :<+ chapters/vio-mu-hap-e0.01.tex
 (./chapters/vio-mu-hap-e0.01.tex
 File: figures/eps/vio/mu/b8/e0.01/n00004096_fin_hap.eps Graphic file (type eps)
@@ -1232,24 +1232,24 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 134.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[55] [56] [57] [58] [59] [60
+[54] [55] [56] [57] [58] [59
 
 ])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 91.
+(hyperref)                removing `math shift' on input line 88.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\epsilon' on input line 91.
+(hyperref)                removing `\epsilon' on input line 88.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 91.
+(hyperref)                removing `math shift' on input line 88.
 
 Package srcltx Info: Expanded filename `chapters/vio-mu-hap-e0.1.tex' to `chapt
-ers/vio-mu-hap-e0.1.tex' on input line 92.
+ers/vio-mu-hap-e0.1.tex' on input line 89.
 :<+ chapters/vio-mu-hap-e0.1.tex
 (./chapters/vio-mu-hap-e0.1.tex
 File: figures/eps/vio/mu/b8/e0.1/n00004096_fin_hap.eps Graphic file (type eps)
@@ -1390,25 +1390,25 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 143.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[61] [62] [63] [64] [65])
+[60] [61] [62] [63] [64])
 :<-
-[66
+[65
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 93.
+(hyperref)                removing `math shift' on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\epsilon' on input line 93.
+(hyperref)                removing `\epsilon' on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 93.
+(hyperref)                removing `math shift' on input line 90.
 
 Package srcltx Info: Expanded filename `chapters/vio-mu-hap-e0.5.tex' to `chapt
-ers/vio-mu-hap-e0.5.tex' on input line 94.
+ers/vio-mu-hap-e0.5.tex' on input line 91.
 :<+ chapters/vio-mu-hap-e0.5.tex
 (./chapters/vio-mu-hap-e0.5.tex
 File: figures/eps/vio/mu/b8/e0.5/n00004096_fin_hap.eps Graphic file (type eps)
@@ -1549,22 +1549,22 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 142.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[67] [68] [69] [70] [71])
+[66] [67] [68] [69] [70])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 96.
+(hyperref)                removing `math shift' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\epsilon' on input line 96.
+(hyperref)                removing `\epsilon' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 96.
+(hyperref)                removing `math shift' on input line 93.
 
 Package srcltx Info: Expanded filename `chapters/vio-mu-dip-e0.01.tex' to `chap
-ters/vio-mu-dip-e0.01.tex' on input line 97.
+ters/vio-mu-dip-e0.01.tex' on input line 94.
 :<+ chapters/vio-mu-dip-e0.01.tex
 (./chapters/vio-mu-dip-e0.01.tex
 File: figures/eps/vio/mu/b8/e0.01/n00004096_fin_dip.eps Graphic file (type eps)
@@ -1600,7 +1600,7 @@ File: figures/eps/vio/mu/b8/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: Float too large for page by 42.11111pt on input line 36.
 
-[72
+[71
 
 ]
 
@@ -1711,25 +1711,25 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 147.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[73] [74] [75] [76] [77])
+[72] [73] [74] [75] [76])
 :<-
-[78
+[77
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 98.
+(hyperref)                removing `math shift' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\epsilon' on input line 98.
+(hyperref)                removing `\epsilon' on input line 95.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 98.
+(hyperref)                removing `math shift' on input line 95.
 
 Package srcltx Info: Expanded filename `chapters/vio-mu-dip-e0.1.tex' to `chapt
-ers/vio-mu-dip-e0.1.tex' on input line 99.
+ers/vio-mu-dip-e0.1.tex' on input line 96.
 :<+ chapters/vio-mu-dip-e0.1.tex
 (./chapters/vio-mu-dip-e0.1.tex
 File: figures/eps/vio/mu/b8/e0.1/n00004096_fin_dip.eps Graphic file (type eps)
@@ -1870,24 +1870,24 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 146.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[79] [80] [81] [82] [83] [84
+[78] [79] [80] [81] [82] [83
 
 ])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 100.
+(hyperref)                removing `math shift' on input line 97.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\epsilon' on input line 100.
+(hyperref)                removing `\epsilon' on input line 97.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 100.
+(hyperref)                removing `math shift' on input line 97.
 
 Package srcltx Info: Expanded filename `chapters/vio-mu-dip-e0.5.tex' to `chapt
-ers/vio-mu-dip-e0.5.tex' on input line 101.
+ers/vio-mu-dip-e0.5.tex' on input line 98.
 :<+ chapters/vio-mu-dip-e0.5.tex
 (./chapters/vio-mu-dip-e0.5.tex
 File: figures/eps/vio/mu/b8/e0.5/n00004096_fin_dip.eps Graphic file (type eps)
@@ -2028,25 +2028,25 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 147.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[85] [86] [87] [88] [89])
+[84] [85] [86] [87] [88])
 :<-
-[90
+[89
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 132.
+(hyperref)                removing `math shift' on input line 129.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\epsilon' on input line 132.
+(hyperref)                removing `\epsilon' on input line 129.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 132.
+(hyperref)                removing `math shift' on input line 129.
 
 Package srcltx Info: Expanded filename `chapters/vio-chi-hap-e0.01.tex' to `cha
-pters/vio-chi-hap-e0.01.tex' on input line 133.
+pters/vio-chi-hap-e0.01.tex' on input line 130.
 :<+ chapters/vio-chi-hap-e0.01.tex
 (./chapters/vio-chi-hap-e0.01.tex
 File: figures/eps/vio/chi/b8/e0.01/n00004096_fin_hap.eps Graphic file (type eps
@@ -2190,25 +2190,25 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 143.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[91] [92] [93] [94] [95])
+[90] [91] [92] [93] [94])
 :<-
-[96
+[95
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 134.
+(hyperref)                removing `math shift' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\epsilon' on input line 134.
+(hyperref)                removing `\epsilon' on input line 131.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 134.
+(hyperref)                removing `math shift' on input line 131.
 
 Package srcltx Info: Expanded filename `chapters/vio-chi-hap-e0.1.tex' to `chap
-ters/vio-chi-hap-e0.1.tex' on input line 135.
+ters/vio-chi-hap-e0.1.tex' on input line 132.
 :<+ chapters/vio-chi-hap-e0.1.tex
 (./chapters/vio-chi-hap-e0.1.tex
 File: figures/eps/vio/chi/b8/e0.1/n00004096_fin_hap.eps Graphic file (type eps)
@@ -2352,24 +2352,24 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 142.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[97] [98] [99] [100] [101] [102
+[96] [97] [98] [99] [100] [101
 
 ])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 136.
+(hyperref)                removing `math shift' on input line 133.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\epsilon' on input line 136.
+(hyperref)                removing `\epsilon' on input line 133.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 136.
+(hyperref)                removing `math shift' on input line 133.
 
 Package srcltx Info: Expanded filename `chapters/vio-chi-hap-e0.5.tex' to `chap
-ters/vio-chi-hap-e0.5.tex' on input line 137.
+ters/vio-chi-hap-e0.5.tex' on input line 134.
 :<+ chapters/vio-chi-hap-e0.5.tex
 (./chapters/vio-chi-hap-e0.5.tex
 File: figures/eps/vio/chi/b8/e0.5/n00004096_fin_hap.eps Graphic file (type eps)
@@ -2513,22 +2513,22 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 142.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[103] [104] [105] [106] [107])
+[102] [103] [104] [105] [106])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 139.
+(hyperref)                removing `math shift' on input line 136.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\epsilon' on input line 139.
+(hyperref)                removing `\epsilon' on input line 136.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 139.
+(hyperref)                removing `math shift' on input line 136.
 
 Package srcltx Info: Expanded filename `chapters/vio-chi-dip-e0.01.tex' to `cha
-pters/vio-chi-dip-e0.01.tex' on input line 140.
+pters/vio-chi-dip-e0.01.tex' on input line 137.
 :<+ chapters/vio-chi-dip-e0.01.tex
 (./chapters/vio-chi-dip-e0.01.tex
 File: figures/eps/vio/chi/b8/e0.01/n00004096_fin_dip.eps Graphic file (type eps
@@ -2564,9 +2564,6 @@ File: figures/eps/vio/chi/b8/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: Float too large for page by 42.11111pt on input line 35.
 
-[108
-
-]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2675,24 +2672,27 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 146.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[109] [110] [111] [112] [113] [114
+[107
 
-])
+] [108] [109] [110] [111])
 :<-
+[112
+
+]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 141.
+(hyperref)                removing `math shift' on input line 138.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\epsilon' on input line 141.
+(hyperref)                removing `\epsilon' on input line 138.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 141.
+(hyperref)                removing `math shift' on input line 138.
 
 Package srcltx Info: Expanded filename `chapters/vio-chi-dip-e0.1.tex' to `chap
-ters/vio-chi-dip-e0.1.tex' on input line 142.
+ters/vio-chi-dip-e0.1.tex' on input line 139.
 :<+ chapters/vio-chi-dip-e0.1.tex
 (./chapters/vio-chi-dip-e0.1.tex
 File: figures/eps/vio/chi/b8/e0.1/n00004096_fin_dip.eps Graphic file (type eps)
@@ -2836,24 +2836,24 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 146.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[115] [116] [117] [118] [119] [120
+[113] [114] [115] [116] [117] [118
 
 ])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 143.
+(hyperref)                removing `math shift' on input line 140.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\epsilon' on input line 143.
+(hyperref)                removing `\epsilon' on input line 140.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 143.
+(hyperref)                removing `math shift' on input line 140.
 
 Package srcltx Info: Expanded filename `chapters/vio-chi-dip-e0.5.tex' to `chap
-ters/vio-chi-dip-e0.5.tex' on input line 144.
+ters/vio-chi-dip-e0.5.tex' on input line 141.
 :<+ chapters/vio-chi-dip-e0.5.tex
 (./chapters/vio-chi-dip-e0.5.tex
 File: figures/eps/vio/chi/b8/e0.5/n00004096_fin_dip.eps Graphic file (type eps)
@@ -2997,34 +2997,34 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 146.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[121] [122] [123] [124] [125])
+[119] [120] [121] [122] [123])
 :<-
-[126
+[124
 
-]) [127]
+]) [125]
 :<-
 :<+ chapters/chapter-5.tex
 \openout2 = `chapters/chapter-5.aux'.
 
 (./chapters/chapter-5.tex
 Chapter 5.
-) [128
+) [126
 
 
 
 
-] [129]
+] [127]
 :<-
 :<+ my-dissertation.bbl
 (./my-dissertation.bbl (./my-dissertation.brf)
 \tf@brf=\write8
 \openout8 = `my-dissertation.brf'.
 
- [130
+ [128
 
 
 
-] [131
+] [129
 
 ]
 Underfull \hbox (badness 1946) in paragraph at lines 71--71
@@ -3034,7 +3034,7 @@ Underfull \hbox (badness 1946) in paragraph at lines 71--71
 
 )
 :<-
-[132] [133]
+[130] [131]
 :<+ back-matter/appendix-1.tex
 \openout2 = `back-matter/appendix-1.aux'.
 
@@ -3043,7 +3043,7 @@ Underfull \hbox (badness 1946) in paragraph at lines 71--71
 :<+ back-matter/vita.tex
 \openout2 = `back-matter/vita.aux'.
 
-(./back-matter/vita.tex) [134
+(./back-matter/vita.tex) [132
 
 
 
@@ -3077,10 +3077,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
 Here is how much of TeX's memory you used:
  10361 strings out of 495029
  172546 string characters out of 6181522
- 289386 words of memory out of 5000000
+ 295188 words of memory out of 5000000
  13182 multiletter control sequences out of 15000+600000
  21504 words of font info for 82 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 39i,16n,53p,607b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,16n,53p,633b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (163 pages, 719260 bytes).
+Output written on my-dissertation.dvi (161 pages, 719964 bytes).

@@ -15,7 +15,7 @@ computed using same procedure as described in section \ref{InitPopOsc}. To explo
 of violation of condition \ref{OscCond} in $\bm{\mu}$ and $\bm{\chi}$, different values of $\bm{\epsilon}$ are used in experiments. 
 String length $\ell \;\in\; \{8, 10, 12, 14\}$ are considered for simulation.
 Going forward, we use `limit $\bm{z}^\ast$' to denote evolutionary limit when mutation distribution $\bm{\mu}$ or crossover distribution 
-$\bm{\chi}$ violates condition \ref{OscCond} violated, and 
+$\bm{\chi}$ violates condition \ref{OscCond}, and 
 `non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$' to denote limits without violation.
 
 \section{Violation in Mutation Distribution}
@@ -23,7 +23,7 @@ The mutation distribution $\bm{\mu}$ is modified as follows
 \[
 \bm{\mu}_i = (1-\bm{\epsilon}) \bm{\mu}_i \nudge; \tabspace i = \{0, 1, 2,.., 2^{\ell}-1\}.
 \]
-Thus the sum of $\bm{\mu}$ distribution becomes, 
+Thus summing components of $\bm{\mu}$ distribution yields, 
 \[
 1-\bm{\epsilon} = \sum \limits_{i=0}^{2^{\ell}-1} \bm{\mu}_i
 \]
@@ -38,19 +38,18 @@ Then set
 % \[
 % \bm{\mu}_i = \bm{\epsilon}^2/c \; ; \; where \; \bm{\mu}_i = 0
 % \]
-The mutation distribution $\bm{\mu}$ is normalized such that  $\sum \bm{\mu}_i \;=\; 1$.
-This modification makes it possible for any population member to mutate to any other population member via mutation 
-provided there is non crossover. From equation \ref{ChiDist}, $k \bar{g} \;=\; k$ is true for any $g$ when $k$ is all $0$s, 
-and so we have positive non crossover probability present in all conditions. 
-
+The modified mutation distribution $\bm{\mu}$ is normalized such that  $\sum \bm{\mu}_i \;=\; 1$.
+The modification described above makes it possible for any population member to mutate to any other population member.
+% provided there is non crossover. From equation \ref{ChiDist}, $k \bar{g} \;=\; k$ is true for any $g$ when $k$ is all $0$s, 
+% and so we have positive non crossover probability present in all conditions. 
 Let us exlore for two cases of $g$ in \ref{OscCond}:
 
 1. When $g$ is all $1$s:\newline
-Any mask $j$ with a $1$ at position $k$ ($0 \leq k < \ell$) and $0$ at all other positions can mutate the $k$th bit, and since the 
+Any mask with a $1$ at position $k$ ($0 \leq k < \ell$) and $0$ at all other positions can mutate the $k$th bit, and since the 
 all $0$s mask has positive probability, strings have an option to not mutate. This makes possibile for any string to mutate to 
-any possible string. Let us take an example with $\ell \;=\; 8$. Let $g \;=\; 11111111$. Then, mask 
+any other string. Let us take an example with $\ell \;=\; 8$. Let $g \;=\; 11111111$. Then, mask 
 $i \;=\; 00000100$ will have positive probability according to condition \ref{OscCond}. 
-Mask $i$ can be used to mutate the sixthbit of a population member. More generally, 
+Mask $i$ can be used to mutate the sixth bit of a population member. More generally, 
 any bit has the option of mutating or not, so any string can mutate to any other.
 
 2. When $g$ has atleast one $0$:\newline
@@ -64,24 +63,22 @@ the fourth bit. More generally, any bit has the option of mutating or not, so an
 mutate to any other population (this may involve many generations because there are many population members which may need to be mutated), the Markov 
 chain is irreducible.
 
-The Markov chain is also aperiodic. We prove this by simple induction on population $P$. 
-Let $S(n)$ be function that $P$ has probability to come back to $P$ in $n$ generation, 
-and $S(n) \;=\; 1$ if the probability is positive. 
-Our base case is that population $P$ can come back to its state $P$ in one generation. 
-Population $P$ can stay in its original state $P$ if no mutation events occur. 
-Population $P$ has option not to mutate any other population, since all $0$s mutation mask 
-has positive probability. So $S(n) \;=\; 1$ is true when $n \;=\; 1$. Now, let us assume it is true for any $k$ so that $S(k) \;=\; 1$, 
-and prove that it is true also for $S(k+1)$. Since $S(k) \;=\; 1$, population $P$ can come back to population $P$ in $n \;= \;k$ generations. 
-In $k+1$th generation, population $P$ has option to not to mutate to any other population, and stay in state $P$. So, if $S(n) \;=\; 1$ for 
-$n \;=\; k$, then it is also true for $n \;=\; k+1$. And since our base case for $n \;=\; 1$, $S(n) \;=\; 1$ is true, 
-$S(n) \;=\; 1$ is true for $n \;=\; 2, 3, $ and so on. 
+The Markov chain is also aperiodic. We prove this by simple induction. 
+Let $S(n)$ be the assertion that population $P$ can be returned to in $n$ generations. 
+Our base case is $n \;=\; 1$. The GA can stay in its original state $P$ if no mutation or crossover events occur. 
+Population $P$ has option to not mutate to any other population, since all $0$s mutation mask 
+has positive probability. Moreover, the all $0$s crossover mask can have positive probability since 
+that is compatible with condition \ref{OscCond}.
+So $S(n)$ is true. Now, assume $S(k)$ is true. Therefore, population $P$ can be returned to in $n \;= \;k$ generations. 
+In the $k+1$th generation, population $P$ has the option to stay in state $P$. 
+So $S(K+1)$ is also true and that completes the inductive proof. 
 Since any population state can be returned to in any period of time, the Markov chain is aperiodic. 
 
-Since the Markov chain formed by GA is irreducible and aperiodic, 
-the Markov chain is ergodic (see \cite{MarkovChain}). Because of ergodic Markov chain, 
-steady state distribution with positive value components exists for the GA.   
+Because the Markov chain formed by GA is irreducible and aperiodic, 
+the Markov chain is ergodic (see \cite{MarkovChain}), and a steady state distribution 
+with positive components exists for the GA.   
 
-Simulations were repeated with the violations in (\ref{OscCond}) described above for mutation distribution.
+Simulations were repeated with the violations in (\ref{OscCond}) described above for the mutation distribution.
 The distances of both infinite and finite populations to limit $\bm{z}^\ast$ were plotted. 
 The distances of both infinite and finite populations to non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$ were also plotted.
 

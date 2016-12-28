@@ -151,15 +151,15 @@ Both finite and infinite populations oscillate given violation. Since the value 
 is small, damping of ripples is slow. New masks created in crossover distribution with $\bm{\epsilon} \;=\; 0.01$ have small 
 probability of being used during crossover and when they are not used, behavior should be consistent with 
 the behavior without violation in the distribution. Moreover, $\bm{\epsilon} \;=\; 0.01$ is so small that 
-infinite population oscillation does not die out completely in 50 generations. 
+infinite population oscillation does not die out in 50 generations. 
 
 The left column of figures \ref{oscillation_8h_vio_chi_0.01} through \ref{oscillation_14h_vio_chi_0.01} 
 shows distance of finite and infinite haploid populations to limit $\bm{z^\ast}$ 
 (limit with violation in crossover distribution $\bm{\chi}$) when $\bm{\epsilon} \;=\; 0.01$. 
 The distance between finite population and limit $\bm{z}^\ast$ (limit with violation in $\bm{\chi}$ distribution) 
 decreases as finite population size increases, 
-and finite population shows behavior similar to infinite population behavior as finite population reach large number. 
-The distance data for haploid population in case of violation in $\bm{\chi}$ distribution 
+and finite population shows behavior similar to infinite population behavior as finite population size grows. 
+Average distance data for haploid population in case of violation in $\bm{\chi}$ distribution 
 with $\bm{\epsilon} \;=\; 0.01$ for different finite population size $N$ are tabulated in table \ref{distanceChiHapEps0.01}.
 
 \begin{table}[ht]
@@ -181,9 +181,8 @@ $1/\sqrt{N}$ & 0.0156 & 0.0049 & 0.0035 \\
 \label{distanceChiHapEps0.01}
 \end{table} 
 
-From table \ref{distanceChiHapEps0.01}, average distance calculated for finite population size $4096$ is $0.0164$, 
-for size $40960$ is $0.0079$ and for size $81920$ is $0.0062$. These results show average distance 
-between finite population and limit $\bm{z^\ast}$ closely follows expected single step distance 
+The results from Table \ref{distanceChiHapEps0.01} show average distance 
+between finite population and limit $\bm{z^\ast}$ approaches the expected single step distance 
 between finite and infinite population. The distance decreased as $1/\sqrt{N}$. 
 Also, the distance decreased as genome length $\ell$ increased for all sizes of finite haploid populations 
 with $\bm{\epsilon} \;=\; 0.01$.

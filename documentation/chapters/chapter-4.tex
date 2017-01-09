@@ -139,6 +139,8 @@ The distances of both infinite and finite populations to non-violation limits $\
 \subsection{Diploid Population $\mathtt{\sim}$ $\epsilon: 0.5$}
 \input{chapters/vio-chi-dip-e0.5.tex}
 
+\section{Discussion}
+
 As value of $\ell$ increases, amplitude of oscillation decreases. 
 Populations with larger population size, show better oscillations. 
 Diploid populations need larger population size than haploid populations to observe good oscillations. 
@@ -157,7 +159,41 @@ and \ref{oscillation_10d_vio_chi_0.01}.
 For $\ell = 10$, random wiggles are 
 noticeable for larger population also when $\bm{\epsilon}$ value is increased to $0.5$ (see figure \ref{oscillation_10d_vio_chi_0.5}).
 
+\begin{figure}[h]
+\begin{center}
+\subfloat{
+\resizebox{16cm}{10cm}{\includegraphics{figures/eps/vio/dist_mu.eps}}}\hspace{-3em}%
+\caption{\textbf{Distance of finite population to infinite population in case of violation in $\bm{\mu}$:  
+  $d$ is distance; $N$ is finite population size; $\bm{\epsilon}$ is level of violation;
+  red line represents distance for $\ell = 8$, green line for $\ell = 10$, blue line for $\ell = 12$, pink line for $\ell = 14$ 
+  and black dotted line for expected single step distance.}}
+\label{vio_mu_dist}
+\end{center}
+\end{figure}
+\begin{figure}[h]
+\begin{center}
+\subfloat{
+\resizebox{16cm}{10cm}{\includegraphics{figures/eps/vio/dist_chi.eps}}}\hspace{-3em}%
+\caption{\textbf{Distance of finite population to infinite population in case of violation in $\bm{\chi}$:  
+  $d$ is distance; $N$ is finite population size; $\bm{\epsilon}$ is level of violation; 
+  red line represents distance for $\ell = 8$, green line for $\ell = 10$, blue line for $\ell = 12$, pink line for $\ell = 14$ 
+  and black dotted line for expected single step distance.}}
+\label{vio_chi_dist}
+\end{center}
+\end{figure}
 
+Figures \ref{vio_mu_dist} and \ref{vio_chi_dist} summarizes the distance data from tables \ref{distanceMuHapEps0.01} $\cdots$ 
+\ref{distanceChiDipEps0.5}. Distance of infinite population from finite population of 
+three finite population sizes {4096, 40960, 81920} are plotted for different $\ell$. 
+Plots for different violation levels $\bm{\epsilon}$ are arranged in columns. 
+Plots for haploid and diploid populations are arranged in two rows. With increase in $\ell$, 
+distance moves closer to the single step distance. So, since diploid population 
+string length is twice of haploid population, 
+distance in diploid case moves closer to the single step distance than in haploid case. 
+It is also noticable in haploid population case that as $\bm{\epsilon}$ increases, 
+the distance moves closer to the single step distance.
+
+\clearpage
 \section{Summary}
 In this chapter, we violated the condition \ref{OscCond} through violation in mutation and crossover distribution, and 
 studied infinite and finite populations oscillation behavior with the violation through experiments. 

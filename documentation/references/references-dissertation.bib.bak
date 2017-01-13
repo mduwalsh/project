@@ -2,18 +2,6 @@
 % Encoding: Cp1252
 
 
-@Misc{MarkovChain,
-  Title                    = {Markov Chain},
-
-  Author                   = {Wikipedia contributors},
-  Month                    = {11},
-  Year                     = {2016},
-
-  Owner                    = {mahendra},
-  Timestamp                = {2016.11.11},
-  Url                      = {https://en.wikipedia.org/wiki/Markov_chain}
-}
-
 @Book{Beauchamp1975,
   Title                    = {Walsh functions and their applications},
   Author                   = {KG Beauchamp},
@@ -105,6 +93,16 @@
 
   Owner                    = {mahendra},
   Timestamp                = {2016.10.18}
+}
+
+@Book{Haggstrom2002,
+  Title                    = {Finite Markov Chains and Algorithmic Applications},
+  Author                   = {Olle Häggström},
+  Publisher                = {Cambridge University Press},
+  Year                     = {2002},
+
+  Owner                    = {mahendra},
+  Timestamp                = {2017.01.12}
 }
 
 @Article{Hardy1908,
@@ -293,5 +291,17 @@
   Owner                    = {mahendra},
   Timestamp                = {2016.09.26},
   Url                      = {https://en.wikipedia.org/w/index.php?title=Jensen%27s_inequality&oldid=738863949}
+}
+
+@Misc{MarkovChain,
+  Title                    = {Markov Chain},
+
+  Author                   = {Wikipedia, Contributors},
+  Month                    = {11},
+  Year                     = {2016},
+
+  Owner                    = {mahendra},
+  Timestamp                = {2016.11.11},
+  Url                      = {https://en.wikipedia.org/wiki/Markov_chain}
 }
 

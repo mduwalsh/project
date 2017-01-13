@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  9 JAN 2017 11:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.9.2)  9 JAN 2017 22:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1035,12 +1035,9 @@ File: figures/eps/osc/osc_amp_hap.eps Graphic file (type eps)
 <figures/eps/osc/osc_amp_hap.eps>
 File: figures/eps/osc/osc_amp_dip.eps Graphic file (type eps)
  <figures/eps/osc/osc_amp_dip.eps>
-Overfull \hbox (1.01158pt too wide) in paragraph at lines 327--330
+Overfull \hbox (1.01158pt too wide) in paragraph at lines 328--331
  [][][][][] 
  []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 [48
 
@@ -1052,7 +1049,7 @@ File: figures/eps/osc/b14/b14_n004096_osc_fin_dip_lvl.eps Graphic file (type ep
 s)
 
 <figures/eps/osc/b14/b14_n004096_osc_fin_dip_lvl.eps>
-Overfull \hbox (1.01338pt too wide) in paragraph at lines 346--349
+Overfull \hbox (1.01338pt too wide) in paragraph at lines 347--350
  [][][][][] 
  []
 
@@ -1062,7 +1059,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [49]
 File: figures/eps/osc/b14/b14_n004096_osc_fin_dip_10_50.eps Graphic file (type 
 eps)
- <figures/eps/osc/b14/b14_n004096_osc_fin_dip_10_50.eps> [50]) [51]
+ <figures/eps/osc/b14/b14_n004096_osc_fin_dip_10_50.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[50]) [51]
 :<-
 :<+ chapters/chapter-4.tex
 \openout2 = `chapters/chapter-4.aux'.
@@ -3148,7 +3149,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ]
 File: figures/eps/vio/dist_mu.eps Graphic file (type eps)
  <figures/eps/vio/dist_mu.eps>
-Overfull \hbox (25.54599pt too wide) in paragraph at lines 171--175
+Overfull \hbox (25.54599pt too wide) in paragraph at lines 175--179
  [] 
  []
 
@@ -3157,7 +3158,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: figures/eps/vio/dist_chi.eps Graphic file (type eps)
 <figures/eps/vio/dist_chi.eps>
-Overfull \hbox (25.54599pt too wide) in paragraph at lines 182--186
+Overfull \hbox (25.54599pt too wide) in paragraph at lines 186--190
  [] 
  []
 
@@ -3230,7 +3231,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 142.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: 15C2CCC0759FC91FF7DEE40AC2E1ABBF;3719.
+(rerunfilecheck)             Checksum: 128EB9CE11B0EE4AB46EE963EB9E758C;3780.
 Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
 (rerunfilecheck)             Checksum: EAE14E105174F5E29AB45AE694B6D57A;2632.
 
@@ -3240,12 +3241,12 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
  ) 
 Here is how much of TeX's memory you used:
- 10376 strings out of 495029
- 172761 string characters out of 6181522
+ 10377 strings out of 495029
+ 172774 string characters out of 6181524
  295771 words of memory out of 5000000
- 13192 multiletter control sequences out of 15000+600000
+ 13193 multiletter control sequences out of 15000+600000
  22513 words of font info for 88 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  39i,16n,53p,633b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (163 pages, 728160 bytes).
+Output written on my-dissertation.dvi (163 pages, 729600 bytes).

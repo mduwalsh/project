@@ -24,7 +24,8 @@
 \contentsline {section}{\numberline {3.4}Oscillation}{34}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Haploid Population}{36}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Diploid Population}{43}{subsection.3.4.2}
-\contentsline {section}{\numberline {3.5}Summary}{51}{section.3.5}
+\contentsline {section}{\numberline {3.5}Discussion}{48}{section.3.5}
+\contentsline {section}{\numberline {3.6}Summary}{50}{section.3.6}
 \contentsline {chapter}{\numberline {4}Violation}{52}{chapter.4}
 \contentsline {section}{\numberline {4.1}Violation in Mutation Distribution}{53}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Haploid Population $\mathtt {\sim }$ $\epsilon : 0.01$}{54}{subsection.4.1.1}

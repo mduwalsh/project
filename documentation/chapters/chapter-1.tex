@@ -335,7 +335,7 @@ and let $\bm{P}_j$ denote the $j$th population represented by the $j$th lattice 
 Let $\bm{\pi}^k$ be the probability vector having as $j$th component 
 the probability that $\bm{P}_j$ is the $k$th generation. 
 If $\bm{\pi}^0$ is the initial population distribution, 
-the steady state distribution $\bm{\pi}$ is given by (see \cite{MarkovChain})
+the steady state distribution $\bm{\pi}$ is given by (see \cite{Haggstrom2002})
 \begin{equation}
 \label{SteadyState}
 \bm{\pi} \;=\; \lim_{k \to \infty} \bm{\pi}^k \;=\; \lim_{k \to \infty} \bm{\pi}^0 Q^k
@@ -346,7 +346,7 @@ If transition matrix $Q$ is irreducible\footnote{A Markov chain is said to be
 {\em irreducible} if it is possible to get to any state from any state.} 
 and aperiodic\footnote{A Markov chain is {\em aperiodic} if it can return to 
 state $i$ at irregular times.}, then the Markov chain is 
-ergodic, the steady state distribution $\bm{\pi}$ exists, and it has positive components 
+regular (see \cite{Iosifescu1980}), the steady state distribution $\bm{\pi}$ exists, and it has positive components 
 (see \cite{Minc1988}). 
 The solution to equation \ref{SteadyState} satisfies
 \begin{equation}
@@ -358,8 +358,8 @@ If GA were to perfectly oscillate between two populations $\bm{P}_i$ and $\bm{P}
 $\bm{\pi}^k_i \;=\; 1$ (other components are $0$) when $k$ is odd, 
 and $\bm{\pi}^k_j \;=\; 1$ (other components are $0$) when $k$ is even. 
 Therefore, perfect oscillation should not occur. In Chapter 4, we investigate oscillation behavior of 
-finite populations when the Markov chain is ergodic. The third research question concerns whether 
-finite population approximate oscillation is exhibited in practice when the Markov chain is ergodic.
+finite populations when the Markov chain is regular. The third research question concerns whether 
+finite population approximate oscillation is exhibited in practice when the Markov chain is regular.
 
 
 % Equation \ref{Jensen} bounds the expected rate of convergence for the single-step haploid case; 
@@ -381,32 +381,32 @@ finite population approximate oscillation is exhibited in practice when the Mark
 % to converge in to periodic orbits. We compute mutation distribution $\bm{\mu}$ and crossover distribution $\bm{\chi}$ 
 % satisfying those conditions. Then, we study short-term behavior of finite population with respect to the limits to observe if oscillation occurs.
 
-% If GA forms ergodic Markov chain visiting every population state infinitely often, then $\mathcal{G}$ is also called ergodic. 
+% If GA forms regular Markov chain visiting every population state infinitely often, then $\mathcal{G}$ is also called regular. 
 % Let $\bm{P}_j$ denote $j$th population state in population state vector $P$. Let $\bm{\pi}^k$ be the probability vector having $j$th component 
 % equal to the probability that $k$th generation population is $\bm{P}_j$. If $\bm{\pi}^0$ is initial distribution and $Q$ is transition matrix, the steady state distribution $\bm{\pi}$ is given by (see \cite{Nix1992})
 % \[
 % \lim_{k \to \infty} \bm{\pi}^k \;=\; \bm{\pi}^0 Q^k \;=\; \text{solution to the equation } "\bm{\pi} \; = \; \bm{\pi} Q" 
 % \]
 % where $j$th component can be interpreted as relative proporiton of time that GA has a population corresponding tp $\bm{P}_j$. 
-% If the Markov chain is ergodic, then the steady state is independent of initial population. If GA were to converge to some population $\bm{P}_j$, 
+% If the Markov chain is regular, then the steady state is independent of initial population. If GA were to converge to some population $\bm{P}_j$, 
 % then $\bm{\pi}_j \;=\; 1$ and other components would be $0$. If GA were to oscillate between two populations $\bm{P}_i$ and $\bm{P}_j$, then 
 % $\bm{\pi}_i \;=\; 1$ and other components $0$ when $k$ = odd generation, and $\bm{\pi}_j \;=\; 1$ and other components $0$ when $k$ = even generation. 
-% But if GA forms ergodic Markov chain, this does not happen, instead finite population visits every population state infinitely often, and steady state 
+% But if GA forms regular Markov chain, this does not happen, instead finite population visits every population state infinitely often, and steady state 
 % distribution $\bm{\pi}$ converges to $\bm{\pi}^\ast$ as population size increases to infinity ( see \cite{Nix1992}) where 
 % \[
 % \bm{\pi}^\ast \;=\; \lim_{r \to \infty} \bm{\pi}.
 % \]
 % So, in chapter three, we further investigate what happens to finite populations 
-% if we violate the conditions necessary for population to oscillate, and making GA ergodic.
+% if we violate the conditions necessary for population to oscillate, and making GA regular.
 
-% If GA forms irreducible and aperiodic Markov chain, then the chain is ergodic (see \cite{MarkovChain}). 
-% For ergodic Markov chain, 
+% If GA forms irreducible and aperiodic Markov chain, then the chain is regular (see \cite{MarkovChain}). 
+% For regular Markov chain, 
 % the steady state exists (it need not exist in general).  Hence, steady state distribution $\bm{\pi}$ 
-% for ergodic Markov chain converges to some vector with positive values in its component, meaning oscillation 
-% does not occur in GA if Markov chain is ergodic. In second part of Chapter 3, we further investigate 
-% if finite populations approximately oscillate or not if ergodic Markov chain is formed. To study this, 
+% for regular Markov chain converges to some vector with positive values in its component, meaning oscillation 
+% does not occur in GA if Markov chain is regular. In second part of Chapter 3, we further investigate 
+% if finite populations approximately oscillate or not if regular Markov chain is formed. To study this, 
 % we make some modifications in $\bm{\mu}$ and $\bm{\chi}$ distributions to  violate the conditions 
-% necessary for population to oscillate such that GA will form ergodic Markov chain, and we observe finite 
+% necessary for population to oscillate such that GA will form regular Markov chain, and we observe finite 
 % population short term behavior with this violation.
 
 % \section{Overview}

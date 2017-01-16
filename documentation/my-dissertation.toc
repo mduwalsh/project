@@ -35,14 +35,14 @@
 \contentsline {subsection}{\numberline {4.1.5}Diploid Population $\mathtt {\sim }$ $\epsilon : 0.1$}{77}{subsection.4.1.5}
 \contentsline {subsection}{\numberline {4.1.6}Diploid Population $\mathtt {\sim }$ $\epsilon : 0.5$}{83}{subsection.4.1.6}
 \contentsline {section}{\numberline {4.2}Violation in Crossover Distribution}{89}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Haploid Population $\mathtt {\sim }$ $\epsilon : 0.01$}{89}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Haploid Population $\mathtt {\sim }$ $\epsilon : 0.1$}{95}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Haploid Population $\mathtt {\sim }$ $\epsilon : 0.5$}{101}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Diploid Population $\mathtt {\sim }$ $\epsilon : 0.01$}{106}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Diploid Population $\mathtt {\sim }$ $\epsilon : 0.1$}{112}{subsection.4.2.5}
-\contentsline {subsection}{\numberline {4.2.6}Diploid Population $\mathtt {\sim }$ $\epsilon : 0.5$}{118}{subsection.4.2.6}
-\contentsline {section}{\numberline {4.3}Discussion}{124}{section.4.3}
-\contentsline {section}{\numberline {4.4}Summary}{127}{section.4.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{128}{chapter.5}
-\contentsline {chapter}{Bibliography}{130}{section*.96}
-\contentsline {chapter}{Vita}{134}{section*.98}
+\contentsline {subsection}{\numberline {4.2.1}Haploid Population $\mathtt {\sim }$ $\epsilon : 0.01$}{90}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Haploid Population $\mathtt {\sim }$ $\epsilon : 0.1$}{96}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Haploid Population $\mathtt {\sim }$ $\epsilon : 0.5$}{102}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Diploid Population $\mathtt {\sim }$ $\epsilon : 0.01$}{107}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Diploid Population $\mathtt {\sim }$ $\epsilon : 0.1$}{113}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}Diploid Population $\mathtt {\sim }$ $\epsilon : 0.5$}{119}{subsection.4.2.6}
+\contentsline {section}{\numberline {4.3}Discussion}{125}{section.4.3}
+\contentsline {section}{\numberline {4.4}Summary}{128}{section.4.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{129}{chapter.5}
+\contentsline {chapter}{Bibliography}{131}{section*.96}
+\contentsline {chapter}{Vita}{136}{section*.98}

@@ -42,6 +42,11 @@ Goldberg, D.~E. (1989b).
   analysis.
 \newblock {\em Complex systems}, 3(153--171).
 
+\bibitem[H{\"a}ggstr{\"o}m, 2002]{Haggstrom2002}
+H{\"a}ggstr{\"o}m, O. (2002).
+\newblock {\em Finite Markov Chains and Algorithmic Applications}.
+\newblock Cambridge University Press.
+
 \bibitem[Hardy, 1908]{Hardy1908}
 Hardy, G.~H. (1908).
 \newblock Mendelian proportions in a mixed population.
@@ -51,6 +56,11 @@ Hardy, G.~H. (1908).
 Holland, J.~H. (1992).
 \newblock {\em Adaptation in natural and artificial systems}.
 \newblock Cambridge : MIT Press.
+
+\bibitem[Iosifescu, 1980]{Iosifescu1980}
+Iosifescu, M. (1980).
+\newblock {\em Finite Markov Processes and Their Applications}.
+\newblock Dover Publications Inc, Mineola, New York.
 
 \bibitem[Koehler, 1994]{Koehler1994}
 Koehler, G.~J. (1994).
@@ -112,9 +122,5 @@ Wikipedia, C. (2016a).
 \bibitem[Wikipedia, 2016b]{JensenInequality}
 Wikipedia, C. (2016b).
 \newblock Jensen's inequality.
-
-\bibitem[Wikipedia, 2016c]{MarkovChain}
-Wikipedia, C. (2016c).
-\newblock Markov chain.
 
 \end{thebibliography}

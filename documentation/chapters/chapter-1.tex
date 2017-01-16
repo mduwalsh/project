@@ -87,14 +87,14 @@ the next generation, $\mathcal{G}(\bm{p})$ is a probability vector such that
 \]
 The evolution of infinite population $\bm{p}$ is the sequence
 \[ \bm{p} \to \mathcal{G}(\bm{p}) \to  {\mathcal{G}}(\mathcal{G}(\bm{p})) \to \cdots \]
-
+\setcounter{footnote}{2}
 Several people working in the 1950s and the 1960s -- like Box (1957), Friedman (1959),
 Bledsoe (1961), Bremermann (1962), and Reed, Toombs and Baricelli (1967) -- developed evolution-inspired algorithms, 
 but little attention or theoretical analysis was given to them (see \cite{Mitchell1999}). Genetic algorithms were popularized by Holland 
 and his colleagues in the 1960s and the 1970s. Holland introduced a population-based algorithm with crossover and mutation, 
 and promoted his schema theorem ( see \cite{Holland1975}) as a theoretical means to analyze on genetic algorithm dynamics. 
 Holland's Schema theorem provides a lower bound for schema survival in 
-next generation. \footnote{A schema is a template that identifies a set of strings in the population with similarities 
+next generation.\footnote{A schema is a template that identifies a set of strings in the population with similarities 
 at certain string positions; it is made up of $1$s, $0$s, and $\ast$s where 
 $\ast$ is the 'don't care' symbol that matches either $0$ or $1$.} The schema theorem is an inequality however, 
 and can not predict which strings are expected in the next generation. 
@@ -217,12 +217,12 @@ measures the {\em dispersion} of the population vector $\bm{q}$ and the second f
 indicates the probability that $\bm{q}$ is the next generation decays exponentially with increasing dispersion. 
 As Vose stated in his book (see \cite{Vose1999}):
 \begin{quote}
-"The combined effect of the two influences of discrepancy and dispersion is that random heuristic search favors a less disperse 
+The combined effect of the two influences of discrepancy and dispersion is that random heuristic search favors a less disperse 
 population near the expected next generation. In particular, if the current population is near the expected next generation, 
 then the first factor does not contribute a strong bias for change. When $\mathcal{G}(\bm{p})$ is nearly the initial population 
 $\bm{p}$, the influence of discrepancy favors $\bm{p}$ as the next generation since the alternatives, being lattice points, 
 are constrained to be some distance away from the expected next generation. This phenomenon is expressed quantitivelty by theorem $3.4$.
-Moreover, the second factor may exert a stabilizing effect provided the current population has low dispersion compared to the alternatives."
+Moreover, the second factor may exert a stabilizing effect provided the current population has low dispersion compared to the alternatives
 \end{quote}
 
 \begin{figure}[H]

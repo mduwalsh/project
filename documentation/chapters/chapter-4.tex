@@ -120,38 +120,57 @@ So that
 
 Then $j$ is chosen where $\bm{\chi}_j = 0$ and set $\bm{\chi}_j = \bm{\epsilon}$. 
 
-With the crossover distribution $\bm{\chi}$ described above, non-crossover mask (all 0s) has always positive probability. 
+Violation in crossover distribution $\bm{\chi}$ is different from violation in mutation distribution $\bm{\mu}$. 
+Markov chain formed by transition matrix $Q$ is regular under violation in $\bm{\mu}$ but that is not the case under violation in  $\bm{\chi}$. 
+Markov chain formed under violation in $\bm{\chi}$ may not be regular unless at least there are two $1$s in $g$.
+
+With $\bm{\chi}$ described above, non-crossover mask (all 0s) has always positive probability. 
 And since we do not modify the mutation distribution $\bm{\mu}$ satisfying condition \ref{OscCond}, 
 the non-mutation mask (all 0s) has always zero probability. 
 However, applying same mutation mask twice with non-crossover event, 
 we can achieve non mutation event in two generations. 
 
-Let us exlore for two cases of $g$ in \ref{OscCond}:
+% Let us exlore for two cases of $g$ in \ref{OscCond}:
+% 
+% 1. When $g$ is all $1$s:\newline
+% Any mask with a $1$ at position $k$ ($0 \leq k < \ell$) and $0$ at all other positions can mutate the $k$th bit of a string.  In next step, 
+% either the string can mutate its next bit or the string can simulate non-mutation event in two generations (mutate $j$th bit twice). 
+% This makes possibile for any string to mutate to 
+% any other string. And any string can maintain its bits in even number of generations after aquiring its state. 
+% 
+% 2. When $g$ has atleast one $0$:\newline
+% Any mask with a $1$ at position $k$ and $0$ at all other positions  
+% will have positive probability if $g$ also is $1$ at position $k$. 
+% Thus any bit where $g$ is $1$ can mutate.  
+% Any mask with $1$ in just one of the positions where $g$ has $1$s and 
+% also $1$ in just one of the positions where $g$ has $0$s can be used to 
+% mutate a bit where $g$ is $0$ using two masks in sequence. 
+% So any string can mutate to any other. 
+% Also any string requires two generations to simulate non-mutation event. 
 
-1. When $g$ is all $1$s:\newline
-Any mask with a $1$ at position $k$ ($0 \leq k < \ell$) and $0$ at all other positions can mutate the $k$th bit of a string.  In next step, 
-either the string can mutate its next bit or the string can simulate non-mutation event in two generations (mutate $k$th bit twice). 
-This makes possibile for any string to mutate to 
-any other string. And any string can maintain its bits in even number of generations after aquiring its state. 
-
-2. When $g$ has atleast one $0$:\newline
 Any mask with a $1$ at position $k$ and $0$ at all other positions  
 will have positive probability if $g$ also is $1$ at position $k$. 
-Thus any bit where $g$ is $1$ can mutate.  
+Thus any bit where $g$ is $1$ can mutate. 
+
+1. Mutate a bit in string where $g$ has $0$: 
 Any mask with $1$ in just one of the positions where $g$ has $1$s and 
 also $1$ in just one of the positions where $g$ has $0$s can be used to 
-mutate a bit where $g$ is $0$ using two masks in sequence. 
-So any string can mutate to any other. 
-Also any string requires two generations to simulate non-mutation event. 
+mutate a bit where $g$ is $0$ using these two masks in sequence in two steps. 
 
-So any population can therefore mutate to any other population, 
+2.
+Any bit in a string at position where $g$ 
+is $1$ can be mutated in two steps. 
+
+So any string can mutate to any other in even number of steps. 
+Also any string requires two generations to simulate non-mutation event.
+So any population can therefore mutate to any other population in even number of generations, 
 and that makes the Markov chain irreducible.
 
 In this research, experiment is designed to have finite population size as multiple of 2. 
 So, there is a special set of population $P_s$ which can mutate to itself, i.e. one string in 
 population can mutate to another string in population maintaining same population member strings within. 
 Since any population can mutate to any other population, let us assume finite population $P_i$ 
-can reach special population $P_s$ in $u$ generations. Population $P_s$ can stay in its state as long as its wants 
+can reach special population $P_s$ in $u$ (even) generations. Population $P_s$ can stay in its state as long as its wants 
 by mutating to itself or mutate to next population state. Population $P_s$ can return to $P_i$ next $u$ generations. 
 Let's say $P_s$ stays as $P_s$ for $h$ generations. Then population $P_i$ can return to its original state $P_i$ 
 in total $2u+h$ generations. $h$ can be $1, \; 2, \;, 3,$ and so on. That means $P_i$ can return to its original state in 
@@ -161,9 +180,9 @@ Since the Markov chain formed by GA after the violation in $\bm{\chi}$ is irredu
 the Markov chain is regular (see \cite{Iosifescu1980}), and a steady state distribution 
 with positive components exists for the GA (see \cite{Minc1988}). 
 
-Simulations were repeated with violation levels $\bm{\epsilon}$ as above.
-The distances of both infinite and finite populations to limit $\bm{z}^\ast$ were plotted. 
-The distances of both infinite and finite populations to non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$ were also plotted.
+Simulations are repeated with violation levels $\bm{\epsilon}$ as above.
+The distances of both infinite and finite populations to limit $\bm{z}^\ast$ are plotted. 
+The distances of both infinite and finite populations to non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$ are also plotted.
 
 % figures for chi violation
 \subsection{Haploid Population $\mathtt{\sim}$ $\epsilon: 0.01$}

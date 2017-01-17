@@ -1,7 +1,7 @@
 \chapter{Introduction} \label{ch:introduction}
 This thesis begins with notation that is used throughout this document.
 \section{Notation}
-Some standard mathematical notations as well as some non-standard mathematical notations are introduced here.
+Some standard mathematical notation as well as some non-standard mathematical notations are introduced here.
 
 Angle brackets $\langle \cdots \rangle$ denote a tuple which is to be regarded as a column
 vector. The column vector of all 1s is denoted by $\bm{1}$. Transpose is indicated with superscript $T$. 
@@ -48,7 +48,7 @@ the current population.
 those with higher fitness are more likely to be selected to reproduce.
 
 \textit{Crossover}: with some probability (the crossover rate), choose a random point in two parents (population members selected for reproduction) 
-and exchanges subsequences after that point to create two offspring.
+and exchange subsequences after that point to create two offspring.
 
 \textit{Mutation}: flip bits of an individual with some small probability, 
 the mutation rate.
@@ -63,6 +63,7 @@ Figure \ref{FiniteGA} shows the procedural flow of a basic finite population gen
 \end{figure}
 
 A simple Holland style genetic algorithm (see \cite{Holland1975}):
+
 \begin{algorithm}
 \label{realGA}
 \caption*{}
@@ -76,8 +77,9 @@ A simple Holland style genetic algorithm (see \cite{Holland1975}):
 \Statex 4. Replace $P$ by the new generation formed and go to step 2.
 \end{algorithmic}
 \end{algorithm}
+
 Each iteration of this process produces a generation. 
-The process is repeated until the system stops to improve or some threshold is met.
+The process described above is repeated until the system stops to improve or some threshold is met.
 
 The infinite population GA models a population as a probability vector $\bm{p}$ where component $\bm{p}_j$ 
 can be interpreted as the proportion of string $j$ in the population. If $\mathcal{G}$ is the function mapping infinite population $\bm{p}$ to 
@@ -109,7 +111,7 @@ computes the expected proportion $\mathcal{G}(\bm{p})_i$ of string $i$ in the ne
 direct connection between the infinite population model and a finite population GA.
 
 Nix and Vose (see \cite{Nix1992}) explored issues regarding the relationship between the finite population GA and the infinite population model. 
-For a positive mutation rate, a finite population GA will form an ergodic Markov chain, visiting every state infinitely often in the long run.
+For a mutation rate $\bm{\mu}$ between $0$ and $0.5$, a finite population GA will form an ergodic Markov chain, visiting every state infinitely often in the long run.
 The short term trajectory followed by a finite population is related to 
 the evolutionary path determined by the infinite population model. 
 For large populations, the short term trajectory follows closely and 
@@ -131,7 +133,7 @@ Vose compiled and extended previous work regarding the infinite population model
 In particular, he discussed how the Walsh transform can be applied to increase 
 computational efficiency in calculating the infinite population model. 
 There have been previous applications of the Walsh transform to GAs. Bethke first introduced the 
-idea of using Walsh transforms to analyse GA fitness funcitons in terms of schemata (see \cite{Bethke1981}). 
+idea of using Walsh transforms to analyze GA fitness funcitons in terms of schemata (see \cite{Bethke1981}). 
 The idea was further developed in papers by Goldberg (see \cite{Goldberg1989a}, \cite{Goldberg1989b}). 
 However, such usage did not apply Walsh transforms  to crossover, to mutation, or to any of their 
 associated mathematical objects. In contrast, Vose and Liepins applied the Walsh transform directly to mutation and recombination, and proved that the 
@@ -158,7 +160,7 @@ a general search method, defined upon the central concept of state and transitio
 between states (see \cite{Vose1999}). The simple genetic algorithm is a particular type of RHS. 
 An instance of {\em RHS} is an initial collection of elements $P$ (referred to as the initial population) chosen 
 from some search space $\Omega$, together with a stochastic transition rule $\tau$, which from $P$ will 
-produce another collection $P^\ast$; iterating $\tau$ produces a sequence of generations.
+produce another collection $P^\prime$; iterating $\tau$ produces a sequence of generations.
 
 Let $n$ be the cardinality 
 of $\Omega$, let ${\bf1}$ denote the column vector of all 1s. 
@@ -305,11 +307,11 @@ This suggests that the distance between $\tau (\bm{p})$ and $\mathcal{G}(\bm{p})
 
 \section{Research Problems}
 Equations \ref{EpsilonCheby}, \ref{theorem3.1_b}, and \ref{Jensen} all suggest that the 
-distance between $\tau{\bm{p}}$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$. 
+distance between $\tau(\bm{p})$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$. 
 The first research question to consider is whether that rate of decrease is exhibited 
 in practice. We investigate the rate of decrease with experiments in Chapter 2.
 
-An instance of RHS is  focused if $\mathcal{G}$ is continuously differentiable, and for every $\bm{p}  \in  \Lambda$
+An instance of RHS is {\em focused\/} if $\mathcal{G}$ is continuously differentiable, and for every $\bm{p}  \in  \Lambda$
 the sequence
 \[
 \bm{p},  \mathcal{G}(\bm{p}),  {\mathcal{G}}^2(\bm{p}),...
@@ -359,7 +361,8 @@ $\bm{\pi}^k_i \;=\; 1$ (other components are $0$) when $k$ is odd,
 and $\bm{\pi}^k_j \;=\; 1$ (other components are $0$) when $k$ is even. 
 Therefore, perfect oscillation should not occur. In Chapter 4, we investigate oscillation behavior of 
 finite populations when the Markov chain is regular. The third research question concerns whether 
-finite population approximate oscillation is exhibited in practice when the Markov chain is regular.
+finite population approximate oscillation can be exhibited in practice when the Markov chain is regular and 
+infinite population trajectories have no periodic orbit.
 
 
 % Equation \ref{Jensen} bounds the expected rate of convergence for the single-step haploid case; 

@@ -5,7 +5,7 @@ It uses computation to verify predicted infinite population limits and presents
 necessary and sufficient conditions for convergence to periodic orbits. 
 We compute mutation distribution $\bm{\mu}$ and crossover distribution $\bm{\chi}$ 
 to satisfy those conditions. Through experiments, we explore our second research 
-question: can finite populations oscillate in practice?
+question: can finite populations exhibit oscillation behavior in practice?
 
 \section{Limits}
 \label{Limits}
@@ -132,7 +132,7 @@ where elements are base 2 length $\ell$ binary strings). Array $\bm{t}$ is gener
 \bm{u}_i & = & U01(); \tabspace {i = 0,.., x-1} \\
 \bm{t}_j & = & randp(\bm{u}) ; \tabspace {j = 0,.., N-1}
 \end{eqnarray*}
-where $randp(\bm{u})$ returns random index $i$ in array $\bm{u}$ with probability $\bm{u}_i$.
+where $randp(\bm{u})$ returns random index $i$ into array $\bm{u}$ with probability $\bm{u}_i$.
 
 Let $\bm{c}_i$ be the count of haploid member $i$ in population $\bm{t}$,
 \[

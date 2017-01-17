@@ -36,14 +36,14 @@ let\\[-0.2in]
 Given distribution $\bm{\mu}$, mutation is the stochastic operator sending
 $g$ to $g^\prime$ with probability $\bm{\mu}_{g + g^\prime}$.
 Abusing notation, $\bm{\mu} \in [0, 0.5)$ is regarded as a {\em mutation rate} which implicitly 
-specifies distribution $\bm{\mu}$ according to rule (see \cite{VoseWright1998})
+specifies distribution $\bm{\mu}$ according to the rule (see \cite{VoseWright1998})
 \[
 \bm{\mu}_i = (\bm{\mu})^{{\bf 1}^Ti} (1-\bm{\mu})^{\ell- {\bf 1}^Ti}
 \]
 
 \subsection{Crossover}
 Crossover refers to crossing over (also termed recombination) between two chromosomes (strings in our case). 
-Crossover like mutation also provides mechanism for injection of new strings into new generation population. 
+Crossover like mutation also provides a mechanism for injection of new strings into the next generation population. 
 Geiringer (see \cite{Geiringer1944}) used crossover masks to generate offsprings from parent chromosomes 
 in absence of mutation and selection. Let $\bm{\chi}_m$ be the probability distribution with which $m$ is 
 selected to be a crossover mask. Following Geiringer (see \cite{Geiringer1944}), if crossing over $u$ and $v$ 
@@ -60,14 +60,16 @@ v^\prime & = & m \nudge v + \overline{m} \nudge\nudge u
 Given distribution $\bm{\chi}$, crossover is the stochastic operator which
 sends $u$ and $v$ to $u^\prime$ and $v^\prime$ with probability $\bm{\chi}_m/2$.
 
-Abusing notation, $\bm{\chi}$ can be considered as a {\em crossover rate} that specifies the distribution $\bm{\chi}$ given by rule (see \cite{VoseWright1998})
+Abusing notation, $\bm{\chi}$ can be considered as a {\em crossover rate} that specifies 
+the distribution $\bm{\chi}$ given by the rule (see \cite{VoseWright1998})
 \[
   \bm{\chi}_i =\begin{cases}
     \bm{\chi}  c_i & \text{if $i>0$}.\\
     1 - \bm{\chi} + \bm{\chi}  c_0 & \text{if $i = 0$}.
   \end{cases}
 \]
-where $c \in \Lambda$ is referred to as {\em crossover type}. Classical crossover types include {\em 1-point crossover} and {\em uniform crossover}. For {\em 1-point crossover},
+where $c \in \Lambda$ is referred to as {\em crossover type}. Classical crossover types 
+include {\em 1-point crossover} and {\em uniform crossover}. For {\em 1-point crossover},
 \[
   c_i =\begin{cases}
     1/(\ell - 1) & \text{if $\exists k \in (0, \ell).i = 2^k - 1$}.\\
@@ -79,11 +81,15 @@ and for uniform crossover, $c_i = 2^{-\ell}$.
 \subsection{Mixing Matrix}
 The combined action of mutation and crossover is referred to as {\em mixing}.
 The {\em mixing matrix\/} $M$ is the transmission matrix corresponding to the 
-additive identity of $\mathcal{R}$ is
+additive identity of $\mathcal{R}$
 \[
 M \; = \; M_{\bf 0}\\[-0.01in]
 \]
-Crossover and mutation are defined in a manner respecting arbitrary partioning and arbitrary linkage to preserve the ability to endow abstract syntax with specialized semantics. Groups of loci can mutate and crossover with arbitrarily specified probabilities as disscussed in above sections. For mutation distribution $\bm{\mu}$ and crossover distribution $\bm{\chi}$, then transmission function can be expressed as (see \cite{VoseWright1998})
+Crossover and mutation are defined in a manner respecting arbitrary partioning and 
+arbitrary linkage to preserve the ability to endow abstract syntax with specialized 
+semantics. Groups of loci can mutate and crossover with arbitrarily specified 
+probabilities as disscussed in above sections. For mutation distribution $\bm{\mu}$ and 
+crossover distribution $\bm{\chi}$, the transmission function can be expressed as (see \cite{VoseWright1998})
 \begin{equation}
 \label{transmission}
 t_{\langle u,v \rangle}(g) \; = \;\,
@@ -95,7 +101,8 @@ t_{\langle u,v \rangle}(g) \; = \;\,
 Here a child gamete $g$ is produced via mutation and then crossover (which are operators that
 commute). 
 
-The mixing matrix $M$ is a fundamental object, because (\ref{transmission}) implies that evolution equation (\ref{model3}) can be expressed in the form
+The mixing matrix $M$ is a fundamental object, because (\ref{transmission}) implies that 
+evolution equation (\ref{model3}) can be expressed in the form
 \begin{equation}
 \label{model4}
 p_g^\prime \; = \; (\sigma_g \nudge p)^T M \, (\sigma_g \nudge p)
@@ -106,12 +113,13 @@ where the permutation matrix $\sigma_g$ is defined by component equations
 \]
 
 \section{Walsh Transorm}
-If $n \in \mathcal{R}$ and $t \in \mathcal{R}$, and $N$ is cardinality of $\mathcal{R}$, 
+If $n \in \mathcal{R}$ and $t \in \mathcal{R}$, and $N$ is the cardinality of $\mathcal{R}$, 
 the Walsh matrix is defined by
-\[
+\begin{equation}
+\label{WalshT}
 W_{n,t} = N^{-1/2} (-1)^{n^T t}
-\]
-where $N^{-1/2}$ is normalization factor.
+\end{equation}
+where $N^{-1/2}$ can be thought of as a normalization factor.
 
 The matrix is symmetric, i.e.,
 \[
@@ -121,7 +129,8 @@ and it has entries satisfying
 \[
 W_{n, t + k} = N^{1/2} W_{n, t} W_{n, k}  ;  \hspace{1cm}  k \in \mathcal{R}.
 \]
-The practical importance of this symmetry is that the transform and inverse are the same mathematical operation, and \textit{Walsh matrix} is its own inverse,
+The practical importance of this symmetry is that the transform and inverse 
+are the same mathematical operation, and \textit{Walsh matrix} is its own inverse,
 \[
 W = W^{-1}.
 \]
@@ -130,8 +139,9 @@ $\widehat{A}$ denote the Walsh transform of $w$ and $A$ respectively. Then $\wid
 $\widehat{A} = WAW$ (see \cite{Beauchamp1975}).
 
 \subsection{Fast Walsh Transform}
-Computation of the discrete Walsh transform given by equation (\ref{WalshT}) might take $n^2$ operations (addition or subtraction) if implemented naively.
-An algorithm using matrix factorization techniques is found to perform the transformation in $n \log_2 n$ operations.
+Computation of the discrete Walsh transform given by equation (\ref{WalshT}) might take $n^2$ operations 
+(addition or subtraction) if implemented naively.
+An algorithm using matrix factorization techniques is found to perform the transformation in $O(n \log_2 n)$ operations.
 This algorithm is the Fast Walsh transform (FWT). Shanks (see \cite{Shanks1969}) described FWT algorithm which is analogous to 
 Cooley-Tukey algorithm (see \cite{CooleyTukey1965}) for fast Fourier transformation.
 The algorithm for FWT can be translated into pseudocode as:
@@ -162,10 +172,14 @@ The algorithm for FWT can be translated into pseudocode as:
 \end{algorithm}
 
 \subsection{Walsh Transform Adaptation}
-We adapt Walsh transform methods which have already been established for Vose's haploid model (see \cite{VoseWright1998}) 
-for computing evolutionary trajectories. Adaptation of Walsh transformation efficiently models infinite diploid population 
-evolution, making feasible comparisons between finite and infinte diploid population short-term evolutionary behavior.
-Evolution equation (\ref{model4}), specialized to Vose's infinite population model without selection is
+ We adapt Walsh transform methods which have already been
+established for Vose's haploid model (see \cite{VoseWright1998})
+for computing evolutionary trajectories, making feasible
+computation-based comparisons between finite and infinite
+diploid population short-term evolutionary behavior.
+Evolution equation (\ref{model4}), 
+specialized to Vose's infinite population model without selection, 
+is simplified by changing basis to diagonalize the $\sigma_g$.
 \[
 p_g^\prime \; = \; (\sigma_g \nudge p)^T M \, (\sigma_g \nudge p)
 \]

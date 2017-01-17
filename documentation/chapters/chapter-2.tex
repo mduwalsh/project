@@ -6,7 +6,7 @@ selective pressure. This chapter shows how diploid evolution equations can be re
 and can be specialized to Vose's infinite population model, which is a haploid model.
 
 A basic syntactic model for haploid and diploid genomes is first considered. 
-Then the mechanics of how next generation is obtained from current generation are
+Then the mechanics of how the next generation is obtained from current generation are
 defined abstractly in procedural terms, which serves to motivate the equations governing evolution. 
 Next evolution equations are developed corresponding to the
 procedural description defining evolution for a population of
@@ -19,6 +19,12 @@ Analytical and computational simplification resulting from specialization to
 Vose's infinite population model are explained and used 
 in experimental simulation and study of convergence of finite population 
 short-term behavior to behavior predicted by infinite population model.    
+The results confirm that the distance between the short-term
+evolutionary trajectory of finite diploid populations and the
+evolutionary trajectory of infinite diploid populations can in
+practice decrease like the inverse of the square root of population
+size.  Our first research question is thereby answered
+affirmatively.
 
 \section{Model} \label{Model}
 A haploid genome $g$ is defined syntactically as a length $\ell$
@@ -140,10 +146,10 @@ $g$ in generation $n$ is
 & = & 2 \nudge p_g^n
 \end{eqnarray}
 
-Hence the (normalized) prevalence of haploid $g$ in generation $n$ is
-the $g\,$th component of the distribution $p^n$. \linebreak
-Moreover, (\ref{project}) and (\ref{model1}) show (for $n >
-0$) invertibility of the map
+Hence the (normalized) prevalence of haploid $g$ in generation $n$ is 
+the $g$th component of the distribution $p^n$. 
+
+Moreover, (\ref{project}) and (\ref{model1}) show (for $n > 0$) invertibility of the map
 \[
   \pi \nudge : \nudge {\bm q}^{n} \; \longmapsto \; {\bm p}^{n}
 \]

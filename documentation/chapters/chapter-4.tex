@@ -4,13 +4,15 @@ when the crossover distribution $\bm{\chi}$, and the mutation distribution $\bm{
 satisfy condition \ref{OscCond}. This chapter explores the robustness of finite population oscillation. 
 If the finite population GA is a regular Markov chain, then perfect oscillation should not occur. Does approximate oscillation 
 in finite populations occur in practice if condition \ref{OscCond} is violated? 
-This chapter explores the  
-third research question, whether finite populations exhibit approximate oscillation when the Markov chain 
-is regular.
+This chapter  explores the third research question, whether finite populations
+can exhibit approximate oscillation in practice when the
+Markov chain is ergodic and infinite population trajectories
+have no periodic orbit.
 
 Error $\bm{\epsilon}$ is introduced to $\bm{\mu}$ and $\bm{\chi}$ distributions so as to 
-violate condition \ref{OscCond}. Consequently, $\bm{p}^\ast \;=\; \bm{q}^\ast \;=\; \bm{z}^\ast$. 
-Violation of condition \ref{OscCond} in the distributions makes the Markov chain regular. The initial population is 
+violate condition \ref{OscCond}; this guarantees that 
+infinite population trajectories have no periodic orbit Consequently, $\bm{p}^\ast \;=\; \bm{q}^\ast \;=\; \bm{z}^\ast$. 
+Violation of condition \ref{OscCond} for the mutation distribution makes the Markov chain regular. The initial population is 
 computed using same procedure as described in section \ref{InitPopOsc}. To explore the effects of the degree  
 of violation of condition \ref{OscCond} in $\bm{\mu}$ and $\bm{\chi}$, different values of $\bm{\epsilon}$ are used in experiments. 
 String length $\ell \;\in\; \{8, 10, 12, 14\}$ are considered for simulation.
@@ -71,11 +73,11 @@ has positive probability. Moreover, the all $0$s crossover mask can have positiv
 that is compatible with condition \ref{OscCond}.
 So $S(n)$ is true. Now, assume $S(k)$ is true. Therefore, population $P$ can be returned to in $n \;= \;k$ generations. 
 In the $k+1$th generation, population $P$ has the option to stay in state $P$. 
-So $S(K+1)$ is also true and that completes the inductive proof. 
+So $S(k+1)$ is also true and that completes the inductive proof. 
 Since any population state can be returned to in any period of time, the Markov chain is aperiodic. 
 
 Because the Markov chain formed by GA after violation in $\bm{\mu}$ is irreducible and aperiodic, 
-the Markov chain is regular (see \cite{Iosifescu1980}), and a steady state distribution 
+the Markov chain is regular (sometimes called ergodic, see \cite{Iosifescu1980}), and a steady state distribution 
 with positive components exists for the GA (see \cite{Minc1988}).   
 
 Simulations were repeated with the violations in (\ref{OscCond}) described above for the mutation distribution.
@@ -111,7 +113,7 @@ and the behavior is absent when population size is larger.
 \section{Violation in Crossover Distribution}
 The crossover distribution $\bm{\chi}$ was modified as
 \[
-\bm{\chi}_i = (1-\bm{\epsilon}) \bm{\chi} ; \tabspace i = \{1, 2,.., 2^{\ell}-1\} 
+\bm{\chi}_i = (1-\bm{\epsilon}) \bm{\chi}_i\. ; \tabspace i = \{1, 2,.., 2^{\ell}-1\} 
 \]
 So that 
 \[
@@ -270,8 +272,8 @@ studied infinite and finite populations oscillation behavior with the violation 
 Infinite population ceases to oscillate when the condition \ref{OscCond} for convergence to 
 periodic orbits is violated, but finite population continued to approximately oscillate for small values of $\bm{\epsilon}$. 
 For smaller values of $\bm{\epsilon}$, finite population does not get aware of violation because the probability of using 
-new masks created in the mutation distribution $\bm{\mu}$ and the crossover distribution $\bm{\mu}$ due to violation is very low, and 
-finite population follows behavior of infinite population without violation in the condition for convergence to 
+new mask created in the mutation distribution $\bm{\mu}$ and the crossover distribution $\bm{\mu}$ due to violation is very low, and 
+if no new mask is used, finite population follows behavior of infinite population without violation in the condition for convergence to 
 periodic orbits.
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  16 JAN 2017 16:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.9.2)  17 JAN 2017 01:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -723,19 +723,13 @@ Chapter 2.
 
 
 ] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 72--77
+Underfull \hbox (badness 10000) in paragraph at lines 78--83
 
  []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 143--147
-\OT1/cmr/m/n/12 nent of the dis-tri-bu-tion $\OML/cmm/m/it/12 p[]$\OT1/cmr/m/n/
-12 .
- []
-
-[16]
+[15] [16]
 Package srcltx Info: Expanded filename `chapters/specialization.tex' to `chapte
-rs/specialization.tex' on input line 165.
+rs/specialization.tex' on input line 171.
 
 :<+ chapters/specialization.tex
 (./chapters/specialization.tex
@@ -757,7 +751,7 @@ put line 139.
 [20] [21] [22])
 :<-
 Package srcltx Info: Expanded filename `chapters/convergence.tex' to `chapters/
-convergence.tex' on input line 167.
+convergence.tex' on input line 173.
 :<+ chapters/convergence.tex
 (./chapters/convergence.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--11
@@ -3239,7 +3233,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
 (rerunfilecheck)             Checksum: 128EB9CE11B0EE4AB46EE963EB9E758C;3780.
 Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
-(rerunfilecheck)             Checksum: 96CBBFC4869D0D24BE827153676B63D0;2829.
+(rerunfilecheck)             Checksum: EA163F6386521DF21CC4A72DBCA902ED;2829.
 
 
 LaTeX Warning: There were undefined references.
@@ -3248,11 +3242,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
  ) 
 Here is how much of TeX's memory you used:
  10385 strings out of 495029
- 172916 string characters out of 6181522
+ 172916 string characters out of 6181524
  295795 words of memory out of 5000000
  13201 multiletter control sequences out of 15000+600000
  22513 words of font info for 88 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  39i,16n,53p,633b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (165 pages, 737884 bytes).
+Output written on my-dissertation.dvi (165 pages, 738456 bytes).

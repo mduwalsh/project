@@ -141,8 +141,8 @@ $\widehat{A} = WAW$ (see \cite{Beauchamp1975}).
 \subsection{Fast Walsh Transform}
 Computation of the discrete Walsh transform given by equation (\ref{WalshT}) might take $n^2$ operations 
 (addition or subtraction) if implemented naively.
-An algorithm using matrix factorization techniques is found to perform the transformation in $O(n \log_2 n)$ operations.
-This algorithm is the Fast Walsh transform (FWT). Shanks (see \cite{Shanks1969}) described FWT algorithm which is analogous to 
+An algorithm using $O(n \log_2 n)$ operations is the Fast Walsh transform (FWT). 
+Shanks (see \cite{Shanks1969}) described FWT algorithm which is analogous to 
 Cooley-Tukey algorithm (see \cite{CooleyTukey1965}) for fast Fourier transformation.
 The algorithm for FWT can be translated into pseudocode as:
 \begin{algorithm}[ht]
@@ -180,21 +180,21 @@ diploid population short-term evolutionary behavior.
 Evolution equation (\ref{model4}), 
 specialized to Vose's infinite population model without selection, 
 is simplified by changing basis to diagonalize the $\sigma_g$.
-\[
-p_g^\prime \; = \; (\sigma_g \nudge p)^T M \, (\sigma_g \nudge p)
-\]
-where the permutation matrix $\sigma_g$ is defined by component
-equations
-\[
-(\sigma_g)_{u,v} \; = \; [\nudge u+v = g\nudge ]
-\]
-The Walsh matrix $W$ is defined by the component equations
-\[
-W_{u,v} \; = \; 2^{-\ell/2} (-1)^{u^T v}
-\]
-where the subscripts \nudge u, \nudge v (which belong to $\mathcal{R}$) on the left hand side 
-are interpreted on the right hand side as column vectors in $\mathbb{R}^{\ell}$.
-Columns of $W$ form the orthonormal basis --- the
+% \[
+% p_g^\prime \; = \; (\sigma_g \nudge p)^T M \, (\sigma_g \nudge p)
+% \]
+% where the permutation matrix $\sigma_g$ is defined by component
+% equations
+% \[
+% (\sigma_g)_{u,v} \; = \; [\nudge u+v = g\nudge ]
+% \]
+% The Walsh matrix $W$ is defined by the component equations
+% \[
+% W_{u,v} \; = \; 2^{-\ell/2} (-1)^{u^T v}
+% \]
+% where the subscripts \nudge u, \nudge v (which belong to $\mathcal{R}$) on the left hand side 
+% are interpreted on the right hand side as column vectors in $\mathbb{R}^{\ell}$.
+Columns of the Walsh matrix $W$ form the orthonormal basis --- the
 {\em Walsh basis\/} --- which simultaneously diagonalizes the
 $\sigma_g$. Expressed in the Walsh basis (see \cite{VoseWright1998}), the mixing matrix
 takes the form

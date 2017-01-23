@@ -172,12 +172,12 @@ void reproduce(int a, int b, int j)
   if(rnd(2) == 0)                         // keep one haploid from one parent randomly
     z0 = drand(M)^((x0&m1)|(x1&~m1));     // apply mutation and crossover mask
   else
-    z0 = drand(M)^((x0&m1)|(x1&~m1));     // apply mutation and crossover mask
+    z0 = drand(M)^((x1&m1)|(x0&~m1));     // apply mutation and crossover mask
   m2 = drand(Cr);                         // crossover mask 2
   if(rnd(2) == 0)                         // keep one haploid from 2nd parent randomly
     z1 = drand(M)^((y0&m2)|(y1&~m2));     // apply mutation and crossover mask
   else
-    z1 = drand(M)^((y0&m2)|(y1&~m2));     // apply mutation and crossover mask
+    z1 = drand(M)^((y1&m2)|(y0&~m2));     // apply mutation and crossover mask
    
   // combine two haploids from two parents to form a diploid
   Pop[1][j] = (z0<<L) + z1;               // new offspring diploid <z0,z1> at index j  

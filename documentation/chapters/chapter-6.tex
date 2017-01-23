@@ -1,0 +1,37 @@
+\chapter{Conclusion}
+This research shows how Vose's haploid model for Genetic Algorithms
+extends to the diploid case, improving the computation of infinite
+population evolutionary trajectories by significantly reducing the
+time and space used.  Efficiency is achieved through decoupling
+haploid evolution from the evolution of infinite diploid populations
+and employing Walsh transform methods to compute the effects of
+mask-based crossover and mutation.  
+
+Simulations are thereby made feasible which otherwise would require
+excessive resources, as illustrated through computations exploring 
+the convergence rate of finite population short-term behavior to infinite population evolutionary trajectories. 
+Results confirm that distance can be inversely proportional to the square root of population size.
+
+Simulations showed that when the necessary condition for oscillation in infinite populations is met, 
+finite populations also exhibit approximate oscillation. Amplitude of oscillation increases with 
+increase in population size, and larger population exhibit better oscillation. Also amplitude of 
+oscillation decreases with increase in genome length.
+
+When the condition for inifinite population oscillation is violated for the mutation distribution, 
+we showed that the Markov chain representing finite population evolution is regular, and hence, 
+perfect oscillation should not occur. However, simulation results showed 
+infinite populations ceases to oscillate, 
+but finite populations continue to approximately oscillate if the violation is small. 
+When the condition is violated for crossover distribution,
+we could not show that Markov chain formed is regular, 
+but results showed finite populations continue to approximately oscillate 
+if the violation is small. As genome length increases 
+oscillation in population degrades. Moreover, larger population shows better oscillation 
+as in the case of oscillation without violation.
+
+In this research, for simplicity we did not consider fitness factor for selection.  
+In future, we plan to extend our work by accomodating fitness factor in our model and investigate 
+the influence of that change upon the results obtained in the absence of selective pressure.
+
+
+

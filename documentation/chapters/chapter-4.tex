@@ -1,23 +1,23 @@
 \chapter{Violation in Mutation Distribution} \label{ch:muviolation}
 The results from chapter \ref{ch:oscillation} show that oscillation occurs
 when the crossover distribution $\bm{\chi}$, and the mutation distribution $\bm{\mu}$ 
-satisfy condition \ref{OscCond}. This chapter explores the robustness of finite population oscillation. 
-If the finite population GA is a regular Markov chain, then perfect oscillation should not occur. Does approximate oscillation 
-in finite populations occur in practice if condition \ref{OscCond} is violated? 
-This chapter  explores the third research question, whether finite populations
-can exhibit approximate oscillation in practice when the
+satisfy condition \ref{OscCond}. This chapter explores the robustness of 
+finite population oscillation when condition \ref{OscCond} is violated for $\bm{\mu}$. 
+The violation in $\bm{\mu}$ makes the Markov chain representing finite population regular 
+(sometimes called ergodic).
+Does approximate oscillation in finite populations occur in practice when the
 Markov chain is regular and infinite population trajectories
-have no periodic orbit.
+have no periodic orbit?
 
 Error $\bm{\epsilon}$ is introduced into the mutation distribution $\bm{\mu}$ so as to 
 violate condition \ref{OscCond}; this guarantees that 
-infinite population trajectories have no periodic orbit Consequently, $\bm{p}^\ast \;=\; \bm{q}^\ast \;=\; \bm{z}^\ast$. 
+infinite population trajectories have no periodic orbit. Consequently, $\bm{p}^\ast \;=\; \bm{q}^\ast \;=\; \bm{z}^\ast$. 
 Violation of condition \ref{OscCond} for the mutation distribution makes the Markov chain regular. The initial population is 
 computed using same procedure as described in section \ref{InitPopOsc}. To explore the effects of the degree  
 of violation of condition \ref{OscCond} in $\bm{\mu}$, different values of $\bm{\epsilon}$ are used in experiments. 
 String length $\ell \;\in\; \{8, 10, 12, 14\}$ are considered for simulation.
-Going forward, we use `limit $\bm{z}^\ast$' to denote evolutionary limit when mutation distribution $\bm{\mu}$ or crossover distribution 
-$\bm{\chi}$ violates condition \ref{OscCond}, and 
+Going forward, we use `limit $\bm{z}^\ast$' to denote evolutionary limit when mutation distribution $\bm{\mu}$ 
+violates condition \ref{OscCond}, and 
 `non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$' to denote limits without violation.
 
 \section{Violation}
@@ -77,7 +77,7 @@ So $S(k+1)$ is also true and that completes the inductive proof.
 Since any population state can be returned to in any period of time, the Markov chain is aperiodic. 
 
 Because the Markov chain formed by GA after violation in $\bm{\mu}$ is irreducible and aperiodic, 
-the Markov chain is regular (sometimes called ergodic, see \cite{Iosifescu1980}), and a steady state distribution 
+the Markov chain is regular (see \cite{Iosifescu1980}), and a steady state distribution 
 with positive components exists for the GA (see \cite{Minc1988}).   
 
 Simulations were repeated with the violations in (\ref{OscCond}) described above for the mutation distribution.
@@ -99,47 +99,25 @@ The distances of both infinite and finite populations to non-violation limits $\
 \subsection{Diploid Population $\mathtt{\sim}$ $\epsilon: 0.5$}
 \input{chapters/vio-mu-dip-e0.5.tex}
 
-As the value of $\ell$ increases, oscillation amplitude decreases. 
-Larger populations show better oscillation. 
-Diploid populations need larger population size than haploid populations to exhibit good oscillations.
+\section{Discussion}
+In oscillation of population in presence of violation in $\bm{\mu}$, 
+as value of $\ell$ increases, amplitude of oscillation decreases. 
+Populations with larger population size, show better oscillations. 
+Since diploid population consists of string length twice the size of string length of hapliod population, 
+diploid population needs larger population size than haploid population to exhibit good oscillations. 
+For diploid population, increasing string length $\ell$ 
+degrades convergence (as finite population size increases) to infinite population behavior. 
+The behavior is noticeable in figures 
+\ref{oscillation_8d_vio_mu_0.01} through \ref{oscillation_14d_vio_mu_0.1} for violation in $\bm{\mu}$. 
+The behavior is less noticeable in haploid population. 
+
 With increase in value of $\bm{\epsilon}$, 
-oscillation diminishes, and noticable oscillation ceases for larger values of $\bm{\epsilon}$. 
+oscillation in population diminishes, and oscillation completely ceases after certain threshold value for $\bm{\epsilon}$. 
 Like in oscillations in non-violation case in chapter \ref{ch:oscillation}, diploid populations hopping to other levels 
 are observed for string length values 12 and 14 for population size of 4096 in 
 figures \ref{oscillation_12d_vio_mu_0.01}, \ref{oscillation_14d_vio_mu_0.01}, \ref{oscillation_12d_vio_mu_0.1}, 
 \ref{oscillation_14d_vio_mu_0.1}, \ref{oscillation_12d_vio_mu_0.5} and \ref{oscillation_14d_vio_mu_0.5}, 
 and the behavior is absent when population size is larger.
-
-
-\section{Discussion}
-
-In oscillation of population in presence of violation (in either case $\bm{\mu}$ or $\bm{\chi}$), 
-as value of $\ell$ increases, amplitude of oscillation decreases. 
-Populations with larger population size, show better oscillations. 
-Since diploid population consists of string length twice the size of string length of hapliod population, 
-diploid population needs larger population size than haploid population to exhibit good oscillations. 
-In both cases of violation in $\bm{\mu}$ and $\bm{\chi}$, for diploid population, increasing string length $\ell$ 
-degrades convergence (as finite population size increases) to infinite population behavior. The behavior is noticable in figures 
-\ref{oscillation_8d_vio_mu_0.01} through \ref{oscillation_14d_vio_mu_0.1} for violation in $\bm{\mu}$, 
-and in figures \ref{oscillation_8d_vio_chi_0.01} through \ref{oscillation_14d_vio_chi_0.1} for violation in $\bm{\chi}$. 
-The behavior is less noticable in haploid population.
-
-With increase in value of $\bm{\epsilon}$, 
-oscillation in population diminishes, and oscillation completely ceases after certain threshold value for $\bm{\epsilon}$. 
-Comparing oscillation with violation in $\bm{\mu}$ and $\bm{\chi}$, rate of dampening of oscillation with violation 
-in $\bm{\chi}$ looks to be less than with violation in ${\bm{\mu}}$, 
-and so we see some oscillation even for $\bm{\epsilon} = 0.5$ for haploid population in this case. 
-Diploid populations jumping to other levels 
-were observed for string length $\ell$ of values 12 and 14 for population size of 4096 in 
-figures \ref{oscillation_12d_vio_chi_0.01}, \ref{oscillation_14d_vio_chi_0.01}, \ref{oscillation_12d_vio_chi_0.1}, 
-\ref{oscillation_14d_vio_chi_0.1}, \ref{oscillation_12d_vio_chi_0.5} and \ref{oscillation_14d_vio_chi_0.5}, 
-but unlike in case of violation in $\bm{\mu}$, the behavior is not completely absent when population size was larger. 
-Random wiggles are seen in populations with larger population size also for $\ell$ = 12 and 14. 
-Jumping to other levels are observed for string length $\ell = 10$ when population size is 4096 in figures \ref{oscillation_10d_vio_chi_0.01} 
-and \ref{oscillation_10d_vio_chi_0.01}.
-For $\ell = 10$, random wiggles are 
-noticeable for larger population also when $\bm{\epsilon}$ value is increased to $0.5$ (see figure \ref{oscillation_10d_vio_chi_0.5}).
-
 
 \begin{figure}[h]
 \begin{center}
@@ -152,37 +130,26 @@ noticeable for larger population also when $\bm{\epsilon}$ value is increased to
 \label{vio_mu_dist}
 \end{center}
 \end{figure}
-\begin{figure}[h]
-\begin{center}
-\subfloat{
-\resizebox{16cm}{10cm}{\includegraphics{figures/eps/vio/dist_chi.eps}}}\hspace{-3em}%
-\caption[\textbf{Distance of finite population to infinite population in case of violation in $\bm{\chi}$}]{\textbf{Distance of finite population to infinite population in case of violation in $\bm{\chi}$:}  
-  $d$ is distance; $N$ is finite population size; $\bm{\epsilon}$ is level of violation; 
-  red line represents distance for $\ell = 8$, green line for $\ell = 10$, blue line for $\ell = 12$, pink line for $\ell = 14$ 
-  and black dotted line for expected single step distance.}
-\label{vio_chi_dist}
-\end{center}
-\end{figure}
-
-Figures \ref{vio_mu_dist} and \ref{vio_chi_dist} summarizes the distance data from tables \ref{distanceMuHapEps0.01} $\cdots$ 
-\ref{distanceChiDipEps0.5}. Distance of infinite population from finite population of 
+Figure \ref{vio_mu_dist} summarizes the distance data from tables \ref{distanceMuHapEps0.01} $\cdots$ 
+\ref{distanceMuDipEps0.5}. Distance of infinite population from finite population of 
 three finite population sizes {4096, 40960, 81920} are plotted for different $\ell$. 
 Plots for different violation levels $\bm{\epsilon}$ are arranged in columns. 
 Plots for haploid and diploid populations are arranged in two rows. With increase in $\ell$, 
 distance moves closer to the single step distance. So, since diploid population 
 string length is twice of haploid population, 
 distance in diploid case moves closer to the single step distance than in haploid case. 
-It is also noticable in haploid population case that as $\bm{\epsilon}$ increases, 
+It is also noticeable in haploid population case that as $\bm{\epsilon}$ increases, 
 the distance moves closer to the single step distance.
 
 \clearpage
 \section{Summary}
-In this chapter, we violated the condition \ref{OscCond} through violation in mutation and crossover distribution, and 
-studied infinite and finite populations oscillation behavior with the violation through experiments. 
+In this chapter, we violated the condition \ref{OscCond} through violation in mutation making 
+the Markov chain representing finite population regular and infinite population trajectories 
+have no periodic orbit, and studied infinite and finite populations oscillation behavior with the violation through experiments. 
 Infinite population ceases to oscillate when the condition \ref{OscCond} for convergence to 
-periodic orbits is violated, but finite population continued to approximately oscillate for small values of $\bm{\epsilon}$. 
+periodic orbits is violated, but finite population is robust enough to continue to approximately oscillate for small values of $\bm{\epsilon}$. 
 For smaller values of $\bm{\epsilon}$, finite population does not get aware of violation because the probability of using 
-new mask created in the mutation distribution $\bm{\mu}$ and the crossover distribution $\bm{\mu}$ due to violation is very low, and 
+new mask created in the mutation distribution $\bm{\mu}$ due to violation is very low, and 
 if no new mask is used, finite population follows behavior of infinite population without violation in the condition for convergence to 
 periodic orbits.
 

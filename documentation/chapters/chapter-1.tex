@@ -247,7 +247,11 @@ The variance of the next generation (with respect to the expected population) (s
 \label{RHSvariance}
 \mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \|^2) = \frac{1 - \|\mathcal{G}(\bm{p})\|^2}{r}
 \end{equation}
-It follows from Chebyshev's inequality (see \cite{ChebyshevInequality}) that 
+
+\section{Research Problems}
+\begin{itemize}
+\item{
+Following Chebyshev's inequality (see \cite{ChebyshevInequality}) equation \ref{RHSvariance} becomes that 
 \begin{equation}
 \label{Cheby}
 P(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \geq \epsilon) \leq \frac{1 - \|\mathcal{G}(\bm{p})\|^2} {r{\epsilon}^2}
@@ -305,9 +309,6 @@ Therefore,
 \end{equation}
 This suggests that the distance between $\tau (\bm{p})$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$. 
 
-\section{Research Problems}
-\begin{itemize}
-\item{
 Equations \ref{EpsilonCheby}, \ref{theorem3.1_b}, and \ref{Jensen} all suggest that the 
 distance between $\tau(\bm{p})$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$. 
 The first research question to consider is whether that rate of decrease is exhibited 
@@ -330,7 +331,14 @@ but under other conditions the sequence
 $\bm{p},  \mathcal{G}(\bm{p}),  {\mathcal{G}}^2(\bm{p}),...$ converges 
 to a periodic orbit which oscillates between fixed points of $\mathcal{G}^2$ (see \cite{Vose1999}). 
 If a finite population GA follows the infinite population GA closely, and if infinite populations oscillate under certain conditions, then 
-finite populations might also show oscillating behavior. The second research question to consider is whether such finite population 
+finite populations might also show oscillating behavior. 
+Akin (1981) analytically proves the existence of cycling for the continuous-time diploid two allele model. 
+Hastings (see \cite{Hastings1981}) used numerical approach to study 
+the behavior of the cycling populations with infinite diploid population model. 
+The model includes crossover but not mutation. 
+However, the study was simple and limited to two allele chromosomes only, and cycles have long period. 
+
+The second research question to consider is whether such finite population 
 oscillation is exhibited in practice. We investigate finite population oscillation with experiments 
 in Chapter 3. 
 }

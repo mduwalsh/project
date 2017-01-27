@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[Akin, 1982]{Akin1982}
+Akin, E. (1982).
+\newblock Cycling in simple genetic systems.
+\newblock {\em J. Math. Biology}, 13:305--324.
+
 \bibitem[Beauchamp, 1975]{Beauchamp1975}
 Beauchamp, K. (1975).
 \newblock {\em Walsh functions and their applications}.
@@ -51,6 +56,11 @@ H{\"a}ggstr{\"o}m, O. (2002).
 Hardy, G.~H. (1908).
 \newblock Mendelian proportions in a mixed population.
 \newblock {\em Science}, 28(706):49--50.
+
+\bibitem[Hastings, 1981]{Hastings1981}
+Hastings, A. (1981).
+\newblock Stable cycling in discrete-time genetic models.
+\newblock {\em Proc. Nat. Acad. Sci.}, 78:7224--7225.
 
 \bibitem[Holland, 1992]{Holland1975}
 Holland, J.~H. (1992).
@@ -122,5 +132,17 @@ Wikipedia, C. (2016a).
 \bibitem[Wikipedia, 2016b]{JensenInequality}
 Wikipedia, C. (2016b).
 \newblock Jensen's inequality.
+
+\bibitem[Wright and Agapie, 2001]{Wright2001}
+Wright, A.~H. and Agapie, A. (2001).
+\newblock Cyclic and chaotic behavior in genetic algorithms.
+\newblock {\em Proceedings of the 3rd Annual Conference on Genetic and
+  Evolutionary Computation}, (7):718--724.
+
+\bibitem[Wright and Bidwell, 1997]{Wright1997}
+Wright, A.~H. and Bidwell, G.~L. (1997).
+\newblock A search for counterexamples to two conjectures on the simple genetic
+  algorithm.
+\newblock {\em Foundations of genetic algorithms}, 4:73--84.
 
 \end{thebibliography}

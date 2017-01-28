@@ -338,31 +338,44 @@ the behavior of the cycling populations with infinite diploid population model (
 The model includes crossover but not mutation. 
 However, the study was simple and limited to two allele chromosomes only, and cycles have long period. 
 Wright and Bidwell provided examples when cycles in infinite population occur with mutation and 
-crossover for 3 and 4 bit population to prove existence of cycling behavior (see \cite{Wright1997}). Different behavior cases were observed. 
+crossover for 3 and 4 bit population to prove existence of cycling behavior (see \cite{Wright1997}). 
+Different behavior cases were observed. 
 For 3 bit example, both approximate period 2 cycling and long period cycling were observed. 
 For 4 bit example, period 2 cycling was not observed and only long period cyclings were observed. 
 But the examples provided were for specific 
-set parameter values for crossover, mutation and fitness. 
+set parameter values for crossover, mutation and fitness. In one example, for some crossover and mutation they have, they 
+compute fitness which might give cycles in population evolution. And in another example, they solve for different fitness. 
+Basically they are trying to find cyclic behavior anywhere in parameter space of fitness, crossover and mutation, and they accomplish 
+that by solving for particular fitness related to crossover and mutation. A better way to understand cyclic behavior would be 
+to take a slice of the space with fixed fitness and see if we get cyclic behavior for different crossover and mutation. 
 
-Wright and Agapie shows genetic algorithms exhibit cycling behavior. Mutation used 
-was density dependent mutation that uses separate mutation rate for each bit position (see \cite{Wright2001}). 
+Wright and Agapie exhibit cycling behavior in one slice of parameter space of fitness, crossover and mutation (see \cite{Wright2001}). 
+They fixed fitness using fitness function where fitness of string is one plus integer value of binary representation of the string. 
+Mutation used was density dependent mutation that uses separate mutation rate for each bit position. 
 They showed results for 1-bit to 4-bit 
 representation of infinite populations exhibiting cyclic behavior of period 2, 3, 4, 8 and 10. 
-They also presented data for finite populations exhibiting cyclic behavior, however didn't state period of cycles. 
+They seems to indicate that the cycles observed are approximate and that is what we expect in our work also. 
+They also present data for finite populations exhibiting cyclic behavior, however, do not state period of cycles. 
 
 This provides more motivation for us to dig into oscillation in both infinite and finite populations. 
-However, this research studies oscillation for higher bit string lengths (up to 14-bit) 
-for both infinite and finite populations including both cases of haploid and diploid population. 
-Both works of Wright and Bidwell, and Wright and Agapie use Vose's Random Heuristic Search model (see \cite{Vose1999}), and we use same. 
-We use special case of fitness (linear fitness) for population 
+Both works of Wright and Bidwell, and Wright and Agapie use Vose's Random Heuristic Search model (see \cite{Vose1999}), 
+and we use same. However, this research studies cyclic behavior for different slice of fitness   
+than Wright and Agapie used in their work. 
+We use special case of fitness (uniform fitness) for population where every string has same fitness.
 but we vary crossover and mutation which are randomly generated. 
-Moreover, we use masked based crossover and mutation which agrees with Geiringer (see \cite{Geiringer1944}) 
-which is different from mutation used by Wright and Agapie. 
-And more importantly, we explore and analyse oscillation in finite population in short term. 
-
+Another difference is mutation used in this work, which is different than density dependent mutation used by 
+Wright and Agapie.
+We use masked based crossover and mutation which agrees with Geiringer (see \cite{Geiringer1944}). 
+Also they talk about finding cycles in population evolution but they do not provide visualization. 
+A method of visualization of cycles could be in relation to fixed points. 
+So we compute distance of population evolving to fixed points and plot the data. 
+Also the condition for which infinite population converge to periodic orbits does not depend upon string length considered, 
+and so we do experiments up to 14-bit strings. 
 So, the second research question to consider is whether such finite population 
 oscillation is exhibited in practice. We investigate finite population oscillation with experiments 
 in Chapter 3. 
+
+
 }
 
 \item{
@@ -402,10 +415,16 @@ infinite population trajectories have no periodic orbit.
 }
 
 \item{
-The fourth research question also concerns the robustness of finite population oscillation. 
+In their work on cyclic behavior of populations, Wright and Agapie pointed out that presence or 
+absence of crossover did not affect cyclic behavior (see \cite{Wright2001}). 
+But our work, the condition for infinite population to converge in to periodic orbits depends upon crossover too, 
+and infinite population should not oscillate if crossover does not satisfy the condition (see \cite{Vose1999}). 
+We investigate what happens to oscillating behavior of finite population.
+So, the fourth research question also concerns the robustness of finite population oscillation. 
 Can finite population approximate oscillation be exhibited in practice when infinite population 
 trajectories have no periodic orbit due to the crossover distribution violating the condition 
-required for infinite population oscillation?
+required for infinite population oscillation? 
+
 }
 
 \end{itemize}

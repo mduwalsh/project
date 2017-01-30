@@ -11,48 +11,51 @@ A level-1 auxiliary file: chapters/chapter-2.aux
 A level-1 auxiliary file: chapters/chapter-3.aux
 A level-1 auxiliary file: chapters/chapter-4.aux
 A level-1 auxiliary file: chapters/chapter-5.aux
+A level-1 auxiliary file: chapters/chapter-6.aux
 The style file: apalike.bst
 A level-1 auxiliary file: back-matter/appendix-1.aux
 A level-1 auxiliary file: back-matter/vita.aux
 Database file #1: references/references-dissertation.bib
-You've used 24 entries,
+Warning--there's a number but no volume in Wright2001
+You've used 28 entries,
             1935 wiz_defined-function locations,
-            640 strings with 6811 characters,
-and the built_in function-call counts, 7746 in all, are:
-= -- 765
-> -- 209
-< -- 24
-+ -- 76
-- -- 62
-* -- 599
-:= -- 1387
-add.period$ -- 70
-call.type$ -- 24
-change.case$ -- 142
-chr.to.int$ -- 22
-cite$ -- 24
-duplicate$ -- 325
-empty$ -- 598
-format.name$ -- 96
-if$ -- 1497
+            671 strings with 7398 characters,
+and the built_in function-call counts, 9271 in all, are:
+= -- 925
+> -- 249
+< -- 28
++ -- 90
+- -- 74
+* -- 727
+:= -- 1647
+add.period$ -- 82
+call.type$ -- 28
+change.case$ -- 168
+chr.to.int$ -- 26
+cite$ -- 29
+duplicate$ -- 381
+empty$ -- 715
+format.name$ -- 116
+if$ -- 1794
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 29
-newline$ -- 121
-num.names$ -- 72
-pop$ -- 122
+missing$ -- 33
+newline$ -- 141
+num.names$ -- 84
+pop$ -- 137
 preamble$ -- 1
-purify$ -- 151
+purify$ -- 177
 quote$ -- 0
-skip$ -- 251
+skip$ -- 293
 stack$ -- 0
-substring$ -- 553
-swap$ -- 23
+substring$ -- 703
+swap$ -- 27
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 128
-warning$ -- 0
-while$ -- 70
+type$ -- 152
+warning$ -- 1
+while$ -- 86
 width$ -- 0
-write$ -- 301
+write$ -- 353
+(There was 1 warning)

@@ -40,7 +40,7 @@ The genetic algorithm (GA) is inspired by nature, and seeks to evolve useful con
 proceeds over a number of generations to evolve solutions to problems not yielding to other known methods. 
 Basic elements of a GA are: 
 selection according to fitness, crossover, and random mutation (see \cite{Mitchell1999}). 
-In the simplest case, populatoin members are fixed-length binary strings.   
+In the simplest case, population members are fixed-length binary strings.   
 The fitness function assigns a score (fitness) to the elements (chromosomes) of 
 the current population. 
 
@@ -348,6 +348,15 @@ compute fitness which might give cycles in population evolution. And in another 
 Basically they are trying to find cyclic behavior anywhere in parameter space of fitness, crossover and mutation, and they accomplish 
 that by solving for particular fitness related to crossover and mutation. A better way to understand cyclic behavior would be 
 to take a slice of the space with fixed fitness and see if we get cyclic behavior for different crossover and mutation. 
+
+\begin{figure}[h]
+\begin{center}
+\subfloat{
+\resizebox{6cm}{5cm}{\includegraphics{figures/eps/cmf.eps}}}\hspace{-3em}%
+\caption[\textbf{Parameter space of crossover, mutation and fitness}]{\textbf{Parameter space of crossover, mutation and fitness}  }
+\label{fig_cmf}
+\end{center}
+\end{figure}
 
 Wright and Agapie exhibit cycling behavior in one slice of parameter space of fitness, crossover and mutation (see \cite{Wright2001}). 
 They fixed fitness using fitness function where fitness of string is one plus integer value of binary representation of the string. 

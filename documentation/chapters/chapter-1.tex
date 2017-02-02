@@ -295,7 +295,7 @@ where the constant (in the "big oh") is independent of the dimension $n$ of $\La
 From \ref{theorem3.1_b}, the distance between an infinite population $\bm{\xi}$ and finite population $p$ is $O(1/\sqrt{r})$. 
 This suggests that the distance between $\tau (\bm{p})$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$.
 
-Let $\eta$ be the random variable $\| \bm{q} - \mathcal{G}(\bm{p}) \|$, and let $\phi (x) = x^2$. 
+Let $\eta$ be the random variable $\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \|$, and let $\phi (x) = x^2$. 
 % Then, $\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|^2)$ becomes $\mathcal{E}(\phi (\eta))$. 
 It follows from Jensen's Inequality (see \cite{JensenInequality}) that 
 since $\phi$ is a convex function, 
@@ -305,7 +305,7 @@ since $\phi$ is a convex function,
 Therefore,
 \begin{equation}
 \label{Jensen}
-\mathcal{E}(\| \bm{q} - \mathcal{G}(\bm{p}) \|) \;=\; \mathcal{E}(\eta) \leq \sqrt{\mathcal{E}(\eta^2)} \;=\; \frac{\sqrt{1 - \|\mathcal{G}(\bm{p})\|^2}}{\sqrt{\bm{r}}}
+\mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \|) \;=\; \mathcal{E}(\eta) \leq \sqrt{\mathcal{E}(\eta^2)} \;=\; \frac{\sqrt{1 - \|\mathcal{G}(\bm{p})\|^2}}{\sqrt{\bm{r}}}
 \end{equation}
 This suggests that the distance between $\tau (\bm{p})$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$. 
 

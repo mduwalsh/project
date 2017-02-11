@@ -172,7 +172,8 @@ graphs are displayed below.
 \resizebox*{7cm}{!}{\includegraphics{figures/eps/slope/m.eps}}}\hspace{5pt}
 \subfloat[Intercept $b$, genome length $\ell$.]{
 \resizebox*{7cm}{!}{\includegraphics{figures/eps/slope/b.eps}}}
-\caption[\textbf{Regression parameters}]{\textbf{Regression parameters:} multi-plot of slope $m$ and intercept $b$ for generation  $n \in \{1,  2,  4,  8,  16,  32,  64,  128\}$ .}
+\caption[\textbf{Regression parameters}]{\textbf{Regression parameters:} 
+Multi-plot of Slope $m$ and Intercept $b$ for Generation  $n \in \{1,  2,  4,  8,  16,  32,  64,  128\}$ }
 \label{regression-parameters}
 \end{center}
 \end{figure}
@@ -200,5 +201,6 @@ e^b$ decreases monotonically with genome length $\ell$, and increases
 monotonically with generation $n$.  The increase in $k$ for larger $n$
 seems to be a manifestation of the growing nonlinearity uniformly
 exhibited by the plots in {\bf Figure \ref{convergence}} as $n$ increases.  It seems
-likely that the nonlinearity results from genetic drift experienced by
-finite populations (see \cite{CrowKimura}).
+likely that the nonlinearity results partly from genetic drift experienced by
+finite populations (see \cite{CrowKimura}). And partly the nonlinearity exists because the variance between 
+finite and infinite populations predicted by Vose is for single step case, and as generation increases nonlinearity increases. 

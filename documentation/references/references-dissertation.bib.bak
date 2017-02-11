@@ -341,7 +341,7 @@
   Url                      = {https://en.wikipedia.org/wiki/Markov_chain}
 }
 
-@Article{Wright1997,
+@Article{Wright2001,
   Title                    = {Cyclic and Chaotic Behavior in Genetic Algorithms},
   Author                   = {Wright, A. H. and Agapie, A.},
   Journal                  = {Proceedings of the 3rd Annual Conference on Genetic and Evolutionary Computation},

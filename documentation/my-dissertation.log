@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  9 FEB 2017 13:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  10 FEB 2017 12:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3205,7 +3205,7 @@ Chains and Al-go-rith-mic Ap-pli-ca-tions\OT1/cmr/m/n/12 .
 [135
 
 ]
-Underfull \hbox (badness 1946) in paragraph at lines 91--91
+Underfull \hbox (badness 1946) in paragraph at lines 96--96
 []\OT1/cmr/m/n/12 Mendel, G. (1865).  Ver-suche ^^?uber plflanzen-hy-bri-den.  
 \OT1/cmr/m/it/12 Ver-hand-lun-gen des
  []
@@ -3246,16 +3246,16 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
 (rerunfilecheck)             Checksum: C7776E9AA51A76815618053442D42726;3946.
 Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
-(rerunfilecheck)             Checksum: 0EADA6D12D1AC328E362F04F3BEF979A;3096.
+(rerunfilecheck)             Checksum: FE64FE36EC0EB84EB5C0E4498250E0DA;3149.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
  ) 
 Here is how much of TeX's memory you used:
- 10424 strings out of 495029
- 173549 string characters out of 6181522
- 276094 words of memory out of 5000000
- 13232 multiletter control sequences out of 15000+600000
+ 10430 strings out of 495029
+ 173651 string characters out of 6181522
+ 276121 words of memory out of 5000000
+ 13238 multiletter control sequences out of 15000+600000
  22513 words of font info for 88 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  39i,16n,53p,452b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (156 pages, 714964 bytes).
+Output written on my-dissertation.dvi (156 pages, 716412 bytes).

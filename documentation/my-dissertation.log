@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  10 FEB 2017 12:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  12 FEB 2017 18:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -781,21 +781,24 @@ File: figures/eps/slope/m.eps Graphic file (type eps)
 
 <figures/eps/slope/m.eps>
 File: figures/eps/slope/b.eps Graphic file (type eps)
- <figures/eps/slope/b.eps>)
+ <figures/eps/slope/b.eps> [29]
+File: figures/eps/nonlinear.eps Graphic file (type eps)
+
+<figures/eps/nonlinear.eps>)
 :<-
-[29]) [30]
+[30]) [31]
 :<-
 :<+ chapters/chapter-3.tex
 \openout2 = `chapters/chapter-3.aux'.
 
 (./chapters/chapter-3.tex
 Chapter 3.
-[31
+[32
 
 
 
 
-] [32] [33] [34] [35]
+] [33] [34] [35] [36]
 Package srcltx Info: Expanded filename `chapters/oscillation_hap.tex' to `chapt
 ers/oscillation_hap.tex' on input line 220.
 
@@ -823,7 +826,7 @@ File: figures/eps/osc/b8/osc_inf_hap.eps Graphic file (type eps)
 <figures/eps/osc/b8/osc_inf_hap.eps>
 File: figures/eps/osc/b8/fin_hap_dist.eps Graphic file (type eps)
  <figures/eps/osc/b8/fin_hap_dist.eps>
-[36]
+[37]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -904,13 +907,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
 :<-
-[37] [38] [39] [40] [41]
+[38] [39] [40] [41] [42]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[42
+[43
 
-] [43]
+] [44]
 Package srcltx Info: Expanded filename `chapters/oscillation_dip.tex' to `chapt
 ers/oscillation_dip.tex' on input line 271.
 
@@ -1018,9 +1021,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
 :<-
-[44
+[45
 
-] [45] [46] [47] [48]
+] [46] [47] [48] [49]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1032,7 +1035,7 @@ Overfull \hbox (1.01158pt too wide) in paragraph at lines 328--331
  [][][][][] 
  []
 
-[49
+[50
 
 ]
 File: figures/eps/osc/b12/b12_n004096_osc_fin_dip_lvl.eps Graphic file (type ep
@@ -1049,26 +1052,24 @@ Overfull \hbox (1.01338pt too wide) in paragraph at lines 347--350
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[50]
+[51] [52]
 File: figures/eps/osc/b14/b14_n004096_osc_fin_dip_10_50.eps Graphic file (type 
 eps)
- <figures/eps/osc/b14/b14_n004096_osc_fin_dip_10_50.eps>
+ <figures/eps/osc/b14/b14_n004096_osc_fin_dip_10_50.eps>) [53
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[51]) [52]
+]
 :<-
 :<+ chapters/chapter-4.tex
 \openout2 = `chapters/chapter-4.aux'.
 
 (./chapters/chapter-4.tex
 Chapter 4.
-[53
+[54
 
 
 
 
-] [54]
+] [55]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 88.
@@ -1238,7 +1239,7 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 134.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[55] [56] [57] [58] [59] [60
+[56] [57] [58] [59] [60] [61
 
 ])
 :<-
@@ -1408,7 +1409,7 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 143.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[61] [62] [63] [64] [65])
+[62] [63] [64] [65] [66])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1468,7 +1469,7 @@ File: figures/eps/vio/mu/b8/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: Float too large for page by 42.11111pt on input line 35.
 
-[66
+[67
 
 ]
 
@@ -1579,7 +1580,7 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 142.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[67] [68] [69] [70] [71])
+[68] [69] [70] [71] [72])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1750,9 +1751,9 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 147.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[72
+[73
 
-] [73] [74] [75] [76])
+] [74] [75] [76] [77])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1812,7 +1813,7 @@ File: figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: Float too large for page by 42.11111pt on input line 35.
 
-[77
+[78
 
 ]
 
@@ -1923,7 +1924,7 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 146.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[78] [79] [80] [81] [82] [83
+[79] [80] [81] [82] [83] [84
 
 ])
 :<-
@@ -2093,9 +2094,9 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 147.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[84] [85] [86] [87] [88])
+[85] [86] [87] [88] [89])
 :<-
-[89
+[90
 
 ]
 File: figures/eps/vio/dist_mu.eps Graphic file (type eps)
@@ -2107,7 +2108,7 @@ Overfull \hbox (25.54599pt too wide) in paragraph at lines 125--129
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[90] [91]) [92
+[91] [92]) [93
 
 ]
 :<-
@@ -2116,7 +2117,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 (./chapters/chapter-5.tex
 Chapter 5.
-[93
+[94
 
 
 
@@ -2291,7 +2292,7 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 143.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[94] [95] [96] [97] [98])
+[95] [96] [97] [98] [99])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -2354,7 +2355,7 @@ File: figures/eps/vio/chi/b8/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: Float too large for page by 42.11111pt on input line 36.
 
-[99
+[100
 
 ]
 
@@ -2465,9 +2466,9 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 142.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[100] [101] [102] [103] [104])
+[101] [102] [103] [104] [105])
 :<-
-[105
+[106
 
 ]
 
@@ -2639,7 +2640,7 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 142.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[106] [107] [108] [109] [110])
+[107] [108] [109] [110] [111])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -2810,9 +2811,9 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 146.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[111
+[112
 
-] [112] [113] [114] [115])
+] [113] [114] [115] [116])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -2875,7 +2876,7 @@ File: figures/eps/vio/chi/b8/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: Float too large for page by 42.11111pt on input line 35.
 
-[116
+[117
 
 ]
 
@@ -2986,7 +2987,7 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 146.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[117] [118] [119] [120] [121] [122
+[118] [119] [120] [121] [122] [123
 
 ])
 :<-
@@ -3159,9 +3160,9 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 146.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[123] [124] [125] [126] [127])
+[124] [125] [126] [127] [128])
 :<-
-[128
+[129
 
 ]
 File: figures/eps/vio/dist_chi.eps Graphic file (type eps)
@@ -3173,26 +3174,26 @@ Overfull \hbox (25.54599pt too wide) in paragraph at lines 138--142
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[129] [130]) [131]
+[130] [131]) [132]
 :<-
 :<+ chapters/chapter-6.tex
 \openout2 = `chapters/chapter-6.aux'.
 
 (./chapters/chapter-6.tex
 Chapter 6.
-[132
+[133
 
 
 
 
-]) [133]
+]) [134]
 :<-
 :<+ my-dissertation.bbl
 (./my-dissertation.bbl (./my-dissertation.brf)
 \tf@brf=\write8
 \openout8 = `my-dissertation.brf'.
 
- [134
+ [135
 
 
 
@@ -3202,7 +3203,7 @@ Underfull \hbox (badness 1107) in paragraph at lines 54--54
 Chains and Al-go-rith-mic Ap-pli-ca-tions\OT1/cmr/m/n/12 .
  []
 
-[135
+[136
 
 ]
 Underfull \hbox (badness 1946) in paragraph at lines 96--96
@@ -3210,9 +3211,9 @@ Underfull \hbox (badness 1946) in paragraph at lines 96--96
 \OT1/cmr/m/it/12 Ver-hand-lun-gen des
  []
 
-[136])
+[137])
 :<-
-[137] [138]
+[138] [139]
 :<+ back-matter/appendix-1.tex
 \openout2 = `back-matter/appendix-1.aux'.
 
@@ -3221,7 +3222,7 @@ Underfull \hbox (badness 1946) in paragraph at lines 96--96
 :<+ back-matter/vita.tex
 \openout2 = `back-matter/vita.aux'.
 
-(./back-matter/vita.tex) [139
+(./back-matter/vita.tex) [140
 
 
 
@@ -3244,18 +3245,18 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 142.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: C7776E9AA51A76815618053442D42726;3946.
+(rerunfilecheck)             Checksum: C732F969E6450F1249F2379B56642468;3947.
 Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
-(rerunfilecheck)             Checksum: FE64FE36EC0EB84EB5C0E4498250E0DA;3149.
+(rerunfilecheck)             Checksum: 0A83D5B36D9CFAF022E896380777882E;3149.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
  ) 
 Here is how much of TeX's memory you used:
- 10430 strings out of 495029
- 173651 string characters out of 6181522
- 276121 words of memory out of 5000000
- 13238 multiletter control sequences out of 15000+600000
+ 10433 strings out of 495029
+ 173701 string characters out of 6181522
+ 276233 words of memory out of 5000000
+ 13240 multiletter control sequences out of 15000+600000
  22513 words of font info for 88 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  39i,16n,53p,452b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (156 pages, 716412 bytes).
+Output written on my-dissertation.dvi (157 pages, 719024 bytes).

@@ -153,7 +153,10 @@ shows distance of finite and infinite diploid populations to non-violation limit
 Those graphs indicate oscillating behavior of diploid population given violation. 
 Both finite and infinite populations oscillate given violation. Like in haploid case, oscillations are sharper. Since value of $\bm{\epsilon}$ 
 is very small, damping of ripples is slow. The all zeros mask created in mutation distribution with $\bm{\epsilon} \;=\; 0.01$ has small 
-probability of being used during mutation. Infinite population oscillation does not die out in 50 generations. 
+probability of being used during mutation. Infinite population oscillation does not die out in 50 generations but will eventually die out. 
+Even though oscillation in finite population is tapering down,
+will not die out completely since the Markov chain is regular 
+and can pick up at some point in the long run to oscillate with higher amplitude.
 
 The left column of figures \ref{oscillation_8d_vio_mu_0.01} through \ref{oscillation_14d_vio_mu_0.01} 
 shows distance of finite and infinite diploid populations to limit $\bm{z^\ast}$ 

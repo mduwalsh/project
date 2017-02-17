@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="nonlinear.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="256.39441"
+     inkscape:cy="677.09312"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1301"
+     inkscape:window-height="744"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3799"
+       transform="matrix(1.3278688,0,0,1.866381,-37.224822,-352.4032)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path2985"
+         d="m 114.2428,352.40509 82.94297,-69.37153"
+         style="fill:#808000;stroke:#b30000;stroke-width:1.41417503;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path2987"
+         d="m 114.29272,352.36919 89.98599,53.55742"
+         style="fill:none;stroke:#0000aa;stroke-width:1.51401377;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <path
+       style="fill:#808000;stroke:#b30000;stroke-width:1.41417503;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 233.38006,172.65777 337.8696,144.83903"
+       id="path2985-0"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#0000aa;stroke-width:1.51401377;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 233.34296,180.73596 79.31876,68.36967"
+       id="path2987-4"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#cccccc;stroke:#b30000;stroke-width:1.41417503;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.24252511, 4.24252511;stroke-dashoffset:0"
+       d="M 351.1957,144.05752 455.68523,116.23878"
+       id="path2985-8"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#cccccc;stroke:#0000aa;stroke-width:1.51400006;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 349.13828,150.1154 79.31876,68.36967"
+       id="path2987-9"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="matrix(0.91338279,-0.42591739,0.36921446,0.79178296,8.6305988,175.41063)"
+       id="g3799-2">
+      <path
+         inkscape:connector-curvature="0"
+         id="path2985-3"
+         d="m 114.2428,352.40509 82.94297,-69.37153"
+         style="fill:#808000;stroke:#b30000;stroke-width:1.41417503;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path2987-6"
+         d="m 114.29272,352.36919 89.98599,53.55742"
+         style="fill:none;stroke:#0000aa;stroke-width:1.51401377;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <path
+       sodipodi:type="arc"
+       style="fill:#bb0f00;fill-opacity:1;stroke:#c8001b;stroke-width:1.50000000000000000;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3966"
+       sodipodi:cx="137.32143"
+       sodipodi:cy="186.46933"
+       sodipodi:rx="1.25"
+       sodipodi:ry="1.25"
+       d="m 138.57143,186.46933 a 1.25,1.25 0 1 1 -2.5,0 1.25,1.25 0 1 1 2.5,0 z"
+       transform="matrix(6.3041651,0,0,6.5898794,-747.66122,-926.26963)" />
+    <path
+       style="fill:#cccccc;stroke:#b30000;stroke-width:1.41417503;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 358.35984,405.99751 54.21442,-93.55608"
+       id="path2985-8-5"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#cccccc;stroke:#0000aa;stroke-width:1.51401377;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.54204127, 4.54204127;stroke-dashoffset:0"
+       d="m 359.28901,412.37156 104.43148,-7.74217"
+       id="path2987-9-1"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="109.09647"
+       y="334.14371"
+       id="text4090"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4092"
+         x="109.09647"
+         y="334.14371"
+         style="font-size:16px;font-weight:bold;-inkscape-font-specification:Sans Bold">p</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="318.19806"
+       y="180.60054"
+       id="text4100"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4102"
+         x="318.19806"
+         y="180.60054"
+         style="font-size:16px">τ<tspan
+   style="font-size:65.00091553%;baseline-shift:super"
+   id="tspan4172">2</tspan>(<tspan
+   style="font-size:16px;font-weight:bold;-inkscape-font-specification:Sans Bold"
+   id="tspan4116">p</tspan>)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="322.08636"
+       y="446.92188"
+       id="text4104"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4106"
+         x="322.08636"
+         y="446.92188"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:TeX Gyre Chorus;-inkscape-font-specification:TeX Gyre Chorus Medium">G<tspan
+   style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans"
+   id="tspan4112"><tspan
+   style="font-size:65.00091553%;baseline-shift:super"
+   id="tspan4174">2</tspan>(</tspan><tspan
+   style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans Bold"
+   id="tspan4108">p</tspan><tspan
+   style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans"
+   id="tspan4114">)</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.64173889px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="204.0419"
+       y="219.34041"
+       id="text4100-3"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0368909,0.9644216)"><tspan
+         sodipodi:role="line"
+         id="tspan4102-3"
+         x="204.0419"
+         y="219.34041"
+         style="font-size:16px">τ(<tspan
+   style="font-size:16px;font-weight:bold;-inkscape-font-specification:Sans Bold"
+   id="tspan4116-7">p</tspan>)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="208.82716"
+       y="427.25488"
+       id="text4104-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4106-6"
+         x="208.82716"
+         y="427.25488"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:TeX Gyre Chorus;-inkscape-font-specification:TeX Gyre Chorus Medium">G<tspan
+   style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans"
+   id="tspan4112-5">(</tspan><tspan
+   style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans Bold"
+   id="tspan4108-2">p</tspan><tspan
+   style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans"
+   id="tspan4114-6">)</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.64173889px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="292.96585"
+       y="297.73068"
+       id="text4100-3-9"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0368909,0.96442161)"><tspan
+         sodipodi:role="line"
+         id="tspan4102-3-4"
+         x="292.96585"
+         y="297.73068"
+         style="font-size:16px"><tspan
+   style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:TeX Gyre Chorus;-inkscape-font-specification:TeX Gyre Chorus Medium"
+   id="tspan4292">G</tspan>(τ(<tspan
+   style="font-size:16px;font-weight:bold;-inkscape-font-specification:Sans Bold"
+   id="tspan4116-7-5">p</tspan>))</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="242.43661"
+       y="536.17426"
+       id="text4200"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4202" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.64173889px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="282.08011"
+       y="355.63644"
+       id="text4100-3-9-5"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0368909,0.96442161)"><tspan
+         sodipodi:role="line"
+         id="tspan4102-3-4-4"
+         x="282.08011"
+         y="355.63644"
+         style="font-size:16px">τ(<tspan
+   style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:TeX Gyre Chorus;-inkscape-font-specification:TeX Gyre Chorus Medium"
+   id="tspan4290">G</tspan>(<tspan
+   style="font-size:16px;font-weight:bold;-inkscape-font-specification:Sans Bold"
+   id="tspan4116-7-5-9">p</tspan>))</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="432.14008"
+       y="429.51355"
+       id="text4104-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4106-8"
+         x="432.14008"
+         y="429.51355"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:TeX Gyre Chorus;-inkscape-font-specification:TeX Gyre Chorus Medium">G<tspan
+   style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans"
+   id="tspan4112-3"><tspan
+   style="font-size:65.00091553%;baseline-shift:super"
+   id="tspan4174-3">n</tspan>(</tspan><tspan
+   style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans Bold"
+   id="tspan4108-5">p</tspan><tspan
+   style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans"
+   id="tspan4114-3">)</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="426.17273"
+       y="154.74425"
+       id="text4100-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4102-4"
+         x="426.17273"
+         y="154.74425"
+         style="font-size:16px">τ<tspan
+   style="font-size:65.00091553%;baseline-shift:super"
+   id="tspan4288">n</tspan>(<tspan
+   style="font-size:16px;font-weight:bold;-inkscape-font-specification:Sans Bold"
+   id="tspan4116-4">p</tspan>)</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#bb0f00;fill-opacity:1;stroke:#c8001b;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3966-6"
+       sodipodi:cx="137.32143"
+       sodipodi:cy="186.46933"
+       sodipodi:rx="1.25"
+       sodipodi:ry="1.25"
+       d="m 138.57143,186.46933 a 1.25,1.25 0 1 1 -2.5,0 1.25,1.25 0 1 1 2.5,0 z"
+       transform="matrix(6.3041651,0,0,6.5898794,-638.55408,-1055.7339)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#bb7b00;fill-opacity:1;stroke:#c8731b;stroke-width:1.50000000000000000;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3966-75"
+       sodipodi:cx="137.32143"
+       sodipodi:cy="186.46933"
+       sodipodi:rx="1.25"
+       sodipodi:ry="1.25"
+       d="m 138.57143,186.46933 a 1.25,1.25 0 1 1 -2.5,0 1.25,1.25 0 1 1 2.5,0 z"
+       transform="matrix(6.3041651,0,0,6.5898794,-571.58454,-912.87681)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#170fee;fill-opacity:1;stroke:#1d00e7;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3966-75-3-5"
+       sodipodi:cx="137.32143"
+       sodipodi:cy="186.46933"
+       sodipodi:rx="1.25"
+       sodipodi:ry="1.25"
+       d="m 138.57143,186.46933 a 1.25,1.25 0 1 1 -2.5,0 1.25,1.25 0 1 1 2.5,0 z"
+       transform="matrix(6.3041651,0,0,6.5898794,-627.8398,-824.30536)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#170fee;fill-opacity:1;stroke:#1d00e7;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3966-75-3-6"
+       sodipodi:cx="137.32143"
+       sodipodi:cy="186.46933"
+       sodipodi:rx="1.25"
+       sodipodi:ry="1.25"
+       d="m 138.57143,186.46933 a 1.25,1.25 0 1 1 -2.5,0 1.25,1.25 0 1 1 2.5,0 z"
+       transform="matrix(6.3041651,0,0,6.5898794,-509.26837,-820.19296)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#bb0f00;fill-opacity:1;stroke:#c8001b;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3966-9"
+       sodipodi:cx="137.32143"
+       sodipodi:cy="186.46933"
+       sodipodi:rx="1.25"
+       sodipodi:ry="1.25"
+       d="m 138.57143,186.46933 a 1.25,1.25 0 1 1 -2.5,0 1.25,1.25 0 1 1 2.5,0 z"
+       transform="matrix(6.3041651,0,0,6.5898794,-519.98266,-1085.734)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#170fee;fill-opacity:1;stroke:#1d00e7;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3966-75-3-6-1"
+       sodipodi:cx="137.32143"
+       sodipodi:cy="186.46933"
+       sodipodi:rx="1.25"
+       sodipodi:ry="1.25"
+       d="m 138.57143,186.46933 a 1.25,1.25 0 1 1 -2.5,0 1.25,1.25 0 1 1 2.5,0 z"
+       transform="matrix(6.3041651,0,0,6.5898794,-395.42211,-829.05154)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#bb0f00;fill-opacity:1;stroke:#c8001b;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3966-9-2"
+       sodipodi:cx="137.32143"
+       sodipodi:cy="186.46933"
+       sodipodi:rx="1.25"
+       sodipodi:ry="1.25"
+       d="m 138.57143,186.46933 a 1.25,1.25 0 1 1 -2.5,0 1.25,1.25 0 1 1 2.5,0 z"
+       transform="matrix(6.3041651,0,0,6.5898794,-408.55409,-1112.1624)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#bb7b00;fill-opacity:1;stroke:#c8731b;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3966-75-7"
+       sodipodi:cx="137.32143"
+       sodipodi:cy="186.46933"
+       sodipodi:rx="1.25"
+       sodipodi:ry="1.25"
+       d="m 138.57143,186.46933 a 1.25,1.25 0 1 1 -2.5,0 1.25,1.25 0 1 1 2.5,0 z"
+       transform="matrix(6.3041651,0,0,6.5898794,-542.44813,-970.42812)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#bb7b00;fill-opacity:1;stroke:#c8731b;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3966-75-0"
+       sodipodi:cx="137.32143"
+       sodipodi:cy="186.46933"
+       sodipodi:rx="1.25"
+       sodipodi:ry="1.25"
+       d="m 138.57143,186.46933 a 1.25,1.25 0 1 1 -2.5,0 1.25,1.25 0 1 1 2.5,0 z"
+       transform="matrix(6.3041651,0,0,6.5898794,-430.32119,-1004.7733)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#bb7b00;fill-opacity:1;stroke:#c8731b;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3966-75-9"
+       sodipodi:cx="137.32143"
+       sodipodi:cy="186.46933"
+       sodipodi:rx="1.25"
+       sodipodi:ry="1.25"
+       d="m 138.57143,186.46933 a 1.25,1.25 0 1 1 -2.5,0 1.25,1.25 0 1 1 2.5,0 z"
+       transform="matrix(6.3041651,0,0,6.5898794,-449.51409,-918.91033)" />
+    <text
+       xml:space="preserve"
+       style="font-size:30.64173889px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="400.40109"
+       y="268.95428"
+       id="text4100-3-9-3"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0368909,0.96442161)"><tspan
+         sodipodi:role="line"
+         id="tspan4102-3-4-6"
+         x="400.40109"
+         y="268.95428"
+         style="font-size:16px"><tspan
+   style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:TeX Gyre Chorus;-inkscape-font-specification:TeX Gyre Chorus Medium"
+   id="tspan4292-0">G</tspan>(τ<tspan
+   style="font-size:10.40014648px;baseline-shift:super"
+   id="tspan4017">2</tspan>(<tspan
+   style="font-size:16px;font-weight:bold;-inkscape-font-specification:Sans Bold"
+   id="tspan4116-7-5-6">p</tspan>))</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.64173889px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="399.00607"
+       y="350.65289"
+       id="text4100-3-9-5-2"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0368909,0.96442161)"><tspan
+         sodipodi:role="line"
+         id="tspan4102-3-4-4-6"
+         x="399.00607"
+         y="350.65289"
+         style="font-size:16px">τ(<tspan
+   style="font-size:16px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:TeX Gyre Chorus;-inkscape-font-specification:TeX Gyre Chorus Medium"
+   id="tspan4290-1">G</tspan><tspan
+   style="font-size:65.00000029%;baseline-shift:super"
+   id="tspan4050">2</tspan>(<tspan
+   style="font-size:16px;font-weight:bold;-inkscape-font-specification:Sans Bold"
+   id="tspan4116-7-5-9-8">p</tspan>))</tspan></text>
+  </g>
+</svg>

@@ -355,12 +355,14 @@ So for longer genome length $\ell$, larger population size is needed to observe 
 
 For the diploid case, when genome length $\ell$ is longer ($\ell$ = 12 and 14 in our simulation), 
 and population size is small (like N = 4096 in our simulation), finite population has tendency to 
-jump between different levels. Figures \ref{fig:osc_12d_N4096} and \ref{fig:osc_14d_N4096} show such tendency for 
-$\ell$ = 12 and $\ell$ = 14. Very good oscillations with tiny amplitude were observed in temporarily stable states 
+oscillate between different levels. Figures \ref{fig:osc_12d_N4096} and \ref{fig:osc_14d_N4096} show such tendency for 
+$\ell$ = 12 and $\ell$ = 14. Very good oscillations with small amplitude were observed in temporarily stable states 
 in these cases. Figure \ref{oscillation_14d_N4096} shows magnified scale oscillations for $\ell \;=\; 14$ 
 when high peak is omitted from the plot of \ref{fig:osc_14d_N4096}. 
-As string length increases, the number of fixed points also increases, 
-and finite populations tend to stay near fixed points(see \cite{Vose1999}). With many fixed points available, 
+As string length increases, the number of fixed points for other crossover and mutation distributions 
+around the vicinity of finite population path also increases, 
+and finite populations may get attracted to those near fixed points(see \cite{Vose1999}). 
+With many fixed points available, 
 there are several regions for finite populations to prefer. 
 But when population size is large, finite populations intend to follow the infinite population, 
 and infinite population tends to 
@@ -380,14 +382,14 @@ larger populations have lower tendency to jump between different levels.
 
 \section{Summary}
 In this chapter, we described infinite population limits predicted by Vose, and conditions 
-for convergence to periodic orbits. Mutation distributions and crossover distributions were computed 
-to satisfy the conditions for infinite populations to converge to periodic orbits. Through experiment, 
+for convergence to a periodic orbit. Mutation and crossover distributions were computed 
+to satisfy the conditions for infinite populations to converge to a periodic orbit. Through experiment, 
 we showed finite populations can also exhibit approximate oscillation. 
 We found amplitude of oscillation is affected by string length used and population size. 
-As string length increases, oscillation amplitude decreases. 
-As population size increases, oscillation amplitude increases and also randomness in oscillation decreases. 
+As string length increases, oscillation amplitude decreases. Oscillation degrades as string length increases. 
+As population size increases, oscillation amplitude increases, and also randomness in oscillation decreases. 
 Simulations show finite populations with smaller population size and higher string length may oscillate 
-between different pairs of fixed points, which occurred in diploid populations only in our simulations. 
+between different pairs of points, which occurred in diploid populations only in our simulations. 
 Moreover, the distance between finite populations and infinite populations can in practice decrease 
 as $1/\sqrt{N}$ as the populations size increases, which is in agreement with previous results from 
 chapter 2.

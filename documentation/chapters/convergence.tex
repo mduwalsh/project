@@ -154,7 +154,7 @@ As expected, the graphs show smoothing with increasing genome length
 and also with increased population size (as explained in
 \cite{Vose1999}, the initial transient of a finite haploid population
 trajectory converges as $N \rightarrow \infty$ to the corresponding
-infinite population model).
+infinite population model trajectory).
 
 %\newpage
   Of particular interest is the linear trend exhibited above.  The
@@ -181,7 +181,6 @@ Multi-plot of Slope $m$ and Intercept $b$ for Generation  $n \in \{1,  2,  4,  8
 Taking the exponential of the regression line (\ref{regresion}) yields
 the estimate
 $d \approx N^m e^b $.
-
 Slopes of the regression lines shown in {\bf Figure \ref{regression-parameters}} are
 approximately $-0.5$, indicating
 \begin{equation}
@@ -202,8 +201,8 @@ monotonically with generation $n$.  The increase in $k$ for larger $n$
 seems to be a manifestation of the growing nonlinearity uniformly
 exhibited by the plots in {\bf Figure \ref{convergence}} as $n$ increases.  It seems
 likely that the nonlinearity results partly from genetic drift experienced by
-finite populations (see \cite{CrowKimura}). And partly because as generation increases, 
-difference between actual finite population and infinite population accumulates 
+finite populations (see \cite{CrowKimura}), and partly because as generations increase, 
+differences between actual finite and infinite populations may accumulate 
 which can be understood from figure \ref{nonlinear}. 
 
 \begin{figure}[htp]
@@ -211,9 +210,8 @@ which can be understood from figure \ref{nonlinear}.
 \subfloat{
 \resizebox*{7cm}{!}{\includegraphics{figures/eps/nonlinear.eps}}}\hspace{5pt}
 \caption[\textbf{Non linearity in distance as generation increases}]{\textbf{Non linearity in distance as generation increases:} 
-Red node represents finite population point and blue node represents infinite population point. 
-Each edge connects one generation to next, red edge denotes finite population path, 
-and blue edge denotes infinite population path from each node}
+Red nodes represent finite populations, blue node represents infinite populations. 
+Edges connect one generation to the next (red for finite population, blue for infinite population)}
 \label{nonlinear}
 \end{center}
 \end{figure}

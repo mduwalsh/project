@@ -1,16 +1,16 @@
 \chapter{Violation in Mutation Distribution} \label{ch:muviolation}
 The results from chapter \ref{ch:oscillation} show that oscillation occurs
-when the crossover distribution $\bm{\chi}$, and the mutation distribution $\bm{\mu}$ 
+when the crossover distribution $\bm{\chi}$ and the mutation distribution $\bm{\mu}$ 
 satisfy condition \ref{OscCond}. This chapter explores the robustness of 
 finite population oscillation when condition \ref{OscCond} is violated for $\bm{\mu}$. 
-The violation of the condition \ref{OscCond} results the absence of convergence of 
-infinite population to a periodic orbit.
+The violation of the condition \ref{OscCond} prevents 
+infinite population convergence to a periodic orbit.
 The violation in $\bm{\mu}$ also makes the Markov chain representing finite population evolution regular 
 (sometimes called ergodic). If the Markov chain is regular, 
 then positive steady state distribution exists for the Markov chain. 
-This means no periodic orbit exists for finite population, 
-and oscillation of finite population should not occur. 
-Can finite populations exhibit approximate oscillation when the
+This means no finite population periodic orbit exists, 
+and perfect finite population oscillation can not occur. 
+The question explored in this chapter is: Can finite populations exhibit approximate oscillation when the
 Markov chain is regular and infinite population trajectories
 have no periodic orbit?
 
@@ -20,10 +20,10 @@ infinite population trajectories have no periodic orbit. Consequently, $\bm{p}^\
 Violation of condition \ref{OscCond} for the mutation distribution makes the Markov chain regular. The initial population is 
 computed using same procedure as described in section \ref{InitPopOsc}. To explore the effects of the degree  
 of violation of condition \ref{OscCond} in $\bm{\mu}$, different values of $\bm{\epsilon}$ are used in experiments. 
-String length $\ell \;\in\; \{8, 10, 12, 14\}$ are considered for simulation.
+String lengths $\ell \;\in\; \{8, 10, 12, 14\}$ are considered for simulation.
 Going forward, we use `limit $\bm{z}^\ast$' to denote evolutionary limit when mutation distribution $\bm{\mu}$ 
 violates condition \ref{OscCond}, and 
-`non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$' to denote limits without violation.
+`non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$' to denote limits without violation (i.e., $\bm{epsilon} \;=\; 0$).
 
 \section{Violation}
 The mutation distribution $\bm{\mu}$ is modified as follows
@@ -59,7 +59,7 @@ $i \;=\; 00000100$ will have positive probability according to condition \ref{Os
 Mask $i$ can be used to mutate the sixth bit of a population member. More generally, 
 any bit has the option of mutating or not, so any string can mutate to any other.
 
-2. When $g$ has atleast one $0$:\newline
+2. When $g$ has at least one $0$:\newline
 Any mask with a $1$ at position $k$ and $0$ at all other positions  
 will have positive probability if $g$ also is $1$ at position $k$. Thus any bit where $g$ is $1$ has the option of mutating or not.  
 Any mask with $1$ in just one of the positions where $g$ has $1$s and also $1$ in just one of the positions where $g$ has $0$s can be used to 

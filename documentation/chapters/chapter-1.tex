@@ -314,7 +314,7 @@ This suggests that the distance between $\tau (\bm{p})$ and $\mathcal{G}(\bm{p})
 
 Equations \ref{EpsilonCheby}, \ref{theorem3.1_b}, and \ref{Jensen} all suggest that the 
 distance between $\tau(\bm{p})$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$. 
-All three of them are inequalities. The distance might decrease as much smaller than as $1/\sqrt{r}$ in reality. 
+All three of them are inequalities. The distance might decrease much faster than as $1/\sqrt{r}$ in reality. 
 The first research question to consider is whether that rate of decrease can be exhibited 
 in practice. We investigate the rate of decrease with experiments in Chapter 2.
 }
@@ -338,10 +338,10 @@ If a finite population GA follows the infinite population GA closely, and if inf
 finite populations might also show oscillating behavior. 
 Akin analytically proves the existence of cycling for a continuous-time diploid two loci, two allele model (see \cite{Akin1982}). 
 In contrast, we consider a discrete-time model with more than two loci. 
-Hastings used numerical approach to study 
-the behavior of the cycling populations with infinite diploid population model (see \cite{Hastings1981}). 
+Hastings used a numerical approach to study 
+the behavior of cycling populations with the infinite diploid population model (see \cite{Hastings1981}). 
 His model includes crossover but not mutation. 
-However, the study was simple and limited to two loci and two alleles. 
+Moreover, the study was limited to two loci and two alleles. 
 In contrast, we consider more than two loci, and include mutation. 
 Wright and Bidwell provided examples when cycles in an infinite population model occur with mutation and 
 crossover for 3 and 4 bit populations (see \cite{Wright1997}). 
@@ -349,7 +349,7 @@ Different behavior cases were observed.
 For a 3 bit example, both approximate period 2 cycling and long period cycling were observed. 
 For a 4 bit example, long period cycling was observed. 
 The examples provided were for specific 
-set parameter values for crossover, mutation and fitness. 
+parameter values. 
 Their examples are based on computing a specific fitness function and a specific initial population from randomly generated 
 mutation and crossover distributions in an attemp to find cyclic behavior anywhere within the parameter space of fitness, 
 crossover and mutation. 
@@ -374,23 +374,22 @@ infinite population evolutions, and observed cyclic behavior of periods 2, 3, 4,
 They also present data for finite populations exhibiting cyclic behavior. A significant difference between 
 their investigation and ours is that their mutation is dynamic; the manner in which a population member mutates 
 is dependent upon where the population is located in the state space $\Lambda$. In contrast, we consider static mutation which 
-mutates population members uniformly irrespective of where the population is located in $\Lambda$.
-
-Also works of Wright and Bidwell, and Wright and Agapie focus only on haploid population evolution 
-whereas we consider both haploid and diploid population evolutions.
-Moreover, our research studies cyclic behavior for a different slice of fitness   
+mutates population members uniformly irrespective of where the population is located in $\Lambda$. 
+Moreover, works of Wright and Bidwell, and Wright and Agapie focus only on haploid population evolution 
+whereas we consider both haploid and diploid population evolution.
+Our research also studies cyclic behavior for a different slice of fitness   
 than Wright and Agapie used in their work. 
 We consider uniform fitness where every population member has the same fitness.
 % but we vary crossover and mutation which are randomly generated. 
 We find cycles in both finite and infinite population evolution, 
 and provide visualization of oscillation related to infinite population fixed points. 
-The second research question that we investigate in Chapter 3 is: Do 
+In Chapter 3, we investigate the second research question: Do 
 finite populations exhibit oscillation in practice when infinite population oscillates? 
 }
 
 \item{
 The third research question concerns the robustness of finite population oscillation.
-Consider the lattice points in the simple $\Lambda$ which represent finite populations 
+Consider the lattice points in the simplex $\Lambda$ which represent finite populations 
 (for some fixed population size $r$) 
 and let $\bm{P}_j$ denote the $j$th population represented by the $j$th lattice point. 
 Let $\bm{\pi}^k$ be the probability vector having as $j$th component 
@@ -428,7 +427,7 @@ infinite population trajectories have no periodic orbit.
 In their work on cyclic behavior of populations, Wright and Agapie point out that the presence or 
 absence of crossover did not affect cyclic behavior (see \cite{Wright2001}). 
 But in our work, the condition for infinite population evolution to converge to periodic orbits depends upon crossover 
-and if the crossover distribution condition is violated, infinite population path will not have periodic orbits (see \cite{Vose1999}). 
+and if the crossover distribution condition is violated, infinite populations will not have periodic orbits (see \cite{Vose1999}). 
 We investigate the robustness of finite population oscillation. 
 The fourth research question is: Can finite population approximate oscillation be exhibited in practice when infinite population 
 trajectories have no periodic orbit due to the crossover distribution violating the condition 

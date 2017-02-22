@@ -6,7 +6,7 @@ selective pressure. This chapter shows how diploid evolution equations can be re
 and can be specialized to Vose's infinite population model, which is a haploid model.
 
 A basic syntactic model for haploid and diploid genomes is first considered. 
-Then the mechanics of how the next generation is obtained from current generation are
+Then the mechanics of how the next generation is obtained from the current generation are
 defined abstractly in procedural terms, which serves to motivate the equations governing evolution. 
 Next evolution equations are developed corresponding to the
 procedural description defining evolution for a population of
@@ -17,8 +17,8 @@ the diploid case. Mask based mutation and crossover operators are used to specia
 haploid equations to Vose's infinite haploid population model. 
 Analytical and computational simplification resulting from specialization to 
 Vose's infinite population model are explained and used 
-in experimental simulation and study of convergence of finite population 
-short-term behavior to behavior predicted by infinite population model.    
+in experimental simulations to study the convergence of finite population 
+short-term behavior to behavior predicted by the infinite population model.    
 The results confirm that the distance between the short-term
 evolutionary trajectory of finite diploid populations and the
 evolutionary trajectory of infinite diploid populations can in
@@ -148,9 +148,9 @@ $g$ in generation $n$ is
 
 Hence the (normalized) prevalence of haploid $g$ in generation $n$ is 
 the $g$th component of the distribution $p^n$. Moreover, 
-(\ref{project}) and (\ref{model1}) show (for $n > 0$) invertibility of the map
+(\ref{model1}) and (\ref{project}) show (for $n > 0$) invertibility of the map
 \[
-  \pi \nudge : \nudge {\bm q}^{n} \; \longmapsto \; {\bm p}^{n}
+  \psi \nudge : \nudge {\bm q}^{n} \; \longmapsto \; {\bm p}^{n}
 \]
 
 Evolution equation (\ref{model2}) in matrix form is
@@ -172,13 +172,13 @@ strings).
 \input{chapters/convergence.tex}
 
 \section{Summary}
-We began with a description of simple diploid Markov model under mutation 
+We began with a description of a simple diploid Markov model under mutation 
 and crossover with no selective pressure. The model was reduced to the haploid case and specialized 
-using mask based recombination operators to show Vose's infinite population model 
-can be extended to the diploid case. Using computational benefits 
+using mask-based recombination operators to extend Vose's infinite population model 
+to the diploid case. Using computational benefits 
 of this reduction, we showed via experiment and 
 regression of the resulting data that distance between finite diploid population and infinite 
 diploid population can indeed decrease like $1/\sqrt{N}$ in practice. That rate of decrease is consistent with 
-the single step-step convergence bounds predicted by 
+the single-step convergence bounds predicted by 
 Vose's infinite population model for the haploid case.
 

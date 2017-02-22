@@ -50,7 +50,6 @@ With above notations, the limits can be expressed in the Walsh basis by recursiv
     \widehat{\mathcal{M}({\bm p})_g}  & \text{otherwise}
   \end{cases}
 \end{equation}
-
 If $x_g \neq -1$ for all $g$, then ${\bm p}^\ast = {\bm q}^\ast = \lim_{n \rightarrow \infty} \mathcal{M}({\bm p})$ is the limit of mixing. In other cases, 
 mixing converges to a periodic orbit oscillating between ${\bm p}^\ast$ and ${\bm q}^\ast = \mathcal{M}({\bm p}^\ast)$.
 
@@ -77,7 +76,6 @@ and let $U01()$ return a random number between $0$ and $1$. For some $g \in \mat
     0 & \text{otherwise}
   \end{cases}
 \end{equation}
-
 Normalization yields $\bm{\mu}$ (the mutation distribution),
 \[
 \bm{\mu}_j := \bm{\mu}_j / \sum \limits_{j \in \mathcal{R} } \bm{\mu}_j.
@@ -174,8 +172,8 @@ and to initial finite diploid population vector $\bm{f}$ with population size $N
 \section{Oscillation}
 \label{Oscillation}
 
-Crossover distribution $\bm{\chi}$ and mutation distribution $\bm{\mu}$ satisfying 
-condition (\ref{OscCond}) are considered to investigate oscillating behavior near 
+Crossover distributions $\bm{\chi}$ and mutation distributions $\bm{\mu}$ satisfying 
+condition (\ref{OscCond}) are considered to investigate oscillating behavior in terms of  
 predicted infinite population evolutionary limits.
 
 Infinite haploid population evolutionary limits $\bm{p}_h^{\ast}$ and $\bm{q}_h^{\ast}$ 
@@ -361,12 +359,12 @@ in these cases. Figure \ref{oscillation_14d_N4096} shows magnified scale oscilla
 when high peak is omitted from the plot of \ref{fig:osc_14d_N4096}. 
 As string length increases, the number of fixed points for other crossover and mutation distributions 
 around the vicinity of finite population path also increases, 
-and finite populations may get attracted to those near fixed points(see \cite{Vose1999}). 
+and finite populations may get attracted to those near by fixed points(see \cite{Vose1999}). 
 With many fixed points available, 
 there are several regions for finite populations to prefer. 
 But when population size is large, finite populations intend to follow the infinite population, 
 and infinite population tends to 
-converge to a single fixed point or oscillate between two fixed points, and thus, 
+converge to a single fixed point or oscillate between two fixed points, hence  
 larger populations have lower tendency to jump between different levels.
 \clearpage
 
@@ -385,13 +383,13 @@ In this chapter, we described infinite population limits predicted by Vose, and 
 for convergence to a periodic orbit. Mutation and crossover distributions were computed 
 to satisfy the conditions for infinite populations to converge to a periodic orbit. Through experiment, 
 we showed finite populations can also exhibit approximate oscillation. 
-We found amplitude of oscillation is affected by string length used and population size. 
+We found amplitude of oscillation is affected by string length and population size. 
 As string length increases, oscillation amplitude decreases. Oscillation degrades as string length increases. 
 As population size increases, oscillation amplitude increases, and also randomness in oscillation decreases. 
 Simulations show finite populations with smaller population size and higher string length may oscillate 
-between different pairs of points, which occurred in diploid populations only in our simulations. 
+between different pairs of points, which in our simulations occurred only in diploid populations. 
 Moreover, the distance between finite populations and infinite populations can in practice decrease 
-as $1/\sqrt{N}$ as the populations size increases, which is in agreement with previous results from 
+as $1/\sqrt{N}$ as the populations size increases, which agrees with previous results from 
 chapter 2.
 
 

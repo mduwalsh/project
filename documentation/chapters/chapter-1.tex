@@ -90,13 +90,13 @@ the next generation, $\mathcal{G}(\bm{p})$ is a probability vector such that
 The evolution of infinite population $\bm{p}$ is the sequence
 \[ \bm{p} \to \mathcal{G}(\bm{p}) \to  {\mathcal{G}}(\mathcal{G}(\bm{p})) \to \cdots \]
 \setcounter{footnote}{2}
-Haldane, in the classic book `The Causes Of Evolution', presents summary of the basic models of population genetics 
+Haldane, in the classic book `The Causes Of Evolution', presents a summary of the basic models of population genetics 
 by Wright, Fisher, and Haldane (see \cite{Haldane1932}). 
 Several people working in the 1950s and the 1960s -- like Box (1957), Friedman (1959),
 Bledsoe (1961), Bremermann (1962), and Reed, Toombs and Baricelli (1967) -- developed evolution-inspired algorithms, 
 but little attention or theoretical analysis was given to them (see \cite{Mitchell1999}). Genetic algorithms were popularized by Holland 
 and his colleagues in the 1960s and the 1970s. Holland introduced a population-based algorithm with crossover and mutation, 
-and promoted his schema theorem ( see \cite{Holland1975}) as a theoretical means to analyze on genetic algorithm dynamics. 
+and promoted his schema theorem ( see \cite{Holland1975}) as a theoretical means by which to analyze genetic algorithm dynamics. 
 Holland's Schema theorem provides a lower bound for schema survival in 
 next generation.\footnote{A schema is a template that identifies a set of strings in the population with similarities 
 at certain string positions; it is made up of $1$s, $0$s, and $\ast$s where 
@@ -113,7 +113,8 @@ computes the expected proportion $\mathcal{G}(\bm{p})_i$ of string $i$ in the ne
 direct connection between the infinite population model and a finite population GA.
 
 Nix and Vose (see \cite{Nix1992}) explored issues regarding the relationship between the finite population GA and the infinite population model. 
-For a mutation rate $\bm{\mu}$ between $0$ and $0.5$, a finite population GA will form an ergodic Markov chain, visiting every state infinitely often in the long run.
+For a mutation rate $\mu$ between $0$ and $0.5$, a finite population GA will form an ergodic Markov chain, 
+visiting every state infinitely often in the long run.
 The short term trajectory followed by a finite population is related to 
 the evolutionary path determined by the infinite population model. 
 For large populations, the short term trajectory follows closely and 
@@ -133,7 +134,7 @@ the infinite population model.
 Vose compiled and extended previous work regarding the infinite population model in the book 
 \textit{Simple Genetic Algorithm: Foundations and Theory} (see \cite{Vose1999}). 
 In particular, he discussed how the Walsh transform can be applied to increase 
-computational efficiency in calculating the infinite population model. 
+computational efficiency in calculations related to the infinite population model. 
 There have been previous applications of the Walsh transform to GAs. Bethke first introduced the 
 idea of using Walsh transforms to analyze GA fitness funcitons in terms of schemata (see \cite{Bethke1981}). 
 The idea was further developed in papers by Goldberg (see \cite{Goldberg1989a}, \cite{Goldberg1989b}). 

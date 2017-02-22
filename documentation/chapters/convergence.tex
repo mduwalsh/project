@@ -181,7 +181,7 @@ Multi-plot of Slope $m$ and Intercept $b$ for Generation  $n \in \{1,  2,  4,  8
 Taking the exponential of the regression line (\ref{regresion}) yields
 the estimate
 $d \approx N^m e^b $.
-Slopes of the regression lines shown in {\bf Figure \ref{regression-parameters}} are
+Slopes of the regression lines shown in figure \ref{regression-parameters} are
 approximately $-0.5$, indicating
 \begin{equation}
 \label{covergenceDistance}
@@ -192,10 +192,10 @@ theorem 3.1 from 'The Simple Genetic Algorithm: Foundations and Theory' (see \ci
 which gives the bound for the expected rate of convergence for the single-step haploid case; 
 the distance is inversely proportional to square root of population size. 
 The consistent convergence rate
-across multiple generations shown in Figure (\ref{convergence}) is somewhat surprising, simulation
+across multiple generations shown in gigure (\ref{convergence}) is somewhat surprising, simulation
 results above indicate it may persist to generation $n = 128$.
 
-The intercept graphs in {\bf Figure \ref{regression-parameters} b} show the constant of proportionality $k =
+The intercept graphs in figure \ref{regression-parameters}b show the constant of proportionality $k =
 e^b$ decreases monotonically with genome length $\ell$, and increases
 monotonically with generation $n$.  The increase in $k$ for larger $n$
 seems to be a manifestation of the growing nonlinearity uniformly
@@ -215,4 +215,8 @@ Edges connect one generation to the next (red for finite population, blue for in
 \label{nonlinear}
 \end{center}
 \end{figure}
+Let $k1$ and $k2$ be some constants. In the figure \ref{nonlinear}, distance between $\tau(\bm{p})$ and $\mathcal{G}(\bm{p}) \;\approx \; k1/\sqrt{N}$. 
+Also distance between $\tau^2(\bm{p})$ and $\mathcal{G}(\tau(\bm{p}))  \;\approx \; k1/\sqrt{N}$, 
+and distance between $\tau(\mathcal{G}(\bm{p}))$ and $\mathcal{G}^2(\bm{p}) \;\approx \; k1/\sqrt{N}$. 
+But the distance between $\tau^2(\bm{p})$ and $\mathcal{G}^2(\bm{p}) $ may increase or change to $\;\approx \; k2/\sqrt{N}$.
 

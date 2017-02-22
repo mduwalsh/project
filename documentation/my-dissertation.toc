@@ -17,12 +17,12 @@
 \contentsline {section}{\numberline {2.6}Simplification}{27}{section.2.6}
 \contentsline {section}{\numberline {2.7}Convergence}{27}{section.2.7}
 \contentsline {section}{\numberline {2.8}Summary}{31}{section.2.8}
-\contentsline {chapter}{\numberline {3}Oscillation}{32}{chapter.3}
-\contentsline {section}{\numberline {3.1}Limits}{32}{section.3.1}
-\contentsline {section}{\numberline {3.2}Mutation and Crossover Distributions}{34}{section.3.2}
-\contentsline {section}{\numberline {3.3}Initial Population}{35}{section.3.3}
-\contentsline {section}{\numberline {3.4}Oscillation}{36}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Haploid Population}{38}{subsection.3.4.1}
+\contentsline {chapter}{\numberline {3}Oscillation}{33}{chapter.3}
+\contentsline {section}{\numberline {3.1}Limits}{33}{section.3.1}
+\contentsline {section}{\numberline {3.2}Mutation and Crossover Distributions}{35}{section.3.2}
+\contentsline {section}{\numberline {3.3}Initial Population}{36}{section.3.3}
+\contentsline {section}{\numberline {3.4}Oscillation}{37}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Haploid Population}{39}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Diploid Population}{45}{subsection.3.4.2}
 \contentsline {section}{\numberline {3.5}Discussion}{50}{section.3.5}
 \contentsline {section}{\numberline {3.6}Summary}{53}{section.3.6}
@@ -47,5 +47,5 @@
 \contentsline {section}{\numberline {5.2}Discussion}{131}{section.5.2}
 \contentsline {section}{\numberline {5.3}Summary}{132}{section.5.3}
 \contentsline {chapter}{\numberline {6}Conclusion}{134}{chapter.6}
-\contentsline {chapter}{Bibliography}{136}{section*.98}
-\contentsline {chapter}{Vita}{141}{section*.100}
+\contentsline {chapter}{Bibliography}{136}{section*.109}
+\contentsline {chapter}{Vita}{141}{section*.111}

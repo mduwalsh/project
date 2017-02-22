@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.9.2)  22 FEB 2017 11:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  22 FEB 2017 13:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -786,21 +786,21 @@ File: figures/eps/nonlinear.eps Graphic file (type eps)
 
 <figures/eps/nonlinear.eps>)
 :<-
-) [31]
+) [31] [32]
 :<-
 :<+ chapters/chapter-3.tex
 \openout2 = `chapters/chapter-3.aux'.
 
 (./chapters/chapter-3.tex
 Chapter 3.
-[32
+[33
 
 
 
 
-] [33] [34] [35] [36]
+] [34] [35] [36] [37]
 Package srcltx Info: Expanded filename `chapters/oscillation_hap.tex' to `chapt
-ers/oscillation_hap.tex' on input line 218.
+ers/oscillation_hap.tex' on input line 217.
 
 :<+ chapters/oscillation_hap.tex
 (./chapters/oscillation_hap.tex
@@ -814,7 +814,7 @@ File: figures/eps/osc/b8/n040960_osc_fin_hap.eps Graphic file (type eps)
 <figures/eps/osc/b8/n040960_osc_fin_hap.eps>
 File: figures/eps/osc/b8/n040960_osc_fin_hap_dist.eps Graphic file (type eps)
 
-<figures/eps/osc/b8/n040960_osc_fin_hap_dist.eps>
+<figures/eps/osc/b8/n040960_osc_fin_hap_dist.eps> [38]
 File: figures/eps/osc/b8/n081920_osc_fin_hap.eps Graphic file (type eps)
 
 <figures/eps/osc/b8/n081920_osc_fin_hap.eps>
@@ -826,7 +826,6 @@ File: figures/eps/osc/b8/osc_inf_hap.eps Graphic file (type eps)
 <figures/eps/osc/b8/osc_inf_hap.eps>
 File: figures/eps/osc/b8/fin_hap_dist.eps Graphic file (type eps)
  <figures/eps/osc/b8/fin_hap_dist.eps>
-[37]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -907,15 +906,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
 :<-
-[38] [39] [40] [41] [42]
+[39] [40] [41] [42] [43] [44
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[43
-
-] [44]
+]
 Package srcltx Info: Expanded filename `chapters/oscillation_dip.tex' to `chapt
-ers/oscillation_dip.tex' on input line 269.
+ers/oscillation_dip.tex' on input line 268.
 
 :<+ chapters/oscillation_dip.tex
 (./chapters/oscillation_dip.tex
@@ -1031,7 +1026,7 @@ File: figures/eps/osc/osc_amp_hap.eps Graphic file (type eps)
 <figures/eps/osc/osc_amp_hap.eps>
 File: figures/eps/osc/osc_amp_dip.eps Graphic file (type eps)
  <figures/eps/osc/osc_amp_dip.eps>
-Overfull \hbox (1.01158pt too wide) in paragraph at lines 326--329
+Overfull \hbox (1.01158pt too wide) in paragraph at lines 325--328
  [][][][][] 
  []
 
@@ -1045,7 +1040,7 @@ File: figures/eps/osc/b14/b14_n004096_osc_fin_dip_lvl.eps Graphic file (type ep
 s)
 
 <figures/eps/osc/b14/b14_n004096_osc_fin_dip_lvl.eps>
-Overfull \hbox (1.01338pt too wide) in paragraph at lines 345--348
+Overfull \hbox (1.01338pt too wide) in paragraph at lines 344--347
  [][][][][] 
  []
 
@@ -1113,7 +1108,7 @@ File: figures/eps/vio/mu/b8/e0.01/n00040960_fin_hap.eps Graphic file (type eps)
 File: figures/eps/vio/mu/b8/e0.01/n00040960_fin_hap_wovio.eps Graphic file (typ
 e eps)
 
-<figures/eps/vio/mu/b8/e0.01/n00040960_fin_hap_wovio.eps>
+<figures/eps/vio/mu/b8/e0.01/n00040960_fin_hap_wovio.eps> [56]
 File: figures/eps/vio/mu/b8/e0.01/n00081920_fin_hap.eps Graphic file (type eps)
 
 
@@ -1128,10 +1123,6 @@ File: figures/eps/vio/mu/b8/e0.01/inf_hap.eps Graphic file (type eps)
 File: figures/eps/vio/mu/b8/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b8/e0.01/inf_hap_wovio.eps>
-
-LaTeX Warning: Float too large for page by 42.11111pt on input line 32.
-
-[56]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1165,7 +1156,7 @@ File: figures/eps/vio/mu/b10/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b10/e0.01/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 66.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 69.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1200,7 +1191,7 @@ File: figures/eps/vio/mu/b12/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b12/e0.01/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 100.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 103.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1235,7 +1226,7 @@ File: figures/eps/vio/mu/b14/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b14/e0.01/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 134.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 137.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1300,9 +1291,6 @@ File: figures/eps/vio/mu/b8/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b8/e0.1/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 35.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: figures/eps/vio/mu/b10/e0.1/n00004096_fin_hap.eps Graphic file (type eps)
@@ -1335,7 +1323,7 @@ File: figures/eps/vio/mu/b10/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b10/e0.1/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 71.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 73.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1370,7 +1358,7 @@ File: figures/eps/vio/mu/b12/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b12/e0.1/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 107.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 109.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1405,7 +1393,7 @@ File: figures/eps/vio/mu/b14/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b14/e0.1/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 143.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 145.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1453,7 +1441,9 @@ File: figures/eps/vio/mu/b8/e0.5/n00040960_fin_hap.eps Graphic file (type eps)
 File: figures/eps/vio/mu/b8/e0.5/n00040960_fin_hap_wovio.eps Graphic file (type
  eps)
 
-<figures/eps/vio/mu/b8/e0.5/n00040960_fin_hap_wovio.eps>
+<figures/eps/vio/mu/b8/e0.5/n00040960_fin_hap_wovio.eps> [68
+
+]
 File: figures/eps/vio/mu/b8/e0.5/n00081920_fin_hap.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b8/e0.5/n00081920_fin_hap.eps>
@@ -1467,12 +1457,6 @@ File: figures/eps/vio/mu/b8/e0.5/inf_hap.eps Graphic file (type eps)
 File: figures/eps/vio/mu/b8/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b8/e0.5/inf_hap_wovio.eps>
-
-LaTeX Warning: Float too large for page by 42.11111pt on input line 35.
-
-[68
-
-]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1506,7 +1490,7 @@ File: figures/eps/vio/mu/b10/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b10/e0.5/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 71.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 73.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1541,7 +1525,7 @@ File: figures/eps/vio/mu/b12/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b12/e0.5/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 107.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 109.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1576,7 +1560,7 @@ File: figures/eps/vio/mu/b14/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b14/e0.5/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 142.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 144.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1814,9 +1798,6 @@ File: figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 35.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: figures/eps/vio/mu/b10/e0.1/n00004096_fin_dip.eps Graphic file (type eps)
@@ -1849,7 +1830,7 @@ File: figures/eps/vio/mu/b10/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b10/e0.1/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 72.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 75.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1884,7 +1865,7 @@ File: figures/eps/vio/mu/b12/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b12/e0.1/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 109.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 112.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1919,7 +1900,7 @@ File: figures/eps/vio/mu/b14/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b14/e0.1/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 146.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 149.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1984,9 +1965,6 @@ File: figures/eps/vio/mu/b8/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b8/e0.5/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 36.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: figures/eps/vio/mu/b10/e0.5/n00004096_fin_dip.eps Graphic file (type eps)
@@ -2019,7 +1997,7 @@ File: figures/eps/vio/mu/b10/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b10/e0.5/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 73.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 74.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2054,7 +2032,7 @@ File: figures/eps/vio/mu/b12/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b12/e0.5/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 110.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 111.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2089,7 +2067,7 @@ File: figures/eps/vio/mu/b14/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b14/e0.5/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 147.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 148.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2182,9 +2160,6 @@ File: figures/eps/vio/chi/b8/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b8/e0.01/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 36.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: figures/eps/vio/chi/b10/e0.01/n00004096_fin_hap.eps Graphic file (type ep
@@ -2217,7 +2192,7 @@ File: figures/eps/vio/chi/b10/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b10/e0.01/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 72.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 74.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2252,7 +2227,7 @@ File: figures/eps/vio/chi/b12/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b12/e0.01/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 108.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 110.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2287,7 +2262,7 @@ File: figures/eps/vio/chi/b14/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b14/e0.01/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 143.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 145.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2337,7 +2312,9 @@ File: figures/eps/vio/chi/b8/e0.1/n00040960_fin_hap.eps Graphic file (type eps)
 File: figures/eps/vio/chi/b8/e0.1/n00040960_fin_hap_wovio.eps Graphic file (typ
 e eps)
 
-<figures/eps/vio/chi/b8/e0.1/n00040960_fin_hap_wovio.eps>
+<figures/eps/vio/chi/b8/e0.1/n00040960_fin_hap_wovio.eps> [101
+
+]
 File: figures/eps/vio/chi/b8/e0.1/n00081920_fin_hap.eps Graphic file (type eps)
 
 
@@ -2352,12 +2329,6 @@ File: figures/eps/vio/chi/b8/e0.1/inf_hap.eps Graphic file (type eps)
 File: figures/eps/vio/chi/b8/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b8/e0.1/inf_hap_wovio.eps>
-
-LaTeX Warning: Float too large for page by 42.11111pt on input line 36.
-
-[101
-
-]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2391,7 +2362,7 @@ File: figures/eps/vio/chi/b10/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b10/e0.1/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 71.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 72.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2426,7 +2397,7 @@ File: figures/eps/vio/chi/b12/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b12/e0.1/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 107.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 108.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2461,7 +2432,7 @@ File: figures/eps/vio/chi/b14/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b14/e0.1/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 142.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 143.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2529,9 +2500,6 @@ File: figures/eps/vio/chi/b8/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b8/e0.5/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 36.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: figures/eps/vio/chi/b10/e0.5/n00004096_fin_hap.eps Graphic file (type eps
@@ -2564,7 +2532,7 @@ File: figures/eps/vio/chi/b10/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b10/e0.5/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 72.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 74.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2599,7 +2567,7 @@ File: figures/eps/vio/chi/b12/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b12/e0.5/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 107.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 109.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2634,7 +2602,7 @@ File: figures/eps/vio/chi/b14/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b14/e0.5/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 142.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 144.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2857,7 +2825,9 @@ File: figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip.eps Graphic file (type eps)
 File: figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip_wovio.eps Graphic file (typ
 e eps)
 
-<figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip_wovio.eps>
+<figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip_wovio.eps> [118
+
+]
 File: figures/eps/vio/chi/b8/e0.1/n00081920_fin_dip.eps Graphic file (type eps)
 
 
@@ -2872,12 +2842,6 @@ File: figures/eps/vio/chi/b8/e0.1/inf_dip.eps Graphic file (type eps)
 File: figures/eps/vio/chi/b8/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b8/e0.1/inf_dip_wovio.eps>
-
-LaTeX Warning: Float too large for page by 42.11111pt on input line 35.
-
-[118
-
-]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2911,7 +2875,7 @@ File: figures/eps/vio/chi/b10/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b10/e0.1/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 72.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 73.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2946,7 +2910,7 @@ File: figures/eps/vio/chi/b12/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b12/e0.1/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 109.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 110.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2981,7 +2945,7 @@ File: figures/eps/vio/chi/b14/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b14/e0.1/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 146.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 147.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -3049,9 +3013,6 @@ File: figures/eps/vio/chi/b8/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b8/e0.5/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 35.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: figures/eps/vio/chi/b10/e0.5/n00004096_fin_dip.eps Graphic file (type eps
@@ -3084,7 +3045,7 @@ File: figures/eps/vio/chi/b10/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b10/e0.5/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 72.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 75.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -3119,7 +3080,7 @@ File: figures/eps/vio/chi/b12/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b12/e0.5/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 109.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 112.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -3154,7 +3115,7 @@ File: figures/eps/vio/chi/b14/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b14/e0.5/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 146.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 149.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -3244,18 +3205,18 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 142.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: C732F969E6450F1249F2379B56642468;3947.
+(rerunfilecheck)             Checksum: 03E24E8D48FBFD6CB8731EB807E6CCD4;3948.
 Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
-(rerunfilecheck)             Checksum: A05C25400C5D0C27A267DFA38D844DE1;3149.
+(rerunfilecheck)             Checksum: A1D7DEAEA2A2C4339153EAB54C05903E;3149.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
  ) 
 Here is how much of TeX's memory you used:
  10433 strings out of 495029
- 173701 string characters out of 6181524
- 276342 words of memory out of 5000000
+ 173702 string characters out of 6181522
+ 276350 words of memory out of 5000000
  13240 multiletter control sequences out of 15000+600000
  22513 words of font info for 88 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  39i,16n,53p,452b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (158 pages, 721912 bytes).
+Output written on my-dissertation.dvi (158 pages, 725160 bytes).

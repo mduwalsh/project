@@ -88,8 +88,8 @@
 \def\@title{Analysis and Simulation Of A Simple Evolutionary System}
 \def\@author{Mahendra Duwal Shrestha}
 \def\@keywords{My Keywords}
-\def\@graduationMonth{August}
-\def\@copyrightYear{2016}
+\def\@graduationMonth{May}
+\def\@copyrightYear{2017}
 \def\@majorProfessor{Michael D. Vose}
 \def\@degree{Master of Science}	% degree type
 \def\@college{Engineering}           % college
@@ -98,8 +98,8 @@
 \def\@major{Computer Science}	% major
 \def\@university{The University  of Tennessee, Knoxville}	% school
 \def\@numberOfCommitteeMembers{2}
-\def\@committeeMemberA{Hairong Qi}% first committee member
-\def\@committeeMemberB{Judy Day}% second committee member
+\def\@committeeMemberA{Judy D. Day}% first committee member
+\def\@committeeMemberB{Hairong Qi}% second committee member
 \def\@committeeMemberC {}	% ... you get the trend!
 \def\@committeeMemberD {}	%
 \def\@committeeMemberE {}	%

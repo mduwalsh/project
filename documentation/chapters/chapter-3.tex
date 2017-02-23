@@ -171,7 +171,6 @@ and to initial finite diploid population vector $\bm{f}$ with population size $N
 
 \section{Oscillation}
 \label{Oscillation}
-
 Crossover distributions $\bm{\chi}$ and mutation distributions $\bm{\mu}$ satisfying 
 condition (\ref{OscCond}) are considered to investigate oscillating behavior in terms of  
 predicted infinite population evolutionary limits.
@@ -196,9 +195,7 @@ $\bm{f}^n$ to diploid evolutionary limits $\bm{p}_d^{\ast}$ and $\bm{q}_d^{\ast}
 
 According to the results and conclusions from 
 chapter 2, the expected distance $d$ between finite population of size $N$ and infinite population is 
-\[
-d \approx 1/\sqrt{N}
-\]
+\[ d \approx 1/\sqrt{N} \]
 \begin{table}[H]
 \caption{\textbf{Expected single step distance $d$ for population size $N$}}
 \centering
@@ -213,6 +210,8 @@ $d$ & 0.0156 & 0.0049 & 0.0035 \\
 The distance between finite population and infinite population, for both haploid and diploid cases, were also plotted. 
 %oscillation
 % haploids
+
+\clearpage
 \subsection{Haploid Population}
 \input{chapters/oscillation_hap.tex}
 \clearpage
@@ -239,8 +238,8 @@ For fixed finite population size, as $\ell$ increases, the distance graphs becom
 Distance data obtained from simulations for haploid populations are summarized in table \ref{tableDistanceOscHap},  
 which tabulates average distance between finite and infinite populations 
 for population sizes $N \;=\; 4096 $, $N \;=\; 40960 $ and $N \;=\; 81920 $.
-\clearpage
-\begin{table}[ht]
+
+\begin{table}[!b]
 \caption[\textbf{Distance measured for haploid population}]{\textbf{Distance measured for haploid population:} $N$ is population size, $\ell$ is genome length, 
 average distance between finite and infinite population is tabulated in the last three columns, and last row is expected single step distance.}
 \centering
@@ -258,13 +257,11 @@ $1/\sqrt{N}$ & 0.0156 & 0.0049 & 0.0035 \\
 \end{tabularx}
 \label{tableDistanceOscHap}
 \end{table}
-
 Results from table \ref{tableDistanceOscHap} show average distance between finite and infinite population closely follows 
 the expected single step distance. The distance decreases as $1/\sqrt{N}$.
 
 % diploids
 \subsection{Diploid Population}
-
 \input{chapters/oscillation_dip.tex}
 \clearpage
 

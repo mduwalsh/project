@@ -148,18 +148,17 @@
 The right column in figures \ref{oscillation_8h_vio_mu_0.1} through \ref{oscillation_14h_vio_mu_0.1} 
 shows distance of finite and infinite haploid populations to non-violation limits $\bm{p^\ast}$ and $\bm{q^\ast}$ with $\bm{\epsilon} \;=\; 0.1$. 
 Those graphs indicate oscillating behavior of haploid population given violation. 
-Both finite and infinite populations oscillate given violation, and oscillations amplitudes decreases with generation. 
+Both finite and infinite populations oscillate given violation, and oscillation amplitude decreases with generation. 
 However, for $\bm{\epsilon} \;=\; 0.1$, oscillations in infinite populations die out quickly, 
 but oscillations in finite populations does not die out completely. Rate of damping of ripples with $\bm{\epsilon} \;=\; 0.1$ is  
-larger than with $\bm{\epsilon} \;=\; 0.01$. However, since the Markov chain is regular, 
-finite population can pick up again at some point of generation in long run and start oscillating again.
+larger than with $\bm{\epsilon} \;=\; 0.01$. If finite population oscillation were to die out, 
+it must reappear infinitely often because the Markov chain is regular.
 
 The left column of figures \ref{oscillation_8h_vio_mu_0.1} through \ref{oscillation_14h_vio_mu_0.1} 
 shows distance of finite and infinite haploid populations to limit $\bm{z^\ast}$ 
 (limit with violation in mutation distribution $\bm{\mu}$) when $\bm{\epsilon} \;=\; 0.1$. 
-The distance between finite population and limit $\bm{z}^\ast$ (limit with violation in $\bm{\mu}$ distribution) 
-decreases as finite population size increases, 
-and finite population shows behavior similar to infinite population behavior as finite population size grows. 
+The distance decreases as finite population size increases, 
+and finite population shows behavior similar to infinite population behavior as population size grows. 
 Average distance data for haploid population in case of violation in $\bm{\mu}$ distribution 
 with $\bm{\epsilon} \;=\; 0.1$ for different finite population size $N$ is tabulated in table \ref{distanceMuHapEps0.1}.
 
@@ -182,8 +181,6 @@ $1/\sqrt{N}$ & 0.0156 & 0.0049 & 0.0035 \\
 \label{distanceMuHapEps0.1}
 \end{table}
 
-The results in Table \ref{distanceMuHapEps0.1} show average distance 
-between finite population and limit $\bm{z^\ast}$ approach the expected single step distance 
-between finite and infinite population. The distance decreased as $1/\sqrt{N}$. 
-Also, the distance decreased as $\ell$ increased for all finite haploid populations 
-with $\bm{\epsilon} \;=\; 0.1$.
+Table \ref{distanceMuHapEps0.1} show average distance 
+between finite population and infinite population decreases with increasing string length, 
+approaching the expected single step distance $1/\sqrt{N}$. 

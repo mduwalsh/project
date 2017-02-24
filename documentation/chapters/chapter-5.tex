@@ -7,28 +7,28 @@ Error $\bm{\epsilon}$ is introduced into the crossover distribution $\bm{\chi}$ 
 violate condition \ref{OscCond}; this guarantees that 
 infinite population trajectories have no periodic orbit. Consequently, $\bm{p}^\ast \;=\; \bm{q}^\ast \;=\; \bm{z}^\ast$. 
 The initial population is 
-computed using same procedure as described in section \ref{InitPopOsc}. To explore the effects of the degree  
+computed using the same procedure as described in section \ref{InitPopOsc}. To explore the effects of the degree  
 of violation of condition \ref{OscCond} in $\bm{\chi}$, different values of $\bm{\epsilon}$ are used in experiments. 
-String length $\ell \;\in\; \{8, 10, 12, 14\}$ are considered for simulation.
+String length $\ell \;\in\; \{8, 10, 12, 14\}$ is considered for simulation.
 Going forward, we use `limit $\bm{z}^\ast$' to denote evolutionary limit when crossover distribution 
 $\bm{\chi}$ violates condition \ref{OscCond}, and 
-`non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$' to denote limits without violation.
+`non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$' to denote limits without violations (i.e., $\bm{\epsilon \,=\, 0}$).
 
 \section{Violation}
 The crossover distribution $\bm{\chi}$ was modified as
 \[
-\bm{\chi}_i = (1-\bm{\epsilon}) \bm{\chi}_i\, ; \tabspace i = \{1, 2,.., 2^{\ell}-1\} 
+\bm{\chi}_i = (1-\bm{\epsilon}) \bm{\chi}_i\ 
 \]
 So that 
 \[
 \bm{\chi}_i + \bm{\chi}_{i+g} = 1-\bm{\epsilon} ; \tabspace g \text{ is defined in  section } \ref{Limits}
 \]
 
-Then $j$ is chosen where $\bm{\chi}_j = 0$ and set $\bm{\chi}_j = \bm{\epsilon}$. 
+Then a single $j$ is chosen where $\bm{\chi}_j = 0$ and we set $\bm{\chi}_j = \bm{\epsilon}$. 
 
 Violation in crossover distribution $\bm{\chi}$ is different from violation in mutation distribution $\bm{\mu}$. 
-Markov chain formed by transition matrix $Q$ is regular under violation in $\bm{\mu}$ but that is not the case under violation in  $\bm{\chi}$. 
-Markov chain formed under violation in $\bm{\chi}$ might not be regular.
+The Markov chain formed by transition matrix $Q$ is regular under violation in $\bm{\mu}$ 
+but that need not be the case under violation in  $\bm{\chi}$. 
 % With $\bm{\chi}$ described above, non-crossover mask (all 0s) has always positive probability. 
 % And since we do not modify the mutation distribution $\bm{\mu}$ satisfying condition \ref{OscCond}, 
 % the non-mutation mask (all 0s) has always zero probability. 
@@ -85,10 +85,11 @@ Markov chain formed under violation in $\bm{\chi}$ might not be regular.
 % the Markov chain is regular (see \cite{Iosifescu1980}), and a steady state distribution 
 % with positive components exists for the GA (see \cite{Minc1988}). 
 
-Simulations are repeated with violation levels $\bm{\epsilon}$ as above.
+Simulations are repeated with the violation levels $\bm{\epsilon}$ described above.
 The distances of both infinite and finite populations to limit $\bm{z}^\ast$ are plotted. 
 The distances of both infinite and finite populations to non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$ are also plotted.
 
+\clearpage
 % figures for chi violation
 \subsection{Haploid Population $\mathtt{\sim}$ $\epsilon: 0.01$}
 \input{chapters/vio-chi-hap-e0.01.tex}
@@ -96,9 +97,10 @@ The distances of both infinite and finite populations to non-violation limits $\
 \input{chapters/vio-chi-hap-e0.1.tex}
 \subsection{Haploid Population $\mathtt{\sim}$ $\epsilon: 0.5$}
 \input{chapters/vio-chi-hap-e0.5.tex}
-
+\clearpage
 \subsection{Diploid Population $\mathtt{\sim}$ $\epsilon: 0.01$}
 \input{chapters/vio-chi-dip-e0.01.tex}
+\clearpage
 \subsection{Diploid Population $\mathtt{\sim}$ $\epsilon: 0.1$}
 \input{chapters/vio-chi-dip-e0.1.tex}
 \subsection{Diploid Population $\mathtt{\sim}$ $\epsilon: 0.5$}
@@ -146,7 +148,7 @@ noticeable for larger population also when $\bm{\epsilon}$ value is increased to
 \end{center}
 \end{figure}
 
-Figure \ref{vio_chi_dist} summarizes the distance data from tables \ref{distanceChiHapEps0.01} $\cdots$ 
+Figure \ref{vio_chi_dist} summarizes the distance data from tables \ref{distanceChiHapEps0.01} through 
 \ref{distanceChiDipEps0.5}. Distance of infinite population from finite population of 
 three finite population sizes {4096, 40960, 81920} are plotted for different $\ell$. 
 Plots for different violation levels $\bm{\epsilon}$ are arranged in columns. 

@@ -216,12 +216,13 @@ The distance between finite population and infinite population, for both haploid
 \input{chapters/oscillation_hap.tex}
 \clearpage
 
-\textbf{ Figures} \ref{oscillation_8h}, \ref{oscillation_10h}, \ref{oscillation_12h} and
+Figures \ref{oscillation_8h}, \ref{oscillation_10h}, \ref{oscillation_12h} and
 \ref{oscillation_14h} show oscillations in finite haploid populations, and distances 
-between finite haploid populations and infinite haploid populations arranged by genome length $\ell$ in ascending order. 
-In each figure for unique genome length $\ell$, sub-figures 
-are arranged by population size $N$. In each figure, the first three rows of sub-figures in the left column show distance $d'$ of finite population 
-to limits, the sub-figure in fourth row of the left column shows distance $d'$ of infinite population to limits. These sub-figures depict 
+between finite and infinite haploid populations arranged by genome length $\ell$. 
+In each figure, sub-figures are arranged by population size $N$. 
+The first three rows of sub-figures in the left column show distance $d'$ of finite population 
+to limits, the sub-figure in fourth row of the left column shows distance $d'$ of infinite population to limits. 
+These sub-figures depict 
 oscillating behavior of both infinite and finite haploid populations when condition \ref{OscCond} is met. 
 As population size increases, oscillation approaches the behavior exhibited by infinite population. 
 
@@ -229,17 +230,16 @@ In each figure (\ref{oscillation_8h}, \ref{oscillation_10h}, \ref{oscillation_12
 and \ref{oscillation_14h}), the first three graphs in the right column show 
 distance variation (difference of distance $d$ and average distance $d_{avg}$)  
 where $d$ is distance between haploid finite and infinite populations and $d_{avg}$ is average value of $d$. 
-The graph in the fourth row of the right column combines distance plots between finite and infinite populations for sizes 
-($N = N_0^2, \nudge10N_0^2, \nudge20N_0^2$). The resulting graphs show distance decreases 
+The graph in the fourth row shows distance between finite and infinite populations decreases 
 as population size increases, consistent with results from section \ref{convergence}. 
 The graphs of $d-d_{avg}$ decrease in amplitude as population size increases. 
-For fixed finite population size, as $\ell$ increases, the distance graphs become smoother, and amplitude of oscillations decrease. 
+As $\ell$ increases, the distance graphs become smoother, and amplitude of oscillations decrease. 
 
 Distance data obtained from simulations for haploid populations are summarized in table \ref{tableDistanceOscHap},  
-which tabulates average distance between finite and infinite populations 
-for population sizes $N \;=\; 4096 $, $N \;=\; 40960 $ and $N \;=\; 81920 $.
+which tabulates average distance between finite and infinite populations. 
 
-\begin{table}[!b]
+\mbox{}\\[-0.5in]
+\begin{table}[h]
 \caption[\textbf{Distance measured for haploid population}]{\textbf{Distance measured for haploid population:} $N$ is population size, $\ell$ is genome length, 
 average distance between finite and infinite population is tabulated in the last three columns, and last row is expected single step distance.}
 \centering
@@ -257,6 +257,7 @@ $1/\sqrt{N}$ & 0.0156 & 0.0049 & 0.0035 \\
 \end{tabularx}
 \label{tableDistanceOscHap}
 \end{table}
+
 Results from table \ref{tableDistanceOscHap} show average distance between finite and infinite population closely follows 
 the expected single step distance. The distance decreases as $1/\sqrt{N}$.
 
@@ -285,9 +286,7 @@ The graphs of $d-d_{avg}$ decrease in amplitude as population size increases.
 For fixed finite population size, as $\ell$ increases, the distance graphs become smoother, and amplitude of oscillations decrease.
 
 Distance data obtained from simulations for diploid populations are summarized in table \ref{tableDistanceOscDip}, 
-which tabulates average distance between finite and infinite populations 
-for population sizes $N \;=\; 4096 $, $N \;=\; 40960 $ and $N \;=\; 81920 $.
-%
+which tabulates average distance between finite and infinite populations. 
 \begin{table}[h]
 \caption[\textbf{Distance measured for diploid population}]{\textbf{Distance measured for diploid population:} $N$ is population size, $\ell$ is genome length, 
 average distance between finite and infinite population is tabulated in the last three columns, and last row is expected single step distance.}
@@ -303,7 +302,6 @@ $\ell$ & $N \;=\; 4096 $ & $N \;=\; 40960 $ & $N \;=\; 81920 $\\
 \midrule
 $1/\sqrt{N}$ & 0.0156 & 0.0049 & 0.0035 \\
 \bottomrule
-
 \end{tabularx}
 \label{tableDistanceOscDip}
 \end{table}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  23 FEB 2017 14:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.9.2)  24 FEB 2017 01:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -911,7 +911,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 :<-
 [40] [41] [42]
 Package srcltx Info: Expanded filename `chapters/oscillation_dip.tex' to `chapt
-ers/oscillation_dip.tex' on input line 265.
+ers/oscillation_dip.tex' on input line 266.
 
 :<+ chapters/oscillation_dip.tex
 (./chapters/oscillation_dip.tex
@@ -937,9 +937,15 @@ File: figures/eps/osc/b8/osc_inf_dip.eps Graphic file (type eps)
 <figures/eps/osc/b8/osc_inf_dip.eps>
 File: figures/eps/osc/b8/fin_dip_dist.eps Graphic file (type eps)
  <figures/eps/osc/b8/fin_dip_dist.eps>
-File: figures/eps/osc/b10/n004096_osc_fin_dip.eps Graphic file (type eps)
+[43
 
-<figures/eps/osc/b10/n004096_osc_fin_dip.eps>
+]
+
+LaTeX Warning: Text page 44 contains only floats.
+
+[44]
+File: figures/eps/osc/b10/n004096_osc_fin_dip.eps Graphic file (type eps)
+ <figures/eps/osc/b10/n004096_osc_fin_dip.eps>
 File: figures/eps/osc/b10/n004096_osc_fin_dip_dist.eps Graphic file (type eps)
 
 <figures/eps/osc/b10/n004096_osc_fin_dip_dist.eps>
@@ -1015,41 +1021,36 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
 :<-
-[43
+[45] [46] [47] [48
 
-] [44] [45] [46] [47] [48]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+]
 File: figures/eps/osc/osc_amp_hap.eps Graphic file (type eps)
-<figures/eps/osc/osc_amp_hap.eps>
+ <figures/eps/osc/osc_amp_hap.eps>
 File: figures/eps/osc/osc_amp_dip.eps Graphic file (type eps)
- <figures/eps/osc/osc_amp_dip.eps>
-Overfull \hbox (1.01158pt too wide) in paragraph at lines 322--325
+
+<figures/eps/osc/osc_amp_dip.eps>
+Overfull \hbox (1.01158pt too wide) in paragraph at lines 320--323
  [][][][][] 
  []
 
-[49
-
-]
 File: figures/eps/osc/b12/b12_n004096_osc_fin_dip_lvl.eps Graphic file (type ep
 s)
- <figures/eps/osc/b12/b12_n004096_osc_fin_dip_lvl.eps>
+<figures/eps/osc/b12/b12_n004096_osc_fin_dip_lvl.eps>
 File: figures/eps/osc/b14/b14_n004096_osc_fin_dip_lvl.eps Graphic file (type ep
 s)
 
 <figures/eps/osc/b14/b14_n004096_osc_fin_dip_lvl.eps>
-Overfull \hbox (1.01338pt too wide) in paragraph at lines 341--344
+Overfull \hbox (1.01338pt too wide) in paragraph at lines 339--342
  [][][][][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[50] [51]
+[49] [50]
 File: figures/eps/osc/b14/b14_n004096_osc_fin_dip_10_50.eps Graphic file (type 
 eps)
- <figures/eps/osc/b14/b14_n004096_osc_fin_dip_10_50.eps>) [52
+ <figures/eps/osc/b14/b14_n004096_osc_fin_dip_10_50.eps>) [51
 
 ]
 :<-
@@ -1058,12 +1059,12 @@ eps)
 
 (./chapters/chapter-4.tex
 Chapter 4.
-[53
+[52
 
 
 
 
-] [54]
+] [53]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 93.
@@ -1107,7 +1108,7 @@ File: figures/eps/vio/mu/b8/e0.01/n00040960_fin_hap.eps Graphic file (type eps)
 File: figures/eps/vio/mu/b8/e0.01/n00040960_fin_hap_wovio.eps Graphic file (typ
 e eps)
 
-<figures/eps/vio/mu/b8/e0.01/n00040960_fin_hap_wovio.eps> [55]
+<figures/eps/vio/mu/b8/e0.01/n00040960_fin_hap_wovio.eps>
 File: figures/eps/vio/mu/b8/e0.01/n00081920_fin_hap.eps Graphic file (type eps)
 
 
@@ -1121,13 +1122,14 @@ File: figures/eps/vio/mu/b8/e0.01/inf_hap.eps Graphic file (type eps)
 <figures/eps/vio/mu/b8/e0.01/inf_hap.eps>
 File: figures/eps/vio/mu/b8/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
-<figures/eps/vio/mu/b8/e0.01/inf_hap_wovio.eps>
+<figures/eps/vio/mu/b8/e0.01/inf_hap_wovio.eps> [54]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Text page 55 contains only floats.
 
+[55]
 File: figures/eps/vio/mu/b10/e0.01/n00004096_fin_hap.eps Graphic file (type eps
 )
-<figures/eps/vio/mu/b10/e0.01/n00004096_fin_hap.eps>
+ <figures/eps/vio/mu/b10/e0.01/n00004096_fin_hap.eps>
 File: figures/eps/vio/mu/b10/e0.01/n00004096_fin_hap_wovio.eps Graphic file (ty
 pe eps)
 
@@ -1154,9 +1156,6 @@ File: figures/eps/vio/mu/b10/e0.01/inf_hap.eps Graphic file (type eps)
 File: figures/eps/vio/mu/b10/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b10/e0.01/inf_hap_wovio.eps>
-
-LaTeX Warning: Float too large for page by 42.11111pt on input line 69.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1190,9 +1189,6 @@ File: figures/eps/vio/mu/b12/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b12/e0.01/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 103.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: figures/eps/vio/mu/b14/e0.01/n00004096_fin_hap.eps Graphic file (type eps
@@ -1225,14 +1221,9 @@ File: figures/eps/vio/mu/b14/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b14/e0.01/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 137.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[56] [57] [58] [59] [60] [61
-
-])
+[56] [57] [58])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1288,13 +1279,16 @@ File: figures/eps/vio/mu/b8/e0.1/inf_hap.eps Graphic file (type eps)
 <figures/eps/vio/mu/b8/e0.1/inf_hap.eps>
 File: figures/eps/vio/mu/b8/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
-<figures/eps/vio/mu/b8/e0.1/inf_hap_wovio.eps>
+<figures/eps/vio/mu/b8/e0.1/inf_hap_wovio.eps> [59
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+]
 
+LaTeX Warning: Text page 60 contains only floats.
+
+[60]
 File: figures/eps/vio/mu/b10/e0.1/n00004096_fin_hap.eps Graphic file (type eps)
 
-<figures/eps/vio/mu/b10/e0.1/n00004096_fin_hap.eps>
+ <figures/eps/vio/mu/b10/e0.1/n00004096_fin_hap.eps>
 File: figures/eps/vio/mu/b10/e0.1/n00004096_fin_hap_wovio.eps Graphic file (typ
 e eps)
 
@@ -1321,9 +1315,6 @@ File: figures/eps/vio/mu/b10/e0.1/inf_hap.eps Graphic file (type eps)
 File: figures/eps/vio/mu/b10/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b10/e0.1/inf_hap_wovio.eps>
-
-LaTeX Warning: Float too large for page by 42.11111pt on input line 73.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1357,9 +1348,6 @@ File: figures/eps/vio/mu/b12/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b12/e0.1/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 109.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: figures/eps/vio/mu/b14/e0.1/n00004096_fin_hap.eps Graphic file (type eps)
@@ -1392,12 +1380,9 @@ File: figures/eps/vio/mu/b14/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b14/e0.1/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 145.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[62] [63] [64] [65] [66])
+[61] [62] [63])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1440,9 +1425,7 @@ File: figures/eps/vio/mu/b8/e0.5/n00040960_fin_hap.eps Graphic file (type eps)
 File: figures/eps/vio/mu/b8/e0.5/n00040960_fin_hap_wovio.eps Graphic file (type
  eps)
 
-<figures/eps/vio/mu/b8/e0.5/n00040960_fin_hap_wovio.eps> [67
-
-]
+<figures/eps/vio/mu/b8/e0.5/n00040960_fin_hap_wovio.eps>
 File: figures/eps/vio/mu/b8/e0.5/n00081920_fin_hap.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b8/e0.5/n00081920_fin_hap.eps>
@@ -1455,13 +1438,16 @@ File: figures/eps/vio/mu/b8/e0.5/inf_hap.eps Graphic file (type eps)
 <figures/eps/vio/mu/b8/e0.5/inf_hap.eps>
 File: figures/eps/vio/mu/b8/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 
-<figures/eps/vio/mu/b8/e0.5/inf_hap_wovio.eps>
+<figures/eps/vio/mu/b8/e0.5/inf_hap_wovio.eps> [64
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+]
 
+LaTeX Warning: Text page 65 contains only floats.
+
+[65]
 File: figures/eps/vio/mu/b10/e0.5/n00004096_fin_hap.eps Graphic file (type eps)
 
-<figures/eps/vio/mu/b10/e0.5/n00004096_fin_hap.eps>
+ <figures/eps/vio/mu/b10/e0.5/n00004096_fin_hap.eps>
 File: figures/eps/vio/mu/b10/e0.5/n00004096_fin_hap_wovio.eps Graphic file (typ
 e eps)
 
@@ -1488,9 +1474,6 @@ File: figures/eps/vio/mu/b10/e0.5/inf_hap.eps Graphic file (type eps)
 File: figures/eps/vio/mu/b10/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b10/e0.5/inf_hap_wovio.eps>
-
-LaTeX Warning: Float too large for page by 42.11111pt on input line 73.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1524,9 +1507,6 @@ File: figures/eps/vio/mu/b12/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b12/e0.5/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 109.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: figures/eps/vio/mu/b14/e0.5/n00004096_fin_hap.eps Graphic file (type eps)
@@ -1559,13 +1539,13 @@ File: figures/eps/vio/mu/b14/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b14/e0.5/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 144.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[68] [69] [70] [71] [72])
+[66] [67] [68])
 :<-
+[69
+
+]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 100.
@@ -1625,14 +1605,14 @@ File: figures/eps/vio/mu/b8/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b8/e0.01/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 36.
+LaTeX Warning: Text page 70 contains only floats.
 
+[70
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+]
 File: figures/eps/vio/mu/b10/e0.01/n00004096_fin_dip.eps Graphic file (type eps
 )
-<figures/eps/vio/mu/b10/e0.01/n00004096_fin_dip.eps>
+ <figures/eps/vio/mu/b10/e0.01/n00004096_fin_dip.eps>
 File: figures/eps/vio/mu/b10/e0.01/n00004096_fin_dip_wovio.eps Graphic file (ty
 pe eps)
 
@@ -1659,9 +1639,6 @@ File: figures/eps/vio/mu/b10/e0.01/inf_dip.eps Graphic file (type eps)
 File: figures/eps/vio/mu/b10/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b10/e0.01/inf_dip_wovio.eps>
-
-LaTeX Warning: Float too large for page by 42.11111pt on input line 73.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1695,9 +1672,6 @@ File: figures/eps/vio/mu/b12/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b12/e0.01/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 110.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: figures/eps/vio/mu/b14/e0.01/n00004096_fin_dip.eps Graphic file (type eps
@@ -1730,16 +1704,9 @@ File: figures/eps/vio/mu/b14/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b14/e0.01/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 147.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[73
-
-] [74] [75] [76] [77] [78
-
-])
+[71] [72] [73])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1795,13 +1762,16 @@ File: figures/eps/vio/mu/b8/e0.1/inf_dip.eps Graphic file (type eps)
 <figures/eps/vio/mu/b8/e0.1/inf_dip.eps>
 File: figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
-<figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.eps>
+<figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.eps> [74
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+]
 
+LaTeX Warning: Text page 75 contains only floats.
+
+[75]
 File: figures/eps/vio/mu/b10/e0.1/n00004096_fin_dip.eps Graphic file (type eps)
 
-<figures/eps/vio/mu/b10/e0.1/n00004096_fin_dip.eps>
+ <figures/eps/vio/mu/b10/e0.1/n00004096_fin_dip.eps>
 File: figures/eps/vio/mu/b10/e0.1/n00004096_fin_dip_wovio.eps Graphic file (typ
 e eps)
 
@@ -1828,9 +1798,6 @@ File: figures/eps/vio/mu/b10/e0.1/inf_dip.eps Graphic file (type eps)
 File: figures/eps/vio/mu/b10/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b10/e0.1/inf_dip_wovio.eps>
-
-LaTeX Warning: Float too large for page by 42.11111pt on input line 75.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1864,9 +1831,6 @@ File: figures/eps/vio/mu/b12/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b12/e0.1/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 112.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: figures/eps/vio/mu/b14/e0.1/n00004096_fin_dip.eps Graphic file (type eps)
@@ -1899,12 +1863,9 @@ File: figures/eps/vio/mu/b14/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b14/e0.1/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 149.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[79] [80] [81] [82] [83] [84
+[76] [77] [78] [79
 
 ])
 :<-
@@ -1964,6 +1925,9 @@ File: figures/eps/vio/mu/b8/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b8/e0.5/inf_dip_wovio.eps>
 
+LaTeX Warning: Float too large for page by 42.11111pt on input line 34.
+
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: figures/eps/vio/mu/b10/e0.5/n00004096_fin_dip.eps Graphic file (type eps)
@@ -1996,7 +1960,7 @@ File: figures/eps/vio/mu/b10/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b10/e0.5/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 74.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 71.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2031,7 +1995,7 @@ File: figures/eps/vio/mu/b12/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b12/e0.5/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 111.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 108.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2066,14 +2030,14 @@ File: figures/eps/vio/mu/b14/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b14/e0.5/inf_dip_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 148.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 145.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[85] [86] [87] [88] [89])
+[80] [81] [82] [83] [84])
 :<-
-[90
+[85
 
 ]
 File: figures/eps/vio/dist_mu.eps Graphic file (type eps)
@@ -2085,7 +2049,7 @@ Overfull \hbox (25.54599pt too wide) in paragraph at lines 131--135
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[91] [92]) [93
+[86] [87]) [88
 
 ]
 :<-
@@ -2094,7 +2058,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 (./chapters/chapter-5.tex
 Chapter 5.
-[94
+[89
 
 
 
@@ -2159,7 +2123,7 @@ File: figures/eps/vio/chi/b8/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b8/e0.01/inf_hap_wovio.eps>
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 36.
 
 File: figures/eps/vio/chi/b10/e0.01/n00004096_fin_hap.eps Graphic file (type ep
 s)
@@ -2191,7 +2155,7 @@ File: figures/eps/vio/chi/b10/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b10/e0.01/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 74.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 72.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2226,7 +2190,7 @@ File: figures/eps/vio/chi/b12/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b12/e0.01/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 110.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 108.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2261,12 +2225,12 @@ File: figures/eps/vio/chi/b14/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b14/e0.01/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 145.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 143.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[95] [96] [97] [98] [99])
+[90] [91] [92] [93] [94])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -2311,7 +2275,7 @@ File: figures/eps/vio/chi/b8/e0.1/n00040960_fin_hap.eps Graphic file (type eps)
 File: figures/eps/vio/chi/b8/e0.1/n00040960_fin_hap_wovio.eps Graphic file (typ
 e eps)
 
-<figures/eps/vio/chi/b8/e0.1/n00040960_fin_hap_wovio.eps> [100
+<figures/eps/vio/chi/b8/e0.1/n00040960_fin_hap_wovio.eps> [95
 
 ]
 File: figures/eps/vio/chi/b8/e0.1/n00081920_fin_hap.eps Graphic file (type eps)
@@ -2361,7 +2325,7 @@ File: figures/eps/vio/chi/b10/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b10/e0.1/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 72.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 73.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2396,7 +2360,7 @@ File: figures/eps/vio/chi/b12/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b12/e0.1/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 108.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 109.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2431,12 +2395,12 @@ File: figures/eps/vio/chi/b14/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b14/e0.1/inf_hap_wovio.eps>
 
-LaTeX Warning: Float too large for page by 42.11111pt on input line 143.
+LaTeX Warning: Float too large for page by 42.11111pt on input line 144.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[101] [102] [103] [104] [105] [106
+[96] [97] [98] [99] [100] [101
 
 ])
 :<-
@@ -2606,7 +2570,7 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 144.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[107] [108] [109] [110] [111])
+[102] [103] [104] [105] [106])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -2777,9 +2741,9 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 146.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[112
+[107
 
-] [113] [114] [115] [116])
+] [108] [109] [110] [111])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -2824,7 +2788,7 @@ File: figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip.eps Graphic file (type eps)
 File: figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip_wovio.eps Graphic file (typ
 e eps)
 
-<figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip_wovio.eps> [117
+<figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip_wovio.eps> [112
 
 ]
 File: figures/eps/vio/chi/b8/e0.1/n00081920_fin_dip.eps Graphic file (type eps)
@@ -2949,7 +2913,7 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 147.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[118] [119] [120] [121] [122] [123
+[113] [114] [115] [116] [117] [118
 
 ])
 :<-
@@ -3119,9 +3083,9 @@ LaTeX Warning: Float too large for page by 42.11111pt on input line 149.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[124] [125] [126] [127] [128])
+[119] [120] [121] [122] [123])
 :<-
-[129
+[124
 
 ]
 File: figures/eps/vio/dist_chi.eps Graphic file (type eps)
@@ -3133,26 +3097,26 @@ Overfull \hbox (25.54599pt too wide) in paragraph at lines 140--144
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[130] [131]) [132]
+[125] [126]) [127]
 :<-
 :<+ chapters/chapter-6.tex
 \openout2 = `chapters/chapter-6.aux'.
 
 (./chapters/chapter-6.tex
 Chapter 6.
-[133
+[128
 
 
 
 
-]) [134]
+]) [129]
 :<-
 :<+ my-dissertation.bbl
 (./my-dissertation.bbl (./my-dissertation.brf)
 \tf@brf=\write8
 \openout8 = `my-dissertation.brf'.
 
- [135
+ [130
 
 
 
@@ -3162,7 +3126,7 @@ Underfull \hbox (badness 1107) in paragraph at lines 54--54
 Chains and Al-go-rith-mic Ap-pli-ca-tions\OT1/cmr/m/n/12 .
  []
 
-[136
+[131
 
 ]
 Underfull \hbox (badness 1946) in paragraph at lines 96--96
@@ -3170,9 +3134,9 @@ Underfull \hbox (badness 1946) in paragraph at lines 96--96
 \OT1/cmr/m/it/12 Ver-hand-lun-gen des
  []
 
-[137])
+[132])
 :<-
-[138] [139]
+[133] [134]
 :<+ back-matter/appendix-1.tex
 \openout2 = `back-matter/appendix-1.aux'.
 
@@ -3181,7 +3145,7 @@ Underfull \hbox (badness 1946) in paragraph at lines 96--96
 :<+ back-matter/vita.tex
 \openout2 = `back-matter/vita.aux'.
 
-(./back-matter/vita.tex) [140
+(./back-matter/vita.tex) [135
 
 
 
@@ -3204,18 +3168,18 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 142.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: 99EA70BE4BA0E009C1C28E9C6D927B1B;3948.
+(rerunfilecheck)             Checksum: EF5B6145FD40CFA21C5FE9FBCE2DA1A3;3948.
 Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
-(rerunfilecheck)             Checksum: D760B73A9CF00BC1170824A1232EC422;3149.
+(rerunfilecheck)             Checksum: 8D5F992337F4FD396BE88D7AC9BAE678;3149.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
  ) 
 Here is how much of TeX's memory you used:
  10433 strings out of 495029
- 173702 string characters out of 6181522
- 276348 words of memory out of 5000000
+ 173702 string characters out of 6181524
+ 276252 words of memory out of 5000000
  13240 multiletter control sequences out of 15000+600000
  22513 words of font info for 88 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  39i,16n,53p,452b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (157 pages, 724364 bytes).
+Output written on my-dissertation.dvi (152 pages, 718888 bytes).

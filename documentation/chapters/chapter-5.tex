@@ -107,40 +107,43 @@ The distances of both infinite and finite populations to non-violation limits $\
 \input{chapters/vio-chi-dip-e0.5.tex}
 
 \section{Discussion}
-In oscillation of population in presence of violation in $\bm{\mu}$, 
-as value of $\ell$ increases, amplitude of oscillation decreases. 
-Populations with larger population size, show better oscillations. 
-Since diploid population consists of string length twice the size of string length of hapliod population, 
-diploid population needs larger population size than haploid population to exhibit good oscillations. 
-Like in case of violation in $\bm{\mu}$, for diploid population, increasing string length $\ell$ 
-degrades convergence (as finite population size increases) to infinite population behavior. 
-The behavior is noticeable in figures 
+In the presence of violation in $\bm{\mu}$, the amplitude of oscillation decreases 
+as string length $\ell$ increases. 
+Larger population sizes show better oscillation. 
+Since diploid populations have effective string length twice the size of haploid populations, 
+diploid populations need larger population size than haploid population to exhibit good oscillation. 
+As in the case of violation in $\bm{\mu}$, increasing string length $\ell$ 
+degrades convergence (as finite population size increases) to infinite population behavior for diploid populations. 
+That behavior is noticeable in figures 
 \ref{oscillation_8d_vio_chi_0.01} through \ref{oscillation_14d_vio_chi_0.5} for violation in $\bm{\chi}$. 
-The behavior is less noticeable in haploid population.
+That behavior is less noticeable in haploid populations.
 
-With increase in value of $\bm{\epsilon}$, 
-oscillation in population diminishes as dampening of oscillation quickens. 
+With increase in the value of $\bm{\epsilon}$, 
+oscillation in population diminishes and dampening of oscillation increases. 
+Randomness increases with increasing $\bm{\epsilon}$.
 Comparing oscillation with violation in $\bm{\mu}$ and $\bm{\chi}$, rate of dampening of oscillation with violation 
 in $\bm{\chi}$ seems to be slower than with violation in ${\bm{\mu}}$. 
-Infinite population oscillation ceases as generation progresses.
-For finite population oscillation also decreases with generation, however for smaller values of $\bm{\epsilon}$, 
-it can pick up oscillation at some point in the long run because the Markov chain is regular.
 Diploid populations jumping to other levels 
-were observed for string length $\ell$ of values 12 and 14 for population size of 4096 in 
+were observed for string lengths 12 and 14 and population size 4096  ( 
 figures \ref{oscillation_12d_vio_chi_0.01}, \ref{oscillation_14d_vio_chi_0.01}, \ref{oscillation_12d_vio_chi_0.1}, 
-\ref{oscillation_14d_vio_chi_0.1}, \ref{oscillation_12d_vio_chi_0.5} and \ref{oscillation_14d_vio_chi_0.5}, 
-but unlike in case of violation in $\bm{\mu}$, the behavior is not completely absent when population size was larger. 
-Random wiggles are seen in populations with larger population size also for $\ell$ = 12 and 14. 
-Jumping to other levels are observed for string length $\ell = 10$ when population size is 4096 in figures \ref{oscillation_10d_vio_chi_0.01} 
-and \ref{oscillation_10d_vio_chi_0.01}.
-For $\ell = 10$, random wiggles are 
-noticeable for larger population also when $\bm{\epsilon}$ value is increased to $0.5$ (see figure \ref{oscillation_10d_vio_chi_0.5}).
+\ref{oscillation_14d_vio_chi_0.1}, \ref{oscillation_12d_vio_chi_0.5} and \ref{oscillation_14d_vio_chi_0.5}), 
+but unlike the case of violation in $\bm{\mu}$, 
+the behavior is noticeable when the population size is larger (figure \ref{oscillation_12d_vio_chi_0.1}). 
 
-\begin{figure}[h]
+As in $\bm{\mu}$ violation, we noticed similar unexpected behavior also in presence of violation in $\bm{\chi}$: 
+figures \ref{oscillation_12d_vio_chi_0.5} and \ref{oscillation_14d_vio_chi_0.5} 
+show that the lines representing distance of population to limits $\bm{p}^\ast$ and $\bm{q}^\ast$ overlap. 
+The graphs suggest that finite population evolution is exploring a plane equidistant from $\bm{p}^\ast$ and $\bm{q}^\ast$.
+
+Moreover, in figures \ref{oscillation_12d_vio_chi_0.1} and \ref{oscillation_14d_vio_chi_0.1}, infinite population oscillation dies out to 
+give graph of single line. But infinite population is converging to limit $\bm{z}^\ast$. 
+This suggests $\bm{z}^\ast$ may be somewhere in equidistant plane from $\bm{p}^\ast$ and $\bm{q}^\ast$.
+
+\begin{figure}[!ht]
 \begin{center}
 \subfloat{
 \resizebox{16cm}{10cm}{\includegraphics{figures/eps/vio/dist_chi.eps}}}\hspace{-3em}%
-\caption[\textbf{Distance of finite population to infinite population in case of violation in $\bm{\chi}$}]{\textbf{Distance of finite population to infinite population in case of violation in $\bm{\chi}$:}  
+\caption[\textbf{Distance between finite and infinite population in case of violation in $\bm{\chi}$}]{\textbf{Distance between finite and infinite population in case of violation in $\bm{\chi}$:}  
   $d$ is distance; $N$ is finite population size; $\bm{\epsilon}$ is level of violation; 
   red line represents distance for $\ell = 8$, green line for $\ell = 10$, blue line for $\ell = 12$, pink line for $\ell = 14$ 
   and black dotted line for expected single step distance.}
@@ -149,26 +152,25 @@ noticeable for larger population also when $\bm{\epsilon}$ value is increased to
 \end{figure}
 
 Figure \ref{vio_chi_dist} summarizes the distance data from tables \ref{distanceChiHapEps0.01} through 
-\ref{distanceChiDipEps0.5}. Distance of infinite population from finite population of 
-three finite population sizes {4096, 40960, 81920} are plotted for different $\ell$. 
+\ref{distanceChiDipEps0.5}. Distance between infinite and finite populations 
+for population sizes {4096, 40960, 81920} are plotted for different $\ell$. 
 Plots for different violation levels $\bm{\epsilon}$ are arranged in columns. 
 Plots for haploid and diploid populations are arranged in two rows. With increase in $\ell$, 
-distance moves closer to the single step distance. So, since diploid population 
-string length is twice of haploid population, 
-distance in diploid case moves closer to the single step distance than in haploid case. 
-Like in case of $\bm{\mu}$ violation, it is more noticeable in haploid population case that as $\bm{\epsilon}$ increases, 
+distance between finite and infinite population moves closer to the single step distance. So, since diploid effective population 
+string length is twice that of haploid population, 
+distance in diploid case moves closer to the single step distance for the same value of $\ell$ than in haploid case. 
+Like in the case of $\bm{\mu}$ violation, it is more noticeable in haploid population case that as $\bm{\epsilon}$ increases, 
 the distance moves closer to the single step distance.
 
 \section{Summary}
-In this chapter, we violated the condition \ref{OscCond} through violation in crossover distribution 
-making infinite population trajectories have no periodic orbit, and 
-studied infinite and finite populations oscillation behavior with the violation through experiments. 
-But we don't know if the Markov chain is regular or not in this case. 
-Like in case of $\bm{\mu}$ violation, infinite population ceases to oscillate when the condition \ref{OscCond} for convergence to 
-periodic orbits is violated, but finite population continued to approximately oscillate for small values of $\bm{\epsilon}$. 
-For smaller values of $\bm{\epsilon}$, finite population does not get aware of violation because the probability of using 
-a new mask created in the crossover distribution $\bm{\chi}$ due to violation is very low, and 
-if no new mask is used, finite population follows behavior of infinite population without violation in the condition for convergence to 
+In this chapter, we violated condition \ref{OscCond} for the crossover distribution, 
+so that infinite population trajectories have no periodic orbit. 
+We explored infinite and finite population oscillation behavior with the violation through experiments. 
+We don't know if the Markov chain is regular in this case but we suspect it is not.  
+Like in case of $\bm{\mu}$ violation, infinite population oscillation dies out when condition \ref{OscCond} for convergence to 
+periodic orbits is violated, but finite populations approximately oscillate for small values of $\bm{\epsilon}$ 
+because the probability of using the new mask is low, and not used, 
+finite population follows behavior of infinite population without violation in the condition for convergence to 
 periodic orbits. However, rate of dampening of oscillation with violation 
 in $\bm{\chi}$ is observed to be slower than with violation in ${\bm{\mu}}$. Also more randomness in oscillations are observed 
 in this case than in violation in mutation, especially for diploid population.

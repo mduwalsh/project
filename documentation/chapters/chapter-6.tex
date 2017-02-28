@@ -1,9 +1,9 @@
 \chapter{Conclusion}
 This research shows how Vose's haploid model for Genetic Algorithms
-extends to the diploid case, improving the computation of infinite
+extends to the diploid case, facilitating the computation of infinite
 population evolutionary trajectories by significantly reducing the
-time and space used.  Efficiency is achieved through decoupling
-haploid evolution from the evolution of infinite diploid populations
+time and space used.  Efficiency is achieved through reducing diploid evolution 
+to the evolution of haploid populations
 and employing Walsh transform methods to compute the effects of
 mask-based crossover and mutation.  
 
@@ -14,22 +14,22 @@ Results confirm that distance can be inversely proportional to the square root o
 
 Simulations showed that when the necessary condition for oscillation in infinite populations is met, 
 finite populations also exhibit approximate oscillation. Amplitude of oscillation increases with 
-increase in population size, and larger population exhibit better oscillation. Also amplitude of 
+increase in population size, and larger population exhibit better oscillation. Moreover, amplitude of 
 oscillation decreases with increase in genome length.
 
 When the condition for inifinite population oscillation is violated for the mutation distribution, 
-we showed that the Markov chain representing finite population evolution is regular, and hence, 
-perfect oscillation should not occur. However, simulation results showed 
-infinite populations ceases to oscillate, 
-but finite populations continue to approximately oscillate if the violation is small. 
+the Markov chain representing finite population evolution is regular, and hence, 
+perfect oscillation can not occur. However, simulation results show 
+finite populations continue to approximately oscillate if the violation is small, 
+and when the violation is larger, oscillation dies out and randomness in behavior increases. 
 
-When the condition is violated for crossover distribution,
+When the condition is violated for the crossover distribution,
 we could not show that Markov chain formed is regular, 
 but results showed finite populations continue to approximately oscillate 
-when the violation is small, and ceases to oscillate when the violation is larger. 
+when the violation is small, and randomness in behavior increases when the violation is larger. 
 As genome length increases oscillation in population degrades. 
 Moreover, larger population shows better oscillation 
-as in the case of oscillation without violation.
+as in the case of oscillation with violation.
 
 In this research, we consider only uniform fitness for selection.  
 In the future, we plan to extend our work by accomodating different fitness functions in our model and investigate 

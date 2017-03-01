@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  28 FEB 2017 16:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.9.2)  1 MAR 2017 08:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -849,6 +849,16 @@ Overfull \hbox (106.97917pt too wide) in paragraph at lines 74--74
 
 ] [6
 
+] [7
+
+] [8
+
+]
+Missing character: There is no â in font cmss10!
+Missing character: There is no € in font cmss10!
+Missing character: There is no “ in font cmss10!
+ [9
+
 ]
 \tf@nav=\write6
 \openout6 = `slides.nav'.
@@ -859,11 +869,11 @@ Overfull \hbox (106.97917pt too wide) in paragraph at lines 74--74
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 89.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 89.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
  (./slides.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 89.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 89.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 123.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
 Package rerunfilecheck Info: File `slides.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -874,15 +884,15 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 89.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 123.
  ) 
 Here is how much of TeX's memory you used:
- 15320 strings out of 495029
- 283542 string characters out of 6181522
- 369740 words of memory out of 5000000
- 18169 multiletter control sequences out of 15000+600000
+ 15328 strings out of 495029
+ 283600 string characters out of 6181524
+ 369779 words of memory out of 5000000
+ 18177 multiletter control sequences out of 15000+600000
  13910 words of font info for 50 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,14n,53p,416b,545s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides.dvi (6 pages, 61180 bytes).
+Output written on slides.dvi (9 pages, 86776 bytes).

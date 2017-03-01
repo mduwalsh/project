@@ -81,9 +81,45 @@
       \item{$\mathcal{G}(\bm{p})_j$ =  probability that string $j$ occurs in the next generation}
       \item{The infinite population model is the sequence }
       \item{$\bm{p} \to \mathcal{G}(\bm{p}) \to  {\mathcal{G}}(\mathcal{G}(\bm{p})) \to \cdots $}
-    \end{itemize}
-  
+    \end{itemize}  
   \end{frame}
   
+  \begin{frame}
+    \frametitle{Random Heuristic Search}
+    \begin{itemize}
+      \item{$\tau$ is a stochastic transition rule that maps $\bm{p}$ to $\bm{p}$}
+      \item{For a finite population, sequence $\bm{p}, \tau(\bm{p}), \tau^2(\bm{p}), \cdots $ forms Markov chain}
+      \item{$\tau(\bm{p})$ cannot be predicted with certainty }
+      \item{$\mathcal{G}(\bm{p})$ is the expected next generation $\mathcal{E}(\tau(\bm{p}))$}
+      \item{The variance in the next generation  is}
+      \item{
+	$\mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \|^2) = \frac{1 - \|\mathcal{G}(\bm{p})\|^2}{r}$
+      }
+    \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Question 1}
+    \begin{itemize}
+      \item{Chebyshev's inequality $\to\, \| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \,\leq\, \frac{k}{\sqrt{r}} $ }
+      \item{Jensen's inequality  
+      $\to\, \mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \,\leq\, \frac{\sqrt{1 - \|\mathcal{G}(\bm{p})\|^2}}{\sqrt{r}} $}
+      \item{Geometric point of view $\to\, \| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \,=\, O(r) $ }      
+    \end{itemize}
+    Does distance decrease in practice like $1/\sqrt{r}$?
+  \end{frame}
+  
+  
+  
+  \begin{frame}
+    \frametitle{History}
+    \begin{itemize}
+      \item{Haldane, in 1932, summarized basic population genetics  models : Wright, Fisher and Haldane}
+      \item{Several people working with evolution-inspired algorithms in the 1950s and the 1960s –  
+      Box (1957), Friedman(1959), Bledsoe (1961), Bremermann (1962), and Reed, Toombs and Baricelli (1967) }
+      \item{In 1960s and 1970s, Holland and colleagues formalized  and promoted population based algorithms with crossover and mutation }
+      \item{Vose (1999) presented efficient methods for computing with a haploid model using mask-based operators introduced by Geiringer (1944)}
+    \end{itemize}
+  \end{frame}
   
 \end{document}

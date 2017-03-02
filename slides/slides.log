@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  1 MAR 2017 17:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.9.2)  2 MAR 2017 08:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -731,20 +731,20 @@ Package subfig Warning: Configuration file subfig.cfg not found on input line 2
 ) (./slides.aux)
 \openout1 = `slides.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
@@ -782,7 +782,7 @@ LaTeX Font Info:    ... okay on input line 16.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box57
-Package hyperref Info: Link coloring OFF on input line 16.
+Package hyperref Info: Link coloring OFF on input line 17.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -792,52 +792,52 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count163
 )
-LaTeX Info: Redefining \ref on input line 16.
-LaTeX Info: Redefining \pageref on input line 16.
-LaTeX Info: Redefining \nameref on input line 16.
+LaTeX Info: Redefining \ref on input line 17.
+LaTeX Info: Redefining \pageref on input line 17.
+LaTeX Info: Redefining \nameref on input line 17.
 
 (./slides.out) (./slides.out)
 \@outlinefile=\write5
 \openout5 = `slides.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 16.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 17.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 16.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 17.
 \symnumbers=\mathgroup9
 \sympureletters=\mathgroup10
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 16.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 16.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 17.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 16.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 16.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 16.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 17.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 16.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 16.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 16.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 17.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 16.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 16.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 17.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 16.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 17.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 16.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 16.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 16.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 16.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 16.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 17.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 16.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 17.
 
 (/usr/share/texmf/tex/latex/beamer/base/translator/dicts/translator-basic-dicti
 onary/translator-basic-dictionary-English.dict
@@ -863,32 +863,32 @@ Dictionary: translator-numbers-dictionary, Language: English
 tionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 16.
+LaTeX Info: Redefining \includegraphics on input line 17.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
  (./slides.nav)
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 20.
+(Font)              size <5> substituted on input line 21.
 
 [1
 
 ] [2
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 49.
+LaTeX Font Info:    Try loading font information for U+msa on input line 50.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 49.
+LaTeX Font Info:    Try loading font information for U+msb on input line 50.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 49.
+(Font)              using `OT1/cmss/bx/n' instead on input line 50.
 
 [3
 
@@ -897,7 +897,7 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
 ]
 File: figures/eps/GA.eps Graphic file (type eps)
  <figures/eps/GA.eps>
-Overfull \hbox (79.66428pt too wide) in paragraph at lines 78--78
+Overfull \hbox (79.66428pt too wide) in paragraph at lines 79--79
  [][] 
  []
 
@@ -936,7 +936,7 @@ File: figures/eps/surf/b12.eps Graphic file (type eps)
 <figures/eps/surf/b12.eps>
 File: figures/eps/surf/b14.eps Graphic file (type eps)
  <figures/eps/surf/b14.eps>
-Overfull \vbox (16.12987pt too high) detected at line 251
+Overfull \vbox (16.12987pt too high) detected at line 252
  []
 
 [15
@@ -1029,7 +1029,7 @@ File: figures/eps/osc/osc_amp_hap.eps Graphic file (type eps)
 <figures/eps/osc/osc_amp_hap.eps>
 File: figures/eps/osc/osc_amp_dip.eps Graphic file (type eps)
  <figures/eps/osc/osc_amp_dip.eps>
-Overfull \hbox (7.2977pt too wide) in paragraph at lines 433--433
+Overfull \hbox (7.2977pt too wide) in paragraph at lines 434--434
  [][] 
  []
 
@@ -1039,11 +1039,447 @@ Overfull \hbox (7.2977pt too wide) in paragraph at lines 433--433
 
 ] [29
 
+] [30
+
+] [31
+
+] [32
+
+]
+File: figures/eps/vio/mu/b8/e0.01/n00004096_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b8/e0.01/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.01/n00040960_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b8/e0.01/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.01/n00081920_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b8/e0.01/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.01/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.01/inf_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.1/n00004096_fin_hap_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.1/n00040960_fin_hap_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.1/n00081920_fin_hap_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.1/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.1/inf_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.5/n00004096_fin_hap_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.5/n00040960_fin_hap_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.5/n00081920_fin_hap_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.5/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.5/inf_hap_wovio.eps>
+Overfull \vbox (12.61021pt too high) detected at line 526
+ []
+
+[33
+
+]
+File: figures/eps/vio/mu/b12/e0.01/n00004096_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+ <figures/eps/vio/mu/b12/e0.01/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.01/n00040960_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b12/e0.01/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.01/n00081920_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b12/e0.01/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.01/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.01/inf_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.1/n00004096_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.1/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.1/n00040960_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.1/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.1/n00081920_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.1/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.1/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.1/inf_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.5/n00004096_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.5/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.5/n00040960_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.5/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.5/n00081920_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.5/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.5/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.5/inf_hap_wovio.eps>
+Overfull \vbox (12.61021pt too high) detected at line 565
+ []
+
+[34
+
+]
+File: figures/eps/vio/mu/b8/e0.01/n00004096_fin_dip_wovio.eps Graphic file (typ
+e eps)
+ <figures/eps/vio/mu/b8/e0.01/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.01/n00040960_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b8/e0.01/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.01/n00081920_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b8/e0.01/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.01/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.01/inf_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.1/n00004096_fin_dip_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.1/n00040960_fin_dip_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.1/n00081920_fin_dip_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.5/n00004096_fin_dip_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.5/n00040960_fin_dip_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.5/n00081920_fin_dip_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.5/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.5/inf_dip_wovio.eps>
+Overfull \vbox (12.61021pt too high) detected at line 604
+ []
+
+[35
+
+]
+File: figures/eps/vio/mu/b12/e0.01/n00004096_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+ <figures/eps/vio/mu/b12/e0.01/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.01/n00040960_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b12/e0.01/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.01/n00081920_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b12/e0.01/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.01/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.01/inf_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.1/n00004096_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.1/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.1/n00040960_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.1/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.1/n00081920_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.1/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.1/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.1/inf_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.5/n00004096_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.5/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.5/n00040960_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.5/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.5/n00081920_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.5/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.5/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.5/inf_dip_wovio.eps>
+Overfull \vbox (12.61021pt too high) detected at line 643
+ []
+
+[36
+
+] [37
+
+] [38
+
+] [39
+
+] [40
+
+] [41
+
+]
+File: figures/eps/vio/chi/b8/e0.01/n00004096_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b8/e0.01/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.01/n00040960_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b8/e0.01/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.01/n00081920_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b8/e0.01/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.01/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.01/inf_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.1/n00004096_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.1/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.1/n00040960_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.1/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.1/n00081920_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.1/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.1/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.1/inf_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.5/n00004096_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.5/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.5/n00040960_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.5/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.5/n00081920_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.5/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.5/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.5/inf_hap_wovio.eps>
+Overfull \vbox (12.61021pt too high) detected at line 729
+ []
+
+[42
+
+]
+File: figures/eps/vio/chi/b12/e0.01/n00004096_fin_hap_wovio.eps Graphic file (t
+ype eps)
+ <figures/eps/vio/chi/b12/e0.01/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.01/n00040960_fin_hap_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b12/e0.01/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.01/n00081920_fin_hap_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b12/e0.01/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.01/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.01/inf_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.1/n00004096_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.1/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.1/n00040960_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.1/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.1/n00081920_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.1/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.1/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.1/inf_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.5/n00004096_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.5/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.5/n00040960_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.5/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.5/n00081920_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.5/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.5/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.5/inf_hap_wovio.eps>
+Overfull \vbox (12.61021pt too high) detected at line 768
+ []
+
+[43
+
+]
+File: figures/eps/vio/chi/b8/e0.01/n00004096_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+ <figures/eps/vio/chi/b8/e0.01/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.01/n00040960_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b8/e0.01/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.01/n00081920_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b8/e0.01/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.01/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.01/inf_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.1/n00004096_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.1/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.1/n00081920_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.1/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.1/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.1/inf_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.5/n00004096_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.5/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.5/n00040960_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.5/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.5/n00081920_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.5/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.5/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.5/inf_dip_wovio.eps>
+Overfull \vbox (12.61021pt too high) detected at line 807
+ []
+
+[44
+
+]
+File: figures/eps/vio/chi/b12/e0.01/n00004096_fin_dip_wovio.eps Graphic file (t
+ype eps)
+ <figures/eps/vio/chi/b12/e0.01/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.01/n00040960_fin_dip_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b12/e0.01/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.01/n00081920_fin_dip_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b12/e0.01/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.01/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.01/inf_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.1/n00004096_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.1/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.1/n00040960_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.1/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.1/n00081920_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.1/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.1/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.1/inf_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.5/n00004096_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.5/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.5/n00040960_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.5/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.5/n00081920_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.5/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.5/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.5/inf_dip_wovio.eps>
+Overfull \vbox (12.61021pt too high) detected at line 846
+ []
+
+[45
+
+] [46
+
+]
+Missing character: There is no â in font cmss10!
+Missing character: There is no ˆ in font cmss10!
+Missing character: There is no š in font cmss10!
+ [47
+
+] [48
+
+] [49
+
+] [50
+
+]
+File: figures/eps/tetra_popn.eps Graphic file (type eps)
+ <figures/eps/tetra_popn.eps> [51
+
 ]
 Missing character: There is no â in font cmss10!
 Missing character: There is no € in font cmss10!
 Missing character: There is no “ in font cmss10!
- [30
+ [52
 
 ]
 \tf@nav=\write6
@@ -1055,11 +1491,12 @@ Missing character: There is no “ in font cmss10!
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 468.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 468.
- (./slides.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 468.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 468.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 941.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 941.
+
+(./slides.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 941.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 941.
 Package rerunfilecheck Info: File `slides.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1070,15 +1507,15 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 468.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 941.
  ) 
 Here is how much of TeX's memory you used:
- 16697 strings out of 495029
- 307887 string characters out of 6181522
+ 16861 strings out of 495029
+ 314265 string characters out of 6181524
  396647 words of memory out of 5000000
- 19492 multiletter control sequences out of 15000+600000
+ 19635 multiletter control sequences out of 15000+600000
  24035 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 49i,15n,53p,416b,545s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,15n,53p,416b,550s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides.dvi (30 pages, 272432 bytes).
+Output written on slides.dvi (52 pages, 486300 bytes).

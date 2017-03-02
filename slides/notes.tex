@@ -1,0 +1,436 @@
+\documentclass{article}
+\renewcommand{\baselinestretch}{1.5}     % line Spacing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LOAD SOME USEFUL PACKAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{nomencl}                    % produces a nomenclature
+\usepackage{float}                      % figure floats
+\usepackage{natbib}                     % this package allows you to link your references
+\usepackage{graphicx}                                   % graphics package
+\graphicspath{ {figures/}{figures/eps/}{figures/pdf/} }% specify the path where figures are located
+\usepackage{fancyhdr}                   % fancy headers and footers
+\usepackage{url}                        % nicely format url breaks
+\usepackage[inactive]{srcltx}                   % necessary to use forward and inverse searching in DVI
+\usepackage{relsize}                    % font sizing hierarchy
+\usepackage{booktabs}                   % professional looking tables
+%\usepackage{subfigure}% Support for small, `sub' figures and tables
+\usepackage[config, labelfont={bf}]{caption,subfig} % nice sub figures
+\usepackage{mathrsfs}                   % additional math scripts
+\usepackage{bm}
+\usepackage{amsfonts}
+\usepackage{multirow}
+\usepackage{tabularx, booktabs}
+
+
+%%% PACKAGES THAT ARE PRELOADED WITH THE CLASS ARE: amsmath,amsthm,amssymb,setspace,geometry,hyperref,and color
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pagenumbering{arabic}
+\setcounter{page}{1}    
+\newlength{\mywidth}
+\setlength{\mywidth}{0.9\linewidth}
+\newlength{\myheight}
+\setlength{\myheight}{0.5in}
+    
+\begin{enumerate}
+\item
+  \begin{itemize}
+  \item I will talk about my thesis: \hfill\mbox{ }\linebreak
+      ``Simulation of Simple Evolutionary System'' 
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item
+      I will give background, then address four questions, and make
+      concluding remarks.
+    \item The terms here have technical meaning which will be explained in the following slides.
+  \end{itemize}
+
+\item
+  \begin{itemize}
+  \item Population is a collection of length l binary strings 
+  \item A population is represented by a vector; the $j$th component
+      is the proportion of string j in the population.
+    \item Bitwise modulo 2 operations are defined on the set $\mathcal{R}$ of length
+      $\ell$ binary strings.
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item Crossover and mutation operators are defined using the
+    Bitwise operations in $\mathcal{R}$.
+  \item Given parents $u$ and $v$, crossover produces children $u'$ and $v'$.
+  \item $x$ mutates to $x + m$.
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item This flowchart illustrates finite population genetic algorithm
+  \item  We start from random initial population P.
+  \item Randomly select parents u and v 
+  \item Crossover u and v to produce u' and v'
+  \item Keep one of u', v' and mutate
+  \item Repeat to form next generation and when next generation completes, replace it with new generation
+  \item The process is repeated until some threshold is meet
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item In infinite population model, population is modeled as by a vector $\bm{p}$
+        
+  \item $\mathcal{G}$ is a function that maps $\bm{p}$ to the next
+    generation where $\mathcal{G}(p)_j$ is probability that string $j$
+    occurs in the next generation.
+  \item The sequence shows evolution of p under infinite population
+    model.
+  \end{itemize}
+  
+\item
+  \begin{itemize}
+  \item Random Heuristic Search was presented in his book by Vose in 1999. Our work is
+    largely based on this model
+  \item Given population p, $\tau$ is transition rule that maps p to
+    the next generation p'.
+  \item The sequence shows finite population evolution which forms
+    Markov chain
+  \item However, $\tau$ is stochastic function of crossover and
+    mutation, and hence, $\tau{p}$ can not be predicted with
+    certainty.
+  \item $\mathcal{G}{p}$ gives the expected next generation
+  \item The variance between finite population and infinite population
+    is given by expression where r is population size
+  \end{itemize}
+
+\item
+  \begin{itemize}
+  \item Our first question concerns about distance between finite
+    population and infinite population
+  \item Chebyshev's inequality, Jensen's inequality and geometric point of view, all, suggests the distance might decrease
+    as $1/\sqrt{ r}$
+  \item But all of 3 implications are from inequalities. So the distance
+    might decrease much smaller than $1/\sqrt{ r}$.
+  \item We investigate what happens in practice. For this we set up
+    simple diploid model.
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item It is infinite population model.
+  \item We consider diploid genome $\alpha$ with genome length l.
+  \item $q^n$ is population at generation n
+  \item $q^n_\alpha$ is prevalence of diploid $\alpha$ at generation n
+  \item $t_{\alpha}(g)$ is transmission function which is probability
+    of gamete g being produced from parent $\alpha$
+  \item $q_\gamma^{n+1} \; = \; \sum_{\alpha} \, q_\alpha^n \,
+    t_\alpha(\gamma_0) \sum_{\beta} \,q_\beta^n \,
+    t_\beta(\gamma_1)\\[-.05in]$ gives us next generation population.
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item Diploids are determined in terms of haploid
+    distributions.
+  \item Haploids are determined in terms of diploid
+    distributions.
+  \item Evolution equations can be expressed in terms of haploid
+    distributions as
+  \item In the matrix form, evolution equations can be expressed as
+  \item Where M(g) is mixing matrix
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item This slide shows computation of crossover and mutation
+    distributions, and transmission function  
+  \item transmission function is computed with this expression
+  \item Instead of using this transmission function, we want to
+    compute mixing matrix in walsh basis.
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item W is walsh matrix
+  \item (hat) represents walsh transform and for matrix A, $\hat(A)$
+    is given by the expression $\widehat{A} = WAW$, and for vector w, $\hat{w}$ is 
+    by the expression $\widehat{w} = wW$.given
+  \item Mixing matrix is given by the expression (point to expression)
+    which Vose provided us with.
+  \item And evolution eqn in Walsh basis is (point to expression)
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item Reduction to haploid model and computing in Walsh basis
+    simplified computations and made it efficient
+  \item We only need one mixing matrix as opposed to $2^l$
+  \item Consider l = 14, $2^14$ mixing matrices would require 32 TB of
+    memory, while one mixing matrix would require only 2 GB of memory
+  \item We think that is great optimization in resource
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item With naïve computation as shown in equation (1), there would
+    be 2l x 2l multiplication terms to be computed
+  \item where f is finite population and q is infinite population
+  \item We simplify it as shown in eqn (2) where it needs only 2l +
+    cardinal value of $S_f$ terms
+  \item $S_f$ is set of diploids that are in finite populations
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item With naïve computation as shown in equation (1), there would
+    be $2^l x 2^l$ multiplication terms to be computed
+  \item where f is finite population and q is infinite population
+  \item We simplify it as shown in eqn (2) where it needs only 2l +
+    cardinal value of $S_f$ terms
+  \item $S_f$ is set of diploids that are in finite populations
+  \end{itemize}
+
+\item
+  \begin{itemize}
+  \item We ran simulations with $\chi$ = 0.1 and $\mu$ = 0.001 for
+    different values of l
+  \item These graphs show the results.
+  \item d is the distance, N is population size, n is number of
+    generations
+  \item Graphs show as population size increases, distance decreases,
+    converge to infinite population
+  \item Graphs also show smoothing as genome length increases
+  \item Data shows a near linear dependence of log d on log N and that
+    is what we are particularly interested in
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item We ran simulations with $\chi$ = 0.1 and $\mu$ = 0.001 for
+    different values of l
+  \item These graphs are the results.
+  \item d is the distance, N is population size, n is number of
+    generations
+  \item Graphs show as population size increases, distance decreases,
+    converge to infinite population
+  \item Graphs also show smoothing as genome length increases
+  \item Data shows a near linear dependence of log d on log N and that
+    is what we are particularly interested in
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item So we tried to fit data in the linear equation
+  \item m is slope and b is y intercept
+  \item Regression shows m nearly equal to -0.5
+  \item This proves distance does decrease as $1/\sqrt{N}$
+  \item Also graph for y intercept b shows, $k = e^b$ decreases
+    monotonically with genome length l, and increases monotonically
+    with generation n
+  \item Increase in k for larger n seems to be a manifestation of the
+    growing nonlinearity likely that the nonlinearity results partly
+    from genetic drift experienced by finite populations
+  \item and partly because predicted distance is for single step case
+    as generation increases difference between finite population and
+    infinite population accumulates non linearly
+  \end{itemize}
+
+\item
+  \begin{itemize}
+  \item Conclusion from this simulation is that
+  \item Vose's infinite population model makes computation in diploid
+     case efficient by reducing to the haploid case
+  \item Distance between finite diploid population and infinite
+    diploid population can decrease like 1/√N
+  \end{itemize}
+
+    
+\item 
+  \begin{itemize}
+  \item We move on to our 2nd question which concerns oscillation in
+    finite populations.
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item First I want to introduce term limit; we also call it fixed
+    point interchangeably.
+  \item The infinite population sequence (point to sequence) may
+    converge to a point, that we call a fixed point.
+  \item But under certain conditions, the sequence converges to a
+    periodic orbit between two fixed points, say p* and q*
+\end{itemize}
+
+\item
+  \begin{itemize}
+  \item And the conditions are (point to the expressions)
+  \item So our 2nd question is do finite populations also exhibit
+     oscillations from random intial populations?
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item Other people in the past also have been interested in studying
+    oscillations in populations.
+   \item Akin (1982) proved existence of cycling for continuous-time
+     2-bit diploid model
+  \item Hasting (1981) studied cycling in populations with infinite
+    2-bit diploid population model
+  \item Wright and Bidwell (1997) provided examples when cycles in an
+    infinite haploid population model occur with crossover and
+    mutation for 3 bit and 4 bit populations
+  \item Wright and Agapie (2001) described cyclings in infinite
+    populations for up to 4 bits, and also presented data for cyclings
+    in finite populations
+  \end{itemize}
+
+    
+\item
+  \begin{itemize}
+  \item Akin considered - continuous time model, we consider -
+    discrete time model
+   \item Hastings' study - limited to two bits length, includes only
+     crossover, not mutation
+  \item Wright and Bidwell compute a specific fitness function and a
+    specific initial population for randomly generated mutation and
+    crossover distributions in an attempt to find cyclic behavior
+  \item Wright and Agapie used dynamic mutation that depends upon
+    where population is in the population space while we use static
+    mutation
+  \item We study oscillation for
+  \item fixed fitness function and random: initial population,
+    mutation and crossover distribution
+  \item higher bit length (up to 14), and actually oscillation
+    conditions for infinite populations are independent of string
+    length
+  \item both haploid and diploid populations, and for both finite and
+    infinite populations
+  \item We also visualize oscillation
+  \end{itemize}
+
+\item
+  \begin{itemize}
+  \item Simulations were run for both haploid and diploid populations
+  \item for different string lengths l
+  \item and for population size {4096, 40960, 81920}
+  \item To visualize oscillations, distances between fixed points (p*
+    , q*) and population are plotted
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item Graphs show the results for haploid and diploid population of
+    length 10
+   \item left side – haploid, right side – diploids
+  \item and for population size {4096, 40960, 81920}
+  \item last row graphs show results for infinite population
+  \item As population size increases, oscillation approaches the
+    behavior exhibited by infinite population
+  \item We observe more randomness in diploids than in haploids for
+    same l and N
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item Graphs show the results for haploid and diploid population of
+    length 12
+   \item We observe that Increase in l degrades oscillation, and it is
+     particularly noticeable in diploid case
+  \item We see an interesting behavior in this top right graph,
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item Here is zoomed in picture
+   \item We see oscillation between different levels
+  \item we observe this kind of behavior only for higher values of l
+    in diploids and for small population size
+  \item It might be because there could be fixed points for other
+    distributions in the vicinity of finite population trajectory and
+    get attracted to those fixed points
+  \item And smaller populations do not follow infinite population path
+    as closely as larger populations do; so as for larger populations,
+    these behaviors were not observed
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item We also plotted average amplitudes of oscillation in haploids
+    and diploids
+   \item Graphs show
+   \item Oscillation amplitude increases with increase in population
+     size
+   \item Amplitude of oscillation decreases with increase in l
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  \item Our conclusions from this simulation are
+   \item Finite populations exhibit approximate oscillation when
+     infinite populations oscillate
+  \item As l increases, oscillation amplitude decreases
+  \item As population size increases, oscillation amplitude increases
+    and randomness decreases
+  \item Finite population also oscillates between different pairs of
+    fixed points for diploid population of smaller size and larger l
+  \end{itemize}
+  
+  
+  
+%   \item
+%   \begin{itemize}
+%   \item Black dots represent finite populations;\hfill\mbox{
+%   }\linebreak arrows connect one generation to the next.
+%   \item White dots represent infinite populations;\hfill\mbox{ }\linebreak
+%       arrows connect one generation to the next.
+%     \item We are concerned with the distance between the finite and infinite populations.
+%   \end{itemize}
+% 
+% \item
+%   \begin{itemize}
+%   \item Dots represent populations;\hfill\mbox{ }\linebreak
+%     arrows connect one generation to the next.
+%   \item We are interested in oscillation between a pair of populations.
+%   \end{itemize}
+%   
+% \item
+%   \begin{itemize}
+%   \item Lot of people have contributed in evolution models. Here I
+%     have listed few.
+%   \end{itemize}
+
+  % \item
+%   \begin{itemize}
+%   \item Our first question concerns about distance between finite
+%     population and infinite population
+%   \end{itemize}
+% 
+% \item
+%   \begin{itemize}
+%   \item Chebyshev's inequality suggests distance might decrease as
+%     $1/\sqrt{ r}$
+%   \end{itemize}
+% 
+% \item
+%   \begin{itemize}
+%   \item This tetrahedron represents population space.
+%   \item Dots represent finite population points; larger dot, less
+%     likey point; smaller dot, more likely point
+%   \item But infinite population can be anywhere in the space
+%   \item The distance between finite population point and infinite
+%     population is $O(1/\sqrt{r})$
+%   \end{itemize}
+%     
+% \item
+%   \begin{itemize}
+%   \item Jensen's inequality also suggests the distance might decrease
+%     as $1/\sqrt{ r}$
+%   \item All of 3 implications are from inequalities. So the distance
+%     might decrease much smaller than $1/\sqrt{ r}$.
+%   \item We investigate what happens in practice. For this we set up
+%     simple diploid model.
+%   \end{itemize}
+\end{enumerate}
+
+\end{document}
+
+

@@ -4,6 +4,7 @@
 \usepackage{amsfonts}
 \usepackage{float}
 \usepackage[config, labelfont={bf}]{caption,subfig} % nice sub figures
+\renewcommand{\baselinestretch}{1.0} 	 % line Spacing
 \setbeamertemplate{footline}[frame number]
 
 \newcommand{\nudge}{\hspace{0.01in}}
@@ -196,7 +197,7 @@
     \begin{itemize}
       \item{Specialization simplifies computation, which otherwise for diploid case would have been impractical} 
       \item{Only one mixing matrix as opposed to $2^\ell$ is needed to compute next generation}
-      \item{For $\ell = 14$, using $2^14$ mixing matrices with each having $2^14 \cdot 2^14$ 
+      \item{For $\ell = 14$, using $2^{14}$ mixing matrices with each having $2^{14} \cdot 2^{14}$ 
       entries would require 32 TB of memory, whereas one mixing matrix requires only 2 GB}
     \end{itemize}
   \end{frame}
@@ -254,6 +255,7 @@
   \begin{frame}
     \frametitle{Regression}
     \[\log d = m \log N + b\]
+    \mbox{}\\[-0.5in]
     \begin{figure}[!ht]
       \begin{center}
 	\subfloat[Slope $m$]{

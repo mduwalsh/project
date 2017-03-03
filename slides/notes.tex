@@ -21,7 +21,7 @@
 \usepackage{multirow}
 \usepackage{tabularx, booktabs}
 
-
+\newcommand{\nudge}{\hspace{0.01in}}
 %%% PACKAGES THAT ARE PRELOADED WITH THE CLASS ARE: amsmath,amsthm,amssymb,setspace,geometry,hyperref,and color
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -153,10 +153,19 @@
   \item W is walsh matrix
   \item (hat) represents walsh transform and for matrix A, $\hat(A)$
     is given by the expression $\widehat{A} = WAW$, and for vector w, $\hat{w}$ is 
-    by the expression $\widehat{w} = wW$.given
-  \item Mixing matrix is given by the expression (point to expression)
-    which Vose provided us with.
-  \item And evolution eqn in Walsh basis is (point to expression)
+    by the expression $\widehat{w} = Ww$.
+  \item Mixing matrix is given by the expression
+    \[
+	  \widehat{M}_{u,v} \; = \; 2^{\,\ell-1} \,[\nudge u \nudge v = {\bf
+	  0}\nudge]\, \widehat{\bm{\mu}}_u \nudge \widehat{\bm{\mu}}_v \!  \sum_{k
+	\nudge \in \nudge \overline{u+v} \nudge \mathcal{R}} \bm{\chi}_{k + u} +
+	\bm{\chi}_{k + v}
+	\]
+  \item And evolution eqn in Walsh basis is 
+  \[
+	  \widehat{\bm{p}}_g^{\,\,\prime} \; = \; 2^{\,\ell/2} \sum_{i \nudge \in \nudge g \mathcal{R}}
+	  \widehat{\bm{p}}_i \, \nudge \widehat{\bm{p}}_{i+g} \,\widehat{M}_{i,i+g}
+	\]
   \end{itemize}
     
 \item
@@ -172,9 +181,9 @@
 \item
   \begin{itemize}
   \item With naïve computation as shown in equation (1), there would
-    be 2l x 2l multiplication terms to be computed
+    be $2^l x 2*l$ multiplication terms to be computed
   \item where f is finite population and q is infinite population
-  \item We simplify it as shown in eqn (2) where it needs only 2l +
+  \item We simplify it as shown in eqn (2) where it needs only $2^l$ +
     cardinal value of $S_f$ terms
   \item $S_f$ is set of diploids that are in finite populations
   \end{itemize}
@@ -194,20 +203,6 @@
   \item We ran simulations with $\chi$ = 0.1 and $\mu$ = 0.001 for
     different values of l
   \item These graphs show the results.
-  \item d is the distance, N is population size, n is number of
-    generations
-  \item Graphs show as population size increases, distance decreases,
-    converge to infinite population
-  \item Graphs also show smoothing as genome length increases
-  \item Data shows a near linear dependence of log d on log N and that
-    is what we are particularly interested in
-  \end{itemize}
-    
-\item
-  \begin{itemize}
-  \item We ran simulations with $\chi$ = 0.1 and $\mu$ = 0.001 for
-    different values of l
-  \item These graphs are the results.
   \item d is the distance, N is population size, n is number of
     generations
   \item Graphs show as population size increases, distance decreases,
@@ -254,7 +249,7 @@
   \begin{itemize}
   \item First I want to introduce term limit; we also call it fixed
     point interchangeably.
-  \item The infinite population sequence (point to sequence) may
+  \item The infinite population sequence  $\bm{p}, \, \mathcal{G}(\bm{p}), \, {\mathcal{G}}^2(\bm{p}), \, \cdots$ may
     converge to a point, that we call a fixed point.
   \item But under certain conditions, the sequence converges to a
     periodic orbit between two fixed points, say p* and q*
@@ -262,7 +257,11 @@
 
 \item
   \begin{itemize}
-  \item And the conditions are (point to the expressions)
+  \item And the conditions are: For some $g$
+  \begin{eqnarray*}
+      -1 &=& \sum \limits_{j} (-1)^{g^T j} \bm{\mu}_j \\
+      1 &=& \sum \limits_{k \in \bar{g}\mathcal{R}} \bm{\chi}_{k+g} + \bm{\chi}_k 
+      \end{eqnarray*}
   \item So our 2nd question is do finite populations also exhibit
      oscillations from random intial populations?
   \end{itemize}
@@ -320,22 +319,22 @@
   \begin{itemize}
   \item Graphs show the results for haploid and diploid population of
     length 10
-   \item left side – haploid, right side – diploids
+   \item top – haploid, bottom - diploids
   \item and for population size {4096, 40960, 81920}
-  \item last row graphs show results for infinite population
+  \item last column graphs show results for infinite population
   \item As population size increases, oscillation approaches the
     behavior exhibited by infinite population
   \item We observe more randomness in diploids than in haploids for
-    same l and N
+    same string length and population size.
   \end{itemize}
     
 \item
   \begin{itemize}
   \item Graphs show the results for haploid and diploid population of
     length 12
-   \item We observe that Increase in l degrades oscillation, and it is
+   \item We observe that increase in l degrades oscillation, and it is
      particularly noticeable in diploid case
-  \item We see an interesting behavior in this top right graph,
+  \item We see an interesting behavior in this bottom left graph,
   \end{itemize}
     
 \item
@@ -370,10 +369,60 @@
   \item As l increases, oscillation amplitude decreases
   \item As population size increases, oscillation amplitude increases
     and randomness decreases
-  \item Finite population also oscillates between different pairs of
+  \item Finite population can also oscillate between different pairs of
     fixed points for diploid population of smaller size and larger l
   \end{itemize}
   
+\item
+  \begin{itemize}
+  \item Question 3 concerns the robustness of finite population oscillation under violation in mutation
+  
+  \end{itemize}
+
+\item
+  \begin{itemize}
+  \item If Markov chain representing finite population is regular, positive steady state distribution exists 
+  \item Which means no periodic orbit exists for finite population
+  \item We study if finite population can exhibit approximate oscillations in that case  
+  
+  \end{itemize}
+  
+\item
+  \begin{itemize}
+  \item We introduce violation $\epsilon$ as following
+  \item The modification in $\bm{\mu}$ makes the Markov chain regular
+  \item This means no periodic orbits for finite population and no periodic orbits for infinite population
+  
+  \end{itemize}
+  
+\item
+  \begin{itemize}
+  \item Simulations were run for different values of $\epsilon, \ell and N$
+  \item Distances of population to limits p∗ and q∗ without violation are plotted  
+  \end{itemize}
+  
+\item
+  \begin{itemize}
+  \item Graphs show results for haploid population behavior of string length 8
+  \item Graphs are arranged in rows for increasing $\epsilon$ and columns for increasing population size
+  \item Graphs show convergence of finite population behavior to infinite population behavior as population increases
+  \item Results show oscillating behavior for smaller values of epsilon that diminishes with time.
+  \item As value of epsilon grows, oscillation degrades
+  
+  \end{itemize}
+  
+\item
+  \begin{itemize}
+  \item We observed oscillation also degrades as string length increases, that can be seen in results for diploids.
+  
+  \end{itemize}
+  
+\item
+  \begin{itemize}
+  \item Finite populations exhibit approximate oscillation even if Markov chain is regular when violation is small
+  \item If violation becomes larger, finite population oscillation decreases
+  \item As string length increases, oscillation degrades
+  \end{itemize}
   
   
 %   \item

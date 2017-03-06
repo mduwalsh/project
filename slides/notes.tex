@@ -43,23 +43,21 @@
   \begin{itemize}
   \item
       I will give background, then address four questions, and make
-      concluding remarks.
-    \item The terms here have technical meaning which will be explained in the following slides.
+      concluding remarks.    
   \end{itemize}
 
 \item
   \begin{itemize}
   \item Population is a collection of length l binary strings 
-  \item A population is represented by a vector; the $j$th component
+  \item A population can be represented by a vector; the $j$th component
       is the proportion of string j in the population.
-    \item Bitwise modulo 2 operations are defined on the set $\mathcal{R}$ of length
-      $\ell$ binary strings.
+    \item $\mathcal{R}$ is the set of length $\ell$ binary strings and operations under $\mathcal{R}$ ar bitwise modulo 2 operations.
   \end{itemize}
     
 \item
   \begin{itemize}
   \item Crossover and mutation operators are defined using the
-    Bitwise operations in $\mathcal{R}$.
+    bitwise operations in $\mathcal{R}$.
   \item Given parents $u$ and $v$, crossover produces children $u'$ and $v'$.
   \item $x$ mutates to $x + m$.
   \end{itemize}
@@ -88,16 +86,16 @@
   
 \item
   \begin{itemize}
-  \item Random Heuristic Search was presented in his book by Vose in 1999. Our work is
+  \item Random Heuristic Search generalizes simple genetic algorithm and was presented in his book by Vose in 1999. Our work is
     largely based on this model
   \item Given population p, $\tau$ is transition rule that maps p to
     the next generation p'.
   \item The sequence shows finite population evolution which forms
     Markov chain
   \item However, $\tau$ is stochastic function of crossover and
-    mutation, and hence, $\tau{p}$ can not be predicted with
+    mutation, and hence, $\tau(p)$ can not be predicted with
     certainty.
-  \item $\mathcal{G}{p}$ gives the expected next generation
+  \item $\mathcal{G}(p)$ gives the expected next generation
   \item The variance between finite population and infinite population
     is given by expression where r is population size
   \end{itemize}
@@ -172,6 +170,7 @@
   \begin{itemize}
   \item Reduction to haploid model and computing in Walsh basis
     simplified computations and made it efficient
+  \item 3 sum terms in transmission function is reduced to only one sum terms for computing mixing matrix in walsh basis 
   \item We only need one mixing matrix as opposed to $2^l$
   \item Consider l = 14, $2^14$ mixing matrices would require 32 TB of
     memory, while one mixing matrix would require only 2 GB of memory
@@ -180,24 +179,14 @@
     
 \item
   \begin{itemize}
-  \item With naïve computation as shown in equation (1), there would
-    be $2^l x 2*l$ multiplication terms to be computed
+  \item With naive computation as shown in equation (1), there would
+    be $2^l \cdot 2^l$ multiplication terms to be computed
   \item where f is finite population and q is infinite population
   \item We simplify it as shown in eqn (2) where it needs only $2^l$ +
     cardinal value of $S_f$ terms
   \item $S_f$ is set of diploids that are in finite populations
   \end{itemize}
-    
-\item
-  \begin{itemize}
-  \item With naïve computation as shown in equation (1), there would
-    be $2^l x 2^l$ multiplication terms to be computed
-  \item where f is finite population and q is infinite population
-  \item We simplify it as shown in eqn (2) where it needs only 2l +
-    cardinal value of $S_f$ terms
-  \item $S_f$ is set of diploids that are in finite populations
-  \end{itemize}
-
+  
 \item
   \begin{itemize}
   \item We ran simulations with $\chi$ = 0.1 and $\mu$ = 0.001 for
@@ -397,7 +386,7 @@
   
 \item
   \begin{itemize}
-  \item Simulations were run for different values of $\epsilon, \ell and N$
+  \item Simulations were run for different values of $\epsilon,\, \ell \,and\, N$
   \item Distances of population to limits p∗ and q∗ without violation are plotted  
   \end{itemize}
   
@@ -424,6 +413,58 @@
   \item As string length increases, oscillation degrades
   \end{itemize}
   
+  %% violation in crossover
+\item
+  \begin{itemize}
+  \item Question 4 also concerns the robustness of finite population oscillation, but under violation in crossover
+  
+  \end{itemize}
+
+\item
+  \begin{itemize}
+  \item Violation in crossover means no periodic orbit exists for infinite population
+  \item But we don't know if Markov chain is regular in this case
+  \item We investigate if finite population can exhibit approximate oscillations in this case  
+   
+  \end{itemize}
+  
+\item
+  \begin{itemize}
+  \item We introduce violation $\epsilon$ as following  
+  \end{itemize}
+  
+\item
+  \begin{itemize}
+  \item Simulations were run for different values of $\epsilon, \ell and N$
+  \item Distances of population to limits p∗ and q∗ without violation are plotted  
+  \end{itemize}
+  
+\item
+  \begin{itemize}
+  \item Graphs show results for haploid population behavior of string length 8
+  \item Results show similar behavior to that of violation in mutation case
+  \item However, we noticed that rate of damping of amplitudes of oscillation is slower than in mutation violation  
+  \item And, we see more randomness in population behavior than in mutation violation, especially for diploid case
+  \end{itemize}
+  
+\item
+  \begin{itemize}
+  \item Conclusions from experiment on violation in crossover are 
+  \item Finite populations exhibit approximate oscillation if violation is small
+  \item If violation becomes larger, finite population oscillation decreases
+  \item As string length increases, oscillation degrades
+  \end{itemize}
+  
+\item
+  \begin{itemize}
+  \item Overall conclusions from this research are
+  \item Vose's haploid model makes computation efficient in diploid case by reducing to haploid case 
+  \item Distance between finite population and infinite population can decrease like 1/√N
+  \item When infinite populations oscillate, finite populations exhibit approximate oscillation
+  \item When Markov chain is regular, finite population exhibits approximate oscillation for small mutation violation
+  \item Finite populations exhibit approximate oscillation for small crossover violation      
+  
+  \end{itemize}
   
 %   \item
 %   \begin{itemize}

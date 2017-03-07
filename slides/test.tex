@@ -1,58 +1,119 @@
-\documentclass[aspectratio=169]{beamer}
-\usepackage{enumitem}
-\usepackage{bm}
-\usepackage{float}
-\usepackage{subfig}
-\usepackage{caption}
-\usepackage{amsfonts}
-\usepackage{url}
-% \usepackage[config, labelfont={bf}]{subfloat, subfig} % nice sub figures
-\setbeamertemplate{footline}[frame number]
+\documentclass[notes]{beamer}       % print frame + notes
+% \documentclass[notes=only]{beamer}   % only notes
+%\documentclass{beamer}              % only frames
 
-\newcommand{\nudge}{\hspace{0.01in}}
-
-\title{Efficient Simulation Of A Simple Evolutionary System}
-\author{Mahendra Duwal Shrestha}
-\institute{The University Of Tenessee}
+\title[Your Short Title]{Your Presentation}
+\author{You}
+\institute{Where You're From}
 \date{\today}
-
 
 \begin{document}
 
-  \begin{frame}
-    \titlepage
-  \end{frame}
+\begin{frame}
+  \titlepage
+\end{frame}
 
-  \begin{frame}
-    \frametitle{Outline}
-    \begin{itemize}
-      \item{Background}
-      \item{Question 1: Distance between finite and infinite population}
-      \item{Question 2: Oscillation in finite population}
-      \item{Question 3: Oscillation in finite population under violation in mutation}
-      \item{Question 4: Oscillation in finite population under violation in crossover}
-      \item{Conclusion}
-    \end{itemize}
-  \end{frame}
+\begin{frame}
+    \frametitle{Introduction}
 
+\begin{itemize}
+  \item Your introduction goes here!
+  \item Use \texttt{itemize} to organize your main points.
+\end{itemize}
 
-  \begin{frame}
-    \frametitle{}
-    \begin{itemize}
-      \item{}      
-    \end{itemize}
-  \end{frame}
-  
-    
-  \begin{frame}
-    \frametitle{History}
-    \begin{itemize}
-      \item{Haldane, in 1932, summarized basic population genetics  models : Wright, Fisher and Haldane}
-      \item{Several people working with evolution-inspired algorithms in the 1950s and the 1960s –  
-      Box (1957), Friedman(1959), Bledsoe (1961), Bremermann (1962), and Reed, Toombs and Baricelli (1967) }
-      \item{In 1960s and 1970s, Holland and colleagues formalized  and promoted population based algorithms with crossover and mutation }
-      \item{Vose (1999) presented efficient methods for computing with a haploid model using mask-based operators introduced by Geiringer (1944)}
-    \end{itemize}
-  \end{frame}
-  
+\end{frame}
+
+\note{Everything you want}
+
+\begin{frame}
+    \frametitle{Development}
+
+    Lot of interesting things
+
+\end{frame}
+
+\note[itemize]{
+\item point 1
+\item point 2
+}
+
+\begin{frame}
+    \frametitle{Development}
+
+    Lot of interesting things
+
+\end{frame}
+
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% \documentclass[12pt]{beamer}
+% 
+% \usepackage{pgfpages}
+% 
+% % These slides also contain speaker notes. You can print just the slides,
+% % just the notes, or both, depending on the setting below. Comment out the want
+% % you want.
+% 
+% %\setbeameroption{hide notes} % Only slides
+% %\setbeameroption{show only notes} % Only notes
+%  \setbeameroption{show notes on second screen=right} % Both
+% 
+% % To give a presentation with the Skim reader (http://skim-app.sourceforge.net) on OSX so
+% % that you see the notes on your laptop and the slides on the projector, do the following:
+% % 
+% % 1. Generate just the presentation (hide notes) and save to slides.pdf
+% % 2. Generate onlt the notes (show only nodes) and save to notes.pdf
+% % 3. With Skim open both slides.pdf and notes.pdf
+% % 4. Click on slides.pdf to bring it to front.
+% % 5. In Skim, under "View -> Presentation Option -> Synhcronized Noted Document"
+% %    select notes.pdf.
+% % 6. Now as you move around in slides.pdf the notes.pdf file will follow you.
+% % 7. Arrange windows so that notes.pdf is in full screen mode on your laptop
+% %    and slides.pdf is in presentation mode on the projector.
+% 
+% % Give a slight yellow tint to the notes page
+% \setbeamertemplate{note page}{\pagecolor{yellow!5}\insertnote}\usepackage{palatino}
+% 
+% \title{How to make Beamer slides with notes}
+% \author{Andrej Bauer\\University of Ljubljana}
+% \date{\small Planet Earth}
+% 
+% \begin{document}
+% 
+% \begin{frame}
+%   \titlepage
+% 
+%   \note[item]{Thank the audience for being awake.}
+% \end{frame}
+% 
+% \begin{frame}
+% 
+%   \begin{itemize}
+%   \item Here are
+%   \item some very boring bullets
+%   \item about nothing.
+%   \end{itemize}
+%   
+%   \note[item]{Note that this slide is boring.}
+% 
+%   \note[item]{Observe that there are no actual bullets here.}
+% 
+%   \note[item]{Future work: add another bullet.}
+% \end{frame}
+% 
+% 
+% \end{document}

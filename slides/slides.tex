@@ -39,7 +39,7 @@
       \item{Population $P$: a collection of length $\ell$ binary strings}
       \item{Population vector $\bm{p}$: $\bm{p}_j$ is the proportion of string $j$ in the population}
       \item{If $P \,=\, {00, 01, 01, 10, 11, 11}$, then $\bm{p}_3 \,=\, 2/6 \,=\, 1/3$}
-      \item{$\mathcal{R}$ denotes a set binary strings of length $\ell$ }
+      \item{$\mathcal{R}$ denotes a set binary strings of length $\ell$, $|\mathcal{R}| = Z = 2^\ell$ }
       \begin{itemize}
 	\item{Addition and multiplication of elements in $\mathcal{R}$ are bitwise operations modulo 2}
 	\item{$x \,=\, 1101,\, y \,=\, 1010 $}
@@ -71,7 +71,7 @@
           \column{0.30\linewidth}
              \centering
              \includegraphics[height=6cm, width=5cm]{figures/eps/GA.eps}
-           \column{0.66\linewidth}
+           \column{0.67\linewidth}
 	    \begin{itemize}
               \item{Randomly select parents $u$ and $v$ }
               \item{Crossover $u$ and $v$ to produce $u^\prime$ and $v^\prime$ }
@@ -84,7 +84,8 @@
   \begin{frame}
     \frametitle{Random Heuristic Search}
     \begin{itemize}
-      \item{$\tau$ is a stochastic transition rule that maps $\bm{p}$ to $\bm{p}$}
+      \item{$\tau$ is a stochastic transition rule that maps 
+      $\bm{p}$ to $\bm{p^\prime} \in \Omega_N = \{\langle \frac{X_1}{N},\cdots,\frac{X_Z}{N} \rangle |X_i \in \mathcal{I} \geq 0, \sum X_i = N\}$}
       \item{For a finite population, sequence $\bm{p}, \tau(\bm{p}), \tau^2(\bm{p}), \cdots $ forms Markov chain}
       \item{$\tau(\bm{p})$ cannot be predicted with certainty }      
       \item{$\bm{\chi}_i \,=\,$ probability of using crossover mask $i$ }
@@ -113,7 +114,9 @@
       \item{Chebyshev's inequality $\to$ \[ \| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \,\leq\, \frac{k}{\sqrt{N}} \] }
       \item{Jensen's inequality  
       $\to$ \[ \mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \,\leq\, \frac{\sqrt{1 - \|\mathcal{G}(\bm{p})\|^2}}{\sqrt{N}}\]}
-      \item{Geometric point of view $\to$ \[ \| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \,=\, O(\sqrt{N}) \] }      
+      \item{Geometric point of view $\to$ \[ \sup \; \inf \|\bm{\xi} - \bm{p}\| \;=\; O(1/\sqrt{N}) \] 
+	$\bm{\xi} \in \Omega,\, \bm{p} \in \Omega_N$
+      }      
     \end{itemize}
 %     \newline
 %     \newline
@@ -154,8 +157,8 @@
   \begin{frame}
     \frametitle{Specialization to Vose's Haploid Model}
     \begin{itemize}
-      \item{Mutation: \[\bm{\mu}_i = (\mu)^{{\bf 1}^Ti} (1-\mu)^{\ell- {\bf 1}^Ti} \]}
-      \item{Crossover: \[
+      \item{Mutation distribution: \[\bm{\mu}_i = (\mu)^{{\bf 1}^Ti} (1-\mu)^{\ell- {\bf 1}^Ti} \]}
+      \item{Crossover distribution: \[
 	\bm{\chi}_i =\begin{cases}
 	  \chi c_i & \text{if $i>0$}\\
 	  1 - \chi + \chi  c_0 & \text{if $i = 0$}
@@ -273,17 +276,16 @@
   \end{frame}  
   
   \begin{frame}
-    \frametitle{Distance: Conclusion}
+    \frametitle{Does the distance between finite and infinite population decrease like $1/\sqrt{N}$}
     \begin{itemize}
-      \item{Vose's infinite population model makes computation in diploid case efficient by reducing to the haploid case}  
-      \item{Distance between finite diploid population and infinite diploid population can decrease like $1/\sqrt{N}$}
+      \item Yes
     \end{itemize}
   \end{frame}
   
   \begin{frame}
     \frametitle{Question 2}
     \begin{itemize}
-      \item{Oscillations in Finite Population Evolution}      
+      \item{Oscillation in Finite Populations}      
     \end{itemize}
   \end{frame}
   
@@ -348,7 +350,7 @@
       \item{Random initial population}     
       \item{$\ell \;\in\; {8, 10, 12, 14}$}
       \item{$N \;=\; {4096, 40960, 81920}$}
-      \item{To visualize oscillation, distance between fixed points and population are plotted}
+      \item{To visualize oscillation, distances of population to fixed points $\bm{p}^\ast$ and $\bm{q}^\ast$ are plotted}
     \end{itemize}
   \end{frame}
   
@@ -413,34 +415,20 @@
   \begin{frame}
     \frametitle{Oscillation: Conclusion}
     \begin{itemize}
-      \item{Finite population evolution exhibits approximate oscillations}    
-      \item{As $\ell$ increases, oscillation amplitude decreases}
-      \item{As population size increases, oscillation amplitude increases and randomness decreases}
-      \item{Finite population can also oscillate between different pairs of points for diploid population of smaller size and larger $\ell$ }
+      \item{Finite populations exhibit approximate oscillations}    
+      \item{As population size increases, randomness decreases}      
     \end{itemize}
   \end{frame}
   
   \begin{frame}
     \frametitle{Question 3}
     \begin{itemize}
-      \item{Oscillations Under Mutation-Violation}
+      \item{Oscillation Under Mutation-Violation}
       \item{
 	\[
-	  -1 &\neq& \sum \limits_{j} (-1)^{g^T j} \bm{\mu}_j      
+	  -1 \neq \sum \limits_{j} (-1)^{g^T j} \bm{\mu}_j      
 	\]
       }
-    \end{itemize}
-  \end{frame}
-  
-  \begin{frame}
-    \frametitle{Robustness of Finite Population}
-    \begin{itemize}
-      \item{A Markov chain is said to be \textit{irreducible} if it is possible to get to any state from any state}      
-      \item{A Markov chain is \textit{aperiodic} if it can return to state i at irregular times}
-      \item{Markov chain is \textit{regular} if it is both irreducible  and aperiodic}
-      \item{Positive steady state distribution exists if Markov chain is regular}
-      \item{No periodic orbit exists for finite population}
-      \item{Can finite population exhibit approximate oscillations?}
     \end{itemize}
   \end{frame}
   
@@ -453,6 +441,7 @@
       \item{This modification makes the Markov chain regular}
       \item{No periodic orbits for finite population}
       \item{No periodic orbits for infinite population}
+      \item{Can finite population exhibit approximate oscillations?}
     \end{itemize}
   \end{frame}
   
@@ -558,28 +547,22 @@
    \begin{frame}
     \frametitle{Question 4}
     \begin{itemize}
-      \item{Oscillations under Crossover-Violation}      
+      \item{Oscillation under Crossover-Violation}      
       \item
       \[	
-	1 &\neq& \sum \limits_{k \in \bar{g}\mathcal{R}} \bm{\chi}_{k+g} + \bm{\chi}_k 
+	1 \neq \sum \limits_{k \in \bar{g}\mathcal{R}} \bm{\chi}_{k+g} + \bm{\chi}_k 
       \]
     \end{itemize}
   \end{frame}
   
   \begin{frame}
-    \frametitle{Robustness of Finite Population}
-    \begin{itemize}
-      \item{Violation in crossover condition means no periodic orbit exists for infinite population}      
-      \item{Can finite population exhibit approximate oscillation?}
-    \end{itemize}
-  \end{frame}
-  
-   \begin{frame}
     \frametitle{Violation in Crossover}
     \begin{itemize}
       \item{Violation $\epsilon$ is introduced in $\bm{\chi}$ }
       \item{$\bm{\chi}_i \,:=\, (1 - \epsilon) \bm{\chi}_i$}
       \item{$\bm{\chi}_j \,=\, \epsilon$  \hspace{1cm}  $j$ is chosen where $\bm{\chi}_j \,=\, 0$}
+      \item{Violation in crossover condition means no periodic orbit exists for infinite population}
+      \item{Can finite populations exhibit approximate oscillation?}
     \end{itemize}
   \end{frame}
   
@@ -674,7 +657,7 @@
   \begin{frame}
     \frametitle{Violation in Crossover: Conclusion}
     \begin{itemize}
-      \item{Finite populations exhibit approximate oscillation when mutation distribution condition is violated if the violation is small} 
+      \item{Finite populations exhibit approximate oscillation under crossover-violation if the violation is small} 
       \item{If violation is large, then finite population oscillation decreases}      
       \item{More randomness are observed with violation in crossover than in mutation}
       \item{Randomness increases as string length increases}
@@ -687,8 +670,8 @@
       \item{Vose's haploid model makes computation efficient in diploid case by reducing to haploid case} 
       \item{Distance between finite population and infinite population can decrease like 1/√N}
       \item{When infinite populations oscillate, finite populations exhibit approximate oscillation}
-      \item{When Markov chain is regular, finite population exhibits approximate oscillation for small mutation violation}
-      \item{Finite populations exhibit approximate oscillation for small crossover violation}      
+      \item{Markov chain is regular under mutation-violation; finite populations exhibit approximate oscillation for small violation}
+      \item{Finite populations exhibit approximate oscillation for small crossover-violation}      
     \end{itemize}
   \end{frame}
   
@@ -697,6 +680,14 @@
     \begin{itemize}
       \item{Thank You!!} 
       \item{Questions?}
+    \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{}
+    \begin{itemize}
+      \item{} 
+      \item{}
     \end{itemize}
   \end{frame}
   

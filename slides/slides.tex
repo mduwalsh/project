@@ -3,8 +3,9 @@
 \usepackage{bm}
 \usepackage{amsfonts}
 \usepackage{float}
+\usepackage{setspace}
 \usepackage[config, labelfont={bf}]{caption,subfig} % nice sub figures
-\renewcommand{\baselinestretch}{1.0} 	 % line Spacing
+\renewcommand{\baselinestretch}{1.2} 	 % line Spacing
 \setbeamertemplate{footline}[frame number]
 
 \newcommand{\nudge}{\hspace{0.01in}}
@@ -26,9 +27,9 @@
     \begin{itemize}
       \item{Background}
       \item{Question 1: Convergence of finite population}
-      \item{Question 2: Oscillation in finite population}
-      \item{Question 3: Oscillation in finite population under mutation-violation}
-      \item{Question 4: Oscillation in finite population under crossover-violation}
+      \item{Question 2: Finite population oscillation}
+      \item{Question 3: Finite population oscillation under mutation-violation}
+      \item{Question 4: Finite population oscillation under crossover-violation}
       \item{Conclusion}
     \end{itemize}
   \end{frame}
@@ -37,8 +38,9 @@
     \frametitle{Terms}
     \begin{itemize}
       \item{Population $P$: a collection of length $\ell$ binary strings}
-      \item{Population vector $\bm{p}$: $\bm{p}_j$ is the proportion of string $j$ in the population}
+      \item{Population vector: $\bm{p}_j$ proportion of string $j$ in the population}
       \item{If $P \,=\, {00, 01, 01, 10, 11, 11}$, then $\bm{p}_3 \,=\, 2/6 \,=\, 1/3$}
+      \vspace{0.1in}%
       \item{$\mathcal{R}$ denotes a set binary strings of length $\ell$, $|\mathcal{R}| = Z = 2^\ell$ }
       \begin{itemize}
 	\item{Addition and multiplication of elements in $\mathcal{R}$ are bitwise operations modulo 2}
@@ -51,17 +53,19 @@
   \end{frame}
   
   \begin{frame}
-    \frametitle{Crossover \& Mutation}
-    \begin{itemize}
-      \item{Crossover : Choose parents $u$ and $v$, exchange bits using crossover mask $m$: }
+    \frametitle{Crossover \& Mutation}    
+    \begin{itemize}    
+      \item{ \mbox{}\\[-0.2in] Crossover : Choose parents $u$ and $v$, exchange bits using crossover mask $m$: }
       \item{$u^\prime \,=\, um + v\bar{m} , v^\prime \,=\, u\bar{m} + vm$}      
       \item{$u = \bm{1100}, v = 1101, m = 1100$}
       \item{$\{\bm{1100}, 1101\} \to \{\bm{11}00 + 0001,\, 00\bm{00} + 1100\} \to \{\bm{11}01, 11\bm{00}\}$}
-      \item
+      \item{$\bm{\chi}_m \,=\,$ probability of using crossover mask $m$ }
+      \vspace{0.06in}%
       \item{Mutation: Flip bits using mutation mask:}
       \item{$x \to x + m$}
       \item{$x = 1100, m = 0001$}
       \item{$1100 \to 1100 + 0001 \to 1101$}
+      \item{$\bm{\mu}_m \,=\,$ probability of using mutation mask $m$ }
     \end{itemize}
   \end{frame}
   
@@ -83,25 +87,25 @@
   
   \begin{frame}
     \frametitle{Random Heuristic Search}
-    \begin{itemize}
-      \item{$\tau$ is a stochastic transition rule that maps 
-      $\bm{p}$ to $\bm{p^\prime} \in \Omega_N = \{\langle \frac{X_1}{N},\cdots,\frac{X_Z}{N} \rangle |X_i \in \mathcal{I} \geq 0, \sum X_i = N\}$}
-      \item{For a finite population, sequence $\bm{p}, \tau(\bm{p}), \tau^2(\bm{p}), \cdots $ forms Markov chain}
-      \item{$\tau(\bm{p})$ cannot be predicted with certainty }      
-      \item{$\bm{\chi}_i \,=\,$ probability of using crossover mask $i$ }
-      \item{$\bm{\mu}_i \,=\,$ probability of using mutation mask $i$ }
+    {\setstretch{2.0}
+    \begin{itemize}    
+      \item{ \mbox{}\\[-0.5in] $\tau$ is a stochastic transition rule that maps 
+      $\bm{p}$ to $\bm{p^\prime} \in \Lambda_N = \{\langle \frac{X_1}{N},\cdots,\frac{X_Z}{N} \rangle \;|\; X_i \in \mathbb{Z}^{\geq 0},\; \sum X_i = N\}$}
+      \item{$\bm{p}, \tau(\bm{p}), \tau^2(\bm{p}), \cdots $ forms Markov chain}
+      \item{$\tau(\bm{p})$ cannot be predicted with certainty }            
     \end{itemize}
+    }
   \end{frame}
   
   \begin{frame}
     \frametitle{Infinite Population Model}
     \begin{itemize}
-      \item{Population is modeled as a vector $\bm{p} \in \Omega = \{\langle \bm{p}_1, \cdots \bm{p}_Z \rangle | \bm{p}_i \geq 0, \sum \bm{p}_i = 1 \}$}
-      \item{$\mathcal{G}$ maps $\bm{p}$ to the next generation}
-      \item{$\mathcal{G}(\bm{p})_j$ =  probability that string $j$ occurs in the next generation}
-      \item{The infinite population model is the sequence }
-      \item{$\bm{p} \to \mathcal{G}(\bm{p}) \to  {\mathcal{G}}(\mathcal{G}(\bm{p})) \to \cdots $}
-      \item{The variance in the next generation  is
+      \item{Population modeled as vector $\bm{p} \in \Lambda = \{\langle \bm{p}_1, \cdots \bm{p}_Z \rangle \;|\; \bm{p}_i \geq 0,\; \sum \bm{p}_i = 1 \}$}
+      \item{$\mathcal{G}$ maps $\bm{p}$ to the next generation $\bm{p}^\prime$}
+      \item{$\mathcal{G}(\bm{p})_j$ =  proportion of string $j$ in the next generation}
+      \item{The infinite population model 
+	\[\bm{p} \to \mathcal{G}(\bm{p}) \to  {\mathcal{G}}(\mathcal{G}(\bm{p})) \to \cdots \]}
+      \item{The variance is
 	\[\mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \|^2) = \frac{1 - \|\mathcal{G}(\bm{p})\|^2}{N}\]
       }
     \end{itemize}  
@@ -111,16 +115,14 @@
   \begin{frame}
     \frametitle{Question 1: Distance Between Finite and Infinite Population}
     \begin{itemize}
-      \item{Chebyshev's inequality $\to$ \[ \| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \,\leq\, \frac{k}{\sqrt{N}} \] }
-      \item{Jensen's inequality  
-      $\to$ \[ \mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \,\leq\, \frac{\sqrt{1 - \|\mathcal{G}(\bm{p})\|^2}}{\sqrt{N}}\]}
-      \item{Geometric point of view $\to$ \[ \sup \; \inf \|\bm{\xi} - \bm{p}\| \;=\; O(1/\sqrt{N}) \] 
-	$\bm{\xi} \in \Omega,\, \bm{p} \in \Omega_N$
+      \item{\mbox{}\\[-0.5 in] 
+      Chebyshev's inequality: \[ \| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \,\leq\, \frac{k}{\sqrt{N}} \] }
+      \item{Jensen's inequality: 
+       \[ \mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \,\leq\, \frac{\sqrt{1 - \|\mathcal{G}(\bm{p})\|^2}}{\sqrt{N}}\]}
+      \item{Geometric point of view: \[ \sup_{\bm{\xi} \in \Lambda} \; \inf_{\bm{p} \in \Lambda_N} \|\bm{\xi} - \bm{p}\| \;=\; O(1/\sqrt{N}) \] 	
       }      
     \end{itemize}
-%     \newline
-%     \newline
-      \mbox{}\\[0.25 in]
+      %\mbox{}\\[0.25 in]
     Does the distance decrease in practice like $1/\sqrt{N}$ ?
   \end{frame}
   
@@ -128,9 +130,8 @@
     \frametitle{Diploid Population Model}
     \begin{itemize}
       \item{Diploid genome: $\quad \alpha \,= \langle \alpha_0, \alpha_1 \rangle$}
-      \item{$\bm{q} \, \to \,$ current population} 
-      \item{$\bm{q}_\alpha \, \to \,$ prevalence of diploid $\alpha$}
-      \item{$t_\alpha(g) \, \to\,$ probability that gamete $g$ is produced from parent $\alpha$ }
+      \item{Population vector $\bm{q}_\alpha :$ prevalence of diploid $\alpha$}
+      \item{$t_\alpha(g) :$ probability that gamete $g$ is produced from parent $\alpha$ }
       \item{\[\bm{q}_\gamma^{\prime} \; = \;
       \sum_{\alpha} \, \bm{q}_\alpha \, t_\alpha(\gamma_0) 
       \sum_{\beta} \,\bm{q}_\beta \, t_\beta(\gamma_1)\]}
@@ -139,19 +140,22 @@
   
   \begin{frame}
     \frametitle{Diploid Model Reduction to Haploid Model}
+    {\setstretch{0.8}
     \begin{itemize}
-      \item{Diploid distribution in terms of haploids
+      \item{ \mbox{}\\[0.1in]
+      Diploids in terms of haploids:
       \[\bm{q}_{\langle \gamma_0, \gamma_1 \rangle}\; = \;
       \bm{p}_{\gamma_0} \, \bm{p}_{\gamma_1}\]}
-      \item{Haploid distribution in terms of diploids
+      \item{Haploids in terms of diploids:
       \[ \bm{p}_g \, = \, \frac{1}{2} \sum_{\alpha_0, \, \alpha_1} \, \bm{q}_{\langle \alpha_0, \alpha_1 \rangle}
 	    ([g = \alpha_0] + [g = \alpha_1]) \]}
-      \item{Evolution equation in terms of haploid distributions $\bm{p}$,
+      \item{Evolution equation in terms of haploid distribution $\bm{p}$:
       \[\bm{p}_{\gamma_0}^{\prime} \,=\, \sum_{\alpha_0, \, \alpha_1} \, \bm{p}_{\alpha_0} \, \bm{p}_{\alpha_1} \,
 	  t_{\langle \alpha_0, \,\alpha_1 \rangle}(\gamma_0) \]}
       \item{Matrix form:
-      \[ \bm{p}_g^\prime \; = \; \bm{p}^T M_g \, \bm{p} \] where \[ \Big(M_g \Big)_{u,v} \; = \; t_{\langle u, v \rangle}(g) \]}
+      \[ \bm{p}_g^\prime \; = \; \bm{p}^T M_g \, \bm{p} \;\;\;\; \text{where} \; \Big(M_g \Big)_{u,v} \; = \; t_{\langle u, v \rangle}(g) \]}
     \end{itemize}
+    }
   \end{frame}
   
   \begin{frame}
@@ -169,8 +173,9 @@
       \sum_{i \nudge \in \nudge \mathcal{R}} \, \sum_{j \nudge \in \nudge \mathcal{R}} \,
       \sum_{k \nudge \in \nudge \mathcal{R}}
       \bm{\mu}_i \nudge \bm{\mu}_j \, \frac{\bm{\chi}_k + \bm{\chi}_{\overline{k}}}{2} \,
-      [\nudge k (u + i) + \overline{k}(v + j) \, = \, g\nudge] \] where $u,v \in \mathcal{R}$}
+      [\nudge k (u + i) + \overline{k}(v + j) \, = \, g\nudge]  \] %\mbox{where} $\; u,v \in \mathcal{R}$
       
+      }
     \end{itemize}
   \end{frame}
   
@@ -191,9 +196,9 @@
 	\item{Evolution eqn in Walsh basis 
 	\[
 	  \widehat{\bm{p}}_g^{\,\,\prime} \; = \; 2^{\,\ell/2} \sum_{i \nudge \in \nudge g \mathcal{R}}
-	  \widehat{\bm{p}}_i \, \nudge \widehat{\bm{p}}_{i+g} \,\widehat{M}_{i,i+g}
-	\]
-	 where $g \mathcal{R} = \{g \nudge i \, | \, i \in \mathcal{R} \}$
+	  \widehat{\bm{p}}_i \, \nudge \widehat{\bm{p}}_{i+g} \,\widehat{M}_{i,i+g} 
+	  \;\;\;\;\; \mbox{where} \;\;\; g \mathcal{R} = \{g \nudge i \, | \, i \in \mathcal{R} \}
+	 \]
 	}
     \end{itemize}
   \end{frame}
@@ -201,8 +206,11 @@
   \begin{frame}
     \frametitle{Computational Advantages}
     \begin{itemize}
-      \item{Specialization simplifies computation, which otherwise for diploid case would have been impractical} 
+      \item{\vspace{-0.5in}
+      Specialization simplifies computation, which otherwise for diploid case would have been impractical} 
+      \vspace{0.1in}
       \item{Only one mixing matrix as opposed to $2^\ell$ is needed to compute next generation}
+      \vspace{0.1in}
       \item{For $\ell = 14$, using $2^{14}$ mixing matrices with each having $2^{14} \cdot 2^{14}$ 
       entries would require 32 TB of memory, whereas one mixing matrix requires only 2 GB}
     \end{itemize}
@@ -211,29 +219,32 @@
   \begin{frame}
     \frametitle{Distance Computation}
     \begin{itemize}      
-      \item{Naive computation 
+      \item{Naive computation: 
       \[
 	\|{\bm f} - {\bm q} \hspace{0.005in} \|^2 \; = \;
 	  {\sum_{\alpha}} ({\bm f}_\alpha-{\bm q}_\alpha)^2 
-	   \xrightarrow{\hspace*{1cm}} 2^\ell \cdot 2^\ell \, terms 
-	\]}
-      \item{Our implementation
-	\begin{equation*}
-	  \|{\bm f} - {\bm q} \hspace{0.005in} \|^2 \; = \; {\sum_{g}}^2 ({\bm p}_{g})^2 \, +
-	  \sum_{\alpha \in {S_{\bm f}}} {\bm f}_\alpha ({\bm f}_\alpha- 2 {\bm q}_\alpha) \to 2^\ell + |S_{\bm f}| \, terms 
-	\end{equation*}
-      }
-      \item{\[
+	   \xrightarrow{\hspace*{1cm}} 2^\ell \cdot 2^\ell \, \text{terms} 
+	\]
+      }      
+      \item{Our implementation:
+      \[
 	      S_{\bm f} \; = \; \{ \alpha \, | \, {\bm f}_\alpha > 0 \}
 	      \]
       }
+      \item{
+	\begin{equation*}
+	  \|{\bm f} - {\bm q} \hspace{0.005in} \|^2 \; = \; {\sum_{g}}^2 ({\bm p}_{g})^2 \, +
+	  \sum_{\alpha \in {S_{\bm f}}} {\bm f}_\alpha ({\bm f}_\alpha- 2 {\bm q}_\alpha) \to 2^\ell + |S_{\bm f}| \, \text{terms} 
+	\end{equation*}
+      }      
     \end{itemize}
   \end{frame}
   
   \begin{frame}
     \frametitle{Convergence}  
-      \[\chi \,=\, 0.1, \; \mu \,=\, 0.001\]
-	\begin{figure}[!hb]
+    {\setstretch{1.0}
+      \hspace{2in}$\chi \,=\, 0.1, \; \mu \,=\, 0.001$
+	\begin{figure}[h]
 	  \begin{center}
 	    \subfloat[$\ell = 4$]{
 	    \resizebox*{3cm}{!}{\includegraphics{figures/eps/surf/b4.eps}}}\hspace{5pt}
@@ -252,11 +263,12 @@
 	    \caption[]{Convergence of finite population behaviour}   
 	  \end{center}
 	\end{figure}      
-    
+    }
   \end{frame}
   
   \begin{frame}
     \frametitle{Regression}
+    {\setstretch{1.0}
     \[\log d = m \log N + b\]
     \mbox{}\\[-0.5in]
     \begin{figure}[!ht]
@@ -272,12 +284,14 @@
     \newline
     From figure (a) above, $m \approx -0.5$ 
     \newline
-    $d \approx k / √N$
+    $d \approx k / \sqrt{N}$
+    }
   \end{frame}  
   
   \begin{frame}
-    \frametitle{Does the distance between finite and infinite population decrease like $1/\sqrt{N}$}
+    \frametitle{Convergence: Conclusion}
     \begin{itemize}
+      \item Does the distance between finite and infinite population decrease like $1/\sqrt{N}$ ?
       \item Yes
     \end{itemize}
   \end{frame}

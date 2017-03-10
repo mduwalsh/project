@@ -42,14 +42,14 @@
 \item
   \begin{itemize}
   \item
-      I will give background, then address four questions, and make
+      I will give background, then address these four questions, and make
       concluding remarks.    
   \end{itemize}
 
 \item
   \begin{itemize}
-  \item Population is a collection of length l binary strings 
-  \item A population can be represented by a vector; the $j$th component
+  \item Population is a collection of length $\ell$ binary strings 
+  \item Population can be represented by a vector; the $j$th component
       is the proportion of string j in the population.
     \item $\mathcal{R}$ is the set of length $\ell$ binary strings and operations under $\mathcal{R}$ are bitwise modulo 2 operations.
   \end{itemize}
@@ -60,7 +60,10 @@
     bitwise operations in $\mathcal{R}$.
   \item Crossover exchanges bits in parents $u$ and $v$ using crossover mask to produce children $u'$ and $v'$ 
   using the rule $u^\prime \,=\, um + v\bar{m} , v^\prime \,=\, u\bar{m} + vm$
-  \item Mutation flips bits in $x$ using mutation mask m according to rule $x$ to $x + m$.
+  \item $\bm{\chi}_m$ is probability of using crossover mask m
+  \item
+  \item Mutation flips bits in $x$ using mutation mask m.
+  \item $\bm{\mu}_m$ is probability of using mutation mask m
   \end{itemize}
     
 \item
@@ -77,46 +80,41 @@
   \begin{itemize}
   \item In Random Heuristic Search,
   \item Given population p, $\tau$ is transition rule that maps p to
-    the next generation p'.
-  \item The sequence shows finite population evolution which forms
+    the next generation p' where p and $p^\prime$ both belong to population space $\Lambda_N$.
+    N is population size. 
+  \item Finite population evolution forms
     Markov chain
   \item However, $\tau$ is stochastic function of crossover and
-    mutation, and crossover masks and mutation masks are randomly chosen.
-    So, $\tau(p)$ can not be predicted with
-    certainty
-  \item $\bm{\chi}_i$ is probability of choosing crossover mask i
-  \item $\bm{\mu}_i$ is probability of choosing mutation mask i
+    mutation and $\tau(p)$ can not be predicted with
+    certainty 
   \end{itemize}
     
 \item
   \begin{itemize}
-  \item In infinite population model, population is modeled as by a vector $\bm{p}$        
+  \item In infinite population model, population is modeled by vector p where p belongs to population space $\Lambda$.    
   \item $\mathcal{G}$ is a function that maps $\bm{p}$ to the next
-    generation where $\mathcal{G}(p)_j$ is probability that string $j$
+    generation $\bm{p}^\prime$ where $j$th component is proportion of string $j$
     occurs in the next generation.
   \item The sequence shows evolution of p under infinite population
     model.
-  \item The variance between next generation finite population and infinite population 
-    is given by expression where N is population size
+  \item The variance is expectation of square of distance between finite population and infinite population.
   \end{itemize}
   
 \item
   \begin{itemize}
-  \item Our first question concerns about convergence of finite
-    population to infinite population
-  \item Chebyshev's inequality, Jensen's inequality and geometric point of view, all, suggests the distance might decrease
-    as $1/\sqrt{ r}$
-  \item But all of 3 implications are from inequalities. So the distance
-    might decrease much smaller than $1/\sqrt{ r}$.
-  \item We investigate if the distance infact decreases like $1/\sqrt{ r}$ in practice. For this we set up
+  \item Chebyshev's inequality, Jensen's inequality and geometric point of view, all, suggest the distance might decrease
+    as $1/\sqrt{ N}$
+  \item But all of 3 implications are from inequalities. The distance
+    might decrease much smaller than $1/\sqrt{ N}$.
+  \item We investigate if the distance infact decreases like $1/\sqrt{N}$ in practice. For this we set up
     simple diploid model.
   \end{itemize}
     
 \item
   \begin{itemize}
-  \item It is infinite population model.
+%   \item It is infinite population model.
   \item We consider diploid genome $\alpha$ with genome length l.
-  \item $q$ is current generation population
+  \item Population is modeled by vector $q$
   \item $q_\alpha$ is prevalence of diploid $\alpha$
   \item $t_{\alpha}(g)$ is transmission function which is probability
     of gamete g being produced from parent $\alpha$
@@ -132,12 +130,12 @@
     distributions.
   \item Haploids can be determined in terms of diploid
     distributions.
-  \item Evolution equation can be expressed in terms of haploid
+  \item And evolution equation can be expressed in terms of haploid
     distributions as 
     \[\bm{p}_{\gamma_0}^{\prime} \,=\, \sum_{\alpha_0, \, \alpha_1} \, \bm{p}_{\alpha_0} \, \bm{p}_{\alpha_1} \,
 	  t_{\langle \alpha_0, \,\alpha_1 \rangle}(\gamma_0) \]
 	  
-  \item In the matrix form, evolution equations can be expressed as
+  \item In the matrix form, evolution equation can be expressed as $\bm{p}_g^\prime \; = \; \bm{p}^T M_g \, \bm{p}$
   \item Where M(g) is mixing matrix
   \end{itemize}
     
@@ -146,7 +144,7 @@
   \item This slide shows computation of crossover and mutation
     distributions, and transmission function  
   \item Transmission function is computed with this expression
-  \item There are 3 sum terms in in it, which is expensive
+  \item There are 3 sum terms in in it, which is expensive to compute
   \end{itemize}
     
 \item
@@ -161,7 +159,7 @@
     \nudge \in \nudge \overline{u+v} \nudge \mathcal{R}} \bm{\chi}_{k + u} +
     \bm{\chi}_{k + v}
     \]
-  \item And evolution eqn in Walsh basis is 
+  \item This is  evolution eqn in Walsh basis 
   \[
     \widehat{\bm{p}}_g^{\,\,\prime} \; = \; 2^{\,\ell/2} \sum_{i \nudge \in \nudge g \mathcal{R}}
     \widehat{\bm{p}}_i \, \nudge \widehat{\bm{p}}_{i+g} \,\widehat{M}_{i,i+g}
@@ -191,10 +189,12 @@
     cardinal value of $S_f$ terms
   \item $S_f$ is set of diploids that are in finite populations
   \end{itemize}
+  \item Writing code to compute in the Walsh basis, and running simulations using the Walsh basis 
+  is a significant part of my thesis. It represents the "Efficient" in the thesis title "Efficient Simulation of a Simple Evolutionary System".
   
 \item
   \begin{itemize}
-  \item We ran simulations with $\chi$ = 0.1 and $\mu$ = 0.001 for
+  \item We ran some simulations with $\chi$ = 0.1 and $\mu$ = 0.001 for
     different values of l
   \item These graphs show the results in logarithmic scale.
   \item  (point to axis) d is the distance, (point to axis) N is population size, (point to axis) n is number of
@@ -212,7 +212,9 @@
 
 \item
   \begin{itemize}
-  \item $1/\sqrt{N}$ was theoretical upper bound but our simulaion shows it is really very good bound and the distance decreases as $1/\sqrt{N}$. 
+  \item $1/\sqrt{N}$ was theoretical upper bound 
+  but our simulaion shows it is really very good bound 
+  and the distance decreases as $1/\sqrt{N}$. 
   \end{itemize}
     
 \item 
@@ -238,8 +240,9 @@
       -1 &=& \sum \limits_{j} (-1)^{g^T j} \bm{\mu}_j \\
       1 &=& \sum \limits_{k \in \bar{g}\mathcal{R}} \bm{\chi}_{k+g} + \bm{\chi}_k 
       \end{eqnarray*}
+  \item 1st one is for mutation distribution and 2nd one is for crossover distribution
   \item So our 2nd question is do finite populations also exhibit
-     oscillations from random intial populations when infinite population oscillate?
+     oscillations from random intial populations when infinite populations oscillate?
   \end{itemize}
     
 \item
@@ -262,41 +265,31 @@
     
 \item
   \begin{itemize}
-  \item Akin considered - continuous time model, we consider -
+  \item Akin considers - continuous time model, we consider -
     discrete time model
-   \item Hastings' study - limited to two bits length, includes only
-     crossover, not mutation
+   \item Hastings' study is limited to two bits length, includes only
+     crossover, no mutation
   \item Wright and Bidwell compute a specific fitness function and a
     specific initial population for randomly generated mutation and
     crossover distributions in an attempt to find cyclic behavior
-  \item Wright and Agapie used dynamic mutation that depends upon
+  \item Wright and Agapie use dynamic mutation that depends upon
     where population is in the population space while we use static
     mutation
-  \item We study oscillation for
-  \item fixed fitness function and random: initial population,
-    mutation and crossover distribution
-  \item higher bit length (up to 14), and actually oscillation
-    conditions for infinite populations are independent of string
-    length
-  \item both haploid and diploid populations, and for both finite and
-    infinite populations
-  \item We also visualize oscillation
   \end{itemize}
 
 \item
   \begin{itemize}
   \item Simulations were run for both haploid and diploid populations
-  \item for different string lengths l
-  \item and for population size {4096, 40960, 81920}
-  \item To visualize oscillations, distances between fixed points (p*
-    , q*) and population are plotted
+  \item for different string lengths l and populatin sizes N
+  \item To visualize oscillations, distance to fixed points (p*
+    , q*) are plotted
   \end{itemize}
     
 \item
   \begin{itemize}
   \item Graphs show the results for haploid and diploid population of
     length 8
-   \item top – haploid, bottom - diploids
+   \item top row shows results for haploid, bottom row for diploids
   \item Population size {4096, 40960, 81920} is in increasing order in columns
   \item As population size increases, oscillation approaches the
     behavior exhibited by infinite population
@@ -313,15 +306,14 @@
     
 \item
   \begin{itemize}
-  \item Our conclusions from this simulation are
+  \item Our conclusion from this simulation is
    \item Finite populations exhibit approximate oscillation when
      infinite populations oscillate
-  \item As population size increases, randomness decreases  
   \end{itemize}
   
 \item
   \begin{itemize}
-  \item Question 3 concerns the robustness of finite population oscillation under violation in mutation
+  \item Question 3 concerns the robustness of finite population oscillation under mutation-violation
   
   \end{itemize}
 
@@ -336,7 +328,7 @@
 \item
   \begin{itemize}
   \item Simulations were run for different values of $\epsilon,\, \ell \,and\, N$
-  \item Distances of population to limits p∗ and q∗ without violation are plotted  
+  \item Distance of population to limits p∗ and q∗ without violation are plotted  
   \end{itemize}
   
 \item
@@ -347,8 +339,8 @@
   \item Results show oscillating behavior of population for smaller values of epsilon that diminishes with time.
   \item Oscillation dies out for infinite population.
   \item Even though finite population also appears to be dying out, since Markov chain is regular, 
-  finite population will oscillate infinitely often.
-  \item As value of epsilon grows, oscillation diminishes
+  finite population will oscillate infinitely often (for $\epsilon$ = 0.1).
+  \item As value of $\epsilon$ grows, oscillation diminishes
   
   \end{itemize}
   
@@ -370,20 +362,14 @@
 \item
   \begin{itemize}
   \item Our last question concerns with the robustness of finite population oscillation under mutation- violation, 
-  our next question also concerns with the robustness of finite population but under violation in crossover  
+  our next question also concerns with the robustness of finite population but under crossover-violation  
   \end{itemize}
 
 \item
   \begin{itemize}
-  \item Violation in crossover means no periodic orbit exists for infinite population
-  \item But we don't know if Markov chain is regular in this case
-  \item We investigate if finite population can exhibit approximate oscillations in this case  
-   
-  \end{itemize}
-  
-\item
-  \begin{itemize}
-  \item We introduce violation $\epsilon$ as following  
+  \item We introduce violation $\epsilon$ in crossover distribution
+  \item Crossover-violation means no periodic orbit exists for infinite population
+  \item We investigate if finite population can exhibit approximate oscillations in this case     
   \end{itemize}
   
 \item

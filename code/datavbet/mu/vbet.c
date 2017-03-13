@@ -8,7 +8,7 @@
 #include "rand.c"
 #include "sort.c"
 
-#define CLUSTER 0
+#define CLUSTER 1
 #define EPS 0
 #define VIO_MU_CHI 1       // 0: no violation in Mu nor chi; 1: violate Mu; 2: violate Chi
 
@@ -962,15 +962,6 @@ void compute_unit_vector(double *x, double *y, double *n, unsigned long size )
   for(i = 0; i < size; i++){
     n[i] = (x[i]-y[i])/dn;
   }
-}
-
-void dip_n(double *x, double *y, double *n, unsigned long i)
-{
-  double dn;
-  unsigned x0, x1;
-  get_x0x1(i, &x0, &x1);
-  dn = dist_p1p2_diploid(x, y);
-  return ( qi_x(x0, x1, x) - qi_x(x0, x1, y) )/dn;
 }
 
 double dot_product_diploid_n_and_pop_sub_p(double *p, double *n, unsigned long *pop)     // p: haploids array for infinite popn

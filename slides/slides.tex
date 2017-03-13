@@ -207,7 +207,7 @@
     \frametitle{Computational Advantages}
     \begin{itemize}
       \item{\vspace{-0.5in}
-      Specialization simplifies computation, which otherwise for diploid case would have been impractical} 
+      Reduction to haploid model and Walsh basis simplifiy computation, which otherwise for diploid case would have been impractical} 
       \vspace{0.1in}
       \item{Only one mixing matrix as opposed to $2^\ell$ is needed to compute next generation}
       \vspace{0.1in}
@@ -219,7 +219,7 @@
   \begin{frame}
     \frametitle{Distance Computation}
     \begin{itemize}      
-      \item{Naive computation: 
+      \item{Naive implementation: 
       \[
 	\|{\bm f} - {\bm q} \hspace{0.005in} \|^2 \; = \;
 	  {\sum_{\alpha}} ({\bm f}_\alpha-{\bm q}_\alpha)^2 
@@ -433,8 +433,7 @@
     \frametitle{Oscillation: Conclusion}
     \begin{itemize}
       \setlength\itemsep{1em}
-      \item{Finite populations exhibit approximate oscillations}    
-      \item{As population size increases, randomness decreases}      
+      \item{Finite populations exhibit approximate oscillations}             
     \end{itemize}
   \end{frame}
   

@@ -964,6 +964,7 @@ void compute_unit_vector(double *x, double *y, double *n, unsigned long size )
   }
 }
 
+// returns norm value of x - y in diploids term
 double dip_norm(double *x, double *y, unsigned long size)
 {
   unsigned long i, j;
@@ -976,12 +977,10 @@ double dip_norm(double *x, double *y, unsigned long size)
   return sqrt(s);
 }
 
-double dip_n(double *x, double *y, double norm, unsigned long i)
-{
-  double dn;
-  unsigned x0, x1;
-  get_x0x1(i, &x0, &x1);  
-  return ( qi_x(x0, x1, x) - qi_x(x0, x1, y) )/norm;
+// returns diploid unit vector n's ith component direction x - y
+double dip_n(double *x, double *y, double norm, unsigned i, unsigned j)
+{  
+  return ( qi_x(i, j, x) - qi_x(i, j, y) )/norm;
 }
 
 double dot_product_diploid_n_and_pop_sub_p(double *p, double *p_str, double *q_str, double norm, unsigned long *pop)     // p: haploids array for infinite popn
@@ -992,9 +991,10 @@ double dot_product_diploid_n_and_pop_sub_p(double *p, double *p_str, double *q_s
   // that is summation of q(x)^2; x-> <x0,x1> not in S
   // square distance = {summation of (qf_x - qi_x)^2} + {summation of p(x1)^2 * p(x2)^2} - {summation of p(x1)^2*p(x2)^2 <x1,x2> in S}
 
-  double d, tmp, qfx, n_ix;
-  unsigned long i, c;
+  double d, qfx;
+  unsigned long i, c, j;
   unsigned x0, x1;
+  unsigned long size = 1ul<<L;
   d = 0;c = 0;
   for(i = 0; i < Nd; i++){        
     if(i < (Nd-1)){
@@ -1007,30 +1007,25 @@ double dot_product_diploid_n_and_pop_sub_p(double *p, double *p_str, double *q_s
     qfx = c/(double)(Nd);                  // proportion of diploid in finite population
     c = 0;                              // reset count of occurrence of diploid
     
-    get_x0x1(pop[i], &x0, &x1);    
-    // compute square of distance between population in finite diploid population and infinite diploid population 
-    // for diploids only in finite population
-    tmp = qfx - qi_x(x0, x1, p);   
-    n_ix = dip_n(p_str, q_str, norm, pop[i]);                   // normal vector component for pop[i]th index
-    d += n_ix*tmp;
-    // now add summation of n(x1)*n(x2)*p(x1)*p(x2) <x1,x2> in S
-    d += n_ix*qi_x(x0, x1, p);
+    get_x0x1(pop[i], &x0, &x1);          
+    d += dip_n(p_str, q_str, norm, x0, x1)*qfx;    
   }  
-  
-  // add to square distance the summation of p(x1)^2 * p(x2)^2 = (summation of p(x)^2)^2  // refer to paper
-  for(tmp = 0, i = 0; i < (1ul<<L); i++)    
-    tmp += p[i]*dip_n(p_str, q_str, norm, i);                // n_i * p_i
-  d -= tmp*tmp;
-
+  for(i = 0; i < size; i++){
+    for(j = 0; j < size; j++){
+      d -= dip_n(p_str, q_str, norm, i, j)*qi_x(i, j, p);
+    }
+  }
   return d;
 }
+
 
 double dot_product_haploid_n_and_pop_sub_p(double *p, double *n, unsigned long *pop)     // p: haploids array for infinite popn
 {
   double d, tmp, qfx;
-  unsigned long i, c;
-  
+  unsigned long i, c;  
   d = 0;c = 0;
+  // dot product as // sum of n_g*x_g in S_f - sum of n_g*p_g
+  // term n_g*x_g
   for(i = 0; i < Nh; i++){    
     if(i < (Nh-1)){
       if(pop[i] == pop[i+1]){     // move through list till diploid matches
@@ -1040,20 +1035,13 @@ double dot_product_haploid_n_and_pop_sub_p(double *p, double *n, unsigned long *
     }
     c++;                                // increase count by one
     qfx = c/(double)Nh;                  // proportion of diploid in finite population
-    c = 0;                              // reset count of occurrence of diploid
-    
-    // compute square of distance between population in finite haploid population and infinite haploid population 
-    // for diploids only in finite population
-    tmp = qfx - p[pop[i]];
-    d += n[pop[i]]*tmp;
-    // now add summation of n[x1]p(x1) for x1 in finite popn
-     d +=  n[pop[i]]*p[pop[i]];    
-  }  
-  // add to square distance the summation of p(x1)^2 for all x1 in R
+    c = 0;                              // reset count of occurrence of diploid    
+    d += n[pop[i]]*qfx;       
+  }    
+  // term n_g*p_g
   for(tmp = 0, i = 0; i < (1ul<<L); i++)    
     tmp += n[i]*p[i];
   d -= tmp;
-
   return d;
 }
 
@@ -1074,6 +1062,19 @@ int is_between_points_haploid_finite(double *p, double *q, unsigned long *pop)
   
 }
 
+int is_between_points_diploid_finite(double *p, double *q, unsigned long *pop)
+{
+  unsigned long size = 1ul<<L;  
+  int check;
+  double norm = dip_norm(p, q, size);
+  if(dot_product_diploid_n_and_pop_sub_p(p, p, q, norm, pop) < 0.0 && dot_product_diploid_n_and_pop_sub_p(p, p, q, norm, pop) > 0.0){
+    return 1;
+  }
+  else{
+    return 0;
+  }    
+}
+
 int is_between_points_haploid( double *p, double *q, double *x)
 {
   unsigned long size = 1ul<<L;
@@ -1084,6 +1085,7 @@ int is_between_points_haploid( double *p, double *q, double *x)
   vector_sub(x, p, dz1, size);  // dz1 = x - p 
   vector_sub(x, q, dz2, size);  // dz2 = x - q 
   compute_unit_vector(p, q, n, size ); // unit vector n  
+  
     
   if(dot_product(n, dz1, 1ul<<L) < 0.0 && dot_product(n, dz2, 1ul<<L) > 0.0){
     check = 1;              // yes x inside p and q 
@@ -1095,17 +1097,39 @@ int is_between_points_haploid( double *p, double *q, double *x)
   return check;
 }
 
-void osc_all_n_dist(double *p, double *p_str, double *q_str, double *p1_str, double *q1_str, unsigned long run, double *n_str)
+int is_between_points_diploid( double *p, double *q, double *x)
+{
+  unsigned long size = 1ul<<L;  
+  double norm = dip_norm(p, q, size);
+  double dp1 = 0, dp2 = 0, n_ix;
+  unsigned i, j;
+  // dot product of n and x-p
+  for(i = 0; i < size; i++){
+    for(j = 0; j < size; j++){
+      n_ix = dip_n(p, q, norm, i, j);
+      dp1 += n_ix*(qi_x(i, j, x)-qi_x(i, j, p));
+      dp2 += n_ix*(qi_x(i, j, x)-qi_x(i, j, q));
+    }
+  }    
+  if(dp1 < 0.0 && dp2 > 0.0){
+    return 1;              // yes x inside p and q 
+  }
+  else{
+    return 0;              // no  
+  }    
+}
+
+void osc_all_n_dist(double *p, double *p_str, double *q_str, double *p1_str, double *q1_str, unsigned long run)
 /*
  * p: initial population haploids;
  * p_str: oscillation point 1
  * q_str: oscillation point 2
  */
 {
-  FILE *fp, *gp, *fp2, *fp3;
+  FILE *fp, *gp, *fp2, *fp3, *fp4;
   char fname[200], title[200], tfile[200];
   unsigned long i, j, a, b, *tmp_ptr;
-  double *p1, *p2, *tptr, norm;
+  double *p1, *p2, *tptr;
   double *d1, *d2, *d3, *d4, *d5, *d6, *d7, *d8, *d9, *d10, *d11, *d12, *d13, *d14, *d15, *d16, *d17, *d18;
   d1 = calloc(G, sizeof(double));
   d2 = calloc(G, sizeof(double));
@@ -1152,9 +1176,11 @@ void osc_all_n_dist(double *p, double *p_str, double *q_str, double *p1_str, dou
   fp2 = fopen(tfile, "w");
   sprintf(tfile, "b%02lu_eps%0.6lf_bet_inf_hap_%02lu.dat", L, Epsilon, run);
   fp3 = fopen(tfile, "w");  
- 
+  sprintf(tfile, "b%02lu_eps%0.6lf_bet_inf_dip_%02lu.dat", L, Epsilon, run);
+  fp4 = fopen(tfile, "w"); 
   // write if z_str = p_str between p1_str and q1_str
-  fprintf(fp, "%d\n\n", is_between_points_haploid( p1_str, q1_str, p_str));  
+  fprintf(fp3, "%d\n\n", is_between_points_haploid( p1_str, q1_str, p_str));  
+  fprintf(fp4, "%d\n\n", is_between_points_diploid( p1_str, q1_str, p_str));
   
   for(i = 0; i < G; i++){                     // move through G generations
     g_w(1, p1, p2);                           // evolution of population 1 generation at a time
@@ -1168,7 +1194,8 @@ void osc_all_n_dist(double *p, double *p_str, double *q_str, double *p1_str, dou
       d13[i] = dist_p1p2_diploid(p2, p1_str);     // distance between p2 and p1_str diploid
       d14[i] = dist_p1p2_diploid(p2, q1_str);     // distance between p2 and q1_str diploid  
     }    
-    fprintf(fp3, "%d\n\n", is_between_points_haploid( p1_str, q1_str, p2));      
+    fprintf(fp3, "%d\n", is_between_points_haploid( p1_str, q1_str, p2));     
+    fprintf(fp4, "%d\n", is_between_points_diploid( p1_str, q1_str, p2));
     
     // swap pointers to p1 and p2
     tptr = p1;
@@ -1181,7 +1208,8 @@ void osc_all_n_dist(double *p, double *p_str, double *q_str, double *p1_str, dou
       reproduce_haploid(a, b, j, Hpop[0], Hpop[1]);           // randomly two parents chosen; will be proportional to proportion
     }
     // write if popn is between p1_str and q1_str
-    fprintf(fp, "%e\n", is_between_points_haploid_finite(p1_str, q1_str, Hpop[1]));  
+    fprintf(fp, "%d\n", is_between_points_haploid_finite(p1_str, q1_str, Hpop[1]));  
+    
     // set new generation as parent generation for next generation
     tmp_ptr = Hpop[0];
     Hpop[0] = Hpop[1];
@@ -1200,13 +1228,8 @@ void osc_all_n_dist(double *p, double *p_str, double *q_str, double *p1_str, dou
 	a = rnd(Nd); b = rnd(Nd);
 	reproduce_diploid(a, b, j, Pop[0], Pop[1]);           // randomly two parents chosen; will be proportional to proportion
       }
-     
-      if(dot_product_diploid_n_and_pop_sub_p(p1_str, p1_str, q1_str, norm, Pop[1]) < 0.0 && dot_product_diploid_n_and_pop_sub_p(q1_str, p1_str, q1_str, norm, Pop[1]) < 0.0){
-	fprintf(fp2, "%e\n", 1.0);
-      }
-      else{
-	fprintf(fp2, "%e\n", 0.0);
-      }
+      // write if popn is between diploid p_str and q_str
+      fprintf(fp2, "%d\n", is_between_points_diploid_finite(p1_str, q1_str, Pop[1]));      
      
       // set new generation as parent generation for next generation
       tmp_ptr = Pop[0];
@@ -1227,9 +1250,8 @@ void osc_all_n_dist(double *p, double *p_str, double *q_str, double *p1_str, dou
       d10[i+1] = dist_n(p1, Pop[0]);                 // distance between population point finite and infinite diploid
     }
   }
-  fclose(fp); fclose(fp2); fclose(fp3);
-  free(dz1_str); free(dz2_str);
-  
+  fclose(fp); fclose(fp2); fclose(fp3); fclose(fp4);
+    
   // write haploid distances to file
   char str[100];
   sprintf(str,  "b%02lu_g%04lu_eps%0.6lf_osc_inf_haploid_%02lu.dat", L, G, Epsilon, run);             // add run to filename
@@ -1488,7 +1510,7 @@ int main(int argc, char** argv)
   SkipHaploid = 0;                // skip finite haploid computation
 
   
-  double *p_str, *q_str, *p1_str, *q1_str, *n_str;                 // oscillating points  
+  double *p_str, *q_str, *p1_str, *q1_str;                 // oscillating points  
   time_t now; 
   unsigned long i, j, k;
   char seedfile[100];
@@ -1509,7 +1531,6 @@ int main(int argc, char** argv)
     q_str = calloc((1ul<<L),sizeof(double));  // oscillating point 2
     p1_str = calloc((1ul<<L),sizeof(double));  // oscillating point 1 without violation
     q1_str = calloc((1ul<<L),sizeof(double));  // oscillating point 2 without violation
-    n_str = calloc((1ul<<L),sizeof(double));   // unit vector
     setup();        
     // initial population calc begin
     // generate random distribution in P0
@@ -1525,9 +1546,7 @@ int main(int argc, char** argv)
     //mixing matrix before violation
     walsh(Mh, 0);                                          // calculate and install values in mixing matrix in walsh basis (Mhat)
     comp_periodic_orbits(p1_str, q1_str, P0);              // computes p_str and q_str oscillating points before violation
-    // compute unit vector n = (p_str - q_str)/(|| p_str - q_str ||)
-    compute_unit_vector(p1_str, q1_str, n_str, 1ul<<L);    
-			  
+    			  
     //display_p(Chi, "before violation chi:"); 
     for(k = 0; k < sizeof(Err)/sizeof(double); k++){
       copy_array(Chi_0, Chi, 1ul<<L);
@@ -1559,13 +1578,13 @@ int main(int argc, char** argv)
 	if(SkipDiploid == 0){
 	  generate_fin_dipop_from_px(P0, Pop[0]);               // finite diploid population generation from P0      
 	}
-	osc_all_n_dist(P0, p_str, q_str, p1_str, q1_str, j, n_str);
+	osc_all_n_dist(P0, p_str, q_str, p1_str, q1_str, j);
 	
 	deinit();     
 	
       }
     }
-    free(p_str); free(q_str); free(p1_str); free(q1_str); free(n_str);
+    free(p_str); free(q_str); free(p1_str); free(q1_str);
     cleanup();
   }
   walsh(Mh, -1);  

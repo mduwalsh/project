@@ -25,15 +25,26 @@
   \begin{frame}
     \frametitle{Outline}
     \begin{itemize}
-      \item{Background}
-      \item{Question 1: Convergence of finite population}
-      \item{Question 2: Finite population oscillation}
-      \item{Question 3: Finite population oscillation under mutation-violation}
-      \item{Question 4: Finite population oscillation under crossover-violation}
+      \item Part-I
+	\begin{itemize}
+	  \item{Background}
+	  \item{Computation}
+	\end{itemize}
+      \item Part-II
+      \begin{itemize}
+	\item{Question 1: Convergence of finite population}
+	\item{Question 2: Finite population oscillation}
+	\item{Question 3: Finite population oscillation under mutation-violation}
+	\item{Question 4: Finite population oscillation under crossover-violation}
+      \end{itemize}
       \item{Conclusion}
     \end{itemize}
   \end{frame}
-
+  
+  \begin{frame}
+    Part-I
+  \end{frame}
+  
   \begin{frame}
     \frametitle{Terms}
     \begin{itemize}
@@ -109,22 +120,7 @@
 	\[\mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \|^2) = \frac{1 - \|\mathcal{G}(\bm{p})\|^2}{N}\]
       }
     \end{itemize}  
-  \end{frame}  
-  
-  
-  \begin{frame}
-    \frametitle{Question 1: Distance Between Finite and Infinite Population}
-    \begin{itemize}
-      \item{\mbox{}\\[-0.5 in] 
-      Chebyshev's inequality: \[ \| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \,\leq\, \frac{k}{\sqrt{N}} \] }
-      \item{Jensen's inequality: 
-       \[ \mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \,\leq\, \frac{\sqrt{1 - \|\mathcal{G}(\bm{p})\|^2}}{\sqrt{N}}\]}
-      \item{Geometric point of view: \[ \sup_{\bm{\xi} \in \Lambda} \; \inf_{\bm{p} \in \Lambda_N} \|\bm{\xi} - \bm{p}\| \;=\; O(1/\sqrt{N}) \] 	
-      }      
-    \end{itemize}
-      %\mbox{}\\[0.25 in]
-    Does the distance decrease in practice like $1/\sqrt{N}$ ?
-  \end{frame}
+  \end{frame}   
   
   \begin{frame}
     \frametitle{Diploid Population Model}
@@ -238,6 +234,24 @@
 	\end{equation*}
       }      
     \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    Part-II
+  \end{frame}
+  
+   \begin{frame}
+    \frametitle{Question 1: Distance Between Finite and Infinite Population}
+    \begin{itemize}
+      \item{\mbox{}\\[-0.5 in] 
+      Chebyshev's inequality: \[ \| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \,\leq\, \frac{k}{\sqrt{N}} \] }
+      \item{Jensen's inequality: 
+       \[ \mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \,\leq\, \frac{\sqrt{1 - \|\mathcal{G}(\bm{p})\|^2}}{\sqrt{N}}\]}
+      \item{Geometric point of view: \[ \sup_{\bm{\xi} \in \Lambda} \; \inf_{\bm{p} \in \Lambda_N} \|\bm{\xi} - \bm{p}\| \;=\; O(1/\sqrt{N}) \] 	
+      }      
+    \end{itemize}
+      %\mbox{}\\[0.25 in]
+    Does the distance decrease in practice like $1/\sqrt{N}$ ?
   \end{frame}
   
   \begin{frame}

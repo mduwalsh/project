@@ -5,6 +5,16 @@
 \usepackage{float}
 \usepackage{setspace}
 \usepackage[config, labelfont={bf}]{caption,subfig} % nice sub figures
+\usepackage{mathrsfs}                   % additional math scripts
+\usepackage{multirow}
+\usepackage{tabularx, booktabs}
+\usepackage[plain]{algorithm}
+\usepackage{caption, algcompatible}
+\usepackage{algpseudocode} 
+\algdef{SE}[SUBALG]{Indent}{EndIndent}{}{\algorithmicend\ }%
+\algtext*{Indent}
+\algtext*{EndIndent}
+
 \renewcommand{\baselinestretch}{1.2} 	 % line Spacing
 \setbeamertemplate{footline}[frame number]
 
@@ -25,12 +35,12 @@
   \begin{frame}
     \frametitle{Outline}
     \begin{itemize}
-      \item Part-I
+      \item Part-I: Efficient Computations
 	\begin{itemize}
 	  \item{Background}
 	  \item{Computations}
 	\end{itemize}
-      \item Part-II
+      \item Part-II: Applications
       \begin{itemize}
 	\item{Question 1: Convergence of finite population}
 	\item{Question 2: Finite population oscillation}
@@ -44,12 +54,12 @@
   \begin{frame}
     \frametitle{}
     \begin{itemize}
-      \item Part-I
+      \item Part-I: Efficient Computations
       \end{itemize}
     \end{frame}
   
   \begin{frame}
-    \frametitle{Background: Terms}
+    \frametitle{Terms}
     \begin{itemize}
       \item{Population $P$: a collection of length $\ell$ binary strings}
       \item{Population vector: $\bm{p}_j$ proportion of string $j$ in the population}
@@ -67,7 +77,7 @@
   \end{frame}
   
   \begin{frame}
-    \frametitle{Background: Crossover \& Mutation}    
+    \frametitle{Crossover \& Mutation}    
     \begin{itemize}    
       \item{ \mbox{}\\[-0.2in] Crossover : Choose parents $u$ and $v$, exchange bits using crossover mask $m$: }
       \item{$u^\prime \,=\, um + v\bar{m} , v^\prime \,=\, u\bar{m} + vm$}      
@@ -84,41 +94,44 @@
   \end{frame}
   
   \begin{frame}
-    \frametitle{Background: Finite Population GA}
+    \frametitle{Finite Population GA}
     \begin{columns}
-          \column{0.30\linewidth}
-             \centering
-             \includegraphics[height=6cm, width=5cm]{figures/eps/GA.eps}
-           \column{0.67\linewidth}
-	    \begin{itemize}
-              \item{Randomly select parents $u$ and $v$ }
-              \item{Crossover $u$ and $v$ to produce $u^\prime$ and $v^\prime$ }
-              \item{Keep one of $u^\prime$, $v^\prime$ , and mutate to produce gamete $g$}
-              \item{Repeat above to form next generation}              
-	    \end{itemize}
-         \end{columns} 
+      \column{0.30\linewidth}
+	  \centering
+	  \includegraphics[height=6cm, width=5cm]{figures/eps/GA.eps}
+      \column{0.67\linewidth}
+	\begin{itemize}
+	  \item{Randomly select parents $u$ and $v$ }
+	  \item{Crossover $u$ and $v$ to produce $u^\prime$ and $v^\prime$ }
+	  \item{Keep one of $u^\prime$, $v^\prime$ , and mutate to produce gamete $g$}
+	  \item{Repeat above to form next generation}              
+	\end{itemize}
+    \end{columns} 
   \end{frame}
   
   \begin{frame}
-    \frametitle{Background: Random Heuristic Search}
+    \frametitle{ Random Heuristic Search}
     {\setstretch{2.0}
     \begin{itemize}    
       \item{ \mbox{}\\[-0.5in] $\tau$ is a stochastic transition rule that maps 
       $\bm{p}$ to $\bm{p^\prime} \in \Lambda_N = \{\langle \frac{X_1}{N},\cdots,\frac{X_Z}{N} \rangle \;|\; X_i \in \mathbb{Z}^{\geq 0},\; \sum X_i = N\}$}
-      \item{$\bm{p}, \tau(\bm{p}), \tau^2(\bm{p}), \cdots $ forms Markov chain}
-      \item{$\tau(\bm{p})$ cannot be predicted with certainty }            
+      \item{$\tau(\bm{p})$ cannot be predicted with certainty }  
+      \item{$\bm{p}, \tau(\bm{p}), \tau^2(\bm{p}), \cdots $ forms Markov chain}                
     \end{itemize}
     }
   \end{frame}
   
   \begin{frame}
-    \frametitle{Background: Infinite Population Model}
+    \frametitle{Infinite Population Model}
     \begin{itemize}
       \item{Population modeled as vector $\bm{p} \in \Lambda = \{\langle \bm{p}_1, \cdots \bm{p}_Z \rangle \;|\; \bm{p}_i \geq 0,\; \sum \bm{p}_i = 1 \}$}
       \item{$\mathcal{G}$ maps $\bm{p}$ to the next generation $\bm{p}^\prime$}
       \item{$\mathcal{G}(\bm{p})_j$ =  proportion of string $j$ in the next generation}
+      {\setstretch{0.8}
       \item{The infinite population model 
-	\[\bm{p} \to \mathcal{G}(\bm{p}) \to  {\mathcal{G}}(\mathcal{G}(\bm{p})) \to \cdots \]}
+	\[\bm{p} \to \mathcal{G}(\bm{p}) \to  {\mathcal{G}}(\mathcal{G}(\bm{p})) \to \cdots \]}	
+      \item{$\mathcal{G}(\bm{p}) \,=\, \mathcal{E}(\| \tau (\bm{p}))$}
+      }
       \item{The variance is
 	\[\mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \|^2) = \frac{1 - \|\mathcal{G}(\bm{p})\|^2}{N}\]
       }
@@ -126,7 +139,7 @@
   \end{frame}   
   
   \begin{frame}
-    \frametitle{Computations: Diploid Population Model}
+    \frametitle{ Diploid Population Model}
     \begin{itemize}
       \item{Diploid genome: $\quad \alpha \,= \langle \alpha_0, \alpha_1 \rangle$}
       \item{Population vector $\bm{q}_\alpha :$ prevalence of diploid $\alpha$}
@@ -138,7 +151,7 @@
   \end{frame}
   
   \begin{frame}
-    \frametitle{Computations: Diploid Model Reduction to Haploid Model}
+    \frametitle{ Diploid Model Reduction to Haploid Model}
     {\setstretch{0.8}
     \begin{itemize}
       \item{ \mbox{}\\[0.1in]
@@ -158,16 +171,17 @@
   \end{frame}
   
   \begin{frame}
-    \frametitle{Computations: Specialization to Vose's Haploid Model}
+    \frametitle{ Specialization to Vose's Haploid Model}
     \begin{itemize}
       \item{Mutation distribution: \[\bm{\mu}_i = (\mu)^{{\bf 1}^Ti} (1-\mu)^{\ell- {\bf 1}^Ti} \]}
       \item{Crossover distribution: \[
 	\bm{\chi}_i =\begin{cases}
 	  \chi c_i & \text{if $i>0$}\\
-	  1 - \chi + \chi  c_0 & \text{if $i = 0$}
+	  1 - \chi + \chi  c_0 & \text{if $i = 0$} \; 
 	\end{cases}
-      \]}
-      \item{For uniform crossover, $c_i = 2^{-\ell}$}
+	\quad c_i = 2^{-\ell}
+      \]
+      }      
       \item{\[ t_{\langle u,v \rangle}(g) \; = \;\,
       \sum_{i \nudge \in \nudge \mathcal{R}} \, \sum_{j \nudge \in \nudge \mathcal{R}} \,
       \sum_{k \nudge \in \nudge \mathcal{R}}
@@ -179,12 +193,26 @@
   \end{frame}
   
   \begin{frame}
-    \frametitle{Computations: Walsh Basis}
+    \frametitle{Walsh Basis}    
+    \begin{columns}
+      \column{0.37\linewidth}
+	
+	 $W_{n,t} = Z^{-1/2} (-1)^{n^T t}$ where $Z = 2^\ell$
+	 \newline
+	$\widehat{A} = WAW$
+	\newline
+	$\widehat{w} = Ww$        
+	
+      \column{0.60\linewidth}
+	  
+	  \includegraphics[height=6cm, width=5cm]{figures/eps/fwt.eps}      
+    \end{columns}    
+  \end{frame}
+    
+  \begin{frame}
+    \frametitle{Computations in Walsh basis}
     \begin{itemize}
-	\item{$W_{n,t} = Z^{-1/2} (-1)^{n^T t}$ where $Z = 2^\ell$}
-	\item{$\widehat{A} = WAW$}
-	\item{$\widehat{w} = Ww$}
-	\item{Mixing matrix in Walsh basis 
+	\item{Mixing matrix $M_0$ in Walsh basis 
 	\[
 	  \widehat{M}_{u,v} \; = \; 2^{\,\ell-1} \,[\nudge u \nudge v = {\bf
 	  0}\nudge]\, \widehat{\bm{\mu}}_u \nudge \widehat{\bm{\mu}}_v \!  \sum_{k
@@ -197,13 +225,36 @@
 	  \widehat{\bm{p}}_g^{\,\,\prime} \; = \; 2^{\,\ell/2} \sum_{i \nudge \in \nudge g \mathcal{R}}
 	  \widehat{\bm{p}}_i \, \nudge \widehat{\bm{p}}_{i+g} \,\widehat{M}_{i,i+g} 
 	  \;\;\;\;\; \mbox{where} \;\;\; g \mathcal{R} = \{g \nudge i \, | \, i \in \mathcal{R} \}
-	 \]
+	 \]	 
 	}
     \end{itemize}
+    
   \end{frame}
   
   \begin{frame}
-    \frametitle{Computations: Computational Advantages}
+    \frametitle{Computational Comparison}
+	  In Walsh basis 
+	    \[
+	  \widehat{\bm{p}}_g^{\,\,\prime} \; = \; 2^{\,\ell/2} \sum_{i \nudge \in \nudge g \mathcal{R}}
+	  \widehat{\bm{p}}_i \, \nudge \widehat{\bm{p}}_{i+g} \,\widehat{M}_{i,i+g} 	  
+	 \]
+	 \[
+	  \widehat{M}_{u,v} \; = \; 2^{\,\ell-1} \,[\nudge u \nudge v = {\bf
+	  0}\nudge]\, \widehat{\bm{\mu}}_u \nudge \widehat{\bm{\mu}}_v \!  \sum_{k
+	\nudge \in \nudge \overline{u+v} \nudge \mathcal{R}} \bm{\chi}_{k + u} +
+	\bm{\chi}_{k + v}
+	\]	
+	 Before Walsh basis
+	    \[ \bm{p}_g^\prime \; = \; \bm{p}^T M_g \, \bm{p} \]
+	    \[ t_{\langle u,v \rangle}(g) \; = \;\,
+      \sum_{i \nudge \in \nudge \mathcal{R}} \, \sum_{j \nudge \in \nudge \mathcal{R}} \,
+      \sum_{k \nudge \in \nudge \mathcal{R}}
+      \bm{\mu}_i \nudge \bm{\mu}_j \, \frac{\bm{\chi}_k + \bm{\chi}_{\overline{k}}}{2} \,
+      [\nudge k (u + i) + \overline{k}(v + j) \, = \, g\nudge]  \]
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{ Computational Significance}
     \begin{itemize}
       \item{\vspace{-0.5in}
       Reduction to haploid model and Walsh basis simplifiy computation, which otherwise for diploid case would have been impractical} 
@@ -216,7 +267,7 @@
   \end{frame}
   
   \begin{frame}
-    \frametitle{Computations: Distance}
+    \frametitle{Distance}
     \begin{itemize}      
       \item{Naive implementation: 
       \[
@@ -242,7 +293,7 @@
   \begin{frame}
     \frametitle{}
     \begin{itemize}
-      \item Part-II
+      \item Part-II: Applications
       \end{itemize}
   \end{frame}
   
@@ -302,7 +353,7 @@
     \end{figure}
     $d \approx N^m e^b$
     \newline
-    From figure (a) above, $m \approx -0.5$ 
+    From figure (a) above, $m \approx -(\frac{1}{2})$ 
     \newline
     $d \approx k / \sqrt{N}$
     }
@@ -311,7 +362,7 @@
   \begin{frame}
     \frametitle{Convergence: Conclusion}
     \begin{itemize}
-      \item Does the distance between finite and infinite population decrease like $1/\sqrt{N}$ ?
+      \item Can the distance between finite and infinite population decrease like $1/\sqrt{N}$ ?
       \item Yes
     \end{itemize}
   \end{frame}
@@ -350,7 +401,7 @@
       \end{eqnarray*}
       }
       \item{Infinite populations converge to a periodic orbit }
-      \item{Do finite populations also exhibit oscillation from random initial populations?}
+      \item{Can finite populations also exhibit oscillation from random initial populations?}
     \end{itemize}
   \end{frame}  
   
@@ -396,55 +447,26 @@
     \begin{figure}[!h]
       \begin{center}
 	\subfloat{
-	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b8/n004096_osc_fin_hap.eps}}} \hspace{-2.3em}% 
+	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b10/n004096_osc_fin_hap.eps}}} \hspace{-2.3em}% 
 	\subfloat{
-	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b8/n040960_osc_fin_hap.eps}}} \hspace{-2.3em}% 
+	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b10/n040960_osc_fin_hap.eps}}} \hspace{-2.3em}% 
 	\subfloat{
-	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b8/n081920_osc_fin_hap.eps}}} \hspace{-2.3em}% 
+	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b10/n081920_osc_fin_hap.eps}}} \hspace{-2.3em}% 
 	\subfloat{
-	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b8/osc_inf_hap.eps}}} \vspace{-1em} \hspace{-2.3em}%
+	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b10/osc_inf_hap.eps}}} \vspace{-1em} \hspace{-2.3em}%
 	
       \end{center}
       \begin{center}
 	\subfloat{
-	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b8/n004096_osc_fin_dip.eps}}}  \hspace{-2.3em}% 
+	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b10/n004096_osc_fin_dip.eps}}}  \hspace{-2.3em}% 
 	\subfloat{
-	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b8/n040960_osc_fin_dip.eps}}} \hspace{-2.3em}% 
+	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b10/n040960_osc_fin_dip.eps}}} \hspace{-2.3em}% 
 	\subfloat{
-	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b8/n081920_osc_fin_dip.eps}}}  \hspace{-2.3em}% 
+	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b10/n081920_osc_fin_dip.eps}}}  \hspace{-2.3em}% 
 	\subfloat{
-	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b8/osc_inf_dip.eps}}} \vspace{-0.5em} \hspace{-2.3em}% 
+	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b10/osc_inf_dip.eps}}} \vspace{-0.5em} \hspace{-2.3em}% 
 	
-      \caption[]{Infinite and finite population behavior for genome length $\ell = 8$}     
-      \end{center}
-    \end{figure}
-  \end{frame}
-  
-  \begin{frame}
-    \frametitle{Oscillation: Results}
-    \begin{figure}[!h]
-      \begin{center}
-	\subfloat{
-	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b12/n004096_osc_fin_hap.eps}}} \hspace{-2.3em}% 
-	\subfloat{
-	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b12/n040960_osc_fin_hap.eps}}} \hspace{-2.3em}% 
-	\subfloat{
-	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b12/n081920_osc_fin_hap.eps}}} \hspace{-2.3em}% 
-	\subfloat{
-	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b12/osc_inf_hap.eps}}} \vspace{-1em} \hspace{-2.3em}%
-	
-      \end{center}
-      \begin{center}
-	\subfloat{
-	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b12/n004096_osc_fin_dip.eps}}}  \hspace{-2.3em}% 
-	\subfloat{
-	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b12/n040960_osc_fin_dip.eps}}} \hspace{-2.3em}% 
-	\subfloat{
-	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b12/n081920_osc_fin_dip.eps}}}  \hspace{-2.3em}% 
-	\subfloat{
-	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b12/osc_inf_dip.eps}}} \vspace{-0.5em} \hspace{-2.3em}% 
-	
-      \caption[]{Infinite and finite population behavior for genome length $\ell = 12$}     
+      \caption[]{Infinite and finite population behavior for genome length $\ell = 10$}     
       \end{center}
     \end{figure}
   \end{frame}  
@@ -453,7 +475,7 @@
     \frametitle{Oscillation: Conclusion}
     \begin{itemize}
       \setlength\itemsep{1em}
-      \item{Finite populations exhibit approximate oscillations}             
+      \item{Finite populations can exhibit approximate oscillations}             
     \end{itemize}
   \end{frame}
   
@@ -475,9 +497,9 @@
       \setlength\itemsep{1em}   
       \item{$\bm{\mu}_0 \,:=\, \epsilon$}
       \item{$\bm{\mu}_i \,:=\, (1 \,-\, \epsilon)\bm{\mu}_i$}
-      \item{This modification makes the Markov chain regular}
-      \item{No periodic orbits for finite population}
       \item{No periodic orbits for infinite population}
+      \item{This modification makes the Markov chain regular}
+      \item{No periodic orbits for finite population}      
       \item{Can finite population exhibit approximate oscillations?}
     \end{itemize}
   \end{frame}
@@ -500,35 +522,35 @@
     \begin{figure}[!h]
       \begin{center}
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.01/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.01/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.01/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.01/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.01/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.01/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.01/inf_hap_wovio.eps}}} \vspace{-0.8em} %
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.01/inf_hap_wovio.eps}}} \vspace{-0.8em} %
       \end{center}
       \begin{center}
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.1/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.1/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.1/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.1/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.1/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.1/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.1/inf_hap_wovio.eps}}}\vspace{-0.8em} %
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.1/inf_hap_wovio.eps}}}\vspace{-0.8em} %
       \end{center}
       \begin{center}
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.5/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.5/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.5/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.5/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.5/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.5/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.5/inf_hap_wovio.eps}}}\vspace{-0.8em} %      
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.5/inf_hap_wovio.eps}}}\vspace{-0.8em} %      
       
-      \caption[]{Infinite and finite haploid population behavior for $\bm{\mu}$ violation and $\ell = 8$}
+      \caption[]{Infinite and finite haploid population behavior for $\bm{\mu}$ violation and $\ell = 10$}
       \end{center}
     \end{figure}
   \end{frame}
@@ -539,35 +561,35 @@
     \begin{figure}[!h]
       \begin{center}
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.01/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.01/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.01/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.01/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.01/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.01/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.01/inf_dip_wovio.eps}}} \vspace{-0.8em} %
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.01/inf_dip_wovio.eps}}} \vspace{-0.8em} %
       \end{center}
       \begin{center}
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.1/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.1/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.1/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.1/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.1/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.1/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.1/inf_dip_wovio.eps}}}\vspace{-0.8em} %
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.1/inf_dip_wovio.eps}}}\vspace{-0.8em} %
       \end{center}
       \begin{center}
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.5/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.5/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.5/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.5/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.5/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.5/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.5/inf_dip_wovio.eps}}}\vspace{-0.8em} %      
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b10/e0.5/inf_dip_wovio.eps}}}\vspace{-0.8em} %      
       
-      \caption[]{Infinite and finite diploid population behavior for $\bm{\mu}$ violation and $\ell = 12$}
+      \caption[]{Infinite and finite diploid population behavior for $\bm{\mu}$ violation and $\ell = 10$}
       \end{center}
     \end{figure}
   \end{frame}
@@ -577,9 +599,8 @@
     \frametitle{Mutation-Violation: Conclusion}
     \begin{itemize}      
       \setlength\itemsep{1em}
-      \item{Approximate oscillation is exhibited when mutation-violation is small}
-      \item{If violation is large, then oscillation decreases}
-      \item{As string length increases, oscillation degrades}
+      \item{Finite populations can exhibit approximate oscillation when mutation-violation is small}
+      \item{If violation is large, then oscillation decreases}      
     \end{itemize}
   \end{frame}
   
@@ -622,35 +643,35 @@
     \begin{figure}[!h]
       \begin{center}
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.01/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.01/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.01/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.01/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.01/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.01/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.01/inf_hap_wovio.eps}}} \vspace{-0.8em} %
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.01/inf_hap_wovio.eps}}} \vspace{-0.8em} %
       \end{center}
       \begin{center}
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.1/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.1/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.1/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.1/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.1/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.1/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.1/inf_hap_wovio.eps}}}\vspace{-0.8em} %
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.1/inf_hap_wovio.eps}}}\vspace{-0.8em} %
       \end{center}
       \begin{center}
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.5/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.5/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.5/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.5/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.5/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.5/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.5/inf_hap_wovio.eps}}}\vspace{-0.8em} %      
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.5/inf_hap_wovio.eps}}}\vspace{-0.8em} %      
       
-      \caption[]{Infinite and finite haploid population behavior for $\bm{\chi}$ violation and $\ell = 8$}
+      \caption[]{Infinite and finite haploid population behavior for $\bm{\chi}$ violation and $\ell = 10$}
       \end{center}
     \end{figure}
   \end{frame}  
@@ -661,35 +682,35 @@
     \begin{figure}[!h]
       \begin{center}
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.01/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.01/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.01/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.01/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.01/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.01/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.01/inf_dip_wovio.eps}}} \vspace{-0.8em} %
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.01/inf_dip_wovio.eps}}} \vspace{-0.8em} %
       \end{center}
       \begin{center}
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.1/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.1/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.1/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.1/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.1/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.1/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.1/inf_dip_wovio.eps}}}\vspace{-0.8em} %
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.1/inf_dip_wovio.eps}}}\vspace{-0.8em} %
       \end{center}
       \begin{center}
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.5/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.5/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.5/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.5/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.5/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.5/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
 	\subfloat{
-	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.5/inf_dip_wovio.eps}}}\vspace{-0.8em} %      
+	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b10/e0.5/inf_dip_wovio.eps}}}\vspace{-0.8em} %      
       
-      \caption[]{Infinite and finite diploid population behavior for $\bm{\chi}$ violation and $\ell = 12$}
+      \caption[]{Infinite and finite diploid population behavior for $\bm{\chi}$ violation and $\ell = 10$}
       \end{center}
     \end{figure}
   \end{frame}
@@ -698,10 +719,9 @@
     \frametitle{Crossover-Violation: Conclusion}
     \begin{itemize}
       \setlength\itemsep{1em}
-      \item{Approximate oscillation is exhibited when crossover-violation is small} 
-      \item{If violation is large, then oscillation decreases}      
-      \item{More randomness is observed with violation in crossover than in mutation}
-      \item{Randomness increases as string length increases}
+      \item{Finite populations can exhibit approximate oscillation when crossover-violation is small} 
+      \item{If violation is large, then oscillation decreases}     
+      
     \end{itemize}
   \end{frame}
   
@@ -712,16 +732,17 @@
       \item{Vose's haploid model makes computation efficient in diploid case by reducing to haploid case} 
       \item{Distance between finite population and infinite population can decrease like $1/\sqrt{N}$}
       \item{When infinite populations oscillate, finite populations exhibit approximate oscillation}
-      \item{Markov chain is regular under mutation-violation; finite populations exhibit approximate oscillation for small violation}
-      \item{Finite populations exhibit approximate oscillation for small crossover-violation}      
+      \item{Finite populations can exhibit approximate oscillation for small violation}
+      \item{Finite populations can exhibit approximate oscillation for small crossover-violation}      
     \end{itemize}
   \end{frame}
   
   \begin{frame}
     \frametitle{}
     \begin{itemize}
+      \item{}
       \item{Thank You!!} 
-      \item{Questions?}
+      \item{}
     \end{itemize}
   \end{frame}
   

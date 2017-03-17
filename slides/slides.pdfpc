@@ -15,228 +15,202 @@ and make concluding remarks.
 ### 3 Part I
 
 ### 4
-Population is a collection of length 'l' binary strings 
-Population can be represented by a vector p; 
-the jth component is the proportion of string j in the population.
-'R' is the set of length 'l' binary strings and operations under 'R' are bitwise modulo 2 operations. 
+1. Population is a collection of length 'l' binary strings 
+2. Population can be represented by a vector p; 
+3. the jth component is the proportion of string j in the population.
+4. For example, when P is this, 3rd component of vector p is equal to this.
+5. 'R' is the set of length 'l' binary strings and operations under 'R' are bitwise modulo 2 operations. 
+6. Here are examples of some operations under R
 
 ### 5
-Crossover and mutation operators are defined using the bitwise operations in R.
-Crossover exchanges bits in parents u and v using crossover mask
-to produce children u and v using the rule u = um + v m,
-  ̄v = um̄ + vm
-χ_m is probability of using crossover mask m
+1. Crossover and mutation operators are defined using the bitwise operations in R.
+2. Crossover exchanges bits in parents u and v using crossover mask
+to produce children u' and v' using this.
+3. Here's an example. These are parents, these are offspings.
+4. Results depend on mask m. 
+5. χ_m gives probability of using crossover mask m.
 
-Mutation flips bits in x using mutation mask m.
-μ_m is probability of using mutation mask m
+6. Mutation flips bits in x using mutation mask m.
+7. In this example, this mutates to this using this mask.
+8. μ_m gives probability of using mutation mask m
+9. The use of masks dates back to Geiringer, 1944
 
 ### 6
- This flowchart illustrates finite population genetic algorithm
- Start from random initial population p.
- Randomly select parents u and v
- Crossover u and v to produce u’ and v’ according to randomly chosen crossover mask
- Keep one of u’, v’ and mutate using randomly chosen mutation mask
-to produce gamete g
- Repeat to form next generation τ (p)
+ 1 This flowchart illustrates finite population genetic algorithm
+  2 We start from random initial population p.
+  3 Then randomly select parents u and v, 
+  4 And crossover to produce u' and v' according to randomly chosen crossover mask
+  5 We keep one of u', v' and mutate using randomly chosen mutation mask to produce gamete g
+  6 We repeat above procedures to form next generation τ(p)
  
 ### 7
-In Random Heuristic Search,
-Given population p, τ is transition rule that maps p to the next
-generation p’ where p and p both belong to population space Λ_N .
-N is population size.
-Finite population evolution (point to the sequence) forms Markov chain
-However, τ is stochastic function of crossover and mutation and τ(p)
-can not be predicted with certainty
+0. Random Heuristic Search generalizes simple genetic algorithm
+1. Given population p, τ is transition rule that maps p to the next
+2. generation p’ where p and p both belong to population space Λ_N .
+3. N is population size.
+4. However, τ is stochastic function of crossover and mutation, and can not be predicted with certainty
+5. Finite population evolution (point to the sequence) forms Markov chain
+
 
 ### 8
-In infinite population model, population is modeled by vector p where 
-p belongs to population space Λ. 
-(fancy) G is a function that maps p to the next generation p where jth
-component is proportion of string j occurs in the next generation.
-The sequence shows evolution of p under infinite population model.
-The variance is expectation of square of distance between finite population and infinite population.
+1. In infinite population model, population is modeled by vector p where p belongs to population space Λ. 
+2. (fancy) G is a function that maps p to the next generation p' where jth component is proportion of string j occurs in the next generation.
+3. The sequence shows evolution of p under infinite population model.
+4. G is the expectation of τ(p)
+5. The variance is of finite population in next generation is this.
 
 ### 9
-This is our model setup for diploid population.
-We consider diploid genome α with genome length l.
-Population is modeled by vector q
-q_α is prevalence of diploid α
-t_α(g) is transmission function which is probability of gamete g being
-produced from parent α
-q' is next generation
+1. This is our model setup for diploid population.
+2. We consider diploid genome alpha with genome length l.
+3. Population is modeled by vector q
+4. q_alpha is prevalence of diploid alpha
+5. t_alpha(g) is transmission function which is probability of gamete g being produced from parent alpha
+6. q' is next generation
+7. This is the standard evolutionary model from population genetics. 
 
 ### 10
-Diploids can be determined in terms of haploid distributions.
-Haploids can be determined in terms of diploid distributions.
-And p' gives evolution equation in terms of haploid distri-
-butions
-In the matrix form, evolution equation can be expressed as p'_g = pT Mg p
-Where M(g) is mixing matrix
+1. Diploids can be determined in terms of haploid distributions.
+2. Haploids can be determined in terms of diploid distributions.
+3. And p' gives evolution equation in terms of haploid distributions
+4. In the matrix form, evolution equation can be expressed as p'_g = pT Mg p
+5. p' is next generation    Where entries in this matrix M(g) is given by this
 
 ### 11
-This slide shows computation of crossover and mutation distribu-
-tions, and transmission function
-Transmission function is computed with this expression
-There are 3 sum terms in it, which is expensive to compute
+1. This is mutation distribution we used. Mu is mutation rate.
+2. This is crossover distribution we use. Chi is crossover rate.
+3. This is transmission function.
+5. Square brackets here are Iverson brackets which returns 1 if expression inside is true and returns 0 when expression inside is false.
+6. This transmission function is expensive to compute because there are 3 sum terms in it.
 
 ### 12
-W is walsh matrix
-hat(A) is walsh transform of matrix A, 
-and hat(w) is walsh transform of column vector w.
-Hat(M_uv) is Mixing matrix
-Hat(p'_g) is evolution equation in walsh basis.
+1. W is walsh matrix, Z = 2^l
+2. Walsh transform of matrix A is given by this expression.
+3. Walsh transform of vector w is given by this expression.
+4. Here's the algorithm of computing walsh transform.
+5. Using this algorithm, walsh transform can be computed in O(ZlogZ) which is almost linear in Z.
 
 ### 13
-Now if we compare evolution eqn in Walsh basis to what we had before, 
-we got rid of matrix multiplication to compute next generation.
-We don’t need to refer to 2 mixing matrices either, only one mixing
-matrix is required in walsh basis computation.
-Calculating each mixing matrix in previous eqn required 3 sum terms,
-which is reduced to 1 sum term in walsh basis.
-Consider l = 14, 214 mixing matrices would require 32 TB of memory,
-while one mixing matrix would require only 2 GB of memory
-We think that is great optimization in resource
+1. Mixing matrix is M_0 and is given by the expression.
+2. This is evolution eqn in Walsh basis. p' is next generation
 
-### 14
-With naive computation as shown in equation (1), there would be
-2^l · 2^l multiplication terms to be computed
- where f is finite population and q is infinite population
-We simplify it as shown in eqn (2) where it needs only 2^l + cardinal
-value of Sf terms
- Sf is set of diploids that are in finite populations
- 
- Writing code to compute in the Walsh basis, and running simulations using the Walsh basis 
-  is a significant part of my thesis. It represents the "Efficient" in the thesis title "Efficient Simulation of a Simple Evolutionary System".
-  
-### 15 
-Part II
+### 14 
+1. Now if we compare evolution eqn in Walsh basis to what we had before,
+2. We have single sum in computing p' compared to double sum from matrix multiplication before. 
+3. We need only one mixing matrix compared to 2^l matrices for different g s..
+4. Also calculating each mixing matrix in previous eqn required 3 sum terms, which is reduced to 1 sum term in walsh basis.   
+
+### 15
+1. So in summary, Reduction to haploid model and Walsh basis simplifiy computation, which otherwise for diploid case would have been impractical
+2. Only one mixing matrix as opposed to 2^l is needed to compute next generation
+3. Consider l = 14, 2^14 matrices would require 32 TB of memory, while one mixing matrix would require only 2 GB of memory
+4. We think that is great optimization in resource
 
 ### 16
-Our first question concerns about convergence of finite population to
-infinite population.
- Chebyshev’s inequality, Jensen’s inequality and geometric point of
-view, all, suggest the distance might decrease as 1/ √N
- But all of 3 implications are from inequalities. The distance might
-decrease much smaller than 1/ √N .
- We investigate if the distance infact decreases like 1/ √N in practice.
- 
-### 17
-We ran some simulations with χ = 0.1 and μ = 0.001 
-These graphs show the results in logarithmic scale.
-(point to axis) d is the distance, (point to axis) N is population size,
-(point to axis) n is number of generations
-Data shows as population size increases, distance decreases and con-
-verge to infinite population
-Graphs show flat surface that shows linear dependency of log d to log N so we model the data by linear equation
+1. In the 2nd part of this presentation, I talk about distance between finite population and infinite population.
+2. If f is finite population and q is infinite population,
+3. With naive computation as shown, there would be 2^l · 2^l multiplication terms to be computed because alpha is diploid
+4. We simplify it as shown in eqn (2) where it needs only 2^l + cardinal value of Sf terms
+5. Sf is set of diploids that are in finite populations 
+6. Writing code to compute in the Walsh basis, and running simulations using the Walsh basis 
+  is a significant part of my thesis. It represents the "Efficient" in the thesis title.
+  
+### 17 
+Part II
 
 ### 18
-Regression shows slope m is nearly equal to -0.5
-This proves distance does decrease as 1/√N
-
+1. Our first question concerns about convergence of finite population to infinite population.
+2. Chebyshev’s inequality, Jensen’s inequality and geometric point of view, all, suggest the distance might decrease as 1/ √N
+3. But all of 3 implications are from inequalities. The distance might decrease much smaller than 1/ √N .
+4. We investigate if the distance infact decreases like 1/ √N in practice.
+ 
 ### 19
-1/ √N was theoretical upper bound 
-but our simulaion shows it is
-really very good bound and the distance decreases as 1/ √N .
+1. We ran simulations with χ = 0.1 and μ = 0.001 
+2. These graphs are in logarithmic scale.
+3. This axis is the distance, (point to axis) This axis is population size, (point to axis) this axis is number of generations
+4. The thing to notice about these graphs is how flat and planar they are. 
 
 ### 20
-Our 2nd question concerns about oscillation in finite populations.
+1. So we model the data by linear equation
+2. Regression shows slope m is nearly equal to negative half (-1/2).
+3. This proves distance does decrease as 1/√N
 
 ### 21
-The infinite population sequence p, G(p), G 2 (p), · · · may converge to
-a point, and we call that point a fixed point, we also call it limit.
-But under certain conditions, the sequence converges to a periodic
-orbit between two fixed points, say p* and q*
+1. 1/ √N was theoretical upper bound but our simulaion shows it is really very good bound and the distance decreases as 1/ √N .
 
 ### 22
+Our 2nd question concerns about oscillation in finite populations.
+
+### 23
+1. The infinite population sequence p, G(p), G 2 (p), · · · may converge to a point, and we call that point a fixed point.
+2. But under certain conditions, the sequence converges to a periodic orbit between two fixed points, say p* and q*
+
+### 24
  And the conditions are these:
- 1st one is for mutation distribution and 2nd one is for crossover dis-
-tribution
+ 1st one is for mutation distribution and 2nd one is for crossover distribution
 We try to answer our 2nd question: that is do
 finite populations exhibit oscillations from random intial populations
 when infinite populations oscillate?
 
-### 23
-Akin, Hasting, Wright, Bidwell and Agapie have studied oscillations
-in the past.
-
-### 24
-Akin considers - continuous time model, we consider - discrete time
-model
-Hastings’ study is limited to two bits length, includes only crossover,
-but no mutation
-Wright and Bidwell compute a specific fitness function and a specific
-initial population for randomly generated mutation and crossover
-distributions in an attempt to find cyclic behavior
- Wright and Agapie use dynamic mutation that depends upon where
-population is in the population space while we use static mutation
-
 ### 25
+1. Here are few people who have studied oscillations in the past:
+Akin, Hasting, Wright, Bidwell and Agapie h
+
+### 26
+1. Akin considers - continuous time model, we consider - discrete time model
+2. Hastings’ study is limited to two bits length, includes only crossover, but no mutation; we consider both crossover and mutation
+3. Wright and Bidwell compute specific set of parameter values; there was particular relation between crossover, mutation and population; we use random crossover, mutation and population.
+4.  Wright and Agapie use dynamic mutation that depends upon where population is in the population space while we use static mutation
+
+### 27
  Simulations were run for both haploid and diploid populations
  To visualize oscillations, distance to fixed points (p* , q*) are plotted
 
-### 26
-These are the results for haploid and diploid population of length 8
-top row shows results for haploid, bottom row for diploids
-Population size is in increasing order in columns
-As population size increases, oscillation approaches the behavior ex-
-hibited by infinite population
-We observe more randomness in diploids than in haploids for same
-string length and population size.
-
-### 27
-Graphs show the results for haploid and diploid population of length
-12
-We observe that increase in l degrades oscillation (particularly in
-diploids)
-
 ### 28
-So our answer to the 2nd question is
-Finite populations exhibit approximate oscillation when infinite populations oscillate
+1. These are the results for haploid and diploid population of length 8
+2. top row shows results for haploid, bottom row for diploids
+3. Population size is in increasing order in columns, last column is for infinite population.
+4. In the figure, Green line is distance of population to p_str, red line is distance to q_str
+5. As population size increases, oscillation approaches the behavior exhibited by infinite population
 
 ### 29
+So our answer to the 2nd question is
+Yes, finite populations can exhibit approximate oscillation when infinite populations oscillate
+
+### 30
 Question 3 concerns the robustness of finite population oscillation
 under mutation-violation
 
-### 30
+### 31
 We introduce violation epsilon as following
-This means no periodic orbits for finite population
-The modification in μ makes the Markov chain regular
 This means no periodic orbits for infinite population
+The modification in μ makes the Markov chain regular
+This means no periodic orbits for finite population
 We study if finite population can exhibit approximate oscillations in
 that case
 
-### 31
+### 32
  Simulations were run for different values of .
  Distance of population to limits p and q without violation are plotted
 
-### 32
- These figures show results for haploid population behavior of string
-length 8
- Graphs are arranged in rows for increasing and columns for increas-
-ing population size
- Graphs show convergence of finite population behavior to infinite
-population behavior as population increases
- Results show oscillating behavior of population for smaller values of
-epsilon that diminishes with time.
- As value of grows, oscillation diminishes
- Oscillation dies out for infinite population.
- Even though finite population also appears to be dying out, since
-Markov chain is regular, finite population will oscillate infinitely often (for = 0.1).
-
-
 ### 33
- Graphs show results for diploid population behavior of string length
-12
- We observed oscillation also degrades as string length increases. It
-is seen in both haploid and diploid cases, but particularly noticeable
-in diploids.
+1. These figures show results for diploid population behavior of string
+length 8
+2. Graphs are arranged in rows for increasing epsilon and columns for increas-
+ing population size
+3. Graphs show convergence of finite population behavior to infinite
+population behavior as population increases
+4. Results show oscillating behavior of population for smaller values of
+epsilon that diminishes with time.
+5. As value of grows, oscillation diminishes
+6. Oscillation dies out for infinite population.
+7. Even though finite population also appears to be dying out, since Markov chain is regular, population must visit every population state infinitely. 
+8. So these population will reoccur and oscillate infinitely often (for = 0.1).
+
 
 ### 34
  Our conclusions from this simulation are
- Finite populations exhibit approximate oscillation even if Markov
-chain is regular when violation is small
- If violation becomes larger, finite population oscillation decreases
- As string length increases, oscillation degrades
+ Finite populations can exhibit approximate oscillation for mutation- violation when violation is small
+ If violation becomes larger, finite population oscillation decreases 
 
 ### 35
 Our previous question concerns with the robustness of finite population oscillation under mutation-violation, 
@@ -244,33 +218,28 @@ our next question also concerns with the robustness of finite population but und
 violation
 
 ### 36
- We introduce violation
- in crossover distribution
+ We introduce violation epsilon  in crossover distribution
  Crossover-violation means no periodic orbit exists for infinite population
  We investigate if finite population can exhibit approximate oscillations in this case
 
 ### 37
- Simulations were run for different values of
- Distances of population to limits p and q without violation are plotted
+1. Simulations were run for different values of
+2. Distance of population to limits p_str and q_str without violation are plotted
+3. However, we noticed that rate of damping of amplitudes of oscillation is slower than in mutation violation
 
 ### 38
- Graphs show results for haploid population behavior of string length 8
+ Graphs show results for diploid population behavior of string length 8
  Results show similar behavior to that of violation in mutation case
 
 ### 39
-Graphs show results for diploid population behavior of string length 12
-However, we noticed that rate of damping of amplitudes of oscillation
-is slower than in mutation violation
-And, we see more randomness in population behavior than in muta-
-tion violation, especially for diploid case
-
-### 40
  Conclusions from experiment on violation in crossover are
- Finite populations exhibit approximate oscillation if violation is small
+ Finite populations can exhibit approximate oscillation if violation is small
  If violation becomes larger, finite population oscillation decreases
 
- ### 41
+ ### 40
  Overall conclusions from this research are
-Vose’s haploid model makes computation efficient in diploid case by
-reducing to haploid case
-Distance between finite population and infinite population can decrease like 1/ √N
+1. Vose’s haploid model makes computation efficient in diploid case by reducing to haploid case
+2. Distance between finite population and infinite population can decrease like 1/ √N
+3. When infinite populations oscillate, finite populations exhibit approximate oscillation
+4. Finite populations can exhibit approximate oscillation for small violation
+5. Finite populations can exhibit approximate oscillation for small crossover-violation

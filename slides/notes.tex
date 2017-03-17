@@ -37,9 +37,7 @@
   \begin{itemize}
   \item I will talk about my thesis: \hfill\mbox{ }\linebreak
       ``Simulation of Simple Evolutionary System'' 
-  \end{itemize}
-  
-  \item Part I
+  \end{itemize}  
     
 \item
   \begin{itemize}
@@ -49,48 +47,57 @@
       Then I will address these four questions, and make
       concluding remarks.    
   \end{itemize}
-
+  
+\item Part I
+  
 \item
   \begin{itemize}
   \item Population is a collection of length $\ell$ binary strings 
   \item Population can be represented by a vector p; the $j$th component
       is the proportion of string j in the population.
+  \item For example, when P is this, 3rd component of vector p is equal to this.
     \item $\mathcal{R}$ is the set of length $\ell$ binary strings and operations under $\mathcal{R}$ are bitwise modulo 2 operations.
+    \item Here are examples of some operations under R
   \end{itemize}
     
 \item
   \begin{itemize}
   \item Crossover and mutation operators are defined using the
     bitwise operations in $\mathcal{R}$.
-  \item Crossover exchanges bits in parents $u$ and $v$ using crossover mask to produce children $u'$ and $v'$ 
-  using the rule $u^\prime \,=\, um + v\bar{m} , v^\prime \,=\, u\bar{m} + vm$
-  \item $\bm{\chi}_m$ is probability of using crossover mask m
+  \item Crossover exchanges bits in parents u and v using crossover mask
+  to produce children u' and v' using this
+  \item Here's an example. These are parents, these are offspings.
+  \item Results depend on mask m. 
+  \item $\bm{\chi}_m$ gives probability of using crossover mask m.
   \item
   \item Mutation flips bits in $x$ using mutation mask m.
-  \item $\bm{\mu}_m$ is probability of using mutation mask m
+  \item In this example, this mutates to this using this mask.
+  \item $\bm{\mu}_m$ gives probability of using mutation mask m
+  \item The use of masks dates back to Geiringer, 1944
   \end{itemize}
     
 \item
   \begin{itemize}
   \item This flowchart illustrates finite population genetic algorithm
-  \item Start from random initial population p.
-  \item Randomly select parents u and v 
-  \item Crossover u and v to produce u' and v' according to randomly chosen crossover mask
-  \item Keep one of u', v' and mutate using randomly chosen mutation mask to produce gamete g
-  \item Repeat to form next generation $\tau(p)$
+  \item We start from random initial population p.
+  \item Then randomly select parents u and v, 
+  \item And crossover to produce u' and v' according to randomly chosen crossover mask
+  \item We keep one of u', v' and mutate using randomly chosen mutation mask to produce gamete g
+  \item We repeat above procedures to form next generation $\tau(p)$
   \end{itemize}
   
 \item
   \begin{itemize}
-  \item In Random Heuristic Search,
+  \item Random Heuristic Search generalizes simple genetic algorithm
   \item Given population p, $\tau$ is transition rule that maps p to
     the next generation p' where p and $p^\prime$ both belong to population space $\Lambda_N$.
     N is population size. 
+    \item However, $\tau$ is stochastic function of crossover and
+    mutation, and can not be predicted with
+    certainty 
   \item Finite population evolution forms
     Markov chain
-  \item However, $\tau$ is stochastic function of crossover and
-    mutation and $\tau(p)$ can not be predicted with
-    certainty 
+  
   \end{itemize}
     
 \item
@@ -101,7 +108,8 @@
     occurs in the next generation.
   \item The sequence shows evolution of p under infinite population
     model.
-  \item The variance is expectation of square of distance between finite population and infinite population.
+    \item $\mathcal{G}$ is the expectation of $\tau(\bm{p})$
+  \item The variance is of finite population in next generation is this.
   \end{itemize}
     
 \item
@@ -113,6 +121,7 @@
   \item $t_{\alpha}(g)$ is transmission function which is probability
     of gamete g being produced from parent $\alpha$
   \item $q^\prime$ is next generation
+  \item This is the standard evolutionary model from population genetics. 
 %   \item $q_\gamma^{n+1} \; = \; \sum_{\alpha} \, q_\alpha^n \,
 %     t_\alpha(\gamma_0) \sum_{\beta} \,q_\beta^n \,
 %     t_\beta(\gamma_1)\\[-.05in]$ gives us next generation population.
@@ -127,26 +136,34 @@
   \item And evolution equation can be expressed in terms of haploid
     distributions as 
     \[\bm{p}_{\gamma_0}^{\prime} \,=\, \sum_{\alpha_0, \, \alpha_1} \, \bm{p}_{\alpha_0} \, \bm{p}_{\alpha_1} \,
-	  t_{\langle \alpha_0, \,\alpha_1 \rangle}(\gamma_0) \]
-	  
+	  t_{\langle \alpha_0, \,\alpha_1 \rangle}(\gamma_0) \]	  
+  
   \item In the matrix form, evolution equation can be expressed as $\bm{p}_g^\prime \; = \; \bm{p}^T M_g \, \bm{p}$
-  \item Where M(g) is mixing matrix
+  \item $\bm{p}^\prime$ is next generation.
+  \item Where entries in this matix M(g) is given by $M_g = t_{u,v}(g)$
   \end{itemize}
     
 \item
   \begin{itemize}
-  \item This slide shows computation of crossover and mutation
-    distributions, and transmission function  
-  \item Transmission function is computed with this expression
-  \item There are 3 sum terms in it, which is expensive to compute
+  \item This is mutation distribution we used. Mu is mutation rate.
+  \item This is crossover distribution we use. Chi is crossover rate.
+  \item This is transmission function.
+  \item Square brackets here are Iverson brackets which returns 1 if expression inside is true and returns 0 when expression inside is false.
+  \item This transmission function is expensive to compute because there are 3 sum terms in it.
   \end{itemize}
     
 \item
   \begin{itemize}
-  \item W is walsh matrix
-  \item $\hat{A}$ is walsh transform of matrix A, 
-    and $\hat{w}$ is walsh transform of column vector $w$.
-  \item Mixing matrix is given by the expression
+  \item W is walsh matrix, Z = $2^\ell$
+  \item Walsh transform of matrix A is given by this expression. 
+    and Walsh transform of vector w is given by this expression.
+  \item Here's the algorithm of computing walsh transform.
+  \item Using this algorithm, walsh transform can be computed in O(ZlogZ) which is almost linear in Z
+  \end{itemize}
+  
+\item
+  \begin{itemize}
+  \item Mixing matrix is $M_0$ and is given by the expression
     \[
       \widehat{M}_{u,v} \; = \; 2^{\,\ell-1} \,[\nudge u \nudge v = {\bf
       0}\nudge]\, \widehat{\bm{\mu}}_u \nudge \widehat{\bm{\mu}}_v \!  \sum_{k
@@ -162,25 +179,34 @@
     
 \item
   \begin{itemize}
-  \item Now if we compare evolution eqn in Walsh basis to what we had before, we got rid of matrix multiplication to compute next generation. 
-  \item We don't need to refer to $2^\ell$ mixing matrices either, only one mixing matrix is required in walsh basis computation.
-  \item Calculating each mixing matrix in previous eqn required 3 sum terms, which is reduced to 1 sum term in walsh basis.
-  \item Consider l = 14, $2^{14}$ mixing matrices would require 32 TB of
+  \item Now if we compare evolution eqn in Walsh basis to what we had before,
+  \item we have single sum in computing p' compared to double sum from matrix multiplication before. 
+  \item We need only one mixing matrix compared to $2^\ell$ matrices for different g s.
+  \item Also calculating each mixing matrix in previous eqn required 3 sum terms, which is reduced to 1 sum term in walsh basis.   
+  \end{itemize}
+    
+\item
+  \begin{itemize}
+  
+  \item So in summary, Reduction to haploid model and Walsh basis simplifiy computation, which otherwise for diploid case would have been impractical
+  \item Only one mixing matrix as opposed to $2^l$ is needed to compute next generation
+  \item Consider l = 14, $2^{14}$ matrices would require 32 TB of
     memory, while one mixing matrix would require only 2 GB of memory
   \item We think that is great optimization in resource
   \end{itemize}
     
 \item
   \begin{itemize}
-  \item With naive computation as shown in equation (1), there would
-    be $2^l \cdot 2^l$ multiplication terms to be computed
+  \item In the 2nd part of this presentation, I talk about distance between finite population and infinite population.
+  \item With naive computation as shown, there would
+    be $2^l \cdot 2^l$ multiplication terms to be computed because $\alpha$ is diploid and have two components
   \item where f is finite population and q is infinite population
   \item We simplify it as shown in eqn (2) where it needs only $2^l$ +
     cardinal value of $S_f$ terms
   \item $S_f$ is set of diploids that are in finite populations
   
   \item Writing code to compute in the Walsh basis, and running simulations using the Walsh basis 
-  is a significant part of my thesis. It represents the "Efficient" in the thesis title "Efficient Simulation of a Simple Evolutionary System".
+  is a significant part of my thesis. It represents the "Efficient" in the thesis title.
   \end{itemize}
   
 \item {Part II}
@@ -199,17 +225,15 @@
   \begin{itemize}
   \item We ran some simulations with $\chi$ = 0.1 and $\mu$ = 0.001 for
     different values of l
-  \item These graphs show the results in logarithmic scale.
-  \item  (point to axis) d is the distance, (point to axis) N is population size, (point to axis) n is number of
-    generations
-  \item Data shows as population size increases, distance decreases and 
-    converge to infinite population
-  \item Graphs show flat surface so we model the data by linear equation  
+  \item TThese graphs are in logarithmic scale.
+  \item  This axis is the distance, (point to axis) This axis is population size, (point to axis) this axis is number of generations
+  \item The thing to notice about these graphs is how flat and planar they are. 
   \end{itemize}
     
 \item
   \begin{itemize}
-  \item Regression shows slope m is nearly equal to -0.5
+  \item So we model the data by linear equation
+  \item Regression shows slope m is nearly equal to negative half (-1/2).
   \item This proves distance does decrease as $1/\sqrt{N}$  
   \end{itemize}
 
@@ -231,7 +255,7 @@
 %   \item First I want to introduce term limit; we also call it fixed
 %     point.
   \item The infinite population sequence  $\bm{p}, \, \mathcal{G}(\bm{p}), \, {\mathcal{G}}^2(\bm{p}), \, \cdots$ may
-    converge to a point, and we call that point a fixed point, we also call it limit.
+    converge to a point, and we call that point a fixed point.
   \item But under certain conditions, the sequence converges to a
     periodic orbit between two fixed points, say p* and q*
 \end{itemize}
@@ -271,10 +295,8 @@
   \item Akin considers - continuous time model, we consider -
     discrete time model
    \item Hastings' study is limited to two bits length, includes only
-     crossover, but no mutation
-  \item Wright and Bidwell compute a specific fitness function and a
-    specific initial population for randomly generated mutation and
-    crossover distributions in an attempt to find cyclic behavior
+     crossover, but no mutation; we consider both crossover and mutation
+  \item Wright and Bidwell compute specific set of parameter values; there was particular relation between crossover, mutation and population; we use random crossover, mutation and population.
   \item Wright and Agapie use dynamic mutation that depends upon
     where population is in the population space while we use static
     mutation
@@ -293,24 +315,16 @@
     length 8
    \item top row shows results for haploid, bottom row for diploids
   \item Population size is in increasing order in columns
+  \item In the figure, Green line is distance of population to $p^\ast$, red line is distance to $q^\ast$
   \item As population size increases, oscillation approaches the
     behavior exhibited by infinite population
-  \item We observe more randomness in diploids than in haploids for
-    same string length and population size.
   \end{itemize}
     
-\item
-  \begin{itemize}
-  \item Graphs show the results for haploid and diploid population of
-    length 12
-   \item We observe that increase in l degrades oscillation (particularly in diploids)
-  \end{itemize}
     
 \item
   \begin{itemize}
   \item So our answer to the 2nd question is
-   \item Finite populations exhibit approximate oscillation when
-     infinite populations oscillate
+   \item Yes, finite populations can exhibit approximate oscillation when infinite populations oscillate
   \end{itemize}
   
 \item
@@ -342,16 +356,10 @@
   \item Results show oscillating behavior of population for smaller values of epsilon that diminishes with time.
   \item As value of $\epsilon$ grows, oscillation diminishes
   \item Oscillation dies out for infinite population.
-  \item Even though finite population also appears to be dying out, since Markov chain is regular, 
-  finite population will oscillate infinitely often (for $\epsilon$ = 0.1).    
+  \item Even though finite population also appears to be dying out, since Markov chain is regular, population must visit every population state infinitely. 
+  So these population will reoccur and oscillate infinitely often (for = 0.1).  
   \end{itemize}
   
-\item
-  \begin{itemize}
-  \item Graphs show results for diploid population behavior of string length 12
-  \item We observed oscillation also degrades as string length increases. 
-  It is seen in both haploid and diploid cases, but particularly noticeable in diploids.  
-  \end{itemize}
   
 \item
   \begin{itemize}
@@ -385,19 +393,15 @@
   \begin{itemize}
   \item Graphs show results for haploid population behavior of string length 8
   \item Results show similar behavior to that of violation in mutation case
-  \end{itemize}
+  \item However, we noticed that rate of damping of amplitudes of oscillation is slower than in mutation violation 
   
-\item 
-  \begin{itemize}
-  \item Graphs show results for diploid population behavior of string length 12
-  \item However, we noticed that rate of damping of amplitudes of oscillation is slower than in mutation violation  
-  \item And, we see more randomness in population behavior than in mutation violation, especially for diploid case
-  \end{itemize}
+  \end{itemize}  
+
   
 \item
   \begin{itemize}
   \item Conclusions from experiment on violation in crossover are 
-  \item Finite populations exhibit approximate oscillation if violation is small
+  \item Finite populations can exhibit approximate oscillation if violation is small
   \item If violation becomes larger, finite population oscillation decreases
   \end{itemize}
   

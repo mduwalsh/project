@@ -203,16 +203,16 @@
 	\newline
 	$\widehat{w} = Ww$        
 	
-      \column{0.50\linewidth}
-	  
+      \column{0.50\linewidth}	  
 	  \includegraphics[height=6cm, width=5cm]{figures/eps/fwt.eps}      
+	  $T(n) \,=\, O(Z \log Z)$
     \end{columns}    
   \end{frame}
     
   \begin{frame}
     \frametitle{Computations in Walsh basis}
     \begin{itemize}
-	\item{Mixing matrix $M_0$ in Walsh basis 
+	\item{Mixing matrix $M$ in Walsh basis 
 	\[
 	  \widehat{M}_{u,v} \; = \; 2^{\,\ell-1} \,[\nudge u \nudge v = {\bf
 	  0}\nudge]\, \widehat{\bm{\mu}}_u \nudge \widehat{\bm{\mu}}_v \!  \sum_{k
@@ -308,7 +308,7 @@
       }      
     \end{itemize}
       %\mbox{}\\[0.25 in]
-    Does the distance decrease in practice like $1/\sqrt{N}$ ?
+    Can the distance decrease in practice like $1/\sqrt{N}$ ?
   \end{frame}
   
   \begin{frame}
@@ -466,7 +466,7 @@
 	\subfloat{
 	\resizebox{4cm}{2cm}{\includegraphics{figures/eps/osc/b8/osc_inf_dip.eps}}} \vspace{-0.5em} \hspace{-2.3em}% 
 	
-      \caption[]{Infinite and finite population behavior for genome length $\ell = 10$}     
+      \caption[]{Infinite and finite population behavior for genome length $\ell = 8$}     
       \end{center}
     \end{figure}
   \end{frame}  
@@ -488,6 +488,7 @@
 	  -1 \neq \sum \limits_{j} (-1)^{g^T j} \bm{\mu}_j      
 	\]
       }
+      \item{No periodic orbits for infinite population}      
     \end{itemize}
   \end{frame}
   
@@ -497,7 +498,6 @@
       \setlength\itemsep{1em}   
       \item{$\bm{\mu}_0 \,:=\, \epsilon$}
       \item{$\bm{\mu}_i \,:=\, (1 \,-\, \epsilon)\bm{\mu}_i$}
-      \item{No periodic orbits for infinite population}
       \item{This modification makes the Markov chain regular}
       \item{No periodic orbits for finite population}      
       \item{Can finite population exhibit approximate oscillations?}
@@ -562,7 +562,7 @@
     \begin{itemize}      
       \setlength\itemsep{1em}
       \item{Finite populations can exhibit approximate oscillation when mutation-violation is small}
-      \item{If violation is large, then oscillation decreases}      
+      \item{If violation is large, then oscillation can decrease}      
     \end{itemize}
   \end{frame}
   
@@ -574,6 +574,8 @@
       \[	
 	1 \neq \sum \limits_{k \in \bar{g}\mathcal{R}} \bm{\chi}_{k+g} + \bm{\chi}_k 
       \]
+      \item{No periodic orbit exists for infinite population}
+      
     \end{itemize}
   \end{frame}
   
@@ -583,7 +585,6 @@
       \setlength\itemsep{1em}
       \item{$\bm{\chi}_i \,:=\, (1 - \epsilon) \bm{\chi}_i$}
       \item{$\bm{\chi}_j \,:=\, \epsilon$  \hspace{1cm}  $j$ is chosen where $\bm{\chi}_j \,=\, 0$}
-      \item{No periodic orbit exists for infinite population}
       \item{Can finite populations exhibit approximate oscillation?}
     \end{itemize}
   \end{frame}
@@ -644,7 +645,7 @@
     \begin{itemize}
       \setlength\itemsep{1em}
       \item{Finite populations can exhibit approximate oscillation when crossover-violation is small} 
-      \item{If violation is large, then oscillation decreases}     
+      \item{If violation is large, then oscillation can decrease}     
       
     \end{itemize}
   \end{frame}
@@ -655,9 +656,19 @@
       \setlength\itemsep{1em}
       \item{Vose's haploid model makes computation efficient in diploid case by reducing to haploid case} 
       \item{Distance between finite population and infinite population can decrease like $1/\sqrt{N}$}
-      \item{When infinite populations oscillate, finite populations exhibit approximate oscillation}
+      \item{When infinite populations oscillate, finite populations can exhibit approximate oscillation}
       \item{Finite populations can exhibit approximate oscillation for small violation}
       \item{Finite populations can exhibit approximate oscillation for small crossover-violation}      
+    \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Violation-limit ($\bm{z}^\ast$) between non-violation-limits ($\bm{p}^\ast$ and $\bm{q}^\ast$)}
+    \begin{itemize}
+      \item 
+      \centering
+      \resizebox*{7cm}{!}{\includegraphics{figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.eps}}  
+      \item Tests show $\bm{z}^\ast$ is between and equidistant from $\bm{p}^\ast$ and $\bm{q}^\ast$
     \end{itemize}
   \end{frame}
   

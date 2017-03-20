@@ -55,9 +55,9 @@
   \item Population is a collection of length $\ell$ binary strings 
   \item Population can be represented by a vector p; the $j$th component
       is the proportion of string j in the population.
-  \item For example, when P is this, 3rd component of vector p is equal to this.
-    \item $\mathcal{R}$ is the set of length $\ell$ binary strings and operations under $\mathcal{R}$ are bitwise modulo 2 operations.
-    \item Here are examples of some operations under R
+  \item For example, if P is this, 3rd component of vector p is equal to 1/3.
+    \item $\mathcal{R}$ is the set of length $\ell$ binary strings and operations under $\mathcal{R}$ are bitwise modulo 2 operations. $Z$ is cardinality of $\mathcal{R}$.
+    \item Here are examples of some operations under $\mathcal{R}$
   \end{itemize}
     
 \item
@@ -66,8 +66,8 @@
     bitwise operations in $\mathcal{R}$.
   \item Crossover exchanges bits in parents u and v using crossover mask
   to produce children u' and v' using this
-  \item Here's an example. These are parents, these are offspings.
-  \item Results depend on mask m. 
+  \item Here's an example. These parents crossover to produce these offspings.
+  \item Results depend on crossover mask m. 
   \item $\bm{\chi}_m$ gives probability of using crossover mask m.
   \item
   \item Mutation flips bits in $x$ using mutation mask m.
@@ -95,7 +95,7 @@
     \item However, $\tau$ is stochastic function of crossover and
     mutation, and can not be predicted with
     certainty 
-  \item Finite population evolution forms
+  \item Finite population evolution sequence forms
     Markov chain
   
   \end{itemize}
@@ -108,8 +108,8 @@
     occurs in the next generation.
   \item The sequence shows evolution of p under infinite population
     model.
-    \item $\mathcal{G}$ is the expectation of $\tau(\bm{p})$
-  \item The variance is of finite population in next generation is this.
+    \item $\mathcal{G}$ gives the expectation of $\tau(\bm{p})$
+  \item And the variance is of finite population in next generation is given by this.
   \end{itemize}
     
 \item
@@ -122,6 +122,7 @@
     of gamete g being produced from parent $\alpha$
   \item $q^\prime$ is next generation
   \item This is the standard evolutionary model from population genetics. 
+  \item This assumes panmixia i.e., parents mate randomly without bias.
 %   \item $q_\gamma^{n+1} \; = \; \sum_{\alpha} \, q_\alpha^n \,
 %     t_\alpha(\gamma_0) \sum_{\beta} \,q_\beta^n \,
 %     t_\beta(\gamma_1)\\[-.05in]$ gives us next generation population.
@@ -133,48 +134,48 @@
     distributions.
   \item Haploids can be determined in terms of diploid
     distributions.
-  \item And evolution equation can be expressed in terms of haploid
-    distributions as 
+  \item And evolution equation in terms of haploid
+    distributions can be expressed as this
     \[\bm{p}_{\gamma_0}^{\prime} \,=\, \sum_{\alpha_0, \, \alpha_1} \, \bm{p}_{\alpha_0} \, \bm{p}_{\alpha_1} \,
 	  t_{\langle \alpha_0, \,\alpha_1 \rangle}(\gamma_0) \]	  
+  \item Square brackets here are Iverson brackets which returns 1 if expression inside is true and returns 0 when expression inside is false.  
   
   \item In the matrix form, evolution equation can be expressed as $\bm{p}_g^\prime \; = \; \bm{p}^T M_g \, \bm{p}$
   \item $\bm{p}^\prime$ is next generation.
-  \item Where entries in this matix M(g) is given by $M_g = t_{u,v}(g)$
+  \item Where matrix M(g) describes transmission funciton. If g = 0, we call it mixing matrix.
   \end{itemize}
     
 \item
   \begin{itemize}
-  \item This is mutation distribution we used. Mu is mutation rate.
-  \item This is crossover distribution we use. Chi is crossover rate.
-  \item This is transmission function.
-  \item Square brackets here are Iverson brackets which returns 1 if expression inside is true and returns 0 when expression inside is false.
-  \item This transmission function is expensive to compute because there are 3 sum terms in it.
+  \item $\bm{\mu}$ of i gives probability that i is used as mutation mask. Mu is mutation rate.
+  \item $\bm{\chi}$ of i gives probability that i is used as crossover mask. Chi is crossover rate.
+  \item t of g is transmission function. This is expensive to compute because it has three sum terms in it.  
   \end{itemize}
     
 \item
   \begin{itemize}
-  \item W is walsh matrix, Z = $2^\ell$
-  \item Walsh transform of matrix A is given by this expression. 
-    and Walsh transform of vector w is given by this expression.
+  \item Component of walsh matrix W is given by this, Z = $2^\ell$
+  \item Walsh transform of matrix A is given by this. 
+    and Walsh transform of vector w is given by this.
   \item Here's the algorithm of computing walsh transform.
-  \item Using this algorithm, walsh transform can be computed in O(ZlogZ) which is almost linear in Z
+  \item Using this algorithm, walsh transform can be computed in O(ZlogZ)
   \end{itemize}
   
 \item
   \begin{itemize}
-  \item Mixing matrix is $M_0$ and is given by the expression
+  \item Walsh transform of Mixing matrix $M$ is given by the expression
     \[
       \widehat{M}_{u,v} \; = \; 2^{\,\ell-1} \,[\nudge u \nudge v = {\bf
       0}\nudge]\, \widehat{\bm{\mu}}_u \nudge \widehat{\bm{\mu}}_v \!  \sum_{k
     \nudge \in \nudge \overline{u+v} \nudge \mathcal{R}} \bm{\chi}_{k + u} +
     \bm{\chi}_{k + v}
     \]
-  \item This is evolution eqn in Walsh basis 
+  \item Evolution eqn in Walsh basis takes this form
   \[
     \widehat{\bm{p}}_g^{\,\,\prime} \; = \; 2^{\,\ell/2} \sum_{i \nudge \in \nudge g \mathcal{R}}
     \widehat{\bm{p}}_i \, \nudge \widehat{\bm{p}}_{i+g} \,\widehat{M}_{i,i+g}
   \]  
+  where $\hat{p}^\prime$ is next generation
   \end{itemize}
     
 \item
@@ -192,21 +193,21 @@
   \item Only one mixing matrix as opposed to $2^l$ is needed to compute next generation
   \item Consider l = 14, $2^{14}$ matrices would require 32 TB of
     memory, while one mixing matrix would require only 2 GB of memory
-  \item We think that is great optimization in resource
+  
   \end{itemize}
     
 \item
   \begin{itemize}
   \item In the 2nd part of this presentation, I talk about distance between finite population and infinite population.
+  \item If f is finite population and q is infinite population,
   \item With naive computation as shown, there would
-    be $2^l \cdot 2^l$ multiplication terms to be computed because $\alpha$ is diploid and have two components
-  \item where f is finite population and q is infinite population
+    be $2^l \cdot 2^l$ multiplication terms to be computed because $\alpha$ is diploid and have two components  
   \item We simplify it as shown in eqn (2) where it needs only $2^l$ +
     cardinal value of $S_f$ terms
-  \item $S_f$ is set of diploids that are in finite populations
+  \item $S_f$ is set of diploids that are in finite populations and is byproduct of finite GA.
   
   \item Writing code to compute in the Walsh basis, and running simulations using the Walsh basis 
-  is a significant part of my thesis. It represents the "Efficient" in the thesis title.
+  is a significant part of my thesis. It represents the "Efficient" part in the thesis title.
   \end{itemize}
   
 \item {Part II}
@@ -218,7 +219,7 @@
     as $1/\sqrt{ N}$
   \item But all of 3 implications are from inequalities. The distance
     might decrease much smaller than $1/\sqrt{ N}$.
-  \item We investigate if the distance infact decreases like $1/\sqrt{N}$ in practice. 
+  \item We investigate if the distance infact can decrease like $1/\sqrt{N}$ in practice. 
   \end{itemize}
   
 \item
@@ -267,14 +268,14 @@
       -1 &=& \sum \limits_{j} (-1)^{g^T j} \bm{\mu}_j \\
       1 &=& \sum \limits_{k \in \bar{g}\mathcal{R}} \bm{\chi}_{k+g} + \bm{\chi}_k 
       \end{eqnarray*}
-  \item 1st one is for mutation distribution and 2nd one is for crossover distribution
-  \item We try to answer our 2nd question through simulations; that is do finite populations exhibit
+  \item for mutation distribution to meet this condition 1 and for crossover  distribution to meet this condition 2.
+  \item We try to answer our 2nd question through simulations; that is can finite populations exhibit
      oscillations from random intial populations when infinite populations oscillate?
   \end{itemize}
     
 \item
   \begin{itemize}
-    \item Akin, Hasting, Wright, Bidwell and Agapie have studied oscillations in the past.
+    \item Few people have studied oscillations in the past: Akin 1981, Hasting 1982, Wright and Bidwell 1997, and Wright and Agapie 2001.
 %   \item Other people in the past also have been interested in studying
 %     oscillations in populations.
 %    \item Akin (1982) proved existence of cycling for continuous-time
@@ -292,11 +293,12 @@
     
 \item
   \begin{itemize}
+  \item  However,
   \item Akin considers - continuous time model, we consider -
     discrete time model
    \item Hastings' study is limited to two bits length, includes only
      crossover, but no mutation; we consider both crossover and mutation
-  \item Wright and Bidwell compute specific set of parameter values; there was particular relation between crossover, mutation and population; we use random crossover, mutation and population.
+  \item Wright and Bidwell compute specific set of parameter values; there is particular relation between crossover, mutation and population values; in contrast we use random crossover, mutation and population.
   \item Wright and Agapie use dynamic mutation that depends upon
     where population is in the population space while we use static
     mutation
@@ -330,15 +332,15 @@
 \item
   \begin{itemize}
   \item Question 3 concerns the robustness of finite population oscillation under mutation-violation
-  
+  \item By mutation-violation we mean, mutation distribuiton holding this condition.
+  \item This means no periodic orbits for infinite population
   \end{itemize}
 
 \item
   \begin{itemize}
   \item We introduce violation $\epsilon$ as following
-  \item This means no periodic orbits for finite population
-  \item The modification in $\bm{\mu}$ makes the Markov chain regular
-  \item This means no periodic orbits for infinite population
+  \item The modification in $\bm{\mu}$ makes the Markov chain regular 
+  \item This means no periodic orbits for finite population  
   \item We study if finite population can exhibit approximate oscillations in that case 
   \end{itemize}
   
@@ -351,11 +353,9 @@
 \item
   \begin{itemize}
   \item These figures show results for haploid population behavior of string length 8
-  \item Graphs are arranged in rows for increasing $\epsilon$ and columns for increasing population size
-  \item Graphs show convergence of finite population behavior to infinite population behavior as population increases
-  \item Results show oscillating behavior of population for smaller values of epsilon that diminishes with time.
+  \item As population increases, finite population oscillation converges to infinite population oscillation
   \item As value of $\epsilon$ grows, oscillation diminishes
-  \item Oscillation dies out for infinite population.
+  \item Oscillation dies out for infinite population with time.
   \item Even though finite population also appears to be dying out, since Markov chain is regular, population must visit every population state infinitely. 
   So these population will reoccur and oscillate infinitely often (for = 0.1).  
   \end{itemize}
@@ -373,14 +373,16 @@
 \item
   \begin{itemize}
   \item Our previous question concerns with the robustness of finite population oscillation under mutation-violation, 
-  our next question also concerns with the robustness of finite population but under crossover-violation  
+  our next question also concerns with the robustness of finite population but under crossover-violation 
+  \item By crossover-violation, we mean this condition holds.
+  \item Crossover-violation means no periodic orbit exists for infinite population
   \end{itemize}
 
 \item
   \begin{itemize}
   \item We introduce violation $\epsilon$ in crossover distribution
-  \item Crossover-violation means no periodic orbit exists for infinite population
-  \item We investigate if finite population can exhibit approximate oscillations in this case     
+  
+  \item And investigate if finite population can exhibit approximate oscillations in this case     
   \end{itemize}
   
 \item
@@ -412,8 +414,13 @@
   \item Distance between finite population and infinite population can decrease like $1/\sqrt{N}$
   \item When infinite populations oscillate, finite populations exhibit approximate oscillation
   \item Finite populations exhibit approximate oscillation for small mutation-violation
-  \item Finite populations exhibit approximate oscillation for small crossover-violation      
+  \item Finite populations exhibit approximate oscillation for small crossover-violation        
+  \end{itemize}
   
+\item
+  \begin{itemize}
+  \item We noticed some unexpected behavior with oscillation in violation case. 
+  \item Distance of infinite population to $\bm{p}^\ast$ and $\bm{q}^\ast$ appears to die out evenly to give a single line graph. And since infinite population is converging to $\bm{z}^\ast$, it implies $z^\ast$ is between $\bm{p}^\ast$ and $\bm{q}^\ast$ and equidistant. So we ran some simulations to test and it confirmed $z^\ast$ is infact between and equidistant from $\bm{p}^\ast$ and $\bm{q}^\ast$.
   \end{itemize}
   
 %   \item

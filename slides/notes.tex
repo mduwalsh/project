@@ -66,12 +66,13 @@
     bitwise operations in $\mathcal{R}$.
   \item Crossover exchanges bits in parents u and v using crossover mask
   to produce children u' and v' using this
+  \item Results depend on mask m and 1's in mask determines how exchange of bits in parents take place.
   \item Here's an example. These parents crossover to produce these offspings.
-  \item Results depend on crossover mask m. 
+  \item In this example, for this offspring first two bits are from parent u and last two bits are from parent v and vice-versa in other offspring.
   \item $\bm{\chi}_m$ gives probability of using crossover mask m.
   \item
-  \item Mutation flips bits in $x$ using mutation mask m.
-  \item In this example, this mutates to this using this mask.
+  \item Mutation flips bits in $x$ using mutation mask m. Bits of x are flipped in position where mask m has bit 1.
+  \item In this example, x mutates to this using this mask. In this example, fourth bit of x is flipped because fourth bit of m is 1.
   \item $\bm{\mu}_m$ gives probability of using mutation mask m
   \item The use of masks dates back to Geiringer, 1944
   \end{itemize}
@@ -198,7 +199,7 @@
     
 \item
   \begin{itemize}
-  \item In the 2nd part of this presentation, I talk about distance between finite population and infinite population.
+  \item In the 2nd part of this presentation, I talk of distance between finite population and infinite population.
   \item If f is finite population and q is infinite population,
   \item With naive computation as shown, there would
     be $2^l \cdot 2^l$ multiplication terms to be computed because $\alpha$ is diploid and have two components  
@@ -419,8 +420,15 @@
   
 \item
   \begin{itemize}
-  \item We noticed some unexpected behavior with oscillation in violation case. 
-  \item Distance of infinite population to $\bm{p}^\ast$ and $\bm{q}^\ast$ appears to die out evenly to give a single line graph. And since infinite population is converging to $\bm{z}^\ast$, it implies $z^\ast$ is between $\bm{p}^\ast$ and $\bm{q}^\ast$ and equidistant. So we ran some simulations to test and it confirmed $z^\ast$ is infact between and equidistant from $\bm{p}^\ast$ and $\bm{q}^\ast$.
+    \item We noticed some peculiar behavior with oscillation in violation case. 
+    
+    \item $\bm{p}^\ast$ and $\bm{q}^\ast$ are limits without violation and $\bm{z}^\ast$ is limit with violation.
+    
+    \item These dotted lines represent hyperplanes perpendicular to the line joining $\bm{p}^\ast$ and $\bm{q}^\ast$. 
+    
+    \item  $\bm{z}^\ast$ lies inside these hyperplanes and also equidistant from $\bm{p}^\ast$ and $\bm{q}^\ast$
+    
+    \item  Infinite population and finite haploid population also lie between these hyper planes but finite diploid population does not.
   \end{itemize}
   
 %   \item

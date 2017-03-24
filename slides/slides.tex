@@ -59,33 +59,46 @@
     \end{frame}
   
   \begin{frame}
-    \frametitle{Terms}
+    \frametitle{Population}
     \begin{itemize}
       \item{Population $P$: a collection of length $\ell$ binary strings}
       \item{Population vector: $\bm{p}_j$ proportion of string $j$ in the population}
       \item{If $P \,=\, \langle 00, 01, 01, 10, 11, 11 \rangle$, then $\bm{p}_3 \,=\, 2/6 \,=\, 1/3$}
-      \vspace{0.1in}%
-      \item{$\mathcal{R}$ denotes the set of binary strings of length $\ell$, $|\mathcal{R}| = Z = 2^\ell$ }
-      \begin{itemize}
-	\item{Addition and multiplication of elements in $\mathcal{R}$ are bitwise operations modulo 2}
-	\item{$x \,=\, 1101,\, y \,=\, 1010 $}
-	\item{$x + y \,=\, 1101 + 1010 \,=\, 0111$}
-	\item{$xy \,=\, 1101 \cdot 1010 \,=\, 1000$}
-	\item{$\bar{x} \,=\, 0010$}
-      \end{itemize}
+      \vspace{0.1in}%      
     \end{itemize}
   \end{frame}
   
   \begin{frame}
-    \frametitle{Crossover \& Mutation}    
+    \frametitle{$\mathcal{R}$}
+    \begin{itemize}
+    \item{$\mathcal{R}$ denotes the set of binary strings of length $\ell$
+    \item $|\mathcal{R}| = Z = 2^\ell$ }
+      
+    \item{Addition and multiplication of elements in $\mathcal{R}$ are bitwise operations modulo 2}
+    \item{$x \,=\, 1101,\, y \,=\, 1010 $}
+    \item{$x + y \,=\, 1101 + 1010 \,=\, 0111$}
+    \item{$xy \,=\, 1101 \cdot 1010 \,=\, 1000$}
+    \item{$\bar{x} \,=\, 0010$}
+      
+    \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Crossover}    
     \begin{itemize}    
       \item{ \mbox{}\\[-0.2in] Crossover : Choose parents $u$ and $v$, exchange bits using crossover mask $m$: }
       \item{$u^\prime \,=\, um + v\bar{m} , v^\prime \,=\, u\bar{m} + vm$}      
       \item{$u = \bm{1100}, v = 1101, m = 1100$}
       \item{$\{\bm{1100}, 1101\} \to \{\bm{11}00 + 0001,\, 00\bm{00} + 1100\} \to \{\bm{11}01, 11\bm{00}\}$}
       \item{$\bm{\chi}_m \,=\,$ probability of using crossover mask $m$ }
-      \vspace{0.06in}%
-      \item{Mutation: Flip bits using mutation mask:}
+      \vspace{0.06in}%      
+    \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Mutation}
+    \begin{itemize}
+      \item{Mutation: Flip bits using mutation mask $m$:}
       \item{$x \to x + m$}
       \item{$x = 1100, m = 0001$}
       \item{$1100 \to 1100 + 0001 \to 110\bm{1}$}
@@ -94,7 +107,7 @@
   \end{frame}
   
   \begin{frame}
-    \frametitle{Finite Population GA}
+    \frametitle{Finite Population GA (Haploid)}
     \begin{columns}
       \column{0.30\linewidth}
 	  \centering
@@ -107,6 +120,14 @@
 	  \item{Repeat above to form next generation}              
 	\end{itemize}
     \end{columns} 
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Finite Population GA (Diploid)}
+       
+	  \centering
+	  \includegraphics[height=6cm, width=5cm]{figures/eps/GA_dip.eps}      
+    
   \end{frame}
   
   \begin{frame}
@@ -179,7 +200,7 @@
 	  \chi c_i & \text{if $i>0$}\\
 	  1 - \chi + \chi  c_0 & \text{if $i = 0$} \; 
 	\end{cases}
-	\quad c_i = 2^{-\ell}
+	\quad \quad c_i = 2^{-\ell}
       \]
       }      
       \item{\[ t_{\langle u,v \rangle}(g) \; = \;\,
@@ -195,17 +216,15 @@
   \begin{frame}
     \frametitle{Walsh Basis}    
     \begin{columns}
-      \column{0.5\linewidth}
-	
+      \column{0.5\linewidth}	
 	 $W_{n,t} = Z^{-1/2} (-1)^{n^T t}$ where $Z = 2^\ell$
 	 \newline
-	$\widehat{A} = WAW$
+	$\widehat{A} = WAW \hspace{0.9in} O(Z^2 \log Z)$
 	\newline
-	$\widehat{w} = Ww$        
+	$\widehat{w} = Ww \hspace{1in} O(Z \log Z)$       
 	
       \column{0.50\linewidth}	  
-	  \includegraphics[height=6cm, width=5cm]{figures/eps/fwt.eps}      
-	  \newline $T(n) \,=\, O(Z \log Z)$
+	  \includegraphics[height=6cm, width=5cm]{figures/eps/fwt.eps} 	  
     \end{columns}    
   \end{frame}
     
@@ -232,20 +251,21 @@
   \end{frame}
   
   \begin{frame}
-    \frametitle{Computational Comparison}
-	  In Walsh basis 
+    \frametitle{Computational Comparison}	  
+	 In Walsh basis: 
 	    \[
 	  \widehat{\bm{p}}_g^{\,\,\prime} \; = \; 2^{\,\ell/2} \sum_{i \nudge \in \nudge g \mathcal{R}}
 	  \widehat{\bm{p}}_i \, \nudge \widehat{\bm{p}}_{i+g} \,\widehat{M}_{i,i+g} 	  
 	 \]
-	 \[
+	  \[
 	  \widehat{M}_{u,v} \; = \; 2^{\,\ell-1} \,[\nudge u \nudge v = {\bf
 	  0}\nudge]\, \widehat{\bm{\mu}}_u \nudge \widehat{\bm{\mu}}_v \!  \sum_{k
 	\nudge \in \nudge \overline{u+v} \nudge \mathcal{R}} \bm{\chi}_{k + u} +
 	\bm{\chi}_{k + v}
 	\]	
-	 Before Walsh basis
+	 Before Walsh basis:
 	    \[ \bm{p}_g^\prime \; = \; \bm{p}^T M_g \, \bm{p} \]
+	    
 	    \[ t_{\langle u,v \rangle}(g) \; = \;\,
       \sum_{i \nudge \in \nudge \mathcal{R}} \, \sum_{j \nudge \in \nudge \mathcal{R}} \,
       \sum_{k \nudge \in \nudge \mathcal{R}}
@@ -377,16 +397,19 @@
   \begin{frame}
     \frametitle{Limits}
     \begin{itemize}
-      \item{Infinite population evolution 
+      \item Infinite population evolution 
       \[
       \bm{p}, \, \mathcal{G}(\bm{p}), \, {\mathcal{G}}^2(\bm{p}), \, \cdots
       \]
-      may converge to a fixed point }  
-      \item{
+      may converge to a fixed point      
       \[\mathcal{G}(\omega) = \lim_{n\to\infty} \mathcal{G}^n(\bm{p}) = \omega
+      \]      
+      \item{But under some circumstances, evolution converges to a periodic orbit that oscillates between two fixed points, $\bm{p}^\ast$ and $\bm{q}^\ast$}      
+      \[
+      \bm{p}^\ast = \lim_{n\to\infty} \mathcal{G}^{2n}(\bm{p})
+      ,\quad
+      \bm{q}^\ast = \lim_{n\to\infty} \mathcal{G}^{2n+1}(\bm{q})
       \]
-      }
-      \item{But under some circumstances, evolution converges to a periodic orbit that oscillates between two fixed points, $\bm{p}^\ast$ and $\bm{q}^\ast$}
     \end{itemize}
   \end{frame}
   

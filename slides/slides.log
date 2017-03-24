@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.18)  22 MAR 2017 12:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.18)  23 MAR 2017 23:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -990,28 +990,32 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 ] [3
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 77.
+LaTeX Font Info:    Try loading font information for U+msa on input line 69.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 77.
+LaTeX Font Info:    Try loading font information for U+msb on input line 69.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 77.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 69.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 77.
+(Font)              using `OT1/cmss/bx/n' instead on input line 69.
 
 [4
 
 ] [5
+
+] [6
+
+] [7
 
 ]
 Package epstopdf Info: Source file: <figures/eps/GA.eps>
@@ -1022,32 +1026,53 @@ Package epstopdf Info: Source file: <figures/eps/GA.eps>
 (epstopdf)                    size: 122791 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/GA-eps-convert
 ed-to.pdf figures/eps/GA.eps>
-(epstopdf)             \includegraphics on input line 110.
+(epstopdf)             \includegraphics on input line 123.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/GA-eps-converted-to.pdf, id=153, 416.55624pt x 635.37375pt>
+<figures/eps/GA-eps-converted-to.pdf, id=204, 416.55624pt x 635.37375pt>
 File: figures/eps/GA-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/eps/GA-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/GA-eps-converted-to.pdf used on input line
- 110.
+ 123.
 (pdftex.def)             Requested size: 142.26285pt x 170.71942pt.
 
-Overfull \hbox (22.76006pt too wide) in paragraph at lines 110--110
+Overfull \hbox (22.76006pt too wide) in paragraph at lines 123--123
  [][] 
  []
 
-[6
+[8
 
- <./figures/eps/GA-eps-converted-to.pdf>] [7
+ <./figures/eps/GA-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/eps/GA_dip.eps>
+(epstopdf)                    date: 2017-03-23 17:42:16
+(epstopdf)                    size: 216931 bytes
+(epstopdf)             Output file: <figures/eps/GA_dip-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-23 21:51:21
+(epstopdf)                    size: 194169 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/eps/GA_dip-eps-con
+verted-to.pdf figures/eps/GA_dip.eps>
+(epstopdf)             \includegraphics on input line 131.
+Package epstopdf Info: Output file is already uptodate.
 
-] [8
+<figures/eps/GA_dip-eps-converted-to.pdf, id=241, 422.57875pt x 694.595pt>
+File: figures/eps/GA_dip-eps-converted-to.pdf Graphic file (type pdf)
 
-] [9
+<use figures/eps/GA_dip-eps-converted-to.pdf>
+Package pdftex.def Info: figures/eps/GA_dip-eps-converted-to.pdf used on input 
+line 131.
+(pdftex.def)             Requested size: 142.26276pt x 170.7125pt.
+ [9
 
-] [10
+ <./figures/eps/GA_dip-eps-converted-to.pdf>] [10
 
 ] [11
+
+] [12
+
+] [13
+
+] [14
 
 ]
 Package epstopdf Info: Source file: <figures/eps/fwt.eps>
@@ -1058,29 +1083,29 @@ Package epstopdf Info: Source file: <figures/eps/fwt.eps>
 (epstopdf)                    size: 90988 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/fwt-eps-conver
 ted-to.pdf figures/eps/fwt.eps>
-(epstopdf)             \includegraphics on input line 210.
+(epstopdf)             \includegraphics on input line 229.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/fwt-eps-converted-to.pdf, id=320, 577.15625pt x 588.1975pt>
+<figures/eps/fwt-eps-converted-to.pdf, id=420, 577.15625pt x 588.1975pt>
 File: figures/eps/fwt-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/eps/fwt-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/fwt-eps-converted-to.pdf used on input lin
-e 210.
+e 229.
 (pdftex.def)             Requested size: 142.26317pt x 170.7165pt.
- [12
+ [15
 
- <./figures/eps/fwt-eps-converted-to.pdf>] [13
-
-] [14
-
-] [15
-
-] [16
+ <./figures/eps/fwt-eps-converted-to.pdf>] [16
 
 ] [17
 
 ] [18
+
+] [19
+
+] [20
+
+] [21
 
 ]
 Package epstopdf Info: Source file: <figures/eps/surf/b4.eps>
@@ -1091,15 +1116,15 @@ Package epstopdf Info: Source file: <figures/eps/surf/b4.eps>
 (epstopdf)                    size: 23762 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/surf/b4-eps-co
 nverted-to.pdf figures/eps/surf/b4.eps>
-(epstopdf)             \includegraphics on input line 338.
+(epstopdf)             \includegraphics on input line 358.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/surf/b4-eps-converted-to.pdf, id=503, 361.35pt x 252.945pt>
+<figures/eps/surf/b4-eps-converted-to.pdf, id=603, 361.35pt x 252.945pt>
 File: figures/eps/surf/b4-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/eps/surf/b4-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/surf/b4-eps-converted-to.pdf used on input
- line 338.
+ line 358.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/surf/b6.eps>
 (epstopdf)                    date: 2015-11-10 17:37:03
@@ -1109,15 +1134,15 @@ Package epstopdf Info: Source file: <figures/eps/surf/b6.eps>
 (epstopdf)                    size: 23631 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/surf/b6-eps-co
 nverted-to.pdf figures/eps/surf/b6.eps>
-(epstopdf)             \includegraphics on input line 338.
+(epstopdf)             \includegraphics on input line 358.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/surf/b6-eps-converted-to.pdf, id=504, 361.35pt x 252.945pt>
+<figures/eps/surf/b6-eps-converted-to.pdf, id=604, 361.35pt x 252.945pt>
 File: figures/eps/surf/b6-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/eps/surf/b6-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/surf/b6-eps-converted-to.pdf used on input
- line 338.
+ line 358.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/surf/b8.eps>
 (epstopdf)                    date: 2015-11-10 17:37:03
@@ -1127,15 +1152,15 @@ Package epstopdf Info: Source file: <figures/eps/surf/b8.eps>
 (epstopdf)                    size: 23254 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/surf/b8-eps-co
 nverted-to.pdf figures/eps/surf/b8.eps>
-(epstopdf)             \includegraphics on input line 338.
+(epstopdf)             \includegraphics on input line 358.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/surf/b8-eps-converted-to.pdf, id=505, 361.35pt x 252.945pt>
+<figures/eps/surf/b8-eps-converted-to.pdf, id=605, 361.35pt x 252.945pt>
 File: figures/eps/surf/b8-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/eps/surf/b8-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/surf/b8-eps-converted-to.pdf used on input
- line 338.
+ line 358.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/surf/b10.eps>
 (epstopdf)                    date: 2015-11-10 17:37:03
@@ -1146,15 +1171,15 @@ Package epstopdf Info: Source file: <figures/eps/surf/b10.eps>
 (epstopdf)                    size: 23130 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/surf/b10-eps-c
 onverted-to.pdf figures/eps/surf/b10.eps>
-(epstopdf)             \includegraphics on input line 338.
+(epstopdf)             \includegraphics on input line 358.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/surf/b10-eps-converted-to.pdf, id=506, 361.35pt x 252.945pt>
+<figures/eps/surf/b10-eps-converted-to.pdf, id=606, 361.35pt x 252.945pt>
 File: figures/eps/surf/b10-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/eps/surf/b10-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/surf/b10-eps-converted-to.pdf used on inpu
-t line 338.
+t line 358.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/surf/b12.eps>
 (epstopdf)                    date: 2015-11-10 17:37:03
@@ -1165,15 +1190,15 @@ Package epstopdf Info: Source file: <figures/eps/surf/b12.eps>
 (epstopdf)                    size: 22979 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/surf/b12-eps-c
 onverted-to.pdf figures/eps/surf/b12.eps>
-(epstopdf)             \includegraphics on input line 338.
+(epstopdf)             \includegraphics on input line 358.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/surf/b12-eps-converted-to.pdf, id=507, 361.35pt x 252.945pt>
+<figures/eps/surf/b12-eps-converted-to.pdf, id=607, 361.35pt x 252.945pt>
 File: figures/eps/surf/b12-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/eps/surf/b12-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/surf/b12-eps-converted-to.pdf used on inpu
-t line 338.
+t line 358.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/surf/b14.eps>
 (epstopdf)                    date: 2015-11-10 17:37:03
@@ -1184,21 +1209,21 @@ Package epstopdf Info: Source file: <figures/eps/surf/b14.eps>
 (epstopdf)                    size: 22986 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/surf/b14-eps-c
 onverted-to.pdf figures/eps/surf/b14.eps>
-(epstopdf)             \includegraphics on input line 338.
+(epstopdf)             \includegraphics on input line 358.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/surf/b14-eps-converted-to.pdf, id=508, 361.35pt x 252.945pt>
+<figures/eps/surf/b14-eps-converted-to.pdf, id=608, 361.35pt x 252.945pt>
 File: figures/eps/surf/b14-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/eps/surf/b14-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/surf/b14-eps-converted-to.pdf used on inpu
-t line 338.
+t line 358.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 
-Overfull \vbox (3.70949pt too high) detected at line 338
+Overfull \vbox (3.70949pt too high) detected at line 358
  []
 
-[19
+[22
 
  <./figures/eps/surf/b4-eps-converted-to.pdf> <./figures/eps/surf/b6-eps-conver
 ted-to.pdf> <./figures/eps/surf/b8-eps-converted-to.pdf> <./figures/eps/surf/b1
@@ -1212,15 +1237,15 @@ Package epstopdf Info: Source file: <figures/eps/slope/m.eps>
 (epstopdf)                    size: 11243 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/slope/m-eps-co
 nverted-to.pdf figures/eps/slope/m.eps>
-(epstopdf)             \includegraphics on input line 360.
+(epstopdf)             \includegraphics on input line 380.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/slope/m-eps-converted-to.pdf, id=581, 361.35pt x 252.945pt>
+<figures/eps/slope/m-eps-converted-to.pdf, id=680, 361.35pt x 252.945pt>
 File: figures/eps/slope/m-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/eps/slope/m-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/slope/m-eps-converted-to.pdf used on input
- line 360.
+ line 380.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/slope/b.eps>
 (epstopdf)                    date: 2015-11-10 17:37:17
@@ -1230,33 +1255,33 @@ Package epstopdf Info: Source file: <figures/eps/slope/b.eps>
 (epstopdf)                    size: 12958 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/slope/b-eps-co
 nverted-to.pdf figures/eps/slope/b.eps>
-(epstopdf)             \includegraphics on input line 360.
+(epstopdf)             \includegraphics on input line 380.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/slope/b-eps-converted-to.pdf, id=582, 361.35pt x 252.945pt>
+<figures/eps/slope/b-eps-converted-to.pdf, id=681, 361.35pt x 252.945pt>
 File: figures/eps/slope/b-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/eps/slope/b-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/slope/b-eps-converted-to.pdf used on input
- line 360.
+ line 380.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
- [20
+ [23
 
  <./figures/eps/slope/m-eps-converted-to.pdf> <./figures/eps/slope/b-eps-conver
-ted-to.pdf>] [21
-
-] [22
-
-]
-[23
-
-] [24
+ted-to.pdf>] [24
 
 ] [25
 
-] [26
+]
+[26
 
 ] [27
+
+] [28
+
+] [29
+
+] [30
 
 ]
 Package epstopdf Info: Source file: <figures/eps/osc/b8/n004096_osc_fin_hap.eps
@@ -1269,16 +1294,16 @@ Package epstopdf Info: Source file: <figures/eps/osc/b8/n004096_osc_fin_hap.eps
 (epstopdf)                    size: 8212 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/osc/b8/n004096
 _osc_fin_hap-eps-converted-to.pdf figures/eps/osc/b8/n004096_osc_fin_hap.eps>
-(epstopdf)             \includegraphics on input line 472.
+(epstopdf)             \includegraphics on input line 495.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/osc/b8/n004096_osc_fin_hap-eps-converted-to.pdf, id=808, 361.35pt 
+<figures/eps/osc/b8/n004096_osc_fin_hap-eps-converted-to.pdf, id=906, 361.35pt 
 x 252.945pt>
 File: figures/eps/osc/b8/n004096_osc_fin_hap-eps-converted-to.pdf Graphic file 
 (type pdf)
  <use figures/eps/osc/b8/n004096_osc_fin_hap-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/osc/b8/n004096_osc_fin_hap-eps-converted-t
-o.pdf used on input line 472.
+o.pdf used on input line 495.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/osc/b8/n040960_osc_fin_hap.eps
 >
@@ -1290,16 +1315,16 @@ Package epstopdf Info: Source file: <figures/eps/osc/b8/n040960_osc_fin_hap.eps
 (epstopdf)                    size: 8206 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/osc/b8/n040960
 _osc_fin_hap-eps-converted-to.pdf figures/eps/osc/b8/n040960_osc_fin_hap.eps>
-(epstopdf)             \includegraphics on input line 472.
+(epstopdf)             \includegraphics on input line 495.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/osc/b8/n040960_osc_fin_hap-eps-converted-to.pdf, id=809, 361.35pt 
+<figures/eps/osc/b8/n040960_osc_fin_hap-eps-converted-to.pdf, id=907, 361.35pt 
 x 252.945pt>
 File: figures/eps/osc/b8/n040960_osc_fin_hap-eps-converted-to.pdf Graphic file 
 (type pdf)
  <use figures/eps/osc/b8/n040960_osc_fin_hap-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/osc/b8/n040960_osc_fin_hap-eps-converted-t
-o.pdf used on input line 472.
+o.pdf used on input line 495.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/osc/b8/n081920_osc_fin_hap.eps
 >
@@ -1311,16 +1336,16 @@ Package epstopdf Info: Source file: <figures/eps/osc/b8/n081920_osc_fin_hap.eps
 (epstopdf)                    size: 8087 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/osc/b8/n081920
 _osc_fin_hap-eps-converted-to.pdf figures/eps/osc/b8/n081920_osc_fin_hap.eps>
-(epstopdf)             \includegraphics on input line 472.
+(epstopdf)             \includegraphics on input line 495.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/osc/b8/n081920_osc_fin_hap-eps-converted-to.pdf, id=810, 361.35pt 
+<figures/eps/osc/b8/n081920_osc_fin_hap-eps-converted-to.pdf, id=908, 361.35pt 
 x 252.945pt>
 File: figures/eps/osc/b8/n081920_osc_fin_hap-eps-converted-to.pdf Graphic file 
 (type pdf)
  <use figures/eps/osc/b8/n081920_osc_fin_hap-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/osc/b8/n081920_osc_fin_hap-eps-converted-t
-o.pdf used on input line 472.
+o.pdf used on input line 495.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/osc/b8/osc_inf_hap.eps>
 (epstopdf)                    date: 2016-11-17 09:07:12
@@ -1331,16 +1356,16 @@ ed-to.pdf>
 (epstopdf)                    size: 7825 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/osc/b8/osc_inf
 _hap-eps-converted-to.pdf figures/eps/osc/b8/osc_inf_hap.eps>
-(epstopdf)             \includegraphics on input line 472.
+(epstopdf)             \includegraphics on input line 495.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/osc/b8/osc_inf_hap-eps-converted-to.pdf, id=811, 361.35pt x 252.94
+<figures/eps/osc/b8/osc_inf_hap-eps-converted-to.pdf, id=909, 361.35pt x 252.94
 5pt>
 File: figures/eps/osc/b8/osc_inf_hap-eps-converted-to.pdf Graphic file (type pd
 f)
  <use figures/eps/osc/b8/osc_inf_hap-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/osc/b8/osc_inf_hap-eps-converted-to.pdf us
-ed on input line 472.
+ed on input line 495.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/osc/b8/n004096_osc_fin_dip.eps
 >
@@ -1352,16 +1377,16 @@ Package epstopdf Info: Source file: <figures/eps/osc/b8/n004096_osc_fin_dip.eps
 (epstopdf)                    size: 8125 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/osc/b8/n004096
 _osc_fin_dip-eps-converted-to.pdf figures/eps/osc/b8/n004096_osc_fin_dip.eps>
-(epstopdf)             \includegraphics on input line 472.
+(epstopdf)             \includegraphics on input line 495.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/osc/b8/n004096_osc_fin_dip-eps-converted-to.pdf, id=812, 361.35pt 
+<figures/eps/osc/b8/n004096_osc_fin_dip-eps-converted-to.pdf, id=910, 361.35pt 
 x 252.945pt>
 File: figures/eps/osc/b8/n004096_osc_fin_dip-eps-converted-to.pdf Graphic file 
 (type pdf)
  <use figures/eps/osc/b8/n004096_osc_fin_dip-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/osc/b8/n004096_osc_fin_dip-eps-converted-t
-o.pdf used on input line 472.
+o.pdf used on input line 495.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/osc/b8/n040960_osc_fin_dip.eps
 >
@@ -1373,16 +1398,16 @@ Package epstopdf Info: Source file: <figures/eps/osc/b8/n040960_osc_fin_dip.eps
 (epstopdf)                    size: 8015 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/osc/b8/n040960
 _osc_fin_dip-eps-converted-to.pdf figures/eps/osc/b8/n040960_osc_fin_dip.eps>
-(epstopdf)             \includegraphics on input line 472.
+(epstopdf)             \includegraphics on input line 495.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/osc/b8/n040960_osc_fin_dip-eps-converted-to.pdf, id=813, 361.35pt 
+<figures/eps/osc/b8/n040960_osc_fin_dip-eps-converted-to.pdf, id=911, 361.35pt 
 x 252.945pt>
 File: figures/eps/osc/b8/n040960_osc_fin_dip-eps-converted-to.pdf Graphic file 
 (type pdf)
  <use figures/eps/osc/b8/n040960_osc_fin_dip-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/osc/b8/n040960_osc_fin_dip-eps-converted-t
-o.pdf used on input line 472.
+o.pdf used on input line 495.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/osc/b8/n081920_osc_fin_dip.eps
 >
@@ -1394,16 +1419,16 @@ Package epstopdf Info: Source file: <figures/eps/osc/b8/n081920_osc_fin_dip.eps
 (epstopdf)                    size: 8105 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/osc/b8/n081920
 _osc_fin_dip-eps-converted-to.pdf figures/eps/osc/b8/n081920_osc_fin_dip.eps>
-(epstopdf)             \includegraphics on input line 472.
+(epstopdf)             \includegraphics on input line 495.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/osc/b8/n081920_osc_fin_dip-eps-converted-to.pdf, id=814, 361.35pt 
+<figures/eps/osc/b8/n081920_osc_fin_dip-eps-converted-to.pdf, id=912, 361.35pt 
 x 252.945pt>
 File: figures/eps/osc/b8/n081920_osc_fin_dip-eps-converted-to.pdf Graphic file 
 (type pdf)
  <use figures/eps/osc/b8/n081920_osc_fin_dip-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/osc/b8/n081920_osc_fin_dip-eps-converted-t
-o.pdf used on input line 472.
+o.pdf used on input line 495.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/osc/b8/osc_inf_dip.eps>
 (epstopdf)                    date: 2016-11-17 09:07:12
@@ -1414,18 +1439,18 @@ ed-to.pdf>
 (epstopdf)                    size: 7594 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/osc/b8/osc_inf
 _dip-eps-converted-to.pdf figures/eps/osc/b8/osc_inf_dip.eps>
-(epstopdf)             \includegraphics on input line 472.
+(epstopdf)             \includegraphics on input line 495.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/osc/b8/osc_inf_dip-eps-converted-to.pdf, id=815, 361.35pt x 252.94
+<figures/eps/osc/b8/osc_inf_dip-eps-converted-to.pdf, id=913, 361.35pt x 252.94
 5pt>
 File: figures/eps/osc/b8/osc_inf_dip-eps-converted-to.pdf Graphic file (type pd
 f)
  <use figures/eps/osc/b8/osc_inf_dip-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/osc/b8/osc_inf_dip-eps-converted-to.pdf us
-ed on input line 472.
+ed on input line 495.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
- [28
+ [31
 
  <./figures/eps/osc/b8/n004096_osc_fin_hap-eps-converted-to.pdf> <./figures/eps
 /osc/b8/n040960_osc_fin_hap-eps-converted-to.pdf> <./figures/eps/osc/b8/n081920
@@ -1433,13 +1458,13 @@ _osc_fin_hap-eps-converted-to.pdf> <./figures/eps/osc/b8/osc_inf_hap-eps-conver
 ted-to.pdf> <./figures/eps/osc/b8/n004096_osc_fin_dip-eps-converted-to.pdf> <./
 figures/eps/osc/b8/n040960_osc_fin_dip-eps-converted-to.pdf> <./figures/eps/osc
 /b8/n081920_osc_fin_dip-eps-converted-to.pdf> <./figures/eps/osc/b8/osc_inf_dip
--eps-converted-to.pdf>] [29
+-eps-converted-to.pdf>] [32
 
-] [30
+] [33
 
-] [31
+] [34
 
-] [32
+] [35
 
 ]
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.01/n00004096_fin_
@@ -1453,17 +1478,17 @@ dip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.0
 1/n00004096_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.01/n000
 04096_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 557.
+(epstopdf)             \includegraphics on input line 580.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/eps/vio/mu/b8/e0.01/n00004096_fin_dip_wovio-eps-converted-to.pdf, id=1
-015, 361.35pt x 252.945pt>
+114, 361.35pt x 252.945pt>
 File: figures/eps/vio/mu/b8/e0.01/n00004096_fin_dip_wovio-eps-converted-to.pdf 
 Graphic file (type pdf)
 
 <use figures/eps/vio/mu/b8/e0.01/n00004096_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/mu/b8/e0.01/n00004096_fin_dip_wovio-ep
-s-converted-to.pdf used on input line 557.
+s-converted-to.pdf used on input line 580.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.01/n00040960_fin_
 dip_wovio.eps>
@@ -1476,17 +1501,17 @@ dip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.0
 1/n00040960_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.01/n000
 40960_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 557.
+(epstopdf)             \includegraphics on input line 580.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/eps/vio/mu/b8/e0.01/n00040960_fin_dip_wovio-eps-converted-to.pdf, id=1
-016, 361.35pt x 252.945pt>
+115, 361.35pt x 252.945pt>
 File: figures/eps/vio/mu/b8/e0.01/n00040960_fin_dip_wovio-eps-converted-to.pdf 
 Graphic file (type pdf)
 
 <use figures/eps/vio/mu/b8/e0.01/n00040960_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/mu/b8/e0.01/n00040960_fin_dip_wovio-ep
-s-converted-to.pdf used on input line 557.
+s-converted-to.pdf used on input line 580.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.01/n00081920_fin_
 dip_wovio.eps>
@@ -1499,17 +1524,17 @@ dip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.0
 1/n00081920_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.01/n000
 81920_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 557.
+(epstopdf)             \includegraphics on input line 580.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/eps/vio/mu/b8/e0.01/n00081920_fin_dip_wovio-eps-converted-to.pdf, id=1
-017, 361.35pt x 252.945pt>
+116, 361.35pt x 252.945pt>
 File: figures/eps/vio/mu/b8/e0.01/n00081920_fin_dip_wovio-eps-converted-to.pdf 
 Graphic file (type pdf)
 
 <use figures/eps/vio/mu/b8/e0.01/n00081920_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/mu/b8/e0.01/n00081920_fin_dip_wovio-ep
-s-converted-to.pdf used on input line 557.
+s-converted-to.pdf used on input line 580.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.01/inf_dip_wovio.
 eps>
@@ -1522,17 +1547,17 @@ eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.0
 1/inf_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.01/inf_dip_wovio.
 eps>
-(epstopdf)             \includegraphics on input line 557.
+(epstopdf)             \includegraphics on input line 580.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/vio/mu/b8/e0.01/inf_dip_wovio-eps-converted-to.pdf, id=1018, 361.3
+<figures/eps/vio/mu/b8/e0.01/inf_dip_wovio-eps-converted-to.pdf, id=1117, 361.3
 5pt x 252.945pt>
 File: figures/eps/vio/mu/b8/e0.01/inf_dip_wovio-eps-converted-to.pdf Graphic fi
 le (type pdf)
 
 <use figures/eps/vio/mu/b8/e0.01/inf_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/mu/b8/e0.01/inf_dip_wovio-eps-converte
-d-to.pdf used on input line 557.
+d-to.pdf used on input line 580.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.1/n00004096_fin_d
 ip_wovio.eps>
@@ -1545,17 +1570,17 @@ ip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.1
 /n00004096_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.1/n00004
 096_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 557.
+(epstopdf)             \includegraphics on input line 580.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/vio/mu/b8/e0.1/n00004096_fin_dip_wovio-eps-converted-to.pdf, id=10
-19, 361.35pt x 252.945pt>
+<figures/eps/vio/mu/b8/e0.1/n00004096_fin_dip_wovio-eps-converted-to.pdf, id=11
+18, 361.35pt x 252.945pt>
 File: figures/eps/vio/mu/b8/e0.1/n00004096_fin_dip_wovio-eps-converted-to.pdf G
 raphic file (type pdf)
 
 <use figures/eps/vio/mu/b8/e0.1/n00004096_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/mu/b8/e0.1/n00004096_fin_dip_wovio-eps
--converted-to.pdf used on input line 557.
+-converted-to.pdf used on input line 580.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.1/n00040960_fin_d
 ip_wovio.eps>
@@ -1568,17 +1593,17 @@ ip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.1
 /n00040960_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.1/n00040
 960_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 557.
+(epstopdf)             \includegraphics on input line 580.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/vio/mu/b8/e0.1/n00040960_fin_dip_wovio-eps-converted-to.pdf, id=10
-20, 361.35pt x 252.945pt>
+<figures/eps/vio/mu/b8/e0.1/n00040960_fin_dip_wovio-eps-converted-to.pdf, id=11
+19, 361.35pt x 252.945pt>
 File: figures/eps/vio/mu/b8/e0.1/n00040960_fin_dip_wovio-eps-converted-to.pdf G
 raphic file (type pdf)
 
 <use figures/eps/vio/mu/b8/e0.1/n00040960_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/mu/b8/e0.1/n00040960_fin_dip_wovio-eps
--converted-to.pdf used on input line 557.
+-converted-to.pdf used on input line 580.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.1/n00081920_fin_d
 ip_wovio.eps>
@@ -1591,17 +1616,17 @@ ip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.1
 /n00081920_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.1/n00081
 920_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 557.
+(epstopdf)             \includegraphics on input line 580.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/vio/mu/b8/e0.1/n00081920_fin_dip_wovio-eps-converted-to.pdf, id=10
-21, 361.35pt x 252.945pt>
+<figures/eps/vio/mu/b8/e0.1/n00081920_fin_dip_wovio-eps-converted-to.pdf, id=11
+20, 361.35pt x 252.945pt>
 File: figures/eps/vio/mu/b8/e0.1/n00081920_fin_dip_wovio-eps-converted-to.pdf G
 raphic file (type pdf)
 
 <use figures/eps/vio/mu/b8/e0.1/n00081920_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/mu/b8/e0.1/n00081920_fin_dip_wovio-eps
--converted-to.pdf used on input line 557.
+-converted-to.pdf used on input line 580.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.e
 ps>
@@ -1614,17 +1639,17 @@ ps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.1
 /inf_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.ep
 s>
-(epstopdf)             \includegraphics on input line 557.
+(epstopdf)             \includegraphics on input line 580.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/vio/mu/b8/e0.1/inf_dip_wovio-eps-converted-to.pdf, id=1022, 361.35
+<figures/eps/vio/mu/b8/e0.1/inf_dip_wovio-eps-converted-to.pdf, id=1121, 361.35
 pt x 252.945pt>
 File: figures/eps/vio/mu/b8/e0.1/inf_dip_wovio-eps-converted-to.pdf Graphic fil
 e (type pdf)
 
 <use figures/eps/vio/mu/b8/e0.1/inf_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/mu/b8/e0.1/inf_dip_wovio-eps-converted
--to.pdf used on input line 557.
+-to.pdf used on input line 580.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.5/n00004096_fin_d
 ip_wovio.eps>
@@ -1637,17 +1662,17 @@ ip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.5
 /n00004096_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.5/n00004
 096_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 557.
+(epstopdf)             \includegraphics on input line 580.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/vio/mu/b8/e0.5/n00004096_fin_dip_wovio-eps-converted-to.pdf, id=10
-23, 361.35pt x 252.945pt>
+<figures/eps/vio/mu/b8/e0.5/n00004096_fin_dip_wovio-eps-converted-to.pdf, id=11
+22, 361.35pt x 252.945pt>
 File: figures/eps/vio/mu/b8/e0.5/n00004096_fin_dip_wovio-eps-converted-to.pdf G
 raphic file (type pdf)
 
 <use figures/eps/vio/mu/b8/e0.5/n00004096_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/mu/b8/e0.5/n00004096_fin_dip_wovio-eps
--converted-to.pdf used on input line 557.
+-converted-to.pdf used on input line 580.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.5/n00040960_fin_d
 ip_wovio.eps>
@@ -1660,17 +1685,17 @@ ip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.5
 /n00040960_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.5/n00040
 960_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 557.
+(epstopdf)             \includegraphics on input line 580.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/vio/mu/b8/e0.5/n00040960_fin_dip_wovio-eps-converted-to.pdf, id=10
-24, 361.35pt x 252.945pt>
+<figures/eps/vio/mu/b8/e0.5/n00040960_fin_dip_wovio-eps-converted-to.pdf, id=11
+23, 361.35pt x 252.945pt>
 File: figures/eps/vio/mu/b8/e0.5/n00040960_fin_dip_wovio-eps-converted-to.pdf G
 raphic file (type pdf)
 
 <use figures/eps/vio/mu/b8/e0.5/n00040960_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/mu/b8/e0.5/n00040960_fin_dip_wovio-eps
--converted-to.pdf used on input line 557.
+-converted-to.pdf used on input line 580.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.5/n00081920_fin_d
 ip_wovio.eps>
@@ -1683,17 +1708,17 @@ ip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.5
 /n00081920_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.5/n00081
 920_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 557.
+(epstopdf)             \includegraphics on input line 580.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/vio/mu/b8/e0.5/n00081920_fin_dip_wovio-eps-converted-to.pdf, id=10
-25, 361.35pt x 252.945pt>
+<figures/eps/vio/mu/b8/e0.5/n00081920_fin_dip_wovio-eps-converted-to.pdf, id=11
+24, 361.35pt x 252.945pt>
 File: figures/eps/vio/mu/b8/e0.5/n00081920_fin_dip_wovio-eps-converted-to.pdf G
 raphic file (type pdf)
 
 <use figures/eps/vio/mu/b8/e0.5/n00081920_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/mu/b8/e0.5/n00081920_fin_dip_wovio-eps
--converted-to.pdf used on input line 557.
+-converted-to.pdf used on input line 580.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.5/inf_dip_wovio.e
 ps>
@@ -1706,23 +1731,23 @@ ps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.5
 /inf_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.5/inf_dip_wovio.ep
 s>
-(epstopdf)             \includegraphics on input line 557.
+(epstopdf)             \includegraphics on input line 580.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/vio/mu/b8/e0.5/inf_dip_wovio-eps-converted-to.pdf, id=1026, 361.35
+<figures/eps/vio/mu/b8/e0.5/inf_dip_wovio-eps-converted-to.pdf, id=1125, 361.35
 pt x 252.945pt>
 File: figures/eps/vio/mu/b8/e0.5/inf_dip_wovio-eps-converted-to.pdf Graphic fil
 e (type pdf)
 
 <use figures/eps/vio/mu/b8/e0.5/inf_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/mu/b8/e0.5/inf_dip_wovio-eps-converted
--to.pdf used on input line 557.
+-to.pdf used on input line 580.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 
-Overfull \vbox (20.00955pt too high) detected at line 557
+Overfull \vbox (20.00955pt too high) detected at line 580
  []
 
-[33
+[36
 
  <./figures/eps/vio/mu/b8/e0.01/n00004096_fin_dip_wovio-eps-converted-to.pdf> <
 ./figures/eps/vio/mu/b8/e0.01/n00040960_fin_dip_wovio-eps-converted-to.pdf> <./
@@ -1735,13 +1760,13 @@ u/b8/e0.1/n00040960_fin_dip_wovio-eps-converted-to.pdf> <./figures/eps/vio/mu/b
 _fin_dip_wovio-eps-converted-to.pdf> <./figures/eps/vio/mu/b8/e0.5/n00040960_fi
 n_dip_wovio-eps-converted-to.pdf> <./figures/eps/vio/mu/b8/e0.5/n00081920_fin_d
 ip_wovio-eps-converted-to.pdf> <./figures/eps/vio/mu/b8/e0.5/inf_dip_wovio-eps-
-converted-to.pdf>] [34
+converted-to.pdf>] [37
 
-] [35
+] [38
 
-] [36
+] [39
 
-] [37
+] [40
 
 ]
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.01/n00004096_fin
@@ -1755,17 +1780,17 @@ _dip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 01/n00004096_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.01/n0
 0004096_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 641.
+(epstopdf)             \includegraphics on input line 664.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/eps/vio/chi/b8/e0.01/n00004096_fin_dip_wovio-eps-converted-to.pdf, id=
-1251, 361.35pt x 252.945pt>
+1350, 361.35pt x 252.945pt>
 File: figures/eps/vio/chi/b8/e0.01/n00004096_fin_dip_wovio-eps-converted-to.pdf
  Graphic file (type pdf)
 
 <use figures/eps/vio/chi/b8/e0.01/n00004096_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/chi/b8/e0.01/n00004096_fin_dip_wovio-e
-ps-converted-to.pdf used on input line 641.
+ps-converted-to.pdf used on input line 664.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.01/n00040960_fin
 _dip_wovio.eps>
@@ -1778,17 +1803,17 @@ _dip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 01/n00040960_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.01/n0
 0040960_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 641.
+(epstopdf)             \includegraphics on input line 664.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/eps/vio/chi/b8/e0.01/n00040960_fin_dip_wovio-eps-converted-to.pdf, id=
-1252, 361.35pt x 252.945pt>
+1351, 361.35pt x 252.945pt>
 File: figures/eps/vio/chi/b8/e0.01/n00040960_fin_dip_wovio-eps-converted-to.pdf
  Graphic file (type pdf)
 
 <use figures/eps/vio/chi/b8/e0.01/n00040960_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/chi/b8/e0.01/n00040960_fin_dip_wovio-e
-ps-converted-to.pdf used on input line 641.
+ps-converted-to.pdf used on input line 664.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.01/n00081920_fin
 _dip_wovio.eps>
@@ -1801,17 +1826,17 @@ _dip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 01/n00081920_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.01/n0
 0081920_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 641.
+(epstopdf)             \includegraphics on input line 664.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/eps/vio/chi/b8/e0.01/n00081920_fin_dip_wovio-eps-converted-to.pdf, id=
-1253, 361.35pt x 252.945pt>
+1352, 361.35pt x 252.945pt>
 File: figures/eps/vio/chi/b8/e0.01/n00081920_fin_dip_wovio-eps-converted-to.pdf
  Graphic file (type pdf)
 
 <use figures/eps/vio/chi/b8/e0.01/n00081920_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/chi/b8/e0.01/n00081920_fin_dip_wovio-e
-ps-converted-to.pdf used on input line 641.
+ps-converted-to.pdf used on input line 664.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.01/inf_dip_wovio
 .eps>
@@ -1824,17 +1849,17 @@ Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.01/inf_dip_wovio
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 01/inf_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.01/inf_dip_wovi
 o.eps>
-(epstopdf)             \includegraphics on input line 641.
+(epstopdf)             \includegraphics on input line 664.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/vio/chi/b8/e0.01/inf_dip_wovio-eps-converted-to.pdf, id=1254, 361.
+<figures/eps/vio/chi/b8/e0.01/inf_dip_wovio-eps-converted-to.pdf, id=1353, 361.
 35pt x 252.945pt>
 File: figures/eps/vio/chi/b8/e0.01/inf_dip_wovio-eps-converted-to.pdf Graphic f
 ile (type pdf)
 
 <use figures/eps/vio/chi/b8/e0.01/inf_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/chi/b8/e0.01/inf_dip_wovio-eps-convert
-ed-to.pdf used on input line 641.
+ed-to.pdf used on input line 664.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.1/n00004096_fin_
 dip_wovio.eps>
@@ -1847,17 +1872,17 @@ dip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 1/n00004096_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.1/n000
 04096_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 641.
+(epstopdf)             \includegraphics on input line 664.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/eps/vio/chi/b8/e0.1/n00004096_fin_dip_wovio-eps-converted-to.pdf, id=1
-255, 361.35pt x 252.945pt>
+354, 361.35pt x 252.945pt>
 File: figures/eps/vio/chi/b8/e0.1/n00004096_fin_dip_wovio-eps-converted-to.pdf 
 Graphic file (type pdf)
 
 <use figures/eps/vio/chi/b8/e0.1/n00004096_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/chi/b8/e0.1/n00004096_fin_dip_wovio-ep
-s-converted-to.pdf used on input line 641.
+s-converted-to.pdf used on input line 664.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.1/n00040960_fin_
 dip_wovio.eps>
@@ -1870,17 +1895,17 @@ dip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 1/n00040960_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.1/n000
 40960_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 641.
+(epstopdf)             \includegraphics on input line 664.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip_wovio-eps-converted-to.pdf, id=1
-256, 361.35pt x 252.945pt>
+355, 361.35pt x 252.945pt>
 File: figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip_wovio-eps-converted-to.pdf 
 Graphic file (type pdf)
 
 <use figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip_wovio-ep
-s-converted-to.pdf used on input line 641.
+s-converted-to.pdf used on input line 664.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.1/n00081920_fin_
 dip_wovio.eps>
@@ -1893,17 +1918,17 @@ dip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 1/n00081920_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.1/n000
 81920_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 641.
+(epstopdf)             \includegraphics on input line 664.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/eps/vio/chi/b8/e0.1/n00081920_fin_dip_wovio-eps-converted-to.pdf, id=1
-257, 361.35pt x 252.945pt>
+356, 361.35pt x 252.945pt>
 File: figures/eps/vio/chi/b8/e0.1/n00081920_fin_dip_wovio-eps-converted-to.pdf 
 Graphic file (type pdf)
 
 <use figures/eps/vio/chi/b8/e0.1/n00081920_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/chi/b8/e0.1/n00081920_fin_dip_wovio-ep
-s-converted-to.pdf used on input line 641.
+s-converted-to.pdf used on input line 664.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.1/inf_dip_wovio.
 eps>
@@ -1916,17 +1941,17 @@ eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 1/inf_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.1/inf_dip_wovio.
 eps>
-(epstopdf)             \includegraphics on input line 641.
+(epstopdf)             \includegraphics on input line 664.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/vio/chi/b8/e0.1/inf_dip_wovio-eps-converted-to.pdf, id=1258, 361.3
+<figures/eps/vio/chi/b8/e0.1/inf_dip_wovio-eps-converted-to.pdf, id=1357, 361.3
 5pt x 252.945pt>
 File: figures/eps/vio/chi/b8/e0.1/inf_dip_wovio-eps-converted-to.pdf Graphic fi
 le (type pdf)
 
 <use figures/eps/vio/chi/b8/e0.1/inf_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/chi/b8/e0.1/inf_dip_wovio-eps-converte
-d-to.pdf used on input line 641.
+d-to.pdf used on input line 664.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.5/n00004096_fin_
 dip_wovio.eps>
@@ -1939,17 +1964,17 @@ dip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 5/n00004096_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.5/n000
 04096_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 641.
+(epstopdf)             \includegraphics on input line 664.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/eps/vio/chi/b8/e0.5/n00004096_fin_dip_wovio-eps-converted-to.pdf, id=1
-259, 361.35pt x 252.945pt>
+358, 361.35pt x 252.945pt>
 File: figures/eps/vio/chi/b8/e0.5/n00004096_fin_dip_wovio-eps-converted-to.pdf 
 Graphic file (type pdf)
 
 <use figures/eps/vio/chi/b8/e0.5/n00004096_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/chi/b8/e0.5/n00004096_fin_dip_wovio-ep
-s-converted-to.pdf used on input line 641.
+s-converted-to.pdf used on input line 664.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.5/n00040960_fin_
 dip_wovio.eps>
@@ -1962,17 +1987,17 @@ dip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 5/n00040960_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.5/n000
 40960_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 641.
+(epstopdf)             \includegraphics on input line 664.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/eps/vio/chi/b8/e0.5/n00040960_fin_dip_wovio-eps-converted-to.pdf, id=1
-260, 361.35pt x 252.945pt>
+359, 361.35pt x 252.945pt>
 File: figures/eps/vio/chi/b8/e0.5/n00040960_fin_dip_wovio-eps-converted-to.pdf 
 Graphic file (type pdf)
 
 <use figures/eps/vio/chi/b8/e0.5/n00040960_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/chi/b8/e0.5/n00040960_fin_dip_wovio-ep
-s-converted-to.pdf used on input line 641.
+s-converted-to.pdf used on input line 664.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.5/n00081920_fin_
 dip_wovio.eps>
@@ -1985,17 +2010,17 @@ dip_wovio-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 5/n00081920_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.5/n000
 81920_fin_dip_wovio.eps>
-(epstopdf)             \includegraphics on input line 641.
+(epstopdf)             \includegraphics on input line 664.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/eps/vio/chi/b8/e0.5/n00081920_fin_dip_wovio-eps-converted-to.pdf, id=1
-261, 361.35pt x 252.945pt>
+360, 361.35pt x 252.945pt>
 File: figures/eps/vio/chi/b8/e0.5/n00081920_fin_dip_wovio-eps-converted-to.pdf 
 Graphic file (type pdf)
 
 <use figures/eps/vio/chi/b8/e0.5/n00081920_fin_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/chi/b8/e0.5/n00081920_fin_dip_wovio-ep
-s-converted-to.pdf used on input line 641.
+s-converted-to.pdf used on input line 664.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.5/inf_dip_wovio.
 eps>
@@ -2008,23 +2033,23 @@ eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 5/inf_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.5/inf_dip_wovio.
 eps>
-(epstopdf)             \includegraphics on input line 641.
+(epstopdf)             \includegraphics on input line 664.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/vio/chi/b8/e0.5/inf_dip_wovio-eps-converted-to.pdf, id=1262, 361.3
+<figures/eps/vio/chi/b8/e0.5/inf_dip_wovio-eps-converted-to.pdf, id=1361, 361.3
 5pt x 252.945pt>
 File: figures/eps/vio/chi/b8/e0.5/inf_dip_wovio-eps-converted-to.pdf Graphic fi
 le (type pdf)
 
 <use figures/eps/vio/chi/b8/e0.5/inf_dip_wovio-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/vio/chi/b8/e0.5/inf_dip_wovio-eps-converte
-d-to.pdf used on input line 641.
+d-to.pdf used on input line 664.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 
-Overfull \vbox (20.00955pt too high) detected at line 641
+Overfull \vbox (20.00955pt too high) detected at line 664
  []
 
-[38
+[41
 
  <./figures/eps/vio/chi/b8/e0.01/n00004096_fin_dip_wovio-eps-converted-to.pdf> 
 <./figures/eps/vio/chi/b8/e0.01/n00040960_fin_dip_wovio-eps-converted-to.pdf> <
@@ -2037,9 +2062,9 @@ chi/b8/e0.1/inf_dip_wovio-eps-converted-to.pdf> <./figures/eps/vio/chi/b8/e0.5/
 n00004096_fin_dip_wovio-eps-converted-to.pdf> <./figures/eps/vio/chi/b8/e0.5/n0
 0040960_fin_dip_wovio-eps-converted-to.pdf> <./figures/eps/vio/chi/b8/e0.5/n000
 81920_fin_dip_wovio-eps-converted-to.pdf> <./figures/eps/vio/chi/b8/e0.5/inf_di
-p_wovio-eps-converted-to.pdf>] [39
+p_wovio-eps-converted-to.pdf>] [42
 
-] [40
+] [43
 
 ]
 Package epstopdf Info: Source file: <figures/eps/pqz.eps>
@@ -2050,21 +2075,21 @@ Package epstopdf Info: Source file: <figures/eps/pqz.eps>
 (epstopdf)                    size: 13177 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/pqz-eps-conver
 ted-to.pdf figures/eps/pqz.eps>
-(epstopdf)             \includegraphics on input line 673.
+(epstopdf)             \includegraphics on input line 696.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/eps/pqz-eps-converted-to.pdf, id=1436, 537.00626pt x 283.0575pt>
+<figures/eps/pqz-eps-converted-to.pdf, id=1535, 537.00626pt x 283.0575pt>
 File: figures/eps/pqz-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/eps/pqz-eps-converted-to.pdf>
 Package pdftex.def Info: figures/eps/pqz-eps-converted-to.pdf used on input lin
-e 673.
+e 696.
 (pdftex.def)             Requested size: 537.00494pt x 283.0568pt.
- [41
+ [44
 
- <./figures/eps/pqz-eps-converted-to.pdf>] [42
+ <./figures/eps/pqz-eps-converted-to.pdf>] [45
 
-] [43
+] [46
 
 ]
 \tf@nav=\write6
@@ -2076,11 +2101,11 @@ e 673.
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 693.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 693.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 716.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 716.
  (./slides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 693.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 693.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 716.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 716.
 Package rerunfilecheck Info: File `slides.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -2091,13 +2116,13 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 693.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 716.
  ) 
 Here is how much of TeX's memory you used:
- 18388 strings out of 495028
- 340383 string characters out of 6181496
- 407744 words of memory out of 5000000
- 21023 multiletter control sequences out of 15000+600000
+ 18405 strings out of 495028
+ 340673 string characters out of 6181496
+ 406744 words of memory out of 5000000
+ 21033 multiletter control sequences out of 15000+600000
  28174 words of font info for 104 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,14n,53p,416b,550s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2119,10 +2144,10 @@ i8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on slides.pdf (43 pages, 728456 bytes).
+Output written on slides.pdf (46 pages, 923548 bytes).
 PDF statistics:
- 1601 PDF objects out of 1728 (max. 8388607)
- 1387 compressed objects within 14 object streams
- 87 named destinations out of 1000 (max. 500000)
- 258 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1701 PDF objects out of 1728 (max. 8388607)
+ 1464 compressed objects within 15 object streams
+ 93 named destinations out of 1000 (max. 500000)
+ 263 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -20,25 +20,34 @@ slides.pdf
 
  - Population can be represented by a vector p; where jth component is the proportion of string j in the population.
 
- - For example, when P is this, 3rd component of vector p is equal to 1/3
+ - For example, if P is this, 3rd component of vector p is equal to 1/3
+ 
+### 5
 
  - 'R' is the set of length 'l' binary strings and operations under 'R' are bitwise modulo 2 operations. Z is cardinality of R.
 
- - Here are examples of some operations under R
+ - Here are examples of some operations under R.
+ 
+ - This is addition, this is multiplication, and this is complement.
 
-### 5
- - Crossover and mutation operators are defined using the bitwise operations in R.
+### 6
+ - Crossover is mask based operator and is defined using the bitwise operations in R.
+
+ - The use of masks dates back to Geiringer, 1944
 
  - Crossover exchanges bits in parents u and v using crossover mask to produce children u' and v' using this.
  
  - Results depend on mask m and 1's in mask determines how exchange of bits in parents take place.
-
+ 
  - Here's an example. These parents crossover to produce these offspings.
  
- - In this example, for this offspring first two bits are from parent u and last two bits are from parent v and vice-versa in other offspring.
+ - In this example, since first two bits are 1 in the mask, for this offspring first two bits are from parent u and last two bits are from parent v and vice-versa in other offspring.
 
  - χ_m gives probability of using crossover mask m.
-
+ 
+### 7
+ - Mutation is also mask based operator and is defined using the bitwise operations in R.
+ 
  - Mutation flips bits in x using mutation mask m. Bits of x are flipped in position where mask m has bit 1.
 
  - Here's an example of mutation.
@@ -46,10 +55,9 @@ slides.pdf
  - In this example, fourth bit of x is flipped because fourth bit of m is 1.
 
  - μ_m gives probability of using mutation mask m
+ 
 
- - The use of masks dates back to Geiringer, 1944
-
-### 6
+### 8
   - This flowchart illustrates finite population genetic algorithm
  
   - We start from random initial population p.
@@ -61,8 +69,17 @@ slides.pdf
   - We keep one of u', v' and mutate using randomly chosen mutation mask to produce gamete g
  
   - We repeat above procedures to form next generation τ(p)
+  
+### 9
+ - This flowchart illustrates finite population genetic algorithm for diploids
  
-### 7
+ - Difference from haploids is that each diploid has two haploid components and they crossover and mutate to form a gamete g0.
+ 
+ - Another gamete g1 is produced from another parent diploid 
+ 
+ - Gametes g0 and g1 is combined to form offsping gamete 
+ 
+### 10
  - Random Heuristic Search generalizes simple genetic algorithm
  
  - Given population p, τ is transition rule that maps p to the next generation p’, where p and p both belong to population space Λ_N. 
@@ -73,7 +90,7 @@ slides.pdf
  - Finite population evolution (point to the sequence) sequence forms Markov chain
 
 
-### 8
+### 11
  - In infinite population model, population is modeled by vector p where p belongs to population space Λ. 
  
  - G is a function that maps p to the next generation p' where jth component is proportion of string j occurs in the next generation.
@@ -84,8 +101,8 @@ slides.pdf
  
  - The variance is of finite population in next generation is this.
 
-### 9
- - This is our model setup for diploid population.
+### 12
+ - This is our model setup for diploid population. It is infinite population model.
  
  - We consider diploid genome alpha with genome length l.
  
@@ -101,7 +118,7 @@ slides.pdf
  
  - This assumes panmixia i.e., parents mate randomly without bias.
 
-### 10
+### 13
  - Diploids can be determined in terms of haploid distributions.
  
  - Haploids can be determined in terms of diploid distributions.
@@ -110,29 +127,31 @@ slides.pdf
  
  - Square brackets here are Iverson brackets which returns 1 if expression inside is true and returns 0 when expression inside is false.
  
- - This transmission function is expensive to compute because there are 3 sum terms in it.
- 
  - In the matrix form, evolution equation can be expressed as p'_g = pT Mg p
  
  - Where matrix M(g) describes transmission funciton. If g = 0, we call it mixing matrix.
 
-### 11
+### 14
+ - It is mutation distribution we use.
  - Mu of i gives probability that i is used as mutation mask. Mu is mutation rate.
  
+ - It is crossover distribution we use.
  - Chi of i gives probability that i is used as crossover mask. Chi is crossover rate.
  
  - t of g is transmission function. This is expensive to compute because it has three sum terms in it.  
  
-### 12
+### 15
  - Component of walsh matrix W is given by this, Z = 2^l
  
- - Walsh transform of matrix A is given by this.
+ - Walsh transform of vector w is given by this. 
  
- - Walsh transform of vector w is given by this.
+ - Walsh transform of matrix A is given by this. 
  
  - Here's the algorithm of computing walsh transform.
  
- - Using this algorithm, walsh transform can be computed in O(ZlogZ)
+ - Using this algorithm, walsh transform of vector can be computed in O(ZlogZ)
+ 
+ - And for matrix, it takes O(Z^2 logZ)
 
 ### 13
  - Walsh transform of Mixing matrix M is given by the expression.
@@ -351,4 +370,3 @@ Part II
  - z_str lies inside these hyperplanes and also equidistant from p_str and q_str
  
  - Infinite population and finite haploid population also lie between these hyper planes but finite diploid population does not.
- 

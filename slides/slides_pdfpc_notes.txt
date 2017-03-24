@@ -20,26 +20,35 @@ slides.pdf
 
  - Population can be represented by a vector p; where jth component is the proportion of string j in the population.
 
- - For example, when P is this, 3rd component of vector p is equal to 1/3
+ - For example, if P is this, 3rd component of vector p is equal to 1/3
+ 
+### 5
 
  - 'R' is the set of length 'l' binary strings and operations under 'R' are bitwise modulo 2 operations. Z is cardinality of R.
 
- - Here are examples of some operations under R
+ - Here are examples of some operations under R.
+ 
+ - This is addition, this is multiplication, and this is complement.
 
-### 5
+### 6
  - Crossover and mutation operators are defined using the bitwise operations in R.
 
  - Crossover exchanges bits in parents u and v using crossover mask to produce children u' and v' using this.
+ 
+ - Results depend on mask m and 1's in mask determines how exchange of bits in parents take place.
 
  - Here's an example. These parents crossover to produce these offspings.
-
- - Results depend on mask m. 
+ 
+ - In this example, for this offspring first two bits are from parent u and last two bits are from parent v and vice-versa in other offspring.
 
  - χ_m gives probability of using crossover mask m.
-
- - Mutation flips bits in x using mutation mask m.
+ 
+### 7
+ - Mutation flips bits in x using mutation mask m. Bits of x are flipped in position where mask m has bit 1.
 
  - Here's an example of mutation.
+ 
+ - In this example, fourth bit of x is flipped because fourth bit of m is 1.
 
  - μ_m gives probability of using mutation mask m
 
@@ -338,7 +347,12 @@ Part II
  
 
 ### 41
-We noticed some unexpected behavior with oscillation in violation case. 
-Distance of infinite population to p_star and q_str appears to die out evenly to give a single line graph.
-And since infinite population is converging to z_str, it implies z_str is between p_str and q_str, and equidistant. 
-So we ran some simulations to test and it confirmed z_str is infact between and equidistant from p_str and q_str.
+ - We noticed some peculiar behavior with oscillation in violation case. 
+ 
+ - p_star and q_str are limits without violation and z_str is limit with violation.
+ 
+ - These dotted lines represent hyperplanes perpendicular to the line joining p_str and q_str. 
+ 
+ - z_str lies inside these hyperplanes and also equidistant from p_str and q_str
+ 
+ - Infinite population and finite haploid population also lie between these hyper planes but finite diploid population does not.

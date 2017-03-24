@@ -55,36 +55,54 @@
   \item Population is a collection of length $\ell$ binary strings 
   \item Population can be represented by a vector p; the $j$th component
       is the proportion of string j in the population.
-  \item For example, if P is this, 3rd component of vector p is equal to 1/3.
-    \item $\mathcal{R}$ is the set of length $\ell$ binary strings and operations under $\mathcal{R}$ are bitwise modulo 2 operations. $Z$ is cardinality of $\mathcal{R}$.
-    \item Here are examples of some operations under $\mathcal{R}$
+  \item For example, if P is this, 3rd component of vector p is equal to 1/3.    
+  \end{itemize}
+  
+\item
+  \begin{itemize}
+    \item $\mathcal{R}$ is the set of length $\ell$ binary strings and operations under $\mathcal{R}$ are bitwise modulo 2 operations. 
+    $Z$ is cardinality of $\mathcal{R}$.
+    \item Here are examples of some operations under $\mathcal{R}$. This is addition, this is multiplication, and this is complement.
   \end{itemize}
     
 \item
   \begin{itemize}
-  \item Crossover and mutation operators are defined using the
+  \item Crossover is mask based operator and is defined using the
     bitwise operations in $\mathcal{R}$.
+  \item The use of masks dates back to Geiringer, 1944  
   \item Crossover exchanges bits in parents u and v using crossover mask
   to produce children u' and v' using this
   \item Results depend on mask m and 1's in mask determines how exchange of bits in parents take place.
   \item Here's an example. These parents crossover to produce these offspings.
-  \item In this example, for this offspring first two bits are from parent u and last two bits are from parent v and vice-versa in other offspring.
+  \item In this example, since first two bits are 1 in the mask, for this offspring first two bits are from parent u and last two bits are from parent v and vice-versa in other offspring.
   \item $\bm{\chi}_m$ gives probability of using crossover mask m.
-  \item
+  \end{itemize}
+  
+\item
+  \begin{itemize}
+  \item Mutation is also mask based operator and is defined using the
+    bitwise operations in $\mathcal{R}$.
   \item Mutation flips bits in $x$ using mutation mask m. Bits of x are flipped in position where mask m has bit 1.
-  \item In this example, x mutates to this using this mask. In this example, fourth bit of x is flipped because fourth bit of m is 1.
+  \item In this example, fourth bit of x is flipped because fourth bit of m is 1.
   \item $\bm{\mu}_m$ gives probability of using mutation mask m
-  \item The use of masks dates back to Geiringer, 1944
   \end{itemize}
     
 \item
   \begin{itemize}
-  \item This flowchart illustrates finite population genetic algorithm
+  \item This flowchart illustrates finite population genetic algorithm for haploids
   \item We start from random initial population p.
   \item Then randomly select parents u and v, 
   \item And crossover to produce u' and v' according to randomly chosen crossover mask
   \item We keep one of u', v' and mutate using randomly chosen mutation mask to produce gamete g
   \item We repeat above procedures to form next generation $\tau(p)$
+  \end{itemize}
+  
+\item
+  \begin{itemize}
+  \item This flowchart illustrates finite population genetic algorithm for diploids
+  \item Difference from haploids is that each diploid has two haploid components and they crossover and mutate to form a gamete g0.
+  \item Another gamete g1 is produced from another parent diploid 
+  \item Gametes g0 and g1 is combined to form offsping gamete  
   \end{itemize}
   
 \item
@@ -115,7 +133,7 @@
     
 \item
   \begin{itemize}
-  \item This is our model setup for diploid population.
+  \item This is our model setup for diploid population. It is infinite population model.
   \item We consider diploid genome $\alpha$ with genome length l.
   \item Population is modeled by vector $q$
   \item $q_\alpha$ is prevalence of diploid $\alpha$
@@ -148,18 +166,18 @@
     
 \item
   \begin{itemize}
-  \item $\bm{\mu}$ of i gives probability that i is used as mutation mask. Mu is mutation rate.
-  \item $\bm{\chi}$ of i gives probability that i is used as crossover mask. Chi is crossover rate.
+  \item It is mutation distribution we use. $\bm{\mu}$ of i gives probability that i is used as mutation mask. Mu is mutation rate.
+  \item It is crossover  distribution we use. $\bm{\chi}$ of i gives probability that i is used as crossover mask. Chi is crossover rate.
   \item t of g is transmission function. This is expensive to compute because it has three sum terms in it.  
   \end{itemize}
     
 \item
   \begin{itemize}
   \item Component of walsh matrix W is given by this, Z = $2^\ell$
-  \item Walsh transform of matrix A is given by this. 
-    and Walsh transform of vector w is given by this.
+  \item Walsh transform of vector w is given by this. 
+    and Walsh transform of matrix A is given by this.
   \item Here's the algorithm of computing walsh transform.
-  \item Using this algorithm, walsh transform can be computed in O(ZlogZ)
+  \item Using this algorithm, walsh transform of vector can be computed in $O(Z \logZ)$ and for matrix, it takes $O(Z^2 \log Z)$
   \end{itemize}
   
 \item

@@ -153,12 +153,12 @@ slides.pdf
  
  - And for matrix, it takes O(Z^2 logZ)
 
-### 13
+### 16
  - Walsh transform of Mixing matrix M is given by the expression.
  
  - Evolution eqn in Walsh basis takes this form. p' is next generation
 
-### 14
+### 17
  - Now if we compare evolution eqn in Walsh basis to what we had before,
  
  - We have single sum in computing p' compared to double sum from matrix multiplication before. 
@@ -167,7 +167,7 @@ slides.pdf
  
  - Also calculating each mixing matrix in previous eqn required 3 sum terms, which is reduced to 1 sum term in walsh basis.   
 
-### 15
+### 18
  - So in summary, Reduction to haploid model and Walsh basis simplifiy computation, which otherwise for diploid case would have been impractical
  
  - Only one mixing matrix as opposed to 2^l is needed to compute next generation
@@ -176,11 +176,11 @@ slides.pdf
  
  - We think that is great optimization in resource
 
-### 16
+### 19
  - In the 2nd part of this presentation, I talk of distance between finite population and infinite population.
  
  - If f is finite population and q is infinite population,
- - With naive computation as shown, there would be 2^l · 2^l multiplication terms to be computed because alpha is diploid and has two components
+ - With naive computation as shown, there would be 2^l · 2^l multiplication terms to be computed because alpha is diploid and has two components of length l
  
  - We simplify computation as shown here where it needs only 2^l + cardinal value of Sf terms
  
@@ -190,10 +190,10 @@ slides.pdf
  
  - It represents the "Efficient" part in the thesis title.
   
-### 17
+### 20
 Part II
 
-### 18
+### 21
  - Our first question concerns about convergence of finite population to infinite population.
  
  - Chebyshev’s inequality, Jensen’s inequality and geometric point of view, all, suggest the distance might decrease as 1/ √N
@@ -202,7 +202,7 @@ Part II
  
  - We investigate if the distance infact can decrease like 1/ √N in practice.
  
-### 19
+### 22
  - We ran simulations with χ = 0.1 and μ = 0.001 
  
  - These graphs are in logarithmic scale.
@@ -211,49 +211,51 @@ Part II
  
  - The thing to notice about these graphs is how flat and planar they are. 
 
-### 20
+### 23
  - So we model the data by linear equation
  
  - Regression shows slope m is nearly equal to negative half (-1/2).
  
  - This proves distance does decrease as 1/√N
 
-### 21
+### 24
  - 1/ √N was theoretical upper bound but our simulaion shows it is really very good bound and the distance decreases as 1/ √N .
 
-### 22
+### 25
  - Our 2nd question concerns about oscillation in finite populations.
 
-### 23
- - The infinite population sequence p, G(p), G 2 (p), · · · may converge to a point, and we call that point a fixed point.
+### 26
+ - The infinite population sequence p, G(p), G^2 (p), · · · may converge to a point, and we call that point a fixed point.
  
- - But under certain conditions, the sequence converges to a periodic orbit between two fixed points, say p* and q*
+ - But under certain conditions, the sequence converges to a periodic orbit between two fixed points, say p_str and q_str
+ 
+ - p_str is fixed point to population in even time steps and q_str is fixed point to population in odd time steps
 
-### 24
+### 27
  - And the conditions are these:
  
  - Mutation distribution should satisfy this condition and crossover should satisfy this condition
  
  - We try to answer our 2nd question: that is can finite populations exhibit oscillations from random intial populations when infinite populations oscillate?
 
-### 25
+### 28
  - Few people have studied oscillations in the past: Akin 1981, Hasting 1982, Wright and Bidwell 1997, and Wright and Agapie 200-
 
-### 26
+### 29
  - Akin considers  - continuous time model, we consider  - discrete time model
  
  - Hastings’ study is limited to two bits length, includes only crossover, but no mutation; we consider both crossover and mutation
  
- - Wright and Bidwell compute specific set of parameter values; there was particular relation between crossover, mutation and population; we use random crossover, mutation and population.
+ - Wright and Bidwell compute specific set of parameter values; there was particular relation between crossover, mutation and population values; we use random crossover, mutation and population.
 
  - Wright and Agapie use dynamic mutation that depends upon where population is in the population space while we use static mutation
 
-### 27
+### 30
  - Simulations were run for both haploid and diploid populations
  
  - To visualize oscillations, distance to fixed points (p* , q*) are plotted
 
-### 28
+### 31
  - These are the results for haploid and diploid population of length 8
  
  - Top row shows results for haploid, bottom row for diploids
@@ -264,19 +266,19 @@ Part II
  
  - As population size increases, oscillation approaches the behavior exhibited by infinite population
 
-### 29
+### 32
  - So our answer to the 2nd question is
  
  - Yes, finite populations can exhibit approximate oscillation when infinite populations oscillate
 
-### 30
+### 33
  - Question 3 concerns the robustness of finite population oscillation under mutation-violation
  
  - By mutation-violation we mean, mutation distribuiton holding this condition.
  
  - This means no periodic orbits for infinite population
 
-### 31
+### 34
  - We introduce violation epsilon as following
  
  - The modification in μ makes the Markov chain regular
@@ -285,35 +287,33 @@ Part II
  
  - We study if finite population can exhibit approximate oscillations in that case
 
-### 32
+### 35
  - Simulations were run for different set of parameters
  
  - Distance of population to limits p_str and q_str without violation are plotted
 
-### 33
-  - These figures show results for diploid population behavior of string length 8
+### 36
+  - These figures show results for diploid population of string length 8 in case of mutation-violation
   
-  - Graphs are arranged in rows for increasing epsilon and columns for increasing population size
-  
-  - As population grows, finite population behavior converges to infinite population behavior 
+  - As population increases, finite population oscillation converges to infinite population oscillation
   
   - As epsilon increases, oscillation diminishes  
   
-  - Oscillation appears to diminishe with time, and in case of infinite population, oscillation dies out after some time.
+  - Oscillation appears to diminish with time, and in case of infinite population, oscillation dies out after some time.
   
   - Even though finite population also appears to be dying out, since Markov chain is regular, population must visit every population state infinitely.
   
   - So these population will reoccur and oscillate infinitely often (for = 0.1).
 
 
-### 34
+### 37
  - Our conclusions from this simulation are
  
  - Finite populations can exhibit approximate oscillation for mutation-violation when violation is small
  
  - If violation becomes larger, finite population oscillation decreases 
 
-### 35
+### 38
  - Our previous question concerns with the robustness of finite population oscillation under mutation-violation, 
  
  - our next question also concerns with the robustness of finite population but under crossover-violation
@@ -322,31 +322,31 @@ Part II
  
  - This means no periodic orbits for infinite population
 
-### 36
- -  We introduce violation epsilon in crossover-distribution
+### 39
+ - We introduce violation epsilon in crossover-distribution
  
  - We investigate if finite population can exhibit approximate oscillations in this case
 
-### 37
+### 40
  - Simulations were run for different parameter values
  
  - Distance of population to limits p_str and q_str without violation are plotted
  
  - However, we noticed that rate of damping of amplitudes of oscillation is slower than in mutation violation
 
-### 38
+### 41
  - Graphs show results for diploid population behavior of string length 8
  
  - Results show similar behavior to that of violation in mutation case
 
-### 39
+### 42
  - Conclusions from experiment on violation in crossover are
  
  - Finite populations can exhibit approximate oscillation if violation is small
  
  - If violation becomes larger, finite population oscillation can decrease
 
- ### 40
+ ### 43
  - Overall conclusions from this research are
  
  - Vose’s haploid model makes computation efficient in diploid case by reducing to haploid case
@@ -360,13 +360,15 @@ Part II
  - Finite populations can exhibit approximate oscillation for small crossover-violation
  
 
-### 41
+### 44
  - We noticed some peculiar behavior with oscillation in violation case. 
  
- - p_star and q_str are limits without violation and z_str is limit with violation.
+ - p_str and q_str are limits without violation and z_str is limit with violation.
  
  - These dotted lines represent hyperplanes perpendicular to the line joining p_str and q_str. 
  
- - z_str lies inside these hyperplanes and also equidistant from p_str and q_str
+ - Our checks show z_str lies inside these hyperplanes and also equidistant from p_str and q_str
  
- - Infinite population and finite haploid population also lie between these hyper planes but finite diploid population does not.
+ - In the checks we did for haploid case, infinite population and finite population both lay between these hyperplanes.
+ 
+ - In the checks we did for diploid case, infinite population lay between these hyperplanes but finite population did not.

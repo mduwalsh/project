@@ -177,7 +177,7 @@
   \item Walsh transform of vector w is given by this. 
     and Walsh transform of matrix A is given by this.
   \item Here's the algorithm of computing walsh transform.
-  \item Using this algorithm, walsh transform of vector can be computed in $O(Z \logZ)$ and for matrix, it takes $O(Z^2 \log Z)$
+  \item Using this algorithm, walsh transform of vector can be computed in $O(Z \log Z)$ and for matrix, it takes $O(Z^2 \log Z)$
   \end{itemize}
   
 \item
@@ -277,7 +277,8 @@
   \item The infinite population sequence  $\bm{p}, \, \mathcal{G}(\bm{p}), \, {\mathcal{G}}^2(\bm{p}), \, \cdots$ may
     converge to a point, and we call that point a fixed point.
   \item But under certain conditions, the sequence converges to a
-    periodic orbit between two fixed points, say p* and q*
+    periodic orbit between two fixed points, say $\bm{p}^\ast$ and $\bm{q}^\ast$
+    \item $\bm{p}^\ast$ is fixed point to population in even time steps and $\bm{q}^\ast$ is fixed point to population in odd time steps
 \end{itemize}
 
 \item
@@ -287,7 +288,7 @@
       -1 &=& \sum \limits_{j} (-1)^{g^T j} \bm{\mu}_j \\
       1 &=& \sum \limits_{k \in \bar{g}\mathcal{R}} \bm{\chi}_{k+g} + \bm{\chi}_k 
       \end{eqnarray*}
-  \item for mutation distribution to meet this condition 1 and for crossover  distribution to meet this condition 2.
+  \item Mutation distribution should satisfy this condition and crossover should satisfy this condition
   \item We try to answer our 2nd question through simulations; that is can finite populations exhibit
      oscillations from random intial populations when infinite populations oscillate?
   \end{itemize}
@@ -327,14 +328,14 @@
   \begin{itemize}
   \item Simulations were run for both haploid and diploid populations
 %   \item for different string lengths l and population sizes N
-  \item To visualize oscillations, distance to fixed points (p* , q*) are plotted
+  \item To visualize oscillations, distance to fixed points ($p^\ast , q^\ast$) are plotted
   \end{itemize}
     
 \item
   \begin{itemize}
   \item These are the results for haploid and diploid population of
     length 8
-   \item top row shows results for haploid, bottom row for diploids
+   \item top row is for haploid, bottom row for diploids
   \item Population size is in increasing order in columns
   \item In the figure, Green line is distance of population to $p^\ast$, red line is distance to $q^\ast$
   \item As population size increases, oscillation approaches the
@@ -373,8 +374,8 @@
   \begin{itemize}
   \item These figures show results for haploid population behavior of string length 8
   \item As population increases, finite population oscillation converges to infinite population oscillation
-  \item As value of $\epsilon$ grows, oscillation diminishes
-  \item Oscillation dies out for infinite population with time.
+  \item As $\epsilon$ increases, oscillation diminishes
+  \item Oscillation appears to diminish with time, and in case of infinite population, oscillation dies out after some time.
   \item Even though finite population also appears to be dying out, since Markov chain is regular, population must visit every population state infinitely. 
   So these population will reoccur and oscillate infinitely often (for = 0.1).  
   \end{itemize}
@@ -444,9 +445,12 @@
     
     \item These dotted lines represent hyperplanes perpendicular to the line joining $\bm{p}^\ast$ and $\bm{q}^\ast$. 
     
-    \item  $\bm{z}^\ast$ lies inside these hyperplanes and also equidistant from $\bm{p}^\ast$ and $\bm{q}^\ast$
-    
-    \item  Infinite population and finite haploid population also lie between these hyper planes but finite diploid population does not.
+    \item Our checks show $\bm{z}^\ast$ lies inside these hyperplanes and also equidistant from $\bm{p}^\ast$ and $\bm{q}^\ast$
+   
+    \item In the checks we did for haploid case, infinite population and finite population both lay between these hyperplanes.
+ 
+    \item In the checks we did for diploid case, infinite population lay between these hyperplanes but finite population did not.
+   
   \end{itemize}
   
 %   \item

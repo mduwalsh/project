@@ -43,7 +43,7 @@ slides.pdf
  
  - In this example, since first two bits are 1 in the mask, for this offspring first two bits are from parent u and last two bits are from parent v and vice-versa in other offspring.
 
- - χ_m gives probability of using crossover mask m.
+ - We denote probability of using crossover mask m by χ_m.
  
 ### 7
  - Mutation is also mask based operator and is defined using the bitwise operations in R.
@@ -54,7 +54,7 @@ slides.pdf
  
  - In this example, fourth bit of x is flipped because fourth bit of m is 1.
 
- - μ_m gives probability of using mutation mask m
+ - We denote probability of using mutation mask m by μ_m.
  
 
 ### 8
@@ -216,7 +216,7 @@ Part II
  
  - Regression shows slope m is nearly equal to negative half (-1/2).
  
- - This proves distance does decrease as 1/√N
+ - This proves distance can decrease as 1/√N
 
 ### 24
  - 1/ √N was theoretical upper bound but our simulaion shows it is really very good bound and the distance decreases as 1/ √N .
@@ -332,12 +332,13 @@ Part II
  
  - Distance of population to limits p_str and q_str without violation are plotted
  
- - However, we noticed that rate of damping of amplitudes of oscillation is slower than in mutation violation
-
+ 
 ### 41
  - Graphs show results for diploid population behavior of string length 8
  
  - Results show similar behavior to that of violation in mutation case
+ 
+ - However, we noticed that rate of damping of amplitudes of oscillation is slower than in mutation violation
 
 ### 42
  - Conclusions from experiment on violation in crossover are
@@ -363,7 +364,7 @@ Part II
 ### 44
  - We noticed some peculiar behavior with oscillation in violation case. 
  
- - p_str and q_str are limits without violation and z_str is limit with violation.
+ - Here in the figure, p_str and q_str are limits without violation and z_str is limit with violation.
  
  - These dotted lines represent hyperplanes perpendicular to the line joining p_str and q_str. 
  

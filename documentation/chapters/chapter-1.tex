@@ -56,8 +56,8 @@ the mutation rate.
 Figure \ref{FiniteGA} shows the procedural flow of a basic finite population genetic algorithm.
 \begin{figure}[H]
 \begin{center}
-\resizebox*{10cm}{!}{\includegraphics{figures/eps/GA.eps}}\hspace{4pt}
-\caption{\textbf{Finite GA} }
+\resizebox*{8cm}{!}{\includegraphics{figures/eps/GA.eps}}\hspace{4pt}
+\caption{\textbf{Finite GA (Haploid)} }
 \label{FiniteGA}
 \end{center}
 \end{figure}
@@ -65,7 +65,6 @@ Figure \ref{FiniteGA} shows the procedural flow of a basic finite population gen
 A simple Holland style genetic algorithm (see \cite{Holland1975}):
 
 \begin{algorithm}
-\label{realGA}
 \caption*{}
 \begin{algorithmic}[1]
 \Statex 1. Start with some initial population $P$ containing $r$ binary strings of length $\ell$.
@@ -76,10 +75,29 @@ A simple Holland style genetic algorithm (see \cite{Holland1975}):
 \Statex 3. If the next generation contains fewer than $r$ members, repeat step 2.
 \Statex 4. Replace $P$ by the new generation formed and go to step 2.
 \end{algorithmic}
+\label{RealGA}
 \end{algorithm}
 
 Each iteration of this process produces a generation. 
-The process described above is repeated until the system stops to improve or some threshold is met.
+The process described above is repeated until the system stops to improve or some threshold is met. 
+
+Figure \ref{FiniteGADip} illustrates 
+algorithm for finite diploid population genetic algorithm. 
+In case of diploid population GA each parent ($u$ or $v$) 
+has two haploid components ($\langle u_0, u_1 \rangle$ or $\langle v_0, v_1 \rangle$). 
+Instead of crossing over two parent diploids, 
+haploids in each diploid $u_0$ and $u_1$, and $v_0$ and $v_1$ 
+crossover and mutate to produce gametes $g_0$ and $g_1$ from  each diploid. 
+And gametes $g_0$ and $g_1$ are fused to form offspring diploid $ \langle g_0, g_1 \rangle $.
+
+\begin{figure}[H]
+\begin{center}
+\resizebox*{8cm}{!}{\includegraphics{figures/eps/GA_dip.eps}}\hspace{4pt}
+\caption{\textbf{Finite GA (Diploid)} }
+\label{FiniteGADip}
+\end{center}
+\end{figure}
+
 
 The infinite population GA models a population as a probability vector $\bm{p}$ where component $\bm{p}_j$ 
 can be interpreted as the proportion of string $j$ in the population. If $\mathcal{G}$ is the function mapping infinite population $\bm{p}$ to 

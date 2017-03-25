@@ -4,8 +4,16 @@ when the crossover distribution $\bm{\chi}$ and the mutation distribution $\bm{\
 satisfy condition \ref{OscCond}. This chapter explores the robustness of 
 finite population oscillation when condition \ref{OscCond} is violated for $\bm{\mu}$. 
 The violation of the condition \ref{OscCond} prevents 
-infinite population convergence to a periodic orbit.
-The violation in $\bm{\mu}$ also makes the Markov chain representing finite population evolution regular 
+infinite population convergence to a periodic orbit. 
+Violation of the condition \ref{OscCond} for $\bm{\mu}$, mutation-violation as we call it, 
+can numerically be expressed as:\newline  
+for any $g$,
+\begin{equation}
+\label{mu-violation}
+  -1 \neq \sum \limits_{j} (-1)^{g^T j} \bm{\mu}_j  
+\end{equation}
+Mutation-violation (described in next section) also makes 
+the Markov chain representing finite population evolution regular 
 (sometimes called ergodic). If the Markov chain is regular, 
 then positive steady state distribution exists for the Markov chain. 
 This means no finite population periodic orbit exists, 
@@ -17,10 +25,7 @@ have no periodic orbit?
 Error $\bm{\epsilon}$ is introduced into the mutation distribution $\bm{\mu}$ so as to 
 violate condition \ref{OscCond}; this guarantees that 
 infinite population trajectories have no periodic orbit. Consequently, $\bm{p}^\ast \;=\; \bm{q}^\ast \;=\; \bm{z}^\ast$. 
-Violation of condition \ref{OscCond} for the mutation distribution makes the Markov chain regular. The initial population is 
-computed using same procedure as described in section \ref{InitPopOsc}. To explore the effects of the degree  
-of violation of condition \ref{OscCond} in $\bm{\mu}$, different values of $\bm{\epsilon}$ are used in experiments. 
-String lengths $\ell \;\in\; \{8, 10, 12, 14\}$ are considered for simulation.
+Violation of condition \ref{OscCond} for the mutation distribution makes the Markov chain regular. 
 Going forward, we use `limit $\bm{z}^\ast$' to denote evolutionary limit when mutation distribution $\bm{\mu}$ 
 violates condition \ref{OscCond}, and 
 `non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$' to denote limits without violation (i.e., $\bm{\epsilon} \;=\; 0$).
@@ -46,6 +51,8 @@ Then set
 % \bm{\mu}_i = \bm{\epsilon}^2/c \; ; \; where \; \bm{\mu}_i = 0
 % \]
 The modified mutation distribution $\bm{\mu}$ is normalized such that  $\sum \bm{\mu}_i \;=\; 1$.
+The new $\bm{\mu}$ satisfies condition \ref{mu-violation}.
+
 The modification described above makes it possible for any population member to mutate to any other population member.
 % provided there is non crossover. From equation \ref{ChiDist}, $k \bar{g} \;=\; k$ is true for any $g$ when $k$ is all $0$s, 
 % and so we have positive non crossover probability present in all conditions. 
@@ -85,7 +92,11 @@ Because the Markov chain formed by GA after violation in $\bm{\mu}$ is irreducib
 the Markov chain is regular (see \cite{Iosifescu1980}), and a steady state distribution 
 with positive components exists for the GA (see \cite{Minc1988}).   
 
-Simulations were repeated with the violations in (\ref{OscCond}) described above for the mutation distribution.
+Simulations were repeated with the violations in (\ref{OscCond}) described above for the mutation distribution. 
+The initial population is 
+computed using same procedure as described in section \ref{InitPopOsc}. To explore the effects of the degree  
+of violation of condition \ref{OscCond} in $\bm{\mu}$, different values of $\bm{\epsilon}$ are used in experiments. 
+String lengths $\ell \;\in\; \{8, 10, 12, 14\}$ are considered for simulation.
 The distances of both infinite and finite populations to limit $\bm{z}^\ast$ were plotted. 
 The distances of both infinite and finite populations to non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$ were also plotted.
 

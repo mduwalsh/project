@@ -48,7 +48,7 @@ slides.pdf
 ### 7
  - Mutation is also mask based operator and is defined using the bitwise operations in R.
  
- - Mutation flips bits in x using mutation mask m. Bits of x are flipped in position where mask m has bit 1.
+ - Mutation flips bits in string x using mutation mask m. Bits of x are flipped in position where mask m has bit 1.
 
  - Here's an example of mutation.
  
@@ -80,14 +80,14 @@ slides.pdf
  - Gametes g0 and g1 is combined to form offsping gamete 
  
 ### 10
- - Random Heuristic Search generalizes simple genetic algorithm
+ - Random Heuristic Search is model by Vose that generalizes simple genetic algorithm
  
- - Given population p, τ is transition rule that maps p to the next generation p’, where p and p both belong to population space Λ_N. 
+ - Given population p, τ (tau) is transition rule that maps p to the next generation p’, where p and p both belong to population space Λ_N. 
  - N is population size.
  
- - However, τ is stochastic function of crossover and mutation, and can not be predicted with certainty
+ - However, τ (tau) is stochastic function of crossover and mutation, and can not be predicted with certainty
  
- - Finite population evolution (point to the sequence) sequence forms Markov chain
+ - This is Finite population evolution (point to the sequence) sequence which forms Markov chain
 
 
 ### 11
@@ -97,14 +97,14 @@ slides.pdf
  
  - The sequence shows evolution of p under infinite population model.
  
- - G gives the expectation of τ(p)
+ - G gives the expectation of τ(p) (tau of p)
  
  - The variance is of finite population in next generation is this.
 
 ### 12
  - This is our model setup for diploid population. It is infinite population model.
  
- - We consider diploid genome alpha with genome length l.
+ - We consider diploid genome alpha with each haploid of length l.
  
  - Population is modeled by vector q
  
@@ -112,7 +112,7 @@ slides.pdf
  
  - t_alpha(g) is transmission function which is probability of gamete g being produced from parent alpha
  
- - q' is next generation given p is current population
+ - q' is next generation given q is current population
  
  - This is the standard evolutionary model from population genetics. 
  
@@ -141,7 +141,7 @@ slides.pdf
  - t of g is transmission function. This is expensive to compute because it has three sum terms in it.  
  
 ### 15
- - Component of walsh matrix W is given by this, Z = 2^l
+ - Component of walsh matrix W is given by this, where Z = 2^l
  
  - Walsh transform of vector w is given by this. 
  
@@ -362,7 +362,7 @@ Part II
  
 
 ### 44
- - We noticed some peculiar behavior with oscillation in violation case. 
+ - These simulations uncovered new discovery regarding geometry of GA.
  
  - Here in the figure, p_str and q_str are limits without violation and z_str is limit with violation.
  
@@ -373,3 +373,5 @@ Part II
  - In the checks we did for haploid case, infinite population and finite population both lay between these hyperplanes.
  
  - In the checks we did for diploid case, infinite population lay between these hyperplanes but finite population did not.
+ 
+ - More detail about this could be part of our future investigation.

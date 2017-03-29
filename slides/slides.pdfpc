@@ -11,7 +11,9 @@ slides.pdf
 ### 2
 - I will give background, and computations involving our model in the simulations we did.
 
-- Then I will address these four questions, and make concluding remarks.
+- In 2nd part, I will address these four questions, and make concluding remarks.
+
+- Then I will touch on our future work briefly.
 
 ### 3
 
@@ -24,6 +26,8 @@ slides.pdf
  
 ### 5
 
+ - Bold 1 is column vector of all 1s
+
  - 'R' is the set of length 'l' binary strings and operations under 'R' are bitwise modulo 2 operations. Z is cardinality of R.
 
  - Here are examples of some operations under R.
@@ -35,7 +39,7 @@ slides.pdf
 
  - The use of masks dates back to Geiringer, 1944
 
- - Crossover exchanges bits in parents u and v using crossover mask to produce children u' and v' using this.
+ - Crossover exchanges bits in parents u and v using crossover mask to produce children u' and v' using this rule.
  
  - Results depend on mask m and 1's in mask determines how exchange of bits in parents take place.
  
@@ -82,7 +86,8 @@ slides.pdf
 ### 10
  - Random Heuristic Search is model by Vose that generalizes simple genetic algorithm
  
- - Given population p, τ (tau) is transition rule that maps p to the next generation p’, where p and p both belong to population space Λ_N. 
+ - Given population p, τ (tau) is transition rule that maps p to the next generation p’, where p and p' both belong to population space Λ_N. 
+ 
  - N is population size.
  
  - However, τ (tau) is stochastic function of crossover and mutation, and can not be predicted with certainty
@@ -125,7 +130,7 @@ slides.pdf
  
  - This expression gives evolution equation in terms of haploid distributions; p' is next generation
  
- - Square brackets here are Iverson brackets which returns 1 if expression inside is true and returns 0 when expression inside is false.
+ - Square brackets here are Iverson brackets that returns 1 if expression inside is true and returns 0 when expression inside is false.
  
  - In the matrix form, evolution equation can be expressed as p'_g = pT Mg p
  
@@ -147,7 +152,7 @@ slides.pdf
  
  - Walsh transform of matrix A is given by this. 
  
- - Here's the algorithm of computing walsh transform.
+ - Here's the algorithm of computing walsh transform of a vector.
  
  - Using this algorithm, walsh transform of vector can be computed in O(ZlogZ)
  
@@ -165,16 +170,14 @@ slides.pdf
  
  - We need only one mixing matrix compared to 2^l matrices for different g s.
  
- - Also calculating each mixing matrix in previous eqn required 3 sum terms, which is reduced to 1 sum term in walsh basis.   
+ - Also calculating each matrix's component in previous eqn required 3 sum terms, which is reduced to 1 sum term in walsh basis.   
 
 ### 18
  - So in summary, Reduction to haploid model and Walsh basis simplifiy computation, which otherwise for diploid case would have been impractical
  
  - Only one mixing matrix as opposed to 2^l is needed to compute next generation
  
- - Consider l = 14, 2^14 matrices would require 32 TB of memory, while one mixing matrix would require only 2 GB of memory
- 
- - We think that is great optimization in resource
+ - Consider l = 14, 2^14 matrices would require 32 TB of memory, while one mixing matrix would require only 2 GB of memory 
 
 ### 19
  - In the 2nd part of this presentation, I talk of distance between finite population and infinite population.
@@ -196,7 +199,11 @@ Part II
 ### 21
  - Our first question concerns about convergence of finite population to infinite population.
  
- - Chebyshev’s inequality, Jensen’s inequality and geometric point of view, all, suggest the distance might decrease as 1/ √N
+ - Chebyshev’s inequality suggests that perhaps distance between finite and infinite population might decrease as 1/ √N with probability approaching 1.
+ 
+ - Jensen’s inequality suggests the distance might decrease as 1/ √N
+ 
+ - Geometric point of view suggests that the closest distance between finite and infinite population is bounded by 1/ √N
  
  - But all of 3 implications are from inequalities. The distance might decrease much smaller than 1/ √N .
  
@@ -219,7 +226,7 @@ Part II
  - This proves distance can decrease as 1/√N
 
 ### 24
- - 1/ √N was theoretical upper bound but our simulaion shows it is really very good bound and the distance decreases as 1/ √N .
+ - 1/ √N was theoretical upper bound but our simulaion shows it is really very good bound and the distance can decrease as 1/ √N .
 
 ### 25
  - Our 2nd question concerns about oscillation in finite populations.
@@ -229,7 +236,7 @@ Part II
  
  - But under certain conditions, the sequence converges to a periodic orbit between two fixed points, say p_str and q_str
  
- - p_str is fixed point to population in even time steps and q_str is fixed point to population in odd time steps
+ - p_str is fixed point to population in even number of time steps and q_str is fixed point to population in odd number time steps
 
 ### 27
  - And the conditions are these:
@@ -262,7 +269,7 @@ Part II
  
  - Population size is in increasing order in columns, last column is for infinite population.
  
- - In the figure, Green line is distance of population to p_str, red line is distance to q_str
+ - In the figure, green line is distance of population to p_str, red line is distance to q_str
  
  - As population size increases, oscillation approaches the behavior exhibited by infinite population
 
@@ -276,7 +283,7 @@ Part II
  
  - By mutation-violation we mean, mutation distribuiton holding this condition.
  
- - This means no periodic orbits for infinite population
+ - This guarantees there are no periodic orbits for infinite population
 
 ### 34
  - We introduce violation epsilon as following
@@ -295,13 +302,14 @@ Part II
 ### 36
   - These figures show results for diploid population of string length 8 in case of mutation-violation
   
-  - As population increases, finite population oscillation converges to infinite population oscillation
-  
   - As epsilon increases, oscillation diminishes  
+  
+  - As population increases, finite population oscillation converges to infinite population oscillation    
   
   - Oscillation appears to diminish with time, and in case of infinite population, oscillation dies out after some time.
   
-  - Even though finite population also appears to be dying out, since Markov chain is regular, population must visit every population state infinitely.
+  - Even though finite population also appears to be dying out, it is not so. 
+    Since Markov chain is regular, population must visit every population state infinitely.
   
   - So these population will reoccur and oscillate infinitely often (for = 0.1).
 
@@ -318,9 +326,9 @@ Part II
  
  - our next question also concerns with the robustness of finite population but under crossover-violation
  
- - By crossover violation, we mean this condition holds.
+ - By crossover violation, we mean this condition holds for crossover distribution.
  
- - This means no periodic orbits for infinite population
+ - This guarantees there are no periodic orbits for infinite population
 
 ### 39
  - We introduce violation epsilon in crossover-distribution
@@ -360,8 +368,9 @@ Part II
  
  - Finite populations can exhibit approximate oscillation for small crossover-violation
  
-
 ### 44
+
+### 45
  - These simulations uncovered new discovery regarding geometry of GA.
  
  - Here in the figure, p_str and q_str are limits without violation and z_str is limit with violation.

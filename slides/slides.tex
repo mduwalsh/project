@@ -46,8 +46,13 @@
 	\item{Question 2: Finite population oscillation}
 	\item{Question 3: Finite population oscillation under mutation-violation}
 	\item{Question 4: Finite population oscillation under crossover-violation}
+	\item{Conclusion}
       \end{itemize}
-      \item{Conclusion}
+      
+      \item Part-III: Future Work 
+      \begin{itemize}
+	\item{}
+      \end{itemize}
     \end{itemize}
   \end{frame}
   
@@ -69,8 +74,11 @@
   \end{frame}
   
   \begin{frame}
-    \frametitle{$\mathcal{R}$}
+    \frametitle{$\bm{1} \;\&\; \mathcal{R}$}
     \begin{itemize}
+    \item{$\bm{1}$ is column vector of all $1$s of $\ell$ components, $\langle 1,1,\cdots,1 \rangle$}
+   
+    
     \item{$\mathcal{R}$ denotes the set of binary strings of length $\ell$
     \item $|\mathcal{R}| = Z = 2^\ell$ }
       
@@ -123,11 +131,9 @@
   \end{frame}
   
   \begin{frame}
-    \frametitle{Finite Population GA (Diploid)}
-       
-	  \centering
-	  \includegraphics[height=6cm, width=5cm]{figures/eps/GA_dip.eps}      
-    
+    \frametitle{Finite Population GA (Diploid)}       
+      \centering
+      \includegraphics[height=6cm, width=5cm]{figures/eps/GA_dip.eps}          
   \end{frame}
   
   \begin{frame}
@@ -230,7 +236,7 @@
   \end{frame}
     
   \begin{frame}
-    \frametitle{Computations in Walsh basis}
+    \frametitle{Computations in Walsh basis (Vose's Haploid Model)}
     \begin{itemize}
 	\item{Mixing matrix $M$ in Walsh basis 
 	\[
@@ -298,9 +304,9 @@
 	\]
       }      
       \item{Our implementation:
-      \[
-	      S_{\bm f} \; = \; \{ \alpha \, | \, {\bm f}_\alpha > 0 \}
-	      \]
+	\[
+	    S_{\bm f} \; = \; \{ \alpha \, | \, {\bm f}_\alpha > 0 \}
+	\]
       }
       \item{
 	\begin{equation*}
@@ -320,14 +326,20 @@
   
    \begin{frame}
     \frametitle{Question 1: Distance Between Finite and Infinite Population}
+    {\setstretch{0.7}
     \begin{itemize}
       \item{\mbox{}\\[-0.5 in] 
-      Chebyshev's inequality: \[ \| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \,\leq\, \frac{k}{\sqrt{N}} \] }
+      Chebyshev's inequality: suggests that perhaps
+      \[ 
+	\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \,\leq\, \frac{k}{\sqrt{N}}  \quad \text{with probability approaching 1}
+      \]       
+      }
       \item{Jensen's inequality: 
        \[ \mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \,\leq\, \frac{\sqrt{1 - \|\mathcal{G}(\bm{p})\|^2}}{\sqrt{N}}\]}
       \item{Geometric point of view: \[ \sup_{\bm{\xi} \in \Lambda} \; \inf_{\bm{p} \in \Lambda_N} \|\bm{\xi} - \bm{p}\| \;=\; O(1/\sqrt{N}) \] 	
       }      
     \end{itemize}
+    }
       %\mbox{}\\[0.25 in]
     Can the distance decrease in practice like $1/\sqrt{N}$ ?
   \end{frame}
@@ -383,8 +395,7 @@
   \begin{frame}
     \frametitle{Convergence: Conclusion}
     \begin{itemize}
-      \item Can the distance between finite and infinite population decrease like $1/\sqrt{N}$ ?
-      \item Yes
+      \item The distance between finite and infinite population can decrease like $1/\sqrt{N}$    
     \end{itemize}
   \end{frame}
   
@@ -508,7 +519,7 @@
     \begin{itemize}
       \item{Oscillation Under Mutation-Violation}
       \item{
-      For any $g$,
+      For all $g$,
 	\[
 	  -1 \neq \sum \limits_{j} (-1)^{g^T j} \bm{\mu}_j      
 	\]
@@ -595,7 +606,7 @@
     \frametitle{Question 4}
     \begin{itemize}
       \item{Oscillation under Crossover-Violation}      
-      \item For any $g$,
+      \item For all $g$,
       \[	
 	1 \neq \sum \limits_{k \in \bar{g}\mathcal{R}} \bm{\chi}_{k+g} + \bm{\chi}_k 
       \]
@@ -679,11 +690,18 @@
     \frametitle{Conclusion}
     \begin{itemize}
       \setlength\itemsep{1em}
-      \item{Vose's haploid model makes computation efficient in diploid case by reducing to haploid case} 
+      \item{By reducing to haploid case, Vose's haploid model makes computation efficient in diploid case} 
       \item{Distance between finite population and infinite population can decrease like $1/\sqrt{N}$}
       \item{When infinite populations oscillate, finite populations can exhibit approximate oscillation}
       \item{Finite populations can exhibit approximate oscillation for small mutation-violation}
       \item{Finite populations can exhibit approximate oscillation for small crossover-violation}      
+    \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{}
+    \begin{itemize}
+     \item Part-III: Future Work
     \end{itemize}
   \end{frame}
   

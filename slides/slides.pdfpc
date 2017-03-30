@@ -77,11 +77,11 @@ slides.pdf
 ### 9
  - This flowchart illustrates finite population genetic algorithm for diploids
  
- - Difference from haploids is that each diploid has two haploid components and they crossover and mutate to form a gamete g0.
+ - Difference from haploids is that each diploid has two haploid components and they crossover and mutate to form a gamete, let's say gamete g0.
  
  - Another gamete g1 is produced from another parent diploid 
  
- - Gametes g0 and g1 is combined to form offsping gamete 
+ - Gametes g0 and g1 is combined to form offsping diploid  
  
 ### 10
  - Random Heuristic Search is model by Vose that generalizes simple genetic algorithm
@@ -239,7 +239,7 @@ Part II
  - p_str is fixed point to population in even number of time steps and q_str is fixed point to population in odd number time steps
 
 ### 27
- - And the conditions are these:
+ - These are the conditions: For some g,
  
  - Mutation distribution should satisfy this condition and crossover should satisfy this condition
  
@@ -251,6 +251,7 @@ Part II
 ### 29
  - Akin considers  - continuous time model, we consider  - discrete time model
  
+
  - Hastings’ study is limited to 2 bits length, includes only crossover, but no mutation; In contrast, We go up to 14 bits in our simulation, we consider both crossover and mutation
  
  - Wright and Bidwell compute specific set of parameter values; there was particular relation between crossover, mutation and population values; we use random crossover, random mutation and random population.
@@ -377,7 +378,7 @@ Part II
  
  - These dotted lines represent hyperplanes perpendicular to the line joining p_str and q_str. 
  
- - Our checks show z_str lies inside these hyperplanes and also equidistant from p_str and q_str
+ - Our checks show z_str lies between these hyperplanes and also equidistant from p_str and q_str
  
  - In the checks we did for haploid case, infinite population and finite population both lay between these hyperplanes.
  

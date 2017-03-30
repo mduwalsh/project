@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.18)  28 MAR 2017 13:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.3.7)  29 MAR 2017 13:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **slides.tex
 (./slides.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (/usr/share/texmf/tex/latex/beamer/base/beamer.cls
 (/usr/share/texmf/tex/latex/beamer/base/beamerbasercs.sty
 Package: beamerbasercs 2012/11/13 (rcs-revision cb16a617839f)
@@ -1019,10 +1019,10 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
 
 ]
 Package epstopdf Info: Source file: <figures/eps/GA.eps>
-(epstopdf)                    date: 2017-03-06 12:21:02
+(epstopdf)                    date: 2017-03-07 02:12:54
 (epstopdf)                    size: 140588 bytes
 (epstopdf)             Output file: <figures/eps/GA-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:29:37
 (epstopdf)                    size: 122791 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/GA-eps-convert
 ed-to.pdf figures/eps/GA.eps>
@@ -1045,10 +1045,10 @@ Overfull \hbox (22.76006pt too wide) in paragraph at lines 131--131
 
  <./figures/eps/GA-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/eps/GA_dip.eps>
-(epstopdf)                    date: 2017-03-23 17:42:16
+(epstopdf)                    date: 2017-03-24 00:06:32
 (epstopdf)                    size: 216931 bytes
 (epstopdf)             Output file: <figures/eps/GA_dip-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-23 21:51:21
+(epstopdf)                    date: 2017-03-24 00:06:32
 (epstopdf)                    size: 194169 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/GA_dip-eps-con
 verted-to.pdf figures/eps/GA_dip.eps>
@@ -1076,10 +1076,10 @@ line 137.
 
 ]
 Package epstopdf Info: Source file: <figures/eps/fwt.eps>
-(epstopdf)                    date: 2017-03-17 00:10:51
+(epstopdf)                    date: 2017-03-17 13:07:14
 (epstopdf)                    size: 85960 bytes
 (epstopdf)             Output file: <figures/eps/fwt-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-17 00:13:13
+(epstopdf)                    date: 2017-03-17 13:07:14
 (epstopdf)                    size: 90988 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/fwt-eps-conver
 ted-to.pdf figures/eps/fwt.eps>
@@ -1109,10 +1109,10 @@ e 236.
 
 ]
 Package epstopdf Info: Source file: <figures/eps/surf/b4.eps>
-(epstopdf)                    date: 2015-11-10 17:37:03
+(epstopdf)                    date: 2017-02-28 19:44:49
 (epstopdf)                    size: 47830 bytes
 (epstopdf)             Output file: <figures/eps/surf/b4-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:29:45
 (epstopdf)                    size: 23762 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/surf/b4-eps-co
 nverted-to.pdf figures/eps/surf/b4.eps>
@@ -1127,10 +1127,10 @@ Package pdftex.def Info: figures/eps/surf/b4-eps-converted-to.pdf used on input
  line 371.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/surf/b6.eps>
-(epstopdf)                    date: 2015-11-10 17:37:03
+(epstopdf)                    date: 2017-02-28 19:44:49
 (epstopdf)                    size: 47846 bytes
 (epstopdf)             Output file: <figures/eps/surf/b6-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:29:48
 (epstopdf)                    size: 23631 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/surf/b6-eps-co
 nverted-to.pdf figures/eps/surf/b6.eps>
@@ -1145,10 +1145,10 @@ Package pdftex.def Info: figures/eps/surf/b6-eps-converted-to.pdf used on input
  line 371.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/surf/b8.eps>
-(epstopdf)                    date: 2015-11-10 17:37:03
+(epstopdf)                    date: 2017-02-28 19:44:49
 (epstopdf)                    size: 47849 bytes
 (epstopdf)             Output file: <figures/eps/surf/b8-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:29:51
 (epstopdf)                    size: 23254 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/surf/b8-eps-co
 nverted-to.pdf figures/eps/surf/b8.eps>
@@ -1163,11 +1163,11 @@ Package pdftex.def Info: figures/eps/surf/b8-eps-converted-to.pdf used on input
  line 371.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/surf/b10.eps>
-(epstopdf)                    date: 2015-11-10 17:37:03
+(epstopdf)                    date: 2017-02-28 19:44:49
 (epstopdf)                    size: 47859 bytes
 (epstopdf)             Output file: <figures/eps/surf/b10-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:29:53
 (epstopdf)                    size: 23130 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/surf/b10-eps-c
 onverted-to.pdf figures/eps/surf/b10.eps>
@@ -1182,11 +1182,11 @@ Package pdftex.def Info: figures/eps/surf/b10-eps-converted-to.pdf used on inpu
 t line 371.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/surf/b12.eps>
-(epstopdf)                    date: 2015-11-10 17:37:03
+(epstopdf)                    date: 2017-02-28 19:44:49
 (epstopdf)                    size: 47857 bytes
 (epstopdf)             Output file: <figures/eps/surf/b12-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:29:56
 (epstopdf)                    size: 22979 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/surf/b12-eps-c
 onverted-to.pdf figures/eps/surf/b12.eps>
@@ -1201,11 +1201,11 @@ Package pdftex.def Info: figures/eps/surf/b12-eps-converted-to.pdf used on inpu
 t line 371.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/surf/b14.eps>
-(epstopdf)                    date: 2015-11-10 17:37:03
+(epstopdf)                    date: 2017-02-28 19:44:49
 (epstopdf)                    size: 47857 bytes
 (epstopdf)             Output file: <figures/eps/surf/b14-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:29:59
 (epstopdf)                    size: 22986 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/surf/b14-eps-c
 onverted-to.pdf figures/eps/surf/b14.eps>
@@ -1230,10 +1230,10 @@ ted-to.pdf> <./figures/eps/surf/b8-eps-converted-to.pdf> <./figures/eps/surf/b1
 0-eps-converted-to.pdf> <./figures/eps/surf/b12-eps-converted-to.pdf> <./figure
 s/eps/surf/b14-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/eps/slope/m.eps>
-(epstopdf)                    date: 2015-11-10 17:37:17
+(epstopdf)                    date: 2017-02-28 19:44:49
 (epstopdf)                    size: 28497 bytes
 (epstopdf)             Output file: <figures/eps/slope/m-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:30:02
 (epstopdf)                    size: 11243 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/slope/m-eps-co
 nverted-to.pdf figures/eps/slope/m.eps>
@@ -1248,10 +1248,10 @@ Package pdftex.def Info: figures/eps/slope/m-eps-converted-to.pdf used on input
  line 393.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/slope/b.eps>
-(epstopdf)                    date: 2015-11-10 17:37:17
+(epstopdf)                    date: 2017-02-28 19:44:49
 (epstopdf)                    size: 29099 bytes
 (epstopdf)             Output file: <figures/eps/slope/b-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:30:04
 (epstopdf)                    size: 12958 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/slope/b-eps-co
 nverted-to.pdf figures/eps/slope/b.eps>
@@ -1286,11 +1286,11 @@ ted-to.pdf>] [24
 ]
 Package epstopdf Info: Source file: <figures/eps/osc/b8/n004096_osc_fin_hap.eps
 >
-(epstopdf)                    date: 2016-11-17 09:07:12
+(epstopdf)                    date: 2017-02-28 19:44:49
 (epstopdf)                    size: 21797 bytes
 (epstopdf)             Output file: <figures/eps/osc/b8/n004096_osc_fin_hap-eps
 -converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:30:06
 (epstopdf)                    size: 8212 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/osc/b8/n004096
 _osc_fin_hap-eps-converted-to.pdf figures/eps/osc/b8/n004096_osc_fin_hap.eps>
@@ -1307,11 +1307,11 @@ o.pdf used on input line 507.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/osc/b8/n040960_osc_fin_hap.eps
 >
-(epstopdf)                    date: 2016-11-17 09:07:12
+(epstopdf)                    date: 2017-02-28 19:44:49
 (epstopdf)                    size: 21795 bytes
 (epstopdf)             Output file: <figures/eps/osc/b8/n040960_osc_fin_hap-eps
 -converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:30:06
 (epstopdf)                    size: 8206 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/osc/b8/n040960
 _osc_fin_hap-eps-converted-to.pdf figures/eps/osc/b8/n040960_osc_fin_hap.eps>
@@ -1328,11 +1328,11 @@ o.pdf used on input line 507.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/osc/b8/n081920_osc_fin_hap.eps
 >
-(epstopdf)                    date: 2016-11-17 09:07:12
+(epstopdf)                    date: 2017-02-28 19:44:49
 (epstopdf)                    size: 21795 bytes
 (epstopdf)             Output file: <figures/eps/osc/b8/n081920_osc_fin_hap-eps
 -converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:30:07
 (epstopdf)                    size: 8087 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/osc/b8/n081920
 _osc_fin_hap-eps-converted-to.pdf figures/eps/osc/b8/n081920_osc_fin_hap.eps>
@@ -1348,11 +1348,11 @@ Package pdftex.def Info: figures/eps/osc/b8/n081920_osc_fin_hap-eps-converted-t
 o.pdf used on input line 507.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/osc/b8/osc_inf_hap.eps>
-(epstopdf)                    date: 2016-11-17 09:07:12
+(epstopdf)                    date: 2017-02-28 19:44:49
 (epstopdf)                    size: 21772 bytes
 (epstopdf)             Output file: <figures/eps/osc/b8/osc_inf_hap-eps-convert
 ed-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:30:08
 (epstopdf)                    size: 7825 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/osc/b8/osc_inf
 _hap-eps-converted-to.pdf figures/eps/osc/b8/osc_inf_hap.eps>
@@ -1369,11 +1369,11 @@ ed on input line 507.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/osc/b8/n004096_osc_fin_dip.eps
 >
-(epstopdf)                    date: 2016-11-17 09:07:12
+(epstopdf)                    date: 2017-02-28 19:44:49
 (epstopdf)                    size: 22243 bytes
 (epstopdf)             Output file: <figures/eps/osc/b8/n004096_osc_fin_dip-eps
 -converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:30:09
 (epstopdf)                    size: 8125 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/osc/b8/n004096
 _osc_fin_dip-eps-converted-to.pdf figures/eps/osc/b8/n004096_osc_fin_dip.eps>
@@ -1390,11 +1390,11 @@ o.pdf used on input line 507.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/osc/b8/n040960_osc_fin_dip.eps
 >
-(epstopdf)                    date: 2016-11-17 09:07:12
+(epstopdf)                    date: 2017-02-28 19:44:49
 (epstopdf)                    size: 21955 bytes
 (epstopdf)             Output file: <figures/eps/osc/b8/n040960_osc_fin_dip-eps
 -converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:30:10
 (epstopdf)                    size: 8015 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/osc/b8/n040960
 _osc_fin_dip-eps-converted-to.pdf figures/eps/osc/b8/n040960_osc_fin_dip.eps>
@@ -1411,11 +1411,11 @@ o.pdf used on input line 507.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/osc/b8/n081920_osc_fin_dip.eps
 >
-(epstopdf)                    date: 2016-11-17 09:07:12
+(epstopdf)                    date: 2017-02-28 19:44:49
 (epstopdf)                    size: 22249 bytes
 (epstopdf)             Output file: <figures/eps/osc/b8/n081920_osc_fin_dip-eps
 -converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:30:11
 (epstopdf)                    size: 8105 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/osc/b8/n081920
 _osc_fin_dip-eps-converted-to.pdf figures/eps/osc/b8/n081920_osc_fin_dip.eps>
@@ -1431,11 +1431,11 @@ Package pdftex.def Info: figures/eps/osc/b8/n081920_osc_fin_dip-eps-converted-t
 o.pdf used on input line 507.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/osc/b8/osc_inf_dip.eps>
-(epstopdf)                    date: 2016-11-17 09:07:12
+(epstopdf)                    date: 2017-02-28 19:44:49
 (epstopdf)                    size: 21632 bytes
 (epstopdf)             Output file: <figures/eps/osc/b8/osc_inf_dip-eps-convert
 ed-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:30:12
 (epstopdf)                    size: 7594 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/osc/b8/osc_inf
 _dip-eps-converted-to.pdf figures/eps/osc/b8/osc_inf_dip.eps>
@@ -1469,11 +1469,11 @@ figures/eps/osc/b8/n040960_osc_fin_dip-eps-converted-to.pdf> <./figures/eps/osc
 ]
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.01/n00004096_fin_
 dip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 12:53:45
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 21940 bytes
 (epstopdf)             Output file: <figures/eps/vio/mu/b8/e0.01/n00004096_fin_
 dip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:22
 (epstopdf)                    size: 7948 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.0
 1/n00004096_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.01/n000
@@ -1492,11 +1492,11 @@ s-converted-to.pdf used on input line 593.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.01/n00040960_fin_
 dip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 12:53:45
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 21847 bytes
 (epstopdf)             Output file: <figures/eps/vio/mu/b8/e0.01/n00040960_fin_
 dip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:22
 (epstopdf)                    size: 7884 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.0
 1/n00040960_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.01/n000
@@ -1515,11 +1515,11 @@ s-converted-to.pdf used on input line 593.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.01/n00081920_fin_
 dip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 12:53:45
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 22298 bytes
 (epstopdf)             Output file: <figures/eps/vio/mu/b8/e0.01/n00081920_fin_
 dip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:23
 (epstopdf)                    size: 7991 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.0
 1/n00081920_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.01/n000
@@ -1538,11 +1538,11 @@ s-converted-to.pdf used on input line 593.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.01/inf_dip_wovio.
 eps>
-(epstopdf)                    date: 2016-11-23 12:53:45
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 21677 bytes
 (epstopdf)             Output file: <figures/eps/vio/mu/b8/e0.01/inf_dip_wovio-
 eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:24
 (epstopdf)                    size: 7625 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.0
 1/inf_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.01/inf_dip_wovio.
@@ -1561,11 +1561,11 @@ d-to.pdf used on input line 593.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.1/n00004096_fin_d
 ip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 12:53:46
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 21902 bytes
 (epstopdf)             Output file: <figures/eps/vio/mu/b8/e0.1/n00004096_fin_d
 ip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:25
 (epstopdf)                    size: 7935 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.1
 /n00004096_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.1/n00004
@@ -1584,11 +1584,11 @@ Package pdftex.def Info: figures/eps/vio/mu/b8/e0.1/n00004096_fin_dip_wovio-eps
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.1/n00040960_fin_d
 ip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 12:53:46
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 22339 bytes
 (epstopdf)             Output file: <figures/eps/vio/mu/b8/e0.1/n00040960_fin_d
 ip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:26
 (epstopdf)                    size: 7929 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.1
 /n00040960_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.1/n00040
@@ -1607,11 +1607,11 @@ Package pdftex.def Info: figures/eps/vio/mu/b8/e0.1/n00040960_fin_dip_wovio-eps
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.1/n00081920_fin_d
 ip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 12:53:46
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 21861 bytes
 (epstopdf)             Output file: <figures/eps/vio/mu/b8/e0.1/n00081920_fin_d
 ip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:27
 (epstopdf)                    size: 7907 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.1
 /n00081920_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.1/n00081
@@ -1630,11 +1630,11 @@ Package pdftex.def Info: figures/eps/vio/mu/b8/e0.1/n00081920_fin_dip_wovio-eps
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.e
 ps>
-(epstopdf)                    date: 2016-11-23 12:53:45
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 22211 bytes
 (epstopdf)             Output file: <figures/eps/vio/mu/b8/e0.1/inf_dip_wovio-e
 ps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:28
 (epstopdf)                    size: 7730 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.1
 /inf_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.ep
@@ -1653,11 +1653,11 @@ Package pdftex.def Info: figures/eps/vio/mu/b8/e0.1/inf_dip_wovio-eps-converted
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.5/n00004096_fin_d
 ip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 12:53:46
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 21622 bytes
 (epstopdf)             Output file: <figures/eps/vio/mu/b8/e0.5/n00004096_fin_d
 ip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:29
 (epstopdf)                    size: 7890 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.5
 /n00004096_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.5/n00004
@@ -1676,11 +1676,11 @@ Package pdftex.def Info: figures/eps/vio/mu/b8/e0.5/n00004096_fin_dip_wovio-eps
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.5/n00040960_fin_d
 ip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 12:53:46
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 21714 bytes
 (epstopdf)             Output file: <figures/eps/vio/mu/b8/e0.5/n00040960_fin_d
 ip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:30
 (epstopdf)                    size: 7829 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.5
 /n00040960_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.5/n00040
@@ -1699,11 +1699,11 @@ Package pdftex.def Info: figures/eps/vio/mu/b8/e0.5/n00040960_fin_dip_wovio-eps
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.5/n00081920_fin_d
 ip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 12:53:46
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 21950 bytes
 (epstopdf)             Output file: <figures/eps/vio/mu/b8/e0.5/n00081920_fin_d
 ip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:31
 (epstopdf)                    size: 7902 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.5
 /n00081920_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.5/n00081
@@ -1722,11 +1722,11 @@ Package pdftex.def Info: figures/eps/vio/mu/b8/e0.5/n00081920_fin_dip_wovio-eps
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/mu/b8/e0.5/inf_dip_wovio.e
 ps>
-(epstopdf)                    date: 2016-11-23 12:53:46
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 21664 bytes
 (epstopdf)             Output file: <figures/eps/vio/mu/b8/e0.5/inf_dip_wovio-e
 ps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:31
 (epstopdf)                    size: 7316 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/mu/b8/e0.5
 /inf_dip_wovio-eps-converted-to.pdf figures/eps/vio/mu/b8/e0.5/inf_dip_wovio.ep
@@ -1771,11 +1771,11 @@ converted-to.pdf>] [37
 ]
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.01/n00004096_fin
 _dip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 13:35:24
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 22276 bytes
 (epstopdf)             Output file: <figures/eps/vio/chi/b8/e0.01/n00004096_fin
 _dip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:32
 (epstopdf)                    size: 8008 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 01/n00004096_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.01/n0
@@ -1794,11 +1794,11 @@ ps-converted-to.pdf used on input line 677.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.01/n00040960_fin
 _dip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 13:35:24
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 22150 bytes
 (epstopdf)             Output file: <figures/eps/vio/chi/b8/e0.01/n00040960_fin
 _dip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:33
 (epstopdf)                    size: 7979 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 01/n00040960_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.01/n0
@@ -1817,11 +1817,11 @@ ps-converted-to.pdf used on input line 677.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.01/n00081920_fin
 _dip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 13:35:24
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 22592 bytes
 (epstopdf)             Output file: <figures/eps/vio/chi/b8/e0.01/n00081920_fin
 _dip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:34
 (epstopdf)                    size: 8035 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 01/n00081920_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.01/n0
@@ -1840,11 +1840,11 @@ ps-converted-to.pdf used on input line 677.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.01/inf_dip_wovio
 .eps>
-(epstopdf)                    date: 2016-11-23 13:35:24
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 21823 bytes
 (epstopdf)             Output file: <figures/eps/vio/chi/b8/e0.01/inf_dip_wovio
 -eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:35
 (epstopdf)                    size: 7656 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 01/inf_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.01/inf_dip_wovi
@@ -1863,11 +1863,11 @@ ed-to.pdf used on input line 677.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.1/n00004096_fin_
 dip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 13:35:24
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 21926 bytes
 (epstopdf)             Output file: <figures/eps/vio/chi/b8/e0.1/n00004096_fin_
 dip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:36
 (epstopdf)                    size: 7939 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 1/n00004096_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.1/n000
@@ -1886,11 +1886,11 @@ s-converted-to.pdf used on input line 677.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.1/n00040960_fin_
 dip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 13:35:24
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 22057 bytes
 (epstopdf)             Output file: <figures/eps/vio/chi/b8/e0.1/n00040960_fin_
 dip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:37
 (epstopdf)                    size: 7960 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 1/n00040960_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.1/n000
@@ -1909,11 +1909,11 @@ s-converted-to.pdf used on input line 677.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.1/n00081920_fin_
 dip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 13:35:24
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 22179 bytes
 (epstopdf)             Output file: <figures/eps/vio/chi/b8/e0.1/n00081920_fin_
 dip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:38
 (epstopdf)                    size: 7962 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 1/n00081920_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.1/n000
@@ -1932,11 +1932,11 @@ s-converted-to.pdf used on input line 677.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.1/inf_dip_wovio.
 eps>
-(epstopdf)                    date: 2016-11-23 13:35:24
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 21711 bytes
 (epstopdf)             Output file: <figures/eps/vio/chi/b8/e0.1/inf_dip_wovio-
 eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:39
 (epstopdf)                    size: 7634 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 1/inf_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.1/inf_dip_wovio.
@@ -1955,11 +1955,11 @@ d-to.pdf used on input line 677.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.5/n00004096_fin_
 dip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 13:35:24
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 21773 bytes
 (epstopdf)             Output file: <figures/eps/vio/chi/b8/e0.5/n00004096_fin_
 dip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:40
 (epstopdf)                    size: 7910 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 5/n00004096_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.5/n000
@@ -1978,11 +1978,11 @@ s-converted-to.pdf used on input line 677.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.5/n00040960_fin_
 dip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 13:35:24
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 22027 bytes
 (epstopdf)             Output file: <figures/eps/vio/chi/b8/e0.5/n00040960_fin_
 dip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:40
 (epstopdf)                    size: 7889 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 5/n00040960_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.5/n000
@@ -2001,11 +2001,11 @@ s-converted-to.pdf used on input line 677.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.5/n00081920_fin_
 dip_wovio.eps>
-(epstopdf)                    date: 2016-11-23 13:35:24
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 22437 bytes
 (epstopdf)             Output file: <figures/eps/vio/chi/b8/e0.5/n00081920_fin_
 dip_wovio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:41
 (epstopdf)                    size: 8002 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 5/n00081920_fin_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.5/n000
@@ -2024,11 +2024,11 @@ s-converted-to.pdf used on input line 677.
 (pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
 Package epstopdf Info: Source file: <figures/eps/vio/chi/b8/e0.5/inf_dip_wovio.
 eps>
-(epstopdf)                    date: 2016-11-23 13:35:24
+(epstopdf)                    date: 2017-02-28 19:44:50
 (epstopdf)                    size: 21822 bytes
 (epstopdf)             Output file: <figures/eps/vio/chi/b8/e0.5/inf_dip_wovio-
 eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-15 09:30:15
+(epstopdf)                    date: 2017-03-14 20:31:42
 (epstopdf)                    size: 7407 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/vio/chi/b8/e0.
 5/inf_dip_wovio-eps-converted-to.pdf figures/eps/vio/chi/b8/e0.5/inf_dip_wovio.
@@ -2070,10 +2070,10 @@ p_wovio-eps-converted-to.pdf>] [42
 
 ]
 Package epstopdf Info: Source file: <figures/eps/pqz.eps>
-(epstopdf)                    date: 2017-03-22 10:07:06
+(epstopdf)                    date: 2017-03-22 12:59:22
 (epstopdf)                    size: 17398 bytes
 (epstopdf)             Output file: <figures/eps/pqz-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-22 10:36:28
+(epstopdf)                    date: 2017-03-22 12:59:22
 (epstopdf)                    size: 13177 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/eps/pqz-eps-conver
 ted-to.pdf figures/eps/pqz.eps>
@@ -2121,12 +2121,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 736.
  ) 
 Here is how much of TeX's memory you used:
- 18409 strings out of 495028
- 340708 string characters out of 6181496
- 406744 words of memory out of 5000000
- 21035 multiletter control sequences out of 15000+600000
+ 18409 strings out of 493304
+ 340708 string characters out of 6139872
+ 411030 words of memory out of 5000000
+ 21284 multiletter control sequences out of 15000+600000
  28174 words of font info for 104 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
+ 957 hyphenation exceptions out of 8191
  49i,14n,53p,416b,550s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr

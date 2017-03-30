@@ -246,14 +246,14 @@ Part II
  - We try to answer our 2nd question: that is can finite populations exhibit oscillations from random intial populations when infinite populations oscillate?
 
 ### 28
- - Few people have studied oscillations in the past: Akin 1981, Hasting 1982, Wright and Bidwell 1997, and Wright and Agapie 200-
+ - Few people have studied oscillations in the past: Akin 1982, Hasting 1981, Wright and Bidwell 1997, and Wright and Agapie 2001
 
 ### 29
  - Akin considers  - continuous time model, we consider  - discrete time model
  
- - Hastings’ study is limited to two bits length, includes only crossover, but no mutation; we consider both crossover and mutation
+ - Hastings’ study is limited to 2 bits length, includes only crossover, but no mutation; In contrast, We go up to 14 bits in our simulation, we consider both crossover and mutation
  
- - Wright and Bidwell compute specific set of parameter values; there was particular relation between crossover, mutation and population values; we use random crossover, mutation and population.
+ - Wright and Bidwell compute specific set of parameter values; there was particular relation between crossover, mutation and population values; we use random crossover, random mutation and random population.
 
  - Wright and Agapie use dynamic mutation that depends upon where population is in the population space while we use static mutation
 

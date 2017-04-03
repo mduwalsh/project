@@ -18,7 +18,7 @@ slides.pdf
 ### 3
 
 ### 4
- - Population is a collection of length 'l' binary strings 
+ - Population big P is a collection of length 'l' binary strings 
 
  - Population can be represented by a vector p; where jth component is the proportion of string j in the population.
 
@@ -41,9 +41,9 @@ slides.pdf
 
  - Crossover exchanges bits in parents u and v using crossover mask to produce children u' and v' using this rule.
  
- - Results depend on mask m and 1's in mask determines how exchange of bits in parents take place.
+ - Results depend on mask m and bit 1's in mask determines how exchange of bits in parents take place.
  
- - Here's an example. These parents crossover to produce these offspings.
+ - Here's an example. These parents crossover to produce these offsprings.
  
  - In this example, since first two bits are 1 in the mask, for this offspring first two bits are from parent u and last two bits are from parent v and vice-versa in other offspring.
 
@@ -64,7 +64,7 @@ slides.pdf
 ### 8
   - This flowchart illustrates finite population genetic algorithm
  
-  - We start from random initial population p.
+  - We start from population p.
  
   - Then randomly select parents u and v,
  
@@ -128,9 +128,9 @@ slides.pdf
  
  - Haploids can be determined in terms of diploid distributions.
  
- - This expression gives evolution equation in terms of haploid distributions; p' is next generation
+ - Square brackets here are Iverson brackets that returns 1 if expression inside is true and returns 0 when expression inside is false.  
  
- - Square brackets here are Iverson brackets that returns 1 if expression inside is true and returns 0 when expression inside is false.
+ - This expression gives evolution equation in terms of haploid distributions; p' is next generation
  
  - In the matrix form, evolution equation can be expressed as p'_g = pT Mg p
  

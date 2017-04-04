@@ -47,5 +47,4 @@
 \contentsline {section}{\numberline {5.2}Discussion}{120}{section.5.2}
 \contentsline {section}{\numberline {5.3}Summary}{122}{section.5.3}
 \contentsline {chapter}{\numberline {6}Conclusion}{124}{chapter.6}
-\contentsline {chapter}{Bibliography}{126}{section*.99}
-\contentsline {chapter}{Vita}{131}{section*.101}
+\contentsline {chapter}{Vita}{129}{section*.100}

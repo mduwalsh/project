@@ -186,9 +186,9 @@
         \vfill
 		\Large \rm
         \ifnum\@documentID=\thesisID {
-            A Thesis Presented for
-
-            The \@degree
+            A Thesis Presented for the 
+            
+            \@degree
         } \else {
             A Dissertation
 

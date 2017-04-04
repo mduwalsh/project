@@ -788,9 +788,55 @@
     This suggests the distance between $\tau(\bm{p})$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$
   \end{frame}
   
+  \begin{frame}
+    \frametitle{Computation of $\bm{p}^\ast$ and ${\bm q}^\ast$ }
+    \begin{itemize}
+      \item
+      $\bm{p}^\ast = \lim_{n \rightarrow \infty} \mathcal{M}^{2n}({\bm p})$ $\quad \quad$
+      ${\bm q}^\ast = \lim_{n \rightarrow \infty} \mathcal{M}^{2n+1}({\bm q})$
+      \item
+      Let $S_g = g \mathcal{R} \setminus \{\textbf{0}, g\} $,  $|g|$ be the number of non zero bits in $g$, and
+      \[
+      x_g = 2\widehat{\mathcal{M}}_{g,0},  \hspace*{1cm} y_g(z) = 2^{\ell /2} \sum_{i \in S_g} z_i z_{i+g} \widehat{\mathcal{M}}_{i,i+g}.
+      \]
+      \item
+      Moreover, 
+      \begin{eqnarray*}
+      |g| \;=\; 1 \nudge & \Longrightarrow & y_g = 0 \\
+      |g| \;>\; 0 \nudge & \Longrightarrow & |x_g| \leq 1 \\
+      |x_g| \;=\; 1 \nudge & \Longrightarrow & y_g = 0
+      \end{eqnarray*}
+   \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Computation of $\bm{p}^\ast$ and ${\bm q}^\ast$ continued... }
+    \begin{itemize}
+    \item
+    The limits in the Walsh basis in form of recursive equations 
+    \[   
+    \widehat{{\bm p}^{\ast}}_g  = \begin{cases}
+	(x_g y_g(\widehat{{\bm p}^{\ast}}) + y_g(\widehat{{\bm q}^{\ast}}))/(1-x_g^2)  & \text{if $|x_g| < 0$}\\
+	\widehat{p}_g  & \text{otherwise}
+      \end{cases}
+    \]
+    \[
+    \widehat{{\bm q}^{\ast}}_g  = \begin{cases}
+	(x_g y_g(\widehat{{\bm q}^{\ast}}) + y_g(\widehat{{\bm p}^{\ast}}))/(1-x_g^2)  & \text{if $|x_g| < 0$}\\
+	\widehat{\mathcal{M}({\bm p})_g}  & \text{otherwise}
+      \end{cases}
+    \]
+    
+    \item
+    Limits $\widehat{{\bm p}^{\ast}}_g$ and $\widehat{{\bm q}^{\ast}_g}$ can be computed considering $g$th components in order of increasing $|g|$.
+
+
+    
+    \end{itemize}
+  \end{frame}
+  
 \end{document}
 
- 
   
   
 %   \begin{frame}

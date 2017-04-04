@@ -214,7 +214,6 @@ The distance between finite population and infinite population, for both haploid
 \clearpage
 \subsection{Haploid Population}
 \input{chapters/oscillation_hap.tex}
-\clearpage
 
 Figures \ref{oscillation_8h}, \ref{oscillation_10h}, \ref{oscillation_12h} and
 \ref{oscillation_14h} show oscillations in finite haploid populations, and distances 
@@ -262,9 +261,8 @@ Results from table \ref{tableDistanceOscHap} show average distance between finit
 the expected single step distance. The distance decreases as $1/\sqrt{N}$.
 
 % diploids
-\subsection{Diploid Population}
-\input{chapters/oscillation_dip.tex}
 \clearpage
+\subsection{Diploid Population}
 
 \textbf{ Figures} \ref{oscillation_8d}, \ref{oscillation_10d}, \ref{oscillation_12d} 
 and \ref{oscillation_14d} show oscillations in finite diploid populations, and distances 
@@ -287,7 +285,13 @@ For fixed finite population size, as $\ell$ increases, the distance graphs becom
 
 Distance data obtained from simulations for diploid populations are summarized in table \ref{tableDistanceOscDip}, 
 which tabulates average distance between finite and infinite populations. 
-\begin{table}[h]
+
+Results from table \ref{tableDistanceOscDip} show average distance between finite and infinite population closely follows 
+the expected single step distance. The distance decreases as $1/\sqrt{N}$.
+
+\input{chapters/oscillation_dip.tex}
+\clearpage
+\begin{table}[!h]
 \caption[\textbf{Distance measured for diploid population}]{\textbf{Distance measured for diploid population:} $N$ is population size, $\ell$ is genome length, 
 average distance between finite and infinite population is tabulated in the last three columns, and last row is expected single step distance.}
 \centering
@@ -305,9 +309,6 @@ $1/\sqrt{N}$ & 0.0156 & 0.0049 & 0.0035 \\
 \end{tabularx}
 \label{tableDistanceOscDip}
 \end{table}
-
-Results from table \ref{tableDistanceOscDip} show average distance between finite and infinite population closely follows 
-the expected single step distance. The distance decreases as $1/\sqrt{N}$.
 
 \section{Discussion}
 For same genome length $\ell$ and same size finite populations, graph showing distance between finite diploid population and infinite population is 
@@ -339,7 +340,6 @@ So for longer genome length $\ell$, larger population size is needed to observe 
 \resizebox{7.5cm}{5cm}{\includegraphics{figures/eps/osc/b12/b12_n004096_osc_fin_dip_lvl.eps}}} 
 \subfloat[]{\label{fig:osc_14d_N4096}
 \resizebox{7.5cm}{5cm}{\includegraphics{figures/eps/osc/b14/b14_n004096_osc_fin_dip_lvl.eps}}} \vspace{-0.5em} 
-
 \caption{\textbf{Finite diploid population oscillation for $\ell = 12 \;\&\; 14$ and $N = 4096$}}
 \label{oscillation_12d_14d_N4096}
 \end{center}
@@ -360,9 +360,8 @@ But when population size is large, finite populations intend to follow the infin
 and infinite population tends to 
 converge to a single fixed point or oscillate between two fixed points, hence  
 larger populations have lower tendency to jump between different levels.
-\clearpage
 
-\begin{figure}[htp]
+\begin{figure}[h]
 \begin{center}
 \subfloat{
 \resizebox{8cm}{5cm}{\includegraphics{figures/eps/osc/b14/b14_n004096_osc_fin_dip_10_50.eps}}} \hspace{-3em}%
@@ -370,7 +369,6 @@ larger populations have lower tendency to jump between different levels.
 \label{oscillation_14d_N4096}
 \end{center}
 \end{figure}
-
 
 \section{Summary}
 In this chapter, we described infinite population limits predicted by Vose, and conditions 

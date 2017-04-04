@@ -137,20 +137,22 @@ slides.pdf
  - Where matrix M(g) describes transmission funciton. If g = 0, we call it mixing matrix.
 
 ### 14
- - It is mutation distribution we use.
- - Mu of i gives probability that i is used as mutation mask. Mu is mutation rate.
+ - This is mutation distribution we use.
+ - Mu of i gives probability that i is used as mutation mask. Skinny Mu is mutation rate.
  
- - It is crossover distribution we use.
- - Chi of i gives probability that i is used as crossover mask. Chi is crossover rate.
+ - This is crossover distribution we use.
+ - Chi of i gives probability that i is used as crossover mask. Skinny Chi is crossover rate.
  
  - t of g is transmission function. This is expensive to compute because it has three sum terms in it.  
  
 ### 15
+ - So we like to compute in Walsh basis.
+
  - Component of walsh matrix W is given by this, where Z = 2^l
  
- - Walsh transform of vector w is given by this. 
+ - hat(w) is Walsh transform of vector w and is given by this. 
  
- - Walsh transform of matrix A is given by this. 
+ - hat(A) is Walsh transform of matrix A and is given by this. 
  
  - Here's the algorithm of computing walsh transform of a vector.
  
@@ -223,10 +225,10 @@ Part II
  
  - Regression shows slope m is nearly equal to negative half (-1/2).
  
- - This proves distance can decrease as 1/√N
+ - This shows distance can decrease as 1/√N
 
 ### 24
- - 1/ √N was theoretical upper bound but our simulaion shows it is really very good bound and the distance can decrease as 1/ √N .
+ - 1/ √N was theoretical upper bound but our simulation shows it is really very good bound and the distance can decrease as 1/ √N .
 
 ### 25
  - Our 2nd question concerns about oscillation in finite populations.
@@ -249,8 +251,7 @@ Part II
  - Few people have studied oscillations in the past: Akin 1982, Hasting 1981, Wright and Bidwell 1997, and Wright and Agapie 2001
 
 ### 29
- - Akin considers  - continuous time model, we consider  - discrete time model
- 
+ - Akin considers  - continuous time model, we consider  - discrete time model 
 
  - Hastings’ study is limited to 2 bits length, includes only crossover, but no mutation; In contrast, We go up to 14 bits in our simulation, we consider both crossover and mutation
  
@@ -264,7 +265,7 @@ Part II
  - To visualize oscillations, distance to fixed points (p* , q*) are plotted
 
 ### 31
- - These are the results for haploid and diploid population of length 8
+ - These are the results for haploid and diploid population of length 8 which shows occurrence of oscillation in finite populations.
  
  - Top row shows results for haploid, bottom row for diploids
  
@@ -282,7 +283,7 @@ Part II
 ### 33
  - Question 3 concerns the robustness of finite population oscillation under mutation-violation
  
- - By mutation-violation we mean, mutation distribuiton holding this condition.
+ - By mutation-violation we mean, mutation distribution holding this condition.
  
  - This guarantees there are no periodic orbits for infinite population
 
@@ -365,7 +366,7 @@ Part II
  
  - When infinite populations oscillate, finite populations can exhibit approximate oscillation
  
- - Finite populations can exhibit approximate oscillation for small violation
+ - Finite populations can exhibit approximate oscillation for small mutatio-violation
  
  - Finite populations can exhibit approximate oscillation for small crossover-violation
  
@@ -384,4 +385,6 @@ Part II
  
  - In the checks we did for diploid case, infinite population lay between these hyperplanes but finite population did not.
  
- - More detail about this could be part of our future investigation.
+ - More detail about this could be part of our future investigation,
+ 
+ - Perhaps there are other geometic properties of GA that could be discovered by simulations.

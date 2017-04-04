@@ -731,63 +731,68 @@
       \item{}
     \end{itemize}
   \end{frame}
+  
+  
+  
+  
  
+  \begin{frame}
+    \frametitle{Chebyshev's Inequality}
+    \begin{itemize}
+      \item{Let $\epsilon = f(r)/\sqrt{r}$, where $f(r)$ grows arbitrarily slowly such that 
+	\[
+	\lim_{r \to \infty} f(r)  =  \infty
+	\]
+	and 
+	\[
+	\lim_{r \to \infty} f(r)/\sqrt{r}  =  0.
+	\]
+      }
+      \item{From Chebyshev's inequality,
+	\[
+	  \lim_{r \to \infty} P(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \geq \epsilon) \; \leq \; 
+	  \lim_{r \to \infty}\frac{1 - \|\mathcal{G}(\bm{p}\|^2} {{f(r)}^2} \; = \; 0
+	\]
+      }      
+    \end{itemize}
+    This suggests the distance between $\tau(\bm{p})$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Jensen's Inequality}
+    \begin{itemize}
+      \item{Let $\eta$ be the random variable $\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \|$, and convex function be $\phi (x) = x^2$}
+      \item{Then from Jensen's Inequality, 
+	\[
+	  \mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \|) \;=\; \mathcal{E}(\eta) \leq \sqrt{\mathcal{E}(\eta^2)} \;=\; 
+	  \frac{\sqrt{1 - \|\mathcal{G}(\bm{p})\|^2}}{\sqrt{\bm{r}}}
+	\]
+      }
+    \end{itemize}
+    This also suggests the distance might decrease as $1/\sqrt{r}$
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Population Points }
+    \begin{columns}
+      \column{0.40\linewidth}
+	\centering
+	\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/tetra_popn.eps}}
+      \column{0.66\linewidth}
+	\begin{itemize}
+	  \item{Finite populations are represented by dots}
+	  \item{Infinite population can be any where in the space}
+	  \item{Distance between a finite population and an infinite population is  $O(1/\sqrt{r})$}
+	\end{itemize}
+    \end{columns}
+    This suggests the distance between $\tau(\bm{p})$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$
+  \end{frame}
   
 \end{document}
 
-%  
-%   \begin{frame}
-%     \frametitle{Chebyshev's Inequality}
-%     \begin{itemize}
-%       \item{Let $\epsilon = f(r)/\sqrt{r}$, where $f(r)$ grows arbitrarily slowly such that 
-% 	\[
-% 	\lim_{r \to \infty} f(r)  =  \infty
-% 	\]
-% 	and 
-% 	\[
-% 	\lim_{r \to \infty} f(r)/\sqrt{r}  =  0.
-% 	\]
-%       }
-%       \item{From Chebyshev's inequality,
-% 	\[
-% 	  \lim_{r \to \infty} P(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \| \geq \epsilon) \; \leq \; 
-% 	  \lim_{r \to \infty}\frac{1 - \|\mathcal{G}(\bm{p}\|^2} {{f(r)}^2} \; = \; 0
-% 	\]
-%       }      
-%     \end{itemize}
-%     This suggests the distance between $\tau(\bm{p})$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$
-%   \end{frame}
-%   
-%   \begin{frame}
-%     \frametitle{Jensen's Inequality}
-%     \begin{itemize}
-%       \item{Let $\eta$ be the random variable $\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \|$, and convex function be $\phi (x) = x^2$}
-%       \item{Then from Jensen's Inequality, 
-% 	\[
-% 	  \mathcal{E}(\| \tau (\bm{p}) - \mathcal{G}(\bm{p}) \|) \;=\; \mathcal{E}(\eta) \leq \sqrt{\mathcal{E}(\eta^2)} \;=\; 
-% 	  \frac{\sqrt{1 - \|\mathcal{G}(\bm{p})\|^2}}{\sqrt{\bm{r}}}
-% 	\]
-%       }
-%     \end{itemize}
-%     This also suggests the distance might decrease as $1/\sqrt{r}$
-%   \end{frame}
-%   
-%   \begin{frame}
-%     \frametitle{Population Points }
-%     \begin{columns}
-%       \column{0.40\linewidth}
-% 	\centering
-% 	\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/tetra_popn.eps}}
-%       \column{0.66\linewidth}
-% 	\begin{itemize}
-% 	  \item{Finite populations are represented by dots}
-% 	  \item{Infinite population can be any where in the space}
-% 	  \item{Distance between a finite population and an infinite population is  $O(1/\sqrt{r})$}
-% 	\end{itemize}
-%     \end{columns}
-%     This suggests the distance between $\tau(\bm{p})$ and $\mathcal{G}(\bm{p})$ might decrease as $1/\sqrt{r}$
-%   \end{frame}
-%   
+ 
+  
+  
 %   \begin{frame}
 %     \frametitle{History}
 %     \begin{itemize}
@@ -824,160 +829,4 @@
 %     \end{figure}
 %   \end{frame}
 %     
-%   \begin{frame}
-%     \frametitle{Results: Violation in Mutation}
-%     \mbox{}\\[-0.4in]
-%     \begin{figure}[!h]
-%       \begin{center}
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.01/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.01/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.01/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.01/inf_hap_wovio.eps}}} \vspace{-0.8em} %
-%       \end{center}
-%       \begin{center}
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.1/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.1/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.1/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.1/inf_hap_wovio.eps}}}\vspace{-0.8em} %
-%       \end{center}
-%       \begin{center}
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.5/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.5/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.5/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b12/e0.5/inf_hap_wovio.eps}}}\vspace{-0.8em} %      
-%       
-%       \caption[]{Infinite and finite haploid population behavior for $\bm{\mu}$ violation and $\ell = 12$}
-%       \end{center}
-%     \end{figure}
-%   \end{frame}
 %   
-%   \begin{frame}
-%     \frametitle{Results: Violation in Mutation}
-%     \mbox{}\\[-0.4in]
-%     \begin{figure}[!h]
-%       \begin{center}
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.01/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.01/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.01/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.01/inf_dip_wovio.eps}}} \vspace{-0.8em} %
-%       \end{center}
-%       \begin{center}
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.1/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.1/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.1/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.eps}}}\vspace{-0.8em} %
-%       \end{center}
-%       \begin{center}
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.5/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.5/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.5/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/mu/b8/e0.5/inf_dip_wovio.eps}}}\vspace{-0.8em} %      
-%       
-%       \caption[]{Infinite and finite diploid population behavior for $\bm{\mu}$ violation and $\ell = 8$}
-%       \end{center}
-%     \end{figure}
-%   \end{frame}  
-%   
-%   
-%   \begin{frame}
-%     \frametitle{Results: Violation in Crossover}
-%     \mbox{}\\[-0.4in]
-%     \begin{figure}[!h]
-%       \begin{center}
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.01/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.01/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.01/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.01/inf_dip_wovio.eps}}} \vspace{-0.8em} %
-%       \end{center}
-%       \begin{center}
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.1/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.1/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.1/inf_dip_wovio.eps}}}\vspace{-0.8em} %
-%       \end{center}
-%       \begin{center}
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.5/n00004096_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.5/n00040960_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.5/n00081920_fin_dip_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b8/e0.5/inf_dip_wovio.eps}}}\vspace{-0.8em} %      
-%       
-%       \caption[]{Infinite and finite diploid population behavior for $\bm{\chi}$ violation and $\ell = 8$}
-%       \end{center}
-%     \end{figure}
-%   \end{frame}  
-%   
-%   
-%   \begin{frame}
-%     \frametitle{Results: Violation in Crossover}
-%     \mbox{}\\[-0.4in]
-%     \begin{figure}[!h]
-%       \begin{center}
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.01/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.01/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.01/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.01/inf_hap_wovio.eps}}} \vspace{-0.8em} %
-%       \end{center}
-%       \begin{center}
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.1/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.1/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.1/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.1/inf_hap_wovio.eps}}}\vspace{-0.8em} %
-%       \end{center}
-%       \begin{center}
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.5/n00004096_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.5/n00040960_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.5/n00081920_fin_hap_wovio.eps}}} \hspace{-2.3em}%
-% 	\subfloat{
-% 	\resizebox{4cm}{2.5cm}{\includegraphics{figures/eps/vio/chi/b12/e0.5/inf_hap_wovio.eps}}}\vspace{-0.8em} %      
-%       
-%       \caption[]{Infinite and finite haploid population behavior for $\bm{\chi}$ violation and $\ell = 12$}
-%       \end{center}
-%     \end{figure}
-%   \end{frame}

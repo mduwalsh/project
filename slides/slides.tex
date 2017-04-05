@@ -324,6 +324,23 @@
       \end{itemize}
   \end{frame}
   
+  \begin{frame}
+    \frametitle{Population Points }
+    \begin{columns}
+      \column{0.40\linewidth}
+	\centering
+	\resizebox*{3.5cm}{!}{\includegraphics{figures/eps/tetra_popn.eps}}
+      \column{0.66\linewidth}
+	\begin{itemize}
+	  \item{Finite populations are represented by dots}
+	  \item{Infinite population can be any where in the space}	
+	  \item {
+	   \[ \sup_{\bm{\xi} \in \Lambda} \; \inf_{\bm{p} \in \Lambda_N} \|\bm{\xi} - \bm{p}\| \;=\; O(1/\sqrt{N}) \] 
+	  }
+	\end{itemize}
+    \end{columns}    
+  \end{frame}
+  
    \begin{frame}
     \frametitle{Question 1: Distance Between Finite and Infinite Population}
     {\setstretch{0.7}
@@ -519,7 +536,7 @@
     \begin{itemize}
       \item{Oscillation Under Mutation-Violation}
       \item{
-      For all $g$,
+      For all $g$, $g \neq 0$,
 	\[
 	  -1 \neq \sum \limits_{j} (-1)^{g^T j} \bm{\mu}_j      
 	\]
@@ -606,7 +623,7 @@
     \frametitle{Question 4}
     \begin{itemize}
       \item{Oscillation under Crossover-Violation}      
-      \item For all $g$,
+      \item For all $g$,  $g \neq 0$,
       \[	
 	1 \neq \sum \limits_{k \in \bar{g}\mathcal{R}} \bm{\chi}_{k+g} + \bm{\chi}_k 
       \]
@@ -816,23 +833,33 @@
     The limits in the Walsh basis in form of recursive equations 
     \[   
     \widehat{{\bm p}^{\ast}}_g  = \begin{cases}
-	(x_g y_g(\widehat{{\bm p}^{\ast}}) + y_g(\widehat{{\bm q}^{\ast}}))/(1-x_g^2)  & \text{if $|x_g| < 0$}\\
+	(x_g y_g(\widehat{{\bm p}^{\ast}}) + y_g(\widehat{{\bm q}^{\ast}}))/(1-x_g^2)  & \text{if $|x_g| < 1$}\\
 	\widehat{p}_g  & \text{otherwise}
       \end{cases}
     \]
     \[
     \widehat{{\bm q}^{\ast}}_g  = \begin{cases}
-	(x_g y_g(\widehat{{\bm q}^{\ast}}) + y_g(\widehat{{\bm p}^{\ast}}))/(1-x_g^2)  & \text{if $|x_g| < 0$}\\
+	(x_g y_g(\widehat{{\bm q}^{\ast}}) + y_g(\widehat{{\bm p}^{\ast}}))/(1-x_g^2)  & \text{if $|x_g| < 1$}\\
 	\widehat{\mathcal{M}({\bm p})_g}  & \text{otherwise}
       \end{cases}
     \]
     
     \item
-    Limits $\widehat{{\bm p}^{\ast}}_g$ and $\widehat{{\bm q}^{\ast}_g}$ can be computed considering $g$th components in order of increasing $|g|$.
-
-
-    
+    Limits $\widehat{{\bm p}^{\ast}}_g$ and $\widehat{{\bm q}^{\ast}_g}$ can be computed considering $g$th components in order of increasing $|g|$.    
     \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Oscillation Amplitude}
+    \begin{figure}[h]
+      \begin{center}
+	\subfloat[]{\label{fig:osc_amp_hap}
+	\resizebox{7cm}{5cm}{\includegraphics{figures/eps/osc/osc_amp_hap.eps}}} %
+	\subfloat[]{\label{fig:osc_amp_dip}
+	\resizebox{7cm}{5cm}{\includegraphics{figures/eps/osc/osc_amp_dip.eps}}} \vspace{-0.5em} %
+	\caption[]{Average oscillation amplitude} 
+      \end{center}
+    \end{figure}
   \end{frame}
   
 \end{document}
@@ -862,17 +889,6 @@
 %   \end{frame}
 %   
 %   
-%   \begin{frame}
-%     \frametitle{Oscillation Amplitude}
-%     \begin{figure}[h]
-%       \begin{center}
-% 	\subfloat[]{\label{fig:osc_amp_hap}
-% 	\resizebox{7cm}{5cm}{\includegraphics{figures/eps/osc/osc_amp_hap.eps}}} %
-% 	\subfloat[]{\label{fig:osc_amp_dip}
-% 	\resizebox{7cm}{5cm}{\includegraphics{figures/eps/osc/osc_amp_dip.eps}}} \vspace{-0.5em} %
-% 	\caption[]{Average oscillation amplitude} 
-%       \end{center}
-%     \end{figure}
-%   \end{frame}
+%   
 %     
 %   

@@ -54,7 +54,7 @@ slides.pdf
 
  - Crossover exchanges bits in parents u and v using crossover mask to produce children u' and v' using this rule.
  
- - Results depend on mask m since bit 1's in mask determines how exchange of bits in parents take place.
+ - u' inherits components from u where m is 1 and from v where m is 0
  
  - Here's an example. These parents crossover to produce these offsprings.
  
@@ -288,10 +288,8 @@ Part II
  
  
 ### 23
- - We ran simulations with χ = 0.1 and μ = 0.001  
-  
- - These graphs are in logarithmic scale.
- 
+ - We ran simulations with χ = 0.1 and μ = 0.001    
+ - These graphs are in logarithmic scale. 
  - This axis is the distance, (point to axis) This axis is population size, (point to axis) this axis is number of generations
  
  - Results show finite population converging to infinite population as populaton size increases.
@@ -300,11 +298,11 @@ Part II
  
  - but since we are doing simulations anyway, we run it for more generations.
  
- - Here we see some non linearity as generation increases, it could be partly because of genetic drift that occurs in finite population 
+ - Here we see some non linearity as generation increases, here almost like a bump, it could be partly because of genetic drift that occurs in finite population 
  
  - and partly because distance between finite and infinite population might add up as generation increases leading to non linearity.
  
- - Despite this, these graphs looks pretty flat and planar. 
+ - Despite this, these graphs looks pretty flat and planar showing linear dependence of log d to log N. 
  
  
  
@@ -436,20 +434,17 @@ Part II
  
 
 ### 37
-  - These figures show results for diploid population of string length 8 in case of mutation-violation
-  
-  - Epsilon increases as we go down in rows
-  
+  - These figures show results for diploid population of string length 8 in case of mutation-violation  
+  - Epsilon increases as we go down in rows  
   - Population size increases in columns and last column is for infinite population
   
-  - We see here, as epsilon increases, oscillation diminishes  
-  
+  - We see here, as epsilon increases, oscillation diminishes    
   - As population increases, finite population oscillation approaches infinite population oscillation    
   
-  - Within each graph, Oscillation appears to diminish with time, and in case of infinite population, oscillation dies out after some time.
+  - Within each graph, Oscillation appears to diminish with time, and in case of infinite population, oscillation dies out after some time, like here and here.
     In the upper figure here, it might seem that infinite population does not die out, but it is just that we did not run simulations long enough to see it.
   
-  - And Even though finite population also appears to be dying out, it is not so because the Markov chain is regular. 
+  - Well, you might be thinking finite population also appears to be dying out, but it is not continuously dying out because the Markov chain is regular. 
     Since Markov chain is regular, population must visit every population state infinitely.
   
   - So these population will reoccur and oscillate infinitely often (for = 0.1).
@@ -468,9 +463,7 @@ Part II
  
 
 ### 39
- - Our previous question concerns with the robustness of finite population oscillation under mutation-violation, 
- 
- - Our next question also concerns with the robustness of finite population but under crossover-violation
+ - Our next question also concerns with the robustness of finite population oscillation but under crossover-violation
  
  - By crossover violation, we mean this condition holds for crossover distribution.
  
@@ -546,5 +539,3 @@ Part II
  - Perhaps there are other geometic properties of GA that could be discovered through simulations.
  
  - And this could be part of our future investigation.
- 
- 

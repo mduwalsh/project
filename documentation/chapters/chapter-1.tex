@@ -1,33 +1,33 @@
 \chapter{Introduction} \label{ch:introduction}
 This thesis begins with notation that is used throughout this document.
 \section{Notation}
-Some standard mathematical notation as well as some non-standard mathematical notations are introduced here.
+Mathematical notations, some standard as well as some non-standard, are introduced here.
 
-Angle brackets $\langle \cdots \rangle$ denote a tuple which is to be regarded as a column
-vector. The column vector of all 1s is denoted by $\bm{1}$. Transpose is indicated with superscript $T$. 
+A tuple, which is dennoted by angle brackets $\langle \cdots \rangle$, is to be regarded as a column
+vector. $\bm{1}$ denotes the column vector of all 1s. Superscript $T$ indicates transpose. 
 The standard vector norm is $\|x\| \;=\; \sqrt{x^T x}$. Modulus (or absolute value) is denoted by $|\; \cdot \;|$. 
 When $S$ is a set, $|S|$ denotes the cardinality of $S$.
 
-The notation $O(f)$ denotes a function $g$ (with similar domain and codomain as
-$f$), such that pointwise $g \;\leq \;c f$ for some constant $c$. 
+The notation $O(f)$ denotes a function $g$ such that pointwise $g \;\leq \;c f$ for some constant $c$. 
 The notation $\theta(f)$ is a function $g$ such that pointwise 
 $c_0 f \;\leq\; g \;\leq\; c_1 f$ for some constants $c_0 \;,\; c_1$. 
 Curly brackets $\{\cdots\}$ are used as grouping symbols and to specify both sets
-and multisets. Square brackets $[ \cdots ]$ are, besides their standard use as specifying 
-a closed interval of real numbers, used to denote an indicator function:
-if $expr$ is an expression which may be true or false, then
+and multisets. Square brackets $[ \cdots ]$ are used to specify 
+a closed interval of real numbers as well as to denote {\em Iverson bracket}. 
+{\em Iverson bracket} is an indicator function:
+if $expr$ is an expression, then
 $[\mbox{\em expr\/} ]$ denotes $1$ if {\em expr\/} is
-true, and $0$ otherwise; $[ \cdots ]$ is sometimes referred to as an {\em Iverson bracket}. 
+true, and $0$ otherwise. 
 
-The supremum is the least upper bound, and is denoted by sup. The infimum
-is the greatest lower bound, and is denoted by inf.
+{\em sup \/} indicates the supremum which is the least upper bound. {\em inf \/} indicates the infimum, 
+that is, the greatest lower bound.
 
 The set of length $\ell$ binary strings is denoted by $\mathcal{R}$. It is a
 commutative ring under component-wise addition and
 multiplication modulo $2$. If $x \in \mathcal{R}$, then it may 
 be regarded as the vector $x = \langle x_0, x_1, \cdots, x_{\ell - 1} \rangle$. 
-Denote the additive identity of $\mathcal{R}$ by ${\bf 0}$ and the
-multiplicative identity by ${\bf 1}$. Let $\overline{g}$
+The additive identity of $\mathcal{R}$ is ${\bf 0}$ and the
+multiplicative identity is ${\bf 1}$. Let $\overline{g}$
 abbreviate ${\bf 1} + g$.  Except when explicitly indicated otherwise,
 operations acting on elements of $\mathcal{R}$ are as defined in this
 paragraph. In particular, $g \overline{g} = {\bf 0} = g+g$,

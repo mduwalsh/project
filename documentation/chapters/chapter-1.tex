@@ -168,7 +168,7 @@ transformation defined by a lower triangular matrix that diagonalizes the mixing
 given by a rate) and proved a conjecture of Vose and Liepins concerning eigenvalues of $M^\ast$. Koehler, Bhattacharyya 
 and Vose (see \cite{KoehlerBhatta1997}) applied the Fourier transform in generalizing results established 
 for binary GAs to 
-strings over an alphbet of cardinality $c$ (in the binary case, the Fourier transform is the Walsh transform). 
+strings over an alphabet of cardinality $c$ (in the binary case, the Fourier transform is the Walsh transform). 
 From a computational perspective, a major contribution of Vose and Wright (see \cite{VoseWright1998}) was demonstrating that 
 the mixing matrix is sparse in the Walsh basis, and the computational efficiency of 
 computing $\mathcal{G}(\bm{p})$ can thereby be improved from 
@@ -185,14 +185,14 @@ produce another collection $P^\prime$; iterating $\tau$ produces a sequence of g
 
 Let $n$ be the cardinality 
 of $\Omega$, let ${\bf1}$ denote the column vector of all 1s. 
-The {\em simplex} is the set of population descriptors:
+The set of population descriptors is termed as  {\em simplex}:
 \[
 \Lambda = \{x = \langle x_0,...,x_{n-1} \rangle: {\bf1}^T x=1, x_j \geq 0 \} %\text{\footnotemark\label{fnm:1}}
 \]
 %\footnotetext{$\langle .. \rangle$ represents a column vector; ${\bf1}$ is $\langle 1,..,1 \rangle$}
 Element $\bm{p}$ $\in$ $\Lambda$ corresponds to a population;
 $p_j$ = the proportion in the population of the $j$th element of $\Omega$. 
-The cardinality of each population is a constant $r$, called the population size. 
+The cardinality of each population, called population size, is a constant $r$. 
 Given $r$, a population descriptor $\bm{p}$ unambiguously determines a population.
 
 Given current population vector $\bm{p}$, the next population vector $\tau(\bm{p})$ cannot 
@@ -220,10 +220,10 @@ The conceptualization of RHS can be replaced by a Markov chain model which makes
 from current population $\bm{p}$, produce $\bm{q}$ with probability $Q_{\bm{p},\bm{q}}$. The expected next generation 
 $\mathcal{E}(\tau (\bm{p}))$ is $\mathcal{G}(\bm{p})$ (see \cite{Vose1999}). The expression 
 \[
-\sum \bm{q}_j \log \frac{\bm{q}_j}{\mathcal{G}(\bm{p})!}
+\sum \bm{q}_j \log \frac{\bm{q}_j}{\mathcal{G}(\bm{p})_j!}
 \]
 in (\ref{Qmat}) is the {\em discrepancy} of $\bm{q}$ with respect to $\mathcal{G}(\bm{p})$. It is a measure of how far $\bm{q}$ is from the expected next population 
-$\mathcal{G}(\bm{p})$. Discrepancy is nonnegative and is zero only when $\bm{q}$ is the expected next population. Hence the first factor 
+$\mathcal{G}(\bm{p})$. Discrepancy is nonnegative and is zero only when $\bm{q}$ is $\mathcal{G}(\bm{p})$. Hence the first factor 
 \[
 \exp\{-r \sum \bm{q}_j \log \frac{\bm{q}_j}{\mathcal{G}(\bm{p})_j}\}
 \]
@@ -245,7 +245,7 @@ population near the expected next generation. In particular, if the current popu
 then the first factor does not contribute a strong bias for change. When $\mathcal{G}(\bm{p})$ is nearly the initial population 
 $\bm{p}$, the influence of discrepancy favors $\bm{p}$ as the next generation since the alternatives, being lattice points, 
 are constrained to be some distance away from the expected next generation. This phenomenon is expressed quantitivelty by theorem $3.4$.
-Moreover, the second factor may exert a stabilizing effect provided the current population has low dispersion compared to the alternatives
+Moreover, the second factor may exert a stabilizing effect provided the current population has low dispersion compared to the alternatives.
 \end{quote}
 
 \begin{figure}[H]
@@ -258,7 +258,7 @@ Moreover, the second factor may exert a stabilizing effect provided the current 
 
 Figure \ref{tetra_popn} illustrates population points in a simplex for $\ell  =  2,  r  =  4$. 
 Finite populations are represented by dots, 
-where smaller dots have lower dispersion and larger dots have higher dispersion. 
+where smaller dots have lower dispersion and are more likely points whereas larger dots have higher dispersion and are less likely points. 
 The diagram also illuminates that finite populations are constrained to occupy lattice points 
 within $\Lambda$. As population size $r \;\to\; \infty$, the lattice points become dense in $\Lambda$, 
 which corresponds to the fact that an infinite population can be (represented by) any point of $\Lambda$.  

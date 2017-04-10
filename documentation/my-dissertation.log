@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  7 APR 2017 16:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  9 APR 2017 11:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -705,6 +705,9 @@ File: figures/eps/tetra_popn.eps Graphic file (type eps)
  <figures/eps/tetra_popn.eps> [9] [10] [11] [12]
 File: figures/eps/cmf.eps Graphic file (type eps)
  <figures/eps/cmf.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [13] [14] [15]) [16]
 :<-
 :<+ chapters/chapter-2.tex
@@ -3088,8 +3091,17 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 143.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
 (rerunfilecheck)             Checksum: B5ABB4311841FC49ECDCBB1B2A3DF60F;3897.
-Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
-(rerunfilecheck)             Checksum: 9DD6A50082A76889818FA0C0F1098D85;3151.
+
+
+Package rerunfilecheck Warning: File `my-dissertation.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `my-dissertation.brf':
+(rerunfilecheck)             Before: 9DD6A50082A76889818FA0C0F1098D85;3151
+(rerunfilecheck)             After:  BB197F831D0673317B334B48D668FB50;3151.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 143.
  ) 
 Here is how much of TeX's memory you used:
@@ -3101,4 +3113,4 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  39i,16n,53p,414b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (144 pages, 711864 bytes).
+Output written on my-dissertation.dvi (144 pages, 711944 bytes).

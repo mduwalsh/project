@@ -1,21 +1,21 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces \textbf {Expected single step distance $d$ for population size $N$}\relax }}{39}{table.caption.23}
-\contentsline {table}{\numberline {3.2}{\ignorespaces \textbf {Distance measured for haploid population}}}{40}{table.caption.28}
-\contentsline {table}{\numberline {3.3}{\ignorespaces \textbf {Distance measured for diploid population}}}{50}{table.caption.33}
+\contentsline {table}{\numberline {3.1}{\ignorespaces \textbf {Expected single step distance $d$ for population size $N$}\relax }}{38}{table.caption.23}
+\contentsline {table}{\numberline {3.2}{\ignorespaces \textbf {Distance measured for haploid population}}}{39}{table.caption.28}
+\contentsline {table}{\numberline {3.3}{\ignorespaces \textbf {Distance measured for diploid population}}}{49}{table.caption.33}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces \textbf {Distance measured for violation in $\bm {\mu }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.01$ for haploids}}}{61}{table.caption.41}
-\contentsline {table}{\numberline {4.2}{\ignorespaces \textbf {Distance measured for violation in $\bm {\mu }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.1$ for haploids}}}{66}{table.caption.46}
-\contentsline {table}{\numberline {4.3}{\ignorespaces \textbf {Distance measured for violation in $\bm {\mu }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.5$ for haploids}}}{71}{table.caption.51}
-\contentsline {table}{\numberline {4.4}{\ignorespaces \textbf {Distance measured for violation in $\bm {\mu }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.01$ for diploids}}}{76}{table.caption.56}
-\contentsline {table}{\numberline {4.5}{\ignorespaces \textbf {Distance measured for violation in $\bm {\mu }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.1$ for diploids}}}{81}{table.caption.61}
-\contentsline {table}{\numberline {4.6}{\ignorespaces \textbf {Distance measured for violation in $\bm {\mu }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.5$ for diploids}}}{86}{table.caption.66}
+\contentsline {table}{\numberline {4.1}{\ignorespaces \textbf {Distance measured for violation in $\bm {\mu }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.01$ for haploids}}}{60}{table.caption.41}
+\contentsline {table}{\numberline {4.2}{\ignorespaces \textbf {Distance measured for violation in $\bm {\mu }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.1$ for haploids}}}{65}{table.caption.46}
+\contentsline {table}{\numberline {4.3}{\ignorespaces \textbf {Distance measured for violation in $\bm {\mu }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.5$ for haploids}}}{70}{table.caption.51}
+\contentsline {table}{\numberline {4.4}{\ignorespaces \textbf {Distance measured for violation in $\bm {\mu }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.01$ for diploids}}}{75}{table.caption.56}
+\contentsline {table}{\numberline {4.5}{\ignorespaces \textbf {Distance measured for violation in $\bm {\mu }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.1$ for diploids}}}{80}{table.caption.61}
+\contentsline {table}{\numberline {4.6}{\ignorespaces \textbf {Distance measured for violation in $\bm {\mu }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.5$ for diploids}}}{85}{table.caption.66}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces \textbf {Distance measured for violation in $\bm {\chi }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.01$ for haploids}}}{95}{table.caption.72}
-\contentsline {table}{\numberline {5.2}{\ignorespaces \textbf {Distance measured for violation in $\bm {\chi }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.1$ for haploids}}}{100}{table.caption.77}
-\contentsline {table}{\numberline {5.3}{\ignorespaces \textbf {Distance measured for violation in $\bm {\chi }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.5$ for haploids}}}{105}{table.caption.82}
-\contentsline {table}{\numberline {5.4}{\ignorespaces \textbf {Distance measured for violation in $\bm {\chi }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.01$ diploids}}}{110}{table.caption.87}
-\contentsline {table}{\numberline {5.5}{\ignorespaces \textbf {Distance measured for violation in $\bm {\chi }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.1$ for diploids}}}{115}{table.caption.92}
-\contentsline {table}{\numberline {5.6}{\ignorespaces \textbf {Distance measured for violation in $\bm {\chi }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.5$ for diploids}}}{120}{table.caption.97}
+\contentsline {table}{\numberline {5.1}{\ignorespaces \textbf {Distance measured for violation in $\bm {\chi }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.01$ for haploids}}}{94}{table.caption.72}
+\contentsline {table}{\numberline {5.2}{\ignorespaces \textbf {Distance measured for violation in $\bm {\chi }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.1$ for haploids}}}{99}{table.caption.77}
+\contentsline {table}{\numberline {5.3}{\ignorespaces \textbf {Distance measured for violation in $\bm {\chi }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.5$ for haploids}}}{104}{table.caption.82}
+\contentsline {table}{\numberline {5.4}{\ignorespaces \textbf {Distance measured for violation in $\bm {\chi }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.01$ diploids}}}{109}{table.caption.87}
+\contentsline {table}{\numberline {5.5}{\ignorespaces \textbf {Distance measured for violation in $\bm {\chi }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.1$ for diploids}}}{114}{table.caption.92}
+\contentsline {table}{\numberline {5.6}{\ignorespaces \textbf {Distance measured for violation in $\bm {\chi }$ with $\bm {\epsilon } \tmspace +\thickmuskip {.2777em}=\tmspace +\thickmuskip {.2777em} 0.5$ for diploids}}}{119}{table.caption.97}
 \addvspace {10\p@ }

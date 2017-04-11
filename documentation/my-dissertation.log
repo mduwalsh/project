@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  9 APR 2017 11:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2017.3.7)  11 APR 2017 12:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **my-dissertation.tex
 (./my-dissertation.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (./utthesis.cls
 utthesis.cls
 ver 1.0.0
@@ -702,30 +702,30 @@ File: figures/eps/GA_dip.eps Graphic file (type eps)
  <figures/eps/GA_dip.eps> [4] [5] [6] [7]
 [8]
 File: figures/eps/tetra_popn.eps Graphic file (type eps)
- <figures/eps/tetra_popn.eps> [9] [10] [11] [12]
-File: figures/eps/cmf.eps Graphic file (type eps)
- <figures/eps/cmf.eps>
+ <figures/eps/tetra_popn.eps>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[13] [14] [15]) [16]
+[9] [10] [11] [12]
+File: figures/eps/cmf.eps Graphic file (type eps)
+ <figures/eps/cmf.eps> [13] [14]) [15]
 :<-
 :<+ chapters/chapter-2.tex
 \openout2 = `chapters/chapter-2.aux'.
 
 (./chapters/chapter-2.tex
 Chapter 2.
-[17
+[16
 
 
 
 
-] [18]
+] [17]
 Underfull \hbox (badness 10000) in paragraph at lines 78--83
 
  []
 
-[19] [20]
+[18] [19]
 Package srcltx Info: Expanded filename `chapters/specialization.tex' to `chapte
 rs/specialization.tex' on input line 170.
 
@@ -735,15 +735,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--33
 
  []
 
-[21]
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 52--55
 
  []
 
-[22] [23]
+[21] [22]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 147.
- [24] [25])
+ [23] [24])
 :<-
 Package srcltx Info: Expanded filename `chapters/convergence.tex' to `chapters/
 convergence.tex' on input line 172.
@@ -758,7 +758,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--18
 
  []
 
-[26] [27] [28]
+[25] [26] [27]
 File: figures/eps/surf/b4.eps Graphic file (type eps)
  <figures/eps/surf/b4.eps>
 File: figures/eps/surf/b6.eps Graphic file (type eps)
@@ -777,24 +777,24 @@ File: figures/eps/slope/m.eps Graphic file (type eps)
 
 <figures/eps/slope/m.eps>
 File: figures/eps/slope/b.eps Graphic file (type eps)
- <figures/eps/slope/b.eps> [29] [30] [31]
+ <figures/eps/slope/b.eps> [28] [29] [30]
 File: figures/eps/nonlinear.eps Graphic file (type eps)
 
 <figures/eps/nonlinear.eps>)
 :<-
-) [32] [33]
+) [31] [32]
 :<-
 :<+ chapters/chapter-3.tex
 \openout2 = `chapters/chapter-3.aux'.
 
 (./chapters/chapter-3.tex
 Chapter 3.
-[34
+[33
 
 
 
 
-] [35] [36] [37] [38] [39]
+] [34] [35] [36] [37] [38]
 Package srcltx Info: Expanded filename `chapters/oscillation_hap.tex' to `chapt
 ers/oscillation_hap.tex' on input line 216.
 
@@ -900,13 +900,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
 :<-
-[40
+[39
 
 ]
 
-LaTeX Warning: Text page 41 contains only floats.
+LaTeX Warning: Text page 40 contains only floats.
 
-[41] [42] [43] [44]
+[40] [41] [42] [43]
 Package srcltx Info: Expanded filename `chapters/oscillation_dip.tex' to `chapt
 ers/oscillation_dip.tex' on input line 292.
 
@@ -1012,13 +1012,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
 :<-
-[45
+[44
 
 ]
 
-LaTeX Warning: Text page 46 contains only floats.
+LaTeX Warning: Text page 45 contains only floats.
 
-[46] [47] [48] [49]
+[45] [46] [47] [48]
 File: figures/eps/osc/osc_amp_hap.eps Graphic file (type eps)
  <figures/eps/osc/osc_amp_hap.eps>
 File: figures/eps/osc/osc_amp_dip.eps Graphic file (type eps)
@@ -1028,7 +1028,7 @@ Overfull \hbox (1.01158pt too wide) in paragraph at lines 321--324
  [][][][][] 
  []
 
-[50
+[49
 
 ]
 File: figures/eps/osc/b12/b12_n004096_osc_fin_dip_lvl.eps Graphic file (type ep
@@ -1044,19 +1044,19 @@ Overfull \hbox (1.01338pt too wide) in paragraph at lines 340--343
 
 File: figures/eps/osc/b14/b14_n004096_osc_fin_dip_10_50.eps Graphic file (type 
 eps)
-<figures/eps/osc/b14/b14_n004096_osc_fin_dip_10_50.eps> [51]) [52]
+<figures/eps/osc/b14/b14_n004096_osc_fin_dip_10_50.eps> [50]) [51]
 :<-
 :<+ chapters/chapter-4.tex
 \openout2 = `chapters/chapter-4.aux'.
 
 (./chapters/chapter-4.tex
 Chapter 4.
-[53
+[52
 
 
 
 
-] [54] [55]
+] [53] [54]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 104.
@@ -1212,11 +1212,11 @@ File: figures/eps/vio/mu/b14/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[56]
+[55]
 
-LaTeX Warning: Text page 57 contains only floats.
+LaTeX Warning: Text page 56 contains only floats.
 
-[57] [58] [59] [60])
+[56] [57] [58] [59])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1272,16 +1272,11 @@ File: figures/eps/vio/mu/b8/e0.1/inf_hap.eps Graphic file (type eps)
 <figures/eps/vio/mu/b8/e0.1/inf_hap.eps>
 File: figures/eps/vio/mu/b8/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
-<figures/eps/vio/mu/b8/e0.1/inf_hap_wovio.eps> [61
-
-]
-
-LaTeX Warning: Text page 62 contains only floats.
-
-[62]
+<figures/eps/vio/mu/b8/e0.1/inf_hap_wovio.eps>
 File: figures/eps/vio/mu/b10/e0.1/n00004096_fin_hap.eps Graphic file (type eps)
 
- <figures/eps/vio/mu/b10/e0.1/n00004096_fin_hap.eps>
+
+<figures/eps/vio/mu/b10/e0.1/n00004096_fin_hap.eps>
 File: figures/eps/vio/mu/b10/e0.1/n00004096_fin_hap_wovio.eps Graphic file (typ
 e eps)
 
@@ -1375,7 +1370,13 @@ File: figures/eps/vio/mu/b14/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[63] [64] [65])
+[60
+
+]
+
+LaTeX Warning: Text page 61 contains only floats.
+
+[61] [62] [63] [64])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1431,16 +1432,11 @@ File: figures/eps/vio/mu/b8/e0.5/inf_hap.eps Graphic file (type eps)
 <figures/eps/vio/mu/b8/e0.5/inf_hap.eps>
 File: figures/eps/vio/mu/b8/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 
-<figures/eps/vio/mu/b8/e0.5/inf_hap_wovio.eps> [66
-
-]
-
-LaTeX Warning: Text page 67 contains only floats.
-
-[67]
+<figures/eps/vio/mu/b8/e0.5/inf_hap_wovio.eps>
 File: figures/eps/vio/mu/b10/e0.5/n00004096_fin_hap.eps Graphic file (type eps)
 
- <figures/eps/vio/mu/b10/e0.5/n00004096_fin_hap.eps>
+
+<figures/eps/vio/mu/b10/e0.5/n00004096_fin_hap.eps>
 File: figures/eps/vio/mu/b10/e0.5/n00004096_fin_hap_wovio.eps Graphic file (typ
 e eps)
 
@@ -1534,11 +1530,14 @@ File: figures/eps/vio/mu/b14/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[68] [69] [70])
-:<-
-[71
+[65
 
 ]
+
+LaTeX Warning: Text page 66 contains only floats.
+
+[66] [67] [68] [69])
+:<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 111.
@@ -1597,15 +1596,10 @@ File: figures/eps/vio/mu/b8/e0.01/inf_dip.eps Graphic file (type eps)
 File: figures/eps/vio/mu/b8/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/mu/b8/e0.01/inf_dip_wovio.eps>
-
-LaTeX Warning: Text page 72 contains only floats.
-
-[72
-
-]
 File: figures/eps/vio/mu/b10/e0.01/n00004096_fin_dip.eps Graphic file (type eps
 )
- <figures/eps/vio/mu/b10/e0.01/n00004096_fin_dip.eps>
+
+<figures/eps/vio/mu/b10/e0.01/n00004096_fin_dip.eps>
 File: figures/eps/vio/mu/b10/e0.01/n00004096_fin_dip_wovio.eps Graphic file (ty
 pe eps)
 
@@ -1699,7 +1693,13 @@ File: figures/eps/vio/mu/b14/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[73] [74] [75])
+[70
+
+]
+
+LaTeX Warning: Text page 71 contains only floats.
+
+[71] [72] [73] [74])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1755,16 +1755,11 @@ File: figures/eps/vio/mu/b8/e0.1/inf_dip.eps Graphic file (type eps)
 <figures/eps/vio/mu/b8/e0.1/inf_dip.eps>
 File: figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
-<figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.eps> [76
-
-]
-
-LaTeX Warning: Text page 77 contains only floats.
-
-[77]
+<figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.eps>
 File: figures/eps/vio/mu/b10/e0.1/n00004096_fin_dip.eps Graphic file (type eps)
 
- <figures/eps/vio/mu/b10/e0.1/n00004096_fin_dip.eps>
+
+<figures/eps/vio/mu/b10/e0.1/n00004096_fin_dip.eps>
 File: figures/eps/vio/mu/b10/e0.1/n00004096_fin_dip_wovio.eps Graphic file (typ
 e eps)
 
@@ -1858,7 +1853,13 @@ File: figures/eps/vio/mu/b14/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[78] [79] [80])
+[75
+
+]
+
+LaTeX Warning: Text page 76 contains only floats.
+
+[76] [77] [78] [79])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1914,16 +1915,11 @@ File: figures/eps/vio/mu/b8/e0.5/inf_dip.eps Graphic file (type eps)
 <figures/eps/vio/mu/b8/e0.5/inf_dip.eps>
 File: figures/eps/vio/mu/b8/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 
-<figures/eps/vio/mu/b8/e0.5/inf_dip_wovio.eps> [81
-
-]
-
-LaTeX Warning: Text page 82 contains only floats.
-
-[82]
+<figures/eps/vio/mu/b8/e0.5/inf_dip_wovio.eps>
 File: figures/eps/vio/mu/b10/e0.5/n00004096_fin_dip.eps Graphic file (type eps)
 
- <figures/eps/vio/mu/b10/e0.5/n00004096_fin_dip.eps>
+
+<figures/eps/vio/mu/b10/e0.5/n00004096_fin_dip.eps>
 File: figures/eps/vio/mu/b10/e0.5/n00004096_fin_dip_wovio.eps Graphic file (typ
 e eps)
 
@@ -2017,30 +2013,35 @@ File: figures/eps/vio/mu/b14/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[83] [84] [85])
-:<-
-[86
+[80
 
 ]
+
+LaTeX Warning: Text page 81 contains only floats.
+
+[81] [82] [83] [84])
+:<-
 File: figures/eps/vio/dist_mu.eps Graphic file (type eps)
- <figures/eps/vio/dist_mu.eps>
+<figures/eps/vio/dist_mu.eps>
 Overfull \hbox (25.54599pt too wide) in paragraph at lines 148--152
  [] 
  []
 
-[87]) [88]
+[85
+
+] [86]) [87]
 :<-
 :<+ chapters/chapter-5.tex
 \openout2 = `chapters/chapter-5.aux'.
 
 (./chapters/chapter-5.tex
 Chapter 5.
-[89
+[88
 
 
 
 
-] [90]
+]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 99.
@@ -2099,15 +2100,10 @@ File: figures/eps/vio/chi/b8/e0.01/inf_hap.eps Graphic file (type eps)
 File: figures/eps/vio/chi/b8/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b8/e0.01/inf_hap_wovio.eps>
-
-LaTeX Warning: Text page 91 contains only floats.
-
-[91
-
-]
 File: figures/eps/vio/chi/b10/e0.01/n00004096_fin_hap.eps Graphic file (type ep
 s)
- <figures/eps/vio/chi/b10/e0.01/n00004096_fin_hap.eps>
+
+<figures/eps/vio/chi/b10/e0.01/n00004096_fin_hap.eps>
 File: figures/eps/vio/chi/b10/e0.01/n00004096_fin_hap_wovio.eps Graphic file (t
 ype eps)
 
@@ -2201,7 +2197,11 @@ File: figures/eps/vio/chi/b14/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[92] [93] [94])
+[89]
+
+LaTeX Warning: Text page 90 contains only floats.
+
+[90] [91] [92] [93])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -2358,13 +2358,13 @@ File: figures/eps/vio/chi/b14/e0.1/inf_hap_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[95
+[94
 
 ]
 
-LaTeX Warning: Text page 96 contains only floats.
+LaTeX Warning: Text page 95 contains only floats.
 
-[96] [97] [98] [99])
+[95] [96] [97] [98])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -2521,17 +2521,14 @@ File: figures/eps/vio/chi/b14/e0.5/inf_hap_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[100
+[99
 
 ]
 
-LaTeX Warning: Text page 101 contains only floats.
+LaTeX Warning: Text page 100 contains only floats.
 
-[101] [102] [103] [104])
+[100] [101] [102] [103])
 :<-
-[105
-
-]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 106.
@@ -2590,15 +2587,10 @@ File: figures/eps/vio/chi/b8/e0.01/inf_dip.eps Graphic file (type eps)
 File: figures/eps/vio/chi/b8/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b8/e0.01/inf_dip_wovio.eps>
-
-LaTeX Warning: Text page 106 contains only floats.
-
-[106
-
-]
 File: figures/eps/vio/chi/b10/e0.01/n00004096_fin_dip.eps Graphic file (type ep
 s)
- <figures/eps/vio/chi/b10/e0.01/n00004096_fin_dip.eps>
+
+<figures/eps/vio/chi/b10/e0.01/n00004096_fin_dip.eps>
 File: figures/eps/vio/chi/b10/e0.01/n00004096_fin_dip_wovio.eps Graphic file (t
 ype eps)
 
@@ -2692,37 +2684,40 @@ File: figures/eps/vio/chi/b14/e0.01/inf_dip_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[107] [108] [109])
-:<-
-[110
+[104
 
 ]
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 109.
+LaTeX Warning: Text page 105 contains only floats.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sim' on input line 109.
-
+[105] [106] [107] [108])
+:<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 109.
+(hyperref)                removing `math shift' on input line 108.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 109.
+(hyperref)                removing `\sim' on input line 108.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\epsilon' on input line 109.
+(hyperref)                removing `math shift' on input line 108.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 109.
+(hyperref)                removing `math shift' on input line 108.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\epsilon' on input line 108.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 108.
 
 Package srcltx Info: Expanded filename `chapters/vio-chi-dip-e0.1.tex' to `chap
-ters/vio-chi-dip-e0.1.tex' on input line 110.
+ters/vio-chi-dip-e0.1.tex' on input line 109.
 :<+ chapters/vio-chi-dip-e0.1.tex
 (./chapters/vio-chi-dip-e0.1.tex
 File: figures/eps/vio/chi/b8/e0.1/n00004096_fin_dip.eps Graphic file (type eps)
@@ -2755,15 +2750,10 @@ File: figures/eps/vio/chi/b8/e0.1/inf_dip.eps Graphic file (type eps)
 File: figures/eps/vio/chi/b8/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b8/e0.1/inf_dip_wovio.eps>
-
-LaTeX Warning: Text page 111 contains only floats.
-
-[111
-
-]
 File: figures/eps/vio/chi/b10/e0.1/n00004096_fin_dip.eps Graphic file (type eps
 )
- <figures/eps/vio/chi/b10/e0.1/n00004096_fin_dip.eps>
+
+<figures/eps/vio/chi/b10/e0.1/n00004096_fin_dip.eps>
 File: figures/eps/vio/chi/b10/e0.1/n00004096_fin_dip_wovio.eps Graphic file (ty
 pe eps)
 
@@ -2857,34 +2847,40 @@ File: figures/eps/vio/chi/b14/e0.1/inf_dip_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[112] [113] [114])
+[109
+
+]
+
+LaTeX Warning: Text page 110 contains only floats.
+
+[110] [111] [112] [113])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 111.
+(hyperref)                removing `math shift' on input line 110.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sim' on input line 111.
+(hyperref)                removing `\sim' on input line 110.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 111.
+(hyperref)                removing `math shift' on input line 110.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 111.
+(hyperref)                removing `math shift' on input line 110.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\epsilon' on input line 111.
+(hyperref)                removing `\epsilon' on input line 110.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 111.
+(hyperref)                removing `math shift' on input line 110.
 
 Package srcltx Info: Expanded filename `chapters/vio-chi-dip-e0.5.tex' to `chap
-ters/vio-chi-dip-e0.5.tex' on input line 112.
+ters/vio-chi-dip-e0.5.tex' on input line 111.
 :<+ chapters/vio-chi-dip-e0.5.tex
 (./chapters/vio-chi-dip-e0.5.tex
 File: figures/eps/vio/chi/b8/e0.5/n00004096_fin_dip.eps Graphic file (type eps)
@@ -3014,36 +3010,36 @@ File: figures/eps/vio/chi/b14/e0.5/inf_dip_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[115
+[114
 
 ]
 
-LaTeX Warning: Text page 116 contains only floats.
+LaTeX Warning: Text page 115 contains only floats.
 
-[116] [117] [118] [119])
+[115] [116] [117] [118])
 :<-
-[120
+[119
 
 ]
 File: figures/eps/vio/dist_chi.eps Graphic file (type eps)
  <figures/eps/vio/dist_chi.eps>
-Overfull \hbox (25.54599pt too wide) in paragraph at lines 150--154
+Overfull \hbox (25.54599pt too wide) in paragraph at lines 149--153
  [] 
  []
 
-[121] [122]) [123]
+[120]) [121]
 :<-
 :<+ chapters/chapter-6.tex
 \openout2 = `chapters/chapter-6.aux'.
 
 (./chapters/chapter-6.tex
 Chapter 6.
-[124
+[122
 
 
 
 
-]) [125]
+]) [123]
 :<-
 :<+ my-dissertation.bbl
 (./my-dissertation.bbl (./my-dissertation.brf)
@@ -3056,7 +3052,7 @@ Underfull \hbox (badness 1107) in paragraph at lines 54--54
 Chains and Al-go-rith-mic Ap-pli-ca-tions\OT1/cmr/m/n/12 .
  []
 
-[126
+[124
 
 
 ]
@@ -3065,13 +3061,13 @@ Underfull \hbox (badness 1946) in paragraph at lines 96--96
 \OT1/cmr/m/it/12 Ver-hand-lun-gen des
  []
 
-[127])
+[125])
 :<-
-[128]
+[126]
 :<+ back-matter/vita.tex
 \openout2 = `back-matter/vita.aux'.
 
-(./back-matter/vita.tex) [129
+(./back-matter/vita.tex) [127
 
 
 
@@ -3091,26 +3087,17 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 143.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
 (rerunfilecheck)             Checksum: B5ABB4311841FC49ECDCBB1B2A3DF60F;3897.
-
-
-Package rerunfilecheck Warning: File `my-dissertation.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `my-dissertation.brf':
-(rerunfilecheck)             Before: 9DD6A50082A76889818FA0C0F1098D85;3151
-(rerunfilecheck)             After:  BB197F831D0673317B334B48D668FB50;3151.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
+(rerunfilecheck)             Checksum: 2B5F222C59620D2342096B1012E20250;3151.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 143.
  ) 
 Here is how much of TeX's memory you used:
- 10429 strings out of 495029
- 173565 string characters out of 6181522
- 275461 words of memory out of 5000000
- 13242 multiletter control sequences out of 15000+600000
+ 10429 strings out of 493305
+ 173565 string characters out of 6139898
+ 278673 words of memory out of 5000000
+ 13491 multiletter control sequences out of 15000+600000
  22513 words of font info for 88 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
+ 957 hyphenation exceptions out of 8191
  39i,16n,53p,414b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (144 pages, 711944 bytes).
+Output written on my-dissertation.dvi (142 pages, 709912 bytes).

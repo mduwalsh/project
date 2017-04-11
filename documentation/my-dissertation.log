@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2017.3.7)  11 APR 2017 12:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  11 APR 2017 15:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **my-dissertation.tex
 (./my-dissertation.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
 (./utthesis.cls
 utthesis.cls
 ver 1.0.0
@@ -3092,12 +3092,12 @@ Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 143.
  ) 
 Here is how much of TeX's memory you used:
- 10429 strings out of 493305
- 173565 string characters out of 6139898
- 278673 words of memory out of 5000000
- 13491 multiletter control sequences out of 15000+600000
+ 10429 strings out of 495029
+ 173565 string characters out of 6181522
+ 274387 words of memory out of 5000000
+ 13242 multiletter control sequences out of 15000+600000
  22513 words of font info for 88 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
+ 14 hyphenation exceptions out of 8191
  39i,16n,53p,414b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (142 pages, 709912 bytes).
+Output written on my-dissertation.dvi (142 pages, 710124 bytes).

@@ -35,7 +35,7 @@
 \contentsline {subsection}{\numberline {4.1.5}Diploid Population $\mathtt {\sim }$ $\epsilon : 0.1$}{75}{subsection.4.1.5}
 \contentsline {subsection}{\numberline {4.1.6}Diploid Population $\mathtt {\sim }$ $\epsilon : 0.5$}{80}{subsection.4.1.6}
 \contentsline {section}{\numberline {4.2}Discussion}{85}{section.4.2}
-\contentsline {section}{\numberline {4.3}Summary}{87}{section.4.3}
+\contentsline {section}{\numberline {4.3}Summary}{86}{section.4.3}
 \contentsline {chapter}{\numberline {5}Violation in Crossover Distribution}{88}{chapter.5}
 \contentsline {section}{\numberline {5.1}Violation}{88}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Haploid Population $\mathtt {\sim }$ $\epsilon : 0.01$}{89}{subsection.5.1.1}
@@ -46,5 +46,7 @@
 \contentsline {subsection}{\numberline {5.1.6}Diploid Population $\mathtt {\sim }$ $\epsilon : 0.5$}{114}{subsection.5.1.6}
 \contentsline {section}{\numberline {5.2}Discussion}{119}{section.5.2}
 \contentsline {section}{\numberline {5.3}Summary}{121}{section.5.3}
-\contentsline {chapter}{\numberline {6}Conclusion}{122}{chapter.6}
-\contentsline {chapter}{Vita}{127}{section*.100}
+\contentsline {chapter}{\numberline {6}Conclusion And Future Work}{122}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclusion}{122}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future Work}{123}{section.6.2}
+\contentsline {chapter}{Vita}{129}{section*.101}

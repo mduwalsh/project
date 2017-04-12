@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  11 APR 2017 15:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2017.3.7)  12 APR 2017 09:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **my-dissertation.tex
 (./my-dissertation.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (./utthesis.cls
 utthesis.cls
 ver 1.0.0
@@ -3018,16 +3018,15 @@ LaTeX Warning: Text page 115 contains only floats.
 
 [115] [116] [117] [118])
 :<-
-[119
-
-]
 File: figures/eps/vio/dist_chi.eps Graphic file (type eps)
- <figures/eps/vio/dist_chi.eps>
+<figures/eps/vio/dist_chi.eps>
 Overfull \hbox (25.54599pt too wide) in paragraph at lines 149--153
  [] 
  []
 
-[120]) [121]
+[119
+
+] [120]) [121]
 :<-
 :<+ chapters/chapter-6.tex
 \openout2 = `chapters/chapter-6.aux'.
@@ -3039,7 +3038,9 @@ Chapter 6.
 
 
 
-]) [123]
+] [123]
+File: figures/eps/pqz.eps Graphic file (type eps)
+ <figures/eps/pqz.eps> [124]) [125]
 :<-
 :<+ my-dissertation.bbl
 (./my-dissertation.bbl (./my-dissertation.brf)
@@ -3052,7 +3053,7 @@ Underfull \hbox (badness 1107) in paragraph at lines 54--54
 Chains and Al-go-rith-mic Ap-pli-ca-tions\OT1/cmr/m/n/12 .
  []
 
-[124
+[126
 
 
 ]
@@ -3061,13 +3062,13 @@ Underfull \hbox (badness 1946) in paragraph at lines 96--96
 \OT1/cmr/m/it/12 Ver-hand-lun-gen des
  []
 
-[125])
+[127])
 :<-
-[126]
+[128]
 :<+ back-matter/vita.tex
 \openout2 = `back-matter/vita.aux'.
 
-(./back-matter/vita.tex) [127
+(./back-matter/vita.tex) [129
 
 
 
@@ -3086,18 +3087,18 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 143.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 143.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: B5ABB4311841FC49ECDCBB1B2A3DF60F;3897.
+(rerunfilecheck)             Checksum: 54209842461490CC069F0E2B93F90A62;4036.
 Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
 (rerunfilecheck)             Checksum: 2B5F222C59620D2342096B1012E20250;3151.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 143.
  ) 
 Here is how much of TeX's memory you used:
- 10429 strings out of 495029
- 173565 string characters out of 6181522
- 274387 words of memory out of 5000000
- 13242 multiletter control sequences out of 15000+600000
+ 10434 strings out of 493305
+ 173622 string characters out of 6139898
+ 278763 words of memory out of 5000000
+ 13495 multiletter control sequences out of 15000+600000
  22513 words of font info for 88 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
+ 957 hyphenation exceptions out of 8191
  39i,16n,53p,414b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (142 pages, 710124 bytes).
+Output written on my-dissertation.dvi (144 pages, 714132 bytes).

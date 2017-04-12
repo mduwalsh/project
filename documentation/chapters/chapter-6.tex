@@ -1,4 +1,5 @@
-\chapter{Conclusion}
+\chapter{Conclusion And Future Work}
+\section{Conclusion}
 This research shows how Vose's haploid model for Genetic Algorithms
 extends to the diploid case, facilitating the computation of infinite
 population evolutionary trajectories by significantly reducing the
@@ -30,6 +31,53 @@ when the violation is small, and randomness in behavior increases when the viola
 As genome length increases oscillation in population degrades. 
 Moreover, larger population shows better oscillation 
 as in the case of oscillation with violation.
+
+\section{Future Work}
+In figures \ref{oscillation_12d_vio_mu_0.1}, \ref{oscillation_14d_vio_mu_0.1}, 
+\ref{oscillation_12d_vio_chi_0.1} and \ref{oscillation_14d_vio_chi_0.1},  
+infinite population oscillation dies out symmetrically to 
+give graph of single straight line. But infinite population is converging to limit $\bm{z}^\ast$. 
+This suggests $\bm{z}^\ast$ may be somewhere in equidistant plane from $\bm{p}^\ast$ and $\bm{q}^\ast$.
+So, we devised a test to check if $\bm{z}^\ast$ lies between hyperplanes perpendicular to the line 
+joining $\bm{p}^\ast$ and $\bm{q}^\ast$. 
+Let $\bm{n}$ be unit vector to the line joining $\bm{p}^\ast$ and $\bm{q}^\ast$ as shown in figure \ref{pqz} given by
+\[
+  \bm{n} \,=\, \frac{\bm{p}^\ast - \bm{q}^\ast}{\|\bm{p}^\ast-\bm{q}^\ast\|}
+\]
+Then any point $x$ is "in between" $\bm{p}^\ast$ and $\bm{q}^\ast$ if
+\[
+  \bm{n}^T(x-\bm{p}^\ast) \,<\, 0 \quad \quad \text{and} \quad \quad \bm{n}^T(x-\bm{q}^\ast) \,>\, 0.
+\]
+$\bm{n}^T(x-\bm{p}^\ast)$ is dot-product of $\bm{n}^T$ and $(x-\bm{p}^\ast)$
+\[
+  =\, \|x-\bm{p}^\ast\| \cos \psi
+\]
+where $\psi$ is angle between vectors $\bm{n}^T$ and $(x-\bm{p}^\ast)$.
+
+$\bm{n}^T(x-\bm{q}^\ast)$ is dot-product of $\bm{n}^T$ and $(x-\bm{q}^\ast)$
+\[
+  =\, \|x-\bm{q}^\ast\| \cos \theta
+\]
+where $\theta$ is angle between vectors $\bm{n}^T$ and $(x-\bm{q}^\ast)$.
+
+\begin{figure}[!ht]
+\begin{center}
+\subfloat{
+\resizebox{12cm}{10cm}{\includegraphics{figures/eps/pqz.eps}}}\hspace{-3em}%
+\caption[\textbf{Geometry of GA:  $\bm{p}^\ast$, $\bm{q}^\ast$ and $\bm{z}^\ast$}]
+{\textbf{Geometry of GA:  $\bm{p}^\ast$, $\bm{q}^\ast$ and $\bm{z}^\ast$}}
+\label{pqz}
+\end{center}
+\end{figure}
+
+Our tests show $\bm{z}^\ast$ is between $\bm{p}^\ast$ and $\bm{q}^\ast$ 
+and also equidistant from $\bm{p}^\ast$ and $\bm{q}^\ast$ in both haploid and diploid case. 
+We ran tests also for population points. In haploid case, 
+both infinite and haploid populations were between $\bm{p}^\ast$ and $\bm{q}^\ast$. 
+In diploid case, infinite population was between $\bm{p}^\ast$ and $\bm{q}^\ast$ but finite population was not. 
+These are few geometric properties of GA uncovered by our simulations. 
+Perhaps there are more geometric properties and details that can be discovered through simulations of evolutionary system.
+That could be our future investigation.
 
 In this research, we consider only uniform fitness for selection.  
 In the future, we plan to extend our work by accomodating different fitness functions in our model and investigate 

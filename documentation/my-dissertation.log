@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2017.3.7)  12 APR 2017 09:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2017.3.7)  12 APR 2017 10:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -902,11 +902,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 :<-
 [39
 
-]
-
-LaTeX Warning: Text page 40 contains only floats.
-
-[40] [41] [42] [43]
+] [40] [41] [42] [43]
 Package srcltx Info: Expanded filename `chapters/oscillation_dip.tex' to `chapt
 ers/oscillation_dip.tex' on input line 292.
 
@@ -1014,11 +1010,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 :<-
 [44
 
-]
-
-LaTeX Warning: Text page 45 contains only floats.
-
-[45] [46] [47] [48]
+] [45] [46] [47] [48]
 File: figures/eps/osc/osc_amp_hap.eps Graphic file (type eps)
  <figures/eps/osc/osc_amp_hap.eps>
 File: figures/eps/osc/osc_amp_dip.eps Graphic file (type eps)
@@ -1212,11 +1204,7 @@ File: figures/eps/vio/mu/b14/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[55]
-
-LaTeX Warning: Text page 56 contains only floats.
-
-[56] [57] [58] [59])
+[55] [56] [57] [58] [59])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -2197,11 +2185,7 @@ File: figures/eps/vio/chi/b14/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[89]
-
-LaTeX Warning: Text page 90 contains only floats.
-
-[90] [91] [92] [93])
+[89] [90] [91] [92] [93])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -3095,10 +3079,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 143.
 Here is how much of TeX's memory you used:
  10434 strings out of 493305
  173622 string characters out of 6139898
- 278763 words of memory out of 5000000
+ 279627 words of memory out of 5000000
  13495 multiletter control sequences out of 15000+600000
  22513 words of font info for 88 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 39i,16n,53p,414b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,16n,53p,434b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (144 pages, 714132 bytes).
+Output written on my-dissertation.dvi (144 pages, 718668 bytes).

@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2017.3.7)  12 APR 2017 10:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  12 APR 2017 16:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **my-dissertation.tex
 (./my-dissertation.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
 (./utthesis.cls
 utthesis.cls
 ver 1.0.0
@@ -2118,11 +2118,9 @@ File: figures/eps/vio/chi/b10/e0.01/inf_hap.eps Graphic file (type eps)
 File: figures/eps/vio/chi/b10/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b10/e0.01/inf_hap_wovio.eps>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: figures/eps/vio/chi/b12/e0.01/n00004096_fin_hap.eps Graphic file (type ep
 s)
+
 <figures/eps/vio/chi/b12/e0.01/n00004096_fin_hap.eps>
 File: figures/eps/vio/chi/b12/e0.01/n00004096_fin_hap_wovio.eps Graphic file (t
 ype eps)
@@ -2150,11 +2148,9 @@ File: figures/eps/vio/chi/b12/e0.01/inf_hap.eps Graphic file (type eps)
 File: figures/eps/vio/chi/b12/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
 <figures/eps/vio/chi/b12/e0.01/inf_hap_wovio.eps>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: figures/eps/vio/chi/b14/e0.01/n00004096_fin_hap.eps Graphic file (type ep
 s)
+
 <figures/eps/vio/chi/b14/e0.01/n00004096_fin_hap.eps>
 File: figures/eps/vio/chi/b14/e0.01/n00004096_fin_hap_wovio.eps Graphic file (t
 ype eps)
@@ -2181,11 +2177,7 @@ File: figures/eps/vio/chi/b14/e0.01/inf_hap.eps Graphic file (type eps)
 <figures/eps/vio/chi/b14/e0.01/inf_hap.eps>
 File: figures/eps/vio/chi/b14/e0.01/inf_hap_wovio.eps Graphic file (type eps)
 
-<figures/eps/vio/chi/b14/e0.01/inf_hap_wovio.eps>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[89] [90] [91] [92] [93])
+<figures/eps/vio/chi/b14/e0.01/inf_hap_wovio.eps> [89] [90] [91] [92] [93])
 :<-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -3077,12 +3069,12 @@ Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 143.
  ) 
 Here is how much of TeX's memory you used:
- 10434 strings out of 493305
- 173622 string characters out of 6139898
- 279627 words of memory out of 5000000
- 13495 multiletter control sequences out of 15000+600000
+ 10434 strings out of 495029
+ 173622 string characters out of 6181522
+ 274989 words of memory out of 5000000
+ 13246 multiletter control sequences out of 15000+600000
  22513 words of font info for 88 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
+ 14 hyphenation exceptions out of 8191
  39i,16n,53p,434b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (144 pages, 718668 bytes).
+Output written on my-dissertation.dvi (144 pages, 719160 bytes).

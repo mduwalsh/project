@@ -1,33 +1,33 @@
 \chapter{Violation in Crossover Distribution} \label{ch:chiviolation}
+The results from chapter \ref{ch:muviolation} show robustness of finite population
+demonstrating approximate oscillation occurrence in finite population
+when the mutation distribution $\bm{\mu}$ violates the condition \ref{OscCond} .  
 This chapter explores the robustness of finite population oscillation when condition \ref{OscCond} 
-for the crossover distribution is violated and infinite population trajectories
-have no periodic orbit.
+for the crossover distribution $\bm{\chi}$ is violated.
+Violation of the condition \ref{OscCond} for $\bm{\chi}$, crossover-violation,  
+can numerically be expressed as:
+\begin{equation}
+\text{For all} \;g\;, \,g \neq 0, \quad \quad \quad
+\label{chi-violation}
+  1 \neq \sum \limits_{k \in \bar{g}\mathcal{R}} \bm{\chi}_{k+g} + \bm{\chi}_k  
+\end{equation}
+The question explored in this chapter is: Can finite populations exhibit approximate oscillation when there is violation in $\bm{\chi}$ 
+and infinite population trajectories
+have no periodic orbit?
 
 Error $\bm{\epsilon}$ is introduced into the crossover distribution $\bm{\chi}$ so as to 
 violate condition \ref{OscCond}; this guarantees that 
 infinite population trajectories have no periodic orbit. Consequently, $\bm{p}^\ast \;=\; \bm{q}^\ast \;=\; \bm{z}^\ast$. 
-Violation of the condition \ref{OscCond} for $\bm{\chi}$, crossover-violation,  
-can numerically be expressed as:\newline  
-for all $g$,  $g \neq 0$,
-\begin{equation}
-\label{chi-violation}
-  1 \neq \sum \limits_{k \in \bar{g}\mathcal{R}} \bm{\chi}_{k+g} + \bm{\chi}_k  
-\end{equation}
-
 Going forward, we use `limit $\bm{z}^\ast$' to denote evolutionary limit when crossover distribution 
 $\bm{\chi}$ violates condition \ref{OscCond}, and 
 `non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$' to denote limits without violations (i.e., $\bm{\epsilon \,=\, 0}$).
-
 \section{Violation}
-The crossover distribution $\bm{\chi}$ was modified as
-\[
-\bm{\chi}_i = (1-\bm{\epsilon}) \bm{\chi}_i\ 
-\]
-So that 
-\[
-\bm{\chi}_i + \bm{\chi}_{i+g} = 1-\bm{\epsilon} ; \tabspace g \text{ is defined in  section } \ref{Limits}
-\]
-Then a single $j$ is chosen where $j \not\in \bar{g}\mathcal{R}$ and we set $\bm{\chi}_j = \bm{\epsilon}$. 
+The crossover distribution $\bm{\chi}$ was modified as 
+\begin{equation*}
+\bm{\chi}_i = (1-\bm{\epsilon}) \bm{\chi}_i \quad \quad
+\text{so that } \quad \quad \quad \sum \bm{\chi}_i + \bm{\chi}_{i+g} = 1-\bm{\epsilon}  
+\end{equation*}  
+Then a single $j$ is chosen where $j \not\in \bar{g}\mathcal{R}$ and set $\bm{\chi}_j = \bm{\epsilon}$. 
 
 Violation in crossover distribution $\bm{\chi}$ is different from violation in mutation distribution $\bm{\mu}$. 
 The Markov chain formed by transition matrix $Q$ is regular under violation in $\bm{\mu}$ 

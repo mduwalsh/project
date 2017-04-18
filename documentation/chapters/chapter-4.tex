@@ -6,17 +6,17 @@ finite population oscillation when condition \ref{OscCond} is violated for $\bm{
 The violation of the condition \ref{OscCond} prevents 
 infinite population convergence to a periodic orbit. 
 Violation of the condition \ref{OscCond} for $\bm{\mu}$, mutation-violation as we call it, 
-can numerically be expressed as:\newline  
-for all $g$, $g \neq 0$,
+is expressed as:  
 \begin{equation}
 \label{mu-violation}
-  -1 \neq \sum \limits_{j} (-1)^{g^T j} \bm{\mu}_j  
+ \text{For all} \;g\;, \,g \neq 0, \quad \quad \quad
+ -1 \neq \sum \limits_{j} (-1)^{g^T j} \bm{\mu}_j  
 \end{equation}
-Mutation-violation (described in next section) also makes 
+Mutation-violation also makes 
 the Markov chain representing finite population evolution regular 
 (sometimes called ergodic). If the Markov chain is regular, 
-then positive steady state distribution exists for the Markov chain. 
-This means no finite population periodic orbit exists, 
+then positive steady state distribution exists for the Markov chain, 
+no finite population periodic orbit exists, 
 and perfect finite population oscillation can not occur. 
 The question explored in this chapter is: Can finite populations exhibit approximate oscillation when the
 Markov chain is regular and infinite population trajectories
@@ -25,7 +25,6 @@ have no periodic orbit?
 Error $\bm{\epsilon}$ is introduced into the mutation distribution $\bm{\mu}$ so as to 
 violate condition \ref{OscCond}; this guarantees that 
 infinite population trajectories have no periodic orbit. Consequently, $\bm{p}^\ast \;=\; \bm{q}^\ast \;=\; \bm{z}^\ast$. 
-Violation of condition \ref{OscCond} for the mutation distribution makes the Markov chain regular. 
 Going forward, we use `limit $\bm{z}^\ast$' to denote evolutionary limit when mutation distribution $\bm{\mu}$ 
 violates condition \ref{OscCond}, and 
 `non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$' to denote limits without violation (i.e., $\bm{\epsilon} \;=\; 0$).
@@ -51,7 +50,8 @@ Then set
 % \bm{\mu}_i = \bm{\epsilon}^2/c \; ; \; where \; \bm{\mu}_i = 0
 % \]
 The modified mutation distribution $\bm{\mu}$ is normalized such that  $\sum \bm{\mu}_i \;=\; 1$.
-The new $\bm{\mu}$ satisfies condition \ref{mu-violation}.
+The new $\bm{\mu}$ satisfies condition \ref{mu-violation}. 
+Moreover, the no mutation event (using mask $0$) has positive probability ($\bm{\mu}_0 = \bm{\epsilon} > 0$).
 
 The modification described above makes it possible for any population member to mutate to any other population member.
 % provided there is non crossover. From equation \ref{ChiDist}, $k \bar{g} \;=\; k$ is true for any $g$ when $k$ is all $0$s, 
@@ -72,33 +72,36 @@ will have positive probability if $g$ also is $1$ at position $k$. Thus, any bit
 Any mask with $1$ in just one of the positions where $g$ has $1$s and also $1$ in just one of the positions where $g$ has $0$s can be used to 
 mutate a bit where $g$ is $0$. Let us take an example with $\ell \;=\; 8$. Let $g \;=\; 11001111$. Then, 
 mask $i \;=\; 00000100$ will have positive probability according to condition \ref{OscCond}. Also mask 
-$j \;=\; 00010100$ will have positive probability. Mask $i$ can be used to mutate the sixth bit, and masks $i$ and $j$ will result in mutating
-the fourth bit. More generally, any bit has the option of mutating or not, so any string can mutate to any other. Since any population can therefore 
-mutate to any other population (this may involve many generations because there are many population members which may need to be mutated), the Markov 
+$j \;=\; 00010100$ will have positive probability. Mask $i$ can be used to mutate the sixth bit, 
+and mutation with mask $i$ followed by mutation with mask $j$ will result in mutating
+the fourth bit. More generally, any bit has the option of mutating or not, 
+so any string can mutate to any other. Since any population can therefore 
+mutate to any other population (this may involve many generations because 
+there are many population members which may need to be mutated), the Markov 
 chain is irreducible.
 
 The Markov chain is also aperiodic. We prove this by simple induction. 
 Let $S(n)$ be the assertion that population $P$ can be returned to in $n$ generations. 
 Our base case is $n \;=\; 1$. The GA can stay in its original state $P$ if no mutation or crossover events occur. 
 Population $P$ has option to not mutate to any other population, since all $0$s mutation mask 
-has positive probability. Moreover, the all $0$s crossover mask can have positive probability since 
-that is compatible with condition \ref{OscCond}.
-So $S(n)$ is true. Now, assume $S(k)$ is true. Therefore, population $P$ can be returned to in $n \;= \;k$ generations. 
+has positive probability.
+So $S(n)$ is true. Now assume $S(k)$ is true, population $P$ can be returned to in $n \;= \;k$ generations. 
 In the $k+1$th generation, population $P$ has the option to stay in state $P$. 
-So $S(k+1)$ is also true and that completes the inductive proof. 
+So $S(k+1)$ is also trueand that completes the inductive proof. 
 Since any population state can be returned to in any period of time, the Markov chain is aperiodic. 
 
 Because the Markov chain formed by GA after violation in $\bm{\mu}$ is irreducible and aperiodic, 
 the Markov chain is regular (see \cite{Iosifescu1980}), and a steady state distribution 
 with positive components exists for the GA (see \cite{Minc1988}).   
 
-Simulations were repeated with the violations in (\ref{OscCond}) described above for the mutation distribution. 
+Simulations were repeated with mutation-violation described above. 
 The initial population is 
 computed using same procedure as described in section \ref{InitPopOsc}. To explore the effects of the degree  
-of violation of condition \ref{OscCond} in $\bm{\mu}$, different values of $\bm{\epsilon} \in \{0.01, 0.1, 0.5\} $ are used in experiments. 
+of violation, different values of $\bm{\epsilon} \in \{0.01, 0.1, 0.5\} $ are used in experiments. 
 String lengths $\ell \;\in\; \{8, 10, 12, 14\}$ are considered for simulation.
 The distances of both infinite and finite populations to limit $\bm{z}^\ast$ were plotted. 
-The distances of both infinite and finite populations to non-violation limits $\bm{p}^\ast$ and $\bm{q}^\ast$ were also plotted.
+The distances of both infinite and finite populations to non-violation limits 
+$\bm{p}^\ast$ and $\bm{q}^\ast$ (i.e. $\bm{\epsilon} = 0$) were also plotted.
 
 % figures for mu violation
 \subsection{Haploid Population $\mathtt{\sim}$ $\epsilon: 0.01$}
@@ -170,8 +173,8 @@ the Markov chain representing finite population evolution regular,
 and ensuring that infinite population trajectories 
 have no periodic orbit. Our experiments show that finite population evolution 
 continues to approximately oscillate for small values of $\bm{\epsilon}$. 
-For such values of $\bm{\epsilon}$, finite population evolution might not be 
-aware of violation in condition \ref{OscCond} because the probability of using 
+For such values of $\bm{\epsilon}$, finite population evolution might sometimes be 
+unaware of violation in condition \ref{OscCond} because the probability of using 
 the new mask (all 0s mask) is low, and 
 if the new mask is not used, finite population behavior 
 matches the behavior exhibited without the violation. 

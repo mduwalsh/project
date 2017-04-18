@@ -13,13 +13,12 @@ A level-1 auxiliary file: chapters/chapter-4.aux
 A level-1 auxiliary file: chapters/chapter-5.aux
 A level-1 auxiliary file: chapters/chapter-6.aux
 The style file: apalike.bst
-A level-1 auxiliary file: back-matter/appendix-1.aux
 A level-1 auxiliary file: back-matter/vita.aux
 Database file #1: references/references-dissertation.bib
 Warning--there's a number but no volume in Wright2001
 You've used 29 entries,
             1935 wiz_defined-function locations,
-            677 strings with 7482 characters,
+            676 strings with 7456 characters,
 and the built_in function-call counts, 9550 in all, are:
 = -- 950
 > -- 256

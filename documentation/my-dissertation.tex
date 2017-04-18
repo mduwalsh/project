@@ -126,9 +126,16 @@
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % BIBLIOGRAPHY
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     \makeBibliographyPage % make the bibliography title page - can be edited in ut-thesis-template.tex 
+    \makeBibliographyPage % make the bibliography title page - can be edited in ut-thesis-template.tex 
+    \clearpage
+    \begingroup
+    \renewcommand{\chapter}[2]{}%
     \bibliographystyle{apalike} % bibliography style - recommend using apalike-doi as it hyperlinks DOIs
+%     \renewcommand{\bibname}{}
+%     \mbox{}\\[-4.0in]
     \bibliography{references/references-dissertation} % references.bib included in the references directory
+    \endgroup
+    
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % APPENDIX - OPTIONAL - COMMENT IF NOT NEEDED
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

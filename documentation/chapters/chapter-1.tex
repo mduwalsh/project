@@ -37,13 +37,19 @@ paragraph. In particular, $g \overline{g} = {\bf 0} = g+g$,
 
 
 \section{Background}
-
-The genetic algorithm (GA) is inspired by nature, and seeks to evolve useful constructs. It is typically population based, and 
+\subsection{Genetic Algorithm}
+The genetic algorithm (GA) is inspired by nature, and seeks to evolve useful constructs. 
+It is typically population based, and 
 proceeds over a number of generations to evolve solutions to problems not yielding to other known methods. 
-Basic elements of a GA are: 
+Several people working in the 1950s and the 1960s -- like Box (1957), Friedman (1959),
+Bledsoe (1961), Bremermann (1962), and Reed, Toombs and Baricelli (1967) -- developed evolution-inspired algorithms, 
+but little attention or theoretical analysis was given to them (see \cite{Mitchell1999}). Genetic algorithms were popularized by Holland 
+and his colleagues in the 1960s and the 1970s. Holland introduced a population-based algorithm with crossover and mutation, 
+and promoted his schema theorem (see \cite{Holland1975}). 
+Basic elements of a simple style GA are: 
 selection according to fitness, crossover, and random mutation (see \cite{Mitchell1999}). 
 In the simplest case, population members are fixed-length binary strings.   
-The fitness function assigns a score (fitness) to the elements (chromosomes) of 
+The fitness function assigns a value (fitness) to the elements (chromosomes) of 
 the current population. 
 
 \textit{Selection}: select population members in the current population for reproduction; 
@@ -56,26 +62,25 @@ and exchange subsequences after that point to create two offspring.
 the mutation rate.
 
 Figure \ref{FiniteGA} shows the procedural flow of a basic finite population genetic algorithm.
-\begin{figure}[H]
+\begin{figure}[h]
 \begin{center}
-\resizebox*{8cm}{!}{\includegraphics{figures/eps/GA.eps}}\hspace{4pt}
+\resizebox*{8.3cm}{!}{\includegraphics{figures/eps/GA.eps}}\hspace{4pt}
 \caption{\textbf{Finite GA (Haploid)} }
 \label{FiniteGA}
 \end{center}
 \end{figure}
 
-A simple Holland style genetic algorithm (see \cite{Holland1975}):
-
-\begin{algorithm}
+A simple Holland style genetic algorithm:
+\begin{algorithm}[h]
 \caption*{}
 \begin{algorithmic}[1]
-\Statex 1. Start with some initial population $P$ containing $r$ binary strings of length $\ell$.
-\Statex 2. Choose (with replacement) parents $u$ and $v$ from the current population $P$ (using any selection scheme).
-  \Statex \hspace{\algorithmicindent} a. Cross $u$ and $v$ to produce children $u^\prime$ and $v^\prime$.
-  \Statex \hspace{\algorithmicindent} b. Mutate $u^\prime$ and $v^\prime$ with some probability to produce $u^{\prime\prime}$ and $v^{\prime\prime}$.
+\Statex 1. Start with some population $P$ containing $r$ binary strings of length $\ell$
+\Statex 2. Choose parents $u$ and $v$ from the current population $P$ (using any selection scheme with replacement)
+  \Statex \hspace{\algorithmicindent} a. Crossover $u$ and $v$ to produce children $u^\prime$ and $v^\prime$
+  \Statex \hspace{\algorithmicindent} b. Mutate $u^\prime$ and $v^\prime$ with some probability to produce $u^{\prime\prime}$ and $v^{\prime\prime}$
   \Statex \hspace{\algorithmicindent} c. Keep, with uniform probability, one of $u^{\prime\prime}$ and $v^{\prime\prime}$ for the next generation 
-\Statex 3. If the next generation contains fewer than $r$ members, repeat step 2.
-\Statex 4. Replace $P$ by the new generation formed and go to step 2.
+\Statex 3. Repeat step 2 until $r$ offspring are created
+\Statex 4. Replace $P$ by the new generation formed and go to step 2
 \end{algorithmic}
 \label{RealGA}
 \end{algorithm}
@@ -88,11 +93,11 @@ algorithm for finite diploid population genetic algorithm.
 In case of diploid population GA each parent ($u$ and $v$) 
 has two haploid components ($\langle u_0, u_1 \rangle$ and $\langle v_0, v_1 \rangle$ respectively). 
 Instead of crossing over two parent diploids, 
-haploids in each diploid $u_0$ and $u_1$, and $v_0$ and $v_1$, 
+haploids in each diploid $\langle u_0, u_1 \rangle$, and $\langle v_0, v_1 \rangle$, 
 crossover and mutate to produce gametes $g_0$ and $g_1$. 
 And gametes $g_0$ and $g_1$ are fused to form offspring diploid $ \langle g_0, g_1 \rangle $.
 
-\begin{figure}[H]
+\begin{figure}[h]
 \begin{center}
 \resizebox*{8cm}{!}{\includegraphics{figures/eps/GA_dip.eps}}\hspace{4pt}
 \caption{\textbf{Finite GA (Diploid)} }
@@ -100,23 +105,11 @@ And gametes $g_0$ and $g_1$ are fused to form offspring diploid $ \langle g_0, g
 \end{center}
 \end{figure}
 
-
-The infinite population GA models a population as a probability vector $\bm{p}$ where component $\bm{p}_j$ 
-can be interpreted as the proportion of string $j$ in the population. If $\mathcal{G}$ is the function mapping infinite population $\bm{p}$ to 
-the next generation, $\mathcal{G}(\bm{p})$ is a probability vector such that 
-\[
-\mathcal{G}(\bm{p})_j \; = \; \text{proportion of $j$ in the next generation}.
-\]
-The evolution of infinite population $\bm{p}$ is the sequence
-\[ \bm{p} \to \mathcal{G}(\bm{p}) \to  {\mathcal{G}}(\mathcal{G}(\bm{p})) \to \cdots \]
-\setcounter{footnote}{2}
+\subsection{Infinite Population Model}
 Haldane, in the classic book `The Causes Of Evolution', presents a summary of the basic models of population genetics 
 by Wright, Fisher, and Haldane (see \cite{Haldane1932}). 
-Several people working in the 1950s and the 1960s -- like Box (1957), Friedman (1959),
-Bledsoe (1961), Bremermann (1962), and Reed, Toombs and Baricelli (1967) -- developed evolution-inspired algorithms, 
-but little attention or theoretical analysis was given to them (see \cite{Mitchell1999}). Genetic algorithms were popularized by Holland 
-and his colleagues in the 1960s and the 1970s. Holland introduced a population-based algorithm with crossover and mutation, 
-and promoted his schema theorem (see \cite{Holland1975}) as a theoretical means by which to analyze genetic algorithm dynamics. 
+Holland introduced a population-based algorithm with crossover and mutation, 
+and promoted his schema theorem as a theoretical means by which to analyze genetic algorithm dynamics (see \cite{Holland1975}). 
 Holland's Schema theorem provides a lower bound for schema survival in 
 next generation.\footnote{A schema is a template that identifies a set of strings in the population with similarities 
 at certain string positions; it is made up of $1$s, $0$s, and $\ast$s where 
@@ -130,16 +123,33 @@ these equations by integrating mutation into the recombination of arbitrarily lo
 Although their model computes infinite population trajectories, given a {\em finite} population represented by vector $\bm{p}$  
 (component $\bm{p}_i$ is the proportion of string $i$ in the {\em finite population}), the infinite population model 
 computes the expected proportion $\mathcal{G}(\bm{p})_i$ of string $i$ in the next generation.  This is perhaps the most 
-direct connection between the infinite population model and a finite population GA.
+direct connection between the infinite population model and a finite population GA. In the model, $\mathcal{G}$ 
+comprises of fitness matrix $F$ and recombination operator $\mathcal{M}$ that includes application of crossover and mutation.
 
+The infinite population GA models a population as a vector $\bm{p}$ where component $\bm{p}_j$ 
+can be interpreted as the proportion of string $j$ in the population. If $\mathcal{G}$ is the function mapping infinite population $\bm{p}$ to 
+the next generation, $\mathcal{G}(\bm{p})$ is a vector such that 
+\[
+\mathcal{G}(\bm{p})_j \; = \; \text{proportion of $j$ in the next generation}.
+\]
+The evolution of infinite population $\bm{p}$ is the sequence
+\[ \bm{p} \to \mathcal{G}(\bm{p}) \to  {\mathcal{G}}(\mathcal{G}(\bm{p})) \to \cdots \]
+\setcounter{footnote}{2}
+
+\subsection{Finite Population Model}
+The infinite population model simplifies analysis of GA. However, finite populations 
+can behave differently than infinite populations due to stochasticity involved with selection, crossover and mutaiton. 
 Nix and Vose (see \cite{Nix1992}) explored issues regarding the relationship between the finite population GA and the infinite population model. 
-For a mutation rate $\mu$ between $0$ and $0.5$, a finite population GA will form an ergodic Markov chain, 
-visiting every state infinitely often in the long run.
-The short term trajectory followed by a finite population is related to 
-the evolutionary path determined by the infinite population model. 
-For large populations, the short term trajectory follows closely and 
+In particular, for a mutation rate $\mu$ between $0$ and $0.5$, a finite population GA will form an ergodic Markov chain, 
+visiting every state infinitely often in the long run. 
+Moreover, the short term trajectory followed by a finite population is related to 
+the evolutionary path determined by the infinite population model, and  
+for large populations, the short term trajectory follows closely and 
 with large probability, that path predicted by 
 the infinite population model. 
+
+Vose later generalized both infinite and finite population models as special case of a 
+general abstract search framework called Random Heuristic Search (RHS) (described more in section \ref{RHS}).
 % So if we form a geometrical cylinder 
 % around the path determined by the infinite population model, a finite population GA will stay inside the pipe in the short term, and 
 % then escape it after some period of time. 
@@ -151,6 +161,7 @@ the infinite population model.
 % between expected population predicted using infinite population model and the actual population observed in 
 % finite population genetic algorithm. 
 
+\subsection{Walsh Transform}
 Vose compiled and extended previous work regarding the infinite population model in the book 
 \textit{Simple Genetic Algorithm: Foundations and Theory} (see \cite{Vose1999}). 
 In particular, he discussed how the Walsh transform can be applied to increase 
@@ -176,6 +187,7 @@ the mixing matrix is sparse in the Walsh basis, and the computational efficiency
 computing $\mathcal{G}(\bm{p})$ can thereby be improved from 
 $O(8^\ell)$ to $O(3^\ell)$ where $\ell$ is the chromosome length. The cost of moving from standard coordinates to the Walsh basis need not be a bottleneck; 
 the fast Walsh transform (see \cite{Shanks1969}) does that in $O(\ell \, 2^\ell)$ time.
+
 
 
 \section{Random Heuristic Search}

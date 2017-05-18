@@ -150,13 +150,13 @@ The FWT algorithm can be translated into pseudocode as:
 \Procedure{FWT}{}
 
 \State $n = 2^d   \gets $  size of array $X$ where $d$ is positive integer
-\For{$i = 0$ to $d-1$ }
-\State $m = n/2^i$
+\For{$i = 1$ to $d$ }
+\State $m = 2^i$
 \State $z = m/2$
-\For{$j = 0$ to $2^i-1$}
 \For{$k = 0$ to $z-1$}
-\State $t1 = m \times j + k$
-\State $t2 = m \times j + z +k$
+\For{$j = 0$ to $n-1$ step $m$}
+\State $t1 = j + k$
+\State $t2 = t1 + z$
 \State $a = X[t1]$
 \State $b= X[t2]$
 \State $X[t1] = a + b$

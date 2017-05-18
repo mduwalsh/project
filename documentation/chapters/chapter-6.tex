@@ -25,8 +25,8 @@ finite populations continue to approximately oscillate if the violation is small
 and when the violation is larger, oscillation dies out and randomness in behavior increases. 
 
 When the condition is violated for the crossover distribution,
-we could not show that Markov chain formed is regular, 
-but results showed finite populations continue to approximately oscillate 
+we did not prove that the Markov chain formed is regular or not, 
+but results show finite populations continue to approximately oscillate 
 when the violation is small, and randomness in behavior increases when the violation is larger. 
 As genome length increases oscillation in population degrades. 
 Moreover, larger population shows better oscillation 
@@ -37,28 +37,27 @@ In figures \ref{oscillation_12d_vio_mu_0.1}, \ref{oscillation_14d_vio_mu_0.1},
 \ref{oscillation_12d_vio_chi_0.1} and \ref{oscillation_14d_vio_chi_0.1},  
 infinite population oscillation dies out symmetrically to 
 give graph of single straight line. But infinite population is converging to limit $\bm{z}^\ast$. 
-This suggests $\bm{z}^\ast$ may be somewhere in equidistant plane from $\bm{p}^\ast$ and $\bm{q}^\ast$.
-So, we devised a test to check if $\bm{z}^\ast$ lies between hyperplanes perpendicular to the line 
-joining $\bm{p}^\ast$ and $\bm{q}^\ast$. 
-Let $\bm{n}$ be unit vector to the line joining $\bm{p}^\ast$ and $\bm{q}^\ast$ as shown in figure \ref{pqz} given by
+This suggests $\bm{z}^\ast$ may be somewhere equidistant from $\bm{p}^\ast$ and $\bm{q}^\ast$.
+We devised a test to check whether $\bm{z}^\ast$ lies between hyperplanes $H_1$ and $H_2$, both perpendicular to the line 
+joining $\bm{p}^\ast$ and $\bm{q}^\ast$, $H_1$ containing $\bm{p}^\ast$ and $H_2$ containing $\bm{q}^\ast$.
+Let $\bm{n}$ be unit vector parallel to the line joining $\bm{p}^\ast$ and $\bm{q}^\ast$ as shown in figure \ref{pqz}
 \[
   \bm{n} \,=\, \frac{\bm{p}^\ast - \bm{q}^\ast}{\|\bm{p}^\ast-\bm{q}^\ast\|}
 \]
-Then any point $x$ is {\em in between /} $\bm{p}^\ast$ and $\bm{q}^\ast$ if
+Then a point $x$ is {\em between} $H_1$ and $H_2$ if
 \[
   \bm{n}^T(x-\bm{p}^\ast) \,<\, 0 \quad \quad \text{and} \quad \quad \bm{n}^T(x-\bm{q}^\ast) \,>\, 0.
 \]
-$\bm{n}^T(x-\bm{p}^\ast)$ is dot-product of $\bm{n}^T$ and $(x-\bm{p}^\ast)$
+Note that $\bm{n}^T(x-\bm{p}^\ast)$ is dot-product of $\bm{n}$ and $(x-\bm{p}^\ast)$; its value is 
 \[
-  =\, \|x-\bm{p}^\ast\| \cos \psi
+  \|x-\bm{p}^\ast\| \cos \phi
 \]
-where $\psi$ is angle between vectors $\bm{n}^T$ and $(x-\bm{p}^\ast)$.
-
-$\bm{n}^T(x-\bm{q}^\ast)$ is dot-product of $\bm{n}^T$ and $(x-\bm{q}^\ast)$
+where $\phi$ is angle between vectors $\bm{n}$ and $(x-\bm{p}^\ast)$. Likewise, 
+$\bm{n}^T(x-\bm{q}^\ast)$ is dot-product of $\bm{n}$ and $(x-\bm{q}^\ast)$; its value is
 \[
-  =\, \|x-\bm{q}^\ast\| \cos \theta
+  \|x-\bm{q}^\ast\| \cos \theta
 \]
-where $\theta$ is angle between vectors $\bm{n}^T$ and $(x-\bm{q}^\ast)$.
+where $\theta$ is angle between vectors $\bm{n}$ and $(x-\bm{q}^\ast)$.
 
 \begin{figure}[!ht]
 \begin{center}
@@ -70,18 +69,19 @@ where $\theta$ is angle between vectors $\bm{n}^T$ and $(x-\bm{q}^\ast)$.
 \end{center}
 \end{figure}
 
-Our tests show $\bm{z}^\ast$ is between $\bm{p}^\ast$ and $\bm{q}^\ast$ 
-and also equidistant from $\bm{p}^\ast$ and $\bm{q}^\ast$ in both haploid and diploid case. 
+Our tests show $\bm{z}^\ast$ is between $H_1$ and $H_2$ 
+and also equidistant from $\bm{p}^\ast$ and $\bm{q}^\ast$ in both the haploid and diploid case. 
 We also ran tests for population points. In haploid case, 
-both infinite and haploid populations were between $\bm{p}^\ast$ and $\bm{q}^\ast$. 
-In diploid case, infinite population was between $\bm{p}^\ast$ and $\bm{q}^\ast$ but finite population was not. 
-These are few geometric properties of GA uncovered by our simulations. 
-Perhaps there are more geometric properties and details that can be discovered through simulations of evolutionary system.
-That could be our future investigation.
+both infinite and haploid populations were between $H_1$ and $H_2$. 
+In diploid case, infinite populations were between $H_1$ and $H_2$ but finite populations were not. 
+These geometric properties of GA were uncovered by our simulations. 
+Whether these observations persist to simulations we have not checked, or whether they only are true for those we considered is at this point unknown. 
+Perhaps there are more geometric properties and details that can be discovered through further simulations of evolutionary system.
+That is a topic for future investigation.
 
-In this research, we consider only uniform fitness for selection.  
-In the future, we plan to extend our work by accomodating different fitness functions in our model and investigate 
-the influence of that change upon the results obtained in the absence of selective pressure.
+% In this research, we consider only uniform fitness for selection.  
+% In the future, we plan to extend our work by accomodating different fitness functions in our model and investigate 
+% the influence of that change upon the results obtained in the absence of selective pressure.
 
 
 

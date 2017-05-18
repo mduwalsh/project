@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.18)  27 APR 2017 17:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2017.3.7)  17 MAY 2017 23:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **my-dissertation.tex
 (./my-dissertation.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (./utthesis.cls
 utthesis.cls
 ver 1.0.0
@@ -488,7 +488,12 @@ le
 Package: algpseudocode 
 
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (./my-dissertation.aux (./front-matter/abstract.aux))
+) (./my-dissertation.aux (./front-matter/dedication.aux)
+(./front-matter/acknowledgements.aux) (./front-matter/quote.aux)
+(./front-matter/abstract.aux) (./front-matter/nomenclature.aux)
+(./chapters/chapter-1.aux) (./chapters/chapter-2.aux) (./chapters/chapter-3.aux
+) (./chapters/chapter-4.aux) (./chapters/chapter-5.aux)
+(./chapters/chapter-6.aux) (./back-matter/vita.aux))
 \openout1 = `my-dissertation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
@@ -562,13 +567,135 @@ LaTeX Info: Redefining \nameref on input line 72.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 75.
 
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 75.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 75.
+
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+) [1
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+
+ []
+
+[2] [3
+
+
+
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 85.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 85.
+ [2
+
+
+]
+:<+ front-matter/dedication.tex
+\openout2 = `front-matter/dedication.aux'.
+
+(./front-matter/dedication.tex) [3
+
+
+
+
+
+]
+:<-
+:<+ front-matter/acknowledgements.tex
+\openout2 = `front-matter/acknowledgements.aux'.
+
+(./front-matter/acknowledgements.tex) [4
+
+
+
+
+
+
+]
+:<-
+:<+ front-matter/quote.tex
+\openout2 = `front-matter/quote.aux'.
+
+(./front-matter/quote.tex) [5
+
+
+
+
+
+
+]
+:<-
 :<+ front-matter/abstract.tex
 \openout2 = `front-matter/abstract.aux'.
 
-(./front-matter/abstract.tex) [1
+(./front-matter/abstract.tex) [6
 
 
+
+
+
+
+] [7]
+:<-
+(./my-dissertation.toc [8
+
+
+
+
+] [9])
+\tf@toc=\write4
+\openout4 = `my-dissertation.toc'.
+
+ [10] (./my-dissertation.lot)
+\tf@lot=\write5
+\openout5 = `my-dissertation.lot'.
+
+ [11
+
+]
+(./my-dissertation.lof [12
+
+] [13] [14] [15])
+\tf@lof=\write6
+\openout6 = `my-dissertation.lof'.
+
+\@nomenclaturefile=\write7
+\openout7 = `my-dissertation.nlo'.
+
+
+Writing nomenclature file my-dissertation.nlo
+[16]
+No file my-dissertation.nls.
+:<+ front-matter/nomenclature.tex
+\openout2 = `front-matter/nomenclature.aux'.
+
+(./front-matter/nomenclature.tex)
+:<-
+:<+ chapters/chapter-1.tex
+\openout2 = `chapters/chapter-1.aux'.
+
+(./chapters/chapter-1.tex
+Chapter 1.
+[1
 
 
 
@@ -578,23 +705,2393 @@ Package caption Info: End \AtBeginDocument code.
 
 
 ] [2]
+File: figures/eps/GA.eps Graphic file (type eps)
+ <figures/eps/GA.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3]
+File: figures/eps/GA_dip.eps Graphic file (type eps)
+ <figures/eps/GA_dip.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4] [5] [6] [7] [8] [9]
+File: figures/eps/tetra_popn.eps Graphic file (type eps)
+ <figures/eps/tetra_popn.eps> [10] [11] [12] [13]
+File: figures/eps/cmf.eps Graphic file (type eps)
+
+<figures/eps/cmf.eps> [14] [15]) [16]
+:<-
+:<+ chapters/chapter-2.tex
+\openout2 = `chapters/chapter-2.aux'.
+
+(./chapters/chapter-2.tex
+Chapter 2.
+[17
+
+
+
+
+] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 78--83
+
+ []
+
+[19] [20]
+Package srcltx Info: Expanded filename `chapters/specialization.tex' to `chapte
+rs/specialization.tex' on input line 170.
+
+:<+ chapters/specialization.tex
+(./chapters/specialization.tex
+Underfull \hbox (badness 10000) in paragraph at lines 25--33
+
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 52--55
+
+ []
+
+[22] [23]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 147.
+ [24] [25])
+:<-
+Package srcltx Info: Expanded filename `chapters/convergence.tex' to `chapters/
+convergence.tex' on input line 172.
+:<+ chapters/convergence.tex
+(./chapters/convergence.tex
+Underfull \hbox (badness 10000) in paragraph at lines 7--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--18
+
+ []
+
+[26] [27] [28]
+File: figures/eps/surf/b4.eps Graphic file (type eps)
+ <figures/eps/surf/b4.eps>
+File: figures/eps/surf/b6.eps Graphic file (type eps)
+ <figures/eps/surf/b6.eps>
+File: figures/eps/surf/b8.eps Graphic file (type eps)
+
+<figures/eps/surf/b8.eps>
+File: figures/eps/surf/b10.eps Graphic file (type eps)
+ <figures/eps/surf/b10.eps>
+File: figures/eps/surf/b12.eps Graphic file (type eps)
+
+<figures/eps/surf/b12.eps>
+File: figures/eps/surf/b14.eps Graphic file (type eps)
+ <figures/eps/surf/b14.eps>
+File: figures/eps/slope/m.eps Graphic file (type eps)
+
+<figures/eps/slope/m.eps>
+File: figures/eps/slope/b.eps Graphic file (type eps)
+ <figures/eps/slope/b.eps> [29] [30] [31]
+File: figures/eps/nonlinear.eps Graphic file (type eps)
+
+<figures/eps/nonlinear.eps>)
+:<-
+) [32] [33]
+:<-
+:<+ chapters/chapter-3.tex
+\openout2 = `chapters/chapter-3.aux'.
+
+(./chapters/chapter-3.tex
+Chapter 3.
+[34
+
+
+
+
+] [35] [36] [37] [38] [39]
+Package srcltx Info: Expanded filename `chapters/oscillation_hap.tex' to `chapt
+ers/oscillation_hap.tex' on input line 216.
+
+:<+ chapters/oscillation_hap.tex
+(./chapters/oscillation_hap.tex
+File: figures/eps/osc/b8/n004096_osc_fin_hap.eps Graphic file (type eps)
+ <figures/eps/osc/b8/n004096_osc_fin_hap.eps>
+File: figures/eps/osc/b8/n004096_osc_fin_hap_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b8/n004096_osc_fin_hap_dist.eps>
+File: figures/eps/osc/b8/n040960_osc_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/osc/b8/n040960_osc_fin_hap.eps>
+File: figures/eps/osc/b8/n040960_osc_fin_hap_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b8/n040960_osc_fin_hap_dist.eps>
+File: figures/eps/osc/b8/n081920_osc_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/osc/b8/n081920_osc_fin_hap.eps>
+File: figures/eps/osc/b8/n081920_osc_fin_hap_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b8/n081920_osc_fin_hap_dist.eps>
+File: figures/eps/osc/b8/osc_inf_hap.eps Graphic file (type eps)
+
+<figures/eps/osc/b8/osc_inf_hap.eps>
+File: figures/eps/osc/b8/fin_hap_dist.eps Graphic file (type eps)
+ <figures/eps/osc/b8/fin_hap_dist.eps>
+File: figures/eps/osc/b10/n004096_osc_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/osc/b10/n004096_osc_fin_hap.eps>
+File: figures/eps/osc/b10/n004096_osc_fin_hap_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b10/n004096_osc_fin_hap_dist.eps>
+File: figures/eps/osc/b10/n040960_osc_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/osc/b10/n040960_osc_fin_hap.eps>
+File: figures/eps/osc/b10/n040960_osc_fin_hap_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b10/n040960_osc_fin_hap_dist.eps>
+File: figures/eps/osc/b10/n081920_osc_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/osc/b10/n081920_osc_fin_hap.eps>
+File: figures/eps/osc/b10/n081920_osc_fin_hap_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b10/n081920_osc_fin_hap_dist.eps>
+File: figures/eps/osc/b10/osc_inf_hap.eps Graphic file (type eps)
+
+<figures/eps/osc/b10/osc_inf_hap.eps>
+File: figures/eps/osc/b10/fin_hap_dist.eps Graphic file (type eps)
+ <figures/eps/osc/b10/fin_hap_dist.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/osc/b12/n004096_osc_fin_hap.eps Graphic file (type eps)
+<figures/eps/osc/b12/n004096_osc_fin_hap.eps>
+File: figures/eps/osc/b12/n004096_osc_fin_hap_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b12/n004096_osc_fin_hap_dist.eps>
+File: figures/eps/osc/b12/n040960_osc_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/osc/b12/n040960_osc_fin_hap.eps>
+File: figures/eps/osc/b12/n040960_osc_fin_hap_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b12/n040960_osc_fin_hap_dist.eps>
+File: figures/eps/osc/b12/n081920_osc_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/osc/b12/n081920_osc_fin_hap.eps>
+File: figures/eps/osc/b12/n081920_osc_fin_hap_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b12/n081920_osc_fin_hap_dist.eps>
+File: figures/eps/osc/b12/osc_inf_hap.eps Graphic file (type eps)
+
+<figures/eps/osc/b12/osc_inf_hap.eps>
+File: figures/eps/osc/b12/fin_hap_dist.eps Graphic file (type eps)
+ <figures/eps/osc/b12/fin_hap_dist.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/osc/b14/n004096_osc_fin_hap.eps Graphic file (type eps)
+<figures/eps/osc/b14/n004096_osc_fin_hap.eps>
+File: figures/eps/osc/b14/n004096_osc_fin_hap_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b14/n004096_osc_fin_hap_dist.eps>
+File: figures/eps/osc/b14/n040960_osc_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/osc/b14/n040960_osc_fin_hap.eps>
+File: figures/eps/osc/b14/n040960_osc_fin_hap_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b14/n040960_osc_fin_hap_dist.eps>
+File: figures/eps/osc/b14/n081920_osc_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/osc/b14/n081920_osc_fin_hap.eps>
+File: figures/eps/osc/b14/n081920_osc_fin_hap_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b14/n081920_osc_fin_hap_dist.eps>
+File: figures/eps/osc/b14/osc_inf_hap.eps Graphic file (type eps)
+
+<figures/eps/osc/b14/osc_inf_hap.eps>
+File: figures/eps/osc/b14/fin_hap_dist.eps Graphic file (type eps)
+ <figures/eps/osc/b14/fin_hap_dist.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+:<-
+[40
+
+] [41] [42] [43] [44]
+Package srcltx Info: Expanded filename `chapters/oscillation_dip.tex' to `chapt
+ers/oscillation_dip.tex' on input line 292.
+
+:<+ chapters/oscillation_dip.tex
+(./chapters/oscillation_dip.tex
+File: figures/eps/osc/b8/n004096_osc_fin_dip.eps Graphic file (type eps)
+ <figures/eps/osc/b8/n004096_osc_fin_dip.eps>
+File: figures/eps/osc/b8/n004096_osc_fin_dip_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b8/n004096_osc_fin_dip_dist.eps>
+File: figures/eps/osc/b8/n040960_osc_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/osc/b8/n040960_osc_fin_dip.eps>
+File: figures/eps/osc/b8/n040960_osc_fin_dip_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b8/n040960_osc_fin_dip_dist.eps>
+File: figures/eps/osc/b8/n081920_osc_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/osc/b8/n081920_osc_fin_dip.eps>
+File: figures/eps/osc/b8/n081920_osc_fin_dip_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b8/n081920_osc_fin_dip_dist.eps>
+File: figures/eps/osc/b8/osc_inf_dip.eps Graphic file (type eps)
+
+<figures/eps/osc/b8/osc_inf_dip.eps>
+File: figures/eps/osc/b8/fin_dip_dist.eps Graphic file (type eps)
+ <figures/eps/osc/b8/fin_dip_dist.eps>
+File: figures/eps/osc/b10/n004096_osc_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/osc/b10/n004096_osc_fin_dip.eps>
+File: figures/eps/osc/b10/n004096_osc_fin_dip_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b10/n004096_osc_fin_dip_dist.eps>
+File: figures/eps/osc/b10/n040960_osc_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/osc/b10/n040960_osc_fin_dip.eps>
+File: figures/eps/osc/b10/n040960_osc_fin_dip_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b10/n040960_osc_fin_dip_dist.eps>
+File: figures/eps/osc/b10/n081920_osc_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/osc/b10/n081920_osc_fin_dip.eps>
+File: figures/eps/osc/b10/n081920_osc_fin_dip_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b10/n081920_osc_fin_dip_dist.eps>
+File: figures/eps/osc/b10/osc_inf_dip.eps Graphic file (type eps)
+
+<figures/eps/osc/b10/osc_inf_dip.eps>
+File: figures/eps/osc/b10/fin_dip_dist.eps Graphic file (type eps)
+ <figures/eps/osc/b10/fin_dip_dist.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/osc/b12/n004096_osc_fin_dip.eps Graphic file (type eps)
+<figures/eps/osc/b12/n004096_osc_fin_dip.eps>
+File: figures/eps/osc/b12/n004096_osc_fin_dip_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b12/n004096_osc_fin_dip_dist.eps>
+File: figures/eps/osc/b12/n040960_osc_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/osc/b12/n040960_osc_fin_dip.eps>
+File: figures/eps/osc/b12/n040960_osc_fin_dip_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b12/n040960_osc_fin_dip_dist.eps>
+File: figures/eps/osc/b12/n081920_osc_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/osc/b12/n081920_osc_fin_dip.eps>
+File: figures/eps/osc/b12/n081920_osc_fin_dip_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b12/n081920_osc_fin_dip_dist.eps>
+File: figures/eps/osc/b12/osc_inf_dip.eps Graphic file (type eps)
+
+<figures/eps/osc/b12/osc_inf_dip.eps>
+File: figures/eps/osc/b12/fin_dip_dist.eps Graphic file (type eps)
+ <figures/eps/osc/b12/fin_dip_dist.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/osc/b14/n004096_osc_fin_dip.eps Graphic file (type eps)
+<figures/eps/osc/b14/n004096_osc_fin_dip.eps>
+File: figures/eps/osc/b14/n004096_osc_fin_dip_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b14/n004096_osc_fin_dip_dist.eps>
+File: figures/eps/osc/b14/n040960_osc_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/osc/b14/n040960_osc_fin_dip.eps>
+File: figures/eps/osc/b14/n040960_osc_fin_dip_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b14/n040960_osc_fin_dip_dist.eps>
+File: figures/eps/osc/b14/n081920_osc_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/osc/b14/n081920_osc_fin_dip.eps>
+File: figures/eps/osc/b14/n081920_osc_fin_dip_dist.eps Graphic file (type eps)
+
+<figures/eps/osc/b14/n081920_osc_fin_dip_dist.eps>
+File: figures/eps/osc/b14/osc_inf_dip.eps Graphic file (type eps)
+
+<figures/eps/osc/b14/osc_inf_dip.eps>
+File: figures/eps/osc/b14/fin_dip_dist.eps Graphic file (type eps)
+ <figures/eps/osc/b14/fin_dip_dist.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+:<-
+[45
+
+] [46] [47] [48] [49]
+File: figures/eps/osc/osc_amp_hap.eps Graphic file (type eps)
+ <figures/eps/osc/osc_amp_hap.eps>
+File: figures/eps/osc/osc_amp_dip.eps Graphic file (type eps)
+
+<figures/eps/osc/osc_amp_dip.eps>
+Overfull \hbox (1.01158pt too wide) in paragraph at lines 321--324
+ [][][][][] 
+ []
+
+[50
+
+]
+File: figures/eps/osc/b12/b12_n004096_osc_fin_dip_lvl.eps Graphic file (type ep
+s)
+ <figures/eps/osc/b12/b12_n004096_osc_fin_dip_lvl.eps>
+File: figures/eps/osc/b14/b14_n004096_osc_fin_dip_lvl.eps Graphic file (type ep
+s)
+
+<figures/eps/osc/b14/b14_n004096_osc_fin_dip_lvl.eps>
+Overfull \hbox (1.01338pt too wide) in paragraph at lines 340--343
+ [][][][][] 
+ []
+
+File: figures/eps/osc/b14/b14_n004096_osc_fin_dip_10_50.eps Graphic file (type 
+eps)
+<figures/eps/osc/b14/b14_n004096_osc_fin_dip_10_50.eps> [51]) [52]
+:<-
+:<+ chapters/chapter-4.tex
+\openout2 = `chapters/chapter-4.aux'.
+
+(./chapters/chapter-4.tex
+Chapter 4.
+[53
+
+
+
+
+] [54] [55]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 107.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sim' on input line 107.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 107.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 107.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\epsilon' on input line 107.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 107.
+
+Package srcltx Info: Expanded filename `chapters/vio-mu-hap-e0.01.tex' to `chap
+ters/vio-mu-hap-e0.01.tex' on input line 108.
+:<+ chapters/vio-mu-hap-e0.01.tex
+(./chapters/vio-mu-hap-e0.01.tex
+File: figures/eps/vio/mu/b8/e0.01/n00004096_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b8/e0.01/n00004096_fin_hap.eps>
+File: figures/eps/vio/mu/b8/e0.01/n00004096_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b8/e0.01/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.01/n00040960_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b8/e0.01/n00040960_fin_hap.eps>
+File: figures/eps/vio/mu/b8/e0.01/n00040960_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b8/e0.01/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.01/n00081920_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b8/e0.01/n00081920_fin_hap.eps>
+File: figures/eps/vio/mu/b8/e0.01/n00081920_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b8/e0.01/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.01/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.01/inf_hap.eps>
+File: figures/eps/vio/mu/b8/e0.01/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.01/inf_hap_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.01/n00004096_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/mu/b10/e0.01/n00004096_fin_hap.eps>
+File: figures/eps/vio/mu/b10/e0.01/n00004096_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b10/e0.01/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.01/n00040960_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/mu/b10/e0.01/n00040960_fin_hap.eps>
+File: figures/eps/vio/mu/b10/e0.01/n00040960_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b10/e0.01/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.01/n00081920_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/mu/b10/e0.01/n00081920_fin_hap.eps>
+File: figures/eps/vio/mu/b10/e0.01/n00081920_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b10/e0.01/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.01/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b10/e0.01/inf_hap.eps>
+File: figures/eps/vio/mu/b10/e0.01/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b10/e0.01/inf_hap_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/mu/b12/e0.01/n00004096_fin_hap.eps Graphic file (type eps
+)
+<figures/eps/vio/mu/b12/e0.01/n00004096_fin_hap.eps>
+File: figures/eps/vio/mu/b12/e0.01/n00004096_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b12/e0.01/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.01/n00040960_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/mu/b12/e0.01/n00040960_fin_hap.eps>
+File: figures/eps/vio/mu/b12/e0.01/n00040960_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b12/e0.01/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.01/n00081920_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/mu/b12/e0.01/n00081920_fin_hap.eps>
+File: figures/eps/vio/mu/b12/e0.01/n00081920_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b12/e0.01/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.01/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.01/inf_hap.eps>
+File: figures/eps/vio/mu/b12/e0.01/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.01/inf_hap_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/mu/b14/e0.01/n00004096_fin_hap.eps Graphic file (type eps
+)
+<figures/eps/vio/mu/b14/e0.01/n00004096_fin_hap.eps>
+File: figures/eps/vio/mu/b14/e0.01/n00004096_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b14/e0.01/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.01/n00040960_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/mu/b14/e0.01/n00040960_fin_hap.eps>
+File: figures/eps/vio/mu/b14/e0.01/n00040960_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b14/e0.01/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.01/n00081920_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/mu/b14/e0.01/n00081920_fin_hap.eps>
+File: figures/eps/vio/mu/b14/e0.01/n00081920_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b14/e0.01/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.01/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b14/e0.01/inf_hap.eps>
+File: figures/eps/vio/mu/b14/e0.01/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b14/e0.01/inf_hap_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[56] [57] [58] [59] [60])
+:<-
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 109.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sim' on input line 109.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 109.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 109.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\epsilon' on input line 109.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 109.
+
+Package srcltx Info: Expanded filename `chapters/vio-mu-hap-e0.1.tex' to `chapt
+ers/vio-mu-hap-e0.1.tex' on input line 110.
+:<+ chapters/vio-mu-hap-e0.1.tex
+(./chapters/vio-mu-hap-e0.1.tex
+File: figures/eps/vio/mu/b8/e0.1/n00004096_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00004096_fin_hap.eps>
+File: figures/eps/vio/mu/b8/e0.1/n00004096_fin_hap_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.1/n00040960_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00040960_fin_hap.eps>
+File: figures/eps/vio/mu/b8/e0.1/n00040960_fin_hap_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.1/n00081920_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00081920_fin_hap.eps>
+File: figures/eps/vio/mu/b8/e0.1/n00081920_fin_hap_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.1/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.1/inf_hap.eps>
+File: figures/eps/vio/mu/b8/e0.1/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.1/inf_hap_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.1/n00004096_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b10/e0.1/n00004096_fin_hap.eps>
+File: figures/eps/vio/mu/b10/e0.1/n00004096_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b10/e0.1/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.1/n00040960_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b10/e0.1/n00040960_fin_hap.eps>
+File: figures/eps/vio/mu/b10/e0.1/n00040960_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b10/e0.1/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.1/n00081920_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b10/e0.1/n00081920_fin_hap.eps>
+File: figures/eps/vio/mu/b10/e0.1/n00081920_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b10/e0.1/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.1/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b10/e0.1/inf_hap.eps>
+File: figures/eps/vio/mu/b10/e0.1/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b10/e0.1/inf_hap_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/mu/b12/e0.1/n00004096_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.1/n00004096_fin_hap.eps>
+File: figures/eps/vio/mu/b12/e0.1/n00004096_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.1/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.1/n00040960_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b12/e0.1/n00040960_fin_hap.eps>
+File: figures/eps/vio/mu/b12/e0.1/n00040960_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.1/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.1/n00081920_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b12/e0.1/n00081920_fin_hap.eps>
+File: figures/eps/vio/mu/b12/e0.1/n00081920_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.1/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.1/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.1/inf_hap.eps>
+File: figures/eps/vio/mu/b12/e0.1/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.1/inf_hap_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/mu/b14/e0.1/n00004096_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b14/e0.1/n00004096_fin_hap.eps>
+File: figures/eps/vio/mu/b14/e0.1/n00004096_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b14/e0.1/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.1/n00040960_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b14/e0.1/n00040960_fin_hap.eps>
+File: figures/eps/vio/mu/b14/e0.1/n00040960_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b14/e0.1/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.1/n00081920_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b14/e0.1/n00081920_fin_hap.eps>
+File: figures/eps/vio/mu/b14/e0.1/n00081920_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b14/e0.1/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.1/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b14/e0.1/inf_hap.eps>
+File: figures/eps/vio/mu/b14/e0.1/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b14/e0.1/inf_hap_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[61
+
+]
+
+LaTeX Warning: Text page 62 contains only floats.
+
+[62] [63] [64] [65])
+:<-
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 111.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sim' on input line 111.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 111.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 111.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\epsilon' on input line 111.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 111.
+
+Package srcltx Info: Expanded filename `chapters/vio-mu-hap-e0.5.tex' to `chapt
+ers/vio-mu-hap-e0.5.tex' on input line 112.
+:<+ chapters/vio-mu-hap-e0.5.tex
+(./chapters/vio-mu-hap-e0.5.tex
+File: figures/eps/vio/mu/b8/e0.5/n00004096_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00004096_fin_hap.eps>
+File: figures/eps/vio/mu/b8/e0.5/n00004096_fin_hap_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.5/n00040960_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00040960_fin_hap.eps>
+File: figures/eps/vio/mu/b8/e0.5/n00040960_fin_hap_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.5/n00081920_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00081920_fin_hap.eps>
+File: figures/eps/vio/mu/b8/e0.5/n00081920_fin_hap_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.5/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.5/inf_hap.eps>
+File: figures/eps/vio/mu/b8/e0.5/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.5/inf_hap_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.5/n00004096_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b10/e0.5/n00004096_fin_hap.eps>
+File: figures/eps/vio/mu/b10/e0.5/n00004096_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b10/e0.5/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.5/n00040960_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b10/e0.5/n00040960_fin_hap.eps>
+File: figures/eps/vio/mu/b10/e0.5/n00040960_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b10/e0.5/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.5/n00081920_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b10/e0.5/n00081920_fin_hap.eps>
+File: figures/eps/vio/mu/b10/e0.5/n00081920_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b10/e0.5/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.5/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b10/e0.5/inf_hap.eps>
+File: figures/eps/vio/mu/b10/e0.5/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b10/e0.5/inf_hap_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/mu/b12/e0.5/n00004096_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.5/n00004096_fin_hap.eps>
+File: figures/eps/vio/mu/b12/e0.5/n00004096_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.5/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.5/n00040960_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b12/e0.5/n00040960_fin_hap.eps>
+File: figures/eps/vio/mu/b12/e0.5/n00040960_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.5/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.5/n00081920_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b12/e0.5/n00081920_fin_hap.eps>
+File: figures/eps/vio/mu/b12/e0.5/n00081920_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.5/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.5/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.5/inf_hap.eps>
+File: figures/eps/vio/mu/b12/e0.5/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.5/inf_hap_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/mu/b14/e0.5/n00004096_fin_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b14/e0.5/n00004096_fin_hap.eps>
+File: figures/eps/vio/mu/b14/e0.5/n00004096_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b14/e0.5/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.5/n00040960_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b14/e0.5/n00040960_fin_hap.eps>
+File: figures/eps/vio/mu/b14/e0.5/n00040960_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b14/e0.5/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.5/n00081920_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b14/e0.5/n00081920_fin_hap.eps>
+File: figures/eps/vio/mu/b14/e0.5/n00081920_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b14/e0.5/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.5/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b14/e0.5/inf_hap.eps>
+File: figures/eps/vio/mu/b14/e0.5/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b14/e0.5/inf_hap_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[66
+
+]
+
+LaTeX Warning: Text page 67 contains only floats.
+
+[67] [68] [69] [70])
+:<-
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 114.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sim' on input line 114.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 114.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 114.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\epsilon' on input line 114.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 114.
+
+Package srcltx Info: Expanded filename `chapters/vio-mu-dip-e0.01.tex' to `chap
+ters/vio-mu-dip-e0.01.tex' on input line 115.
+:<+ chapters/vio-mu-dip-e0.01.tex
+(./chapters/vio-mu-dip-e0.01.tex
+File: figures/eps/vio/mu/b8/e0.01/n00004096_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b8/e0.01/n00004096_fin_dip.eps>
+File: figures/eps/vio/mu/b8/e0.01/n00004096_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b8/e0.01/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.01/n00040960_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b8/e0.01/n00040960_fin_dip.eps>
+File: figures/eps/vio/mu/b8/e0.01/n00040960_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b8/e0.01/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.01/n00081920_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b8/e0.01/n00081920_fin_dip.eps>
+File: figures/eps/vio/mu/b8/e0.01/n00081920_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b8/e0.01/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.01/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.01/inf_dip.eps>
+File: figures/eps/vio/mu/b8/e0.01/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.01/inf_dip_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.01/n00004096_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/mu/b10/e0.01/n00004096_fin_dip.eps>
+File: figures/eps/vio/mu/b10/e0.01/n00004096_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b10/e0.01/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.01/n00040960_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/mu/b10/e0.01/n00040960_fin_dip.eps>
+File: figures/eps/vio/mu/b10/e0.01/n00040960_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b10/e0.01/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.01/n00081920_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/mu/b10/e0.01/n00081920_fin_dip.eps>
+File: figures/eps/vio/mu/b10/e0.01/n00081920_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b10/e0.01/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.01/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b10/e0.01/inf_dip.eps>
+File: figures/eps/vio/mu/b10/e0.01/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b10/e0.01/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/mu/b12/e0.01/n00004096_fin_dip.eps Graphic file (type eps
+)
+<figures/eps/vio/mu/b12/e0.01/n00004096_fin_dip.eps>
+File: figures/eps/vio/mu/b12/e0.01/n00004096_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b12/e0.01/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.01/n00040960_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/mu/b12/e0.01/n00040960_fin_dip.eps>
+File: figures/eps/vio/mu/b12/e0.01/n00040960_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b12/e0.01/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.01/n00081920_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/mu/b12/e0.01/n00081920_fin_dip.eps>
+File: figures/eps/vio/mu/b12/e0.01/n00081920_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b12/e0.01/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.01/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.01/inf_dip.eps>
+File: figures/eps/vio/mu/b12/e0.01/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.01/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/mu/b14/e0.01/n00004096_fin_dip.eps Graphic file (type eps
+)
+<figures/eps/vio/mu/b14/e0.01/n00004096_fin_dip.eps>
+File: figures/eps/vio/mu/b14/e0.01/n00004096_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b14/e0.01/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.01/n00040960_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/mu/b14/e0.01/n00040960_fin_dip.eps>
+File: figures/eps/vio/mu/b14/e0.01/n00040960_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b14/e0.01/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.01/n00081920_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/mu/b14/e0.01/n00081920_fin_dip.eps>
+File: figures/eps/vio/mu/b14/e0.01/n00081920_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/mu/b14/e0.01/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.01/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b14/e0.01/inf_dip.eps>
+File: figures/eps/vio/mu/b14/e0.01/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b14/e0.01/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[71
+
+]
+
+LaTeX Warning: Text page 72 contains only floats.
+
+[72] [73] [74] [75])
+:<-
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 116.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sim' on input line 116.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 116.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 116.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\epsilon' on input line 116.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 116.
+
+Package srcltx Info: Expanded filename `chapters/vio-mu-dip-e0.1.tex' to `chapt
+ers/vio-mu-dip-e0.1.tex' on input line 117.
+:<+ chapters/vio-mu-dip-e0.1.tex
+(./chapters/vio-mu-dip-e0.1.tex
+File: figures/eps/vio/mu/b8/e0.1/n00004096_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00004096_fin_dip.eps>
+File: figures/eps/vio/mu/b8/e0.1/n00004096_fin_dip_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.1/n00040960_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00040960_fin_dip.eps>
+File: figures/eps/vio/mu/b8/e0.1/n00040960_fin_dip_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.1/n00081920_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00081920_fin_dip.eps>
+File: figures/eps/vio/mu/b8/e0.1/n00081920_fin_dip_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.1/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.1/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.1/inf_dip.eps>
+File: figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.1/inf_dip_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.1/n00004096_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b10/e0.1/n00004096_fin_dip.eps>
+File: figures/eps/vio/mu/b10/e0.1/n00004096_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b10/e0.1/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.1/n00040960_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b10/e0.1/n00040960_fin_dip.eps>
+File: figures/eps/vio/mu/b10/e0.1/n00040960_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b10/e0.1/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.1/n00081920_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b10/e0.1/n00081920_fin_dip.eps>
+File: figures/eps/vio/mu/b10/e0.1/n00081920_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b10/e0.1/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.1/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b10/e0.1/inf_dip.eps>
+File: figures/eps/vio/mu/b10/e0.1/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b10/e0.1/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/mu/b12/e0.1/n00004096_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.1/n00004096_fin_dip.eps>
+File: figures/eps/vio/mu/b12/e0.1/n00004096_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.1/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.1/n00040960_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b12/e0.1/n00040960_fin_dip.eps>
+File: figures/eps/vio/mu/b12/e0.1/n00040960_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.1/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.1/n00081920_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b12/e0.1/n00081920_fin_dip.eps>
+File: figures/eps/vio/mu/b12/e0.1/n00081920_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.1/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.1/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.1/inf_dip.eps>
+File: figures/eps/vio/mu/b12/e0.1/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.1/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/mu/b14/e0.1/n00004096_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b14/e0.1/n00004096_fin_dip.eps>
+File: figures/eps/vio/mu/b14/e0.1/n00004096_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b14/e0.1/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.1/n00040960_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b14/e0.1/n00040960_fin_dip.eps>
+File: figures/eps/vio/mu/b14/e0.1/n00040960_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b14/e0.1/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.1/n00081920_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b14/e0.1/n00081920_fin_dip.eps>
+File: figures/eps/vio/mu/b14/e0.1/n00081920_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b14/e0.1/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.1/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b14/e0.1/inf_dip.eps>
+File: figures/eps/vio/mu/b14/e0.1/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b14/e0.1/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[76
+
+]
+
+LaTeX Warning: Text page 77 contains only floats.
+
+[77] [78] [79] [80])
+:<-
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 118.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sim' on input line 118.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 118.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 118.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\epsilon' on input line 118.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 118.
+
+Package srcltx Info: Expanded filename `chapters/vio-mu-dip-e0.5.tex' to `chapt
+ers/vio-mu-dip-e0.5.tex' on input line 119.
+:<+ chapters/vio-mu-dip-e0.5.tex
+(./chapters/vio-mu-dip-e0.5.tex
+File: figures/eps/vio/mu/b8/e0.5/n00004096_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00004096_fin_dip.eps>
+File: figures/eps/vio/mu/b8/e0.5/n00004096_fin_dip_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.5/n00040960_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00040960_fin_dip.eps>
+File: figures/eps/vio/mu/b8/e0.5/n00040960_fin_dip_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.5/n00081920_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00081920_fin_dip.eps>
+File: figures/eps/vio/mu/b8/e0.5/n00081920_fin_dip_wovio.eps Graphic file (type
+ eps)
+
+<figures/eps/vio/mu/b8/e0.5/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b8/e0.5/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.5/inf_dip.eps>
+File: figures/eps/vio/mu/b8/e0.5/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b8/e0.5/inf_dip_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.5/n00004096_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b10/e0.5/n00004096_fin_dip.eps>
+File: figures/eps/vio/mu/b10/e0.5/n00004096_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b10/e0.5/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.5/n00040960_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b10/e0.5/n00040960_fin_dip.eps>
+File: figures/eps/vio/mu/b10/e0.5/n00040960_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b10/e0.5/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.5/n00081920_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b10/e0.5/n00081920_fin_dip.eps>
+File: figures/eps/vio/mu/b10/e0.5/n00081920_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b10/e0.5/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b10/e0.5/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b10/e0.5/inf_dip.eps>
+File: figures/eps/vio/mu/b10/e0.5/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b10/e0.5/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/mu/b12/e0.5/n00004096_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.5/n00004096_fin_dip.eps>
+File: figures/eps/vio/mu/b12/e0.5/n00004096_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.5/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.5/n00040960_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b12/e0.5/n00040960_fin_dip.eps>
+File: figures/eps/vio/mu/b12/e0.5/n00040960_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.5/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.5/n00081920_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b12/e0.5/n00081920_fin_dip.eps>
+File: figures/eps/vio/mu/b12/e0.5/n00081920_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b12/e0.5/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b12/e0.5/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.5/inf_dip.eps>
+File: figures/eps/vio/mu/b12/e0.5/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b12/e0.5/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/mu/b14/e0.5/n00004096_fin_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b14/e0.5/n00004096_fin_dip.eps>
+File: figures/eps/vio/mu/b14/e0.5/n00004096_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b14/e0.5/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.5/n00040960_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b14/e0.5/n00040960_fin_dip.eps>
+File: figures/eps/vio/mu/b14/e0.5/n00040960_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b14/e0.5/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.5/n00081920_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/mu/b14/e0.5/n00081920_fin_dip.eps>
+File: figures/eps/vio/mu/b14/e0.5/n00081920_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/mu/b14/e0.5/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/mu/b14/e0.5/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b14/e0.5/inf_dip.eps>
+File: figures/eps/vio/mu/b14/e0.5/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/mu/b14/e0.5/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[81
+
+]
+
+LaTeX Warning: Text page 82 contains only floats.
+
+[82] [83] [84] [85])
+:<-
+File: figures/eps/vio/dist_mu.eps Graphic file (type eps)
+<figures/eps/vio/dist_mu.eps>
+Overfull \hbox (25.54599pt too wide) in paragraph at lines 151--155
+ [] 
+ []
+
+[86
+
+] [87]) [88]
+:<-
+:<+ chapters/chapter-5.tex
+\openout2 = `chapters/chapter-5.aux'.
+
+(./chapters/chapter-5.tex
+Chapter 5.
+[89
+
+
+
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 45.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sim' on input line 45.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 45.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 45.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\epsilon' on input line 45.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 45.
+
+Package srcltx Info: Expanded filename `chapters/vio-chi-hap-e0.01.tex' to `cha
+pters/vio-chi-hap-e0.01.tex' on input line 46.
+:<+ chapters/vio-chi-hap-e0.01.tex
+(./chapters/vio-chi-hap-e0.01.tex
+File: figures/eps/vio/chi/b8/e0.01/n00004096_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b8/e0.01/n00004096_fin_hap.eps>
+File: figures/eps/vio/chi/b8/e0.01/n00004096_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b8/e0.01/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.01/n00040960_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b8/e0.01/n00040960_fin_hap.eps>
+File: figures/eps/vio/chi/b8/e0.01/n00040960_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b8/e0.01/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.01/n00081920_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b8/e0.01/n00081920_fin_hap.eps>
+File: figures/eps/vio/chi/b8/e0.01/n00081920_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b8/e0.01/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.01/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.01/inf_hap.eps>
+File: figures/eps/vio/chi/b8/e0.01/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.01/inf_hap_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.01/n00004096_fin_hap.eps Graphic file (type ep
+s)
+
+<figures/eps/vio/chi/b10/e0.01/n00004096_fin_hap.eps>
+File: figures/eps/vio/chi/b10/e0.01/n00004096_fin_hap_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b10/e0.01/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.01/n00040960_fin_hap.eps Graphic file (type ep
+s)
+
+<figures/eps/vio/chi/b10/e0.01/n00040960_fin_hap.eps>
+File: figures/eps/vio/chi/b10/e0.01/n00040960_fin_hap_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b10/e0.01/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.01/n00081920_fin_hap.eps Graphic file (type ep
+s)
+
+<figures/eps/vio/chi/b10/e0.01/n00081920_fin_hap.eps>
+File: figures/eps/vio/chi/b10/e0.01/n00081920_fin_hap_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b10/e0.01/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.01/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b10/e0.01/inf_hap.eps>
+File: figures/eps/vio/chi/b10/e0.01/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b10/e0.01/inf_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.01/n00004096_fin_hap.eps Graphic file (type ep
+s)
+
+<figures/eps/vio/chi/b12/e0.01/n00004096_fin_hap.eps>
+File: figures/eps/vio/chi/b12/e0.01/n00004096_fin_hap_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b12/e0.01/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.01/n00040960_fin_hap.eps Graphic file (type ep
+s)
+
+<figures/eps/vio/chi/b12/e0.01/n00040960_fin_hap.eps>
+File: figures/eps/vio/chi/b12/e0.01/n00040960_fin_hap_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b12/e0.01/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.01/n00081920_fin_hap.eps Graphic file (type ep
+s)
+
+<figures/eps/vio/chi/b12/e0.01/n00081920_fin_hap.eps>
+File: figures/eps/vio/chi/b12/e0.01/n00081920_fin_hap_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b12/e0.01/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.01/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.01/inf_hap.eps>
+File: figures/eps/vio/chi/b12/e0.01/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.01/inf_hap_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.01/n00004096_fin_hap.eps Graphic file (type ep
+s)
+
+<figures/eps/vio/chi/b14/e0.01/n00004096_fin_hap.eps>
+File: figures/eps/vio/chi/b14/e0.01/n00004096_fin_hap_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b14/e0.01/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.01/n00040960_fin_hap.eps Graphic file (type ep
+s)
+
+<figures/eps/vio/chi/b14/e0.01/n00040960_fin_hap.eps>
+File: figures/eps/vio/chi/b14/e0.01/n00040960_fin_hap_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b14/e0.01/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.01/n00081920_fin_hap.eps Graphic file (type ep
+s)
+
+<figures/eps/vio/chi/b14/e0.01/n00081920_fin_hap.eps>
+File: figures/eps/vio/chi/b14/e0.01/n00081920_fin_hap_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b14/e0.01/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.01/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b14/e0.01/inf_hap.eps>
+File: figures/eps/vio/chi/b14/e0.01/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b14/e0.01/inf_hap_wovio.eps> [90] [91] [92] [93] [94])
+:<-
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sim' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\epsilon' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 47.
+
+Package srcltx Info: Expanded filename `chapters/vio-chi-hap-e0.1.tex' to `chap
+ters/vio-chi-hap-e0.1.tex' on input line 48.
+:<+ chapters/vio-chi-hap-e0.1.tex
+(./chapters/vio-chi-hap-e0.1.tex
+File: figures/eps/vio/chi/b8/e0.1/n00004096_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/chi/b8/e0.1/n00004096_fin_hap.eps>
+File: figures/eps/vio/chi/b8/e0.1/n00004096_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.1/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.1/n00040960_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/chi/b8/e0.1/n00040960_fin_hap.eps>
+File: figures/eps/vio/chi/b8/e0.1/n00040960_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.1/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.1/n00081920_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/chi/b8/e0.1/n00081920_fin_hap.eps>
+File: figures/eps/vio/chi/b8/e0.1/n00081920_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.1/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.1/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.1/inf_hap.eps>
+File: figures/eps/vio/chi/b8/e0.1/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.1/inf_hap_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.1/n00004096_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b10/e0.1/n00004096_fin_hap.eps>
+File: figures/eps/vio/chi/b10/e0.1/n00004096_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b10/e0.1/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.1/n00040960_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b10/e0.1/n00040960_fin_hap.eps>
+File: figures/eps/vio/chi/b10/e0.1/n00040960_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b10/e0.1/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.1/n00081920_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b10/e0.1/n00081920_fin_hap.eps>
+File: figures/eps/vio/chi/b10/e0.1/n00081920_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b10/e0.1/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.1/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b10/e0.1/inf_hap.eps>
+File: figures/eps/vio/chi/b10/e0.1/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b10/e0.1/inf_hap_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/chi/b12/e0.1/n00004096_fin_hap.eps Graphic file (type eps
+)
+<figures/eps/vio/chi/b12/e0.1/n00004096_fin_hap.eps>
+File: figures/eps/vio/chi/b12/e0.1/n00004096_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.1/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.1/n00040960_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b12/e0.1/n00040960_fin_hap.eps>
+File: figures/eps/vio/chi/b12/e0.1/n00040960_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.1/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.1/n00081920_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b12/e0.1/n00081920_fin_hap.eps>
+File: figures/eps/vio/chi/b12/e0.1/n00081920_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.1/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.1/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.1/inf_hap.eps>
+File: figures/eps/vio/chi/b12/e0.1/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.1/inf_hap_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/chi/b14/e0.1/n00004096_fin_hap.eps Graphic file (type eps
+)
+<figures/eps/vio/chi/b14/e0.1/n00004096_fin_hap.eps>
+File: figures/eps/vio/chi/b14/e0.1/n00004096_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b14/e0.1/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.1/n00040960_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b14/e0.1/n00040960_fin_hap.eps>
+File: figures/eps/vio/chi/b14/e0.1/n00040960_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b14/e0.1/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.1/n00081920_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b14/e0.1/n00081920_fin_hap.eps>
+File: figures/eps/vio/chi/b14/e0.1/n00081920_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b14/e0.1/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.1/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b14/e0.1/inf_hap.eps>
+File: figures/eps/vio/chi/b14/e0.1/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b14/e0.1/inf_hap_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[95
+
+]
+
+LaTeX Warning: Text page 96 contains only floats.
+
+[96] [97] [98] [99])
+:<-
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 49.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sim' on input line 49.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 49.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 49.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\epsilon' on input line 49.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 49.
+
+Package srcltx Info: Expanded filename `chapters/vio-chi-hap-e0.5.tex' to `chap
+ters/vio-chi-hap-e0.5.tex' on input line 50.
+:<+ chapters/vio-chi-hap-e0.5.tex
+(./chapters/vio-chi-hap-e0.5.tex
+File: figures/eps/vio/chi/b8/e0.5/n00004096_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/chi/b8/e0.5/n00004096_fin_hap.eps>
+File: figures/eps/vio/chi/b8/e0.5/n00004096_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.5/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.5/n00040960_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/chi/b8/e0.5/n00040960_fin_hap.eps>
+File: figures/eps/vio/chi/b8/e0.5/n00040960_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.5/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.5/n00081920_fin_hap.eps Graphic file (type eps)
+
+
+<figures/eps/vio/chi/b8/e0.5/n00081920_fin_hap.eps>
+File: figures/eps/vio/chi/b8/e0.5/n00081920_fin_hap_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.5/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.5/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.5/inf_hap.eps>
+File: figures/eps/vio/chi/b8/e0.5/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.5/inf_hap_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.5/n00004096_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b10/e0.5/n00004096_fin_hap.eps>
+File: figures/eps/vio/chi/b10/e0.5/n00004096_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b10/e0.5/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.5/n00040960_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b10/e0.5/n00040960_fin_hap.eps>
+File: figures/eps/vio/chi/b10/e0.5/n00040960_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b10/e0.5/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.5/n00081920_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b10/e0.5/n00081920_fin_hap.eps>
+File: figures/eps/vio/chi/b10/e0.5/n00081920_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b10/e0.5/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.5/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b10/e0.5/inf_hap.eps>
+File: figures/eps/vio/chi/b10/e0.5/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b10/e0.5/inf_hap_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/chi/b12/e0.5/n00004096_fin_hap.eps Graphic file (type eps
+)
+<figures/eps/vio/chi/b12/e0.5/n00004096_fin_hap.eps>
+File: figures/eps/vio/chi/b12/e0.5/n00004096_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.5/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.5/n00040960_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b12/e0.5/n00040960_fin_hap.eps>
+File: figures/eps/vio/chi/b12/e0.5/n00040960_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.5/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.5/n00081920_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b12/e0.5/n00081920_fin_hap.eps>
+File: figures/eps/vio/chi/b12/e0.5/n00081920_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.5/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.5/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.5/inf_hap.eps>
+File: figures/eps/vio/chi/b12/e0.5/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.5/inf_hap_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/chi/b14/e0.5/n00004096_fin_hap.eps Graphic file (type eps
+)
+<figures/eps/vio/chi/b14/e0.5/n00004096_fin_hap.eps>
+File: figures/eps/vio/chi/b14/e0.5/n00004096_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b14/e0.5/n00004096_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.5/n00040960_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b14/e0.5/n00040960_fin_hap.eps>
+File: figures/eps/vio/chi/b14/e0.5/n00040960_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b14/e0.5/n00040960_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.5/n00081920_fin_hap.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b14/e0.5/n00081920_fin_hap.eps>
+File: figures/eps/vio/chi/b14/e0.5/n00081920_fin_hap_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b14/e0.5/n00081920_fin_hap_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.5/inf_hap.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b14/e0.5/inf_hap.eps>
+File: figures/eps/vio/chi/b14/e0.5/inf_hap_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b14/e0.5/inf_hap_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[100
+
+]
+
+LaTeX Warning: Text page 101 contains only floats.
+
+[101] [102] [103] [104])
+:<-
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 52.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sim' on input line 52.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 52.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 52.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\epsilon' on input line 52.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 52.
+
+Package srcltx Info: Expanded filename `chapters/vio-chi-dip-e0.01.tex' to `cha
+pters/vio-chi-dip-e0.01.tex' on input line 53.
+:<+ chapters/vio-chi-dip-e0.01.tex
+(./chapters/vio-chi-dip-e0.01.tex
+File: figures/eps/vio/chi/b8/e0.01/n00004096_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b8/e0.01/n00004096_fin_dip.eps>
+File: figures/eps/vio/chi/b8/e0.01/n00004096_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b8/e0.01/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.01/n00040960_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b8/e0.01/n00040960_fin_dip.eps>
+File: figures/eps/vio/chi/b8/e0.01/n00040960_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b8/e0.01/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.01/n00081920_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b8/e0.01/n00081920_fin_dip.eps>
+File: figures/eps/vio/chi/b8/e0.01/n00081920_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b8/e0.01/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.01/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.01/inf_dip.eps>
+File: figures/eps/vio/chi/b8/e0.01/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.01/inf_dip_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.01/n00004096_fin_dip.eps Graphic file (type ep
+s)
+
+<figures/eps/vio/chi/b10/e0.01/n00004096_fin_dip.eps>
+File: figures/eps/vio/chi/b10/e0.01/n00004096_fin_dip_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b10/e0.01/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.01/n00040960_fin_dip.eps Graphic file (type ep
+s)
+
+<figures/eps/vio/chi/b10/e0.01/n00040960_fin_dip.eps>
+File: figures/eps/vio/chi/b10/e0.01/n00040960_fin_dip_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b10/e0.01/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.01/n00081920_fin_dip.eps Graphic file (type ep
+s)
+
+<figures/eps/vio/chi/b10/e0.01/n00081920_fin_dip.eps>
+File: figures/eps/vio/chi/b10/e0.01/n00081920_fin_dip_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b10/e0.01/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.01/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b10/e0.01/inf_dip.eps>
+File: figures/eps/vio/chi/b10/e0.01/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b10/e0.01/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/chi/b12/e0.01/n00004096_fin_dip.eps Graphic file (type ep
+s)
+<figures/eps/vio/chi/b12/e0.01/n00004096_fin_dip.eps>
+File: figures/eps/vio/chi/b12/e0.01/n00004096_fin_dip_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b12/e0.01/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.01/n00040960_fin_dip.eps Graphic file (type ep
+s)
+
+<figures/eps/vio/chi/b12/e0.01/n00040960_fin_dip.eps>
+File: figures/eps/vio/chi/b12/e0.01/n00040960_fin_dip_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b12/e0.01/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.01/n00081920_fin_dip.eps Graphic file (type ep
+s)
+
+<figures/eps/vio/chi/b12/e0.01/n00081920_fin_dip.eps>
+File: figures/eps/vio/chi/b12/e0.01/n00081920_fin_dip_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b12/e0.01/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.01/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.01/inf_dip.eps>
+File: figures/eps/vio/chi/b12/e0.01/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.01/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/chi/b14/e0.01/n00004096_fin_dip.eps Graphic file (type ep
+s)
+<figures/eps/vio/chi/b14/e0.01/n00004096_fin_dip.eps>
+File: figures/eps/vio/chi/b14/e0.01/n00004096_fin_dip_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b14/e0.01/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.01/n00040960_fin_dip.eps Graphic file (type ep
+s)
+
+<figures/eps/vio/chi/b14/e0.01/n00040960_fin_dip.eps>
+File: figures/eps/vio/chi/b14/e0.01/n00040960_fin_dip_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b14/e0.01/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.01/n00081920_fin_dip.eps Graphic file (type ep
+s)
+
+<figures/eps/vio/chi/b14/e0.01/n00081920_fin_dip.eps>
+File: figures/eps/vio/chi/b14/e0.01/n00081920_fin_dip_wovio.eps Graphic file (t
+ype eps)
+
+<figures/eps/vio/chi/b14/e0.01/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.01/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b14/e0.01/inf_dip.eps>
+File: figures/eps/vio/chi/b14/e0.01/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b14/e0.01/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[105
+
+]
+
+LaTeX Warning: Text page 106 contains only floats.
+
+[106] [107] [108] [109])
+:<-
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 54.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sim' on input line 54.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 54.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 54.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\epsilon' on input line 54.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 54.
+
+Package srcltx Info: Expanded filename `chapters/vio-chi-dip-e0.1.tex' to `chap
+ters/vio-chi-dip-e0.1.tex' on input line 55.
+:<+ chapters/vio-chi-dip-e0.1.tex
+(./chapters/vio-chi-dip-e0.1.tex
+File: figures/eps/vio/chi/b8/e0.1/n00004096_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/chi/b8/e0.1/n00004096_fin_dip.eps>
+File: figures/eps/vio/chi/b8/e0.1/n00004096_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.1/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip.eps>
+File: figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.1/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.1/n00081920_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/chi/b8/e0.1/n00081920_fin_dip.eps>
+File: figures/eps/vio/chi/b8/e0.1/n00081920_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.1/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.1/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.1/inf_dip.eps>
+File: figures/eps/vio/chi/b8/e0.1/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.1/inf_dip_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.1/n00004096_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b10/e0.1/n00004096_fin_dip.eps>
+File: figures/eps/vio/chi/b10/e0.1/n00004096_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b10/e0.1/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.1/n00040960_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b10/e0.1/n00040960_fin_dip.eps>
+File: figures/eps/vio/chi/b10/e0.1/n00040960_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b10/e0.1/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.1/n00081920_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b10/e0.1/n00081920_fin_dip.eps>
+File: figures/eps/vio/chi/b10/e0.1/n00081920_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b10/e0.1/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.1/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b10/e0.1/inf_dip.eps>
+File: figures/eps/vio/chi/b10/e0.1/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b10/e0.1/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/chi/b12/e0.1/n00004096_fin_dip.eps Graphic file (type eps
+)
+<figures/eps/vio/chi/b12/e0.1/n00004096_fin_dip.eps>
+File: figures/eps/vio/chi/b12/e0.1/n00004096_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.1/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.1/n00040960_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b12/e0.1/n00040960_fin_dip.eps>
+File: figures/eps/vio/chi/b12/e0.1/n00040960_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.1/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.1/n00081920_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b12/e0.1/n00081920_fin_dip.eps>
+File: figures/eps/vio/chi/b12/e0.1/n00081920_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.1/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.1/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.1/inf_dip.eps>
+File: figures/eps/vio/chi/b12/e0.1/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.1/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/chi/b14/e0.1/n00004096_fin_dip.eps Graphic file (type eps
+)
+<figures/eps/vio/chi/b14/e0.1/n00004096_fin_dip.eps>
+File: figures/eps/vio/chi/b14/e0.1/n00004096_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b14/e0.1/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.1/n00040960_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b14/e0.1/n00040960_fin_dip.eps>
+File: figures/eps/vio/chi/b14/e0.1/n00040960_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b14/e0.1/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.1/n00081920_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b14/e0.1/n00081920_fin_dip.eps>
+File: figures/eps/vio/chi/b14/e0.1/n00081920_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b14/e0.1/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.1/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b14/e0.1/inf_dip.eps>
+File: figures/eps/vio/chi/b14/e0.1/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b14/e0.1/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[110
+
+]
+
+LaTeX Warning: Text page 111 contains only floats.
+
+[111] [112] [113] [114])
+:<-
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 56.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sim' on input line 56.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 56.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 56.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\epsilon' on input line 56.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 56.
+
+Package srcltx Info: Expanded filename `chapters/vio-chi-dip-e0.5.tex' to `chap
+ters/vio-chi-dip-e0.5.tex' on input line 57.
+:<+ chapters/vio-chi-dip-e0.5.tex
+(./chapters/vio-chi-dip-e0.5.tex
+File: figures/eps/vio/chi/b8/e0.5/n00004096_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/chi/b8/e0.5/n00004096_fin_dip.eps>
+File: figures/eps/vio/chi/b8/e0.5/n00004096_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.5/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.5/n00040960_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/chi/b8/e0.5/n00040960_fin_dip.eps>
+File: figures/eps/vio/chi/b8/e0.5/n00040960_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.5/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.5/n00081920_fin_dip.eps Graphic file (type eps)
+
+
+<figures/eps/vio/chi/b8/e0.5/n00081920_fin_dip.eps>
+File: figures/eps/vio/chi/b8/e0.5/n00081920_fin_dip_wovio.eps Graphic file (typ
+e eps)
+
+<figures/eps/vio/chi/b8/e0.5/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b8/e0.5/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.5/inf_dip.eps>
+File: figures/eps/vio/chi/b8/e0.5/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b8/e0.5/inf_dip_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.5/n00004096_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b10/e0.5/n00004096_fin_dip.eps>
+File: figures/eps/vio/chi/b10/e0.5/n00004096_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b10/e0.5/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.5/n00040960_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b10/e0.5/n00040960_fin_dip.eps>
+File: figures/eps/vio/chi/b10/e0.5/n00040960_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b10/e0.5/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.5/n00081920_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b10/e0.5/n00081920_fin_dip.eps>
+File: figures/eps/vio/chi/b10/e0.5/n00081920_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b10/e0.5/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b10/e0.5/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b10/e0.5/inf_dip.eps>
+File: figures/eps/vio/chi/b10/e0.5/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b10/e0.5/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/chi/b12/e0.5/n00004096_fin_dip.eps Graphic file (type eps
+)
+<figures/eps/vio/chi/b12/e0.5/n00004096_fin_dip.eps>
+File: figures/eps/vio/chi/b12/e0.5/n00004096_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.5/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.5/n00040960_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b12/e0.5/n00040960_fin_dip.eps>
+File: figures/eps/vio/chi/b12/e0.5/n00040960_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.5/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.5/n00081920_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b12/e0.5/n00081920_fin_dip.eps>
+File: figures/eps/vio/chi/b12/e0.5/n00081920_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b12/e0.5/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b12/e0.5/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.5/inf_dip.eps>
+File: figures/eps/vio/chi/b12/e0.5/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b12/e0.5/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: figures/eps/vio/chi/b14/e0.5/n00004096_fin_dip.eps Graphic file (type eps
+)
+<figures/eps/vio/chi/b14/e0.5/n00004096_fin_dip.eps>
+File: figures/eps/vio/chi/b14/e0.5/n00004096_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b14/e0.5/n00004096_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.5/n00040960_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b14/e0.5/n00040960_fin_dip.eps>
+File: figures/eps/vio/chi/b14/e0.5/n00040960_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b14/e0.5/n00040960_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.5/n00081920_fin_dip.eps Graphic file (type eps
+)
+
+<figures/eps/vio/chi/b14/e0.5/n00081920_fin_dip.eps>
+File: figures/eps/vio/chi/b14/e0.5/n00081920_fin_dip_wovio.eps Graphic file (ty
+pe eps)
+
+<figures/eps/vio/chi/b14/e0.5/n00081920_fin_dip_wovio.eps>
+File: figures/eps/vio/chi/b14/e0.5/inf_dip.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b14/e0.5/inf_dip.eps>
+File: figures/eps/vio/chi/b14/e0.5/inf_dip_wovio.eps Graphic file (type eps)
+
+<figures/eps/vio/chi/b14/e0.5/inf_dip_wovio.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[115
+
+]
+
+LaTeX Warning: Text page 116 contains only floats.
+
+[116] [117] [118] [119])
+:<-
+File: figures/eps/vio/dist_chi.eps Graphic file (type eps)
+<figures/eps/vio/dist_chi.eps>
+Overfull \hbox (25.54599pt too wide) in paragraph at lines 95--99
+ [] 
+ []
+
+[120
+
+] [121]) [122]
+:<-
+:<+ chapters/chapter-6.tex
+\openout2 = `chapters/chapter-6.aux'.
+
+(./chapters/chapter-6.tex
+Chapter 6.
+[123
+
+
+
+
+] [124]
+File: figures/eps/pqz.eps Graphic file (type eps)
+ <figures/eps/pqz.eps>) [125] [126]
+:<-
+[127
+
+
+
+]
+:<+ my-dissertation.bbl
+(./my-dissertation.bbl (./my-dissertation.brf)
+\tf@brf=\write8
+\openout8 = `my-dissertation.brf'.
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 54--54
+[]\OT1/cmr/m/n/12 H^^?aggstr^^?om, O. (2002).  \OT1/cmr/m/it/12 Fi-nite Markov 
+Chains and Al-go-rith-mic Ap-pli-ca-tions\OT1/cmr/m/n/12 .
+ []
+
+[128
+
+]
+Underfull \hbox (badness 1946) in paragraph at lines 96--96
+[]\OT1/cmr/m/n/12 Mendel, G. (1865).  Ver-suche ^^?uber plflanzen-hy-bri-den.  
+\OT1/cmr/m/it/12 Ver-hand-lun-gen des
+ []
+
+[129])
+:<-
+[130]
+:<+ back-matter/vita.tex
+\openout2 = `back-matter/vita.aux'.
+
+(./back-matter/vita.tex) [131
+
+
+
+
+
+]
 :<-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 150.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 150.
-(./my-dissertation.aux (./front-matter/abstract.aux))
+(./my-dissertation.aux (./front-matter/dedication.aux)
+(./front-matter/acknowledgements.aux) (./front-matter/quote.aux)
+(./front-matter/abstract.aux) (./front-matter/nomenclature.aux)
+(./chapters/chapter-1.aux) (./chapters/chapter-2.aux) (./chapters/chapter-3.aux
+) (./chapters/chapter-4.aux) (./chapters/chapter-5.aux)
+(./chapters/chapter-6.aux) (./back-matter/vita.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 150.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 150.
 Package rerunfilecheck Info: File `my-dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: 935AD52BC20B51F020C58FD514F674C7;139.
+(rerunfilecheck)             Checksum: 6F350E2D7A94FC6D0B7BB43782AA7C25;4407.
+Package rerunfilecheck Info: File `my-dissertation.brf' has not changed.
+(rerunfilecheck)             Checksum: A8E5B6A1E7F100135A960284C5511B6B;3264.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 150.
  ) 
 Here is how much of TeX's memory you used:
- 9155 strings out of 495029
- 134758 string characters out of 6181522
- 228449 words of memory out of 5000000
- 12247 multiletter control sequences out of 15000+600000
- 5150 words of font info for 19 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 39i,5n,43p,323b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 10439 strings out of 493305
+ 173703 string characters out of 6139898
+ 279391 words of memory out of 5000000
+ 13500 multiletter control sequences out of 15000+600000
+ 22513 words of font info for 88 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 39i,16n,53p,442b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on my-dissertation.dvi (2 pages, 6440 bytes).
+Output written on my-dissertation.dvi (149 pages, 728980 bytes).

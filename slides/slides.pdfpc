@@ -180,7 +180,7 @@ slides.pdf
  - This is crossover distribution we use.
  - Chi of i gives probability that i is used as crossover mask. Skinny Chi is crossover rate.
  
- - t of g is transmission function. This is expensive to compute because it has three sum terms in it.  
+ - t of g is transmission function. This is expensive to compute because it involves three sum terms in computing.  
  
  
  
@@ -266,7 +266,7 @@ Part II
  
  - Infinite population can be anywhere in the space
  
- - This Geometric point of view suggests that the closest distance between finite and infinite population is bounded by 1/ √N
+ - Vose's theorem on this Geometric point of view states that the closest distance between finite and infinite population is bounded by 1/ √N
  
  
  
@@ -302,7 +302,7 @@ Part II
  
  - and partly because distance between finite and infinite population might add up as generation increases leading to non linearity.
  
- - Despite this, these graphs looks pretty flat and planar showing linear dependence of log d to log N. 
+ - Despite this, these graphs look pretty flat and planar showing linear dependence of log d to log N. 
  
  
  
@@ -335,12 +335,13 @@ Part II
  
  - p_str is fixed point to population in even number of time steps and q_str is fixed point to population in odd number time steps
  
- - (Transition slide) The necessary and sufficient conditions for infinite populations to oscillate are:
+ - (Transition slide) 
  
  
  
 
 ### 28
+ - The necessary and sufficient conditions for infinite populations to oscillate are:
  - For some g,
  
  - Mutation distribution should satisfy this condition and crossover should satisfy this condition
@@ -441,7 +442,7 @@ Part II
   - We see here, as epsilon increases, oscillation diminishes    
   - As population increases, finite population oscillation approaches infinite population oscillation    
   
-  - Within each graph, Oscillation appears to diminish with time, and in case of infinite population, oscillation dies out after some time, like here and here.
+  - Within each graph, Oscillation appears to damp with time, and in case of infinite population, oscillation dies out after some time, like here and here.
     In the upper figure here, it might seem that infinite population does not die out, but it is just that we did not run simulations long enough to see it.
   
   - Well, you might be thinking finite population also appears to be dying out, but it is not continuously dying out because the Markov chain is regular. 

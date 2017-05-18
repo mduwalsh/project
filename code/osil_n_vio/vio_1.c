@@ -309,12 +309,44 @@ static inline double w(unsigned long i, unsigned long j) // pow(-1., ones(i&j))/
   return W[i&255];
 }
 
-void walsh_v(double *x, double *y) // y = Wx              // walsh transform apply to vector x to get y.
+// walsh transform apply to vector x to get y.
+void walsh_v(double *x, double *y) // y = Wx              
 {
   unsigned long i,j;
   for (i = 1ul<<L; i--;)
     for (y[i] = 0, j = 1ul<<L; j--; y[i] += x[j]*w(i,j));
     
+}
+
+// fast walsh transform
+// y = Wx
+void fwt_v(double *x, double *y) 
+{
+  unsigned long i,j,k, t1, t2, m, n, z;
+  double a, b;
+  z = 1ul<<L;
+  for(i = 0; i < z; i++){
+      y[i] = x[i];
+  }
+  for (i = 1; i <= L; i++){
+    m = 1ul<<i;       // m = pow(2, i);
+    n = m>>1;            // n = pow(2, i)/2;
+    for(j = 0; j < n; j++){       // j < pow(2,i-1);
+      for(k = 0; k < z; k+=m){    // k < z step m
+	t1 = j+k;
+	t2 = t1 + n;
+	a = y[t1];
+	b = y[t2];
+	y[t1] = a + b;
+	y[t2] = a - b;
+      }
+    }
+  }
+  // multiply by normalization factor
+  a = 1./C;
+  for(i = 0; i < z; i++){
+      y[i] = a*y[i];
+  }
 }
 
 #define bar(x) (U&~(x)) /* bar x */ 

@@ -72,79 +72,79 @@
 \begin{document}
     \pagenumbering{alph} % this is needed to clear certain issues with the hyperref package
     %
-%     \makeApprovalPage % make the approval page - this is the page that needs to be signed & returned to the thesis/dissertation consultant
-%     \makeETDApprovalPage % make the Electronic Thesis & Dissertation page - this page is kept with the electronic copy
+    \makeApprovalPage % make the approval page - this is the page that needs to be signed & returned to the thesis/dissertation consultant
+    \makeETDApprovalPage % make the Electronic Thesis & Dissertation page - this page is kept with the electronic copy
     %
     \addToPDFBookmarks{0}{Front Matter}{rootNode} %  create a root node named "Front Matter" in the pdf bookmarks 
     \addToPDFBookmarks{1}{Title}{a} % add a pdf bookmark to the title page
-%     \makeTitlePage % make the title page. Make sure you properly set the \docType
+    \makeTitlePage % make the title page. Make sure you properly set the \docType
+    %
+    \pagenumbering{roman}
+    \setcounter{page}{2}
+    %
+    \makeCopyrightPage % make the copyright page
 %     %
-%     \pagenumbering{roman}
-%     \setcounter{page}{2}
-%     %
-%     \makeCopyrightPage % make the copyright page
-% %     %
-%     \addToPDFBookmarks{1}{Dedication}{b} % add a pdf bookmark to the dedication page
-%     \include{front-matter/dedication} % include the dedication
-%     %
-%     \addToPDFBookmarks{1}{Acknowledgements}{c} % add a pdf bookmark to the acknowledgements page
-%     \include{front-matter/acknowledgements} % include the acknowledgements
-%     %
-%     \addToPDFBookmarks{1}{Quote}{d} % add a pdf bookmark to the quotation page
-%     \include{front-matter/quote} % include a quote
-%     %
+    \addToPDFBookmarks{1}{Dedication}{b} % add a pdf bookmark to the dedication page
+    \include{front-matter/dedication} % include the dedication
+    %
+    \addToPDFBookmarks{1}{Acknowledgements}{c} % add a pdf bookmark to the acknowledgements page
+    \include{front-matter/acknowledgements} % include the acknowledgements
+    %
+    \addToPDFBookmarks{1}{Quote}{d} % add a pdf bookmark to the quotation page
+    \include{front-matter/quote} % include a quote
+    %
     \addToPDFBookmarks{1}{Abstract}{e} % add a pdf bookmark to the abstract page
     \include{front-matter/abstract} % your abstract
     %
-%     \addToPDFBookmarks{0}{Table of Contents}{f}
-%     \renewcommand{\contentsname}{Table of Contents}
-%     \tableofcontents % generate a table of contents
-%     %
-%     %\addToTOC{List of Tables} % this will add the list of tables to the Table of Contents (TOC)
-%     \listoftables % generate a list of tables
-%     %
-%     %\addToTOC{List of Figures} % this will add the list of figures to the Table of Contents (TOC)
-%     \listoffigures % generate a list of figures
-%     %
-%     \makenomenclature % OPTIONAL
-%     \addToPDFBookmarks{0}{Nomenclature}{g} % OPTIONAL
-%     \printnomenclature[1.25in] % OPTIONAL
-%     %
-%     \newpage
-%     \pagenumbering{arabic}
-%     \setcounter{page}{1}
-%     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     % INCLUDE THE CHAPTERS STARTING WITH THE NOMENCLATURE IF PRESENT
-%     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     \include{front-matter/nomenclature} % OPTIONAL
-%     \include{chapters/chapter-1}
-%     \include{chapters/chapter-2} 
-%     \include{chapters/chapter-3}
-%     \include{chapters/chapter-4}
-%     \include{chapters/chapter-5}
-%     \include{chapters/chapter-6} 
-%     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     % BIBLIOGRAPHY
-%     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     \makeBibliographyPage % make the bibliography title page - can be edited in ut-thesis-template.tex 
-%     \clearpage
-%     \begingroup
-%     \renewcommand{\chapter}[2]{}%
-%     \bibliographystyle{apalike} % bibliography style - recommend using apalike-doi as it hyperlinks DOIs
-% %     \renewcommand{\bibname}{}
-% %     \mbox{}\\[-4.0in]
-%     \bibliography{references/references-dissertation} % references.bib included in the references directory
-%     \endgroup
-%     
-%     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     % APPENDIX - OPTIONAL - COMMENT IF NOT NEEDED
-%     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %     \makeAppendixPage   % make the appendix title page - can be edited in ut-thesis-template.tex
-% %     \appendix
-% %     \include{back-matter/appendix-1}
-%     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     % A VITA IS REQUIRED
-%     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     \addToTOC{Vita}
-%     \include{back-matter/vita}
+    \addToPDFBookmarks{0}{Table of Contents}{f}
+    \renewcommand{\contentsname}{Table of Contents}
+    \tableofcontents % generate a table of contents
+    %
+    %\addToTOC{List of Tables} % this will add the list of tables to the Table of Contents (TOC)
+    \listoftables % generate a list of tables
+    %
+    %\addToTOC{List of Figures} % this will add the list of figures to the Table of Contents (TOC)
+    \listoffigures % generate a list of figures
+    %
+    \makenomenclature % OPTIONAL
+    \addToPDFBookmarks{0}{Nomenclature}{g} % OPTIONAL
+    \printnomenclature[1.25in] % OPTIONAL
+    %
+    \newpage
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % INCLUDE THE CHAPTERS STARTING WITH THE NOMENCLATURE IF PRESENT
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \include{front-matter/nomenclature} % OPTIONAL
+    \include{chapters/chapter-1}
+    \include{chapters/chapter-2} 
+    \include{chapters/chapter-3}
+    \include{chapters/chapter-4}
+    \include{chapters/chapter-5}
+    \include{chapters/chapter-6} 
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % BIBLIOGRAPHY
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \makeBibliographyPage % make the bibliography title page - can be edited in ut-thesis-template.tex 
+    \clearpage
+    \begingroup
+    \renewcommand{\chapter}[2]{}%
+    \bibliographystyle{apalike} % bibliography style - recommend using apalike-doi as it hyperlinks DOIs
+%     \renewcommand{\bibname}{}
+%     \mbox{}\\[-4.0in]
+    \bibliography{references/references-dissertation} % references.bib included in the references directory
+    \endgroup
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % APPENDIX - OPTIONAL - COMMENT IF NOT NEEDED
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     \makeAppendixPage   % make the appendix title page - can be edited in ut-thesis-template.tex
+%     \appendix
+%     \include{back-matter/appendix-1}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % A VITA IS REQUIRED
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \addToTOC{Vita}
+    \include{back-matter/vita}
 \end{document}

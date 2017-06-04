@@ -4,15 +4,14 @@
 #include<math.h>
 
 /* sets of parameters to be simulated on */
-unsigned long L[] = {2, 4, 6, 8, 10, 12, 14}; // bits
-unsigned long G[] = {1000};
-double  Epsilon[] = {0.01, 0.05, 0.1, 0.2, 0.5};
+unsigned long L[] = {4, 6, 8, 10, 12, 14}; // bits
+unsigned long G[] = {100};
 unsigned long Seed = 0;
 unsigned long Runs = 16;
 
 /* end of sets of parameters to be simulated on */
 
-void create_script(int i, unsigned long b, unsigned long g, double epsilon)
+void create_script(int i, unsigned long b, unsigned long g)
 {
   char sfile[20];
   //char path[256];
@@ -20,30 +19,28 @@ void create_script(int i, unsigned long b, unsigned long g, double epsilon)
   sprintf(sfile, "script.%d.sh", i);
   fp = fopen(sfile, "w");
   fprintf(fp, "#PBS -l nodes=1\n");
-  fprintf(fp, "#PBS -N vio.b%lug%lue%.2f\n", b, g, epsilon);
+  fprintf(fp, "#PBS -N vio.b%lug%lu\n", b, g);
   fprintf(fp, "#PBS -l walltime=24:00:00\n" );
   fprintf(fp, "cd $PBS_O_WORKDIR\n");
   //getcwd(path, 256);
-  fprintf(fp, "./vio %lu %lu %lu %lf %lu\n", b, Seed, g, epsilon, Runs);
+  fprintf(fp, "./vio1 %lu %lu %lu %lu\n", b, Seed, g, Runs);
   fclose(fp);  
 }
 
 int main()
 {
-  unsigned long li, gi, ei;
-  unsigned long ls, gs, es;
+  unsigned long li, gi;
+  unsigned long ls, gs;
   char scall[200];
   ls  = sizeof(L)/sizeof(unsigned long);
   //ns  = sizeof(N)/sizeof(unsigned long);
-  gs  = sizeof(G)/sizeof(unsigned long);
-  es  = sizeof(Epsilon)/sizeof(double);
+  gs  = sizeof(G)/sizeof(unsigned long);  
   
   unsigned long i = 1;
   for(li = 0; li < ls; li++)
     //for(ni = 0; ni < ns; ni++)	
-      for(gi = 0; gi < gs; gi++)
-        for(ei = 0; ei < es; ei++, i++){
-	  create_script(i, L[li], G[gi], Epsilon[ei]);	   
+      for(gi = 0; gi < gs; gi++, i++){
+	  create_script(i, L[li], G[gi]);	   
 	  sprintf(scall, "qsub script.%lu.sh", i);
 	  if(system(scall) == -1) printf("\nError executing!!\n");           
 	}
@@ -58,3 +55,4 @@ int main()
 
 
 
+ 
